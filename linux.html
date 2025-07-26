@@ -1,12 +1,12 @@
 <!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source.">
-    <meta name="keywords" content="linux, piadas linux, humor, terminal, programador, nerd, geek, open source, shell, bash">
+    <meta name="description" content="Dicas de Linux para todos: aprenda comandos, truques e configurações de forma simples, com explicações acessíveis e bom humor!">
+    <meta name="keywords" content="linux, dicas linux, comandos linux, terminal, sysadmin, ubuntu, debian, fedora, shell script, piolinux">
     <meta name="author" content="PioLinux">
-    <title>O que é Linux - PioLinux</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Artigos de Linux - PioLinux</title>
     <style>
         body {
             background: linear-gradient(to right, #222, #444);
@@ -28,19 +28,14 @@
             justify-content: center;
             gap: 20px;
             padding: 10px;
-            flex-wrap: wrap;
         }
         nav a {
             color: #0f0;
             text-decoration: none;
             font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
         }
         nav a:hover {
             text-decoration: underline;
-            background-color: #003300;
         }
         section {
             max-width: 900px;
@@ -55,19 +50,16 @@
             font-size: 2em;
             text-align: center;
             margin-bottom: 30px;
-            border-bottom: 2px solid #00ff99;
-            padding-bottom: 10px;
         }
         h3 {
             color: #76ff03;
             font-size: 1.5em;
             margin-top: 25px;
             margin-bottom: 10px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 5px;
         }
         p {
             margin-bottom: 15px;
+            line-height: 1.6em;
         }
         pre {
             background-color: #333;
@@ -76,7 +68,6 @@
             overflow-x: auto;
             color: #00ff99;
             border: 1px solid #0f0;
-            font-size: 0.9em;
         }
         code {
             font-family: 'Courier New', monospace;
@@ -94,28 +85,7 @@
             border-radius: 8px;
             box-shadow: 0 0 8px rgba(0,255,0,0.2);
         }
-        .banner {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .banner img {
-            max-width: 150px;
-            border-radius: 50%;
-            border: 3px solid limegreen;
-            box-shadow: 0 0 15px rgba(0,255,0,0.5);
-        }
-        .joke-list li {
-            padding: 10px 0;
-            border-left: none; /* Remove a barra verde para cada piada individualmente */
-            background-color: transparent; /* Remove o fundo escuro para cada piada individualmente */
-            box-shadow: none; /* Remove a sombra para cada piada individualmente */
-            margin-bottom: 5px;
-            border-bottom: 1px dashed #333; /* Adiciona uma linha pontilhada para separar */
-        }
-        .joke-list li:last-child {
-            border-bottom: none;
-        }
-        footer {
+        .footer {
             background-color: #000;
             color: #aaa;
             text-align: center;
@@ -123,11 +93,11 @@
             margin-top: 40px;
             font-size: 0.9em;
         }
-        footer a {
+        .footer a {
             color: #0f0;
             text-decoration: none;
         }
-        footer a:hover {
+        .footer a:hover {
             text-decoration: underline;
         }
     </style>
