@@ -1,38 +1,116 @@
-<!--
-   index.html
-   
-   Copyright 2025  <devuan@devuan>
-   
-   This program is free software; you can redistribute it and/or modify
-   it under the terms of the GNU General Public License as published by
-   the Free Software Foundation; either version 2 of the License, or
-   (at your option) any later version.
-   
-   This program is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   GNU General Public License for more details.
-   
-   You should have received a copy of the GNU General Public License
-   along with this program; if not, write to the Free Software
-   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
-   MA 02110-1301, USA.
-   
-   
--->
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-	<title>sem título</title>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-	<meta name="generator" content="Geany 1.38" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Site divertido com piadas e dicas sobre Linux - Humor e aprendizado!" />
+  <meta name="keywords" content="Linux, Humor, Piadas de Linux, Dicas de Terminal, Comandos Linux engraçados, piolinux.com.br" />
+  <meta name="author" content="PioLinux" />
+  <title>Linux com Humor - PioLinux</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(to right, #222, #444);
+      font-family: 'Courier New', monospace;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      font-size: 30px;
+      color: limegreen;
+    }
+    nav {
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      color: #0f0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #0f0;
+    }
+    h2 {
+      color: #00ff99;
+    }
+    footer {
+      background-color: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
-
 <body>
-	
-</body>
 
+<center>
+        <a href="https://neocities.org" target="_blank">
+        <img src="https://neocities.org/neocities.png" alt="Imagem do PioLinux" width="150" />
+   </center>
+  <header>
+    💻 Linux com Humor - PioLinux.com.br 😄
+  </header>
+    <nav>
+    <a href="piadas_linux.html">Piadas</a>
+    <a href="Artigos.html">Artigos</a>
+    <a href="distros.html">Distros</a>
+    <a href="dicastecnicas.html" >Dicas Tecnicas</a>
+    <a href="scriptbash.html">Script Bash</a>
+    <a href="comandos_terminal.html" >Comandos do Terminal</a>
+    <a href="https://www.piolinux.com.br" target="_blank">PioLinux</a>
+  </nav>
+  <section id="piadas">
+    <h2>😂 Piadas de Linux</h2>
+    <ul>
+      <li>Por que o ping terminou com a conexão? Porque não aguentava mais os delays.</li>
+      <li>Eu pedi um sistema estável... eles me deram um pinguim gelado.</li>
+      <li>Usei "rm -rf /" e resolvi todos os problemas. Inclusive meu emprego.</li>
+      <li>Linux é igual café: no começo é forte, depois vicia.</li>
+      <li>Meu namorado é igual o Arch Linux: só funciona se eu montar tudo sozinho.</li>
+    </ul>
+  </section>
+  <section id="dicas">
+    <h2>💡 Dicas Técnicas</h2>
+    <ul>
+      <li><strong>Comando útil:</strong> <code>htop</code> - Visualize seus processos como se estivesse jogando Tetris.</li>
+      <li><strong>Quer ver sua alma?</strong> Use <code>sudo !!</code> depois de errar um comando por falta de permissão.</li>
+      <li><strong>Comando ninja:</strong> <code>alias desligar='rm -rf /'</code> - NÃO TENTE ISSO EM CASA!</li>
+      <li><strong>Manutenção:</strong> Execute <code>sudo apt update && sudo apt upgrade</code> e sinta o poder da limpeza digital.</li>
+      <li><strong>Senhas seguras:</strong> Crie com <code>openssl rand -base64 12</code>.</li>
+    </ul>
+  </section>
+  <section id="artigos">
+    <h2>📚 Artigos Técnicos</h2>
+    <h3>1. Por que Linux é o sistema dos Hackers?</h3>
+    <p>Com sua estrutura open-source, o Linux oferece total controle e flexibilidade. Hackers amam liberdade, e o Linux é seu parque de diversões...</p>
+
+    <h3>2. O Guia do Sobrevivente para Terminal</h3>
+    <p>O terminal é como um dragão: poderoso, mas precisa ser domado. Aprenda a usar grep, sed, awk, e outros feitiços de linha de comando...</p>
+
+    <h3>3. O que fazer quando seu Linux não dá boot?</h3>
+    <p>Reze primeiro. Depois use um live CD, monte a partição, e reinstale o GRUB. Se nada der certo, reinstale e finja que nada aconteceu.</p>
+  </section>
+  <footer>
+    Site criado com muito terminal e memes! Acesse: <a href="https://piolinux.com.br" target="_blank" style="color: limegreen;">piolinux.com.br</a>
+    
+    
+  </footer>
+</body>
 </html>
