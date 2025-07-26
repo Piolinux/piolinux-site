@@ -1,55 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tudo sobre Linux: história, vantagens, distros, comandos, terminal, segurança, servidores e muito mais.">
-  <meta name="keywords" content="linux, sistema operacional, distros, comandos linux, terminal, shell, servidores linux, segurança linux">
-  <meta name="author" content="Seu Nome ou Projeto">
-  <title>Guia Completo sobre Linux - Tudo que Você Precisa Saber</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      color: #333;
-      margin: 0;
-      padding: 0 20px;
-      line-height: 1.6;
-    }
-    header, footer {
-      background-color: #222;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      color: #007bff;
-    }
-    h2 {
-      color: #0056b3;
-      margin-top: 30px;
-    }
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px 0;
-    }
-    code {
-      background-color: #eee;
-      padding: 3px 6px;
-      border-radius: 3px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guia detalhado das principais distribuições Linux: Ubuntu, Fedora, Debian, Arch, Mint e mais. Escolha a sua!">
+    <meta name="keywords" content="linux, distros linux, distribuição linux, ubuntu, fedora, debian, arch linux, linux mint, openSUSE, centos, pop_os, kali linux, piolinux">
+    <meta name="author" content="PioLinux">
+    <title>Principais Distribuições Linux - PioLinux</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            background: linear-gradient(to right, #222, #444);
+            font-family: 'Courier New', monospace;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000;
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+            color: limegreen;
+        }
+        nav {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #0f0;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            background-color: #003300;
+        }
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #0f0;
+        }
+        h2 {
+            color: #00ff99;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #00ff99;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #76ff03;
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #333; /* Adicionado para separar as distros */
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #2a2a2a;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid limegreen;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,255,0,0.2);
+        }
+        .banner {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .banner img {
+            max-width: 150px;
+            border-radius: 50%;
+            border: 3px solid limegreen;
+            box-shadow: 0 0 15px rgba(0,255,0,0.5);
+        }
+        footer {
+            background-color: #000;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #0f0;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+
   <header>
     <h1>Guia Completo sobre Linux</h1>
     <p>Descubra tudo sobre o sistema operacional que conquistou o mundo</p>
   </header>
 
   <section>
-    <h2>12. As Distribuições Linux mais Populares (Humanizado)</h2>
-    <p>Com tantas opções disponíveis, escolher a distribuição Linux certa pode parecer difícil — mas na verdade, é como escolher uma roupa que combina com você. A seguir, conheça as distribuições mais populares, explicadas de forma clara e com aquele toque humano para facilitar sua escolha.</p>
+    <h2> As Distribuições Linux mais Populares </h2>
+    <p>Com tantas opções disponíveis, escolher a distribuição Linux certa pode parecer difícil — mas na verdade, é como escolher uma roupa que combina com você. A seguir, conheça as distribuições mais populares, explicadas de forma clara e com aquele toque humano para facilitar sua escolha.O Linux é como um mundo à parte dentro da tecnologia. Ele é um sistema operacional livre, aberto e cheio de possibilidades. Mas ao contrário do que muita gente imagina, o Linux não é apenas “um programa” que você instala e pronto. Ele é, na verdade, o coração de milhares de versões diferentes, que a gente chama carinhosamente de distribuições — ou simplesmente “distros”, para os íntimos. Cada distro é como uma roupa feita sob medida: algumas são simples e leves, perfeitas para quem está começando ou tem um computador mais antigo. Outras são mais robustas, voltadas para quem quer desempenho, segurança ou ferramentas específicas. Todas essas versões têm algo em comum: elas combinam o núcleo Linux (o famoso kernel) com programas essenciais, ferramentas úteis e, na maioria das vezes, um ambiente gráfico bonitão pra facilitar a vida. Essa variedade toda pode até assustar no começo, mas é justamente o que torna o Linux tão incrível: tem uma distro ideal pra cada tipo de pessoa e necessidade. Abaixo, você vai conhecer algumas das distribuições mais queridas e importantes do universo Linux. Quem sabe você não encontra a sua favorita?</p>
 
     <h3>Ubuntu</h3>
     <p>Se você está começando agora no mundo Linux, o <strong>Ubuntu</strong> é o melhor ponto de partida. Desenvolvido pela Canonical, ele é conhecido por ser fácil de usar, ter uma comunidade gigante para te ajudar e rodar bem em praticamente qualquer computador. Com atualizações frequentes e versões LTS super estáveis, ele é confiável e amigável.</p>
