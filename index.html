@@ -8,150 +8,78 @@
    <title>Linux com Humor - PioLinux</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-        body {
-            background: linear-gradient(to right, #222, #444);
-            font-family: 'Courier New', monospace;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #000;
-            padding: 10px;
-            text-align: center;
-            font-size: 30px;
-            color: limegreen;
-        }
-        nav {
-            background-color: #111;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 10px;
-            flex-wrap: wrap;
-        }
-        nav a {
-            color: #0f0;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        nav a:hover {
-            text-decoration: underline;
-            background-color: #003300;
-        }
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #1e1e1e;
-            border-radius: 12px;
-            box-shadow: 0 0 10px #0f0;
-        }
-        h2 {
-            color: #00ff99;
-            font-size: 2em;
-            text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #00ff99;
-            padding-bottom: 10px;
-        }
-        h3 {
-            color: #76ff03;
-            font-size: 1.5em;
-            margin-top: 25px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 5px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        pre {
-            background-color: #333;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-            color: #00ff99;
-            border: 1px solid #0f0;
-            font-size: 0.9em;
-        }
-        code {
-            font-family: 'Courier New', monospace;
-            color: #00ff99;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background-color: #2a2a2a;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 5px solid limegreen;
-            border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0,255,0,0.2);
-        }
-        .banner {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .banner img {
-            max-width: 150px;
-            border-radius: 50%;
-            border: 3px solid limegreen;
-            box-shadow: 0 0 15px rgba(0,255,0,0.5);
-        }
-        .joke-list li {
-            padding: 10px 0;
-            border-left: none; /* Remove a barra verde para cada piada individualmente */
-            background-color: transparent; /* Remove o fundo escuro para cada piada individualmente */
-            box-shadow: none; /* Remove a sombra para cada piada individualmente */
-            margin-bottom: 5px;
-            border-bottom: 1px dashed #333; /* Adiciona uma linha pontilhada para separar */
-        }
-        .joke-list li:last-child {
-            border-bottom: none;
-        }
-        footer {
-            background-color: #000;
-            color: #aaa;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9em;
-        }
-        footer a {
-            color: #0f0;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #0a4c8c;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background-color: #0a4c8c;
+      color: white;
+      padding: 12px 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 220px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #222;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #063865;
+    }
+  </style>
 </head>
 <body>
 
+<nav>
+  <div class="dropdown">
+    <button class="dropbtn">Categorias</button>
+    <div class="dropdown-content">
+      <a href="#dicas-iniciantes">Iniciantes</a>
+      <a href="#produtividade">Produtividade</a>
+      <a href="#seguranca-rede">Segurança & Rede</a>
+      <a href="#administracao">Administração</a>
+      <a href="#desenvolvimento">Desenvolvimento</a>
+      <a href="#personalizacao">Personalização</a>
+      <a href="#avancado">Avançado</a>
+      <a href="#solucao-problemas">Solução de Problemas</a>
+    </div>
+  </div>
+</nav>
 
-  <header>
-    💻 Linux com Humor - piolinux.com.br 😄
-  </header>
-
-   
-  <nav>
-    <a href="piadas_linux.html">Piadas</a>
-    <a href="Artigos.html">Artigos</a>
-    <a href="distros.html">Distros</a>
-    <a href="dicastecnicas.html" >Dicas Tecnicas</a>
-    <a href="scriptbash.html">Script Bash</a>
-    <a href="comandos_terminal.html" >Comandos do Terminal</a>
-    <a href="linux.html" >O que é linux</a>
-    <a href="arquivo_posts.html" >Arquivos</a>
-    <a href="artigo_completo_python_final.html">Python</a>
-    <a href="https://www.piolinux.com.br" target="_blank">PioLinux</a>
-  </nav>
   
 
     
