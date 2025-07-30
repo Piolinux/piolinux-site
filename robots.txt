@@ -1,0 +1,10 @@
+User-agent: Googlebot
+Disallow: 
+User-agent: MSNBot
+Disallow: 
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+User-agent: *
+Disallow: /admin/
+Sitemap: https://piolinux.com/sitemap.xml

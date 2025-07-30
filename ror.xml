@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://www.piolinux.com/</title>
+  <link>https://www.piolinux.com/</link>
+
+<item>
+     <link>https://www.piolinux.com/</link>
+     <title>Linux com Humor - PioLinux</title>
+     <description>Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/piadas_linux.html</link>
+     <title>200 Piadas de Linux - PioLinux</title>
+     <description>Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/Artigos.html</link>
+     <title>Artigos de Linux - PioLinux</title>
+     <description>Dicas de Linux para todos: aprenda comandos, truques e configurações de forma simples, com explicações acessíveis e bom humor!</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/distros.html</link>
+     <title>Principais Distribuições Linux - PioLinux</title>
+     <description>Guia detalhado das principais distribuições Linux: Ubuntu, Fedora, Debian, Arch, Mint e mais. Escolha a sua!</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/dicastecnicas.html</link>
+     <title>Dicas Técnicas de Linux - PioLinux</title>
+     <description>dicas técnicas sobre Linux para seu site Neocities</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/scriptbash.html</link>
+     <title>Scripts Bash para Diversas Finalidades - PioLinux</title>
+     <description>Aprenda a criar scripts Bash para automação, administração, segurança e desenvolvimento no Linux. Exemplos práticos para diversas finalidades.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/comandos_terminal.html</link>
+     <title>Comandos Essenciais do Terminal Linux - PioLinux</title>
+     <description>Guia completo dos comandos essenciais do terminal Linux para iniciantes e usuários avançados. Aprenda a dominar a linha de comando!</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/linux.html</link>
+     <title>O Que é Linux - PioLinux</title>
+     <description>Dicas de Linux para todos: aprenda comandos, truques e configurações de forma simples, com explicações acessíveis e bom humor!</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/arquivo_posts.html</link>
+     <title>Guia Completo com Dicas de Software para Linux e Windows: Os Melhores Programas para Seu PC</title>
+     <description>Guia detalhado das principais distribuições Linux: Ubuntu, Fedora, Debian, Arch, Mint e mais. Escolha a sua!</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/artigo_completo_python_final.html</link>
+     <title>Artigo Completo: Tipos de Programas e Linguagem em Python com Links e Descrições</title>
+     <description>Artigo completo sobre os tipos de programas em Python, com exemplos práticos, descrições de bibliotecas e links úteis para estudo e desenvolvimento.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/index.html</link>
+     <title>Linux com Humor - PioLinux</title>
+     <description>Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
