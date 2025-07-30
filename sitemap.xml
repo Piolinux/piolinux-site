@@ -9,57 +9,77 @@
 
 <url>
   <loc>https://www.piolinux.com/</loc>
-  <lastmod>2025-07-29T22:43:15+00:00</lastmod>
+  <lastmod>2025-07-30T15:04:35+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.piolinux.com/piadas_linux.html</loc>
-  <lastmod>2025-07-29T22:43:15+00:00</lastmod>
+  <loc>https://www.piolinux.com/piadas-linux-engra%C3%A7adas.html</loc>
+  <lastmod>2025-07-30T15:04:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.piolinux.com/Artigos.html</loc>
-  <lastmod>2025-07-29T22:43:15+00:00</lastmod>
+  <loc>https://www.piolinux.com/80-Dicas-R%C3%A1pidas-de-Linux.html</loc>
+  <lastmod>2025-07-30T15:04:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.piolinux.com/distros.html</loc>
-  <lastmod>2025-07-29T22:43:15+00:00</lastmod>
+  <loc>https://www.piolinux.com/comandos-terminal-de-linux.html</loc>
+  <lastmod>2025-07-30T15:04:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.piolinux.com/dicastecnicas.html</loc>
-  <lastmod>2025-07-29T22:43:15+00:00</lastmod>
+  <loc>https://www.piolinux.com/guia-completo-de-linux.html</loc>
+  <lastmod>2025-07-30T15:04:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.piolinux.com/scriptbash.html</loc>
-  <lastmod>2025-07-29T22:43:15+00:00</lastmod>
+  <loc>https://www.piolinux.com/software%20-de-linux%20e%20Windows.html</loc>
+  <lastmod>2025-07-30T15:04:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.piolinux.com/comandos_terminal.html</loc>
-  <lastmod>2025-07-29T22:43:15+00:00</lastmod>
+  <loc>https://www.piolinux.com/artigo-python.html</loc>
+  <lastmod>2025-07-30T15:04:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.piolinux.com/linux.html</loc>
-  <lastmod>2025-07-29T22:43:15+00:00</lastmod>
+  <loc>https://www.piolinux.com/distros-de-linux.html</loc>
+  <lastmod>2025-07-30T15:04:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.piolinux.com/arquivo_posts.html</loc>
-  <lastmod>2025-07-29T22:43:15+00:00</lastmod>
+  <loc>https://www.piolinux.com/dicas-tecnicas-linux.html</loc>
+  <lastmod>2025-07-30T15:04:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.piolinux.com/artigo_completo_python_final.html</loc>
-  <lastmod>2025-07-29T22:43:15+00:00</lastmod>
+  <loc>https://www.piolinux.com/script-bash.html</loc>
+  <lastmod>2025-07-30T15:04:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.piolinux.com/politica-de-privacidade.html</loc>
+  <lastmod>2025-07-30T15:04:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.piolinux.com/termos-de-uso.html</loc>
+  <lastmod>2025-07-30T15:04:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.piolinux.com/index.html</loc>
-  <lastmod>2025-07-29T22:43:15+00:00</lastmod>
+  <lastmod>2025-07-30T15:04:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.piolinux.com/distros.html</loc>
+  <lastmod>2025-07-30T15:04:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.piolinux.com/scriptbash.html</loc>
+  <lastmod>2025-07-30T15:04:35+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
