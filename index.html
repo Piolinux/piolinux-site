@@ -53,10 +53,16 @@
   nav {
     background: #111;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+  }
+
+  .nav-links {
+    display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    padding: 12px;
   }
 
   nav a, .dropbtn, .dropdown-content a {
@@ -107,7 +113,50 @@
     font-size: 1.2rem;
     line-height: 1.6;
   }
+
+  /* Hambúrguer para mobile */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background: #0f0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .dropdown-content {
+      position: static;
+      box-shadow: none;
+      margin-left: 12px;
+    }
+
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
 </style>
+
 </head>
 <body>
 
