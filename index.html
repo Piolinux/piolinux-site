@@ -9,11 +9,10 @@
   <meta name="google-site-verification" content="CYb2xvKexfThXkcKdSjVEpHIMY--b1rAvFbjqjJwtlQ" />
   <link rel="canonical" href="https://www.piolinux.com" />
   <title>Linux com Humor - PioLinux</title>
-
   <style>
     body {
       background: linear-gradient(to right, #222, #444);
-      font-family: system-ui, sans-serif;
+      font-family: 'Courier New', monospace;
       color: #fff;
       margin: 0;
       padding: 0;
@@ -38,23 +37,22 @@
       justify-content: center;
       flex-wrap: wrap;
       padding: 12px;
-      gap: 15px;
+      gap: 12px;
     }
 
     nav a, .dropbtn {
       color: #0f0;
+      text-decoration: none;
       font-weight: bold;
       padding: 10px 16px;
       border-radius: 5px;
       background: transparent;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+      transition: background-color 0.3s ease;
     }
 
     nav a:hover, .dropbtn:hover {
       background-color: #003300;
-      transform: scale(1.05);
+      text-decoration: underline;
     }
 
     .dropdown {
@@ -66,25 +64,23 @@
       position: absolute;
       background: #1a1a1a;
       min-width: 200px;
-      box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
       border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,255,0,0.3);
       z-index: 1;
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 10px 14px;
-      color: #0f0;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #003300;
     }
 
     .dropdown:hover .dropdown-content {
       display: block;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      color: #0f0;
+    }
+
+    .dropdown-content a:hover {
+      background: #003300;
     }
 
     section {
@@ -92,12 +88,14 @@
       margin: 40px auto;
       padding: 20px;
       background: #1e1e1e;
-      border-radius: 12px;
-      box-shadow: 0 0 10px #0f0;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #0f0;
     }
 
-    h2, h3 {
-      color: #0f0;
+    .intro {
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.6;
     }
 
     footer {
@@ -112,37 +110,47 @@
     footer a {
       color: #00ff88;
       font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
       text-decoration: underline;
-    }
-
-    code {
-      background: #333;
-      padding: 2px 4px;
-      border-radius: 4px;
-      color: #0f0;
-    }
-
-    ul {
-      padding-left: 20px;
     }
   </style>
 </head>
 <body>
 
-  
- <section style="max-width: 960px; margin: 40px auto; padding: 0 16px;">
-  <h2 style="font-size: 2rem; line-height: 1.4; font-weight: 700; text-align: center; font-family: Arial, sans-serif; margin-bottom: 16px;">
-    👋 Bem-vindo ao site!
-  </h2>
+<header role="banner" aria-label="Cabeçalho do site">
+  💻 Linux com Humor - <strong>piolinux.com.br</strong> 😄
+</header>
 
-  <h2 style="font-size: 1.5rem; line-height: 1.5; font-weight: 600; margin: 0 auto 24px; padding: 0 12px; max-width: 800px; text-align: center; font-family: Arial, sans-serif;">
-    Aqui você encontra conteúdos técnicos e divertidos sobre Linux, Bash, distros e muito mais.
-  </h2>
+<nav>
+  <a href="piadas-linux-engraçadas.html">Piadas</a>
+  <div class="dropdown">
+    <button class="dropbtn">Artigos Diversos</button>
+    <div class="dropdown-content">
+      <a href="80-Dicas-Rápidas-de-Linux.html">80 dicas de Linux</a>
+      <a href="comandos-terminal-de-linux.html">Comandos do Terminal</a>
+      <a href="guia-completo-de-linux.html">O que é Linux</a>
+      <a href="software-de-linux-e-windows.html">Software Linux/Windows</a>
+      <a href="artigo-python.html">Python</a>
+      <a href="distros-de-linux.html">Distros</a>
+    </div>
+  </div>
+  <a href="artigos-linux.html">Artigos Iniciante</a>
+  <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+  <a href="script-bash.html">Script Bash</a>
+  <a href="https://www.piolinux.com.br" target="_blank">PioLinux</a>
+</nav>
+
+<section class="intro">
+  <h2>👋 Bem-vindo ao site!</h2>
+  <p>Aqui você encontra conteúdos técnicos e divertidos sobre Linux, Bash, distros e muito mais.</p>
 </section>
 
-<section id="piadas" style="max-width: 960px; margin: 40px auto; padding: 0 16px;">
-  <h2 style="font-size: 1.8rem; line-height: 1.4; font-weight: 700; margin-bottom: 16px; font-family: Arial, sans-serif;">😂 Piadas de Linux</h2>
-  <ul style="list-style-type: disc; padding-left: 20px; font-family: Arial, sans-serif; line-height: 1.6;">
+<section id="piadas">
+  <h2>😂 Piadas de Linux</h2>
+  <ul>
     <li>Por que o ping terminou com a conexão? Porque não aguentava mais os delays.</li>
     <li>Eu pedi um sistema estável... eles me deram um pinguim gelado.</li>
     <li>Usei <code>rm -rf /</code> e resolvi todos os problemas. Inclusive meu emprego.</li>
@@ -151,42 +159,36 @@
   </ul>
 </section>
 
-<section id="dicas" style="max-width: 960px; margin: 40px auto; padding: 0 16px;">
-  <h2 style="font-size: 1.8rem; line-height: 1.4; font-weight: 700; margin-bottom: 16px; font-family: Arial, sans-serif;">💡 Dicas Técnicas</h2>
-  <ul style="list-style-type: disc; padding-left: 20px; font-family: Arial, sans-serif; line-height: 1.6;">
-    <li><strong>Comando útil:</strong> <code>htop</code> — Visualize seus processos como se estivesse jogando Tetris.</li>
-    <li><strong>Quer ver sua alma?</strong> Use <code>sudo !!</code> depois de errar um comando por falta de permissão.</li>
-    <li><strong>Comando ninja:</strong> <code>alias desligar='rm -rf /'</code> — NÃO TENTE ISSO EM CASA!</li>
-    <li><strong>Manutenção:</strong> <code>sudo apt update && sudo apt upgrade</code> — limpeza digital em ação.</li>
+<section id="dicas">
+  <h2>💡 Dicas Técnicas</h2>
+  <ul>
+    <li><strong>Comando útil:</strong> <code>htop</code> — veja seus processos como um jogo de Tetris.</li>
+    <li><strong>Quer ver sua alma?</strong> Use <code>sudo !!</code> após esquecer o sudo.</li>
+    <li><strong>Comando ninja:</strong> <code>alias desligar='rm -rf /'</code> — NÃO TENTE!</li>
+    <li><strong>Manutenção:</strong> <code>sudo apt update && sudo apt upgrade</code>.</li>
     <li><strong>Senhas seguras:</strong> <code>openssl rand -base64 12</code>.</li>
   </ul>
 </section>
 
-<section id="artigos" style="max-width: 960px; margin: 40px auto; padding: 0 16px;">
-  <h2 style="font-size: 1.8rem; line-height: 1.4; font-weight: 700; margin-bottom: 16px; font-family: Arial, sans-serif;">📚 Artigos Técnicos</h2>
+<section id="artigos">
+  <h2>📚 Artigos Técnicos</h2>
+  <h3>1. Por que Linux é o sistema dos Hackers?</h3>
+  <p>Open-source, controle total, liberdade: tudo o que hackers amam está no Linux.</p>
 
-  <h3 style="font-size: 1.4rem; line-height: 1.5; margin-top: 24px; font-family: Arial, sans-serif;">1. Por que Linux é o sistema dos Hackers?</h3>
-  <p style="font-size: 1rem; line-height: 1.6; font-family: Arial, sans-serif;">
-    Com sua estrutura open-source, o Linux oferece total controle e flexibilidade. Hackers amam liberdade, e o Linux é seu parque de diversões...
-  </p>
+  <h3>2. Guia do Sobrevivente para Terminal</h3>
+  <p>Domine o terminal com <code>grep</code>, <code>sed</code>, <code>awk</code> e outros feitiços.</p>
 
-  <h3 style="font-size: 1.4rem; line-height: 1.5; margin-top: 24px; font-family: Arial, sans-serif;">2. O Guia do Sobrevivente para Terminal</h3>
-  <p style="font-size: 1rem; line-height: 1.6; font-family: Arial, sans-serif;">
-    O terminal é como um dragão: poderoso, mas precisa ser domado. Aprenda a usar <code>grep</code>, <code>sed</code>, <code>awk</code> e outros feitiços de linha de comando...
-  </p>
-
-  <h3 style="font-size: 1.4rem; line-height: 1.5; margin-top: 24px; font-family: Arial, sans-serif;">3. O que fazer quando seu Linux não dá boot?</h3>
-  <p style="font-size: 1rem; line-height: 1.6; font-family: Arial, sans-serif;">
-    Reze primeiro. Depois use um live CD, monte a partição e reinstale o GRUB. Se nada der certo, reinstale e finja que nada aconteceu.
-  </p>
+  <h3>3. Linux não dá boot. E agora?</h3>
+  <p>Use um live CD, monte a partição e reinstale o GRUB. Se falhar, reinstale e sorria.</p>
 </section>
 
-  <footer>
-    Site criado com muito terminal e memes! Acesse: 
-    <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> | 
-    <a href="termos-de-uso.html" target="_blank">Termos de Uso</a>
-  </footer>
+<footer>
+  Site criado com muito terminal e memes! Acesse:
+  <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
+  <a href="termos-de-uso.html" target="_blank">Termos de Uso</a>
+</footer>
 
 </body>
 </html>
+
 
