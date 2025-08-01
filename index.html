@@ -10,107 +10,104 @@
   <link rel="canonical" href="https://www.piolinux.com" />
   <title>Linux com Humor - PioLinux</title>
   <style>
-    /* Estilo geral */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-    }
+  body {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(to right, #222, #444);
+  }
 
-    nav {
-      background-color: #1f1f1f;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
+  header, footer {
+    background: #000;
+    text-align: center;
+    padding: 12px 16px;
+  }
 
-    nav a, .dropbtn {
-      color: #00ff88;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
+  header {
+    color: limegreen;
+    font-size: 1.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+  }
 
-    nav a:hover, .dropdown:hover .dropbtn {
-      background-color: #2a2a2a;
-    }
+  footer {
+    color: #aaa;
+    font-size: 0.9em;
+    margin-top: 40px;
+  }
 
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
+  footer a {
+    color: #0f8;
+    font-weight: bold;
+    text-decoration: none;
+  }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #1f1f1f;
-      min-width: 200px;
-      z-index: 1;
-    }
+  footer a:hover {
+    text-decoration: underline;
+  }
 
-    .dropdown-content a {
-      color: #00ff88;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
+  nav {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px;
+  }
 
-    .dropdown-content a:hover {
-      background-color: #2a2a2a;
-    }
+  nav a, .dropbtn, .dropdown-content a {
+    color: #0f0;
+    font-weight: bold;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    background: transparent;
+    transition: background 0.3s;
+    display: block;
+  }
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+  nav a:hover, .dropbtn:hover, .dropdown-content a:hover {
+    background: #030;
+    text-decoration: underline;
+  }
 
-    /* Botão hambúrguer (mobile) */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
+  .dropdown {
+    position: relative;
+  }
 
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background-color: #00ff88;
-      margin: 4px 0;
-    }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: #1a1a1a;
+    min-width: 200px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,255,0,0.3);
+    z-index: 1;
+  }
 
-    .nav-links {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
-    /* Responsivo */
-    @media screen and (max-width: 768px) {
-      .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-      }
+  section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #0f0;
+  }
 
-      .nav-links.active {
-        display: flex;
-      }
-
-      .dropdown-content {
-        position: static;
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-    }
-  </style>
+  .intro {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+</style>
 </head>
 <body>
 
@@ -119,45 +116,23 @@
 </header>
 
 <nav>
-  <div class="hamburger" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
-  <div class="nav-links" id="navLinks">
-    <a href="piadas-linux-engraçadas.html">Piadas</a>
-
-    <div class="dropdown">
-      <button class="dropbtn">Artigos de Linux</button>
-      <div class="dropdown-content">
-        <a href="artigos-linux.html">Para Iniciantes</a>
-        <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
-        <a href="script-bash.html">Script Bash</a>
-        <a href="guia-completo-de-linux.html">O que é Linux</a>
-        <a href="distros-de-linux.html">Distribuições</a>
-        <a href="comandos-terminal-de-linux.html">Comandos do Terminal</a>
-        <a href="80-Dicas-Rápidas-de-Linux.html">80 Dicas Rápidas</a>
-      </div>
+  <a href="piadas-linux-engraçadas.html">Piadas</a>
+  <div class="dropdown">
+    <button class="dropbtn">Artigos Diversos</button>
+    <div class="dropdown-content">
+      <a href="80-Dicas-Rápidas-de-Linux.html">80 dicas de Linux</a>
+      <a href="comandos-terminal-de-linux.html">Comandos do Terminal</a>
+      <a href="guia-completo-de-linux.html">O que é Linux</a>
+      <a href="software-de-linux-e-windows.html">Software Linux/Windows</a>
+      <a href="artigo-python.html">Python</a>
+      <a href="distros-de-linux.html">Distros</a>
     </div>
-
-    <div class="dropdown">
-      <button class="dropbtn">Outros Artigos</button>
-      <div class="dropdown-content">
-        <a href="software-de-linux-e-windows.html">Softwares Linux/Windows</a>
-        <a href="artigo-python.html">Python</a>
-      </div>
-    </div>
-
-    <a href="https://www.piolinux.com.br" target="_blank">PioLinux</a>
   </div>
+  <a href="artigos-linux.html">Artigos Iniciante</a>
+  <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+  <a href="script-bash.html">Script Bash</a>
+  <a href="https://www.piolinux.com.br" target="_blank">PioLinux</a>
 </nav>
-
-<script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-  }
-</script>
 
 
   <section>
