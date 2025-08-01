@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Comandos básicos Linux para iniciantes: Guia completo</title>
+<meta name="description" content="Descubra os principais comandos básicos do Linux para iniciantes e aprenda a usar o terminal com facilidade e segurança." />
+<style>
+    body {
+        background: #1c1c1c;
+        color: #e0ffe0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #0d0d0d;
+        padding: 20px;
+        text-align: center;
+        font-size: 28px;
+        color: #00ff88;
+    }
+
+    nav {
+        background-color: #111;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        color: #00ff88;
+        text-decoration: none;
+        padding: 8px 14px;
+        font-weight: bold;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+        background-color: #2a2a2a;
+    }
+
+    section, article {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #222;
+        border-radius: 12px;
+        box-shadow: 0 0 12px #00ff88;
+    }
+
+    h1, h2 {
+        color: #00ff88;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        color: #55ff99;
+        margin-bottom: 8px;
+    }
+
+    p {
+        margin-bottom: 16px;
+        text-align: justify;
+    }
+
+    ul {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    blockquote {
+        background: #2a2a2a;
+        border-left: 5px solid #00ff88;
+        padding: 10px 20px;
+        margin: 20px 0;
+        font-style: italic;
+        color: #b9ffcc;
+    }
+
+    code {
+        background-color: #111;
+        padding: 2px 6px;
+        border-radius: 4px;
+        color: #00ff88;
+        font-family: monospace;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+        border-radius: 8px;
+        border: 1px solid #444;
+    }
+
+    .author-box {
+        background: #2a2a2a;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        color: #ccffdd;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .author-box img {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+    }
+
+    .cta {
+        background: #00cc66;
+        color: #ffffff;
+        padding: 15px;
+        text-align: center;
+        border-radius: 8px;
+        font-weight: bold;
+        margin-top: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta:hover {
+        background: #00994d;
+    }
+
+    footer {
+        background-color: #111;
+        color: #99ffcc;
+        text-align: center;
+        padding: 20px;
+    }
+
+    footer a {
+        color: #00ff88;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    dl {
+        margin-left: 20px;
+    }
+
+    dt {
+        margin-top: 20px;
+        font-weight: bold;
+        color: #99ffcc;
+    }
+
+    dd {
+        margin-left: 15px;
+        margin-bottom: 10px;
+        color: #ddffdd;
+    }
+</style>
+
+</head>
+<body>
+
+<header>Comandos básicos Linux para iniciantes</header>
+
+<nav>
+    <a href="index.html">Início</a>
+    <a href="script-bash.html">Scripts</a>
+    <a href="distros-de-linux.html">Distros</a>
+</nav>
+
+<section>
+  <h2>Navegação no sistema de arquivos</h2>
+  <p>Para se mover entre pastas, os comandos mais usados são:</p>
+  <ul>
+    <li><code>pwd</code> – mostra o diretório atual</li>
+    <li><code>ls</code> – lista os arquivos e pastas no diretório</li>
+    <li><code>cd nome-da-pasta</code> – muda para a pasta especificada</li>
+    <li><code>cd ..</code> – volta para a pasta anterior</li>
+  </ul>
+
+  <blockquote>Exemplo: <code>cd Documentos</code> leva você para a pasta Documentos.</blockquote>
+
+  <h2>Listando arquivos e detalhes importantes</h2>
+  <p>O comando <code>ls</code> tem várias opções para mostrar informações diferentes:</p>
+  <ul>
+    <li><code>ls -l</code>: lista arquivos com detalhes como permissões, dono e tamanho</li>
+    <li><code>ls -a</code>: lista todos os arquivos, incluindo ocultos</li>
+  </ul>
+
+  <h2>Manipulandos arquivos e diretórios</h2>
+  <p>Use estes comandos abaixo criar, copiar, mover ou apagar arquivos e pastas:</p>
+  <ul>
+    <li><code>mkdir nome-da-pasta</code>: cria uma nova pasta</li>
+    <li><code>touch nome-do-arquivo</code>: cria um novo arquivo vazio</li>
+    <li><code>cp origem destino</code>: copia arquivos ou pastas</li>
+    <li><code>mv origem destino</code>: move ou renomeia arquivos e pastas</li>
+    <li><code>rm nome-do-arquivo</code>: remove arquivos (cuidado!)</li>
+    <li><code>rm -r nome-da-pasta</code>: remove pastas e todo conteúdo dentro</li>
+  </ul>
+
+  <h2>Obter ajuda e informações do sistema</h2>
+  <p>Se tiver dúvidas sobre um comando, use:</p>
+  <ul>
+    <li><code>man comando</code>: mostra o manual do comando</li>
+    <li><code>comando --help</code>: mostra ajuda rápida do comando</li>
+  </ul>
+  <p>Para verificar informações do sistema:</p>
+  <ul>
+    <li><code>uname -a</code>: mostra dados do kernel</li>
+    <li><code>top</code>: exibe processos em execução em tempo real</li>
+  </ul>
+
+  <h2>Conclusão</h2>
+  <p>Dominar esses comandos básicos do Linux abrirá muitas portas para você no sistema.</p>
+  <p>Comece a praticar hoje mesmo e sinta a diferença!</p>
+
+  
+
+  <div class="author-box">
+    <img src="https://example.com/foto-autor.jpg" alt="Foto do autor" />
+    <div>
+      <p><strong>Piolinux</strong> é entusiasta Linux e escritor técnico com mais de 5 anos de experiência.</p>
+    </div>
+  </div>
+
+  <section class="faq">
+    <h2>FAQ</h2>
+    <h4>Como navegar entre pastas no Linux?</h4>
+    <p>Use o comando <code>cd</code> para mudar de diretório.</p>
+
+    <h4>Posso apagar arquivos pelo terminal?</h4>
+    <p>Sim, com o comando <code>rm</code>, mas tenha cuidado para não apagar arquivos importantes.</p>
+
+    <h4>Como ver detalhes dos arquivos?</h4>
+    <p>Use <code>ls -l</code> para listar com detalhes.</p>
+  </section>
+
+</section>
+
+<footer>
+  &copy; 2025 SeuSite | Desenvolvido por <a href="#">João Silva</a>
+</footer>
+
+</body>
+</html>

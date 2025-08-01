@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Aprenda os cuidados essenciais de segurança no Linux para iniciantes: senhas fortes, atualizações, permissões e antivírus."/>
+  <meta name="keywords" content="segurança no linux, linux iniciantes, proteção no linux, firewall linux"/>
+  <meta name="author" content="PioLinux"/>
+   <link rel="canonical" href="https://piolinux.com/seguranca-linux-iniciantes.html" />
+  <title>Segurança no Linux: Cuidados Essenciais para Iniciantes - PioLinux</title>
+  <style>
+     body {
+      background: #1c1c1c;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #0d0d0d;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      color: #4caf50;
+    }
+    nav {
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #4caf50;
+      text-decoration: none;
+      padding: 8px 14px;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+    nav a:hover {
+      background-color: #333;
+    }
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #222;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #4caf50;
+    }
+    h2 {
+      color: #81c784;
+      border-bottom: 2px solid #81c784;
+      padding-bottom: 8px;
+    }
+    h3 {
+      color: #a5d6a7;
+    }
+    pre {
+      background-color: #000;
+      color: #00ff00;
+      padding: 10px;
+      overflow-x: auto;
+      border-left: 5px solid #0f0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    blockquote {
+      background: #333;
+      border-left: 5px solid #4caf50;
+      padding: 10px 20px;
+      margin: 20px 0;
+      font-style: italic;
+      color: #c8e6c9;
+    }
+    footer {
+      background-color: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+    }
+    footer a {
+      color: #4caf50;
+    }
+    .faq h4 {
+      margin-top: 15px;
+      color: #c8e6c9;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  Segurança no Linux: Cuidados Essenciais para Iniciantes
+</header>
+
+<nav>
+    <a href="index.html">Início</a>
+    <a href="script-bash.html">Scripts</a>
+    <a href="distros-de-linux.html">Distros</a>
+</nav>
+
+<section>
+  <h2>🔐 Introdução</h2>
+  <p>Acredita que esta seguro utilizando Linux.Não seja um distraido 
+  utilize o seu Sistema com cuidado. Não está imune a virus caso 
+  utilize o Windows em outra partição com Linux, caso utilize o Wine que emula o 
+  Windows é simples de remover os vírus.</p>
+  <p>Nessas dicas abaixo, você vai aprenderá práticas que são 
+  essenciais para manter o Sistema livre de ameaças digitais, vazamentos de dados.</p>
+  <p>Utilizar senhas seguras, atualizações, permissões, backups e mais. 
+  Explicações simples e diretas!</p>
+</section>
+
+<section>
+  <h2>🧩 Use Senhas Fortes e Gerenciadores</h2>
+  <p>Senhas fracas são a porta de entrada mais comum para invasores. Evite datas de nascimento, nomes simples ou sequências fáceis.</p>
+  <ul>
+    <li>Use pelo menos 12 caracteres</li>
+    <li>Inclua letras maiúsculas, números e símbolos</li>
+    <li>Utilize um gerenciador como Bitwarden ou KeePassXC</li>
+  </ul>
+</section>
+
+<section>
+  <h2>🔄 Atualize Sempre o Sistema</h2>
+  <p>As atualizações corrigem falhas de segurança. No Linux, é fácil manter o sistema em dia.</p>
+  <pre>sudo apt update && sudo apt upgrade -y</pre>
+  <p>Faça isso semanalmente ou ative atualizações automáticas.</p>
+</section>
+
+<section>
+  <h2>🛑 Cuidado com Permissões de Root</h2>
+  <p>Evite usar <code>sudo</code> para tarefas que não exigem privilégios. O usuário root tem acesso total ao sistema — o uso indevido pode comprometer sua segurança.</p>
+  <blockquote>“Com grandes poderes vêm grandes responsabilidades.”</blockquote>
+</section>
+
+<section>
+  <h2>🧱 Ative o Firewall UFW</h2>
+  <p>O Linux possui o UFW (Uncomplicated Firewall) para proteger suas conexões.</p>
+  <pre>sudo apt install ufw
+sudo ufw enable
+sudo ufw status</pre>
+  <p>Ele bloqueia portas não utilizadas e impede acessos não autorizados.</p>
+</section>
+
+<section>
+  <h2>📁 Faça Backups Frequentes</h2>
+  <p>Acidentes acontecem. Tenha sempre uma cópia dos seus arquivos em um HD externo ou serviço de nuvem.</p>
+  <ul>
+    <li>Use o Deja Dup (Ubuntu)</li>
+    <li>Ferramentas como rsync ou Timeshift</li>
+  </ul>
+</section>
+
+<section>
+  <h2>❓ FAQ</h2>
+  <div class="faq">
+    <h4>Preciso usar antivírus no Linux?</h4>
+    <p>Não é obrigatório, mas pode ser útil para escanear arquivos vindos do Windows.</p>
+    <h4>O Linux pode ser invadido?</h4>
+    <p>Sim. Embora seja mais seguro, más configurações e descuido ainda abrem brechas.</p>
+    <h4>Root é mais seguro que usuário normal?</h4>
+    <p>Não. O ideal é usar sua conta normal e recorrer ao sudo apenas quando necessário.</p>
+  </div>
+</section>
+
+<section>
+  <h2>✅ Conclusão</h2>
+  <p>Mesmo sendo um sistema robusto, o Linux exige atenção básica para garantir segurança. Manter senhas fortes, atualizações em dia, usar firewall e backups já cobre boa parte dos riscos.</p>
+  <p><strong>Dica final:</strong> sempre desconfie de comandos desconhecidos ou arquivos de fontes duvidosas.</p>
+</section>
+
+<footer>
+  <p>© 2025 PioLinux • Parte da série "Linux para Iniciantes" • <a href="https://ufw.org">Mais sobre UFW</a></p>
+</footer>
+
+</body>
+</html>
