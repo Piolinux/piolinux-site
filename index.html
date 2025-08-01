@@ -10,108 +10,112 @@
     <meta name="google-site-verification" content="CYb2xvKexfThXkcKdSjVEpHIMY--b1rAvFbjqjJwtlQ" />
     <link rel="canonical" href="https://www.piolnux.com" />
    <title>Linux com Humor - PioLinux</title>
-   
-<style>
-    body {
-      background: linear-gradient(to right, #222, #444);
-      font-family: 'Courier New', monospace;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
+   <style>
+  body {
+    background: linear-gradient(to right, #222, #444);
+    font-family: 'Courier New', monospace;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
 
-    header {
-      background-color: #000;
-      padding: 10px;
-      text-align: center;
-      font-size: 30px;
-      color: limegreen;
-    }
+  header {
+    background-color: #000;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: limegreen;
+  }
 
-    nav {
-      background-color: #111;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 12px;
-      gap: 15px;
-    }
+  nav {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 15px;
+  }
 
-    nav a, .dropbtn {
-      color: #0f0;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 16px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      background-color: transparent;
-      cursor: pointer;
-    }
+  nav a,
+  .dropbtn {
+    color: #0f0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    will-change: transform;
+    transition: transform 0.2s ease, background-color 0.3s ease, text-decoration 0.3s ease;
+  }
 
-    nav a:hover, .dropbtn:hover {
-      background-color: #003300;
-      text-decoration: underline;
-      transform: scale(1.05);
-    }
+  nav a:hover,
+  .dropbtn:hover {
+    background-color: #003300;
+    transform: scale(1.05);
+    text-decoration: underline;
+  }
 
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #1a1a1a;
-      min-width: 200px;
-      box-shadow: 0 0 15px rgba(0,255,0,0.3);
-      border-radius: 6px;
-      z-index: 1;
-    }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1a1a1a;
+    min-width: 200px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    border-radius: 6px;
+    z-index: 1;
+  }
 
-    .dropdown-content a {
-      display: block;
-      padding: 10px 14px;
-      color: #0f0;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
+  .dropdown-content a {
+    display: block;
+    padding: 10px 14px;
+    color: #0f0;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
 
-    .dropdown-content a:hover {
-      background-color: #003300;
-    }
+  .dropdown-content a:hover {
+    background-color: #003300;
+  }
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #1e1e1e;
-      border-radius: 12px;
-      box-shadow: 0 0 10px #0f0;
-    }
+  section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #0f0;
+  }
 
-    footer {
-      background-color: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      font-size: 0.9em;
-    }
+  footer {
+    background-color: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+  }
 
-    footer a {
-      color: #0f0;
-      text-decoration: none;
-    }
+  footer a {
+    color: #0f0;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+  }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+
 </head>
 <body>
 
