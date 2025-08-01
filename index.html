@@ -1,198 +1,205 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-    <html lang="pt">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source.">
-    <meta name="keywords" content="linux, piadas linux, humor, terminal, programador, nerd, geek, open source, shell, bash">
-    <meta name="author" content="PioLinux">
-    <meta name="google-site-verification" content="CYb2xvKexfThXkcKdSjVEpHIMY--b1rAvFbjqjJwtlQ" />
-    <link rel="canonical" href="https://www.piolnux.com" />
-   <title>Linux com Humor - PioLinux</title>
-   <style>
-  body {
-    background: linear-gradient(to right, #222, #444);
-    font-family: 'Courier New', monospace;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-  }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source.">
+  <meta name="keywords" content="linux, piadas linux, humor, terminal, programador, nerd, geek, open source, shell, bash">
+  <meta name="author" content="PioLinux">
+  <meta name="google-site-verification" content="CYb2xvKexfThXkcKdSjVEpHIMY--b1rAvFbjqjJwtlQ" />
+  <link rel="canonical" href="https://www.piolinux.com" />
+  <title>Linux com Humor - PioLinux</title>
 
-  header {
-    background-color: #000;
-    padding: 10px;
-    text-align: center;
-    font-size: 30px;
-    color: limegreen;
-  }
+  <style>
+    body {
+      background: linear-gradient(to right, #222, #444);
+      font-family: system-ui, sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
 
-  nav {
-    background-color: #111;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 12px;
-    gap: 15px;
-  }
+    header {
+      background: #000;
+      color: limegreen;
+      font-size: 1.8rem;
+      text-align: center;
+      padding: 12px 16px;
+      font-weight: 600;
+      line-height: 1.4;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
-  nav a,
-  .dropbtn {
-    color: #0f0;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 16px;
-    border-radius: 5px;
-    background-color: transparent;
-    cursor: pointer;
-    will-change: transform;
-    transition: transform 0.2s ease, background-color 0.3s ease, text-decoration 0.3s ease;
-  }
+    nav {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 12px;
+      gap: 15px;
+    }
 
-  nav a:hover,
-  .dropbtn:hover {
-    background-color: #003300;
-    transform: scale(1.05);
-    text-decoration: underline;
-  }
+    nav a, .dropbtn {
+      color: #0f0;
+      font-weight: bold;
+      padding: 10px 16px;
+      border-radius: 5px;
+      background: transparent;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
 
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
+    nav a:hover, .dropbtn:hover {
+      background-color: #003300;
+      transform: scale(1.05);
+    }
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #1a1a1a;
-    min-width: 200px;
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
-    border-radius: 6px;
-    z-index: 1;
-  }
+    .dropdown {
+      position: relative;
+    }
 
-  .dropdown-content a {
-    display: block;
-    padding: 10px 14px;
-    color: #0f0;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #1a1a1a;
+      min-width: 200px;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+      border-radius: 6px;
+      z-index: 1;
+    }
 
-  .dropdown-content a:hover {
-    background-color: #003300;
-  }
+    .dropdown-content a {
+      display: block;
+      padding: 10px 14px;
+      color: #0f0;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
 
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+    .dropdown-content a:hover {
+      background-color: #003300;
+    }
 
-  section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #1e1e1e;
-    border-radius: 12px;
-    box-shadow: 0 0 10px #0f0;
-  }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
 
-  footer {
-    background-color: #000;
-    color: #aaa;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 0.9em;
-  }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #1e1e1e;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #0f0;
+    }
 
-  footer a {
-    color: #0f0;
-    text-decoration: none;
-    transition: text-decoration 0.3s ease;
-  }
+    h2, h3 {
+      color: #0f0;
+    }
 
-  footer a:hover {
-    text-decoration: underline;
-  }
-</style>
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
 
+    footer a {
+      color: #00ff88;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    code {
+      background: #333;
+      padding: 2px 4px;
+      border-radius: 4px;
+      color: #0f0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
 </head>
 <body>
 
-<header style="background:#000;color:limegreen;font-size:1.8rem;text-align:center;padding:12px 16px;font-weight:600;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" role="banner" aria-label="Cabeçalho do site">
-  💻 Linux com Humor - <strong style="font-weight:700;">piolinux.com.br</strong> 😄
-</header>
+  <header role="banner" aria-label="Cabeçalho do site">
+    💻 Linux com Humor - <strong>piolinux.com.br</strong> 😄
+  </header>
 
-<nav>
-  <a href="piadas-linux-engraçadas.html">Piadas</a>
+  <nav role="navigation" aria-label="Menu principal">
+    <a href="piadas-linux-engraçadas.html">Piadas</a>
 
-  <div class="dropdown">
-    <button class="dropbtn">Artigos Diversos</button>
-    <div class="dropdown-content">
-      <a href="80-Dicas-Rápidas-de-Linux.html">80 dicas de Linux</a>
-      <a href="comandos-terminal-de-linux.html">Comandos do Terminal</a>
-  <a href="guia-completo-de-linux.html">O que é Linux</a>
-  <a href="software -de-linux e Windows.html">Software de Linux e Windows</a>
-  <a href="artigo-python.html">Python</a>
-   <a href="distros-de-linux.html">Distros</a>
+    <div class="dropdown">
+      <button class="dropbtn">Artigos Diversos</button>
+      <div class="dropdown-content">
+        <a href="80-Dicas-Rápidas-de-Linux.html">80 dicas de Linux</a>
+        <a href="comandos-terminal-de-linux.html">Comandos do Terminal</a>
+        <a href="guia-completo-de-linux.html">O que é Linux</a>
+        <a href="software-de-linux-e-Windows.html">Software de Linux e Windows</a>
+        <a href="artigo-python.html">Python</a>
+        <a href="distros-de-linux.html">Distros</a>
+      </div>
     </div>
-  </div>
 
-  <a href="artigos-linux.html">Artigos Iniciante</a>
-  <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
-  <a href="script-bash.html">Script Bash</a>
-  
-  <a href="https://www.piolinux.com.br" target="_blank">PioLinux</a>
-</nav>
+    <a href="artigos-linux.html">Artigos Iniciante</a>
+    <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+    <a href="script-bash.html">Script Bash</a>
+    <a href="https://www.piolinux.com.br" target="_blank">PioLinux</a>
+  </nav>
 
+  <section>
+    <h2>👋 Bem-vindo ao site!</h2>
+    <p>Aqui você encontra conteúdos técnicos e divertidos sobre Linux, Bash, distros e muito mais.</p>
+  </section>
 
-  <h2>Bem-vindo ao site!</h2>
- 
-    Aqui você encontra conteúdos técnicos e divertidos sobre Linux, Bash, distros e muito mais.
-  </p>
-</section>
-
-    
   <section id="piadas">
     <h2>😂 Piadas de Linux</h2>
     <ul>
       <li>Por que o ping terminou com a conexão? Porque não aguentava mais os delays.</li>
       <li>Eu pedi um sistema estável... eles me deram um pinguim gelado.</li>
-      <li>Usei "rm -rf /" e resolvi todos os problemas. Inclusive meu emprego.</li>
+      <li>Usei <code>rm -rf /</code> e resolvi todos os problemas. Inclusive meu emprego.</li>
       <li>Linux é igual café: no começo é forte, depois vicia.</li>
       <li>Meu namorado é igual o Arch Linux: só funciona se eu montar tudo sozinho.</li>
     </ul>
   </section>
+
   <section id="dicas">
     <h2>💡 Dicas Técnicas</h2>
     <ul>
-      <li><strong>Comando útil:</strong> <code>htop</code> - Visualize seus processos como se estivesse jogando Tetris.</li>
+      <li><strong>Comando útil:</strong> <code>htop</code> — Visualize seus processos como se estivesse jogando Tetris.</li>
       <li><strong>Quer ver sua alma?</strong> Use <code>sudo !!</code> depois de errar um comando por falta de permissão.</li>
-      <li><strong>Comando ninja:</strong> <code>alias desligar='rm -rf /'</code> - NÃO TENTE ISSO EM CASA!</li>
-      <li><strong>Manutenção:</strong> Execute <code>sudo apt update && sudo apt upgrade</code> e sinta o poder da limpeza digital.</li>
-      <li><strong>Senhas seguras:</strong> Crie com <code>openssl rand -base64 12</code>.</li>
+      <li><strong>Comando ninja:</strong> <code>alias desligar='rm -rf /'</code> — NÃO TENTE ISSO EM CASA!</li>
+      <li><strong>Manutenção:</strong> <code>sudo apt update && sudo apt upgrade</code> — limpeza digital em ação.</li>
+      <li><strong>Senhas seguras:</strong> <code>openssl rand -base64 12</code>.</li>
     </ul>
   </section>
+
   <section id="artigos">
     <h2>📚 Artigos Técnicos</h2>
+
     <h3>1. Por que Linux é o sistema dos Hackers?</h3>
     <p>Com sua estrutura open-source, o Linux oferece total controle e flexibilidade. Hackers amam liberdade, e o Linux é seu parque de diversões...</p>
 
     <h3>2. O Guia do Sobrevivente para Terminal</h3>
-    <p>O terminal é como um dragão: poderoso, mas precisa ser domado. Aprenda a usar grep, sed, awk, e outros feitiços de linha de comando...</p>
+    <p>O terminal é como um dragão: poderoso, mas precisa ser domado. Aprenda a usar <code>grep</code>, <code>sed</code>, <code>awk</code> e outros feitiços de linha de comando...</p>
 
     <h3>3. O que fazer quando seu Linux não dá boot?</h3>
-    <p>Reze primeiro. Depois use um live CD, monte a partição, e reinstale o GRUB. Se nada der certo, reinstale e finja que nada aconteceu.</p>
+    <p>Reze primeiro. Depois use um live CD, monte a partição e reinstale o GRUB. Se nada der certo, reinstale e finja que nada aconteceu.</p>
   </section>
+
   <footer>
     Site criado com muito terminal e memes! Acesse: 
-    <a href="politica-de-privacidade.html" target="_blank" style="color: #00ff88; font-weight: bold; text-decoration: underline;">
-        Política de Privacidade
-    </a> | 
-    <a href="termos-de-uso.html" target="_blank" style="color: #00ff88; font-weight: bold; text-decoration: underline;">
-        Termos de Uso
-    </a>
-</footer>
+    <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> | 
+    <a href="termos-de-uso.html" target="_blank">Termos de Uso</a>
+  </footer>
 
 </body>
 </html>
+
