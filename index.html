@@ -10,111 +10,105 @@
   <link rel="canonical" href="https://www.piolinux.com" />
   <title>Linux com Humor - PioLinux</title>
   <style>
+    /* Estilo geral */
     body {
-      background: linear-gradient(to right, #222, #444);
-      font-family: 'Courier New', monospace;
-      color: #fff;
       margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background: #000;
-      color: limegreen;
-      font-size: 1.8rem;
-      text-align: center;
-      padding: 12px 16px;
-      font-weight: 600;
-      line-height: 1.4;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
     }
 
     nav {
-      background: #111;
+      background-color: #1f1f1f;
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-      padding: 12px;
-      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
     }
 
     nav a, .dropbtn {
-      color: #0f0;
+      color: #00ff88;
+      padding: 12px 16px;
       text-decoration: none;
-      font-weight: bold;
-      padding: 10px 16px;
-      border-radius: 5px;
-      background: transparent;
-      transition: background-color 0.3s ease;
+      display: block;
     }
 
-    nav a:hover, .dropbtn:hover {
-      background-color: #003300;
-      text-decoration: underline;
+    nav a:hover, .dropdown:hover .dropbtn {
+      background-color: #2a2a2a;
     }
 
     .dropdown {
       position: relative;
+      display: inline-block;
     }
 
     .dropdown-content {
       display: none;
       position: absolute;
-      background: #1a1a1a;
+      background-color: #1f1f1f;
       min-width: 200px;
-      border-radius: 6px;
-      box-shadow: 0 0 10px rgba(0,255,0,0.3);
       z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #00ff88;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #2a2a2a;
     }
 
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    .dropdown-content a {
-      display: block;
-      padding: 10px;
-      color: #0f0;
+    /* Botão hambúrguer (mobile) */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
     }
 
-    .dropdown-content a:hover {
-      background: #003300;
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #00ff88;
+      margin: 4px 0;
     }
 
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #1e1e1e;
-      border-radius: 10px;
-      box-shadow: 0 0 8px #0f0;
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    .intro {
-      text-align: center;
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
+    /* Responsivo */
+    @media screen and (max-width: 768px) {
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+      }
 
-    footer {
-      background: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      font-size: 0.9em;
-    }
+      .nav-links.active {
+        display: flex;
+      }
 
-    footer a {
-      color: #00ff88;
-      font-weight: bold;
-      text-decoration: none;
-    }
+      .dropdown-content {
+        position: static;
+      }
 
-    footer a:hover {
-      text-decoration: underline;
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hamburger {
+        display: flex;
+      }
     }
   </style>
 </head>
