@@ -69,6 +69,14 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
+     <link>https://www.piolinux.com/artigos-linux.html</link>
+     <title>Índice de Artigos - Scripts Bash e Linux</title>
+     <description>Índice com links para artigos sobre scripts Bash, automação, administração de sistemas e Linux.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
      <link>https://www.piolinux.com/dicas-tecnicas-linux.html</link>
      <title>Dicas Técnicas de Linux - PioLinux</title>
      <description>dicas técnicas sobre Linux para seu site Neocities</description>
@@ -86,7 +94,7 @@
 </item>
 <item>
      <link>https://www.piolinux.com/politica-de-privacidade.html</link>
-     <title>Politica de privacidade - PioLinux</title>
+     <title>Política de Privacidade - PioLinux</title>
      <description>Guia detalhado das principais distribuições Linux: Ubuntu, Fedora, Debian, Arch, Mint e mais. Escolha a sua!</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
@@ -94,8 +102,7 @@
 </item>
 <item>
      <link>https://www.piolinux.com/termos-de-uso.html</link>
-     <title>
-		Termos de Uso- PioLinux</title>
+     <title>Termos de Uso - PioLinux</title>
      <description>Guia detalhado das principais distribuições Linux: Ubuntu, Fedora, Debian, Arch, Mint e mais. Escolha a sua!</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
@@ -121,6 +128,94 @@
      <link>https://www.piolinux.com/scriptbash.html</link>
      <title>Scripts Bash para Diversas Finalidades - PioLinux</title>
      <description>Aprenda a criar scripts Bash para automação, administração, segurança e desenvolvimento no Linux. Exemplos práticos para diversas finalidades.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/artigos-linux-iniciantes.html</link>
+     <title>10 Artigos de Linux para Iniciantes - PioLinux</title>
+     <description>Artigos de Linux para iniciantes: tutoriais, dicas e comandos essenciais para você dominar o sistema com facilidade. Acesse agora!</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/distros-linux-iniciantes.html</link>
+     <title>Como Escolher Sua Primeira Distro Linux - PioLinux</title>
+     <description>Descubra qual é a melhor distribuição Linux para iniciantes. Veja as vantagens do Ubuntu, Mint, Zorin OS e muito mais.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/instalando-programas-linux-iniciantes.html</link>
+     <title>Instalando Programas no Linux: Guia Completo para Iniciantes - PioLinux</title>
+     <description>Aprenda como instalar programas no Linux usando pacotes .deb, Flatpak, Snap e repositórios oficiais. Guia completo para iniciantes.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/gerenciadores-de-pacotes-no-linux-guia-para-iniciantes.html</link>
+     <title>Gerenciadores de Pacotes no Linux: Guia para Iniciantes - PioLinux</title>
+     <description>Entenda os principais gerenciadores de pacotes no Linux, como apt, dnf, pacman e zypper, e aprenda a usá-los com comandos básicos.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/comandos-basicos-do-linux-para-iniciantes.html</link>
+     <title>Comandos básicos Linux para iniciantes: Guia completo</title>
+     <description>Descubra os principais comandos básicos do Linux para iniciantes e aprenda a usar o terminal com facilidade e segurança.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/como-instalar-programas-no-linux-guia-para-iniciantes.html</link>
+     <title>Como instalar programas no Linux: Guia para iniciantes</title>
+     <description>Aprenda como instalar programas no Linux facilmente com este guia para iniciantes. Passo a passo para usar comandos e lojas de aplicativos.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/personalizando-linux-iniciantes.html</link>
+     <title>Personalizando o Linux para Iniciantes - PioLinux</title>
+     <description>Aprenda a personalizar o Linux com temas, ícones, extensões e atalhos. Deixe seu sistema com a sua cara! Guia completo para iniciantes.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/seguranca-linux-iniciantes.html</link>
+     <title>Segurança no Linux: Cuidados Essenciais para Iniciantes - PioLinux</title>
+     <description>Aprenda os cuidados essenciais de segurança no Linux para iniciantes: senhas fortes, atualizações, permissões e antivírus.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/como-remover-programas-no-linux.html</link>
+     <title>Como remover programas no Linux: Passo a passo para iniciantes</title>
+     <description>Aprenda como remover programas no Linux com segurança e facilidade. Guia completo para iniciantes com comandos e dicas úteis.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/comandos-basicos-linux-para-iniciantes-guia-completo.html</link>
+     <title>Comandos básicos Linux para iniciantes: Guia completo</title>
+     <description>Descubra os principais comandos básicos do Linux para iniciantes e aprenda a usar o terminal com facilidade e segurança.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.piolinux.com/como-atualizar-linux-terminal-grafico.html</link>
+     <title>Como atualizar o Linux: Terminal e modo gráfico</title>
+     <description>Aprenda a atualizar seu sistema Linux usando o terminal ou ferramentas gráficas. Mantenha seu sistema seguro e rápido.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>2</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>

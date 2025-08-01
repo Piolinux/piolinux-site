@@ -6,6 +6,7 @@ https://www.piolinux.com/guia-completo-de-linux.html
 https://www.piolinux.com/software%20-de-linux%20e%20Windows.html
 https://www.piolinux.com/artigo-python.html
 https://www.piolinux.com/distros-de-linux.html
+https://www.piolinux.com/artigos-linux.html
 https://www.piolinux.com/dicas-tecnicas-linux.html
 https://www.piolinux.com/script-bash.html
 https://www.piolinux.com/politica-de-privacidade.html
@@ -13,3 +14,14 @@ https://www.piolinux.com/termos-de-uso.html
 https://www.piolinux.com/index.html
 https://www.piolinux.com/distros.html
 https://www.piolinux.com/scriptbash.html
+https://www.piolinux.com/artigos-linux-iniciantes.html
+https://www.piolinux.com/distros-linux-iniciantes.html
+https://www.piolinux.com/instalando-programas-linux-iniciantes.html
+https://www.piolinux.com/gerenciadores-de-pacotes-no-linux-guia-para-iniciantes.html
+https://www.piolinux.com/comandos-basicos-do-linux-para-iniciantes.html
+https://www.piolinux.com/como-instalar-programas-no-linux-guia-para-iniciantes.html
+https://www.piolinux.com/personalizando-linux-iniciantes.html
+https://www.piolinux.com/seguranca-linux-iniciantes.html
+https://www.piolinux.com/como-remover-programas-no-linux.html
+https://www.piolinux.com/comandos-basicos-linux-para-iniciantes-guia-completo.html
+https://www.piolinux.com/como-atualizar-linux-terminal-grafico.html
