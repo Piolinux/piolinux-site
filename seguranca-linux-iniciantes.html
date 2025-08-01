@@ -9,87 +9,212 @@
    <link rel="canonical" href="https://piolinux.com/seguranca-linux-iniciantes.html" />
   <title>Segurança no Linux: Cuidados Essenciais para Iniciantes - PioLinux</title>
   <style>
-     body {
-      background: #1c1c1c;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #0d0d0d;
-      padding: 20px;
-      text-align: center;
-      font-size: 28px;
-      color: #4caf50;
-    }
+  /* RESET E BASE */
+  * {
+    box-sizing: border-box;
+    font-family: 'Verdana', Geneva, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: #1a1a1a;
+    color: #f0f0f0;
+  }
+
+  code {
+    background: #222;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #0f0;
+    font-weight: bold;
+  }
+
+  pre {
+    background: #222;
+    padding: 12px;
+    border-radius: 5px;
+    overflow-x: auto;
+    color: #0f0;
+    margin-bottom: 20px;
+  }
+
+  /* CABEÇALHO */
+  header {
+    background: #000;
+    color: #00ff88;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  /* NAVEGAÇÃO */
+  nav {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 12px;
+    flex-wrap: wrap;
+    border-top: 4px solid #00ff88;
+    border-bottom: 4px solid #00ff88;
+  }
+
+  nav a,
+  .dropdown button {
+    background: #006400;
+    color: #0f0;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+
+  nav a:hover,
+  .dropdown button:hover {
+    background: #00cc00;
+    color: #000;
+  }
+
+  /* DROPDOWN MENU */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222;
+    min-width: 200px;
+    z-index: 1;
+    border: 1px solid #00ff88;
+    border-radius: 5px;
+  }
+
+  .dropdown-content a {
+    color: #0f0;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #00cc00;
+    color: #000;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* CONTEÚDO PRINCIPAL */
+  article,
+  section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ff88;
+  }
+
+  h1,
+  section h2 {
+    color: #00ff88;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+
+  p,
+  li,
+  dd {
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  /* BLOCO DO AUTOR */
+  .author-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px #00ff88;
+  }
+
+  .author-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  /* FAQ */
+  .faq dl {
+    margin-top: 20px;
+  }
+
+  .faq dt {
+    font-weight: bold;
+    color: #00ff88;
+    margin-top: 15px;
+  }
+
+  .faq dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* RODAPÉ */
+  footer {
+    background: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  footer a {
+    color: #00ff88;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* RESPONSIVO */
+  @media screen and (max-width: 768px) {
     nav {
-      background-color: #111;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
     }
-    nav a {
-      color: #4caf50;
-      text-decoration: none;
-      padding: 8px 14px;
-      font-weight: bold;
-      border-radius: 4px;
+
+    .dropdown-content {
+      position: static;
+      width: 100%;
     }
-    nav a:hover {
-      background-color: #333;
+
+    .author-box {
+      flex-direction: column;
+      align-items: flex-start;
     }
-    section {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
-      background-color: #222;
-      border-radius: 12px;
-      box-shadow: 0 0 10px #4caf50;
-    }
-    h2 {
-      color: #81c784;
-      border-bottom: 2px solid #81c784;
-      padding-bottom: 8px;
-    }
-    h3 {
-      color: #a5d6a7;
-    }
-    pre {
-      background-color: #000;
-      color: #00ff00;
-      padding: 10px;
-      overflow-x: auto;
-      border-left: 5px solid #0f0;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    blockquote {
-      background: #333;
-      border-left: 5px solid #4caf50;
-      padding: 10px 20px;
-      margin: 20px 0;
-      font-style: italic;
-      color: #c8e6c9;
-    }
-    footer {
-      background-color: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-    }
-    footer a {
-      color: #4caf50;
-    }
-    .faq h4 {
-      margin-top: 15px;
-      color: #c8e6c9;
-    }
-  </style>
+  }
+</style>
+
 </head>
 <body>
 

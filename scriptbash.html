@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,216 +6,121 @@
     <meta name="description" content="Aprenda a criar scripts Bash para automação, administração, segurança e desenvolvimento no Linux. Exemplos práticos para diversas finalidades.">
     <meta name="keywords" content="linux, bash, shell script, scripts bash, automação linux, administração de sistemas, segurança, desenvolvimento, terminal, programação">
     <meta name="author" content="PioLinux">
-    <link rel="canonical" href="https://www.piolinux.com/script-bash.html" />
     <title>Scripts Bash para Diversas Finalidades - PioLinux</title>
-   
+    <link rel="stylesheet" href="style.css" />
     <style>
-  /* RESET E BASE */
-  * {
-    box-sizing: border-box;
-    font-family: 'Verdana', Geneva, sans-serif;
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    background: #1a1a1a;
-    color: #f0f0f0;
-  }
-
-  code {
-    background: #222;
-    padding: 2px 6px;
-    border-radius: 4px;
-    color: #0f0;
-    font-weight: bold;
-  }
-
-  pre {
-    background: #222;
-    padding: 12px;
-    border-radius: 5px;
-    overflow-x: auto;
-    color: #0f0;
-    margin-bottom: 20px;
-  }
-
-  /* CABEÇALHO */
-  header {
-    background: #000;
-    color: #00ff88;
-    text-align: center;
-    padding: 20px;
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
-
-  /* NAVEGAÇÃO */
-  nav {
-    background: #111;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    gap: 12px;
-    flex-wrap: wrap;
-    border-top: 4px solid #00ff88;
-    border-bottom: 4px solid #00ff88;
-  }
-
-  nav a,
-  .dropdown button {
-    background: #006400;
-    color: #0f0;
-    text-decoration: none;
-    padding: 8px 14px;
-    border-radius: 5px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-  }
-
-  nav a:hover,
-  .dropdown button:hover {
-    background: #00cc00;
-    color: #000;
-  }
-
-  /* DROPDOWN MENU */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #222;
-    min-width: 200px;
-    z-index: 1;
-    border: 1px solid #00ff88;
-    border-radius: 5px;
-  }
-
-  .dropdown-content a {
-    color: #0f0;
-    padding: 10px;
-    display: block;
-    text-decoration: none;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #00cc00;
-    color: #000;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-  /* CONTEÚDO PRINCIPAL */
-  article,
-  section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #00ff88;
-  }
-
-  h1,
-  section h2 {
-    color: #00ff88;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-  }
-
-  p,
-  li,
-  dd {
-    line-height: 1.6;
-    margin-bottom: 10px;
-  }
-
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  /* BLOCO DO AUTOR */
-  .author-box {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: #111;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 900px;
-    margin: 40px auto;
-    box-shadow: 0 0 10px #00ff88;
-  }
-
-  .author-box img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-  }
-
-  /* FAQ */
-  .faq dl {
-    margin-top: 20px;
-  }
-
-  .faq dt {
-    font-weight: bold;
-    color: #00ff88;
-    margin-top: 15px;
-  }
-
-  .faq dd {
-    margin-left: 20px;
-    margin-bottom: 10px;
-  }
-
-  /* RODAPÉ */
-  footer {
-    background: #000;
-    color: #aaa;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-  }
-
-  footer a {
-    color: #00ff88;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  footer a:hover {
-    text-decoration: underline;
-  }
-
-  /* RESPONSIVO */
-  @media screen and (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .dropdown-content {
-      position: static;
-      width: 100%;
-    }
-
-    .author-box {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-</style>
-
+        body {
+            background: linear-gradient(to right, #222, #444);
+            font-family: 'Courier New', monospace;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000;
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+            color: limegreen;
+        }
+        nav {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #0f0;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            background-color: #003300;
+        }
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #0f0;
+        }
+        h2 {
+            color: #00ff99;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #00ff99;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #76ff03;
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        pre {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #00ff99;
+            border: 1px solid #0f0;
+            font-size: 0.9em;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+            color: #00ff99;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #2a2a2a;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid limegreen;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,255,0,0.2);
+        }
+        .banner {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .banner img {
+            max-width: 150px;
+            border-radius: 50%;
+            border: 3px solid limegreen;
+            box-shadow: 0 0 15px rgba(0,255,0,0.5);
+        }
+        footer {
+            background-color: #000;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #0f0;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
@@ -238,10 +142,13 @@
 
     <section id="scripts-bash">
         <h2>🚀 Scripts Bash para Diversas Finalidades</h2>
-        <p>Com o Bash, mais conhecido como terminal ou Bourne-Again Shell, está o mestre por trás dos comandos do terminal na maioria das distribuições Linux. Através do terminal, que é o interpretador de comando padrão, suas instruções são transformadas em ações reais dentro do sistema. Através do Bash, que não serve apenas para digitar comandos, é possível criar pequenos scripts. 
-Todas aquelas atividades repetitivas, como ligar o computador ou atualizar o sistema, podem ser automatizadas com scripts Bash para várias finalidades: organizar arquivos, atualizar sistemas, fazer backups, tudo de forma automática.
-Aprender a utilizar o Bash é uma oportunidade de aprender mais, e não é necessário ser um programador expert. Domine o terminal para tornar a rotina diária mais eficiente.
-Confira os exemplos de scripts básicos que podem ajudar em diversas finalidades. Eles são apenas um exemplo no vasto mundo dos scripts</p>
+        <p>O Bash, também conhecido como Bourne-Again Shell, é como o cérebro por trás do terminal na maioria das distribuições Linux. Ele é o intérprete de comandos padrão que transforma suas instruções em ações reais dentro do sistema. Mas o Bash não serve apenas para digitar comandos: com ele, você pode criar pequenos scripts, ou seja, programinhas simples que automatizam tarefas do dia a dia.
+
+Sabe aquelas atividades repetitivas que você faz toda vez que liga o computador? Com o Bash, você pode colocar tudo isso em um script e executar com um clique ou um único comando. Dá para organizar arquivos, atualizar o sistema, fazer backups, configurar o ambiente de trabalho... tudo de forma automática e rápida!
+
+Aprender a usar o Bash é um passo importante para quem quer ganhar tempo e ser mais produtivo no Linux. Não é preciso ser programador para começar — qualquer pessoa, com um pouco de curiosidade, pode dar os primeiros passos e já ver resultados práticos.
+
+Ao longo dos próximos exemplos, vamos explorar scripts úteis e simples para diferentes finalidades. Se você quer dominar o terminal e tornar sua rotina muito mais eficiente, mergulhar no mundo dos scripts Bash é uma escolha inteligente!</p>
 
         <ul>
             <li>
@@ -457,15 +364,8 @@ echo "Verifique as imagens para o caminho correto caso não apareçam."</code></
         <p>Estes são apenas alguns exemplos do que você pode fazer com scripts Bash. A chave é começar com tarefas simples, entender os comandos básicos e, gradualmente, adicionar mais lógica e complexidade. O terminal é um playground vasto e poderoso!</p>
     </section>
 
-    <footer>
-    Site criado com muito terminal e memes! Acesse: 
-    <a href="politica-de-privacidade.html" target="_blank" style="color: #00ff88; font-weight: bold; text-decoration: underline;">
-        Política de Privacidade
-    </a> | 
-    <a href="termos-de-uso.html" target="_blank" style="color: #00ff88; font-weight: bold; text-decoration: underline;">
-        Termos de Uso
-    </a>
-</footer>
-
+    <footer class="footer">
+        <p>© 2025 PioLinux • Hospedado com ❤ no <a href="https://neocities.org" target="_blank">Neocities</a></p>
+    </footer>
 </body>
 </html>

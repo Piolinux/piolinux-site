@@ -8,149 +8,99 @@
     <meta name="author" content="PioLinux">
     <title>Artigos de Linux - PioLinux</title>
     <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Verdana', Geneva, sans-serif;
-      font-size: 14px;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background: #1a1a1a;
-      color: #f0f0f0;
-    }
-
-    header {
-      background: #000;
-      color: #00ff88;
-      text-align: center;
-      padding: 20px;
-      font-size: 1.8rem;
-      font-weight: bold;
-    }
-
-    nav {
-      background: #111;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-      gap: 12px;
-      flex-wrap: wrap;
-      border-top: 4px solid #00ff88;
-      border-bottom: 4px solid #00ff88;
-    }
-
-    nav a, .dropdown button {
-      background: #006400;
-      color: #0f0;
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 5px;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-    }
-
-    nav a:hover, .dropdown button:hover {
-      background: #00cc00;
-      color: #000;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #222;
-      min-width: 200px;
-      z-index: 1;
-      border: 1px solid #00ff88;
-      border-radius: 5px;
-    }
-
-    .dropdown-content a {
-      color: #0f0;
-      padding: 10px;
-      display: block;
-      text-decoration: none;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #00cc00;
-      color: #000;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #1a1a1a;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00ff88;
-    }
-
-    section h2 {
-      color: #00ff88;
-      margin-bottom: 20px;
-      font-size: 1.5rem;
-    }
-
-    section ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    section ul li {
-      margin-bottom: 10px;
-      line-height: 1.6;
-    }
-
-    code {
-      background: #222;
-      padding: 2px 6px;
-      border-radius: 4px;
-      color: #0f0;
-      font-weight: bold;
-    }
-
-    footer {
-      background: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #00ff88;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media screen and (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .dropdown-content {
-        position: static;
-        width: 100%;
-      }
-    }
-  </style>
+        body {
+            background: linear-gradient(to right, #222, #444);
+            font-family: 'Courier New', monospace;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000;
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+            color: limegreen;
+        }
+        nav {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+        }
+        nav a {
+            color: #0f0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #0f0;
+        }
+        h2 {
+            color: #00ff99;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h3 {
+            color: #76ff03;
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6em;
+        }
+        pre {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #00ff99;
+            border: 1px solid #0f0;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+            color: #00ff99;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #2a2a2a;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid limegreen;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,255,0,0.2);
+        }
+        .footer {
+            background-color: #000;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+        .footer a {
+            color: #0f0;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
    <header>

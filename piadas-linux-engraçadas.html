@@ -9,129 +9,212 @@
       <link rel="canonical" href="https://www.piolinux.com/piadas-linux-engra%C3%A7adas.html" />
     <title>200 Piadas de Linux - PioLinux</title>
     <style>
-        body {
-            background: linear-gradient(to right, #222, #444);
-            font-family: 'Courier New', monospace;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #000;
-            padding: 10px;
-            text-align: center;
-            font-size: 30px;
-            color: limegreen;
-        }
-        nav {
-            background-color: #111;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 10px;
-            flex-wrap: wrap;
-        }
-        nav a {
-            color: #0f0;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        nav a:hover {
-            text-decoration: underline;
-            background-color: #003300;
-        }
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #1e1e1e;
-            border-radius: 12px;
-            box-shadow: 0 0 10px #0f0;
-        }
-        h2 {
-            color: #00ff99;
-            font-size: 2em;
-            text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #00ff99;
-            padding-bottom: 10px;
-        }
-        h3 {
-            color: #76ff03;
-            font-size: 1.5em;
-            margin-top: 25px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 5px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        pre {
-            background-color: #333;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-            color: #00ff99;
-            border: 1px solid #0f0;
-            font-size: 0.9em;
-        }
-        code {
-            font-family: 'Courier New', monospace;
-            color: #00ff99;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background-color: #2a2a2a;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 5px solid limegreen;
-            border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0,255,0,0.2);
-        }
-        .banner {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .banner img {
-            max-width: 150px;
-            border-radius: 50%;
-            border: 3px solid limegreen;
-            box-shadow: 0 0 15px rgba(0,255,0,0.5);
-        }
-        .joke-list li {
-            padding: 10px 0;
-            border-left: none; /* Remove a barra verde para cada piada individualmente */
-            background-color: transparent; /* Remove o fundo escuro para cada piada individualmente */
-            box-shadow: none; /* Remove a sombra para cada piada individualmente */
-            margin-bottom: 5px;
-            border-bottom: 1px dashed #333; /* Adiciona uma linha pontilhada para separar */
-        }
-        .joke-list li:last-child {
-            border-bottom: none;
-        }
-        footer {
-            background-color: #000;
-            color: #aaa;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9em;
-        }
-        footer a {
-            color: #0f0;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  /* RESET E BASE */
+  * {
+    box-sizing: border-box;
+    font-family: 'Verdana', Geneva, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: #1a1a1a;
+    color: #f0f0f0;
+  }
+
+  code {
+    background: #222;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #0f0;
+    font-weight: bold;
+  }
+
+  pre {
+    background: #222;
+    padding: 12px;
+    border-radius: 5px;
+    overflow-x: auto;
+    color: #0f0;
+    margin-bottom: 20px;
+  }
+
+  /* CABEÇALHO */
+  header {
+    background: #000;
+    color: #00ff88;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  /* NAVEGAÇÃO */
+  nav {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 12px;
+    flex-wrap: wrap;
+    border-top: 4px solid #00ff88;
+    border-bottom: 4px solid #00ff88;
+  }
+
+  nav a,
+  .dropdown button {
+    background: #006400;
+    color: #0f0;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+
+  nav a:hover,
+  .dropdown button:hover {
+    background: #00cc00;
+    color: #000;
+  }
+
+  /* DROPDOWN MENU */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222;
+    min-width: 200px;
+    z-index: 1;
+    border: 1px solid #00ff88;
+    border-radius: 5px;
+  }
+
+  .dropdown-content a {
+    color: #0f0;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #00cc00;
+    color: #000;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* CONTEÚDO PRINCIPAL */
+  article,
+  section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ff88;
+  }
+
+  h1,
+  section h2 {
+    color: #00ff88;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+
+  p,
+  li,
+  dd {
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  /* BLOCO DO AUTOR */
+  .author-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px #00ff88;
+  }
+
+  .author-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  /* FAQ */
+  .faq dl {
+    margin-top: 20px;
+  }
+
+  .faq dt {
+    font-weight: bold;
+    color: #00ff88;
+    margin-top: 15px;
+  }
+
+  .faq dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* RODAPÉ */
+  footer {
+    background: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  footer a {
+    color: #00ff88;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* RESPONSIVO */
+  @media screen and (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .dropdown-content {
+      position: static;
+      width: 100%;
+    }
+
+    .author-box {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+
 </head>
 <body>
 
@@ -141,8 +224,8 @@
     
     <nav>
         <a href="index.html">Dicas</a>
-        <a href="distros.html">Distros</a>
-        <a href="#terminal">Scripts Bash</a>
+        <a href="#distros">Distros</a>
+        <a href="#terminais">Scripts Bash</a>
         <a href="#piadas">Piadas</a>
         <a href="#terminais">Terminais</a>
         <a href="#distros">Distros Específicas</a>

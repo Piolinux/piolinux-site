@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,264 +8,315 @@
 <meta name="author" content="Especialista em Python" />
 <title>Artigo Completo: Tipos de Programas e Linguagem em Python com Links e Descrições</title>
 <style>
-        body {
-            background: linear-gradient(to right, #222, #444);
-            font-family: 'Courier New', monospace;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #000;
-            padding: 10px;
-            text-align: center;
-            font-size: 30px;
-            color: limegreen;
-        }
-        nav {
-            background-color: #111;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 10px;
-        }
-        nav a {
-            color: #0f0;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #1e1e1e;
-            border-radius: 12px;
-            box-shadow: 0 0 10px #0f0;
-        }
-        h2 {
-            color: #00ff99; /* Título principal da seção */
-            font-size: 2em;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        h3 {
-            color: #76ff03; /* Título das dicas */
-            font-size: 1.5em;
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        pre {
-            background-color: #333;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-            color: #00ff99;
-            border: 1px solid #0f0;
-        }
-        code {
-            font-family: 'Courier New', monospace;
-            color: #00ff99;
-        }
-        ul {
-            list-style-type: none; /* Remove marcadores padrão */
-            padding: 0;
-        }
-        li {
-            background-color: #2a2a2a;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 5px solid limegreen;
-            border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0,255,0,0.2);
-        }
-        .footer {
-            background-color: #000;
-            color: #aaa;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9em;
-        }
-        .footer a {
-            color: #0f0;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Verdana', Geneva, sans-serif;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #1a1a1a;
+      color: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header {
+      background: #000;
+      color: #00ff88;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      gap: 12px;
+      flex-wrap: wrap;
+      border-top: 4px solid #00ff88;
+      border-bottom: 4px solid #00ff88;
+    }
+
+    nav a, .dropdown button {
+      background: #006400;
+      color: #00cc77;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav a:hover, .dropdown button:hover {
+      background: #00cc00;
+      color: #000;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #222;
+      min-width: 200px;
+      z-index: 1;
+      border: 1px solid #00ff88;
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      color: #00cc77;
+      padding: 10px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #00cc00;
+      color: #000;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ff88;
+    }
+
+    section h2 {
+      color: #00ff88;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    section h3 {
+      color: #00cc44;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    section ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    code {
+      background: #222;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #0f0;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* Links gerais */
+    a, nav a, .dropdown-content a, footer a {
+      color: #00cc77;
+      text-decoration: none;
+      transition: color 0.3s, background-color 0.3s;
+    }
+
+    a:visited, nav a:visited, .dropdown-content a:visited, footer a:visited {
+      color: #00cc77;
+    }
+
+    a:hover, nav a:hover, .dropdown-content a:hover, footer a:hover {
+      color: #000;
+      background-color: #00cc00;
+      text-decoration: none;
+    }
+
+    a:active, nav a:active, .dropdown-content a:active, footer a:active {
+      color: #00cc77;
+    }
+
+    footer a {
+      font-weight: bold;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .dropdown-content {
+        position: static;
+        width: 100%;
+      }
+    }
+</style>
+
+
 </head>
 <body>
-<article>
+
+<header>Artigo Completo: Tipos de Programas e Linguagem em Python</header>
 
 <nav>
-<h2>Índice</h2>
-
-<a href="#introducao">Introdução</a>
-<a href="#porque-python">Por que Python é tão usado?</a>
-<a href="#tipos-programas">Tipos de Programas Criados com Python</a>
-<a href="#linguagem">Características da Linguagem Python</a>
-<a href="#bibliotecas">Bibliotecas e Frameworks Importantes</a>
-<a href="#exemplos">Exemplos Reais com Links</a>
-<a href="#conclusao">Conclusão</a>
-<a href="index.html">Voltar a pagina</a>
-
+  <a href="#introducao">Introdução</a>
+  <a href="#porque-python">Por que Python é tão usado?</a>
+  <a href="#tipos-programas">Tipos de Programas Criados com Python</a>
+  <a href="#linguagem">Características da Linguagem Python</a>
+  <a href="#bibliotecas">Bibliotecas e Frameworks Importantes</a>
+  <a href="#exemplos">Exemplos Reais com Links</a>
+  <a href="#conclusao">Conclusão</a>
+  <a href="index.html">Voltar à página</a>
 </nav>
+
+<article>
 
 <section id="introducao">
 <h2>Introdução</h2>
-<p>Python é uma linguagem de programação de alto nível, conhecida por sua 
-facilidade de uso. Python se destaca por sua sintaxe clara e objetiva, facilitando o aprendizado do iniciante. Neste artigo, abordaremos os tipos de programas desenvolvidos em Python, suas características principais, bibliotecas e frameworks, além de exemplos.</p>
+<p>Python é uma linguagem de programação de alto nível, conhecida por sua facilidade de uso. Python se destaca por sua sintaxe clara e objetiva, facilitando o aprendizado do iniciante. Neste artigo, abordaremos os tipos de programas desenvolvidos em Python, suas características principais, bibliotecas e frameworks, além de exemplos reais para ajudar no estudo e desenvolvimento.</p>
 </section>
 
 <section id="porque-python">
 <h2>Por que Python é tão usado?</h2>
-<p>Python, uma das linguagens mais utilizadas no mundo, com uma curva de aprendizado facilíssima, ajuda pessoas sem experiência prévia em programação a criar suas aplicações em pouco tempo. Possui uma comunidade ativa que mantém diversas bibliotecas atualizadas, atendendo às necessidades de desenvolvimento. É multiplataforma, sendo compatível com Linux, Windows e macOS, o que facilita a portabilidade de aplicações.</p>
+<p>Python é uma das linguagens mais utilizadas no mundo, possuindo uma curva de aprendizado fácil que ajuda pessoas sem experiência prévia em programação a criar aplicações rapidamente. Sua comunidade ativa mantém diversas bibliotecas atualizadas, atendendo a várias necessidades de desenvolvimento. É multiplataforma, funcionando em Linux, Windows e macOS, o que facilita a portabilidade dos programas.</p>
 </section>
 
 <section id="tipos-programas">
 <h2>Tipos de Programas Criados com Python</h2>
 
 <h3>1. Desenvolvimento Web</h3>
-<p>
-Python é amplamente utilizado no desenvolvimento web graças a frameworks como:
+<p>Python é amplamente utilizado no desenvolvimento web graças a frameworks como:</p>
 <ul>
-<li><a href="https://www.djangoproject.com/" target="_blank">Django</a>: Um framework robusto, com ORM embutido, autenticação, sistema de administração e segurança pronta para produção.</li>
-<li><a href="https://flask.palletsprojects.com/" target="_blank">Flask</a>: Um microframework que oferece flexibilidade, ideal para aplicações mais leves e APIs.</li>
-<li><a href="https://fastapi.tiangolo.com/" target="_blank">FastAPI</a>: Focado em desempenho e na criação de APIs modernas, com suporte automático à documentação via OpenAPI.</li>
+  <li><a href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer">Django</a>: Framework robusto com ORM embutido, autenticação e sistema de administração.</li>
+  <li><a href="https://flask.palletsprojects.com/" target="_blank" rel="noopener noreferrer">Flask</a>: Microframework flexível, ideal para aplicações leves e APIs.</li>
+  <li><a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener noreferrer">FastAPI</a>: Focado em desempenho e APIs modernas, com documentação automática.</li>
 </ul>
-</p>
 
 <h3>2. Ciência de Dados e Análise</h3>
-<p>
-A análise de dados com Python é feita com o uso de bibliotecas como:
+<p>Bibliotecas essenciais para análise e manipulação de dados incluem:</p>
 <ul>
-<li><a href="https://pandas.pydata.org/" target="_blank">Pandas</a>: Manipulação e análise de dados tabulares.</li>
-<li><a href="https://numpy.org/" target="_blank">NumPy</a>: Computação numérica com arrays multidimensionais.</li>
-<li><a href="https://matplotlib.org/" target="_blank">Matplotlib</a>: Geração de gráficos estáticos e interativos.</li>
-<li><a href="https://seaborn.pydata.org/" target="_blank">Seaborn</a>: Visualização de dados estatísticos com base no Matplotlib.</li>
+  <li><a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer">Pandas</a>: Manipulação e análise de dados tabulares.</li>
+  <li><a href="https://numpy.org/" target="_blank" rel="noopener noreferrer">NumPy</a>: Computação numérica com arrays multidimensionais.</li>
+  <li><a href="https://matplotlib.org/" target="_blank" rel="noopener noreferrer">Matplotlib</a>: Criação de gráficos estáticos e interativos.</li>
+  <li><a href="https://seaborn.pydata.org/" target="_blank" rel="noopener noreferrer">Seaborn</a>: Visualização estatística baseada no Matplotlib.</li>
 </ul>
-</p>
 
 <h3>3. Inteligência Artificial e Machine Learning</h3>
-<p>
-Python lidera na área de IA e aprendizado de máquina:
+<p>Frameworks populares para IA e aprendizado de máquina:</p>
 <ul>
-<li><a href="https://scikit-learn.org/" target="_blank">Scikit-learn</a>: Algoritmos de classificação, regressão e clustering prontos para uso.</li>
-<li><a href="https://www.tensorflow.org/" target="_blank">TensorFlow</a>: Framework de redes neurais criado pela Google.</li>
-<li><a href="https://pytorch.org/" target="_blank">PyTorch</a>: Uma alternativa poderosa e flexível para deep learning, criada pelo Facebook.</li>
-<li><a href="https://keras.io/" target="_blank">Keras</a>: Interface amigável para redes neurais com backend em TensorFlow.</li>
+  <li><a href="https://scikit-learn.org/" target="_blank" rel="noopener noreferrer">Scikit-learn</a>: Algoritmos prontos para classificação, regressão e clustering.</li>
+  <li><a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer">TensorFlow</a>: Framework para redes neurais criado pelo Google.</li>
+  <li><a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer">PyTorch</a>: Alternativa flexível para deep learning, desenvolvida pelo Facebook.</li>
+  <li><a href="https://keras.io/" target="_blank" rel="noopener noreferrer">Keras</a>: Interface amigável para redes neurais com backend TensorFlow.</li>
 </ul>
-</p>
 
 <h3>4. Automação de Tarefas (Scripting)</h3>
-<p>
-Python é ideal para automatizar tarefas repetitivas:
+<p>Python facilita a automação de tarefas repetitivas com bibliotecas como:</p>
 <ul>
-<li><a href="https://docs.python.org/3/library/os.html" target="_blank">os</a>: Para acessar comandos e variáveis do sistema operacional.</li>
-<li><a href="https://docs.python.org/3/library/shutil.html" target="_blank">shutil</a>: Manipulação de arquivos e diretórios.</li>
-<li><a href="https://openpyxl.readthedocs.io/" target="_blank">openpyxl</a>: Leitura e escrita de arquivos Excel.</li>
+  <li><a href="https://docs.python.org/3/library/os.html" target="_blank" rel="noopener noreferrer">os</a>: Interação com o sistema operacional.</li>
+  <li><a href="https://docs.python.org/3/library/shutil.html" target="_blank" rel="noopener noreferrer">shutil</a>: Manipulação de arquivos e diretórios.</li>
+  <li><a href="https://openpyxl.readthedocs.io/" target="_blank" rel="noopener noreferrer">openpyxl</a>: Leitura e escrita de arquivos Excel.</li>
 </ul>
-</p>
 
 <h3>5. Desenvolvimento de Jogos</h3>
-<p>
-Python também pode ser usado na criação de jogos:
+<p>Bibliotecas para criação de jogos em Python:</p>
 <ul>
-<li><a href="https://www.pygame.org/news" target="_blank">Pygame</a>: Biblioteca para jogos 2D, muito usada em projetos educativos e protótipos.</li>
-<li><a href="https://godotengine.org/" target="_blank">Godot + GDScript</a>: Ainda que não seja Python puro, a linguagem GDScript da Godot é baseada em Python e usada em jogos multiplataforma.</li>
+  <li><a href="https://www.pygame.org/news" target="_blank" rel="noopener noreferrer">Pygame</a>: Biblioteca para jogos 2D, popular em projetos educativos.</li>
+  <li><a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer">Godot + GDScript</a>: Linguagem baseada em Python para jogos multiplataforma.</li>
 </ul>
-</p>
 
 <h3>6. Programas com Interface Gráfica (GUI)</h3>
-<p>
-Python permite criar aplicações desktop com janelas e menus:
+<p>Ferramentas para criar interfaces gráficas desktop:</p>
 <ul>
-<li><a href="https://docs.python.org/3/library/tkinter.html" target="_blank">Tkinter</a>: Interface gráfica nativa e simples do Python.</li>
-<li><a href="https://riverbankcomputing.com/software/pyqt/intro" target="_blank">PyQt</a>: Interface gráfica moderna e profissional.</li>
-<li><a href="https://kivy.org/" target="_blank">Kivy</a>: GUI multiplataforma com suporte a dispositivos móveis.</li>
+  <li><a href="https://wiki.python.org/moin/TkInter" target="_blank" rel="noopener noreferrer">Tkinter</a>: Biblioteca padrão para GUIs simples.</li>
+  <li><a href="https://www.riverbankcomputing.com/software/pyqt/" target="_blank" rel="noopener noreferrer">PyQt</a> e <a href="https://pyside.org/" target="_blank" rel="noopener noreferrer">PySide</a>: Bindings para Qt com recursos avançados.</li>
+  <li><a href="https://kivy.org/#home" target="_blank" rel="noopener noreferrer">Kivy</a>: Framework para aplicativos multitouch e móveis.</li>
 </ul>
-</p>
-
-<h3>7. Bots e Aplicações com APIs</h3>
-<p>
-Python é usado para criar bots que interagem com APIs:
-<ul>
-<li><a href="https://github.com/python-telegram-bot/python-telegram-bot" target="_blank">python-telegram-bot</a>: Biblioteca para criar bots no Telegram.</li>
-<li><a href="https://github.com/Rapptz/discord.py" target="_blank">discord.py</a>: Criar bots para servidores Discord.</li>
-<li><a href="https://requests.readthedocs.io/" target="_blank">Requests</a>: Biblioteca para interações HTTP simples.</li>
-</ul>
-</p>
-
-<h3>8. Ferramentas de Linha de Comando (CLI)</h3>
-<p>
-Ferramentas úteis para CLI com Python:
-<ul>
-<li><a href="https://click.palletsprojects.com/" target="_blank">Click</a>: Criação de interfaces de terminal interativas e seguras.</li>
-<li><a href="https://typer.tiangolo.com/" target="_blank">Typer</a>: Versão moderna e tipada do Click, muito usada com FastAPI.</li>
-</ul>
-</p>
-
-<h3>9. Segurança e Pentest</h3>
-<p>
-Python é largamente utilizado por profissionais de segurança:
-<ul>
-<li><a href="https://github.com/sqlmapproject/sqlmap" target="_blank">sqlmap</a>: Ferramenta de injeção SQL automatizada.</li>
-<li><a href="https://scapy.net/" target="_blank">Scapy</a>: Manipulação de pacotes de rede para análise e exploração.</li>
-<li><a href="https://www.exploit-db.com/" target="_blank">ExploitDB</a>: Base de dados de exploits que usam Python.</li>
-</ul>
-</p>
 </section>
 
 <section id="linguagem">
 <h2>Características da Linguagem Python</h2>
-<p>
-Python é uma linguagem interpretada, de tipagem dinâmica e forte, com suporte a múltiplos paradigmas. Ela suporta orientação a objetos, programação imperativa, funcional e procedural. Sua sintaxe limpa e uso extensivo de indentação favorece a legibilidade e reduz erros. Python também possui uma biblioteca padrão robusta, que cobre desde matemática, manipulação de arquivos, até operações de rede e segurança.
-</p>
+<ul>
+  <li><strong>Interpretada:</strong> Python é interpretada, não compilada, o que permite testes rápidos e desenvolvimento dinâmico.</li>
+  <li><strong>Multiparadigma:</strong> Suporta programação orientada a objetos, funcional e procedural.</li>
+  <li><strong>Tipagem Dinâmica:</strong> Não precisa declarar o tipo das variáveis.</li>
+  <li><strong>Portabilidade:</strong> Funciona em diversos sistemas operacionais sem modificações.</li>
+  <li><strong>Extensibilidade:</strong> Pode ser integrada com C, C++ e outras linguagens para desempenho.</li>
+</ul>
 </section>
 
 <section id="bibliotecas">
 <h2>Bibliotecas e Frameworks Importantes</h2>
+<p>Além das citadas nos tipos de programas, destacam-se:</p>
 <ul>
-<li><strong>Requests</strong> – Requisições HTTP simples (<a href="https://docs.python-requests.org/en/latest/" target="_blank">link</a>).</li>
-<li><strong>BeautifulSoup</strong> – Web scraping de HTML e XML (<a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">link</a>).</li>
-<li><strong>Pillow</strong> – Processamento de imagens (<a href="https://python-pillow.org/" target="_blank">link</a>).</li>
-<li><strong>OpenCV</strong> – Visão computacional e vídeo (<a href="https://opencv.org/" target="_blank">link</a>).</li>
-<li><strong>Plotly</strong> – Gráficos interativos (<a href="https://plotly.com/python/" target="_blank">link</a>).</li>
+  <li><a href="https://requests.readthedocs.io/" target="_blank" rel="noopener noreferrer">Requests</a>: Para requisições HTTP simples e elegantes.</li>
+  <li><a href="https://beautiful-soup-4.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">Beautiful Soup</a>: Para raspagem (scraping) de dados de páginas web.</li>
+  <li><a href="https://pytest.org/" target="_blank" rel="noopener noreferrer">Pytest</a>: Framework para testes automatizados.</li>
+  <li><a href="https://sphinx-doc.org/" target="_blank" rel="noopener noreferrer">Sphinx</a>: Para documentação de projetos.</li>
 </ul>
 </section>
 
 <section id="exemplos">
-<h2>Exemplos Reais com Links</h2>
+<h2>Exemplos Reais com Links para Estudo</h2>
 <ul>
-<li><a href="https://github.com/ytdl-org/youtube-dl" target="_blank">youtube-dl</a>: Baixador de vídeos YouTube.</li>
-<li><a href="https://github.com/pallets/flask" target="_blank">Flask</a>: Microframework web.</li>
-<li><a href="https://github.com/psf/requests" target="_blank">Requests</a>: Código aberto da biblioteca de requisições HTTP.</li>
-<li><a href="https://github.com/keras-team/keras" target="_blank">Keras</a>: Biblioteca de redes neurais.</li>
+  <li><a href="https://github.com/pallets/flask" target="_blank" rel="noopener noreferrer">Projeto Flask no GitHub</a>: Framework para web simples.</li>
+  <li><a href="https://github.com/scikit-learn/scikit-learn" target="_blank" rel="noopener noreferrer">Scikit-learn GitHub</a>: Biblioteca de machine learning.</li>
+  <li><a href="https://github.com/psf/requests" target="_blank" rel="noopener noreferrer">Requests GitHub</a>: Manipulação HTTP fácil.</li>
+  <li><a href="https://github.com/pygame/pygame" target="_blank" rel="noopener noreferrer">Pygame GitHub</a>: Biblioteca de jogos 2D.</li>
 </ul>
 </section>
 
 <section id="conclusao">
 <h2>Conclusão</h2>
-<p>
-Python é uma linguagem extremamente versátil e poderosa, adequada para praticamente qualquer tipo de desenvolvimento. Sua legibilidade, comunidade ativa, enorme acervo de bibliotecas e suporte a múltiplos paradigmas tornam-na uma escolha confiável tanto para iniciantes quanto para especialistas. Esperamos que este guia tenha ajudado você a entender melhor o mundo da programação com Python, seus tipos de programas e caminhos possíveis para estudos e projetos.
-</p>
+<p>Python é uma linguagem versátil e poderosa, ideal para iniciantes e profissionais. Seja para desenvolvimento web, ciência de dados, automação, inteligência artificial ou criação de jogos, Python oferece ferramentas e bibliotecas robustas que facilitam a implementação dos mais variados projetos.</p>
+<p>Invista tempo em aprender suas principais bibliotecas, pratique com projetos reais e acompanhe as atualizações da comunidade para tirar o máximo proveito dessa linguagem.</p>
+<p>Quer continuar aprendendo? Explore os links e frameworks indicados neste artigo e comece seus projetos agora mesmo!</p>
 </section>
 
 </article>
-</body>
-</html>
-
 
 <footer>
-    Site criado com muito terminal e memes! Acesse: <a href="politica-de-privacidade.html" target="_blank" style="color: limegreen;">politica-de-privacidade</a>
-    <a href="termos-de-uso.html" target="_blank" style="color: limegreen;">termos-de-uso</a>
-    
-    
-  </footer>
+<p>© 2025 Python Especialista. Todos os direitos reservados. | Desenvolvido por <a href="https://openai.com" target="_blank" rel="noopener noreferrer">ChatGPT</a></p>
+</footer>
+
+</body>
+</html>
