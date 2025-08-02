@@ -224,6 +224,25 @@
     <a href="script-bash.html">Scripts</a>
     <a href="distros-de-linux.html">Distros</a>
 </nav>
+<div id="share" style="text-align:center;margin:15px 0"></div>
+<script async defer>
+(() => {
+  const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+  const d=[
+    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+  ],e=document.getElementById("share");
+  d.forEach(([n,c,l])=>{
+    let a=document.createElement("a");
+    a.href=l;a.target="_blank";a.rel="noopener";
+    a.textContent=n;
+    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+    e.appendChild(a);
+  });
+})();
+</script>
 
   <section>
     <h2>Por que manter o Linux atualizado?</h2>
