@@ -173,7 +173,10 @@
 
     <section>
         <h2>80 Dicas Rápidas de Linux</h2>
-        <p>Se você é novo no mundo Linux ou já tem uma certa experiência, essas dicas foram pensadas para facilitar sua jornada. Aqui, você encontra soluções simples, orientações claras e aquela pitada de humor que não pode faltar no aprendizado. Afinal, aprender pode (e deve!) ser leve e divertido.</p>
+        <p>Novato no mundo do linux quer aprender alguns comandos que 
+        facilitem sua vida sem os menores problemas, 80 dicas que podem 
+        ajudar em momentos de emergência quando a memória falha e não 
+        se lembra dos comandos de terminal.</p>
 
        </center>
     
@@ -223,14 +226,13 @@
             </li>
             <li>
                 <h3>6. Primeiros Comandos no Terminal</h3>
-                <p>Aprenda o básico: <code>ls</code> (listar arquivos), <code>cd</code> (navegar entre diretórios), <code>pwd</code> (mostrar diretório atual), <code>mkdir</code> (criar pasta), <code>rm</code> (remover). O terminal é seu amigo!</p>
-                <pre><code>ls -l
-cd Documentos
-mkdir NovaPasta</code></pre>
+                <p>Vamos começar aprendendo os comandos básicos do Linux: o ls mostra os arquivos dentro da pasta, o cd permite navegar entre diretórios, o pwd revela onde você está no sistema, o mkdir cria novas pastas e o rm remove arquivos ou diretórios. Com esses comandos, você já consegue se movimentar no terminal com mais confiança</p>
+                
             </li>
             <li>
                 <h3>7. Instale Programas Facilmente</h3>
-                <p>Use o gerenciador de pacotes da sua distribuição: <code>sudo apt install &lt;nome_do_pacote&gt;</code> (Debian/Ubuntu) ou <code>sudo dnf install &lt;nome_do_pacote&gt;</code> (Fedora). Explore também **Flatpaks** e **Snaps** para apps universais.</p>
+                <p>Não deixe de utilizar o gerenciador de pacotes no 
+                terminal: <code>sudo apt install &lt;nome_do_pacote&gt;</code> (Debian/Ubuntu) ou <code>sudo dnf install &lt;nome_do_pacote&gt;</code> (Fedora). Explore também **Flatpaks** e **Snaps** para apps universais.</p>
             </li>
             <li>
                 <h3>8. Navegue pelo Sistema de Arquivos</h3>
@@ -263,8 +265,9 @@ mkdir NovaPasta</code></pre>
                 <p>**VS Code**, **Sublime Text** e **Vim/Neovim** (para hardcore) são populares. Para IDEs completas, **PyCharm**, **IntelliJ IDEA** e **Eclipse** têm ótimos suportes no Linux.</p>
             </li>
             <li>
-                <h3>15. Gerenciadores de Fotos e Vídeos</h3>
-                <p>**GIMP** e **Krita** para edição de imagem. **Darktable** e **RawTherapee** para edição RAW. Para vídeo, **Kdenlive** e **DaVinci Resolve** são poderosos. **VLC** é o player universal.</p>
+                <h3>15. Editores de Fotos e Vídeos</h3>
+                <p>Editores de imagens GIMP e Krita. Darktable e 
+                RawTherapee editores de Foto formato RAW. Para Edição de vídeo, Kdenlive e DaVinci Resolve são poderosos. VLC é o player universal.</p>
             </li>
             <li>
                 <h3>16. Ferramentas de Organização Pessoal</h3>
@@ -283,8 +286,9 @@ mkdir NovaPasta</code></pre>
                 <p>A **Steam** com **Proton** revolucionou os jogos no Linux, permitindo rodar muitos títulos do Windows. **Lutris** facilita a instalação de jogos de diversas plataformas. A comunidade de jogos Linux cresce rapidamente.</p>
             </li>
             <li>
-                <h3>20. Ferramentas de Produtividade em Linha de Comando</h3>
-                <p>Use `grep` para buscar texto, `awk` e `sed` para manipular dados, `find` para localizar arquivos. Essas ferramentas são incrivelmente poderosas para automatizar e processar informações.</p>
+                <h3>20. Linhas de Comandos para maior produtividade</h3>
+                <p>Utilize `grep` para buscar textos, `awk` e `sed` 
+                para manipulando dados, `find` para localizando arquivos. Essas ferramentas são incrivelmente poderosas para automatizar e processar informações.</p>
             </li>
 
             <h2 id="seguranca-rede">Segurança e Rede</h2>
@@ -310,7 +314,7 @@ sudo ufw allow 80/tcp</code></pre>
             </li>
             <li>
                 <h3>25. Configurando uma VPN no Linux</h3>
-                <p>Instale um cliente VPN (OpenVPN, WireGuard) ou use o gerenciador de rede da sua interface gráfica. Uma **VPN** criptografa seu tráfego e oculta seu IP, aumentando sua segurança online.</p>
+                <p>Para aumentar sua segurança na internet, você pode instalar um cliente de VPN, como o OpenVPN ou o WireGuard, ou usar o gerenciador de rede da sua interface gráfica. A VPN funciona criptografando seus dados e escondendo seu endereço de IP, deixando sua navegação mais segura e privada</p>
             </li>
             <li>
                 <h3>26. Monitore o Tráfego de Rede</h3>
@@ -340,7 +344,7 @@ sudo ufw allow 80/tcp</code></pre>
             </li>
             <li>
                 <h3>32. Gerenciamento de Processos e Serviços com `systemd`</h3>
-                <p>O **`systemd`** é o sistema de inicialização padrão. Use `systemctl status &lt;serviço&gt;`, `systemctl start &lt;serviço&gt;`, `systemctl enable &lt;serviço&gt;` para gerenciar serviços do sistema.</p>
+                <p>systemd é o sistema que cuida de iniciar e gerenciar os serviços no seu computador. Para verificar o status de um serviço, use systemctl status <serviço>. Para iniciar um serviço, basta rodar systemctl start <serviço>, e se quiser que ele seja iniciado automaticamente toda vez que o sistema ligar, use systemctl enable <serviço></p>
             </li>
             <li>
                 <h3>33. Agendando Tarefas com Cron</h3>
@@ -354,11 +358,12 @@ sudo ufw allow 80/tcp</code></pre>
             </li>
             <li>
                 <h3>35. Configure um Servidor Web LAMP/LEMP</h3>
-                <p>**LAMP (Linux, Apache, MySQL, PHP)** ou **LEMP (Linux, Nginx, MySQL, PHP)** são pilhas populares para servidores web. Instale os pacotes necessários e configure os arquivos de virtual host.</p>
+                <p>LAMP (Linux, Apache, MySQL e PHP) e LEMP (Linux, Nginx, MySQL e PHP) são conjuntos de programas muito usados para montar servidores web, ou seja, para fazer sites funcionarem na internet</p>
             </li>
             <li>
-                <h3>36. Gerenciamento de Pacotes Avançado</h3>
-                <p>Para Debian/Ubuntu: `dpkg -i &lt;pacote.deb&gt;` (instala .deb), `apt remove --purge &lt;pacote&gt;` (remove pacote e configs). Para Red Hat/Fedora: `rpm -i &lt;pacote.rpm&gt;`, `dnf remove &lt;pacote&gt;`.</p>
+                <h3>36. Gerenciador de Programas em nivel Avançado</h3>
+                <p>No Debian e Ubuntu, você pode instalar arquivos .deb usando o comando dpkg -i <pacote.deb>. Para remover um programa junto com suas configurações, use apt remove --purge <pacote>.
+Já no Red Hat e Fedora, a instalação de arquivos .rpm é feita com rpm -i <pacote.rpm>, e para remover um programa, basta usar dnf remove <pacote>.</p>
             </li>
             <li>
                 <h3>37. Noções Básicas de Docker no Linux</h3>
@@ -366,11 +371,12 @@ sudo ufw allow 80/tcp</code></pre>
             </li>
             <li>
                 <h3>38. Configurando um Servidor FTP</h3>
-                <p>Instale o `vsftpd` (Very Secure FTP Daemon). Configure o arquivo `/etc/vsftpd.conf` para permitir uploads e definir diretórios de usuário. **Atenção aos riscos de segurança!**</p>
+                <p>Instale o vsftpd (que significa Very Secure FTP Daemon). Depois, ajuste as configurações no arquivo /etc/vsftpd.conf para permitir que os usuários façam uploads e para definir quais pastas eles podem acessar.
+Mas fique atento: é importante tomar cuidado com a segurança ao configurar esse serviço!</p>
             </li>
             <li>
-                <h3>39. Compartilhamento de Arquivos com Samba/NFS</h3>
-                <p>**Samba** permite compartilhar arquivos com sistemas Windows. **NFS (Network File System)** é ideal para compartilhamento entre sistemas Linux/Unix. Ambos são úteis em ambientes mistos.</p>
+                <h3>39. Compartilhando arquivos na rede usando Samba ou NFS.</h3>
+                <p>O Samba é uma ferramenta que facilita o compartilhamento de arquivos com computadores Windows. Já o NFS (Network File System) é perfeito para compartilhar arquivos entre máquinas Linux ou Unix. Os dois são muito úteis quando você trabalha com sistemas diferentes na mesma rede</p>
             </li>
             <li>
                 <h3>40. Automatize Tarefas com Scripts Bash</h3>
@@ -383,7 +389,7 @@ echo "Olá, Piolinux!"</code></pre>
             <h2 id="desenvolvimento">Programação e Desenvolvimento</h2>
             <li>
                 <h3>41. Ambiente de Desenvolvimento Python</h3>
-                <p>Use `pyenv` ou `conda` para gerenciar múltiplas versões de Python. Crie ambientes virtuais (`python3 -m venv .venv`) para isolar as dependências dos seus projetos.</p>
+                <p>Utilize `pyenv` ou `conda` para gerenciar múltiplas versões de Python. Crie ambientes virtuais (`python3 -m venv .venv`) para isolar as dependências dos seus projetos.</p>
             </li>
             <li>
                 <h3>42. Desenvolvendo em C/C++</h3>
@@ -391,7 +397,8 @@ echo "Olá, Piolinux!"</code></pre>
             </li>
             <li>
                 <h3>43. Git e GitHub Essenciais</h3>
-                <p>Instale Git (`sudo apt install git`). Configure seu nome e e-mail (`git config`). Use `git clone`, `git add`, `git commit`, `git push` para gerenciar seu código com o GitHub.</p>
+                <p>Instale Git (`sudo apt install git`). Configure seu 
+                nome e e-mail (`git config`). Use os comandos do Git como git clone para copiar um projeto, git add para preparar as mudanças, git commit para salvar essas mudanças com uma mensagem e git push para enviar tudo para o seu repositório no GitHub. Assim, você consegue controlar e compartilhar seu código de forma prática..</p>
             </li>
             <li>
                 <h3>44. Ferramentas de Linha de Comando para Desenvolvedores</h3>
