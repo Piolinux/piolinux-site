@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mais Códigos - PioLinux</title>
+  <meta name="description" content="Códigos úteis de Linux, HTML, Python e mais para copiar e compartilhar.">
+  <meta name="keywords" content="linux, comandos, scripts, html, python, piolinux, terminal">
+  <meta name="robots" content="index,nofollow">
+  <link rel="canonical" href="https://piolinux.com/mais-codigos.html">
+  <style>
+    body {
+      background-color: #111;
+      color: #0f0;
+      font-family: Verdana, Geneva, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #000;
+      color: #00ff88;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ff88;
+    }
+    h2 {
+      color: #00ff88;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    pre {
+      background: #222;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      color: #0f0;
+    }
+    .code-block {
+      margin-bottom: 30px;
+    }
+    button {
+      background: #006400;
+      color: #0f0;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #00cc00;
+      color: #000;
+    }
+    footer {
+      background-color: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #00ff88;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    📦 Mais Códigos Úteis - PioLinux
+  </header>
+  <main>
+    <h2>Códigos para Aprender e Compartilhar</h2>
+
+    <div class="code-block">
+      <h3>📁 Script para Backup</h3>
+      <pre id="code1">#!/bin/bash
+DATA=$(date +%Y-%m-%d)
+tar -czf /backup/home-$DATA.tar.gz /home/usuário</pre>
+      <button onclick="copyCode('code1')">Copiar</button>
+    </div>
+
+    <div class="code-block">
+      <h3>🧠 Python: Verificar se número é primo</h3>
+      <pre id="code2">num = int(input("Digite um número: "))
+if num > 1:
+    for i in range(2, num):
+        if (num % i) == 0:
+            print(f"{num} não é primo")
+            break
+    else:
+        print(f"{num} é primo")
+else:
+    print("Digite um número maior que 1")</pre>
+      <button onclick="copyCode('code2')">Copiar</button>
+    </div>
+
+    <div class="code-block">
+      <h3>🧪 HTML: Meta Tags</h3>
+      <pre id="code3">&lt;meta name="description" content="Seu site incrível"&gt;
+&lt;meta name="keywords" content="linux, tecnologia, terminal"&gt;
+&lt;meta name="author" content="PioLinux"&gt;</pre>
+      <button onclick="copyCode('code3')">Copiar</button>
+    </div>
+
+    
+
+  </main>
+  <footer>
+    Site criado com muito terminal e café ☕ | 
+    <a href="index.html">Início</a> |
+    <a href="#topo">Voltar ao Topo</a>
+  </footer>
+  <script>
+    function copyCode(id) {
+      const text = document.getElementById(id).textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Código copiado!");
+      });
+    }
+  </script>
+</body>
+</html>

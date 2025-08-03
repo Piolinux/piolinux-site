@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exemplos de Menus HTML</title>
+  <meta name="description" content="Exemplos de menus HTML horizontais para copiar e colar no seu site.">
+  <meta name="keywords" content="menu html, menu horizontal, botões html, exemplo de navegação, site css, frontend">
+  <meta name="author" content="PioLinux" />
+  <meta name="robots" content="index,nofollow">
+  <link rel="canonical" href="https://piolinux.com/menus-exemplos.html" />
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Verdana', Geneva, sans-serif;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #1a1a1a;
+      color: #f0f0f0;
+    }
+
+    header {
+      background: #000;
+      color: #00ff88;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      gap: 12px;
+      flex-wrap: wrap;
+      border-top: 4px solid #00ff88;
+      border-bottom: 4px solid #00ff88;
+    }
+
+    nav a, .dropdown button {
+      background: #006400;
+      color: #0f0;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    nav a:hover, .dropdown button:hover {
+      background: #00cc00;
+      color: #000;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #222;
+      min-width: 200px;
+      z-index: 1;
+      border: 1px solid #00ff88;
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      color: #0f0;
+      padding: 10px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #00cc00;
+      color: #000;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ff88;
+    }
+
+    section h2 {
+      color: #00ff88;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    section ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    code {
+      background: #222;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #0f0;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #00ff88;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .dropdown-content {
+        position: static;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>📂 Exemplos de Menus Horizontais em HTML</header>
+
+<div id="share" style="text-align:center;margin:15px 0"></div>
+  <script async defer>
+    (() => {
+      const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+      const d=[
+        ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+        ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+        ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+        ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+      ],e=document.getElementById("share");
+      d.forEach(([n,c,l])=>{
+        let a=document.createElement("a");
+        a.href=l;a.target="_blank";a.rel="noopener";
+        a.textContent=n;
+        a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+        e.appendChild(a);
+      });
+    })();
+  </script>
+
+  <section>
+    <h2>1️⃣ Menu Horizontal Simples</h2>
+    <div class="menu1">
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+    </div>
+    <h3>🧾 Código:</h3>
+    <pre><code>&lt;div class="menu1"&gt;
+  &lt;a href="digite hastag"&gt;1&lt;/a&gt;
+  &lt;a href="digite hastag;2&lt;/a&gt;
+  &lt;a href="digite hastag;3&lt;/a&gt;
+  &lt;a href="digite hastag"&gt;4&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>2️⃣ Menu com Hover Animado</h2>
+    <div class="2">
+      <a href="#"> casa</a>
+      <a href="#"> carpinteiro</a>
+      <a href="#"> telefone</a>
+    </div>
+    <h3>🧾 Código:</h3>
+    <pre><code>&lt;div class="menu2"&gt;
+  &lt;a href="digite hastag"&gt; 1&lt;/a&gt;
+  &lt;a href="digite hastag"&gt; 2&lt;/a&gt;
+  &lt;a href="digite hastag"&gt; 3&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>3️⃣ Menu com Dropdown (Submenu)</h2>
+    <div class="menu3">
+      <a href="#">1</a>
+      <div class="dropdown">
+        <a href="#">2</a>
+        <div class="#">
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+        </div>
+      </div>
+      <a href="#">Contato</a>
+    </div>
+    <h3>🧾 Código:</h3>
+    <pre><code>&lt;div class="menu3"&gt;
+  &lt;a href="digite hastag;1&lt;/a&gt;
+  &lt;div class="dropdown"&gt;
+    &lt;a href="digite hastag"&gt;1&lt;/a&gt;
+    &lt;div class="dropdown-content"&gt;
+      &lt;a href="digite hastag"&gt;1&lt;/a&gt;
+      &lt;a href="digite hastag"&gt;2&lt;/a&gt;
+      &lt;a href="digite hastag"&gt;3&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;a href="#"&gt;Contato&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>4️⃣ Menu com Ícones (sem dependências externas)</h2>
+    <div class="menu4">
+      <a href="#">🏠 Início</a>
+      <a href="#">📄 Artigos</a>
+      <a href="#">📧 Contato</a>
+    </div>
+    <h3>🧾 Código:</h3>
+    <pre><code>&lt;div class="menu4"&gt;
+  &lt;a href="digite hastag"&gt;🏠 Início&lt;/a&gt;
+  &lt;a href="digite hastag"&gt;📄 Artigos&lt;/a&gt;
+  &lt;a href="digite hastag;📧 Contato&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+  </section>
+
+ 
+    <footer>
+  Site criado com muito terminal e memes! Acesse:
+  <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
+  <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
+  <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
+</footer>
+
+<p style="text-align:center; margin-top: 20px;">
+  <a href="links.html" style="color:#00ff88; font-weight:bold; text-decoration:underline;">← Voltar para Links</a>
+</p>
+
+</body>
+</html>

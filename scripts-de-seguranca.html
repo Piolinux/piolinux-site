@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Scripts de Segurança para Linux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Coleção de scripts úteis para segurança no Linux: firewall, bloqueio de IP, rootkits, SSH, fail2ban, nmap, sniffers e mais." />
+  <meta name="keywords" content="segurança linux, firewall ufw, bloquear ip, nmap, ssh automático, fail2ban, rootkits, sniffers, senhas fortes, monitoramento de tráfego" />
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.piolinux.com/scripts-de-seguranca.html" />
+  <style>
+    body {
+      background-color: #111;
+      color: #0f0;
+      font-family: Verdana, Geneva, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #000;
+      color: #00ff88;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ff88;
+    }
+
+    h2 {
+      color: #00ff88;
+      margin-top: 40px;
+    }
+
+    pre {
+      background-color: #222;
+      padding: 10px;
+      border-left: 4px solid #00ff88;
+      overflow-x: auto;
+      color: #0f0;
+    }
+
+    button.copy {
+      background: #00cc00;
+      color: black;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 4px;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+
+    a.back {
+      display: block;
+      text-align: center;
+      color: #00ff88;
+      margin-top: 20px;
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 40px;
+      background-color: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #00ff88;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body id="topo">
+  <header>🛡️ Scripts de Segurança para Linux</header>
+  
+   <div id="share" style="text-align:center;margin:15px 0"></div>
+  <script async defer>
+    (() => {
+      const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+      const d=[
+        ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+        ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+        ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+        ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+      ],e=document.getElementById("share");
+      d.forEach(([n,c,l])=>{
+        let a=document.createElement("a");
+        a.href=l;a.target="_blank";a.rel="noopener";
+        a.textContent=n;
+        a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+        e.appendChild(a);
+      });
+    })();
+  </script>
+
+  <a href="links.html" class="back">← Voltar para Links</a>
+
+  <main>
+    <h2>Firewall básico com UFW</h2>
+    <button class="copy">Copiar</button>
+    <pre>sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow ssh
+sudo ufw enable</pre>
+
+    <h2>Bloqueio de IPs maliciosos</h2>
+    <button class="copy">Copiar</button>
+    <pre>digite no terminal sudo ufw deny from 192.168.0.123</pre>
+
+    <h2>Script de escaneamento com Nmap</h2>
+    <button class="copy">Copiar</button>
+    <pre>#!/bin/bash
+read -p "Digite o IP ou host: " target
+nmap -A -T4 $target</pre>
+
+    <h2>Verificação de rootkits com chkrootkit</h2>
+    <button class="copy">Copiar</button>
+    <pre>sudo apt install chkrootkit
+sudo chkrootkit</pre>
+
+    <h2>Conexão SSH automatizada</h2>
+    <button class="copy">Copiar</button>
+    <pre>sshpass -p 'senha' ssh usuario@ip -p 22</pre>
+
+    <h2>Gerador de senhas fortes (Shell)</h2>
+    <button class="copy">Copiar</button>
+    <pre>openssl rand -hex 16</pre>
+    <pre>openssl rand -hex 64</pre>
+
+    <h2>Verificador de integridade de arquivos</h2>
+    <button class="copy">Copiar</button>
+    <pre>sha256sum arquivo.txt > hash.txt
+sha256sum -c hash.txt</pre>
+
+    <h2>Configuração de fail2ban</h2>
+    <button class="copy">Copiar</button>
+    <pre>sudo apt install fail2ban
+sudo systemctl enable fail2ban
+sudo systemctl start fail2ban</pre>
+
+    <h2>Monitoramento de tráfego com iftop</h2>
+    <button class="copy">Copiar</button>
+    <pre>sudo apt install iftop
+sudo iftop -i eth0</pre>
+
+    
+  </main>
+
+ 
+
+  <script>
+    document.querySelectorAll(".copy").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const code = btn.nextElementSibling.textContent;
+        navigator.clipboard.writeText(code).then(() => {
+          btn.textContent = "Copiado!";
+          setTimeout(() => btn.textContent = "Copiar", 2000);
+        });
+      });
+    });
+  </script>
+  
+  
+  <footer>
+  Site criado com muito terminal e memes! Acesse:
+  <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
+  <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
+  <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
+</footer>
+
+<p style="text-align:center; margin-top: 20px;">
+  <a href="links.html" style="color:#00ff88; font-weight:bold; text-decoration:underline;">← Voltar para Links</a>
+</p>
+</body>
+</html>
