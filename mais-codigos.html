@@ -19,9 +19,9 @@
     }
 
     body {
-      background: #1a1a1a;
-      color: #f0f0f0;
-      padding-top: 180px;
+      background: #121212;
+      color: #e0e0e0;
+      padding-top: 140px;
     }
 
     header {
@@ -40,24 +40,24 @@
     }
 
     nav {
-      background: #111;
       position: fixed;
-      top: 80px;
+      top: 70px;
       left: 0;
       width: 100%;
+      background: #1a1a1a;
       z-index: 999;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
       padding: 10px;
-      border-top: 4px solid #00ff88;
-      border-bottom: 4px solid #00ff88;
+      border-top: 3px solid #00ff88;
+      border-bottom: 3px solid #00ff88;
     }
 
     nav a {
-      background: #006400;
-      color: #00bfff;
+      background: #003300;
+      color: #00ccff;
       text-decoration: none;
       padding: 8px 14px;
       border-radius: 5px;
@@ -66,7 +66,7 @@
     }
 
     nav a:hover {
-      background: #00ccff;
+      background-color: #00ccff;
       color: #000;
     }
 
@@ -74,76 +74,77 @@
       max-width: 900px;
       margin: 0 auto;
       padding: 20px;
-      background: #1a1a1a;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00ff88;
     }
 
     h2 {
       color: #00ff88;
-      margin-bottom: 20px;
       font-size: 1.6rem;
-      text-align: center;
-    }
-
-    h3 {
-      color: #00bfff;
-      margin-bottom: 10px;
-      font-size: 1.2rem;
+      margin-bottom: 20px;
     }
 
     .code-block {
-      margin-bottom: 30px;
-      background: #111;
-      padding: 15px;
+      background-color: #1e1e1e;
+      border-left: 4px solid #00ff88;
+      padding: 20px;
+      margin: 30px 0;
       border-radius: 8px;
-      box-shadow: inset 0 0 8px #00ff88;
+      box-shadow: 0 0 6px rgba(0, 255, 136, 0.3);
+    }
+
+    .code-block h3 {
+      margin-bottom: 10px;
+      color: #00ffcc;
     }
 
     pre {
-      background: #222;
-      color: #0f0;
-      padding: 10px;
-      border-radius: 5px;
+      background: #000;
+      color: #00ff00;
+      padding: 12px;
+      border-radius: 6px;
       overflow-x: auto;
-      white-space: pre-wrap;
-      margin-bottom: 10px;
       font-family: monospace;
+      font-size: 13px;
     }
 
     button {
-      background: #00bfff;
+      margin-top: 10px;
+      background: #00ff88;
       color: #000;
-      padding: 8px 12px;
       border: none;
+      padding: 8px 12px;
       border-radius: 4px;
       font-weight: bold;
       cursor: pointer;
-      transition: background 0.3s, color 0.3s;
+      transition: background 0.3s ease;
     }
 
     button:hover {
-      background: #00ccff;
-      color: #000;
+      background: #00cc66;
     }
 
     footer {
       background: #000;
-      color: #aaa;
+      color: #ccc;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
+      font-size: 13px;
     }
 
     footer a {
-      color: #00bfff;
+      color: #00ccff;
       text-decoration: none;
-      font-weight: bold;
+      margin: 0 5px;
     }
 
     footer a:hover {
       color: #ffffff;
       text-decoration: underline;
+    }
+
+    #share {
+      text-align: center;
+      margin: 25px auto;
     }
 
     @media screen and (max-width: 768px) {
@@ -153,10 +154,11 @@
       }
 
       body {
-        padding-top: 220px;
+        padding-top: 200px;
       }
     }
   </style>
+
 </head>
 <body id="topo">
 

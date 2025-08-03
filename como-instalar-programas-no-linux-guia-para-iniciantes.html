@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-   <title>Como instalar programas no Linux: Guia para iniciantes</title>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <meta name="description" content="Aprenda como instalar programas no Linux facilmente com este guia para iniciantes. Passo a passo para usar comandos e lojas de aplicativos." />
-   <meta name="keywords" content="instalar programas linux, como instalar linux, guia linux iniciantes, instalar software linux, linux apps"/>
-   <meta name="robots" content="index,nofollow">
-   <link rel="canonical" href="https://piolinux.com/como-instalar-programas-no-linux-guia-para-iniciantes.html" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Aprenda como instalar programas no Linux facilmente com este guia para iniciantes. Passo a passo para usar comandos e lojas de aplicativos." />
+  <meta name="keywords" content="instalar programas linux, como instalar linux, guia linux iniciantes, instalar software linux, linux apps" />
+  <meta name="robots" content="index,nofollow" />
+  <link rel="canonical" href="https://piolinux.com/como-instalar-programas-no-linux-guia-para-iniciantes.html" />
+  <title>Como instalar programas no Linux: Guia para iniciantes</title>
 
-     <style>
+  <style>
     * {
       box-sizing: border-box;
-      font-family: 'Verdana', Geneva, sans-serif;
-      font-size: 14px;
       margin: 0;
       padding: 0;
+      font-family: 'Verdana', Geneva, sans-serif;
+       font-size: 14px;
     }
+
     body {
-      background: #1a1a1a;
+     background: #1a1a1a;
       color: #f0f0f0;
       padding-top: 130px;
     }
-    header {
+
+    header, footer {
       background: #000;
-      color: #00ff88;
       text-align: center;
       padding: 20px;
-      font-size: 1.8rem;
       font-weight: bold;
+    }
+
+    header {
+      color: #00ff88;
+      font-size: 1.8rem;
       position: fixed;
       top: 0;
       left: 0;
@@ -36,115 +41,184 @@
       z-index: 1000;
       border-bottom: 2px solid #00ff88;
     }
+
     nav {
       position: fixed;
       top: 70px;
       left: 0;
       width: 100%;
+      background-color: #111;
       z-index: 999;
-      background: #111;
       display: flex;
       justify-content: center;
-      padding: 10px;
-      gap: 12px;
       flex-wrap: wrap;
+      gap: 10px;
+      padding: 12px 10px;
       border-top: 4px solid #00ff88;
-      border-bottom: 4px solid #00ff88;
+      border-bottom: 3px solid #00ff88;
     }
-    nav a {
+
+    nav a, footer a {
       background: #006400;
-      color: #00bfff;
+      color: #00ccff;
       text-decoration: none;
       padding: 8px 14px;
       border-radius: 5px;
       font-weight: bold;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s, color 0.3s;
+      transition: 0.3s ease-in-out;
     }
-    nav a:hover {
-      background: #00ccff;
+
+    nav a:hover, footer a:hover {
+      background-color: #00ccff;
       color: #000;
+      text-decoration: underline;
     }
-    section, article {
+
+    article, section {
       max-width: 900px;
-      margin: 40px auto;
+      margin: 0 auto 40px auto;
       padding: 20px;
-      background: #1a1a1a;
+      background-color: #1e1e1e;
       border-radius: 10px;
       box-shadow: 0 0 10px #00ff88;
     }
-    h1, h2, h3 {
-      color: #00ff88;
+
+    h1 {
+      font-size: 1.8rem;
       margin-bottom: 20px;
+      color: #00ff88;
     }
+
+    h2 {
+      color: #00ff88;
+      margin: 30px 0 15px;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
     ul {
-      list-style: none;
+      list-style-type: none;
       padding-left: 0;
+      margin-bottom: 16px;
     }
+
     li {
       margin-bottom: 10px;
-      line-height: 1.6;
     }
+
     li a {
-      color: #00bfff;
+      color: #00ccff;
       text-decoration: none;
     }
+
     li a:hover {
       text-decoration: underline;
-      color: #00ccff;
     }
-    code {
-      background: #222;
-      padding: 2px 6px;
+
+    code, pre {
+      background-color: #1f1f1f;
+      color: #00ff00;
+      padding: 4px 6px;
       border-radius: 4px;
-      color: #0f0;
       font-weight: bold;
+      font-family: monospace;
+      display: inline-block;
+      margin: 4px 0;
     }
+
     blockquote {
-      margin: 10px 0;
-      padding: 10px;
-      background: #222;
       border-left: 4px solid #00ff88;
+      padding-left: 12px;
+      margin: 16px 0;
+      color: #ccc;
+      font-style: italic;
     }
+
     .author-box {
       display: flex;
       align-items: center;
       gap: 15px;
       margin-top: 40px;
+      padding: 15px;
+      background: #222;
+      border-radius: 8px;
     }
+
     .author-box img {
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      object-fit: cover;
+      border: 2px solid #00ff88;
     }
-    footer {
-      background: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    footer a {
-      color: #00bfff;
+
+    .faq dt {
       font-weight: bold;
-      text-decoration: none;
+      color: #00ff88;
+      margin-top: 10px;
     }
-    footer a:hover {
-      text-decoration: underline;
-      color: #ffffff;
+
+    .faq dd {
+      margin-bottom: 15px;
     }
+
+    #share {
+      text-align: center;
+      margin: 25px auto;
+    }
+
+    #share a {
+      margin: 0 5px;
+      display: inline-block;
+      font-size: 13px;
+    }
+
+    footer {
+      color: #aaa;
+      padding: 20px 10px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #00ccff;
+    }
+
     @media screen and (max-width: 768px) {
       nav {
         flex-direction: column;
         align-items: center;
       }
+
+      .author-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
       body {
-        padding-top: 180px;
+        padding-top: 190px;
       }
     }
   </style>
+</head>
+<body id="topo">
+
+  <header>
+    Aprenda como instalar programas no Linux facilmente com este guia para iniciantes
+  </header>
+
+  <nav>
+    <a href="artigos-linux.html">Início Artigos</a>
+    <a href="script-bash.html">Scripts</a>
+    <a href="distros-de-linux.html">Distros</a>
+    <a href="index.html">Voltar à página inicial</a>
+  </nav>
+
+  
+
+  
+
 </head>
 <body id="topo">
   <header>
@@ -158,26 +232,7 @@
     <a href="index.html">Voltar à página inicial</a>
   </nav>
 
-  <div id="share" style="text-align:center;margin:15px 0"></div>
-  <script async defer>
-    (() => {
-      const u = encodeURIComponent(location.href), t = encodeURIComponent(document.title);
-      const d = [
-        ["Reddit", "#ff4500", `https://www.reddit.com/submit?url=${u}&title=${t}`],
-        ["Twitter", "#1da1f2", `https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-        ["WhatsApp", "#25d366", `https://api.whatsapp.com/send?text=${t}%20${u}`],
-        ["LinkedIn", "#0077b5", `https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-      ], e = document.getElementById("share");
-      d.forEach(([n, c, l]) => {
-        let a = document.createElement("a");
-        a.href = l; a.target = "_blank"; a.rel = "noopener";
-        a.textContent = n;
-        a.style = `background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
-        e.appendChild(a);
-      });
-    })();
-  </script>
-
+  
 </head>
 
 <body id="topo">

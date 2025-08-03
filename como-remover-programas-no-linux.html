@@ -9,28 +9,31 @@
   <meta name="robots" content="index,nofollow">
   <link rel="canonical" href="https://piolinux.com/como-remover-programas-no-linux.html" />
 
-  <style>
+<style>
     * {
       box-sizing: border-box;
-      font-family: 'Verdana', Geneva, sans-serif;
-      font-size: 14px;
       margin: 0;
       padding: 0;
+      font-family: 'Verdana', Geneva, sans-serif;
+       font-size: 14px;
     }
 
     body {
-      background: #1a1a1a;
+     background: #1a1a1a;
       color: #f0f0f0;
-      padding-top: 130px; /* Compensa a altura do menu fixo */
+      padding-top: 130px;
+    }
+
+    header, footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      font-weight: bold;
     }
 
     header {
-      background: #000;
       color: #00ff88;
-      text-align: center;
-      padding: 20px;
       font-size: 1.8rem;
-      font-weight: bold;
       position: fixed;
       top: 0;
       left: 0;
@@ -44,94 +47,142 @@
       top: 70px;
       left: 0;
       width: 100%;
+      background-color: #111;
       z-index: 999;
-      background: #111;
       display: flex;
       justify-content: center;
-      padding: 10px;
-      gap: 12px;
       flex-wrap: wrap;
+      gap: 10px;
+      padding: 12px 10px;
       border-top: 4px solid #00ff88;
-      border-bottom: 4px solid #00ff88;
+      border-bottom: 3px solid #00ff88;
     }
 
-    nav a {
+    nav a, footer a {
       background: #006400;
-      color: #00bfff;
+      color: #00ccff;
       text-decoration: none;
       padding: 8px 14px;
       border-radius: 5px;
       font-weight: bold;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s, color 0.3s;
+      transition: 0.3s ease-in-out;
     }
 
-    nav a:hover {
-      background: #00ccff;
+    nav a:hover, footer a:hover {
+      background-color: #00ccff;
       color: #000;
+      text-decoration: underline;
     }
 
-    section {
+    article, section {
       max-width: 900px;
-      margin: 40px auto;
+      margin: 0 auto 40px auto;
       padding: 20px;
-      background: #1a1a1a;
+      background-color: #1e1e1e;
       border-radius: 10px;
       box-shadow: 0 0 10px #00ff88;
     }
 
-    section h2 {
-      color: #00ff88;
+    h1 {
+      font-size: 1.8rem;
       margin-bottom: 20px;
+      color: #00ff88;
+    }
+
+    h2 {
+      color: #00ff88;
+      margin: 30px 0 15px;
       font-size: 1.5rem;
     }
 
-    section ul {
-      list-style: none;
+    p {
+      margin-bottom: 16px;
+    }
+
+    ul {
+      list-style-type: none;
       padding-left: 0;
+      margin-bottom: 16px;
     }
 
-    section ul li {
+    li {
       margin-bottom: 10px;
-      line-height: 1.6;
     }
 
-    section ul li a {
-      color: #00bfff;
+    li a {
+      color: #00ccff;
       text-decoration: none;
     }
 
-    section ul li a:hover {
+    li a:hover {
       text-decoration: underline;
-      color: #00ccff;
     }
 
-    code {
-      background: #222;
-      padding: 2px 6px;
+    code, pre {
+      background-color: #1f1f1f;
+      color: #00ff00;
+      padding: 4px 6px;
       border-radius: 4px;
-      color: #0f0;
       font-weight: bold;
+      font-family: monospace;
+      display: inline-block;
+      margin: 4px 0;
+    }
+
+    blockquote {
+      border-left: 4px solid #00ff88;
+      padding-left: 12px;
+      margin: 16px 0;
+      color: #ccc;
+      font-style: italic;
+    }
+
+    .author-box {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 40px;
+      padding: 15px;
+      background: #222;
+      border-radius: 8px;
+    }
+
+    .author-box img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid #00ff88;
+    }
+
+    .faq dt {
+      font-weight: bold;
+      color: #00ff88;
+      margin-top: 10px;
+    }
+
+    .faq dd {
+      margin-bottom: 15px;
+    }
+
+    #share {
+      text-align: center;
+      margin: 25px auto;
+    }
+
+    #share a {
+      margin: 0 5px;
+      display: inline-block;
+      font-size: 13px;
     }
 
     footer {
-      background: #000;
       color: #aaa;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 20px 10px;
+      font-size: 14px;
     }
 
     footer a {
-      color: #00bfff;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-      color: #ffffff;
+      color: #00ccff;
     }
 
     @media screen and (max-width: 768px) {
@@ -140,11 +191,18 @@
         align-items: center;
       }
 
+      .author-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
       body {
-        padding-top: 180px;
+        padding-top: 190px;
       }
     }
   </style>
+</head>
+
 </head>
 
 <body id="topo">

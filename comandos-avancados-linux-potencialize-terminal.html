@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<title>Comandos avançados Linux: Aprenda a potencializar seu terminal</title>	
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Explore os comandos avançados do Linux para aumentar sua produtividade no terminal e dominar funcionalidades essenciais." />
-<meta name="keywords" content="comandos avançados linux, terminal linux, linux produtividade, comandos linux intermediário, linux terminal dicas" />
-<meta name="robots" content="index,nofollow">
-<link rel="canonical" href="https://piolinux.com/comandos-avancados-linux-potencialize-terminal.html" />
-
- <style>
+  <title>Comandos avançados Linux: Aprenda a potencializar seu terminal</title>	
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore os comandos avançados do Linux para aumentar sua produtividade no terminal e dominar funcionalidades essenciais." />
+  <meta name="keywords" content="comandos avançados linux, terminal linux, linux produtividade, comandos linux intermediário, linux terminal dicas" />
+  <meta name="robots" content="index,nofollow">
+  <link rel="canonical" href="https://piolinux.com/comandos-avancados-linux-potencialize-terminal.html" />
+<style>
     * {
       box-sizing: border-box;
-      font-family: 'Verdana', Geneva, sans-serif;
       margin: 0;
       padding: 0;
+      font-family: 'Verdana', Geneva, sans-serif;
+       font-size: 14px;
     }
 
     body {
-      background: #1a1a1a;
+     background: #1a1a1a;
       color: #f0f0f0;
-      padding-top: 140px;
-      line-height: 1.6;
+      padding-top: 130px;
+    }
+
+    header, footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      font-weight: bold;
     }
 
     header {
-      background: #000;
       color: #00ff88;
-      text-align: center;
-      padding: 20px;
       font-size: 1.8rem;
-      font-weight: bold;
       position: fixed;
       top: 0;
       left: 0;
@@ -41,149 +43,145 @@
 
     nav {
       position: fixed;
-      top: 80px;
+      top: 70px;
       left: 0;
       width: 100%;
+      background-color: #111;
       z-index: 999;
-      background: #111;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 12px;
-      padding: 12px;
+      gap: 10px;
+      padding: 12px 10px;
       border-top: 4px solid #00ff88;
-      border-bottom: 4px solid #00ff88;
+      border-bottom: 3px solid #00ff88;
     }
 
-    nav a {
+    nav a, footer a {
       background: #006400;
-      color: #00bfff;
+      color: #00ccff;
       text-decoration: none;
       padding: 8px 14px;
       border-radius: 5px;
       font-weight: bold;
-      transition: background 0.3s, color 0.3s;
+      transition: 0.3s ease-in-out;
     }
 
-    nav a:hover {
-      background: #00ccff;
+    nav a:hover, footer a:hover {
+      background-color: #00ccff;
       color: #000;
+      text-decoration: underline;
     }
 
-    article {
+    article, section {
       max-width: 900px;
-      margin: 40px auto;
+      margin: 0 auto 40px auto;
       padding: 20px;
-      background: #1e1e1e;
+      background-color: #1e1e1e;
       border-radius: 10px;
       box-shadow: 0 0 10px #00ff88;
     }
 
-    h1, h2 {
-      color: #00ff88;
+    h1 {
+      font-size: 1.8rem;
       margin-bottom: 20px;
+      color: #00ff88;
+    }
+
+    h2 {
+      color: #00ff88;
+      margin: 30px 0 15px;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 16px;
     }
 
     ul {
-      list-style: none;
+      list-style-type: none;
       padding-left: 0;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
-    ul li {
+    li {
       margin-bottom: 10px;
     }
 
-    code {
-      background: #222;
-      padding: 2px 6px;
-      border-radius: 4px;
-      color: #0f0;
-      font-weight: bold;
-      font-family: monospace;
+    li a {
+      color: #00ccff;
+      text-decoration: none;
     }
 
-    pre {
-      background: #111;
-      padding: 10px;
-      border-radius: 5px;
-      overflow-x: auto;
-      color: #00ff88;
-      margin-bottom: 20px;
+    li a:hover {
+      text-decoration: underline;
+    }
+
+    code, pre {
+      background-color: #1f1f1f;
+      color: #00ff00;
+      padding: 4px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+      font-family: monospace;
+      display: inline-block;
+      margin: 4px 0;
     }
 
     blockquote {
       border-left: 4px solid #00ff88;
-      margin: 20px 0;
-      padding-left: 15px;
-      font-style: italic;
+      padding-left: 12px;
+      margin: 16px 0;
       color: #ccc;
+      font-style: italic;
     }
 
     .author-box {
       display: flex;
       align-items: center;
       gap: 15px;
-      background: #111;
+      margin-top: 40px;
       padding: 15px;
-      margin: 40px auto;
-      max-width: 900px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px #00ff88;
+      background: #222;
+      border-radius: 8px;
     }
 
     .author-box img {
-      width: 60px;
-      height: 60px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
-    }
-
-    .faq {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #111;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px #00ff88;
-    }
-
-    .faq dl {
-      margin-top: 10px;
+      border: 2px solid #00ff88;
     }
 
     .faq dt {
       font-weight: bold;
-      color: #00bfff;
+      color: #00ff88;
       margin-top: 10px;
     }
 
     .faq dd {
-      margin-left: 20px;
       margin-bottom: 15px;
     }
 
     #share {
       text-align: center;
-      margin: 15px 0;
+      margin: 25px auto;
+    }
+
+    #share a {
+      margin: 0 5px;
+      display: inline-block;
+      font-size: 13px;
     }
 
     footer {
-      background: #000;
       color: #aaa;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 20px 10px;
+      font-size: 14px;
     }
 
     footer a {
-      color: #00bfff;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-      color: #ffffff;
+      color: #00ccff;
     }
 
     @media screen and (max-width: 768px) {
@@ -192,13 +190,13 @@
         align-items: center;
       }
 
-      body {
-        padding-top: 190px;
-      }
-
       .author-box {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
+      }
+
+      body {
+        padding-top: 190px;
       }
     }
   </style>
@@ -215,30 +213,31 @@
     <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
     <a href="script-bash.html">Bash</a>
     <a href="links.html">Conteúdos Úteis</a>
+    <a href="artigos-linux.html">Artigos Linux</a>
   </nav>
-<div id="share" style="text-align:center;margin:15px 0"></div>
-<script async defer>
-(() => {
-  const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
-  const d=[
-    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
-    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
-    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-  ],e=document.getElementById("share");
-  d.forEach(([n,c,l])=>{
-    let a=document.createElement("a");
-    a.href=l;a.target="_blank";a.rel="noopener";
-    a.textContent=n;
-    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
-    e.appendChild(a);
-  });
-})();
-</script>
 
-<article>
+  <div id="share" style="text-align:center;margin:15px 0"></div>
+  <script async defer>
+  (() => {
+    const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+    const d=[
+      ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+      ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+      ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+      ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+    ],e=document.getElementById("share");
+    d.forEach(([n,c,l])=>{
+      let a=document.createElement("a");
+      a.href=l;a.target="_blank";a.rel="noopener";
+      a.textContent=n;
+      a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;display:inline-block;`;
+      e.appendChild(a);
+    });
+  })();
+  </script>
 
-<h1>Comandos para utilizar no Terminal Linux</h1>
+  <article>
+   <h1>Comandos para utilizar no Terminal Linux</h1>
 
 <p>Domina os comandos básicos do Linux, está na hora de avançar para comandos mais poderosos melhorando a produtividade.</p>
 
@@ -301,35 +300,12 @@ Pratique cada comando e experimente criar seus próprios scripts para facilitar 
 <p>Dominar o terminal é uma jornada contínua que traz enorme poder e flexibilidade no Linux.</p>
 
 
-</article>
-
-<div class="author-box">
-  <img src="https://example.com/foto-autor.jpg" alt="Foto do autor" />
-  <div>
-    <p><strong>Piolinux</strong> é entusiasta Linux e escritor técnico com mais de 5 anos de experiência em tutoriais para iniciantes.</p>
-  </div>
-</div>
-
-<section class="faq">
-<h2>FAQ - Perguntas frequentes</h2>
-<dl>
-  <dt>Como posso buscar arquivos rapidamente?</dt>
-  <dd>Use o comando <code>find</code> com critérios específicos, como nome ou tipo.</dd>
-
-  <dt>O que significa alterar permissões com <code>chmod</code>?</dt>
-  <dd>É modificar quem pode ler, escrever ou executar um arquivo ou pasta.</dd>
-
-  <dt>Como posso automatizar tarefas no Linux?</dt>
-  <dd>Criando scripts Bash que executam comandos em sequência.</dd>
-</dl>
-</section>
-
-<footer>
-  Site criado com muito terminal e memes! Acesse:
-  <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
-  <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
-  <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
-</footer>>
+  <footer>
+    Site criado com muito terminal e memes! Acesse:
+    <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
+    <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
+    <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
+  </footer>
 
 </body>
 </html>

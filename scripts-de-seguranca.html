@@ -11,28 +11,25 @@
   <style>
     * {
       box-sizing: border-box;
+      font-family: 'Verdana', Geneva, sans-serif;
+      font-size: 15px;
       margin: 0;
       padding: 0;
-      font-family: 'Verdana', Geneva, sans-serif;
-      font-size: 14px;
     }
 
     body {
-      background: #1a1a1a;
-      color: #f0f0f0;
-      padding-top: 130px;
-    }
-
-    header, footer {
-      background: #000;
-      text-align: center;
-      padding: 20px;
-      font-weight: bold;
+      background: #121212;
+      color: #e0e0e0;
+      padding-top: 140px;
     }
 
     header {
+      background: #000;
       color: #00ff88;
-      font-size: 1.8rem;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.9rem;
+      font-weight: bold;
       position: fixed;
       top: 0;
       left: 0;
@@ -46,106 +43,118 @@
       top: 70px;
       left: 0;
       width: 100%;
-      background: #111;
       z-index: 999;
+      background: #1f1f1f;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
       padding: 10px;
+      gap: 12px;
+      flex-wrap: wrap;
       border-top: 4px solid #00ff88;
       border-bottom: 4px solid #00ff88;
     }
 
-    nav a, footer a {
-      background: #006400;
-      color: #00bfff;
+    nav a {
+      background: #004d00;
+      color: #00ffff;
       text-decoration: none;
       padding: 8px 14px;
-      border-radius: 5px;
+      border-radius: 6px;
       font-weight: bold;
-      transition: 0.3s;
-      display: inline-block;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
     }
 
-    nav a:hover, footer a:hover {
-      background: #00ccff;
+    nav a:hover {
+      background: #00ffcc;
       color: #000;
-      text-decoration: underline;
     }
 
-    section, main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
+    main {
+      max-width: 920px;
+      margin: 30px auto;
+      padding: 25px;
       background: #1a1a1a;
       border-radius: 10px;
-      box-shadow: 0 0 10px #00ff88;
+      box-shadow: 0 0 15px #00ff88;
     }
 
-    h2 {
+    main h2 {
       color: #00ff88;
-      margin-bottom: 20px;
-      font-size: 1.5rem;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    li {
+      margin-top: 40px;
       margin-bottom: 10px;
-      line-height: 1.6;
-    }
-
-    li a {
-      color: #00bfff;
-      text-decoration: none;
-    }
-
-    li a:hover {
-      color: #00ccff;
-      text-decoration: underline;
-    }
-
-    code, pre {
-      background: #222;
-      color: #0f0;
-      padding: 4px 6px;
-      border-radius: 4px;
-      font-weight: bold;
-      display: block;
-      margin-bottom: 10px;
+      font-size: 1.4rem;
+      border-bottom: 1px solid #00ff88;
+      padding-bottom: 5px;
     }
 
     .copy {
-      background: #00bfff;
-      color: #000;
+      background: #006400;
+      color: #ffffff;
       border: none;
-      padding: 6px 12px;
       border-radius: 4px;
+      padding: 6px 12px;
       margin-bottom: 10px;
       cursor: pointer;
       font-weight: bold;
+      transition: background 0.3s;
     }
 
     .copy:hover {
-      background: #00ccff;
+      background: #00cc66;
     }
 
-    .back {
-      display: block;
-      text-align: center;
-      margin: 20px 0;
-      color: #00ff88;
+    pre {
+      background: #222;
+      color: #00ffcc;
+      padding: 12px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 20px;
+    }
+
+    code {
+      background: #222;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #00ff00;
       font-weight: bold;
-      text-decoration: underline;
     }
 
     footer {
-      color: #aaa;
-      margin-top: 40px;
+      background: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #00ffff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #ffffff;
+    }
+
+    .back {
+      text-align: center;
+      margin: 20px auto;
+    }
+
+    .back a {
+      color: #00bfff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back a:hover {
+      text-decoration: underline;
+      color: #00ffcc;
     }
 
     @media screen and (max-width: 768px) {
@@ -159,6 +168,7 @@
       }
     }
   </style>
+
 </head>
 <body id="topo">
 
