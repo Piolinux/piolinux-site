@@ -9,8 +9,7 @@
   <meta name="author" content="PioLinux" />
   <meta name="robots" content="index,nofollow">
   <link rel="canonical" href="https://piolinux.com/artigos-linux.html" />
-    <style>
-    /* RESET E BASE */
+  <style>
     * {
       box-sizing: border-box;
       font-family: 'Verdana', Geneva, sans-serif;
@@ -22,6 +21,7 @@
     body {
       background: #1a1a1a;
       color: #f0f0f0;
+      padding-top: 130px; /* Compensa a altura do menu fixo */
     }
 
     header {
@@ -31,9 +31,20 @@
       padding: 20px;
       font-size: 1.8rem;
       font-weight: bold;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 2px solid #00ff88;
     }
 
     nav {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      z-index: 999;
       background: #111;
       display: flex;
       justify-content: center;
@@ -46,17 +57,18 @@
 
     nav a {
       background: #006400;
-      color: #0f0;
+      color: #00bfff;
       text-decoration: none;
       padding: 8px 14px;
       border-radius: 5px;
       font-weight: bold;
       border: none;
       cursor: pointer;
+      transition: background 0.3s, color 0.3s;
     }
 
     nav a:hover {
-      background: #00cc00;
+      background: #00ccff;
       color: #000;
     }
 
@@ -73,33 +85,34 @@
       color: #00ff88;
       margin-bottom: 20px;
       font-size: 1.5rem;
-      text-align: center;
-      border-bottom: 2px solid #00ff88;
-      padding-bottom: 10px;
     }
 
-    ul {
+    section ul {
       list-style: none;
       padding-left: 0;
     }
 
-    li {
-      background-color: #222;
-      margin-bottom: 15px;
-      padding: 15px 20px;
-      border-left: 5px solid limegreen;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0, 255, 0, 0.2);
+    section ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
     }
 
-    li a {
-      color: #00ff99;
-      font-weight: bold;
+    section ul li a {
+      color: #00bfff;
       text-decoration: none;
     }
 
-    li a:hover {
+    section ul li a:hover {
       text-decoration: underline;
+      color: #00ccff;
+    }
+
+    code {
+      background: #222;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #0f0;
+      font-weight: bold;
     }
 
     footer {
@@ -108,23 +121,27 @@
       text-align: center;
       padding: 20px;
       margin-top: 40px;
-      font-size: 0.9em;
     }
 
     footer a {
-      color: #00ff88;
+      color: #00bfff;
       font-weight: bold;
       text-decoration: none;
     }
 
     footer a:hover {
       text-decoration: underline;
+      color: #ffffff;
     }
 
     @media screen and (max-width: 768px) {
       nav {
         flex-direction: column;
         align-items: center;
+      }
+
+      body {
+        padding-top: 180px;
       }
     }
   </style>
@@ -136,11 +153,15 @@
     📚 Índice de Artigos Bash & Linux - PioLinux
   </header>
 
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="script-bash.html">Scripts</a>
-    <a href="distros-de-linux.html">Distros</a>
-  </nav>
+<nav>
+  <a href="index.html">home</a>
+  <a href="piadas-linux-engracadas.html">Piadas</a>
+  <a href="artigos-linux.html">Iniciante</a>
+  <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+  <a href="script-bash.html">Bash</a>
+  <a href="links.html">Conteúdos Úteis</a>
+</nav>
+  
 <div id="share" style="text-align:center;margin:15px 0"></div>
 <script async defer>
 (() => {

@@ -6,115 +6,172 @@
     <meta name="description" content="Guia detalhado das principais distribuições Linux: Ubuntu, Fedora, Debian, Arch, Mint e mais. Escolha a sua!">
     <meta name="keywords" content="linux, distros linux, distribuição linux, ubuntu, fedora, debian, arch linux, linux mint, openSUSE, centos, pop_os, kali linux, piolinux">
     <meta name="author" content="PioLinux">
+     <meta name="robots" content="index,nofollow">
     <link rel="canonical" href="https://www.piolinux.com/software%20-de-linux%20e%20Windows.html" />
     <title>Guia Completo com Dicas de Software para Linux e Windows: Os Melhores Programas para Seu PC</title>
-        <style>
-        body {
-            background: linear-gradient(to right, #222, #444);
-            font-family: 'Courier New', monospace;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #000;
-            padding: 10px;
-            text-align: center;
-            font-size: 30px;
-            color: limegreen;
-        }
-        nav {
-            background-color: #111;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 10px;
-            flex-wrap: wrap;
-        }
-        nav a {
-            color: #0f0;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        nav a:hover {
-            text-decoration: underline;
-            background-color: #003300;
-        }
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #1e1e1e;
-            border-radius: 12px;
-            box-shadow: 0 0 10px #0f0;
-        }
-        h2 {
-            color: #00ff99;
-            font-size: 2em;
-            text-align: left;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #00ff99;
-            padding-bottom: 10px;
-        }
-        h3 {
-            color: #76ff03;
-            font-size: 1.5em;
-            margin-top: 25px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #333; /* Adicionado para separar as distros */
-            padding-bottom: 5px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background-color: #2a2a2a;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 5px solid limegreen;
-            border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0,255,0,0.2);
-        }
-        .banner {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .banner img {
-            max-width: 150px;
-            border-radius: 50%;
-            border: 3px solid limegreen;
-            box-shadow: 0 0 15px rgba(0,255,0,0.5);
-        }
-        footer {
-            background-color: #000;
-            color: #aaa;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9em;
-        }
-        footer a {
-            color: #0f0;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-<title>Guia Completo com Dicas de Software para Linux e Windows: Os Melhores Programas para Seu PC</title>
+        
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Verdana', Geneva, sans-serif;
+      font-size: 14px;
+    }
+
+    body {
+      background: #1a1a1a;
+      color: #f0f0f0;
+      padding-top: 130px;
+    }
+
+    header, footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      font-weight: bold;
+    }
+
+    header {
+      color: #00ff88;
+      font-size: 1.8rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 2px solid #00ff88;
+    }
+
+    nav {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: #111;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 10px;
+      border-top: 4px solid #00ff88;
+      border-bottom: 4px solid #00ff88;
+    }
+
+    nav a, footer a {
+      background: #006400;
+      color: #00bfff;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    nav a:hover, footer a:hover {
+      background: #00ccff;
+      color: #000;
+      text-decoration: underline;
+    }
+
+    section, main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ff88;
+    }
+
+    h2 {
+      color: #00ff88;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    li a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      color: #00ccff;
+      text-decoration: underline;
+    }
+
+    code, pre {
+      background: #222;
+      color: #0f0;
+      padding: 4px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .copy {
+      background: #00bfff;
+      color: #000;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .copy:hover {
+      background: #00ccff;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin: 20px 0;
+      color: #00ff88;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    footer {
+      color: #aaa;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      body {
+        padding-top: 180px;
+      }
+    }
+  </style>
+
+
 </head>
 <body>
 <article>
 
-<h2>Índice</h2>
+<center><h2>Índice</h2></center>
 
+<header>
+  Segurança no Linux: Cuidados Essenciais para Iniciantes
+</header>
 
 
  <nav>

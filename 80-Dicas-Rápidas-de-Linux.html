@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://www.piolinux.com/80-Dicas-Rápidas-de-Linux.html" />
   <meta name="author" content="PioLinux">
   <meta name="robots" content="index,nofollow">
-  <style>
+ <style>
     * {
       box-sizing: border-box;
       font-family: 'Verdana', Geneva, sans-serif;
@@ -20,6 +20,7 @@
     body {
       background: #1a1a1a;
       color: #f0f0f0;
+      padding-top: 130px; /* Compensa a altura do menu fixo */
     }
 
     header {
@@ -29,9 +30,20 @@
       padding: 20px;
       font-size: 1.8rem;
       font-weight: bold;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 2px solid #00ff88;
     }
 
     nav {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      z-index: 999;
       background: #111;
       display: flex;
       justify-content: center;
@@ -42,51 +54,21 @@
       border-bottom: 4px solid #00ff88;
     }
 
-    nav a, .dropdown button {
+    nav a {
       background: #006400;
-      color: #0f0;
+      color: #00bfff;
       text-decoration: none;
       padding: 8px 14px;
       border-radius: 5px;
       font-weight: bold;
       border: none;
       cursor: pointer;
+      transition: background 0.3s, color 0.3s;
     }
 
-    nav a:hover, .dropdown button:hover {
-      background: #00cc00;
+    nav a:hover {
+      background: #00ccff;
       color: #000;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #222;
-      min-width: 200px;
-      z-index: 1;
-      border: 1px solid #00ff88;
-      border-radius: 5px;
-    }
-
-    .dropdown-content a {
-      color: #0f0;
-      padding: 10px;
-      display: block;
-      text-decoration: none;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #00cc00;
-      color: #000;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
     }
 
     section {
@@ -114,6 +96,16 @@
       line-height: 1.6;
     }
 
+    section ul li a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    section ul li a:hover {
+      text-decoration: underline;
+      color: #00ccff;
+    }
+
     code {
       background: #222;
       padding: 2px 6px;
@@ -131,13 +123,14 @@
     }
 
     footer a {
-      color: #00ff88;
+      color: #00bfff;
       font-weight: bold;
       text-decoration: none;
     }
 
     footer a:hover {
       text-decoration: underline;
+      color: #ffffff;
     }
 
     @media screen and (max-width: 768px) {
@@ -146,24 +139,49 @@
         align-items: center;
       }
 
-      .dropdown-content {
-        position: static;
-        width: 100%;
+      body {
+        padding-top: 180px;
       }
     }
   </style>
 </head>
-<body>
+
+<body id="topo">
+
   <header>
-    80 Dicas Rápidas de Linux para Usar no Dia a Dia
-  </header>
-  <nav>
-    <a href="/">Início</a>
-    <a href="/linux">Linux</a>
-    <a href="/tutoriais">Tutoriais</a>
-    <a href="/scripts">Shell Scripts</a>
-    <a href="/sobre">Sobre</a>
-  </nav>
+  💻 Linux com Humor - <strong>piolinux.com.br</strong> 😄
+</header>
+
+<nav>
+  <a href="index.html">home</a>
+  <a href="piadas-linux-engracadas.html">Piadas</a>
+  <a href="artigos-linux.html">Iniciante</a>
+  <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+  <a href="script-bash.html">Bash</a>
+  <a href="links.html">Conteúdos Úteis</a>
+</nav>
+
+
+<div id="share" style="text-align:center;margin:15px 0"></div>
+<script async defer>
+(() => {
+  const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+  const d=[
+    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+  ],e=document.getElementById("share");
+  d.forEach(([n,c,l])=>{
+    let a=document.createElement("a");
+    a.href=l;a.target="_blank";a.rel="noopener";
+    a.textContent=n;
+    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+    e.appendChild(a);
+  });
+})();
+</script>
+
   	<section id="dicas-linux-1-40">
   <h2>Dicas Linux 1 a 80</h2>
   <li><strong>1.</strong> Use o comando <code>ls</code> para listar arquivos e diretórios. Ele mostra tudo que está dentro do diretório atual. Para listar com detalhes, use <code>ls -l</code>.</li>
@@ -249,6 +267,15 @@
       <li><strong>80.</strong> Compartilhe essas dicas com quem está aprendendo Linux!</li>
     </ul>
   </section>
+  
+  <footer>
+  Site criado com muito terminal e memes! Acesse:
+  <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
+  <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
+  <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
+</footer>
+
+  
 </body>
 </html>
 

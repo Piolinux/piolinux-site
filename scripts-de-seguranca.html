@@ -4,29 +4,78 @@
   <meta charset="UTF-8">
   <title>Scripts de Segurança para Linux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Coleção de scripts úteis para segurança no Linux: firewall, bloqueio de IP, rootkits, SSH, fail2ban, nmap, sniffers e mais." />
-  <meta name="keywords" content="segurança linux, firewall ufw, bloquear ip, nmap, ssh automático, fail2ban, rootkits, sniffers, senhas fortes, monitoramento de tráfego" />
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://www.piolinux.com/scripts-de-seguranca.html" />
+  <meta name="description" content="Coleção de scripts úteis para segurança no Linux: firewall, bloqueio de IP, rootkits, SSH, fail2ban, nmap, sniffers e mais.">
+  <meta name="keywords" content="segurança linux, firewall ufw, bloquear ip, nmap, ssh automático, fail2ban, rootkits, sniffers, senhas fortes, monitoramento de tráfego">
+  <meta name="robots" content="index,nofollow">
+  <link rel="canonical" href="https://www.piolinux.com/scripts-de-seguranca.html">
   <style>
-    body {
-      background-color: #111;
-      color: #0f0;
-      font-family: Verdana, Geneva, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: 'Verdana', Geneva, sans-serif;
+      font-size: 14px;
+    }
+
+    body {
+      background: #1a1a1a;
+      color: #f0f0f0;
+      padding-top: 130px;
+    }
+
+    header, footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      font-weight: bold;
     }
 
     header {
-      background-color: #000;
       color: #00ff88;
-      padding: 20px;
-      text-align: center;
       font-size: 1.8rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 2px solid #00ff88;
     }
 
-    main {
-      max-width: 800px;
+    nav {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: #111;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 10px;
+      border-top: 4px solid #00ff88;
+      border-bottom: 4px solid #00ff88;
+    }
+
+    nav a, footer a {
+      background: #006400;
+      color: #00bfff;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    nav a:hover, footer a:hover {
+      background: #00ccff;
+      color: #000;
+      text-decoration: underline;
+    }
+
+    section, main {
+      max-width: 900px;
       margin: 40px auto;
       padding: 20px;
       background: #1a1a1a;
@@ -36,79 +85,113 @@
 
     h2 {
       color: #00ff88;
-      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
     }
 
-    pre {
-      background-color: #222;
-      padding: 10px;
-      border-left: 4px solid #00ff88;
-      overflow-x: auto;
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    li a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      color: #00ccff;
+      text-decoration: underline;
+    }
+
+    code, pre {
+      background: #222;
       color: #0f0;
-    }
-
-    button.copy {
-      background: #00cc00;
-      color: black;
-      padding: 6px 12px;
-      border: none;
+      padding: 4px 6px;
       border-radius: 4px;
-      margin: 5px 0;
-      cursor: pointer;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
     }
 
-    a.back {
+    .copy {
+      background: #00bfff;
+      color: #000;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .copy:hover {
+      background: #00ccff;
+    }
+
+    .back {
       display: block;
       text-align: center;
+      margin: 20px 0;
       color: #00ff88;
-      margin-top: 20px;
+      font-weight: bold;
       text-decoration: underline;
     }
 
     footer {
+      color: #aaa;
       margin-top: 40px;
-      background-color: #000;
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
     }
 
-    footer a {
-      color: #00ff88;
-      font-weight: bold;
-      text-decoration: none;
-    }
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
 
-    footer a:hover {
-      text-decoration: underline;
+      body {
+        padding-top: 180px;
+      }
     }
   </style>
 </head>
 <body id="topo">
+
   <header>🛡️ Scripts de Segurança para Linux</header>
-  
-   <div id="share" style="text-align:center;margin:15px 0"></div>
+
+  <div id="share" style="text-align:center;margin:15px 0"></div>
   <script async defer>
     (() => {
-      const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
-      const d=[
-        ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
-        ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-        ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
-        ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-      ],e=document.getElementById("share");
-      d.forEach(([n,c,l])=>{
-        let a=document.createElement("a");
-        a.href=l;a.target="_blank";a.rel="noopener";
-        a.textContent=n;
-        a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+      const u = encodeURIComponent(location.href), t = encodeURIComponent(document.title);
+      const d = [
+        ["Reddit", "#ff4500", `https://www.reddit.com/submit?url=${u}&title=${t}`],
+        ["Twitter", "#1da1f2", `https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+        ["WhatsApp", "#25d366", `https://api.whatsapp.com/send?text=${t}%20${u}`],
+        ["LinkedIn", "#0077b5", `https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+      ], e = document.getElementById("share");
+      d.forEach(([n, c, l]) => {
+        let a = document.createElement("a");
+        a.href = l; a.target = "_blank"; a.rel = "noopener";
+        a.textContent = n;
+        a.style = `background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
         e.appendChild(a);
       });
     })();
   </script>
 
-  <a href="links.html" class="back">← Voltar para Links</a>
-
+  <nav>
+  <a href="index.html">home</a>
+  <a href="piadas-linux-engracadas.html">Piadas</a>
+  <a href="artigos-linux.html">Iniciante</a>
+  <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+  <a href="script-bash.html">Bash</a>
+  <a href="links.html">Conteúdos Úteis</a>
+</nav>
   <main>
     <h2>Firewall básico com UFW</h2>
     <button class="copy">Copiar</button>
@@ -119,7 +202,7 @@ sudo ufw enable</pre>
 
     <h2>Bloqueio de IPs maliciosos</h2>
     <button class="copy">Copiar</button>
-    <pre>digite no terminal sudo ufw deny from 192.168.0.123</pre>
+    <pre>sudo ufw deny from 192.168.0.123</pre>
 
     <h2>Script de escaneamento com Nmap</h2>
     <button class="copy">Copiar</button>
@@ -138,8 +221,8 @@ sudo chkrootkit</pre>
 
     <h2>Gerador de senhas fortes (Shell)</h2>
     <button class="copy">Copiar</button>
-    <pre>openssl rand -hex 16</pre>
-    <pre>openssl rand -hex 64</pre>
+    <pre>openssl rand -hex 16
+openssl rand -hex 64</pre>
 
     <h2>Verificador de integridade de arquivos</h2>
     <button class="copy">Copiar</button>
@@ -156,11 +239,7 @@ sudo systemctl start fail2ban</pre>
     <button class="copy">Copiar</button>
     <pre>sudo apt install iftop
 sudo iftop -i eth0</pre>
-
-    
   </main>
-
- 
 
   <script>
     document.querySelectorAll(".copy").forEach(btn => {
@@ -173,17 +252,14 @@ sudo iftop -i eth0</pre>
       });
     });
   </script>
-  
-  
-  <footer>
-  Site criado com muito terminal e memes! Acesse:
-  <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
-  <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
-  <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
-</footer>
 
-<p style="text-align:center; margin-top: 20px;">
-  <a href="links.html" style="color:#00ff88; font-weight:bold; text-decoration:underline;">← Voltar para Links</a>
-</p>
+  <footer>
+    Site criado com muito terminal e memes! Acesse:
+    <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
+    <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
+    <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
+  </footer>
+
+  <p class="back"><a href="links.html">← Voltar para Links</a></p>
 </body>
 </html>

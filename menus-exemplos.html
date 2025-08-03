@@ -10,7 +10,7 @@
   <meta name="robots" content="index,nofollow">
   <link rel="canonical" href="https://piolinux.com/menus-exemplos.html" />
   
-  <style>
+  <<style>
     * {
       box-sizing: border-box;
       font-family: 'Verdana', Geneva, sans-serif;
@@ -22,6 +22,7 @@
     body {
       background: #1a1a1a;
       color: #f0f0f0;
+      padding-top: 130px; /* Compensa a altura do menu fixo */
     }
 
     header {
@@ -31,9 +32,20 @@
       padding: 20px;
       font-size: 1.8rem;
       font-weight: bold;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 2px solid #00ff88;
     }
 
     nav {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      z-index: 999;
       background: #111;
       display: flex;
       justify-content: center;
@@ -44,51 +56,21 @@
       border-bottom: 4px solid #00ff88;
     }
 
-    nav a, .dropdown button {
+    nav a {
       background: #006400;
-      color: #0f0;
+      color: #00bfff;
       text-decoration: none;
       padding: 8px 14px;
       border-radius: 5px;
       font-weight: bold;
       border: none;
       cursor: pointer;
+      transition: background 0.3s, color 0.3s;
     }
 
-    nav a:hover, .dropdown button:hover {
-      background: #00cc00;
+    nav a:hover {
+      background: #00ccff;
       color: #000;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #222;
-      min-width: 200px;
-      z-index: 1;
-      border: 1px solid #00ff88;
-      border-radius: 5px;
-    }
-
-    .dropdown-content a {
-      color: #0f0;
-      padding: 10px;
-      display: block;
-      text-decoration: none;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #00cc00;
-      color: #000;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
     }
 
     section {
@@ -116,6 +98,16 @@
       line-height: 1.6;
     }
 
+    section ul li a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    section ul li a:hover {
+      text-decoration: underline;
+      color: #00ccff;
+    }
+
     code {
       background: #222;
       padding: 2px 6px;
@@ -133,13 +125,14 @@
     }
 
     footer a {
-      color: #00ff88;
+      color: #00bfff;
       font-weight: bold;
       text-decoration: none;
     }
 
     footer a:hover {
       text-decoration: underline;
+      color: #ffffff;
     }
 
     @media screen and (max-width: 768px) {
@@ -148,9 +141,8 @@
         align-items: center;
       }
 
-      .dropdown-content {
-        position: static;
-        width: 100%;
+      body {
+        padding-top: 180px;
       }
     }
   </style>
@@ -158,6 +150,17 @@
 <body>
 
   <header>📂 Exemplos de Menus Horizontais em HTML</header>
+  
+  
+  <nav>
+  <a href="index.html">home</a>
+  <a href="piadas-linux-engracadas.html">Piadas</a>
+  <a href="artigos-linux.html">Iniciante</a>
+  <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+  <a href="script-bash.html">Bash</a>
+  <a href="links.html">Conteúdos Úteis</a>
+</nav>
+
 
 <div id="share" style="text-align:center;margin:15px 0"></div>
   <script async defer>

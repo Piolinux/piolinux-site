@@ -1,87 +1,199 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mais Códigos - PioLinux</title>
-  <meta name="description" content="Códigos úteis de Linux, HTML, Python e mais para copiar e compartilhar.">
-  <meta name="keywords" content="linux, comandos, scripts, html, python, piolinux, terminal">
-  <meta name="robots" content="index,nofollow">
-  <link rel="canonical" href="https://piolinux.com/mais-codigos.html">
+  <meta name="description" content="Códigos úteis de Linux, HTML, Python e mais para copiar e compartilhar." />
+  <meta name="keywords" content="linux, comandos, scripts, html, python, piolinux, terminal" />
+  <meta name="robots" content="index,nofollow" />
+  <link rel="canonical" href="https://piolinux.com/mais-codigos.html" />
+
   <style>
-    body {
-      background-color: #111;
-      color: #0f0;
-      font-family: Verdana, Geneva, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: 'Verdana', Geneva, sans-serif;
+      font-size: 14px;
     }
+
+    body {
+      background: #1a1a1a;
+      color: #f0f0f0;
+      padding-top: 180px;
+    }
+
     header {
-      background-color: #000;
+      background: #000;
       color: #00ff88;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
       font-size: 1.8rem;
+      font-weight: bold;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 2px solid #00ff88;
     }
+
+    nav {
+      background: #111;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 10px;
+      border-top: 4px solid #00ff88;
+      border-bottom: 4px solid #00ff88;
+    }
+
+    nav a {
+      background: #006400;
+      color: #00bfff;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+      background: #00ccff;
+      color: #000;
+    }
+
     main {
-      max-width: 800px;
-      margin: 40px auto;
+      max-width: 900px;
+      margin: 0 auto;
       padding: 20px;
       background: #1a1a1a;
       border-radius: 10px;
       box-shadow: 0 0 10px #00ff88;
     }
+
     h2 {
       color: #00ff88;
       margin-bottom: 20px;
+      font-size: 1.6rem;
       text-align: center;
     }
+
+    h3 {
+      color: #00bfff;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .code-block {
+      margin-bottom: 30px;
+      background: #111;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: inset 0 0 8px #00ff88;
+    }
+
     pre {
       background: #222;
+      color: #0f0;
       padding: 10px;
       border-radius: 5px;
       overflow-x: auto;
-      color: #0f0;
+      white-space: pre-wrap;
+      margin-bottom: 10px;
+      font-family: monospace;
     }
-    .code-block {
-      margin-bottom: 30px;
-    }
+
     button {
-      background: #006400;
-      color: #0f0;
-      padding: 8px 16px;
+      background: #00bfff;
+      color: #000;
+      padding: 8px 12px;
       border: none;
-      border-radius: 5px;
+      border-radius: 4px;
+      font-weight: bold;
       cursor: pointer;
-      margin-top: 10px;
+      transition: background 0.3s, color 0.3s;
     }
+
     button:hover {
-      background: #00cc00;
+      background: #00ccff;
       color: #000;
     }
+
     footer {
-      background-color: #000;
-      color: #ccc;
+      background: #000;
+      color: #aaa;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
     }
+
     footer a {
-      color: #00ff88;
-      font-weight: bold;
+      color: #00bfff;
       text-decoration: none;
+      font-weight: bold;
     }
+
     footer a:hover {
+      color: #ffffff;
       text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      body {
+        padding-top: 220px;
+      }
     }
   </style>
 </head>
-<body>
+<body id="topo">
+
   <header>
     📦 Mais Códigos Úteis - PioLinux
   </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="piadas-linux-engracadas.html">Piadas</a>
+    <a href="artigos-linux.html">Iniciante</a>
+    <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+    <a href="script-bash.html">Bash</a>
+    <a href="links.html">Conteúdos Úteis</a>
+  </nav>
+
   <main>
     <h2>Códigos para Aprender e Compartilhar</h2>
+<div id="share" style="text-align:center;margin:15px 0"></div>
+<script async defer>
+(() => {
+  const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+  const d=[
+    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+  ],e=document.getElementById("share");
+  d.forEach(([n,c,l])=>{
+    let a=document.createElement("a");
+    a.href=l;a.target="_blank";a.rel="noopener";
+    a.textContent=n;
+    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+    e.appendChild(a);
+  });
+})();
+</script>
 
     <div class="code-block">
       <h3>📁 Script para Backup</h3>
@@ -113,15 +225,9 @@ else:
 &lt;meta name="author" content="PioLinux"&gt;</pre>
       <button onclick="copyCode('code3')">Copiar</button>
     </div>
-
-    
-
   </main>
-  <footer>
-    Site criado com muito terminal e café ☕ | 
-    <a href="index.html">Início</a> |
-    <a href="#topo">Voltar ao Topo</a>
-  </footer>
+
+  
   <script>
     function copyCode(id) {
       const text = document.getElementById(id).textContent;
@@ -130,5 +236,12 @@ else:
       });
     }
   </script>
+<footer>
+  Site criado com muito terminal e memes! Acesse:
+  <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
+  <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
+  <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
+</footer>
+
 </body>
 </html>

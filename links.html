@@ -10,24 +10,90 @@
   <link rel="canonical" href="https://piolinux.com/links.html" />
   <meta name="author" content="PioLinux"/>
   <style>
-    body {
-      background-color: #111;
-      color: #0f0;
-      font-family: Verdana, Geneva, sans-serif;
+    * {
+      box-sizing: border-box;
+      font-family: 'Verdana', Geneva, sans-serif;
+      font-size: 14px;
       margin: 0;
       padding: 0;
     }
 
-    header {
-      background-color: #000;
+    body {
+      background: #1a1a1a;
+      color: #f0f0f0;
+      padding-top: 130px;
+    }
+
+    header, footer {
+      background: #000;
       color: #00ff88;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
       font-size: 1.8rem;
+      font-weight: bold;
+      width: 100%;
+      position: fixed;
+      left: 0;
+      z-index: 1000;
+    }
+
+    header {
+      top: 0;
+      border-bottom: 2px solid #00ff88;
+    }
+
+    footer {
+      font-size: 1rem;
+      position: static;
+      margin-top: 40px;
+      color: #aaa;
+    }
+
+    footer a {
+      color: #00bfff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+
+    nav {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 10px;
+      border-top: 4px solid #00ff88;
+      border-bottom: 4px solid #00ff88;
+    }
+
+    nav a {
+      background: #006400;
+      color: #00bfff;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+      background: #00ccff;
+      color: #000;
     }
 
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 20px;
       background: #1a1a1a;
@@ -35,10 +101,10 @@
       box-shadow: 0 0 10px #00ff88;
     }
 
-    h2 {
+    main h2 {
       color: #00ff88;
       margin-bottom: 20px;
-      text-align: center;
+      font-size: 1.5rem;
     }
 
     ul {
@@ -47,34 +113,42 @@
     }
 
     li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    li a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      text-decoration: underline;
+      color: #00ccff;
+    }
+
+    code {
+      background: #222;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #0f0;
+      font-weight: bold;
+    }
+
+    #share {
+      text-align: center;
       margin: 15px 0;
     }
 
-    a {
-      text-decoration: none;
-      color: #0f0;
-    }
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
 
-    a:hover {
-      color: #00cc00;
-    }
-
-    footer {
-      margin-top: 40px;
-      background-color: #000;
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-    }
-
-    footer a {
-      color: #00ff88;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
+      body {
+        padding-top: 180px;
+      }
     }
   </style>
 </head>
@@ -84,52 +158,68 @@
     🔗 Links Úteis - PioLinux
   </header>
 
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="80-Dicas-Rápidas-de-Linux.html">Dicas Linux</a>
+    <a href="comandos-terminal-de-linux.html">Comandos</a>
+    <a href="guia-completo-de-linux.html">Guia Linux</a>
+    <a href="software-de-linux-windows.html">Linux x Windows</a>
+    <a href="artigo-python.html">Python</a>
+    <a href="distros-de-linux.html">Distros</a>
+    <a href="menus-exemplos.html">Menus HTML</a>
+    <a href="mais-codigos.html">+ Códigos</a>
+    <a href="utilitarios.html">Utilitários</a>
+    <a href="scripts-de-seguranca.html">Scripts Segurança</a>
+  </nav>
+
   <main>
     <h2>Acesse conteúdos essenciais:</h2>
     <ul>
-	 <li><a href="index.html">🌐 Página inicial</a></li>
+      <li><a href="index.html">🌐 Página inicial</a></li>
       <li><a href="80-Dicas-Rápidas-de-Linux.html">📌 80 Dicas Rápidas de Linux</a></li>
       <li><a href="comandos-terminal-de-linux.html">🖥️ Comandos do Terminal</a></li>
       <li><a href="guia-completo-de-linux.html">📖 Guia: O que é Linux</a></li>
       <li><a href="software-de-linux-windows.html">💻 Software Linux x Windows</a></li>
       <li><a href="artigo-python.html">🐍 Introdução ao Python</a></li>
       <li><a href="distros-de-linux.html">📦 Distros de Linux</a></li>
-      <li><a href="menus-exemplos.html">📦 Exemplos de menus HTML horizontais para copiar e colar no seu site.</a></li>
-      <li><a href="mais-codigos.html">📦 Códigos úteis de Linux, HTML, Python e mais para copiar e compartilhare.</a></li>
-      <li><a href="utilitarios.html">📦 Ferramentas úteis: QR Code, formulário de contato, Pomodoro, to-do list, relógio digital e mais.</a></li>
-      <li><a href="scripts-de-seguranca.html">📦Coleção de scripts úteis para segurança no Linux: firewall, bloqueio de IP, rootkits.</a></li>
-      
+      <li><a href="menus-exemplos.html">📦 Exemplos de menus HTML</a></li>
+      <li><a href="mais-codigos.html">📦 Códigos úteis</a></li>
+      <li><a href="utilitarios.html">📦 Ferramentas úteis</a></li>
+      <li><a href="scripts-de-seguranca.html">📦 Scripts de segurança</a></li>
+    </ul>
   </main>
 
-  <div id="share" style="text-align:center;margin:15px 0"></div>
-  <script async defer>
+  <div id="share"></div>
+  <script>
     (() => {
-      const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
-      const d=[
-        ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
-        ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-        ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
-        ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-      ],e=document.getElementById("share");
-      d.forEach(([n,c,l])=>{
-        let a=document.createElement("a");
-        a.href=l;a.target="_blank";a.rel="noopener";
-        a.textContent=n;
-        a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+      const u = encodeURIComponent(location.href), t = encodeURIComponent(document.title);
+      const d = [
+        ["Reddit", "#ff4500", `https://www.reddit.com/submit?url=${u}&title=${t}`],
+        ["Twitter", "#1da1f2", `https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+        ["WhatsApp", "#25d366", `https://api.whatsapp.com/send?text=${t}%20${u}`],
+        ["LinkedIn", "#0077b5", `https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+      ];
+      const e = document.getElementById("share");
+      d.forEach(([n, c, l]) => {
+        let a = document.createElement("a");
+        a.href = l; a.target = "_blank"; a.rel = "noopener";
+        a.textContent = n;
+        a.style = `background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
         e.appendChild(a);
       });
     })();
   </script>
 
-   <footer>
-  Site criado com muito terminal e memes! Acesse:
-  <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
-  <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
-  <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
-</footer>
+  <footer>
+    Site criado com muito terminal e memes! Acesse:
+    <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
+    <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
+    <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
+  </footer>
 
-<p style="text-align:center; margin-top: 20px;">
-  <a href="links.html" style="color:#00ff88; font-weight:bold; text-decoration:underline;">← Voltar para Links</a>
-</p>
+  <p style="text-align:center; margin-top: 20px;">
+    <a href="links.html" style="color:#00ff88; font-weight:bold; text-decoration:underline;">← Voltar para Links</a>
+  </p>
+
 </body>
 </html>

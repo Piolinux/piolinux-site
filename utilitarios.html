@@ -8,79 +8,172 @@
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://piolinux.com/utilitarios.html">
   <title>Utilitários Online - PioLinux</title>
+  
   <style>
-    body {
-      background-color: #111;
-      color: #0f0;
-      font-family: Verdana, Geneva, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: 'Verdana', Geneva, sans-serif;
+      font-size: 14px;
     }
+
+    body {
+      background: #1a1a1a;
+      color: #f0f0f0;
+      padding-top: 130px;
+    }
+
     header, footer {
-      background-color: #000;
-      color: #00ff88;
-      padding: 20px;
+      background: #000;
       text-align: center;
-    }
-    main {
-      max-width: 900px;
-      margin: 20px auto;
       padding: 20px;
-      background-color: #1a1a1a;
+      font-weight: bold;
+    }
+
+    header {
+      color: #00ff88;
+      font-size: 1.8rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 2px solid #00ff88;
+    }
+
+    nav {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: #111;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 10px;
+      border-top: 4px solid #00ff88;
+      border-bottom: 4px solid #00ff88;
+    }
+
+    nav a, footer a {
+      background: #006400;
+      color: #00bfff;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    nav a:hover, footer a:hover {
+      background: #00ccff;
+      color: #000;
+      text-decoration: underline;
+    }
+
+    section, main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #1a1a1a;
       border-radius: 10px;
       box-shadow: 0 0 10px #00ff88;
     }
+
     h2 {
       color: #00ff88;
-      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
     }
-    section {
-      margin-bottom: 40px;
-    }
-    textarea, input[type="text"], input[type="email"] {
-      width: 100%;
-      padding: 10px;
-      margin: 5px 0;
-      border: 1px solid #0f0;
-      background: #222;
-      color: #0f0;
-      border-radius: 5px;
-    }
-    button {
-      background-color: #00cc00;
-      color: #000;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    button:hover {
-      background-color: #0f0;
-    }
-    canvas {
-      display: block;
-      margin: 10px auto;
-    }
+
     ul {
       list-style: none;
-      padding: 0;
+      padding-left: 0;
     }
+
     li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      line-height: 1.6;
     }
-    #clock {
-      font-size: 2rem;
+
+    li a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      color: #00ccff;
+      text-decoration: underline;
+    }
+
+    code, pre {
+      background: #222;
+      color: #0f0;
+      padding: 4px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .copy {
+      background: #00bfff;
+      color: #000;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .copy:hover {
+      background: #00ccff;
+    }
+
+    .back {
+      display: block;
       text-align: center;
-      margin-top: 10px;
+      margin: 20px 0;
+      color: #00ff88;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    footer {
+      color: #aaa;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      body {
+        padding-top: 180px;
+      }
     }
   </style>
+
 </head>
 <body>
   <header>
     🧰 Utilitários Online - PioLinux
   </header>
-
+<nav>
+  <a href="index.html">home</a>
+  <a href="piadas-linux-engracadas.html">Piadas</a>
+  <a href="artigos-linux.html">Iniciante</a>
+  <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+  <a href="script-bash.html">Bash</a>
+  <a href="links.html">Conteúdos Úteis</a>
+</nav>
   <main>
     <section>
       <h2>📧 Formulário de Contato</h2>
