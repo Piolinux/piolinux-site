@@ -1,92 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-<?xml version="1.0" encoding="UTF-8"?> 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+
 <url>
-  <loc>http://www.piolinux.com/index.html</loc>
+  <loc>https://www.piolinux.com/</loc>
+  <lastmod>2025-08-05T16:15:04+00:00</lastmod>
 </url>
-<url>
-  <loc>http://www.piolinux.com/piadas-linux-engraçadas.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/artigos-linux.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/dicas-tecnicas-linux.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/script-bash.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/links.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/artigos-linux-iniciantes.html#introducao</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/distros-linux-iniciantes.html#automacao-diaria</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/instalando-programas-linux-iniciantes.html#administracao-sistema</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/gerenciadores-de-pacotes-no-linux-guia-para-iniciantes.html#seguranca-monitoramento</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/comandos-basicos-do-linux-para-iniciantes.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/comandos-avancados-linux-potencialize-terminal.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/como-instalar-programas-no-linux-guia-para-iniciantes.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/personalizando-linux-iniciantes.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/seguranca-linux-iniciantes.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/como-remover-programas-no-linux.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/comandos-basicos-linux-para-iniciantes-guia-completo.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/como-atualizar-linux-terminal-grafico.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/80-Dicas-Rápidas-de-Linux.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/comandos-terminal-de-linux.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/guia-completo-de-linux.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/software-de-linux-windows.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/artigo-python.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/distros-de-linux.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/menus-exemplos.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/mais-codigos.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/utilitarios.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/scripts-de-seguranca.html</loc>
-</url>
-<url>
-  <loc>http://www.piolinux.com/</loc>
-</url>
+
+
 </urlset>
-
