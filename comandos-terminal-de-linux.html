@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <title>Comandos Essenciais do Terminal Linux - PioLinux</title>
+  <title>Comandos Essenciais do Terminal Linux - PioLinux</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Guia completo dos comandos essenciais do terminal Linux para iniciantes e usuários avançados. Aprenda a dominar a linha de comando!">
@@ -10,192 +10,208 @@
     <meta name="robots" content="index,nofollow">
     <link rel="canonical" href="https://www.piolinux.com/comandos-terminal-de-linux.html" />
     
-   
-    <style>
-  * {
-    box-sizing: border-box;
-    font-family: 'Verdana', Geneva, sans-serif;
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    background: #121212;
-    color: #fdfdfd;
-    padding-top: 130px;
-  }
-
-  header {
-    background: #000;
-    color: #00ff88;
-    text-align: center;
-    padding: 20px;
-    font-size: 1.8rem;
-    font-weight: bold;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    border-bottom: 2px solid #00ff88;
-  }
-
-  nav {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    background: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    gap: 12px;
-    flex-wrap: wrap;
-    border-top: 4px solid #00ff88;
-    border-bottom: 4px solid #00ff88;
-  }
-
-  nav a {
-    background: #004d00;
-    color: #00ffff;
-    text-decoration: none;
-    padding: 8px 14px;
-    border-radius: 5px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-  }
-
-  nav a:hover {
-    background: #00ffcc;
-    color: #000;
-  }
-
-  section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #00ff88;
-  }
-
-  section h2 {
-    color: #00ff88;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-  }
-
-  section ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  section ul li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-  }
-
-  section ul li a {
-    color: #00bfff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  section ul li a:hover {
-    text-decoration: underline;
-    color: #00ffcc;
-  }
-
-  code {
-    background: #222;
-    padding: 2px 6px;
-    border-radius: 4px;
-    color: #00ff00;
-    font-weight: bold;
-  }
-
-  footer {
-    background: #000;
-    color: #ccc;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-  }
-
-  footer a {
-    color: #00ffff;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  footer a:hover {
-    text-decoration: underline;
-    color: #ffffff;
-  }
-
-  @media screen and (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: center;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Verdana', sans-serif;
     }
 
     body {
-      padding-top: 180px;
+      background-color: #121212;
+      color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
     }
-  }
-</style>
 
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      color: #00ff88;
+      padding: 10px 15px;
+      text-align: center;
+      z-index: 1000;
+      border-bottom: 2px solid #00ff88;
+    }
+
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 250px;
+      background-color: #1a1a1a;
+      border-right: 2px solid #00ff88;
+      padding: 10px;
+      overflow-y: auto;
+      height: calc(100vh - 60px);
+    }
+
+    .accordion-section {
+      margin-bottom: 10px;
+    }
+
+    .accordion-title {
+      background-color: #004d00;
+      color: #00ffff;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .accordion-content a {
+      display: block;
+      color: #00bfff;
+      padding: 5px 0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .accordion-content a:hover {
+      color: #00ffcc;
+      text-decoration: underline;
+    }
+
+    main {
+      margin-left: 250px;
+      padding: 80px 20px 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00ff88;
+    }
+
+    section h2 {
+      color: #00ff88;
+      margin-bottom: 15px;
+    }
+
+    section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    section li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    code {
+      background-color: #222;
+      color: #00ff00;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    footer {
+      background: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #00ffff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #00ff88;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      header {
+        position: static;
+      }
+    }
+  </style>
 </head>
-<body id="topo">
+<body>
 
+  <header>
+  <h1>  Comandos Essenciais do Terminal Linux</h1>
+  </header>
 
-    <header>
-        Comandos Essenciais do Terminal Linux
-    </header>
-    
-    
-   
-    <nav>
-        <a href="index.html">Dicas</a>
-        <a href="distros.html">Distros</a>
-        <a href="scriptbash.html">Scripts Bash</a>
-        <a href="#introducao">Introdução</a>
-        <a href="#basicos">Básicos</a>
-        <a href="#arquivos-diretorios">Arquivos & Diretórios</a>
-        <a href="#processos-sistema">Processos & Sistema</a>
-        <a href="#rede-seguranca">Rede & Segurança</a>
-        <a href="#utilidades-avancadas">Utilidades Avançadas</a>
-        <a href="#gerenciamento-pacotes">Gerenciamento de Pacotes</a>
-        <a href="links.html">Voltar a pagina</a>
-        </section>
-
-    
-    
-</body>
-</html>
-    </nav>
-<
+  <nav>
+    <div class="accordion-section">
+      <div class="accordion-title">😂 Inico</div>
+      <div class="accordion-content">
+		 <a href="index.html">Inicio</a>
+        <a href="piadas-linux-engraçadas.html">Piadas</a>
+       </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">💡 Dicas Técnicas</div>
+      <div class="accordion-content">
+        <a href="artigos-linux.html">Iniciante</a>
+       <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+        <a href="script-bash.html">Bash</a>
+      </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">📚 Artigos Técnicos</div>
+      <div class="accordion-content">
+         <a href="links.html">Acesse conteúdos essenciais</a>
+        <a href="#">Guia Terminal</a>
+        <a href="#">Problemas no boot</a>
+      </div>
+    </div>
+  </nav>
+  <main>
     <section id="comandos-terminal">
         <h2>⌨️ Dominando o Terminal: Comandos Essenciais do Linux</h2>
-        <p>O terminal do Linux, também chamado de linha de comando, pode até parecer coisa de hacker à primeira vista — cheio de letras, símbolos e uma tela preta. Mas não se assuste! Na real, o terminal é uma das ferramentas mais poderosas e inteligentes que você pode ter no seu computador. Com alguns comandos simples, você consegue navegar pelas pastas, instalar programas, mudar configurações, automatizar tarefas e muito mais — tudo de forma rápida e eficiente. Muita gente acha que usar terminal é difícil, mas não é assim: basta começar aprendendo os comandos básicos, praticar um pouco, e logo você vai estar fazendo coisas incríveis com facilidade.Dominar o terminal é como aprender uma nova habilidade que transforma sua forma de usar o Linux. Você ganha controle total do sistema, resolve problemas sozinho e ainda sente aquele orgulho de entender como tudo funciona de verdade. Então, seja você um iniciante ou já use o Linux faz tempo, agora é a hora perfeita para se jogar nos comandos do Bash e descobrir como o terminal pode ser seu melhor parceiro no dia a dia..</p>
+        <p>O terminal do Linux, também chamado de linha de comando, 
+        pode até parecer coisa de hacker à primeira vista — cheio de letras, símbolos e uma tela preta. Mas não se assuste! Na real, o terminal é uma das ferramentas mais poderosas e inteligentes que você pode ter no seu computador. Com alguns comandos simples, você consegue navegar pelas pastas, instalar programas, mudar configurações, automatizar tarefas e muito mais — tudo de forma rápida e eficiente. Muita gente acha que usar terminal é difícil, mas não é assim: basta começar aprendendo os comandos básicos, praticar um pouco, e logo você vai estar fazendo coisas incríveis com facilidade.Dominar o terminal é como aprender uma nova habilidade que transforma sua forma de usar o Linux. Você ganha controle total do sistema, resolve problemas sozinho e ainda sente aquele orgulho de entender como tudo funciona de verdade. Então, seja você um iniciante ou já use o Linux faz tempo, agora é a hora perfeita para se jogar nos comandos do Bash e descobrir como o terminal pode ser seu melhor parceiro no dia a dia..</p></section>
 
         <ul>
-            <li>
+           <section> <li>
                 <h3 id="introducao">O Que é o Terminal e Por Que Usá-lo?</h3>
                 <p>Diferente de uma interface gráfica (GUI), o terminal é leve, rápido e possibilita criar automações avançadas com scripts. Por isso, muitos administradores de sistema, desenvolvedores e usuários mais experientes preferem usar o terminal — ele oferece mais controle, precisão e agilidade na hora de realizar tarefas no Linux.
-
+</p>
 Dica rápida: Para abrir o terminal, na maioria das distribuições, basta usar o atalho Ctrl+Alt+T. Também dá para encontrar o terminal facilmente buscando por "Terminal" no menu de aplicativos.</p>
-            </li>
+            </li></section>
 
-            <li>
+            <section><li>
                 <h3 id="basicos">Comandos Básicos para Iniciantes</h3>
                 <p>Comece por aqui! Estes comandos são a base da navegação e interação no terminal.</p>
                 <ul>
-                    <li>
+                    <li></li>
                         <h4><code>pwd</code> (Print Working Directory)</h4>
                         <p>Mostra o caminho completo do diretório atual onde você está no terminal.</p>
                         <pre><code>pwd</code></pre>
@@ -434,9 +450,9 @@ tail -f /var/log/auth.log</code></pre>
 sudo systemctl restart ssh</code></pre>
                     </li>
                 </ul>
-            </li>
+            </li></section>
 
-            <li>
+          <section>  <li>
                 <h3 id="rede-seguranca">Comandos de Rede e Segurança</h3>
                 <p>Ferramentas para diagnosticar problemas de rede, verificar conexões e gerenciar o firewall.</p>
                 <ul>
@@ -507,11 +523,13 @@ sudo ufw status verbose</code></pre>
                     </li>
                 </ul>
             </li>
-
-            <li>
+</section>
+           <section><li>
                 <h3 id="utilidades-avancadas">Utilidades e Manipulação de Texto</h3>
                 <p>Comandos poderosos para buscar, filtrar e manipular dados em arquivos de texto.</p>
                 <ul>
+					
+					
                     <li>
                         <h4><code>grep</code> (Global Regular Expression Print)</h4>
                         <p>Procura padrões de texto em arquivos. Uma das ferramentas mais usadas no terminal.</p>
@@ -567,12 +585,15 @@ cat numeros.txt | sort -n # Ordena numericamente</code></pre>
                         <pre><code>cat log.txt | sort | uniq -c # Conta ocorrências de linhas únicas</code></pre>
                     </li>
                 </ul>
-            </li>
+            </li></section>
 
-            <li>
+            <section><li>
                 <h3 id="gerenciamento-pacotes">Gerenciamento de Pacotes (Exemplos)</h3>
                 <p>Os comandos de gerenciamento de pacotes variam por distribuição. Aqui estão os mais comuns.</p>
                 <ul>
+                    
+                    
+                    
                     <li>
                         <h4>Debian/Ubuntu (<code>apt</code>)</h4>
                         <ul>
@@ -586,6 +607,8 @@ cat numeros.txt | sort -n # Ordena numericamente</code></pre>
                         <pre><code>sudo apt update && sudo apt upgrade -y
 sudo apt install vlc</code></pre>
                     </li>
+                    </section>
+                    <section>
                     <li>
                         <h4>Fedora/RHEL (<code>dnf</code>)</h4>
                         <ul>
@@ -596,11 +619,12 @@ sudo apt install vlc</code></pre>
                         </ul>
                         <pre><code>sudo dnf install git
 sudo dnf update</code></pre>
-                    </li>
-                    <li>
+                    </li></section>
+                    
+                  <section>  <li>
                         <h4>Arch Linux (<code>pacman</code>)</h4>
                         <ul>
-                            <li><code>sudo pacman -Syu</code>: Sincroniza e atualiza o sistema.</li>
+                          <li><code>sudo pacman -Syu</code>: Sincroniza e atualiza o sistema.</li>
                             <li><code>sudo pacman -S &lt;pacote&gt;</code>: Instala um pacote.</li>
                             <li><code>sudo pacman -R &lt;pacote&gt;</code>: Remove um pacote.</li>
                             <li><code>pacman -Ss &lt;termo&gt;</code>: Busca por pacotes.</li>
@@ -611,8 +635,8 @@ sudo pacman -S neofetch</code></pre>
                 </ul>
             </li>
         </ul>
-
-        <p>Este guia é um ponto de partida. O terminal Linux é um universo a ser explorado, e a melhor forma de aprender é praticando. Use a tecla <code>TAB</code> para autocompletar, <code>Ctrl+R</code> para o histórico de comandos e, sempre que tiver dúvidas, consulte o manual com <code>man &lt;comando&gt;</code>. Boa jornada na linha de comando!</p>
+</section>
+       <section> <p>Este guia é um ponto de partida. O terminal Linux é um universo a ser explorado, e a melhor forma de aprender é praticando. Use a tecla <code>TAB</code> para autocompletar, <code>Ctrl+R</code> para o histórico de comandos e, sempre que tiver dúvidas, consulte o manual com <code>man &lt;comando&gt;</code>. Boa jornada na linha de comando!</p>
     </section>
 <div id="share" style="text-align:center;margin:15px 0"></div>
 <script async defer>
@@ -634,15 +658,24 @@ sudo pacman -S neofetch</code></pre>
 })();
 </script>
 
-    <footer>
-    Site criado com muito terminal e memes! Acesse: 
-    <a href="politica-de-privacidade.html" target="_blank" style="color: #00ff88; font-weight: bold; text-decoration: underline;">
-        Política de Privacidade
-    </a> | 
-    <a href="termos-de-uso.html" target="_blank" style="color: #00ff88; font-weight: bold; text-decoration: underline;">
-        Termos de Uso
-    </a>
-</footer>
+  </main>
 
+  <footer>
+    Site criado com muito terminal e memes! Acesse:
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Termos de Uso</a>
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll(".accordion-title");
+    accordions.forEach((item) => {
+      item.addEventListener("click", () => {
+        const content = item.nextElementSibling;
+        const isVisible = content.style.display === "block";
+        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+        content.style.display = isVisible ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>

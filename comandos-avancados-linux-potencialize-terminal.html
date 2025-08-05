@@ -1,311 +1,313 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <title>Comandos avançados Linux: Aprenda a potencializar seu terminal</title>	
+   <title>Comandos avançados Linux: Aprenda a potencializar seu terminal</title>	
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Explore os comandos avançados do Linux para aumentar sua produtividade no terminal e dominar funcionalidades essenciais." />
   <meta name="keywords" content="comandos avançados linux, terminal linux, linux produtividade, comandos linux intermediário, linux terminal dicas" />
   <meta name="robots" content="index,nofollow">
   <link rel="canonical" href="https://piolinux.com/comandos-avancados-linux-potencialize-terminal.html" />
-<style>
+  <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Verdana', Geneva, sans-serif;
-       font-size: 14px;
+      box-sizing: border-box;
+      font-family: 'Verdana', sans-serif;
     }
 
     body {
-     background: #1a1a1a;
-      color: #f0f0f0;
-      padding-top: 130px;
-    }
-
-    header, footer {
-      background: #000;
-      text-align: center;
-      padding: 20px;
-      font-weight: bold;
+      background-color: #121212;
+      color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
     }
 
     header {
-      color: #00ff88;
-      font-size: 1.8rem;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
+      background: #000;
+      color: #00ff88;
+      padding: 10px 15px;
+      text-align: center;
       z-index: 1000;
       border-bottom: 2px solid #00ff88;
     }
 
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
     nav {
       position: fixed;
-      top: 70px;
+      top: 60px;
       left: 0;
-      width: 100%;
-      background-color: #111;
-      z-index: 999;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 12px 10px;
-      border-top: 4px solid #00ff88;
-      border-bottom: 3px solid #00ff88;
+      width: 250px;
+      background-color: #1a1a1a;
+      border-right: 2px solid #00ff88;
+      padding: 10px;
+      overflow-y: auto;
+      height: calc(100vh - 60px);
     }
 
-    nav a, footer a {
-      background: #006400;
-      color: #00ccff;
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: 0.3s ease-in-out;
-    }
-
-    nav a:hover, footer a:hover {
-      background-color: #00ccff;
-      color: #000;
-      text-decoration: underline;
-    }
-
-    article, section {
-      max-width: 900px;
-      margin: 0 auto 40px auto;
-      padding: 20px;
-      background-color: #1e1e1e;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00ff88;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      color: #00ff88;
-    }
-
-    h2 {
-      color: #00ff88;
-      margin: 30px 0 15px;
-      font-size: 1.5rem;
-    }
-
-    p {
-      margin-bottom: 16px;
-    }
-
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-      margin-bottom: 16px;
-    }
-
-    li {
+    .accordion-section {
       margin-bottom: 10px;
     }
 
-    li a {
-      color: #00ccff;
-      text-decoration: none;
+    .accordion-title {
+      background-color: #004d00;
+      color: #00ffff;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
     }
 
-    li a:hover {
+    .accordion-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .accordion-content a {
+      display: block;
+      color: #00bfff;
+      padding: 5px 0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .accordion-content a:hover {
+      color: #00ffcc;
       text-decoration: underline;
     }
 
-    code, pre {
-      background-color: #1f1f1f;
-      color: #00ff00;
-      padding: 4px 6px;
-      border-radius: 4px;
-      font-weight: bold;
-      font-family: monospace;
-      display: inline-block;
-      margin: 4px 0;
+    main {
+      margin-left: 250px;
+      padding: 80px 20px 20px;
+      width: 100%;
+      max-width: 900px;
     }
 
-    blockquote {
-      border-left: 4px solid #00ff88;
-      padding-left: 12px;
-      margin: 16px 0;
-      color: #ccc;
-      font-style: italic;
-    }
-
-    .author-box {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-top: 40px;
-      padding: 15px;
-      background: #222;
+    section {
+      margin-bottom: 40px;
+      background: #1a1a1a;
+      padding: 20px;
       border-radius: 8px;
+      box-shadow: 0 0 10px #00ff88;
     }
 
-    .author-box img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 2px solid #00ff88;
-    }
-
-    .faq dt {
-      font-weight: bold;
+    section h2 {
       color: #00ff88;
-      margin-top: 10px;
-    }
-
-    .faq dd {
       margin-bottom: 15px;
     }
 
-    #share {
-      text-align: center;
-      margin: 25px auto;
+    section ul {
+      list-style: none;
+      padding-left: 0;
     }
 
-    #share a {
-      margin: 0 5px;
-      display: inline-block;
-      font-size: 13px;
+    section li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    code {
+      background-color: #222;
+      color: #00ff00;
+      padding: 2px 6px;
+      border-radius: 4px;
     }
 
     footer {
-      color: #aaa;
-      padding: 20px 10px;
-      font-size: 14px;
+      background: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
 
     footer a {
-      color: #00ccff;
+      color: #00ffff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
 
     @media screen and (max-width: 768px) {
       nav {
-        flex-direction: column;
-        align-items: center;
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #00ff88;
       }
 
-      .author-box {
-        flex-direction: column;
-        align-items: flex-start;
+      main {
+        margin-left: 0;
+        padding: 20px;
       }
 
-      body {
-        padding-top: 190px;
+      header {
+        position: static;
       }
     }
   </style>
 </head>
+<body>
 
-<body id="topo">
-
-  <header>Comandos avançados Linux</header>
+  <header>
+  <h1>  Comandos para utilizar no Terminal Linux</h1>
+  </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="piadas-linux-engracadas.html">Piadas</a>
-    <a href="artigos-linux.html">Iniciante</a>
-    <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
-    <a href="script-bash.html">Bash</a>
-    <a href="links.html">Conteúdos Úteis</a>
-    <a href="artigos-linux.html">Artigos Linux</a>
+    <div class="accordion-section">
+      <div class="accordion-title">😂 Inico</div>
+      <div class="accordion-content">
+		 <a href="index.html">Inicio</a>
+        <a href="piadas-linux-engraçadas.html">Piadas</a>
+       </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">💡 Dicas Técnicas</div>
+      <div class="accordion-content">
+        <a href="artigos-linux.html">Iniciante</a>
+       <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+        <a href="script-bash.html">Bash</a>
+      </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">📚 Artigos Técnicos</div>
+      <div class="accordion-content">
+         <a href="links.html">Acesse conteúdos essenciais</a>
+        <a href="#">Guia Terminal</a>
+        <a href="#">Problemas no boot</a>
+      </div>
+    </div>
   </nav>
+<main>
+  <section>
+    <div id="share" style="text-align:center;margin:15px 0"></div>
+    <script async defer>
+      (() => {
+        const u = encodeURIComponent(location.href),
+              t = encodeURIComponent(document.title);
+        const d = [
+          ["Reddit", "#ff4500", `https://www.reddit.com/submit?url=${u}&title=${t}`],
+          ["Twitter", "#1da1f2", `https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+          ["WhatsApp", "#25d366", `https://api.whatsapp.com/send?text=${t}%20${u}`],
+          ["LinkedIn", "#0077b5", `https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+        ],
+        e = document.getElementById("share");
+        d.forEach(([n, c, l]) => {
+          const a = document.createElement("a");
+          a.href = l;
+          a.target = "_blank";
+          a.rel = "noopener";
+          a.textContent = n;
+          a.style = `
+            background:${c};
+            color:#fff;
+            padding:5px 10px;
+            margin:0 5px;
+            border-radius:4px;
+            font-size:12px;
+            text-decoration:none;
+            display:inline-block;
+          `;
+          e.appendChild(a);
+        });
+      })();
+    </script>
 
-  <div id="share" style="text-align:center;margin:15px 0"></div>
-  <script async defer>
-  (() => {
-    const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
-    const d=[
-      ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
-      ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-      ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
-      ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-    ],e=document.getElementById("share");
-    d.forEach(([n,c,l])=>{
-      let a=document.createElement("a");
-      a.href=l;a.target="_blank";a.rel="noopener";
-      a.textContent=n;
-      a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;display:inline-block;`;
-      e.appendChild(a);
-    });
-  })();
-  </script>
+    <article>
+    <section>  <h2>Comandos para utilizar no Terminal Linux sem enrrolação</h2>
 
-  <article>
-   <h1>Comandos para utilizar no Terminal Linux</h1>
+      <p>Domina os comandos básicos do Linux? Então está na hora de avançar para comandos mais poderosos e melhorar sua produtividade.</p>
 
-<p>Domina os comandos básicos do Linux, está na hora de avançar para comandos mais poderosos melhorando a produtividade.</p>
+      <p>Veja dicas avançadas para se tornar um verdadeiro especialista no uso do terminal do Linux.</p></section>
 
-<p>Dicas avançadas para se tornar um verdeiro especialista em explorar o terminal de linux.</p>
+     <section><h2>Gerencie os arquivos utilizando comandos avançados</h2>
 
-<h2>Gerencie os arquivos utilizando comandos avançados</h2>
+      <p>Além dos comandos básicos, você pode usar comandos que manipulam arquivos de forma eficiente:</p>
 
-<p>Não existem apenas comandos básicos, existem comandos que podem manipular arquivos facilmente:</p>
+      <ul>
+        <li><code>find</code>: busca arquivos e pastas com critérios como nome, tamanho ou data.</li>
+        <li><code>grep</code>: procura por padrões de texto dentro dos arquivos.</li>
+        <li><code>rsync</code>: sincroniza arquivos entre diretórios locais ou remotos.</li>
+      </ul>
 
-<ul>
-  <li><code>find</code>: buscando arquivos e pastas com critérios específicos, como nome, tamanho ou data.</li>
-  <li><code>grep</code>: procurando textos ou padrões dentro dos arquivos, ideal para análises rápidas.</li>
-  <li><code>rsync</code>: serve para sincronizar arquivos entre pastas locais ou remotas, útil para backups e transferências.</li>
-</ul>
+      <blockquote>Exemplo: <code>find /home -name "*.txt"</code> encontra todos os arquivos .txt na pasta /home.</blockquote></section>
 
-<blockquote>Exemplos para utilizar: <code>find /home -name "*.txt"</code> encontra todos os arquivos com extensão .txt no diretório /home.</blockquote>
+     <section><h2>Controlando as permissões e usuários</h2>
 
-<h2>Controlando as permissões e usuários</h2>
+      <p>Controlar o acesso aos arquivos é essencial em Linux. Veja os principais comandos:</p>
 
-<p>Controlar o acesso aos arquivos é essencial em Linux. Veja comandos avançados relacionados a permissões:</p>
+      <ul>
+        <li><code>chmod</code>: altera permissões de arquivos e diretórios.</li>
+        <li><code>chown</code>: modifica o dono e grupo de arquivos e pastas.</li>
+        <li><code>sudo</code>: executa comandos com privilégios administrativos.</li>
+      </ul>
 
-<ul>
-  <li><code>chmod</code>: altera permissões de arquivos e diretórios (leitura, escrita e execução).</li>
-  <li><code>chown</code>: muda o proprietário e grupo de um arquivo ou pasta.</li>
-  <li><code>sudo</code>: executa comandos com privilégios administrativos.</li>
-</ul>
+      <p>Utilize esses comandos com cautela para garantir segurança e organização.</p></section>
 
-<p>Não deixe de utilizar esses comandos para manter a segurança e organização do sistema.</p>
+      <section><h2>Monitoramento e gerenciamento de processos</h2>
 
-<h2>Monitoramento e gerenciamento de processos</h2>
+      <p>Além do tradicional <code>top</code>, existem ferramentas mais avançadas:</p>
 
-<p>Além do <code>top</code>, você pode usar:</p>
+      <ul>
+        <li><code>htop</code>: visual mais amigável do <code>top</code> (pode ser instalado).</li>
+        <li><code>ps aux</code>: exibe todos os processos com detalhes.</li>
+        <li><code>kill PID</code>: encerra processos pelo seu número (PID).</li>
+      </ul>
 
-<ul>
-  <li><code>htop</code>: versão mais amigável e visual do top (precisa instalar).</li>
-  <li><code>ps aux</code>: mostra todos os processos em execução com detalhes.</li>
-  <li><code>kill PID</code>: finaliza um processo pelo seu número de identificação (PID).</li>
-</ul>
+      <blockquote>Dica: Use <code>htop</code> para monitorar os processos de forma visual e interativa.</blockquote></section>
 
-<blockquote>Dica: Use <code>htop</code> para monitorar processos de forma interativa e mais visual.</blockquote>
+     <section><h2>Automatizando tarefas com scripts</h2>
 
-<h2>Automatizando tarefas com scripts</h2>
+      <p>Você pode criar scripts em Bash para automatizar tarefas:</p>
 
-<p>Você pode criar pequenos scripts em Bash para automatizar rotinas repetitivas:</p>
-
-<pre>
-#!/bin/bash
+      <pre><code>#!/bin/bash
 echo "Backup iniciado..."
 rsync -av --delete /home/usuario/documentos/ /backup/documentos/
-echo "Backup concluído!"
-</pre>
+echo "Backup concluído!"</code></pre>
 
-<p>Salve o arquivo com extensão <code>.sh</code>, dê permissão com <code>chmod +x nome-do-script.sh</code> e execute com <code>./nome-do-script.sh</code>.</p>
+      <p>Salve com extensão <code>.sh</code>, dê permissão com <code>chmod +x script.sh</code> e execute com <code>./script.sh</code>.</p></section>
 
-<h2>Conclusão</h2>
+      <section><h2>Conclusão</h2>
 
-<p>Com esses comandos avançados, você expande muito as possibilidades de uso do Linux via terminal.  
-Pratique cada comando e experimente criar seus próprios scripts para facilitar o dia a dia.</p>
+      <p>Com esses comandos avançados, você amplia suas possibilidades no uso do terminal Linux.</p>
 
-<p>Dominar o terminal é uma jornada contínua que traz enorme poder e flexibilidade no Linux.</p>
+      <p>Pratique cada comando, experimente e crie seus próprios scripts para facilitar sua rotina.</p>
+
+      <p>Dominar o terminal é uma jornada poderosa e contínua no mundo Linux.</p>
+    </article>
+  </section>
+</main>
 
 
   <footer>
     Site criado com muito terminal e memes! Acesse:
-    <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
-    <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
-    <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Termos de Uso</a>
   </footer>
 
+  <script>
+    const accordions = document.querySelectorAll(".accordion-title");
+    accordions.forEach((item) => {
+      item.addEventListener("click", () => {
+        const content = item.nextElementSibling;
+        const isVisible = content.style.display === "block";
+        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+        content.style.display = isVisible ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>

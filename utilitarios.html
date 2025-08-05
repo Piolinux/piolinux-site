@@ -1,180 +1,200 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+   <meta charset="UTF-8">
+  <title>Utilitários Online - PioLinux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ferramentas úteis: QR Code, formulário de contato, Pomodoro, to-do list, relógio digital e mais">
   <meta name="keywords" content="qrcode, pomodoro, lista de tarefas, relógio digital, copiar código, ferramentas online">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://piolinux.com/utilitarios.html">
-  <title>Utilitários Online - PioLinux</title>
+ 
   
-  <style>
+  <<style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Verdana', Geneva, sans-serif;
-      font-size: 14px;
+      box-sizing: border-box;
+      font-family: 'Verdana', sans-serif;
     }
 
     body {
-      background: #1a1a1a;
-      color: #f0f0f0;
-      padding-top: 130px;
-    }
-
-    header, footer {
-      background: #000;
-      text-align: center;
-      padding: 20px;
-      font-weight: bold;
+      background-color: #121212;
+      color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
     }
 
     header {
-      color: #00ff88;
-      font-size: 1.8rem;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
+      background: #000;
+      color: #00ff88;
+      padding: 10px 15px;
+      text-align: center;
       z-index: 1000;
       border-bottom: 2px solid #00ff88;
     }
 
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
     nav {
       position: fixed;
-      top: 70px;
+      top: 60px;
       left: 0;
-      width: 100%;
-      background: #111;
-      z-index: 999;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
+      width: 250px;
+      background-color: #1a1a1a;
+      border-right: 2px solid #00ff88;
       padding: 10px;
-      border-top: 4px solid #00ff88;
-      border-bottom: 4px solid #00ff88;
+      overflow-y: auto;
+      height: calc(100vh - 60px);
     }
 
-    nav a, footer a {
-      background: #006400;
-      color: #00bfff;
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 5px;
+    .accordion-section {
+      margin-bottom: 10px;
+    }
+
+    .accordion-title {
+      background-color: #004d00;
+      color: #00ffff;
+      padding: 10px;
+      cursor: pointer;
       font-weight: bold;
-      transition: 0.3s;
-      display: inline-block;
+      border-radius: 4px;
     }
 
-    nav a:hover, footer a:hover {
-      background: #00ccff;
-      color: #000;
+    .accordion-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .accordion-content a {
+      display: block;
+      color: #00bfff;
+      padding: 5px 0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .accordion-content a:hover {
+      color: #00ffcc;
       text-decoration: underline;
     }
 
-    section, main {
+    main {
+      margin-left: 250px;
+      padding: 80px 20px 20px;
+      width: 100%;
       max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
       background: #1a1a1a;
-      border-radius: 10px;
+      padding: 20px;
+      border-radius: 8px;
       box-shadow: 0 0 10px #00ff88;
     }
 
-    h2 {
+    section h2 {
       color: #00ff88;
-      margin-bottom: 20px;
-      font-size: 1.5rem;
+      margin-bottom: 15px;
     }
 
-    ul {
+    section ul {
       list-style: none;
       padding-left: 0;
     }
 
-    li {
+    section li {
       margin-bottom: 10px;
       line-height: 1.6;
     }
 
-    li a {
-      color: #00bfff;
-      text-decoration: none;
-    }
-
-    li a:hover {
-      color: #00ccff;
-      text-decoration: underline;
-    }
-
-    code, pre {
-      background: #222;
-      color: #0f0;
-      padding: 4px 6px;
+    code {
+      background-color: #222;
+      color: #00ff00;
+      padding: 2px 6px;
       border-radius: 4px;
-      font-weight: bold;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .copy {
-      background: #00bfff;
-      color: #000;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-      margin-bottom: 10px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .copy:hover {
-      background: #00ccff;
-    }
-
-    .back {
-      display: block;
-      text-align: center;
-      margin: 20px 0;
-      color: #00ff88;
-      font-weight: bold;
-      text-decoration: underline;
     }
 
     footer {
-      color: #aaa;
+      background: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
       margin-top: 40px;
+    }
+
+    footer a {
+      color: #00ffff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
 
     @media screen and (max-width: 768px) {
       nav {
-        flex-direction: column;
-        align-items: center;
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #00ff88;
       }
 
-      body {
-        padding-top: 180px;
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      header {
+        position: static;
       }
     }
   </style>
-
 </head>
 <body>
+
   <header>
-    🧰 Utilitários Online - PioLinux
+  <h1>    🧰 Utilitários Online - PioLinux</h1>
   </header>
-<nav>
-  <a href="index.html">home</a>
-  <a href="piadas-linux-engracadas.html">Piadas</a>
-  <a href="artigos-linux.html">Iniciante</a>
-  <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
-  <a href="script-bash.html">Bash</a>
-  <a href="links.html">Conteúdos Úteis</a>
-</nav>
-  <main>
+
+  <nav>
+    <div class="accordion-section">
+      <div class="accordion-title">😂 Inico</div>
+      <div class="accordion-content">
+		 <a href="index.html">Inicio</a>
+        <a href="piadas-linux-engraçadas.html">Piadas</a>
+       </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">💡 Dicas Técnicas</div>
+      <div class="accordion-content">
+        <a href="artigos-linux.html">Iniciante</a>
+       <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+        <a href="script-bash.html">Bash</a>
+      </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">📚 Artigos Técnicos</div>
+      <div class="accordion-content">
+         <a href="links.html">Acesse conteúdos essenciais</a>
+        <a href="#">Guia Terminal</a>
+        <a href="#">Problemas no boot</a>
+      </div>
+    </div>
+  </nav>
+
+   <main>
     <section>
       <h2>📧 Formulário de Contato</h2>
       <form onsubmit="alert('Mensagem enviada!'); return false;">
@@ -224,9 +244,6 @@
     </section>
   </main>
 
-  <footer>
-    Criado com terminal, café e muito código! | <a href="#topo">↑ Topo</a>
-  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
   <script>
@@ -285,6 +302,25 @@
     }
     setInterval(atualizarRelogio, 1000);
     atualizarRelogio();
+  </script>
+</body>
+
+  <footer>
+    Site criado com muito terminal e memes! Acesse:
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Termos de Uso</a>
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll(".accordion-title");
+    accordions.forEach((item) => {
+      item.addEventListener("click", () => {
+        const content = item.nextElementSibling;
+        const isVisible = content.style.display === "block";
+        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+        content.style.display = isVisible ? "none" : "block";
+      });
+    });
   </script>
 </body>
 </html>

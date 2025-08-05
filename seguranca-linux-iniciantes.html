@@ -9,172 +9,194 @@
   <meta name="robots" content="index,nofollow">
   <meta name="author" content="PioLinux"/>
    <link rel="canonical" href="https://piolinux.com/seguranca-linux-iniciantes.html" />
- 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Verdana', Geneva, sans-serif;
-      font-size: 14px;
+      box-sizing: border-box;
+      font-family: 'Verdana', sans-serif;
     }
 
     body {
-      background: #1a1a1a;
-      color: #f0f0f0;
-      padding-top: 130px;
-    }
-
-    header, footer {
-      background: #000;
-      text-align: center;
-      padding: 20px;
-      font-weight: bold;
+      background-color: #121212;
+      color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
     }
 
     header {
-      color: #00ff88;
-      font-size: 1.8rem;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
+      background: #000;
+      color: #00ff88;
+      padding: 10px 15px;
+      text-align: center;
       z-index: 1000;
       border-bottom: 2px solid #00ff88;
     }
 
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
     nav {
       position: fixed;
-      top: 70px;
+      top: 60px;
       left: 0;
-      width: 100%;
-      background: #111;
-      z-index: 999;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
+      width: 250px;
+      background-color: #1a1a1a;
+      border-right: 2px solid #00ff88;
       padding: 10px;
-      border-top: 4px solid #00ff88;
-      border-bottom: 4px solid #00ff88;
+      overflow-y: auto;
+      height: calc(100vh - 60px);
     }
 
-    nav a, footer a {
-      background: #006400;
-      color: #00bfff;
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 5px;
+    .accordion-section {
+      margin-bottom: 10px;
+    }
+
+    .accordion-title {
+      background-color: #004d00;
+      color: #00ffff;
+      padding: 10px;
+      cursor: pointer;
       font-weight: bold;
-      transition: 0.3s;
-      display: inline-block;
+      border-radius: 4px;
     }
 
-    nav a:hover, footer a:hover {
-      background: #00ccff;
-      color: #000;
+    .accordion-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .accordion-content a {
+      display: block;
+      color: #00bfff;
+      padding: 5px 0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .accordion-content a:hover {
+      color: #00ffcc;
       text-decoration: underline;
     }
 
-    section, main {
+    main {
+      margin-left: 250px;
+      padding: 80px 20px 20px;
+      width: 100%;
       max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
       background: #1a1a1a;
-      border-radius: 10px;
+      padding: 20px;
+      border-radius: 8px;
       box-shadow: 0 0 10px #00ff88;
     }
 
-    h2 {
+    section h2 {
       color: #00ff88;
-      margin-bottom: 20px;
-      font-size: 1.5rem;
+      margin-bottom: 15px;
     }
 
-    ul {
+    section ul {
       list-style: none;
       padding-left: 0;
     }
 
-    li {
+    section li {
       margin-bottom: 10px;
       line-height: 1.6;
     }
 
-    li a {
-      color: #00bfff;
-      text-decoration: none;
-    }
-
-    li a:hover {
-      color: #00ccff;
-      text-decoration: underline;
-    }
-
-    code, pre {
-      background: #222;
-      color: #0f0;
-      padding: 4px 6px;
+    code {
+      background-color: #222;
+      color: #00ff00;
+      padding: 2px 6px;
       border-radius: 4px;
-      font-weight: bold;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .copy {
-      background: #00bfff;
-      color: #000;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-      margin-bottom: 10px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .copy:hover {
-      background: #00ccff;
-    }
-
-    .back {
-      display: block;
-      text-align: center;
-      margin: 20px 0;
-      color: #00ff88;
-      font-weight: bold;
-      text-decoration: underline;
     }
 
     footer {
-      color: #aaa;
+      background: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
       margin-top: 40px;
+    }
+
+    footer a {
+      color: #00ffff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
 
     @media screen and (max-width: 768px) {
       nav {
-        flex-direction: column;
-        align-items: center;
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #00ff88;
       }
 
-      body {
-        padding-top: 180px;
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      header {
+        position: static;
       }
     }
   </style>
-
 </head>
-<body id="topo">
+<body>
+
+  
+
+  <nav>
+    <div class="accordion-section">
+      <div class="accordion-title">😂 Inico</div>
+      <div class="accordion-content">
+		 <a href="index.html">Inicio</a>
+        <a href="piadas-linux-engraçadas.html">Piadas</a>
+       </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">💡 Dicas Técnicas</div>
+      <div class="accordion-content">
+        <a href="#">Comando útil</a>
+        <a href="#">Comando ninja</a>
+        <a href="#">Senha segura</a>
+      </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">📚 Artigos Técnicos</div>
+      <div class="accordion-content">
+        <a href="#">Por que Linux?</a>
+        <a href="#">Guia Terminal</a>
+        <a href="#">Problemas no boot</a>
+      </div>
+    </div>
+  </nav>
 
 <header>
-  Segurança no Linux: Cuidados Essenciais para Iniciantes
+  <h1>Segurança no Linux: Cuidados Essenciais para Iniciantes</h1>
 </header>
 
-<nav>
-    <a href="artigos-linux.html">Início Artigos</a>
-    <a href="script-bash.html">Scripts</a>
-    <a href="distros-de-linux.html">Distros</a>
-    <a href="index.html">Voltar a pagina</a>
-</nav>
+
+  <main>
 <div id="share" style="text-align:center;margin:15px 0"></div>
 <script async defer>
 (() => {
@@ -197,14 +219,10 @@
 
 <section>
   <h2>🔐 Introdução</h2>
-  <p>Acredita que esta seguro utilizando Linux.Não seja um distraido 
-  utilize o seu Sistema com cuidado. Não está imune a virus caso 
-  utilize o Windows em outra partição com Linux, caso utilize o Wine que emula o 
-  Windows é simples de remover os vírus.</p>
-  <p>Nessas dicas abaixo, você vai aprenderá práticas que são 
-  essenciais para manter o Sistema livre de ameaças digitais, vazamentos de dados.</p>
-  <p>Utilizar senhas seguras, atualizações, permissões, backups e mais. 
-  Explicações simples e diretas!</p>
+  <p>Acredita que está seguro utilizando Linux? Não se engane. Utilize o seu sistema com atenção. Você não está imune a vírus, principalmente se usa o Windows em outra partição ou o Wine, que emula o sistema da Microsoft.</p>
+<p>Nessas dicas abaixo, você aprenderá práticas essenciais para manter o sistema livre de ameaças digitais e vazamentos de dados.</p>
+<p>Vamos falar sobre senhas seguras, atualizações, permissões, backups e muito mais — com explicações simples e diretas!</p>
+
 </section>
 
 <section>
@@ -251,7 +269,7 @@ sudo ufw status</pre>
 <section>
   <h2>❓ FAQ</h2>
   <div class="faq">
-    <h4>Preciso usar antivírus no Linux?</h4>
+    <h3>Preciso usar antivírus no Linux?</h3>
     <p>Não é obrigatório, mas pode ser útil para escanear arquivos vindos do Windows.</p>
     <h4>O Linux pode ser invadido?</h4>
     <p>Sim. Embora seja mais seguro, más configurações e descuido ainda abrem brechas.</p>
@@ -266,11 +284,24 @@ sudo ufw status</pre>
   <p><strong>Dica final:</strong> sempre desconfie de comandos desconhecidos ou arquivos de fontes duvidosas.</p>
 </section>
 
-<footer>
-  Site criado com muito terminal e memes! Acesse:
-  <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
-  <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
-  <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
-</footer>
+  </main>
+
+  <footer>
+    Site criado com muito terminal e memes! Acesse:
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Termos de Uso</a>
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll(".accordion-title");
+    accordions.forEach((item) => {
+      item.addEventListener("click", () => {
+        const content = item.nextElementSibling;
+        const isVisible = content.style.display === "block";
+        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+        content.style.display = isVisible ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>

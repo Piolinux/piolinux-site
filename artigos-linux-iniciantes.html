@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<title>10 Artigos de Linux para Iniciantes - PioLinux</title>
+  <title>10 Artigos de Linux para Iniciantes - PioLinux</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Artigos de Linux para iniciantes: tutoriais, dicas e comandos essenciais para você dominar o sistema com facilidade. Acesse agora!">
@@ -9,159 +9,190 @@
     <meta name="author" content="PioLinux">
     <meta name="robots" content="index,nofollow">
     <link rel="canonical" href="https://piolinux.com/artigos-linux-iniciantes.html" />
-   <style>
-  * {
-    box-sizing: border-box;
-    font-family: 'Verdana', Geneva, sans-serif;
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    background: #121212;
-    color: #fdfdfd;
-    padding-top: 130px;
-  }
-
-  header {
-    background: #000;
-    color: #00ff88;
-    text-align: center;
-    padding: 20px;
-    font-size: 1.8rem;
-    font-weight: bold;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    border-bottom: 2px solid #00ff88;
-  }
-
-  nav {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    background: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    gap: 12px;
-    flex-wrap: wrap;
-    border-top: 4px solid #00ff88;
-    border-bottom: 4px solid #00ff88;
-  }
-
-  nav a {
-    background: #004d00;
-    color: #00ffff;
-    text-decoration: none;
-    padding: 8px 14px;
-    border-radius: 5px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-  }
-
-  nav a:hover {
-    background: #00ffcc;
-    color: #000;
-  }
-
-  section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #00ff88;
-  }
-
-  section h2 {
-    color: #00ff88;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-  }
-
-  section ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  section ul li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-  }
-
-  section ul li a {
-    color: #00bfff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  section ul li a:hover {
-    text-decoration: underline;
-    color: #00ffcc;
-  }
-
-  code {
-    background: #222;
-    padding: 2px 6px;
-    border-radius: 4px;
-    color: #00ff00;
-    font-weight: bold;
-  }
-
-  footer {
-    background: #000;
-    color: #ccc;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-  }
-
-  footer a {
-    color: #00ffff;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  footer a:hover {
-    text-decoration: underline;
-    color: #ffffff;
-  }
-
-  @media screen and (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: center;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Verdana', sans-serif;
     }
 
     body {
-      padding-top: 180px;
+      background-color: #121212;
+      color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
     }
-  }
-</style>
 
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      color: #00ff88;
+      padding: 10px 15px;
+      text-align: center;
+      z-index: 1000;
+      border-bottom: 2px solid #00ff88;
+    }
+
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 250px;
+      background-color: #1a1a1a;
+      border-right: 2px solid #00ff88;
+      padding: 10px;
+      overflow-y: auto;
+      height: calc(100vh - 60px);
+    }
+
+    .accordion-section {
+      margin-bottom: 10px;
+    }
+
+    .accordion-title {
+      background-color: #004d00;
+      color: #00ffff;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .accordion-content a {
+      display: block;
+      color: #00bfff;
+      padding: 5px 0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .accordion-content a:hover {
+      color: #00ffcc;
+      text-decoration: underline;
+    }
+
+    main {
+      margin-left: 250px;
+      padding: 80px 20px 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00ff88;
+    }
+
+    section h2 {
+      color: #00ff88;
+      margin-bottom: 15px;
+    }
+
+    section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    section li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    code {
+      background-color: #222;
+      color: #00ff00;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    footer {
+      background: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #00ffff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #00ff88;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      header {
+        position: static;
+      }
+    }
+  </style>
 </head>
-<body id="topo">
+<body>
 
-<header>
-    10 Artigos de Linux para Iniciantes que Todo Usuário Deveria Ler
-</header>
+  <header>
+  <h1>  10 Artigos de Linux para Iniciantes que Todo Usuário Deveria Ler 😄</h1>
+  </header>
 
-<nav>
-  <a href="index.html">home</a>
-  <a href="piadas-linux-engracadas.html">Piadas</a>
-  <a href="artigos-linux.html">Iniciante</a>
-  <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
-  <a href="script-bash.html">Bash</a>
-  <a href="links.html">Conteúdos Úteis</a>
-</nav>
+  <nav>
+    <div class="accordion-section">
+      <div class="accordion-title">😂 Inico</div>
+      <div class="accordion-content">
+		 <a href="index.html">Inicio</a>
+        <a href="piadas-linux-engraçadas.html">Piadas</a>
+       </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">💡 Dicas Técnicas</div>
+      <div class="accordion-content">
+        <a href="artigos-linux.html">Iniciante</a>
+       <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+        <a href="script-bash.html">Bash</a>
+      </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">📚 Artigos Técnicos</div>
+      <div class="accordion-content">
+         <a href="links.html">Acesse conteúdos essenciais</a>
+        <a href="#">Guia Terminal</a>
+        <a href="#">Problemas no boot</a>
+      </div>
+    </div>
+  </nav>
+  <main>
 <div id="share" style="text-align:center;margin:15px 0"></div>
 <script async defer>
 (() => {
@@ -195,7 +226,7 @@
     a distribuição para utilizar..</p>
 </section>
 
-<!-- Aqui entram os 10 artigos completos -->
+
 <section>
     <h2>📚 Os 10 Artigos Mais Úteis para Iniciantes</h2>
 
@@ -205,7 +236,9 @@
     <p>Plataforma Linux é composta por um código Kernel, criado por 
     Linus Torvalds em 1991. A partir do momento em que ele publicou um 
     e-mail para que mais programadores o ajudassem, nasceu o Linux. Depois de alguns anos, diversas Distribuições foram desenvolvidas com várias comunidades que ajudam e colaboram no desenvolvimento e aperfeiçoamento das distribuições, exemplos como Debian e Slackware.</p>
+</section>
 
+<section>
     <h3>2. Escolha sua Primeira Distro</h3>
     <p>Escolher a distribuição é a oportunidade de ser uma experiência 
     tranquila não vá bancando o esperto em utilizar um Arch 
@@ -214,8 +247,10 @@
     sistemas similares ao Windows para se adpatar-se.</p>
     <p>Não seja um maria vai com evitando distros como Arch Linux ou 
     Gentoo no início, será por sua conta e risco em destruir o Sistema.</p>
+</section>
 
-    <h3>3. Comandos Básicos do Terminal</h3>
+<section>
+	   <h3>3. Comandos Básicos do Terminal</h3>
     <p>O terminal é uma das ferramentas mais poderosas do Linux. a 
     interface gráfica é presente em todas as situações, utilizar os 
     comandos basicos para ganhar dominio no terminal e controle total. 
@@ -230,8 +265,10 @@
         <li><code>man comando</code> – Mostrando o manual do comando (ex: <code>man ls</code>).</li>
     </ul>
     <p>Pratique esses comandos, com tempo ganhara dominio do terminal 
-    facilmente esquecerá como utiliza os comandos.</p>
-
+    facilmente não esquecerá como utiliza os comandos uma dica dgite man.</p>
+</section>
+  
+  <section> 
     <h3>4. Segurança para Iniciantes</h3>
     <p>Linux é seguro para utilizar.Mas é necessário que algumas 
     praticas de segurança sejam utilizadas algumas dicas abaixo:</p>
@@ -244,8 +281,10 @@
     </ul>
     <p>Seguindo essas dicas seu sistema linux, ficará seguro existe até uma 
     piada não crie um frank Debian.</p>
-
-    <h3>5. Instalação de Programas no Linux</h3>
+</section>
+  
+  <section>
+	    <h3>5. Instalação de Programas no Linux</h3>
     <p>No Linux, há diversas formas de instalar aplicativos, dependendo da distribuição e do tipo de pacote:</p>
     <ul>
         <li><strong>APT (Ubuntu/Debian):</strong> <code>sudo apt install nome-do-programa</code></li>
@@ -254,7 +293,11 @@
         <li><strong>AppImage:</strong> arquivos executáveis portáteis, sem instalação. Basta dar permissão com <code>chmod +x arquivo.AppImage</code> e executá-lo.</li>
     </ul>
     <p>Com o tempo, você vai identificar qual método prefere e como gerenciar seus programas com facilidade.</p>
+</section>
 
+</section>
+
+<section>
     <h3>6. Gerenciamento de Pastas e Arquivos</h3>
     <p>Entender como funciona o sistema de arquivos no Linux é essencial. O diretório raiz é representado por <code>/</code>, e a partir dele surgem pastas como:</p>
     <ul>
@@ -264,6 +307,9 @@
         <li><code>/usr</code>: programas e bibliotecas.</li>
         <li><code>/var</code>: logs e arquivos temporários.</li>
     </ul>
+   </section> 
+    
+  <section>
     <p>Comandos para utilizar com cuidado:</p>
     <ul>
         <li><code>mkdir nome_da_pasta</code> – cria uma nova pasta.</li>
@@ -272,7 +318,9 @@
         <li><code>mv origem destino</code> – move ou renomeia.</li>
         <li><code>cp origem destino</code> – copia arquivos ou pastas.</li>
     </ul>
+</section>
 
+<section>
     <h3>7. Atualize seu Sistema</h3>
     <p>Mantenha seu sistema Linux atualizado garante correções de segurança, estabilidade e novos recursos. No Ubuntu e derivados, você pode usar:</p>
     <pre><code>sudo apt update
@@ -282,7 +330,9 @@ sudo apt upgrade</code></pre>
     <p>Algumas distros, como Fedora, usam o DNF:</p>
     <pre><code>sudo dnf update</code></pre>
     <p>Além dos comandos, muitas interfaces gráficas têm opções automáticas de atualização.</p>
+</section>
 
+<section>
     <h3>8. Personale o Ambiente Gráfico</h3>
     <p>Realize as alterações no seu Sistema Linux essas personalizações 
     fáceis. Você pode alterar completamente a aparência do sistema, desde ícones e temas até o gerenciador de janelas. Algumas opções:</p>
@@ -292,7 +342,9 @@ sudo apt upgrade</code></pre>
         <li><strong>Cinamon e XFCE:</strong> leves e funcionais.</li>
         <li>Temas e ícones podem ser baixados de sites como <a href="https://www.gnome-look.org/" target="_blank">gnome-look.org</a>.</li>
     </ul>
+</section>
 
+<section>
     <h3>9. Conhecendo o Software Livre</h3>
     <p>Linux é software livre. Aproveite da liberdade de executar, 
     estudar, modificar e compartilhar o código. O movimento é liderado por organizações como a Free Software Foundation (FSF), e envolve não só o sistema operacional, mas também aplicativos como:</p>
@@ -303,7 +355,9 @@ sudo apt upgrade</code></pre>
         <li><strong>Inkscape</strong>: editor de vetores profissional.</li>
     </ul>
     <p>Adotar Linux é mais do que trocar de sistema: é abraçar uma filosofia de liberdade digital.</p>
+</section>
 
+<section>
     <h3>10. Comunidade e Suporte</h3>
     <p>A comunidade Linux é uma das mais acolhedoras do mundo tech. Fóruns como o <a href="https://www.vivaolinux.com.br/" target="_blank">Viva o Linux</a>, o <a href="https://askubuntu.com/" target="_blank">Ask Ubuntu</a> e grupos no Telegram e Discord oferecem suporte gratuito e rápido.</p>
     <p>MUitas comunidades que criam tutorias em blogs, vídeos no 
@@ -337,11 +391,22 @@ sudo apt upgrade</code></pre>
    
 </section>
 
-<footer>
-  Site criado com muito terminal e memes! Acesse:
-  <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
-  <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
-  <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
-</footer>
+  <footer>
+    Site criado com muito terminal e memes! Acesse:
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Termos de Uso</a>
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll(".accordion-title");
+    accordions.forEach((item) => {
+      item.addEventListener("click", () => {
+        const content = item.nextElementSibling;
+        const isVisible = content.style.display === "block";
+        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+        content.style.display = isVisible ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>

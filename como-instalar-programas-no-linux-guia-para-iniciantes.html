@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Aprenda como instalar programas no Linux facilmente com este guia para iniciantes. Passo a passo para usar comandos e lojas de aplicativos." />
@@ -9,244 +10,192 @@
   <link rel="canonical" href="https://piolinux.com/como-instalar-programas-no-linux-guia-para-iniciantes.html" />
   <title>Como instalar programas no Linux: Guia para iniciantes</title>
 
+  
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Verdana', Geneva, sans-serif;
-       font-size: 14px;
+      box-sizing: border-box;
+      font-family: 'Verdana', sans-serif;
     }
 
     body {
-     background: #1a1a1a;
-      color: #f0f0f0;
-      padding-top: 130px;
-    }
-
-    header, footer {
-      background: #000;
-      text-align: center;
-      padding: 20px;
-      font-weight: bold;
+      background-color: #121212;
+      color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
     }
 
     header {
-      color: #00ff88;
-      font-size: 1.8rem;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
+      background: #000;
+      color: #00ff88;
+      padding: 10px 15px;
+      text-align: center;
       z-index: 1000;
       border-bottom: 2px solid #00ff88;
     }
 
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
     nav {
       position: fixed;
-      top: 70px;
+      top: 60px;
       left: 0;
-      width: 100%;
-      background-color: #111;
-      z-index: 999;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 12px 10px;
-      border-top: 4px solid #00ff88;
-      border-bottom: 3px solid #00ff88;
+      width: 250px;
+      background-color: #1a1a1a;
+      border-right: 2px solid #00ff88;
+      padding: 10px;
+      overflow-y: auto;
+      height: calc(100vh - 60px);
     }
 
-    nav a, footer a {
-      background: #006400;
-      color: #00ccff;
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: 0.3s ease-in-out;
-    }
-
-    nav a:hover, footer a:hover {
-      background-color: #00ccff;
-      color: #000;
-      text-decoration: underline;
-    }
-
-    article, section {
-      max-width: 900px;
-      margin: 0 auto 40px auto;
-      padding: 20px;
-      background-color: #1e1e1e;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00ff88;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      color: #00ff88;
-    }
-
-    h2 {
-      color: #00ff88;
-      margin: 30px 0 15px;
-      font-size: 1.5rem;
-    }
-
-    p {
-      margin-bottom: 16px;
-    }
-
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-      margin-bottom: 16px;
-    }
-
-    li {
+    .accordion-section {
       margin-bottom: 10px;
     }
 
-    li a {
-      color: #00ccff;
-      text-decoration: none;
+    .accordion-title {
+      background-color: #004d00;
+      color: #00ffff;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
     }
 
-    li a:hover {
+    .accordion-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .accordion-content a {
+      display: block;
+      color: #00bfff;
+      padding: 5px 0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .accordion-content a:hover {
+      color: #00ffcc;
       text-decoration: underline;
     }
 
-    code, pre {
-      background-color: #1f1f1f;
-      color: #00ff00;
-      padding: 4px 6px;
-      border-radius: 4px;
-      font-weight: bold;
-      font-family: monospace;
-      display: inline-block;
-      margin: 4px 0;
+    main {
+      margin-left: 250px;
+      padding: 80px 20px 20px;
+      width: 100%;
+      max-width: 900px;
     }
 
-    blockquote {
-      border-left: 4px solid #00ff88;
-      padding-left: 12px;
-      margin: 16px 0;
-      color: #ccc;
-      font-style: italic;
-    }
-
-    .author-box {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-top: 40px;
-      padding: 15px;
-      background: #222;
+    section {
+      margin-bottom: 40px;
+      background: #1a1a1a;
+      padding: 20px;
       border-radius: 8px;
+      box-shadow: 0 0 10px #00ff88;
     }
 
-    .author-box img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 2px solid #00ff88;
-    }
-
-    .faq dt {
-      font-weight: bold;
+    section h2 {
       color: #00ff88;
-      margin-top: 10px;
-    }
-
-    .faq dd {
       margin-bottom: 15px;
     }
 
-    #share {
-      text-align: center;
-      margin: 25px auto;
+    section ul {
+      list-style: none;
+      padding-left: 0;
     }
 
-    #share a {
-      margin: 0 5px;
-      display: inline-block;
-      font-size: 13px;
+    section li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    code {
+      background-color: #222;
+      color: #00ff00;
+      padding: 2px 6px;
+      border-radius: 4px;
     }
 
     footer {
-      color: #aaa;
-      padding: 20px 10px;
-      font-size: 14px;
+      background: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
 
     footer a {
-      color: #00ccff;
+      color: #00ffff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
 
     @media screen and (max-width: 768px) {
       nav {
-        flex-direction: column;
-        align-items: center;
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #00ff88;
       }
 
-      .author-box {
-        flex-direction: column;
-        align-items: flex-start;
+      main {
+        margin-left: 0;
+        padding: 20px;
       }
 
-      body {
-        padding-top: 190px;
+      header {
+        position: static;
       }
     }
   </style>
 </head>
-<body id="topo">
+<body>
 
   <header>
-    Aprenda como instalar programas no Linux facilmente com este guia para iniciantes
+  <h1>   Aprenda como instalar programas no Linux facilmente com este guia para iniciantes</h1>
   </header>
 
   <nav>
-    <a href="artigos-linux.html">Início Artigos</a>
-    <a href="script-bash.html">Scripts</a>
-    <a href="distros-de-linux.html">Distros</a>
-    <a href="index.html">Voltar à página inicial</a>
+    <div class="accordion-section">
+      <div class="accordion-title">😂 Inico</div>
+      <div class="accordion-content">
+		 <a href="index.html">Inicio</a>
+        <a href="piadas-linux-engraçadas.html">Piadas</a>
+       </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">💡 Dicas Técnicas</div>
+      <div class="accordion-content">
+        <a href="artigos-linux.html">Iniciante</a>
+       <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+        <a href="script-bash.html">Bash</a>
+      </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">📚 Artigos Técnicos</div>
+      <div class="accordion-content">
+         <a href="links.html">Acesse conteúdos essenciais</a>
+        <a href="#">Guia Terminal</a>
+        <a href="#">Problemas no boot</a>
+      </div>
+    </div>
   </nav>
-
-  
-
-  
-
-</head>
-<body id="topo">
-  <header>
-    Aprenda como instalar programas no Linux facilmente com este guia para iniciantes
-  </header>
-
-  <nav>
-    <a href="artigos-linux.html">Início Artigos</a>
-    <a href="script-bash.html">Scripts</a>
-    <a href="distros-de-linux.html">Distros</a>
-    <a href="index.html">Voltar à página inicial</a>
-  </nav>
-
-  
-</head>
-
-<body id="topo">
-
-<header>
-  Aprenda como instalar programas no Linux facilmente com este guia para iniciantes
-  </header>
-
-<nav>
-    <a href="artigos-linux.html">Início Artigos</a>
-    <a href="script-bash.html">Scripts</a>
-    <a href="distros-de-linux.html">Distros</a>
-     <a href="index.html">Voltar a pagina</a>
-</nav>
+  <main>
+    
 <div id="share" style="text-align:center;margin:15px 0"></div>
 <script async defer>
 (() => {
@@ -266,7 +215,7 @@
   });
 })();
 </script>
-
+<section>
 <article>
   <h1>Instalando programas no Linux: Guia para iniciantes</h1>
 
@@ -274,7 +223,9 @@
   Está perdido, não sabe o que fazer, existem metodos simples e práticos para atualizar o Sistema em dores de cabeça. </p>
 
   <p>Maneiras mais práticas para instalar atráves do terminal ou modo gráfico (gerenciado grafico de programas).</p>
+</section>
 
+<section>
   <h2>O que você vai aprender</h2>
   <ul>
     <li>Facilidade do gerenciadores de pacotes</li>
@@ -286,18 +237,25 @@
   <h2>Programas sendo instalados atráves dos gerenciadores de pacotes</h2>
 
   <p>Gerenciadores de pacotes exemplo como o Synaptic, basta abrir ir em busca, digitar o nome do programa para instalar ou remover em similares funciona da mesma forma.</p>
+</section>
 
+<section>
   <h3>APT – Distribuições baseadas em Debian/Ubuntu</h3>
   <p>Para instalar um programa usando o terminal no Ubuntu, Debian e derivados, você usa o comando <code>apt</code>.</p>
   <blockquote>Exemplos de comandos: <code>sudo apt update</code> (para atualizar a lista de pacotes)</blockquote>
   <blockquote>Exemplo: <code>sudo apt install nome-do-programa</code> (para instalar)</blockquote>
+</section>
 
+<section>
   <h3>DNF e YUM – Distribuições baseadas em Fedora/CentOS</h3>
   <p>Usuários do Fedora usam o <code>dnf</code>, enquanto CentOS pode usar <code>yum</code>.</p>
   <blockquote>Exemplo: <code>sudo dnf install nome-do-programa</code></blockquote>
+</section>
+
+
 
   <img src="https://example.com/imagem-terminal-linux-instalacao.png" alt="Terminal Linux mostrando instalação de programa" />
-
+<section>
   <h2>Instalando programas pela Central de Aplicativos</h2>
   <p>Muitas distribuições Linux modernas oferecem uma Central de Aplicativos (ou Software Center) que permite instalar programas de forma gráfica, parecida com lojas de aplicativos de smartphones.</p>
   <ul>
@@ -306,7 +264,8 @@
     <li>Clique em instalar e aguarde o processo</li>
   </ul>
   <p>Essa é uma ótima opção para quem prefere evitar o terminal.</p>
-
+</section>
+<section>
   <h2>Usando pacotes Snap e Flatpak</h2>
   <p>Além dos gerenciadores tradicionais, existem formatos universais de pacotes, como Snap e Flatpak, que funcionam em diversas distribuições.</p>
   <ul>
@@ -314,28 +273,30 @@
     <li><strong>Flatpak:</strong> Configure e use comandos como <code>flatpak install nome-do-programa</code></li>
   </ul>
   <p>Estes formatos garantem que o software funcione em qualquer distro sem conflitos.</p>
-
+</section>
+ <section>
   <h2>Dicas importantes para iniciantes</h2>
   <ul>
     <li>Sempre atualize a lista de pacotes antes de instalar (<code>sudo apt update</code>)</li>
     <li>Leia mensagens do terminal para entender erros e avisos</li>
     <li>Use fontes confiáveis para baixar softwares</li>
   </ul>
-
+</section>
+<section>
   <h2>Conclusão</h2>
   <p>Instalar programas no Linux é simples quando você conhece os métodos certos. Seja usando o terminal, a Central de Aplicativos ou pacotes universais, você tem várias opções para equipar seu sistema.</p>
   <p>Experimente os métodos e escolha o que for mais confortável para você. A prática torna tudo mais fácil!</p>
-
+</section>
   
 </article>
-
+<section>
 <div class="author-box">
   <img src="https://example.com/foto-autor.jpg" alt="Foto do autor" />
   <div>
     <p><strong>Piolinux</strong> é entusiasta Linux e escritor técnico com mais de 5 anos de experiência em tutoriais para iniciantes.</p>
   </div>
 </div>
-
+</section>
 <section>
   <h2>FAQ - Perguntas frequentes</h2>
   <dl>
@@ -349,11 +310,27 @@
     <dd>Sim, eles são formatos universais e podem ser usados em várias distros Linux.</dd>
   </dl>
 </section>
-<footer>
-  Site criado com muito terminal e memes! Acesse:
-  <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
-  <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
-  <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
-</footer>
+   
+   
+   
+  </main>
+
+  <footer>
+    Site criado com muito terminal e memes! Acesse:
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Termos de Uso</a>
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll(".accordion-title");
+    accordions.forEach((item) => {
+      item.addEventListener("click", () => {
+        const content = item.nextElementSibling;
+        const isVisible = content.style.display === "block";
+        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+        content.style.display = isVisible ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>

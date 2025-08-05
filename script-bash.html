@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <title>Scripts Bash para Diversas Finalidades - PioLinux</title
+  <title>Scripts Bash para Diversas Finalidades - PioLinux</title
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aprenda a criar scripts Bash para automação, administração, segurança e desenvolvimento no Linux. Exemplos práticos para diversas finalidades.">
@@ -10,190 +9,212 @@
     <meta name="author" content="PioLinux">
     <meta name="robots" content="index,nofollow">
     <link rel="canonical" href="https://www.piolinux.com/script-bash.html" />
-  
-   <style>
-  * {
-    box-sizing: border-box;
-    font-family: 'Verdana', Geneva, sans-serif;
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    background: #121212;
-    color: #fdfdfd;
-    padding-top: 130px;
-  }
-
-  header {
-    background: #000;
-    color: #00ff88;
-    text-align: center;
-    padding: 20px;
-    font-size: 1.8rem;
-    font-weight: bold;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    border-bottom: 2px solid #00ff88;
-  }
-
-  nav {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    background: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    gap: 12px;
-    flex-wrap: wrap;
-    border-top: 4px solid #00ff88;
-    border-bottom: 4px solid #00ff88;
-  }
-
-  nav a {
-    background: #004d00;
-    color: #00ffff;
-    text-decoration: none;
-    padding: 8px 14px;
-    border-radius: 5px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-  }
-
-  nav a:hover {
-    background: #00ffcc;
-    color: #000;
-  }
-
-  section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #00ff88;
-  }
-
-  section h2 {
-    color: #00ff88;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-  }
-
-  section ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  section ul li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-  }
-
-  section ul li a {
-    color: #00bfff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  section ul li a:hover {
-    text-decoration: underline;
-    color: #00ffcc;
-  }
-
-  code {
-    background: #222;
-    padding: 2px 6px;
-    border-radius: 4px;
-    color: #00ff00;
-    font-weight: bold;
-  }
-
-  footer {
-    background: #000;
-    color: #ccc;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-  }
-
-  footer a {
-    color: #00ffff;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  footer a:hover {
-    text-decoration: underline;
-    color: #ffffff;
-  }
-
-  @media screen and (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: center;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Verdana', sans-serif;
     }
 
     body {
-      padding-top: 180px;
+      background-color: #121212;
+      color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
     }
-  }
-</style>
 
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      color: #00ff88;
+      padding: 10px 15px;
+      text-align: center;
+      z-index: 1000;
+      border-bottom: 2px solid #00ff88;
+    }
+
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 250px;
+      background-color: #1a1a1a;
+      border-right: 2px solid #00ff88;
+      padding: 10px;
+      overflow-y: auto;
+      height: calc(100vh - 60px);
+    }
+
+    .accordion-section {
+      margin-bottom: 10px;
+    }
+
+    .accordion-title {
+      background-color: #004d00;
+      color: #00ffff;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .accordion-content a {
+      display: block;
+      color: #00bfff;
+      padding: 5px 0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .accordion-content a:hover {
+      color: #00ffcc;
+      text-decoration: underline;
+    }
+
+    main {
+      margin-left: 250px;
+      padding: 80px 20px 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00ff88;
+    }
+
+    section h2 {
+      color: #00ff88;
+      margin-bottom: 15px;
+    }
+
+    section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    section li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    code {
+      background-color: #222;
+      color: #00ff00;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    footer {
+      background: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #00ffff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #00ff88;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      header {
+        position: static;
+      }
+    }
+  </style>
 </head>
-<body id="topo">
+<body>
 
-    <header>
-        Scripts Bash para Diversas Finalidades
-    </header>
-    
-    <nav>
-        <a href="index.html">Dicas</a>
-        <a href="distros.html">Distros</a>
-        <a href="#introducao">Introdução</a>
-        <a href="#automacao-diaria">Automação Diária</a>
-        <a href="#administracao-sistema">Administração de Sistema</a>
-        <a href="#seguranca-monitoramento">Segurança & Monitoramento</a>
-        <a href="#desenvolvimento-web">Desenvolvimento Web</a>
-        <a href="#utilidades-avancadas">Utilidades Avançadas</a>
-        <a href="index.html">Voltar a pagina</a>
-    </nav>
+  <header>
+  <h1>   Scripts Bash para Diversas Finalidades</h1>
+  </header>
 
+  <nav>
+    <div class="accordion-section">
+      <div class="accordion-title">😂 Inico</div>
+      <div class="accordion-content">
+		 <a href="index.html">Inicio</a>
+        <a href="piadas-linux-engraçadas.html">Piadas</a>
+       </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">💡 Dicas Técnicas</div>
+      <div class="accordion-content">
+        <a href="artigos-linux.html">Iniciante</a>
+       <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+        <a href="script-bash.html">Bash</a>
+      </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">📚 Artigos Técnicos</div>
+      <div class="accordion-content">
+         <a href="links.html">Acesse conteúdos essenciais</a>
+        <a href="#">Guia Terminal</a>
+        <a href="#">Problemas no boot</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+	  
     <section id="scripts-bash">
-        <h2>🚀 Scripts Bash para Diversas Finalidades</h2>
-        <p>Com o Bash, mais conhecido como terminal ou Bourne-Again Shell, está o mestre por trás dos comandos do terminal na maioria das distribuições Linux. Através do terminal, que é o interpretador de comando padrão, suas instruções são transformadas em ações reais dentro do sistema. Através do Bash, que não serve apenas para digitar comandos, é possível criar pequenos scripts. 
-Todas aquelas atividades repetitivas, como ligar o computador ou atualizar o sistema, podem ser automatizadas com scripts Bash para várias finalidades: organizar arquivos, atualizar sistemas, fazer backups, tudo de forma automática.
-Aprender a utilizar o Bash é uma oportunidade de aprender mais, e não é necessário ser um programador expert. Domine o terminal para tornar a rotina diária mais eficiente.
-Confira os exemplos de scripts básicos que podem ajudar em diversas finalidades. Eles são apenas um exemplo no vasto mundo dos scripts</p>
+  <h2>🚀 Scripts Bash para Diversas Finalidades</h2>
+  <p>O Bash, mais conhecido como terminal (Bourne-Again Shell), é o mestre por trás dos comandos nas distribuições Linux. Com ele, você pode automatizar tarefas repetitivas como organizar arquivos, atualizar o sistema, realizar backups e muito mais. Aprender Bash não exige ser um expert — basta curiosidade e prática. Abaixo, veja exemplos úteis de scripts para o dia a dia.</p>
 
-        <ul>
-            <li>
-                <h3 id="introducao">O Básico de um Script Bash</h3>
-                <p>Todo script Bash começa com um **shebang** (<code>#!/bin/bash</code>) na primeira linha, que indica ao sistema qual interpretador usar. Depois, vêm os comandos, que são executados sequencialmente.</p>
-                <p><strong>Exemplo: Olá Mundo!</strong></p>
-                <pre><code>#!/bin/bash
+  <ul>
+    <li></section>
+     
+     
+     <section><h3 id="introducao">1. O Básico de um Script Bash</h3>
+      <p>Todo script Bash começa com o <strong>shebang</strong> <code>#!/bin/bash</code>, que indica ao sistema qual interpretador usar.</p>
+      <p><strong>Exemplo: Olá Mundo!</strong></p>
+      <pre><code>#!/bin/bash
 # Este é um comentário
 echo "Olá, PioLinux! Este é o meu primeiro script Bash."</code></pre>
-                <p>Para executar, salve como <code>ola_mundo.sh</code>, dê permissão com <code>chmod +x ola_mundo.sh</code> e rode com <code>./ola_mundo.sh</code>.</p>
-            </li>
+      <p>Salve como <code>ola_mundo.sh</code>, dê permissão com <code>chmod +x ola_mundo.sh</code> e execute com <code>./ola_mundo.sh</code>.</p>
+    </li></section>
 
-            <li>
-                <h3 id="automacao-diaria">Automação de Tarefas Diárias</h3>
-                <p>Scripts podem transformar suas rotinas mais chatas em algo rápido e automático.</p>
-                <p><strong>1. Atualizar o Sistema Automaticamente:</strong></p>
-                <p>Um script para manter seu sistema atualizado, ótimo para agendar com **Cron**.</p>
-                <pre><code>#!/bin/bash
-# Script para atualizar e limpar o sistema (Debian/Ubuntu)
-
+   <section> <li>
+      <h3 id="automacao-diaria">2. Automação de Tarefas Diárias</h3>
+      <p><strong>Atualizar o Sistema Automaticamente:</strong></p>
+      <pre><code>#!/bin/bash
 echo "Atualizando listas de pacotes..."
 sudo apt update
 
@@ -206,214 +227,185 @@ sudo apt autoremove -y
 echo "Limpando o cache de pacotes..."
 sudo apt clean
 
-echo "Sistema atualizado e limpo!"</code></pre>
-                <p><strong>2. Backup Simples de Pastas Pessoais:</strong></p>
-                <p>Compacta seus documentos e imagens em um arquivo com a data atual.</p>
-                <pre><code>#!/bin/bash
-# Script para backup simples de diretórios pessoais
+echo "Sistema atualizado e limpo!"</code></pre></section> 
 
+     <section> <p><strong>Backup Simples de Pastas Pessoais:</strong></p>
+      <pre><code>#!/bin/bash
 DATA=$(date +%Y-%m-%d_%H-%M-%S)
 DIR_BACKUP="$HOME/Backups"
 PASTAS_A_COPIAR=("$HOME/Documentos" "$HOME/Imagens")
 NOME_ARQUIVO="backup_pessoal_$DATA.tar.gz"
 
 mkdir -p "$DIR_BACKUP"
-
 echo "Iniciando backup das pastas: ${PASTAS_A_COPIAR[@]}"
 tar -czvf "$DIR_BACKUP/$NOME_ARQUIVO" "${PASTAS_A_COPIAR[@]}"
 
 echo "Backup concluído! Arquivo: $DIR_BACKUP/$NOME_ARQUIVO"</code></pre>
-            </li>
-
-            <li>
-                <h3 id="administracao-sistema">Administração de Sistema</h3>
-                <p>Para administradores de sistema, Bash é uma ferramenta indispensável para gerenciar usuários, monitorar recursos e automatizar manutenções.</p>
-                <p><strong>3. Monitorar Uso de Disco e Enviar Alerta:</strong></p>
-                <p>Verifica o espaço livre em uma partição e envia um alerta se estiver abaixo de um limite.</p>
-                <pre><code>#!/bin/bash
-# Script para monitorar uso de disco e alertar
-
-LIMITE_PERCENTUAL=80 # Alerta se uso for acima de 80%
-PARTICAO="/dev/sda1" # Altere para sua partição (ex: /)
+    </li></section> 
+    
+  <section>  <li>
+      <h3 id="administracao-sistema">3. Administração de Sistema</h3>
+      <p><strong>Monitorar Uso de Disco e Enviar Alerta:</strong></p>
+      <pre><code>#!/bin/bash
+LIMITE_PERCENTUAL=80
+PARTICAO="/dev/sda1"
 EMAIL_ADMIN="seuemail@exemplo.com"
 
 USO=$(df -h "$PARTICAO" | awk 'NR==2 {print $5}' | sed 's/%//g')
 
 if (( USO > LIMITE_PERCENTUAL )); then
-    echo "ALERTA: Uso de disco na partição $PARTICAO está em $USO%!" | mail -s "Alerta de Disco - Servidor X" "$EMAIL_ADMIN"
-    echo "Alerta enviado para $EMAIL_ADMIN."
+    echo "ALERTA: Uso de disco na partição $PARTICAO está em $USO%!" | mail -s "Alerta de Disco" "$EMAIL_ADMIN"
 else
-    echo "Uso de disco em $PARTICAO está em $USO%. Nível normal."
+    echo "Uso de disco normal: $USO%"
 fi</code></pre>
-                <p><strong>4. Criar Múltiplos Usuários Rapidamente:</strong></p>
-                <p>Lê uma lista de nomes de um arquivo e cria usuários para cada um.</p>
-                <pre><code>#!/bin/bash
-# Script para criar usuários a partir de uma lista
 
+      <p><strong>Criar Múltiplos Usuários:</strong></p>
+      <pre><code>#!/bin/bash
 ARQUIVO_USUARIOS="lista_usuarios.txt"
 
 if [ ! -f "$ARQUIVO_USUARIOS" ]; then
-    echo "Erro: Arquivo $ARQUIVO_USUARIOS não encontrado."
-    echo "Crie um arquivo com um nome de usuário por linha."
+    echo "Arquivo $ARQUIVO_USUARIOS não encontrado."
     exit 1
 fi
 
 while IFS= read -r USUARIO; do
-    if [ -n "$USUARIO" ]; then # Garante que a linha não está vazia
+    if [ -n "$USUARIO" ]; then
         echo "Criando usuário: $USUARIO"
         sudo useradd -m "$USUARIO"
-        echo "$USUARIO criado. Por favor, defina a senha para $USUARIO:"
         sudo passwd "$USUARIO"
     fi
 done < "$ARQUIVO_USUARIOS"
 
-echo "Processo de criação de usuários concluído."</code></pre>
-                <p>Exemplo de <code>lista_usuarios.txt</code>:</p>
-                <pre><code>joao
+echo "Usuários criados com sucesso."</code></pre>
+      <p>Conteúdo de <code>lista_usuarios.txt</code>:</p>
+      <pre><code>joao
 maria
 pedro
 ana</code></pre>
-            </li>
+    </li></section>
 
-            <li>
-                <h3 id="seguranca-monitoramento">Segurança e Monitoramento</h3>
-                <p>Scripts Bash também são cruciais para manter a segurança do seu sistema e monitorar atividades.</p>
-                <p><strong>5. Verificar Portas Abertas e Serviços:</strong></p>
-                <p>Lista as portas abertas no sistema e os serviços associados, útil para auditoria de segurança.</p>
-                <pre><code>#!/bin/bash
-# Script para listar portas abertas e serviços
-
-echo "Listando portas TCP/UDP abertas e os processos associados:"
-echo "---------------------------------------------------------"
+  <section>  <li>
+      <h3 id="seguranca-monitoramento">4. Segurança e Monitoramento</h3>
+      <p><strong>Verificar Portas Abertas:</strong></p>
+      <pre><code>#!/bin/bash
+echo "Listando portas abertas:"
 sudo netstat -tulpn
 
-echo -e "\nVerificando o status do firewall (UFW):"
-echo "-------------------------------------"
-sudo ufw status
+echo -e "\nStatus do firewall (UFW):"
+sudo ufw status</code></pre>
 
-echo -e "\nProcesso de verificação de portas concluído."</code></pre>
-                <p><strong>6. Monitorar Tentativas de Login Falhas (SSH):</strong></p>
-                <p>Analisa logs do SSH para detectar tentativas de login falhas e IPs suspeitos.</p>
-                <pre><code>#!/bin/bash
-# Script para monitorar tentativas de login SSH falhas
+      <p><strong>Monitorar Tentativas de Login SSH:</strong></p>
+      <pre><code>#!/bin/bash
+ARQUIVO_LOG="/var/log/auth.log"
 
-ARQUIVO_LOG="/var/log/auth.log" # Para Debian/Ubuntu
-# ARQUIVO_LOG="/var/log/secure" # Para CentOS/Fedora
-
-echo "Monitorando tentativas de login SSH falhas nas últimas 24 horas:"
-echo "-------------------------------------------------------------"
-
-# Filtra o log por falhas de autenticação SSH nas últimas 24 horas
-grep "Failed password" "$ARQUIVO_LOG" | tail -n 50 | awk '{print $11}' | sort | uniq -c | sort -nr
-
-echo -e "\nObservação: Os IPs listados são as origens das tentativas falhas."</code></pre>
-            </li>
-
-            <li>
-                <h3 id="desenvolvimento-web">Scripts para Desenvolvimento Web</h3>
-                <p>Devs podem usar Bash para automatizar tarefas de build, deploy e gerenciamento de ambientes.</p>
-                <p><strong>7. Servidor HTTP Local Rápido:</strong></p>
-                <p>Inicia um servidor web Python temporário na porta 8000 para testar seus projetos HTML/CSS/JS.</p>
-                <pre><code>#!/bin/bash
-# Script para iniciar um servidor HTTP local
-
+echo "Tentativas de login SSH falhas:"
+grep "Failed password" "$ARQUIVO_LOG" | tail -n 50 | awk '{print $11}' | sort | uniq -c | sort -nr</code></pre>
+    </li></section>
+   
+   <section> <li>
+      <h3 id="desenvolvimento-web">5. Scripts para Desenvolvimento Web</h3>
+      <p><strong>Servidor HTTP Local com Python:</strong></p>
+      <pre><code>#!/bin/bash
 PORTA=8000
-
-echo "Iniciando servidor HTTP em http://localhost:$PORTA"
-echo "Pressione Ctrl+C para parar o servidor."
-
+echo "Servidor em http://localhost:$PORTA"
 python3 -m http.server $PORTA</code></pre>
-                <p><strong>8. Deploy Simples via Rsync/SSH:</strong></p>
-                <p>Sincroniza seus arquivos de projeto local com um servidor remoto via SSH, ideal para deploy simples.</p>
-                <pre><code>#!/bin/bash
-# Script para deploy simples de projeto web via rsync/SSH
 
-DIR_LOCAL="./public_html/" # Seu diretório de projeto local
-USUARIO_REMOTO="usuario_ssh"
-IP_SERVIDOR="seu.servidor.com"
-DIR_REMOTO="/var/www/html/meu_site/" # Diretório no servidor remoto
-
-echo "Sincronizando arquivos de $DIR_LOCAL para $USUARIO_REMOTO@$IP_SERVIDOR:$DIR_REMOTO"
+      <p><strong>Deploy Simples via Rsync/SSH:</strong></p>
+      <pre><code>#!/bin/bash
+DIR_LOCAL="./public_html/"
+USUARIO_REMOTO="usuario"
+IP_SERVIDOR="192.168.0.1"
+DIR_REMOTO="/var/www/html/"
 
 rsync -avz --delete "$DIR_LOCAL" "$USUARIO_REMOTO@$IP_SERVIDOR:$DIR_REMOTO"
 
 if [ $? -eq 0 ]; then
     echo "Deploy realizado com sucesso!"
 else
-    echo "Erro no deploy. Verifique as configurações e conectividade."
+    echo "Erro no deploy."
 fi</code></pre>
-            </li>
+    </li></section>
 
-            <li>
-                <h3 id="utilidades-avancadas">Utilidades e Truques Avançados</h3>
-                <p>Explore o poder do Bash com variáveis, condicionais e laços para scripts mais inteligentes.</p>
-                <p><strong>9. Calculadora de Linha de Comando:</strong></p>
-                <p>Um script simples que aceita uma expressão matemática e a calcula usando `bc`.</p>
-                <pre><code>#!/bin/bash
-# Script de calculadora simples
-
+   <section> <li>
+      <h3 id="utilidades-avancadas">6. Utilidades e Truques Avançados</h3>
+      <p><strong>Calculadora via Terminal:</strong></p>
+      <pre><code>#!/bin/bash
 if [ -z "$1" ]; then
-    echo "Uso: ./calculadora.sh &quot;expressao_matematica&quot;"
-    echo "Exemplo: ./calculadora.sh \"10 + 5 * 2 / 3\""
+    echo "Uso: ./calculadora.sh \"10 + 5 * 2\""
     exit 1
 fi
 
 RESULTADO=$(echo "scale=2; $1" | bc -l)
 echo "Resultado: $RESULTADO"</code></pre>
-                <p><strong>10. Criar Álbum de Fotos HTML Simples:</strong></p>
-                <p>Gera um arquivo HTML com miniaturas de imagens em um diretório.</p>
-                <pre><code>#!/bin/bash
-# Script para criar um álbum de fotos HTML simples
 
-DIR_FOTOS="./minhas_fotos/"
-ARQUIVO_HTML="album_fotos.html"
+      <p><strong>Gerar Álbum de Fotos HTML:</strong></p>
+      <pre><code>#!/bin/bash
+DIR_FOTOS="./fotos"
+ARQUIVO_HTML="album.html"
 
-echo "&lt;!DOCTYPE html&gt;" > "$ARQUIVO_HTML"
-echo "&lt;html&gt;&lt;head&gt;&lt;title&gt;Meu Álbum de Fotos&lt;/title&gt;&lt;/head&gt;&lt;body&gt;" >> "$ARQUIVO_HTML"
-echo "&lt;h1&gt;Minhas Fotos&lt;/h1&gt;" >> "$ARQUIVO_HTML"
+echo "<!DOCTYPE html>" > "$ARQUIVO_HTML"
+echo "<html><head><title>Álbum</title></head><body>" >> "$ARQUIVO_HTML"
+echo "<h1>Minhas Fotos</h1>" >> "$ARQUIVO_HTML"
 
 for FOTO in "$DIR_FOTOS"/*.{jpg,png,gif}; do
     if [ -f "$FOTO" ]; then
-        NOME_FOTO=$(basename "$FOTO")
-        echo "&lt;p&gt;&lt;img src=\"$FOTO\" width=\"300\" alt=\"$NOME_FOTO\"&gt;&lt;br&gt;$NOME_FOTO&lt;/p&gt;" >> "$ARQUIVO_HTML"
+        NOME=$(basename "$FOTO")
+        echo "<p><img src=\"$FOTO\" width=\"300\" alt=\"$NOME\"><br>$NOME</p>" >> "$ARQUIVO_HTML"
     fi
 done
 
-echo "&lt;/body&gt;&lt;/html&gt;" >> "$ARQUIVO_HTML"
+echo "</body></html>" >> "$ARQUIVO_HTML"
+echo "Álbum gerado em $ARQUIVO_HTML"</code></pre>
+    </li>
+  </ul></section>
 
-echo "Álbum de fotos gerado em $ARQUIVO_HTML"
-echo "Verifique as imagens para o caminho correto caso não apareçam."</code></pre>
-            </li>
-        </ul>
+ <section><p>Esses scripts são apenas o começo. Com Bash, você pode criar ferramentas personalizadas, automatizar rotinas e entender melhor como o Linux funciona. Experimente, edite, e adapte conforme suas necessidades!</p></section>
 
-        <p>Estes são apenas alguns exemplos do que você pode fazer com scripts Bash. A chave é começar com tarefas simples, entender os comandos básicos e, gradualmente, adicionar mais lógica e complexidade. O terminal é um playground vasto e poderoso!</p>
-    </section>
+
+<!-- Botões de compartilhamento -->
 <div id="share" style="text-align:center;margin:15px 0"></div>
 <script async defer>
 (() => {
-  const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
-  const d=[
-    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
-    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
-    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-  ],e=document.getElementById("share");
-  d.forEach(([n,c,l])=>{
-    let a=document.createElement("a");
-    a.href=l;a.target="_blank";a.rel="noopener";
-    a.textContent=n;
-    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+  const u = encodeURIComponent(location.href), t = encodeURIComponent(document.title);
+  const d = [
+    ["Reddit", "#ff4500", `https://www.reddit.com/submit?url=${u}&title=${t}`],
+    ["Twitter", "#1da1f2", `https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+    ["WhatsApp", "#25d366", `https://api.whatsapp.com/send?text=${t}%20${u}`],
+    ["LinkedIn", "#0077b5", `https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+  ];
+  const e = document.getElementById("share");
+  d.forEach(([n, c, l]) => {
+    const a = document.createElement("a");
+    a.href = l;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = n;
+    a.style = `background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
     e.appendChild(a);
   });
 })();
 </script>
 
-    <footer>
-  Site criado com muito terminal e memes! Acesse:
-  <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
-  <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
-  <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
-</footer>
 
+    
+  </main>
+
+  <footer>
+    Site criado com muito terminal e memes! Acesse:
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Termos de Uso</a>
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll(".accordion-title");
+    accordions.forEach((item) => {
+      item.addEventListener("click", () => {
+        const content = item.nextElementSibling;
+        const isVisible = content.style.display === "block";
+        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+        content.style.display = isVisible ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>

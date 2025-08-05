@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  
   <title>Como remover programas no Linux: Passo a passo para iniciantes</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,242 +10,200 @@
   <meta name="robots" content="index,nofollow">
   <link rel="canonical" href="https://piolinux.com/como-remover-programas-no-linux.html" />
 
-<style>
+  
+  <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Verdana', Geneva, sans-serif;
-       font-size: 14px;
+      box-sizing: border-box;
+      font-family: 'Verdana', sans-serif;
     }
 
     body {
-     background: #1a1a1a;
-      color: #f0f0f0;
-      padding-top: 130px;
-    }
-
-    header, footer {
-      background: #000;
-      text-align: center;
-      padding: 20px;
-      font-weight: bold;
+      background-color: #121212;
+      color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
     }
 
     header {
-      color: #00ff88;
-      font-size: 1.8rem;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
+      background: #000;
+      color: #00ff88;
+      padding: 10px 15px;
+      text-align: center;
       z-index: 1000;
       border-bottom: 2px solid #00ff88;
     }
 
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
     nav {
       position: fixed;
-      top: 70px;
+      top: 60px;
       left: 0;
-      width: 100%;
-      background-color: #111;
-      z-index: 999;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 12px 10px;
-      border-top: 4px solid #00ff88;
-      border-bottom: 3px solid #00ff88;
+      width: 250px;
+      background-color: #1a1a1a;
+      border-right: 2px solid #00ff88;
+      padding: 10px;
+      overflow-y: auto;
+      height: calc(100vh - 60px);
     }
 
-    nav a, footer a {
-      background: #006400;
-      color: #00ccff;
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: 0.3s ease-in-out;
-    }
-
-    nav a:hover, footer a:hover {
-      background-color: #00ccff;
-      color: #000;
-      text-decoration: underline;
-    }
-
-    article, section {
-      max-width: 900px;
-      margin: 0 auto 40px auto;
-      padding: 20px;
-      background-color: #1e1e1e;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00ff88;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      color: #00ff88;
-    }
-
-    h2 {
-      color: #00ff88;
-      margin: 30px 0 15px;
-      font-size: 1.5rem;
-    }
-
-    p {
-      margin-bottom: 16px;
-    }
-
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-      margin-bottom: 16px;
-    }
-
-    li {
+    .accordion-section {
       margin-bottom: 10px;
     }
 
-    li a {
-      color: #00ccff;
-      text-decoration: none;
+    .accordion-title {
+      background-color: #004d00;
+      color: #00ffff;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
     }
 
-    li a:hover {
+    .accordion-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .accordion-content a {
+      display: block;
+      color: #00bfff;
+      padding: 5px 0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .accordion-content a:hover {
+      color: #00ffcc;
       text-decoration: underline;
     }
 
-    code, pre {
-      background-color: #1f1f1f;
-      color: #00ff00;
-      padding: 4px 6px;
-      border-radius: 4px;
-      font-weight: bold;
-      font-family: monospace;
-      display: inline-block;
-      margin: 4px 0;
+    main {
+      margin-left: 250px;
+      padding: 80px 20px 20px;
+      width: 100%;
+      max-width: 900px;
     }
 
-    blockquote {
-      border-left: 4px solid #00ff88;
-      padding-left: 12px;
-      margin: 16px 0;
-      color: #ccc;
-      font-style: italic;
-    }
-
-    .author-box {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-top: 40px;
-      padding: 15px;
-      background: #222;
+    section {
+      margin-bottom: 40px;
+      background: #1a1a1a;
+      padding: 20px;
       border-radius: 8px;
+      box-shadow: 0 0 10px #00ff88;
     }
 
-    .author-box img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 2px solid #00ff88;
-    }
-
-    .faq dt {
-      font-weight: bold;
+    section h2 {
       color: #00ff88;
-      margin-top: 10px;
-    }
-
-    .faq dd {
       margin-bottom: 15px;
     }
 
-    #share {
-      text-align: center;
-      margin: 25px auto;
+    section ul {
+      list-style: none;
+      padding-left: 0;
     }
 
-    #share a {
-      margin: 0 5px;
-      display: inline-block;
-      font-size: 13px;
+    section li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    code {
+      background-color: #222;
+      color: #00ff00;
+      padding: 2px 6px;
+      border-radius: 4px;
     }
 
     footer {
-      color: #aaa;
-      padding: 20px 10px;
-      font-size: 14px;
+      background: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
 
     footer a {
-      color: #00ccff;
+      color: #00ffff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
 
     @media screen and (max-width: 768px) {
       nav {
-        flex-direction: column;
-        align-items: center;
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #00ff88;
       }
 
-      .author-box {
-        flex-direction: column;
-        align-items: flex-start;
+      main {
+        margin-left: 0;
+        padding: 20px;
       }
 
-      body {
-        padding-top: 190px;
+      header {
+        position: static;
       }
     }
   </style>
 </head>
-
-</head>
-
-<body id="topo">
+<body>
 
   <header>
-    Aprenda como remover programas no Linux com segurança e facilidade
+  <h1>  Aprenda como remover programas no Linux com segurança e facilidade</h1>
   </header>
 
   <nav>
-    <a href="artigos-linux.html">Início Artigos</a>
-    <a href="script-bash.html">Scripts</a>
-    <a href="distros-de-linux.html">Distros</a>
-     <a href="index.html">Voltar a pagina</a>
+    <div class="accordion-section">
+      <div class="accordion-title">😂 Inico</div>
+      <div class="accordion-content">
+		 <a href="index.html">Inicio</a>
+        <a href="piadas-linux-engraçadas.html">Piadas</a>
+       </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">💡 Dicas Técnicas</div>
+      <div class="accordion-content">
+        <a href="artigos-linux.html">Iniciante</a>
+       <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+        <a href="script-bash.html">Bash</a>
+      </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">📚 Artigos Técnicos</div>
+      <div class="accordion-content">
+         <a href="links.html">Acesse conteúdos essenciais</a>
+        <a href="#">Guia Terminal</a>
+        <a href="#">Problemas no boot</a>
+      </div>
+    </div>
   </nav>
-<div id="share" style="text-align:center;margin:15px 0"></div>
-<script async defer>
-(() => {
-  const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
-  const d=[
-    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
-    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
-    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-  ],e=document.getElementById("share");
-  d.forEach(([n,c,l])=>{
-    let a=document.createElement("a");
-    a.href=l;a.target="_blank";a.rel="noopener";
-    a.textContent=n;
-    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
-    e.appendChild(a);
-  });
-})();
-</script>
-
+  
   <main>
-    <article>
-      <h1>Como remover programas no Linux: Passo a passo para iniciantes</h1>
-
+  <article>
+    <section>
+      <h2>Como remover programas no Linux: Passo a passo para iniciantes</h2>
       <p>Está começando no mundo open-source de Linux e não sabe como desinstalar programas através do terminal? Remover aplicativos desnecessários é fundamental para manter seu sistema limpo e eficiente.</p>
-
       <p>Acompanhe este guia para aprender a remover programas no Linux, usando o terminal ou modo gráfico. Veja abaixo como fazer isso corretamente.</p>
+    </section>
 
+    <section>
       <h2>Métodos para remover programas</h2>
       <ul>
         <li>Remoção via terminal com gerenciadores de pacotes</li>
@@ -252,7 +211,9 @@
         <li>Remoção de pacotes Snap e Flatpak</li>
         <li>Dicas para limpar dependências órfãs</li>
       </ul>
+    </section>
 
+    <section>
       <h2>Remover programas pelo terminal</h2>
 
       <h3>APT (Ubuntu, Debian e derivados)</h3>
@@ -265,7 +226,9 @@
       <h3>PACMAN (Arch Linux e derivados)</h3>
       <blockquote><code>sudo pacman -R nome-do-programa</code></blockquote>
       <blockquote><code>sudo pacman -Rns nome-do-programa</code></blockquote>
+    </section>
 
+    <section>
       <h2>Remover programas via Central de Aplicativos</h2>
       <p>Se você prefere não usar o terminal, pode desinstalar programas pela Central de Aplicativos:</p>
       <ul>
@@ -273,48 +236,67 @@
         <li>Procure o programa instalado</li>
         <li>Clique em "Remover" ou "Desinstalar"</li>
       </ul>
+    </section>
 
+    <section>
       <h2>Remover pacotes Snap e Flatpak</h2>
       <ul>
         <li><strong>Snap:</strong> <code>sudo snap remove nome-do-app</code></li>
         <li><strong>Flatpak:</strong> <code>flatpak uninstall nome-do-app</code></li>
       </ul>
+    </section>
 
+    <section>
       <h2>Dica extra: limpar pacotes desnecessários</h2>
       <blockquote><code>sudo apt autoremove</code></blockquote>
       <blockquote><code>sudo dnf autoremove</code></blockquote>
+    </section>
 
+    <section>
       <h2>Conclusão</h2>
       <p>Remover programas no Linux é simples e rápido quando você entende os comandos básicos ou usa ferramentas gráficas. Manter o sistema limpo melhora o desempenho e economiza espaço em disco.</p>
-    </article>
-
-    <section class="author-box">
-      <img src="https://example.com/foto-autor.jpg" alt="Foto do autor" />
-      <div>
-        <p><strong>Piolinux</strong> é escritor de tecnologia com foco em Linux, apaixonado por simplificar o mundo open source para iniciantes.</p>
-      </div>
     </section>
+  </article>
 
-    <section class="faq">
-      <h2>FAQ - Perguntas frequentes</h2>
-      <dl>
-        <dt>É seguro remover programas pelo terminal?</dt>
-        <dd>Sim, desde que você saiba o nome correto do programa e use os comandos adequados.</dd>
+ <section> <aside>
+    <img src="https://example.com/foto-autor.jpg" alt="Foto do autor" />
+    <div>
+      <p><strong>Piolinux</strong> é escritor de tecnologia com foco em Linux, apaixonado por simplificar o mundo open source para iniciantes.</p>
+    </div>
+  </aside></section>
 
-        <dt>Como saber quais programas posso remover?</dt>
-        <dd>Você pode usar <code>apt list --installed</code> ou acessar a Central de Aplicativos para ver o que está instalado.</dd>
+  <section>
+    <h2>FAQ - Perguntas frequentes</h2>
+    <dl>
+      <dt>É seguro remover programas pelo terminal?</dt>
+      <dd>Sim, desde que você saiba o nome correto do programa e use os comandos adequados.</dd>
 
-        <dt>O que são arquivos órfãos?</dt>
-        <dd>São dependências que foram instaladas com outros programas e não são mais usadas. Podem ser removidas com o comando <code>autoremove</code>.</dd>
-      </dl>
-    </section>
-  </main>
+      <dt>Como saber quais programas posso remover?</dt>
+      <dd>Você pode usar <code>apt list --installed</code> ou acessar a Central de Aplicativos para ver o que está instalado.</dd>
 
+      <dt>O que são arquivos órfãos?</dt>
+      <dd>São dependências que foram instaladas com outros programas e não são mais usadas. Podem ser removidas com o comando <code>autoremove</code>.</dd>
+    </dl>
+  </section>
+</main>
+
+  
   <footer>
-  Site criado com muito terminal e memes! Acesse:
-  <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
-  <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
-  <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
-</footer>
+    Site criado com muito terminal e memes! Acesse:
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Termos de Uso</a>
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll(".accordion-title");
+    accordions.forEach((item) => {
+      item.addEventListener("click", () => {
+        const content = item.nextElementSibling;
+        const isVisible = content.style.display === "block";
+        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+        content.style.display = isVisible ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>

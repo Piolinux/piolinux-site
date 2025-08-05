@@ -10,116 +10,123 @@
   <link rel="canonical" href="https://www.piolinux.com/scripts-de-seguranca.html">
   <style>
     * {
-      box-sizing: border-box;
-      font-family: 'Verdana', Geneva, sans-serif;
-      font-size: 15px;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: 'Verdana', sans-serif;
     }
 
     body {
-      background: #121212;
-      color: #e0e0e0;
-      padding-top: 140px;
+      background-color: #121212;
+      color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
     }
 
     header {
-      background: #000;
-      color: #00ff88;
-      text-align: center;
-      padding: 20px;
-      font-size: 1.9rem;
-      font-weight: bold;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
+      background: #000;
+      color: #00ff88;
+      padding: 10px 15px;
+      text-align: center;
       z-index: 1000;
       border-bottom: 2px solid #00ff88;
     }
 
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
     nav {
       position: fixed;
-      top: 70px;
+      top: 60px;
       left: 0;
-      width: 100%;
-      z-index: 999;
-      background: #1f1f1f;
-      display: flex;
-      justify-content: center;
+      width: 250px;
+      background-color: #1a1a1a;
+      border-right: 2px solid #00ff88;
       padding: 10px;
-      gap: 12px;
-      flex-wrap: wrap;
-      border-top: 4px solid #00ff88;
-      border-bottom: 4px solid #00ff88;
+      overflow-y: auto;
+      height: calc(100vh - 60px);
     }
 
-    nav a {
-      background: #004d00;
+    .accordion-section {
+      margin-bottom: 10px;
+    }
+
+    .accordion-title {
+      background-color: #004d00;
       color: #00ffff;
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 6px;
-      font-weight: bold;
-      border: none;
+      padding: 10px;
       cursor: pointer;
-      transition: background 0.3s, color 0.3s;
+      font-weight: bold;
+      border-radius: 4px;
     }
 
-    nav a:hover {
-      background: #00ffcc;
-      color: #000;
+    .accordion-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .accordion-content a {
+      display: block;
+      color: #00bfff;
+      padding: 5px 0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .accordion-content a:hover {
+      color: #00ffcc;
+      text-decoration: underline;
     }
 
     main {
-      max-width: 920px;
-      margin: 30px auto;
-      padding: 25px;
+      margin-left: 250px;
+      padding: 80px 20px 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    section {
+      margin-bottom: 40px;
       background: #1a1a1a;
-      border-radius: 10px;
-      box-shadow: 0 0 15px #00ff88;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00ff88;
     }
 
-    main h2 {
+    section h2 {
       color: #00ff88;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-      border-bottom: 1px solid #00ff88;
-      padding-bottom: 5px;
-    }
-
-    .copy {
-      background: #006400;
-      color: #ffffff;
-      border: none;
-      border-radius: 4px;
-      padding: 6px 12px;
-      margin-bottom: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .copy:hover {
-      background: #00cc66;
+      margin-bottom: 15px;
     }
 
     pre {
       background: #222;
-      color: #00ffcc;
-      padding: 12px;
+      color: #00ff00;
+      padding: 10px;
       border-radius: 6px;
+      margin-top: 10px;
       overflow-x: auto;
-      margin-bottom: 20px;
     }
 
-    code {
-      background: #222;
-      padding: 2px 6px;
+    .copy {
+      margin-top: 10px;
+      background-color: #00ff88;
+      color: #000;
+      padding: 6px 12px;
+      border: none;
       border-radius: 4px;
-      color: #00ff00;
+      cursor: pointer;
       font-weight: bold;
+    }
+
+    .copy:hover {
+      background-color: #00cc77;
     }
 
     footer {
@@ -127,7 +134,7 @@
       color: #ccc;
       text-align: center;
       padding: 20px;
-      margin-top: 50px;
+      margin-top: 40px;
     }
 
     footer a {
@@ -138,138 +145,154 @@
 
     footer a:hover {
       text-decoration: underline;
-      color: #ffffff;
-    }
-
-    .back {
-      text-align: center;
-      margin: 20px auto;
-    }
-
-    .back a {
-      color: #00bfff;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .back a:hover {
-      text-decoration: underline;
-      color: #00ffcc;
     }
 
     @media screen and (max-width: 768px) {
       nav {
-        flex-direction: column;
-        align-items: center;
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #00ff88;
       }
 
-      body {
-        padding-top: 180px;
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      header {
+        position: static;
       }
     }
   </style>
-
 </head>
-<body id="topo">
+<body>
 
-  <header>🛡️ Scripts de Segurança para Linux</header>
-
-  <div id="share" style="text-align:center;margin:15px 0"></div>
-  <script async defer>
-    (() => {
-      const u = encodeURIComponent(location.href), t = encodeURIComponent(document.title);
-      const d = [
-        ["Reddit", "#ff4500", `https://www.reddit.com/submit?url=${u}&title=${t}`],
-        ["Twitter", "#1da1f2", `https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-        ["WhatsApp", "#25d366", `https://api.whatsapp.com/send?text=${t}%20${u}`],
-        ["LinkedIn", "#0077b5", `https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-      ], e = document.getElementById("share");
-      d.forEach(([n, c, l]) => {
-        let a = document.createElement("a");
-        a.href = l; a.target = "_blank"; a.rel = "noopener";
-        a.textContent = n;
-        a.style = `background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
-        e.appendChild(a);
-      });
-    })();
-  </script>
+  <header>
+    <h1>Scripts de Segurança para Linux</h1>
+  </header>
 
   <nav>
-  <a href="index.html">home</a>
-  <a href="piadas-linux-engracadas.html">Piadas</a>
-  <a href="artigos-linux.html">Iniciante</a>
-  <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
-  <a href="script-bash.html">Bash</a>
-  <a href="links.html">Conteúdos Úteis</a>
-</nav>
+    <div class="accordion-section">
+      <div class="accordion-title">😂 Inico</div>
+      <div class="accordion-content">
+		 <a href="index.html">Inicio</a>
+        <a href="piadas-linux-engraçadas.html">Piadas</a>
+       </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">💡 Dicas Técnicas</div>
+      <div class="accordion-content">
+        <a href="artigos-linux.html">Iniciante</a>
+        <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+        <a href="script-bash.html">Bash</a>
+      </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">📚 Artigos Técnicos</div>
+      <div class="accordion-content">
+        <a href="links.html">Acesse conteúdos essenciais</a>
+        <a href="#">Guia Terminal</a>
+        <a href="#">Problemas no boot</a>
+      </div>
+    </div>
+  </nav>
+
   <main>
-    <h2>Firewall básico com UFW</h2>
-    <button class="copy">Copiar</button>
-    <pre>sudo ufw default deny incoming
+    <section>
+      <h2>Firewall básico com UFW</h2>
+      <button class="copy">Copiar</button>
+      <pre>sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow ssh
 sudo ufw enable</pre>
+    </section>
 
-    <h2>Bloqueio de IPs maliciosos</h2>
-    <button class="copy">Copiar</button>
-    <pre>sudo ufw deny from 192.168.0.123</pre>
+    <section>
+      <h2>Bloqueio de IPs maliciosos</h2>
+      <button class="copy">Copiar</button>
+      <pre>sudo ufw deny from 192.168.0.123</pre>
+    </section>
 
-    <h2>Script de escaneamento com Nmap</h2>
-    <button class="copy">Copiar</button>
-    <pre>#!/bin/bash
+    <section>
+      <h2>Script de escaneamento com Nmap</h2>
+      <button class="copy">Copiar</button>
+      <pre>#!/bin/bash
 read -p "Digite o IP ou host: " target
 nmap -A -T4 $target</pre>
+    </section>
 
-    <h2>Verificação de rootkits com chkrootkit</h2>
-    <button class="copy">Copiar</button>
-    <pre>sudo apt install chkrootkit
+    <section>
+      <h2>Verificação de rootkits com chkrootkit</h2>
+      <button class="copy">Copiar</button>
+      <pre>sudo apt install chkrootkit
 sudo chkrootkit</pre>
+    </section>
 
-    <h2>Conexão SSH automatizada</h2>
-    <button class="copy">Copiar</button>
-    <pre>sshpass -p 'senha' ssh usuario@ip -p 22</pre>
+    <section>
+      <h2>Conexão SSH automatizada</h2>
+      <button class="copy">Copiar</button>
+      <pre>sshpass -p 'senha' ssh usuario@ip -p 22</pre>
+    </section>
 
-    <h2>Gerador de senhas fortes (Shell)</h2>
-    <button class="copy">Copiar</button>
-    <pre>openssl rand -hex 16
+    <section>
+      <h2>Gerador de senhas fortes (Shell)</h2>
+      <button class="copy">Copiar</button>
+      <pre>openssl rand -hex 16
 openssl rand -hex 64</pre>
+    </section>
 
-    <h2>Verificador de integridade de arquivos</h2>
-    <button class="copy">Copiar</button>
-    <pre>sha256sum arquivo.txt > hash.txt
+    <section>
+      <h2>Verificador de integridade de arquivos</h2>
+      <button class="copy">Copiar</button>
+      <pre>sha256sum arquivo.txt > hash.txt
 sha256sum -c hash.txt</pre>
+    </section>
 
-    <h2>Configuração de fail2ban</h2>
-    <button class="copy">Copiar</button>
-    <pre>sudo apt install fail2ban
+    <section>
+      <h2>Configuração de fail2ban</h2>
+      <button class="copy">Copiar</button>
+      <pre>sudo apt install fail2ban
 sudo systemctl enable fail2ban
 sudo systemctl start fail2ban</pre>
+    </section>
 
-    <h2>Monitoramento de tráfego com iftop</h2>
-    <button class="copy">Copiar</button>
-    <pre>sudo apt install iftop
+    <section>
+      <h2>Monitoramento de tráfego com iftop</h2>
+      <button class="copy">Copiar</button>
+      <pre>sudo apt install iftop
 sudo iftop -i eth0</pre>
+    </section>
   </main>
+
+  <footer>
+    Site criado com muito terminal e memes! Acesse:
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Termos de Uso</a>
+  </footer>
 
   <script>
     document.querySelectorAll(".copy").forEach(btn => {
       btn.addEventListener("click", () => {
-        const code = btn.nextElementSibling.textContent;
+        const code = btn.nextElementSibling.innerText;
         navigator.clipboard.writeText(code).then(() => {
           btn.textContent = "Copiado!";
           setTimeout(() => btn.textContent = "Copiar", 2000);
         });
       });
     });
+
+    const accordions = document.querySelectorAll(".accordion-title");
+    accordions.forEach(item => {
+      item.addEventListener("click", () => {
+        const content = item.nextElementSibling;
+        const isVisible = content.style.display === "block";
+        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+        content.style.display = isVisible ? "none" : "block";
+      });
+    });
   </script>
 
-  <footer>
-    Site criado com muito terminal e memes! Acesse:
-    <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
-    <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
-    <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
-  </footer>
-
-  <p class="back"><a href="links.html">← Voltar para Links</a></p>
 </body>
 </html>

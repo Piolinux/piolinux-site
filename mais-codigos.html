@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mais Códigos - PioLinux</title>
@@ -8,118 +9,119 @@
   <meta name="keywords" content="linux, comandos, scripts, html, python, piolinux, terminal" />
   <meta name="robots" content="index,nofollow" />
   <link rel="canonical" href="https://piolinux.com/mais-codigos.html" />
-
+  
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Verdana', Geneva, sans-serif;
-      font-size: 14px;
+      box-sizing: border-box;
+      font-family: 'Verdana', sans-serif;
     }
 
     body {
-      background: #121212;
-      color: #e0e0e0;
-      padding-top: 140px;
+      background-color: #121212;
+      color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
     }
 
     header {
-      background: #000;
-      color: #00ff88;
-      text-align: center;
-      padding: 20px;
-      font-size: 1.8rem;
-      font-weight: bold;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
+      background: #000;
+      color: #00ff88;
+      padding: 10px 15px;
+      text-align: center;
       z-index: 1000;
       border-bottom: 2px solid #00ff88;
     }
 
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
     nav {
       position: fixed;
-      top: 70px;
+      top: 60px;
       left: 0;
-      width: 100%;
-      background: #1a1a1a;
-      z-index: 999;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
+      width: 250px;
+      background-color: #1a1a1a;
+      border-right: 2px solid #00ff88;
       padding: 10px;
-      border-top: 3px solid #00ff88;
-      border-bottom: 3px solid #00ff88;
+      overflow-y: auto;
+      height: calc(100vh - 60px);
     }
 
-    nav a {
-      background: #003300;
-      color: #00ccff;
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 5px;
+    .accordion-section {
+      margin-bottom: 10px;
+    }
+
+    .accordion-title {
+      background-color: #004d00;
+      color: #00ffff;
+      padding: 10px;
+      cursor: pointer;
       font-weight: bold;
-      transition: background 0.3s, color 0.3s;
+      border-radius: 4px;
     }
 
-    nav a:hover {
-      background-color: #00ccff;
-      color: #000;
+    .accordion-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .accordion-content a {
+      display: block;
+      color: #00bfff;
+      padding: 5px 0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .accordion-content a:hover {
+      color: #00ffcc;
+      text-decoration: underline;
     }
 
     main {
+      margin-left: 250px;
+      padding: 80px 20px 20px;
+      width: 100%;
       max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
     }
 
-    h2 {
-      color: #00ff88;
-      font-size: 1.6rem;
-      margin-bottom: 20px;
-    }
-
-    .code-block {
-      background-color: #1e1e1e;
-      border-left: 4px solid #00ff88;
+    section {
+      margin-bottom: 40px;
+      background: #1a1a1a;
       padding: 20px;
-      margin: 30px 0;
       border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0, 255, 136, 0.3);
+      box-shadow: 0 0 10px #00ff88;
     }
 
-    .code-block h3 {
+    section h2 {
+      color: #00ff88;
+      margin-bottom: 15px;
+    }
+
+    section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    section li {
       margin-bottom: 10px;
-      color: #00ffcc;
+      line-height: 1.6;
     }
 
-    pre {
-      background: #000;
+    code {
+      background-color: #222;
       color: #00ff00;
-      padding: 12px;
-      border-radius: 6px;
-      overflow-x: auto;
-      font-family: monospace;
-      font-size: 13px;
-    }
-
-    button {
-      margin-top: 10px;
-      background: #00ff88;
-      color: #000;
-      border: none;
-      padding: 8px 12px;
+      padding: 2px 6px;
       border-radius: 4px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    button:hover {
-      background: #00cc66;
     }
 
     footer {
@@ -128,54 +130,105 @@
       text-align: center;
       padding: 20px;
       margin-top: 40px;
-      font-size: 13px;
     }
 
     footer a {
-      color: #00ccff;
+      color: #00ffff;
+      font-weight: bold;
       text-decoration: none;
-      margin: 0 5px;
     }
 
     footer a:hover {
-      color: #ffffff;
       text-decoration: underline;
-    }
-
-    #share {
-      text-align: center;
-      margin: 25px auto;
     }
 
     @media screen and (max-width: 768px) {
       nav {
-        flex-direction: column;
-        align-items: center;
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #00ff88;
       }
 
-      body {
-        padding-top: 200px;
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      header {
+        position: static;
       }
     }
-  </style>
+    
+    button {
+  background-color: #00ff88;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
+button:hover {
+  background-color: #00cc66;
+}
+
+.code-block {
+  margin-top: 10px;
+}
+
+pre {
+  background-color: #222;
+  color: #00ff00;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+
+  </style>
 </head>
-<body id="topo">
+<body>
 
   <header>
-    📦 Mais Códigos Úteis - PioLinux
+  <h1>   📦 Mais Códigos Úteis - PioLinux</h1>
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="piadas-linux-engracadas.html">Piadas</a>
-    <a href="artigos-linux.html">Iniciante</a>
-    <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
-    <a href="script-bash.html">Bash</a>
-    <a href="links.html">Conteúdos Úteis</a>
+    <div class="accordion-section">
+      <div class="accordion-title">😂 Inico</div>
+      <div class="accordion-content">
+		 <a href="index.html">Inicio</a>
+        <a href="piadas-linux-engraçadas.html">Piadas</a>
+       </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">💡 Dicas Técnicas</div>
+      <div class="accordion-content">
+        <a href="artigos-linux.html">Iniciante</a>
+       <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+        <a href="script-bash.html">Bash</a>
+      </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">📚 Artigos Técnicos</div>
+      <div class="accordion-content">
+         <a href="links.html">Acesse conteúdos essenciais</a>
+        <a href="#">Guia Terminal</a>
+        <a href="#">Problemas no boot</a>
+      </div>
+    </div>
   </nav>
 
   <main>
+    <section>
+      
+     
     <h2>Códigos para Aprender e Compartilhar</h2>
 <div id="share" style="text-align:center;margin:15px 0"></div>
 <script async defer>
@@ -198,16 +251,17 @@
 </script>
 
     <div class="code-block">
-      <h3>📁 Script para Backup</h3>
-      <pre id="code1">#!/bin/bash
+   <section class="code-block">
+  <h3>📁 Script para Backup</h3>
+  <pre id="code1">#!/bin/bash
 DATA=$(date +%Y-%m-%d)
 tar -czf /backup/home-$DATA.tar.gz /home/usuário</pre>
-      <button onclick="copyCode('code1')">Copiar</button>
-    </div>
+  <button onclick="copyCode('code1')">Copiar</button>
+</section>
 
-    <div class="code-block">
-      <h3>🧠 Python: Verificar se número é primo</h3>
-      <pre id="code2">num = int(input("Digite um número: "))
+<section class="code-block">
+  <h3>🧠 Python: Verificar se número é primo</h3>
+  <pre id="code2">num = int(input("Digite um número: "))
 if num > 1:
     for i in range(2, num):
         if (num % i) == 0:
@@ -217,33 +271,35 @@ if num > 1:
         print(f"{num} é primo")
 else:
     print("Digite um número maior que 1")</pre>
-      <button onclick="copyCode('code2')">Copiar</button>
-    </div>
+  <button onclick="copyCode('code2')">Copiar</button>
+</section>
 
-    <div class="code-block">
-      <h3>🧪 HTML: Meta Tags</h3>
-      <pre id="code3">&lt;meta name="description" content="Seu site incrível"&gt;
+<section class="code-block">
+  <h3>🧪 HTML: Meta Tags</h3>
+  <pre id="code3">&lt;meta name="description" content="Seu site incrível"&gt;
 &lt;meta name="keywords" content="linux, tecnologia, terminal"&gt;
 &lt;meta name="author" content="PioLinux"&gt;</pre>
-      <button onclick="copyCode('code3')">Copiar</button>
-    </div>
+  <button onclick="copyCode('code3')">Copiar</button>
+</section>
+
   </main>
 
-  
-  <script>
-    function copyCode(id) {
-      const text = document.getElementById(id).textContent;
-      navigator.clipboard.writeText(text).then(() => {
-        alert("Código copiado!");
-      });
-    }
-  </script>
-<footer>
-  Site criado com muito terminal e memes! Acesse:
-  <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
-  <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
-  <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
-</footer>
+  <footer>
+    Site criado com muito terminal e memes! Acesse:
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Termos de Uso</a>
+  </footer>
 
+  <script>
+    const accordions = document.querySelectorAll(".accordion-title");
+    accordions.forEach((item) => {
+      item.addEventListener("click", () => {
+        const content = item.nextElementSibling;
+        const isVisible = content.style.display === "block";
+        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+        content.style.display = isVisible ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>

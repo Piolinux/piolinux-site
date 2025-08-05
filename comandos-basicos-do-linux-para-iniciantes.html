@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<title>Comandos básicos Linux para iniciantes: Guia completo</title>
+  <title>Comandos básicos Linux para iniciantes: Guia completo</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Descubra os principais comandos básicos do Linux para iniciantes e aprenda a usar o terminal com facilidade e segurança." />
@@ -9,160 +9,195 @@
 <meta name="author" content="Piolinux" />
 <meta name="robots" content="index,nofollow">
 <link rel="canonical" href="https://www.piolinux.com/comandos-basicos-do-linux-para-iniciantes.html" />
-<style>
-  * {
-    box-sizing: border-box;
-    font-family: 'Verdana', Geneva, sans-serif;
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    background: #121212;
-    color: #fdfdfd;
-    padding-top: 130px;
-  }
-
-  header {
-    background: #000;
-    color: #00ff88;
-    text-align: center;
-    padding: 20px;
-    font-size: 1.8rem;
-    font-weight: bold;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    border-bottom: 2px solid #00ff88;
-  }
-
-  nav {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    background: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    gap: 12px;
-    flex-wrap: wrap;
-    border-top: 4px solid #00ff88;
-    border-bottom: 4px solid #00ff88;
-  }
-
-  nav a {
-    background: #004d00;
-    color: #00ffff;
-    text-decoration: none;
-    padding: 8px 14px;
-    border-radius: 5px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-  }
-
-  nav a:hover {
-    background: #00ffcc;
-    color: #000;
-  }
-
-  section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #00ff88;
-  }
-
-  section h2 {
-    color: #00ff88;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-  }
-
-  section ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  section ul li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-  }
-
-  section ul li a {
-    color: #00bfff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  section ul li a:hover {
-    text-decoration: underline;
-    color: #00ffcc;
-  }
-
-  code {
-    background: #222;
-    padding: 2px 6px;
-    border-radius: 4px;
-    color: #00ff00;
-    font-weight: bold;
-  }
-
-  footer {
-    background: #000;
-    color: #ccc;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-  }
-
-  footer a {
-    color: #00ffff;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  footer a:hover {
-    text-decoration: underline;
-    color: #ffffff;
-  }
-
-  @media screen and (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: center;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Verdana', sans-serif;
     }
 
     body {
-      padding-top: 180px;
+      background-color: #121212;
+      color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
     }
-  }
-</style>
 
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      color: #00ff88;
+      padding: 10px 15px;
+      text-align: center;
+      z-index: 1000;
+      border-bottom: 2px solid #00ff88;
+    }
 
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 250px;
+      background-color: #1a1a1a;
+      border-right: 2px solid #00ff88;
+      padding: 10px;
+      overflow-y: auto;
+      height: calc(100vh - 60px);
+    }
+
+    .accordion-section {
+      margin-bottom: 10px;
+    }
+
+    .accordion-title {
+      background-color: #004d00;
+      color: #00ffff;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .accordion-content a {
+      display: block;
+      color: #00bfff;
+      padding: 5px 0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .accordion-content a:hover {
+      color: #00ffcc;
+      text-decoration: underline;
+    }
+
+    main {
+      margin-left: 250px;
+      padding: 80px 20px 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00ff88;
+    }
+
+    section h2 {
+      color: #00ff88;
+      margin-bottom: 15px;
+    }
+
+    section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    section li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    code {
+      background-color: #222;
+      color: #00ff00;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    footer {
+      background: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #00ffff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #00ff88;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      header {
+        position: static;
+      }
+    }
+  </style>
 </head>
-<body id="topo">
+<body>
 
-<header>Comandos básicos Linux para iniciantes</header>
+  <header>
+  <h1>  Comandos básicos Linux para iniciantes</h1>
+  </header>
 
-<nav>
-  <a href="index.html">home</a>
-  <a href="piadas-linux-engracadas.html">Piadas</a>
-  <a href="artigos-linux.html">Artigo Linux</a>
-  <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
-  <a href="script-bash.html">Bash</a>
-  <a href="links.html">Conteúdos Úteis</a>
-</nav>
+  <nav>
+    <div class="accordion-section">
+      <div class="accordion-title">😂 Inico</div>
+      <div class="accordion-content">
+		 <a href="index.html">Inicio</a>
+        <a href="piadas-linux-engraçadas.html">Piadas</a>
+       </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">💡 Dicas Técnicas</div>
+      <div class="accordion-content">
+        <a href="artigos-linux.html">Iniciante</a>
+       <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
+        <a href="script-bash.html">Bash</a>
+      </div>
+    </div>
+    <div class="accordion-section">
+      <div class="accordion-title">📚 Artigos Técnicos</div>
+      <div class="accordion-content">
+         <a href="links.html">Acesse conteúdos essenciais</a>
+        <a href="#">Guia Terminal</a>
+        <a href="#">Problemas no boot</a>
+      </div>
+    </div>
+  </nav>
 
-<div id="share" style="text-align:center;margin:15px 0"></div>
+<main>
+<section>
+	
+	
+	<div id="share" style="text-align:center;margin:15px 0"></div>
 <script async defer>
 (() => {
   const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
@@ -181,84 +216,91 @@
   });
 })();
 </script>
-
-
-
-<section>
-  <h2>Navegação no sistema de arquivos</h2>
+  <section><h2>Navegação no sistema de arquivos</h2>
   <p>Para se mover entre pastas, os comandos mais usados são:</p>
   <ul>
-    <li><code>pwd</code> – mostra o diretório atual</li>
-    <li><code>ls</code> – lista os arquivos e pastas no diretório</li>
-    <li><code>cd nome-da-pasta</code> – muda para a pasta especificada</li>
-    <li><code>cd ..</code> – volta para a pasta anterior</li>
+    <li><code>pwd</code> – mostra o diretório atual.</li>
+    <li><code>ls</code> – lista os arquivos e pastas no diretório.</li>
+    <li><code>cd nome-da-pasta</code> – muda para a pasta especificada.</li>
+    <li><code>cd ..</code> – volta para a pasta anterior.</li>
   </ul>
+  <blockquote>Exemplo: <code>cd Documentos</code> leva você para a pasta Documentos.</blockquote></section>
 
-  <blockquote>Exemplo: <code>cd Documentos</code> leva você para a pasta Documentos.</blockquote>
-
-  <h2>Listando arquivos e detalhes importantes</h2>
+ <section> <h2>Listando arquivos e detalhes importantes</h2>
   <p>O comando <code>ls</code> tem várias opções para mostrar informações diferentes:</p>
   <ul>
-    <li><code>ls -l</code>: lista arquivos com detalhes como permissões, dono e tamanho</li>
-    <li><code>ls -a</code>: lista todos os arquivos, incluindo ocultos</li>
-  </ul>
+    <li><code>ls -l</code> – lista arquivos com detalhes como permissões, dono e tamanho.</li>
+    <li><code>ls -a</code> – lista todos os arquivos, incluindo ocultos.</li>
+  </ul></section>
 
-  <h2>Manipulandos arquivos e diretórios</h2>
-  <p>Use estes comandos abaixo criar, copiar, mover ou apagar arquivos e pastas:</p>
+ <section> <h2>Manipulando arquivos e diretórios</h2>
+  <p>Use estes comandos para criar, copiar, mover ou apagar arquivos e pastas:</p>
   <ul>
-    <li><code>mkdir nome-da-pasta</code>: cria uma nova pasta</li>
-    <li><code>touch nome-do-arquivo</code>: cria um novo arquivo vazio</li>
-    <li><code>cp origem destino</code>: copia arquivos ou pastas</li>
-    <li><code>mv origem destino</code>: move ou renomeia arquivos e pastas</li>
-    <li><code>rm nome-do-arquivo</code>: remove arquivos (cuidado!)</li>
-    <li><code>rm -r nome-da-pasta</code>: remove pastas e todo conteúdo dentro</li>
-  </ul>
+    <li><code>mkdir nome-da-pasta</code> – cria uma nova pasta.</li>
+    <li><code>touch nome-do-arquivo</code> – cria um novo arquivo vazio.</li>
+    <li><code>cp origem destino</code> – copia arquivos ou pastas.</li>
+    <li><code>mv origem destino</code> – move ou renomeia arquivos e pastas.</li>
+    <li><code>rm nome-do-arquivo</code> – remove arquivos (atenção ao uso).</li>
+    <li><code>rm -r nome-da-pasta</code> – remove pastas e todo conteúdo dentro delas.</li>
+  </ul></section>
 
-  <h2>Obter ajuda e informações do sistema</h2>
-  <p>Se tiver dúvidas sobre um comando, use:</p>
+  <section><h2>Obter ajuda e informações do sistema</h2>
+  <p>Se tiver dúvidas sobre um comando, utilize:</p>
   <ul>
-    <li><code>man comando</code>: mostra o manual do comando</li>
-    <li><code>comando --help</code>: mostra ajuda rápida do comando</li>
+    <li><code>man comando</code> – mostra o manual completo do comando.</li>
+    <li><code>comando --help</code> – exibe ajuda rápida com as opções do comando.</li>
   </ul>
   <p>Para verificar informações do sistema:</p>
   <ul>
-    <li><code>uname -a</code>: mostra dados do kernel</li>
-    <li><code>top</code>: exibe processos em execução em tempo real</li>
-  </ul>
+    <li><code>uname -a</code> – mostra dados completos sobre o kernel.</li>
+    <li><code>top</code> – exibe os processos ativos em tempo real.</li>
+  </ul></section>
 
-  <h2>Conclusão</h2>
-  <p>Dominar esses comandos básicos do Linux abrirá muitas portas para você no sistema.</p>
-  <p>Comece a praticar hoje mesmo e sinta a diferença!</p>
+  <section><h2>Conclusão</h2>
+  <p>Dominar esses comandos básicos do Linux abrirá muitas portas para você no sistema operacional.</p>
+  <p>Comece a praticar hoje mesmo e sinta a diferença na sua produtividade!</p></section>
 
-  
-
-  <div class="author-box">
-    <img src="https://example.com/foto-autor.jpg" alt="Foto do autor" />
+  <section><div class="author-box" style="display:flex;align-items:center;margin-top:20px;">
+    <img src="https://example.com/foto-autor.jpg" alt="Foto do autor" style="width:80px;height:80px;border-radius:50%;margin-right:15px;">
     <div>
-      <p><strong>Piolinux</strong> é entusiasta Linux e escritor técnico com mais de 5 anos de experiência.</p>
+      <p><strong>Piolinux</strong> é entusiasta do Linux e escritor técnico com mais de 5 anos de experiência.</p>
     </div>
-  </div>
+  </div></section>
 
-  <section class="faq">
+ <section class="faq" style="margin-top:30px;">
     <h2>FAQ</h2>
-    <h4>Como navegar entre pastas no Linux?</h4>
+
+  <section>  <h4>Como navegar entre pastas no Linux?</h4>
     <p>Use o comando <code>cd</code> para mudar de diretório.</p>
 
     <h4>Posso apagar arquivos pelo terminal?</h4>
     <p>Sim, com o comando <code>rm</code>, mas tenha cuidado para não apagar arquivos importantes.</p>
 
     <h4>Como ver detalhes dos arquivos?</h4>
-    <p>Use <code>ls -l</code> para listar com detalhes.</p>
-  </section>
+    <p>Use <code>ls -l</code> para listar arquivos com informações detalhadas.</p></section>
+  
+</section></main>
 
-</section>
+  
 
-<footer>
-  Site criado com muito terminal e memes! Acesse:
-  <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> |
-  <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> |
-  <a href="#topo" style="color: #00ff88; font-weight: bold; text-decoration: underline;">↑ Voltar ao Topo</a>
-</footer>
 
+ 
+  <footer>
+    Site criado com muito terminal e memes! Acesse:
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Termos de Uso</a>
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll(".accordion-title");
+    accordions.forEach((item) => {
+      item.addEventListener("click", () => {
+        const content = item.nextElementSibling;
+        const isVisible = content.style.display === "block";
+        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+        content.style.display = isVisible ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>
