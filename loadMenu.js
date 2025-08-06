@@ -1,4 +1,4 @@
-// Arquivo: loadMenu.js
+/// Arquivo: loadMenu.js
 document.addEventListener('DOMContentLoaded', function() {
     const menuUrl = 'menu.html';
     const menuContainer = document.getElementById('menu-container');
@@ -21,11 +21,21 @@ document.addEventListener('DOMContentLoaded', function() {
                         const content = item.nextElementSibling;
                         const isVisible = content.style.display === "block";
                         
+                        // Esconde todos os outros conteúdos antes de mostrar o clicado
                         document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
                         
                         content.style.display = isVisible ? "none" : "block";
                     });
                 });
+
+                // NOVO CÓDIGO: Lógica para o botão de menu responsivo
+                const menuToggleButton = document.getElementById('menu-toggle-button');
+                if (menuToggleButton) {
+                    menuToggleButton.addEventListener('click', () => {
+                        const isMenuVisible = menuContainer.style.display === 'block';
+                        menuContainer.style.display = isMenuVisible ? 'none' : 'block';
+                    });
+                }
             })
             .catch(error => {
                 console.error(error);
@@ -33,4 +43,3 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 });
-
