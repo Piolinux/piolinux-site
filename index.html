@@ -1,247 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
- <title>Linux com Humor - PioLinux</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source.">
-  <meta name="keywords" content="linux, piadas linux, humor, terminal, programador, nerd, geek, open source, shell, bash">
-  <meta name="author" content="PioLinux">
-  <meta name="robots" content="index,nofollow">
-  <meta name="google-site-verification" content="CYb2xvKexfThXkcKdSjVEpHIMY--b1rAvFbjqjJwtlQ" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Verdana', sans-serif;
-    }
-
-    body {
-      background-color: #121212;
-      color: #fdfdfd;
-      display: flex;
-      flex-direction: row;
-      min-height: 100vh;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #000;
-      color: #00ff88;
-      padding: 10px 15px;
-      text-align: center;
-      z-index: 1000;
-      border-bottom: 2px solid #00ff88;
-    }
-
-    header h1 {
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-    nav {
-      position: fixed;
-      top: 60px;
-      left: 0;
-      width: 250px;
-      background-color: #1a1a1a;
-      border-right: 2px solid #00ff88;
-      padding: 10px;
-      overflow-y: auto;
-      height: calc(100vh - 60px);
-    }
-
-    .accordion-section {
-      margin-bottom: 10px;
-    }
-
-    .accordion-title {
-      background-color: #004d00;
-      color: #00ffff;
-      padding: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      border-radius: 4px;
-    }
-
-    .accordion-content {
-      display: none;
-      padding: 10px;
-    }
-
-    .accordion-content a {
-      display: block;
-      color: #00bfff;
-      padding: 5px 0;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .accordion-content a:hover {
-      color: #00ffcc;
-      text-decoration: underline;
-    }
-
-    main {
-      margin-left: 250px;
-      padding: 80px 20px 20px;
-      width: 100%;
-      max-width: 900px;
-    }
-
-    section {
-      margin-bottom: 40px;
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #00ff88;
-    }
-
-    section h2 {
-      color: #00ff88;
-      margin-bottom: 15px;
-    }
-
-    section ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    section li {
-      margin-bottom: 10px;
-      line-height: 1.6;
-    }
-
-    code {
-      background-color: #222;
-      color: #00ff00;
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-
-    footer {
-      background: #000;
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #00ffff;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media screen and (max-width: 768px) {
-      nav {
-        position: static;
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 2px solid #00ff88;
-      }
-
-      main {
-        margin-left: 0;
-        padding: 20px;
-      }
-
-      header {
-        position: static;
-      }
-    }
-  </style>
+    <title>Linux com Humor - PioLinux</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source.">
+    <meta name="keywords" content="linux, piadas linux, humor, terminal, programador, nerd, geek, open source, shell, bash">
+    <meta name="author" content="PioLinux">
+    <meta name="robots" content="index,nofollow">
+    <meta name="google-site-verification" content="CYb2xvKexfThXkcKdSjVEpHIMY--b1rAvFbjqjJwtlQ" />
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-  <h1>  💻 Linux com Humor - <strong>piolinux.com.br</strong> 😄</h1>
-  </header>
+    <header>
+        <h1>💻 Linux com Humor - <strong>piolinux.com.br</strong> 😄</h1>
+    </header>
 
-  <nav>
-    <div class="accordion-section">
-      <div class="accordion-title">😂 Inico</div>
-      <div class="accordion-content">
-		 <a href="index.html">Inicio</a>
-        <a href="piadas-linux-engraçadas.html">Piadas</a>
-       </div>
-    </div>
-    <div class="accordion-section">
-      <div class="accordion-title">💡 Dicas Técnicas</div>
-      <div class="accordion-content">
-        <a href="artigos-linux.html">Iniciante</a>
-       <a href="dicas-tecnicas-linux.html">Dicas Técnicas</a>
-        <a href="script-bash.html">Bash</a>
-      </div>
-    </div>
-    <div class="accordion-section">
-      <div class="accordion-title">📚 Artigos Técnicos</div>
-      <div class="accordion-content">
-         <a href="links.html">Acesse conteúdos essenciais</a>
-        <a href="#">Guia Terminal</a>
-        <a href="#">Problemas no boot</a>
-      </div>
-    </div>
-  </nav>
+    <div id="menu-container"></div>
 
-  <main>
-    <section>
-      <h2>😂 Piadas de Linux</h2>
-      <ul>
-        <li>Eu pedi um sistema estável... eles me deram um pinguim gelado.</li>
-        <li>Usei <code>rm -rf /</code> e resolvi todos os problemas. Inclusive meu emprego.</li>
-        <li>Linux é igual café: no começo é forte, depois vicia.</li>
-      </ul>
-    </section>
+    <main>
+        <section>
+            <h2>😂 Piadas de Linux</h2>
+            <ul>
+                <li>Eu pedi um sistema estável... eles me deram um pinguim gelado.</li>
+                <li>Usei <code>rm -rf /</code> e resolvi todos os problemas. Inclusive meu emprego.</li>
+                <li>Linux é igual café: no começo é forte, depois vicia.</li>
+            </ul>
+        </section>
 
-    <section>
-      <h2>💡 Dicas Técnicas</h2>
-      <ul>
-        <li><strong>Comando útil:</strong> <code>htop</code> — veja seus processos como um jogo de Tetris.</li>
-        <li><strong>Quer ver sua alma?</strong> Use <code>sudo !!</code> após esquecer o sudo.</li>
-        <li><strong>Comando ninja:</strong> <code>alias desligar='rm -rf /'</code> — NÃO TENTE!</li>
-        <li><strong>Senhas seguras:</strong> <code>openssl rand -base64 12</code>.</li>
-      </ul>
-    </section>
+        <section>
+            <h2>💡 Dicas Técnicas</h2>
+            <ul>
+                <li><strong>Comando útil:</strong> <code>htop</code> — veja seus processos como um jogo de Tetris.</li>
+                <li><strong>Quer ver sua alma?</strong> Use <code>sudo !!</code> após esquecer o sudo.</li>
+                <li><li><strong>Comando ninja:</strong> <code>alias desligar='rm -rf /'</code> — NÃO TENTE!</li>
+                <li><strong>Senhas seguras:</strong> <code>openssl rand -base64 12</code>.</li>
+            </ul>
+        </section>
 
-    <section>
-      <h2>📚 Artigos Técnicos</h2>
-      <ul>
-        <li><strong>Por que Linux é o sistema dos Hackers?</strong> — Open-source, controle total, liberdade: tudo o que hackers amam.</li>
-        <li><strong>Guia do Terminal</strong> — Domine <code>grep</code>, <code>sed</code>, <code>awk</code> e outros feitiços.</li>
-        <li><strong>Linux não dá boot</strong> — Use um live CD e reinstale o GRUB. Se falhar, reinstale tudo e sorria.</li>
-      </ul>
-    </section>
-  </main>
+        <section>
+            <h2>📚 Artigos Técnicos</h2>
+            <ul>
+                <li><strong>Por que Linux é o sistema dos Hackers?</strong> — Open-source, controle total, liberdade: tudo o que hackers amam.</li>
+                <li><strong>Guia do Terminal</strong> — Domine <code>grep</code>, <code>sed</code>, <code>awk</code> e outros feitiços.</li>
+                <li><strong>Linux não dá boot</strong> — Use um live CD e reinstale o GRUB. Se falhar, reinstale tudo e sorria.</li>
+            </ul>
+        </section>
+    </main>
 
-  <footer>
-   Site criado com muito terminal e memes!
-    <a href="#">Política de Privacidade</a> |
-   <a href="#">Termos de Uso</a>
-    
-  </footer>
+    <footer>
+        Site criado com muito terminal e memes!
+        <a href="#">Política de Privacidade</a> |
+        <a href="#">Termos de Uso</a>
+    </footer>
 
-  <script>
-    const accordions = document.querySelectorAll(".accordion-title");
-    accordions.forEach((item) => {
-      item.addEventListener("click", () => {
-        const content = item.nextElementSibling;
-        const isVisible = content.style.display === "block";
-        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
-        content.style.display = isVisible ? "none" : "block";
-      });
-    });
-  </script>
-  
-  <
+    <script src="loadMenu.js"></script>
+
 </body>
 </html>
