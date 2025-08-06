@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <title>Scripts Bash para Diversas Finalidades - PioLinux</title
+    <title>Scripts Bash para Diversas Finalidades - PioLinux</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aprenda a criar scripts Bash para automação, administração, segurança e desenvolvimento no Linux. Exemplos práticos para diversas finalidades.">
@@ -9,42 +9,36 @@
     <meta name="author" content="PioLinux">
     <meta name="robots" content="index,nofollow">
     <link rel="canonical" href="https://www.piolinux.com/script-bash.html" />
-     <link href="style.css" rel="stylesheet" type="text/css" />
-  
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-  <header>
-  <h1>   Scripts Bash para Diversas Finalidades</h1>
-  </header>
+    <header>
+        <h1>Scripts Bash para Diversas Finalidades</h1>
+    </header>
 
+    <div id="menu-container"></div>
 
- <div id="menu-container"></div>
+    <main>
+        <section id="scripts-bash-intro">
+            <h2>🚀 Scripts Bash para Diversas Finalidades</h2>
+            <p>O Bash (Bourne-Again Shell) é a linguagem de script padrão na maioria dos terminais Linux. Com ele, você pode automatizar tarefas repetitivas como organizar arquivos, atualizar o sistema, realizar backups e muito mais. Aprender Bash não exige ser um expert — basta curiosidade e prática. Abaixo, veja exemplos úteis de scripts para o dia a dia.</p>
+        </section>
 
-
-  <main>
-	  
-    <section id="scripts-bash">
-  <h2>🚀 Scripts Bash para Diversas Finalidades</h2>
-  <p>O Bash, mais conhecido como terminal (Bourne-Again Shell), é o mestre por trás dos comandos nas distribuições Linux. Com ele, você pode automatizar tarefas repetitivas como organizar arquivos, atualizar o sistema, realizar backups e muito mais. Aprender Bash não exige ser um expert — basta curiosidade e prática. Abaixo, veja exemplos úteis de scripts para o dia a dia.</p>
-
-  <ul>
-    <li></section>
-     
-     
-     <section><h3 id="introducao">1. O Básico de um Script Bash</h3>
-      <p>Todo script Bash começa com o <strong>shebang</strong> <code>#!/bin/bash</code>, que indica ao sistema qual interpretador usar.</p>
-      <p><strong>Exemplo: Olá Mundo!</strong></p>
-      <pre><code>#!/bin/bash
+        <section>
+            <h3 id="introducao">1. O Básico de um Script Bash</h3>
+            <p>Todo script Bash começa com o <strong>shebang</strong> <code>#!/bin/bash</code>, que indica ao sistema qual interpretador usar.</p>
+            <p><strong>Exemplo: Olá Mundo!</strong></p>
+            <pre><code>#!/bin/bash
 # Este é um comentário
 echo "Olá, PioLinux! Este é o meu primeiro script Bash."</code></pre>
-      <p>Salve como <code>ola_mundo.sh</code>, dê permissão com <code>chmod +x ola_mundo.sh</code> e execute com <code>./ola_mundo.sh</code>.</p>
-    </li></section>
+            <p>Salve como <code>ola_mundo.sh</code>, dê permissão com <code>chmod +x ola_mundo.sh</code> e execute com <code>./ola_mundo.sh</code>.</p>
+        </section>
 
-   <section> <li>
-      <h3 id="automacao-diaria">2. Automação de Tarefas Diárias</h3>
-      <p><strong>Atualizar o Sistema Automaticamente:</strong></p>
-      <pre><code>#!/bin/bash
+        <section>
+            <h3 id="automacao-diaria">2. Automação de Tarefas Diárias</h3>
+            <p><strong>Atualizar o Sistema Automaticamente:</strong></p>
+            <pre><code>#!/bin/bash
 echo "Atualizando listas de pacotes..."
 sudo apt update
 
@@ -57,10 +51,9 @@ sudo apt autoremove -y
 echo "Limpando o cache de pacotes..."
 sudo apt clean
 
-echo "Sistema atualizado e limpo!"</code></pre></section> 
-
-     <section> <p><strong>Backup Simples de Pastas Pessoais:</strong></p>
-      <pre><code>#!/bin/bash
+echo "Sistema atualizado e limpo!"</code></pre>
+            <p><strong>Backup Simples de Pastas Pessoais:</strong></p>
+            <pre><code>#!/bin/bash
 DATA=$(date +%Y-%m-%d_%H-%M-%S)
 DIR_BACKUP="$HOME/Backups"
 PASTAS_A_COPIAR=("$HOME/Documentos" "$HOME/Imagens")
@@ -71,12 +64,12 @@ echo "Iniciando backup das pastas: ${PASTAS_A_COPIAR[@]}"
 tar -czvf "$DIR_BACKUP/$NOME_ARQUIVO" "${PASTAS_A_COPIAR[@]}"
 
 echo "Backup concluído! Arquivo: $DIR_BACKUP/$NOME_ARQUIVO"</code></pre>
-    </li></section> 
-    
-  <section>  <li>
-      <h3 id="administracao-sistema">3. Administração de Sistema</h3>
-      <p><strong>Monitorar Uso de Disco e Enviar Alerta:</strong></p>
-      <pre><code>#!/bin/bash
+        </section>
+
+        <section>
+            <h3 id="administracao-sistema">3. Administração de Sistema</h3>
+            <p><strong>Monitorar Uso de Disco e Enviar Alerta:</strong></p>
+            <pre><code>#!/bin/bash
 LIMITE_PERCENTUAL=80
 PARTICAO="/dev/sda1"
 EMAIL_ADMIN="seuemail@exemplo.com"
@@ -89,8 +82,8 @@ else
     echo "Uso de disco normal: $USO%"
 fi</code></pre>
 
-      <p><strong>Criar Múltiplos Usuários:</strong></p>
-      <pre><code>#!/bin/bash
+            <p><strong>Criar Múltiplos Usuários:</strong></p>
+            <pre><code>#!/bin/bash
 ARQUIVO_USUARIOS="lista_usuarios.txt"
 
 if [ ! -f "$ARQUIVO_USUARIOS" ]; then
@@ -107,41 +100,41 @@ while IFS= read -r USUARIO; do
 done < "$ARQUIVO_USUARIOS"
 
 echo "Usuários criados com sucesso."</code></pre>
-      <p>Conteúdo de <code>lista_usuarios.txt</code>:</p>
-      <pre><code>joao
+            <p>Conteúdo de <code>lista_usuarios.txt</code>:</p>
+            <pre><code>joao
 maria
 pedro
 ana</code></pre>
-    </li></section>
+        </section>
 
-  <section>  <li>
-      <h3 id="seguranca-monitoramento">4. Segurança e Monitoramento</h3>
-      <p><strong>Verificar Portas Abertas:</strong></p>
-      <pre><code>#!/bin/bash
+        <section>
+            <h3 id="seguranca-monitoramento">4. Segurança e Monitoramento</h3>
+            <p><strong>Verificar Portas Abertas:</strong></p>
+            <pre><code>#!/bin/bash
 echo "Listando portas abertas:"
 sudo netstat -tulpn
 
 echo -e "\nStatus do firewall (UFW):"
 sudo ufw status</code></pre>
 
-      <p><strong>Monitorar Tentativas de Login SSH:</strong></p>
-      <pre><code>#!/bin/bash
+            <p><strong>Monitorar Tentativas de Login SSH:</strong></p>
+            <pre><code>#!/bin/bash
 ARQUIVO_LOG="/var/log/auth.log"
 
 echo "Tentativas de login SSH falhas:"
 grep "Failed password" "$ARQUIVO_LOG" | tail -n 50 | awk '{print $11}' | sort | uniq -c | sort -nr</code></pre>
-    </li></section>
-   
-   <section> <li>
-      <h3 id="desenvolvimento-web">5. Scripts para Desenvolvimento Web</h3>
-      <p><strong>Servidor HTTP Local com Python:</strong></p>
-      <pre><code>#!/bin/bash
+        </section>
+
+        <section>
+            <h3 id="desenvolvimento-web">5. Scripts para Desenvolvimento Web</h3>
+            <p><strong>Servidor HTTP Local com Python:</strong></p>
+            <pre><code>#!/bin/bash
 PORTA=8000
 echo "Servidor em http://localhost:$PORTA"
 python3 -m http.server $PORTA</code></pre>
 
-      <p><strong>Deploy Simples via Rsync/SSH:</strong></p>
-      <pre><code>#!/bin/bash
+            <p><strong>Deploy Simples via Rsync/SSH:</strong></p>
+            <pre><code>#!/bin/bash
 DIR_LOCAL="./public_html/"
 USUARIO_REMOTO="usuario"
 IP_SERVIDOR="192.168.0.1"
@@ -154,12 +147,12 @@ if [ $? -eq 0 ]; then
 else
     echo "Erro no deploy."
 fi</code></pre>
-    </li></section>
+        </section>
 
-   <section> <li>
-      <h3 id="utilidades-avancadas">6. Utilidades e Truques Avançados</h3>
-      <p><strong>Calculadora via Terminal:</strong></p>
-      <pre><code>#!/bin/bash
+        <section>
+            <h3 id="utilidades-avancadas">6. Utilidades e Truques Avançados</h3>
+            <p><strong>Calculadora via Terminal:</strong></p>
+            <pre><code>#!/bin/bash
 if [ -z "$1" ]; then
     echo "Uso: ./calculadora.sh \"10 + 5 * 2\""
     exit 1
@@ -168,8 +161,8 @@ fi
 RESULTADO=$(echo "scale=2; $1" | bc -l)
 echo "Resultado: $RESULTADO"</code></pre>
 
-      <p><strong>Gerar Álbum de Fotos HTML:</strong></p>
-      <pre><code>#!/bin/bash
+            <p><strong>Gerar Álbum de Fotos HTML:</strong></p>
+            <pre><code>#!/bin/bash
 DIR_FOTOS="./fotos"
 ARQUIVO_HTML="album.html"
 
@@ -186,47 +179,43 @@ done
 
 echo "</body></html>" >> "$ARQUIVO_HTML"
 echo "Álbum gerado em $ARQUIVO_HTML"</code></pre>
-    </li>
-  </ul></section>
+        </section>
 
- <section><p>Esses scripts são apenas o começo. Com Bash, você pode criar ferramentas personalizadas, automatizar rotinas e entender melhor como o Linux funciona. Experimente, edite, e adapte conforme suas necessidades!</p></section>
+        <section>
+            <p>Esses scripts são apenas o começo. Com Bash, você pode criar ferramentas personalizadas, automatizar rotinas e entender melhor como o Linux funciona. Experimente, edite e adapte conforme suas necessidades!</p>
+        </section>
 
+        <div id="share" style="text-align:center;margin:15px 0"></div>
+        <script async defer>
+        (() => {
+            const u = encodeURIComponent(location.href), t = encodeURIComponent(document.title);
+            const d = [
+                ["Reddit", "#ff4500", `https://www.reddit.com/submit?url=${u}&title=${t}`],
+                ["Twitter", "#1da1f2", `https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+                ["WhatsApp", "#25d366", `https://api.whatsapp.com/send?text=${t}%20${u}`],
+                ["LinkedIn", "#0077b5", `https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+            ];
+            const e = document.getElementById("share");
+            d.forEach(([n, c, l]) => {
+                const a = document.createElement("a");
+                a.href = l;
+                a.target = "_blank";
+                a.rel = "noopener";
+                a.textContent = n;
+                a.style = `background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+                e.appendChild(a);
+            });
+        })();
+        </script>
+    </main>
 
-<!-- Botões de compartilhamento -->
-<div id="share" style="text-align:center;margin:15px 0"></div>
-<script async defer>
-(() => {
-  const u = encodeURIComponent(location.href), t = encodeURIComponent(document.title);
-  const d = [
-    ["Reddit", "#ff4500", `https://www.reddit.com/submit?url=${u}&title=${t}`],
-    ["Twitter", "#1da1f2", `https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-    ["WhatsApp", "#25d366", `https://api.whatsapp.com/send?text=${t}%20${u}`],
-    ["LinkedIn", "#0077b5", `https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-  ];
-  const e = document.getElementById("share");
-  d.forEach(([n, c, l]) => {
-    const a = document.createElement("a");
-    a.href = l;
-    a.target = "_blank";
-    a.rel = "noopener";
-    a.textContent = n;
-    a.style = `background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
-    e.appendChild(a);
-  });
-})();
-</script>
-
-
-    
-  </main>
-
-  <footer>
+    <footer>
     Site criado com muito terminal e memes! Acesse:
     <a href="politica-de-privacidade.html">Política de Privacidade</a> |
     <a href="termos-de-uso.html">Termos de Uso</a>
   </footer>
 
 
-   <script src="loadMenu.js"></script>
+    <script src="loadMenu.js"></script>
 </body>
 </html>

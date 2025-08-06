@@ -1,119 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  
-  <title>Como remover programas no Linux: Passo a passo para iniciantes</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Aprenda como remover programas no Linux com segurança e facilidade. Guia completo para iniciantes com comandos e dicas úteis." />
-  <meta name="keywords" content="remover programas linux, desinstalar software linux, linux iniciantes, comandos linux, desinstalar apps linux" />
-  <meta name="robots" content="index,nofollow">
-  <link rel="canonical" href="https://piolinux.com/como-remover-programas-no-linux.html" />
- <link href="style.css" rel="stylesheet" type="text/css" />
-  
-  
-  
+    <title>Como remover programas no Linux: Passo a passo para iniciantes</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Aprenda como remover programas no Linux com segurança e facilidade. Guia completo para iniciantes com comandos e dicas úteis." />
+    <meta name="keywords" content="remover programas linux, desinstalar software linux, linux iniciantes, comandos linux, desinstalar apps linux" />
+    <meta name="robots" content="index,nofollow">
+    <link rel="canonical" href="https://piolinux.com/como-remover-programas-no-linux.html" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-  <header>
-  <h1>  Aprenda como remover programas no Linux com segurança e facilidade</h1>
-  </header>
+    <header>
+        <h1>Aprenda como remover programas no Linux com segurança e facilidade</h1>
+    </header>
 
-  <div id="menu-container"></div>
-  
-  <main>
-  <article>
-    <section>
-      <h2>Como remover programas no Linux: Passo a passo para iniciantes</h2>
-      <p>Está começando no mundo open-source de Linux e não sabe como desinstalar programas através do terminal? Remover aplicativos desnecessários é fundamental para manter seu sistema limpo e eficiente.</p>
-      <p>Acompanhe este guia para aprender a remover programas no Linux, usando o terminal ou modo gráfico. Veja abaixo como fazer isso corretamente.</p>
-    </section>
+    <div id="menu-container"></div>
 
-    <section>
-      <h2>Métodos para remover programas</h2>
-      <ul>
-        <li>Remoção via terminal com gerenciadores de pacotes</li>
-        <li>Usando a Central de Aplicativos</li>
-        <li>Remoção de pacotes Snap e Flatpak</li>
-        <li>Dicas para limpar dependências órfãs</li>
-      </ul>
-    </section>
+    <main>
+        <article>
+            <section>
+                <h2>Como remover programas no Linux: Passo a passo para iniciantes</h2>
+                <p>Está começando no mundo open-source de Linux e não sabe como desinstalar programas através do terminal? Remover aplicativos desnecessários é fundamental para manter seu sistema limpo e eficiente.</p>
+                <p>Acompanhe este guia para aprender a remover programas no Linux, usando o terminal ou modo gráfico. Veja abaixo como fazer isso corretamente.</p>
+            </section>
 
-    <section>
-      <h2>Remover programas pelo terminal</h2>
+            <section>
+                <h2>Métodos para remover programas</h2>
+                <ul>
+                    <li>Remoção via terminal com gerenciadores de pacotes</li>
+                    <li>Usando a Central de Aplicativos</li>
+                    <li>Remoção de pacotes Snap e Flatpak</li>
+                    <li>Dicas para limpar dependências órfãs</li>
+                </ul>
+            </section>
 
-      <h3>APT (Ubuntu, Debian e derivados)</h3>
-      <blockquote><code>sudo apt remove nome-do-programa</code></blockquote>
-      <blockquote><code>sudo apt purge nome-do-programa</code></blockquote>
+            <section>
+                <h2>Remover programas pelo terminal</h2>
+                <h3>APT (Ubuntu, Debian e derivados)</h3>
+                <pre><code>sudo apt remove nome-do-programa</code></pre>
+                <pre><code>sudo apt purge nome-do-programa</code></pre>
 
-      <h3>DNF (Fedora, RHEL, CentOS)</h3>
-      <blockquote><code>sudo dnf remove nome-do-programa</code></blockquote>
+                <h3>DNF (Fedora, RHEL, CentOS)</h3>
+                <pre><code>sudo dnf remove nome-do-programa</code></pre>
 
-      <h3>PACMAN (Arch Linux e derivados)</h3>
-      <blockquote><code>sudo pacman -R nome-do-programa</code></blockquote>
-      <blockquote><code>sudo pacman -Rns nome-do-programa</code></blockquote>
-    </section>
+                <h3>PACMAN (Arch Linux e derivados)</h3>
+                <pre><code>sudo pacman -R nome-do-programa</code></pre>
+                <pre><code>sudo pacman -Rns nome-do-programa</code></pre>
+            </section>
 
-    <section>
-      <h2>Remover programas via Central de Aplicativos</h2>
-      <p>Se você prefere não usar o terminal, pode desinstalar programas pela Central de Aplicativos:</p>
-      <ul>
-        <li>Acesse a Central ou Software Center</li>
-        <li>Procure o programa instalado</li>
-        <li>Clique em "Remover" ou "Desinstalar"</li>
-      </ul>
-    </section>
+            <section>
+                <h2>Remover programas via Central de Aplicativos</h2>
+                <p>Se você prefere não usar o terminal, pode desinstalar programas pela Central de Aplicativos:</p>
+                <ul>
+                    <li>Acesse a Central ou Software Center</li>
+                    <li>Procure o programa instalado</li>
+                    <li>Clique em "Remover" ou "Desinstalar"</li>
+                </ul>
+            </section>
 
-    <section>
-      <h2>Remover pacotes Snap e Flatpak</h2>
-      <ul>
-        <li><strong>Snap:</strong> <code>sudo snap remove nome-do-app</code></li>
-        <li><strong>Flatpak:</strong> <code>flatpak uninstall nome-do-app</code></li>
-      </ul>
-    </section>
+            <section>
+                <h2>Remover pacotes Snap e Flatpak</h2>
+                <ul>
+                    <li><strong>Snap:</strong> <code>sudo snap remove nome-do-app</code></li>
+                    <li><strong>Flatpak:</strong> <code>flatpak uninstall nome-do-app</code></li>
+                </ul>
+            </section>
 
-    <section>
-      <h2>Dica extra: limpar pacotes desnecessários</h2>
-      <blockquote><code>sudo apt autoremove</code></blockquote>
-      <blockquote><code>sudo dnf autoremove</code></blockquote>
-    </section>
+            <section>
+                <h2>Dica extra: limpar pacotes desnecessários</h2>
+                <pre><code>sudo apt autoremove</code></pre>
+                <pre><code>sudo dnf autoremove</code></pre>
+            </section>
 
-    <section>
-      <h2>Conclusão</h2>
-      <p>Remover programas no Linux é simples e rápido quando você entende os comandos básicos ou usa ferramentas gráficas. Manter o sistema limpo melhora o desempenho e economiza espaço em disco.</p>
-    </section>
-  </article>
+            <section>
+                <h2>Conclusão</h2>
+                <p>Remover programas no Linux é simples e rápido quando você entende os comandos básicos ou usa ferramentas gráficas. Manter o sistema limpo melhora o desempenho e economiza espaço em disco.</p>
+            </section>
+        </article>
 
- <section> <aside>
-    <img src="https://example.com/foto-autor.jpg" alt="Foto do autor" />
-    <div>
-      <p><strong>Piolinux</strong> é escritor de tecnologia com foco em Linux, apaixonado por simplificar o mundo open source para iniciantes.</p>
-    </div>
-  </aside></section>
+        <aside>
+            <div class="author-box">
+                <img src="https://example.com/foto-autor.jpg" alt="Foto do autor" />
+                <div>
+                    <p><strong>Piolinux</strong> é escritor de tecnologia com foco em Linux, apaixonado por simplificar o mundo open source para iniciantes.</p>
+                </div>
+            </div>
+        </aside>
 
-  <section>
-    <h2>FAQ - Perguntas frequentes</h2>
-    <dl>
-      <dt>É seguro remover programas pelo terminal?</dt>
-      <dd>Sim, desde que você saiba o nome correto do programa e use os comandos adequados.</dd>
+        <section>
+            <h2>FAQ - Perguntas frequentes</h2>
+            <dl>
+                <dt>É seguro remover programas pelo terminal?</dt>
+                <dd>Sim, desde que você saiba o nome correto do programa e use os comandos adequados.</dd>
+                <dt>Como saber quais programas posso remover?</dt>
+                <dd>Você pode usar <code>apt list --installed</code> ou acessar a Central de Aplicativos para ver o que está instalado.</dd>
+                <dt>O que são arquivos órfãos?</dt>
+                <dd>São dependências que foram instaladas com outros programas e não são mais usadas. Podem ser removidas com o comando <code>autoremove</code>.</dd>
+            </dl>
+        </section>
+    </main>
 
-      <dt>Como saber quais programas posso remover?</dt>
-      <dd>Você pode usar <code>apt list --installed</code> ou acessar a Central de Aplicativos para ver o que está instalado.</dd>
+    <footer>
+        Site criado com muito terminal e memes! Acesse:
+        <a href="#">Política de Privacidade</a> |
+        <a href="#">Termos de Uso</a>
+    </footer>
 
-      <dt>O que são arquivos órfãos?</dt>
-      <dd>São dependências que foram instaladas com outros programas e não são mais usadas. Podem ser removidas com o comando <code>autoremove</code>.</dd>
-    </dl>
-  </section>
-</main>
-
-  
-  <footer>
-    Site criado com muito terminal e memes! Acesse:
-    <a href="#">Política de Privacidade</a> |
-    <a href="#">Termos de Uso</a>
-  </footer>
-
-   <script src="loadMenu.js"></script>
+    <script src="loadMenu.js"></script>
 </body>
 </html>

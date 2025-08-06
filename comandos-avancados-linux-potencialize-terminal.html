@@ -1,130 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-   <title>Comandos avançados Linux: Aprenda a potencializar seu terminal</title>	
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Explore os comandos avançados do Linux para aumentar sua produtividade no terminal e dominar funcionalidades essenciais." />
-  <meta name="keywords" content="comandos avançados linux, terminal linux, linux produtividade, comandos linux intermediário, linux terminal dicas" />
-  <meta name="robots" content="index,nofollow">
-  <link rel="canonical" href="https://piolinux.com/comandos-avancados-linux-potencialize-terminal.html" />
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  
+    <title>Comandos avançados Linux: Aprenda a potencializar seu terminal</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Explore os comandos avançados do Linux para aumentar sua produtividade no terminal e dominar funcionalidades essenciais." />
+    <meta name="keywords" content="comandos avançados linux, terminal linux, linux produtividade, comandos linux intermediário, linux terminal dicas" />
+    <meta name="robots" content="index,nofollow">
+    <link rel="canonical" href="https://piolinux.com/comandos-avancados-linux-potencialize-terminal.html" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-  <header>
-  <h1>  Comandos para utilizar no Terminal Linux</h1>
-  </header>
+    <header>
+        <h1>Comandos para utilizar no Terminal Linux</h1>
+    </header>
 
-  <div id="menu-container"></div>
-<main>
-  <section>
-    <div id="share" style="text-align:center;margin:15px 0"></div>
-    <script async defer>
-      (() => {
-        const u = encodeURIComponent(location.href),
-              t = encodeURIComponent(document.title);
-        const d = [
-          ["Reddit", "#ff4500", `https://www.reddit.com/submit?url=${u}&title=${t}`],
-          ["Twitter", "#1da1f2", `https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-          ["WhatsApp", "#25d366", `https://api.whatsapp.com/send?text=${t}%20${u}`],
-          ["LinkedIn", "#0077b5", `https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-        ],
-        e = document.getElementById("share");
-        d.forEach(([n, c, l]) => {
-          const a = document.createElement("a");
-          a.href = l;
-          a.target = "_blank";
-          a.rel = "noopener";
-          a.textContent = n;
-          a.style = `
-            background:${c};
-            color:#fff;
-            padding:5px 10px;
-            margin:0 5px;
-            border-radius:4px;
-            font-size:12px;
-            text-decoration:none;
-            display:inline-block;
-          `;
-          e.appendChild(a);
-        });
-      })();
-    </script>
+    <div id="menu-container"></div>
 
-    <article>
-    <section>  <h2>Comandos para utilizar no Terminal Linux sem enrrolação</h2>
+    <main>
+        <div id="share" style="text-align:center;margin:15px 0"></div>
+        <script async defer>
+            (() => {
+                const u = encodeURIComponent(location.href),
+                    t = encodeURIComponent(document.title);
+                const d = [
+                    ["Reddit", "#ff4500", `https://www.reddit.com/submit?url=${u}&title=${t}`],
+                    ["Twitter", "#1da1f2", `https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+                    ["WhatsApp", "#25d366", `https://api.whatsapp.com/send?text=${t}%20${u}`],
+                    ["LinkedIn", "#0077b5", `https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+                ],
+                e = document.getElementById("share");
+                d.forEach(([n, c, l]) => {
+                    const a = document.createElement("a");
+                    a.href = l;
+                    a.target = "_blank";
+                    a.rel = "noopener";
+                    a.textContent = n;
+                    a.style = `
+                        background:${c};
+                        color:#fff;
+                        padding:5px 10px;
+                        margin:0 5px;
+                        border-radius:4px;
+                        font-size:12px;
+                        text-decoration:none;
+                        display:inline-block;
+                    `;
+                    e.appendChild(a);
+                });
+            })();
+        </script>
+        
+        <article>
+            <section>
+                <h2>Comandos para utilizar no Terminal Linux sem enrolação</h2>
+                <p>Domina os comandos básicos do Linux? Então está na hora de avançar para comandos mais poderosos e melhorar sua produtividade.</p>
+                <p>Veja dicas avançadas para se tornar um verdadeiro especialista no uso do terminal do Linux.</p>
+            </section>
 
-      <p>Domina os comandos básicos do Linux? Então está na hora de avançar para comandos mais poderosos e melhorar sua produtividade.</p>
+            <section>
+                <h2>Gerencie os arquivos utilizando comandos avançados</h2>
+                <p>Além dos comandos básicos, você pode usar comandos que manipulam arquivos de forma eficiente:</p>
+                <ul>
+                    <li><code>find</code>: busca arquivos e pastas com critérios como nome, tamanho ou data.</li>
+                    <li><code>grep</code>: procura por padrões de texto dentro dos arquivos.</li>
+                    <li><code>rsync</code>: sincroniza arquivos entre diretórios locais ou remotos.</li>
+                </ul>
+                <blockquote>Exemplo: <code>find /home -name "*.txt"</code> encontra todos os arquivos .txt na pasta /home.</blockquote>
+            </section>
 
-      <p>Veja dicas avançadas para se tornar um verdadeiro especialista no uso do terminal do Linux.</p></section>
+            <section>
+                <h2>Controlando as permissões e usuários</h2>
+                <p>Controlar o acesso aos arquivos é essencial em Linux. Veja os principais comandos:</p>
+                <ul>
+                    <li><code>chmod</code>: altera permissões de arquivos e diretórios.</li>
+                    <li><code>chown</code>: modifica o dono e grupo de arquivos e pastas.</li>
+                    <li><code>sudo</code>: executa comandos com privilégios administrativos.</li>
+                </ul>
+                <p>Utilize esses comandos com cautela para garantir segurança e organização.</p>
+            </section>
 
-     <section><h2>Gerencie os arquivos utilizando comandos avançados</h2>
+            <section>
+                <h2>Monitoramento e gerenciamento de processos</h2>
+                <p>Além do tradicional <code>top</code>, existem ferramentas mais avançadas:</p>
+                <ul>
+                    <li><code>htop</code>: visual mais amigável do <code>top</code> (pode ser instalado).</li>
+                    <li><code>ps aux</code>: exibe todos os processos com detalhes.</li>
+                    <li><code>kill PID</code>: encerra processos pelo seu número (PID).</li>
+                </ul>
+                <blockquote>Dica: Use <code>htop</code> para monitorar os processos de forma visual e interativa.</blockquote>
+            </section>
 
-      <p>Além dos comandos básicos, você pode usar comandos que manipulam arquivos de forma eficiente:</p>
-
-      <ul>
-        <li><code>find</code>: busca arquivos e pastas com critérios como nome, tamanho ou data.</li>
-        <li><code>grep</code>: procura por padrões de texto dentro dos arquivos.</li>
-        <li><code>rsync</code>: sincroniza arquivos entre diretórios locais ou remotos.</li>
-      </ul>
-
-      <blockquote>Exemplo: <code>find /home -name "*.txt"</code> encontra todos os arquivos .txt na pasta /home.</blockquote></section>
-
-     <section><h2>Controlando as permissões e usuários</h2>
-
-      <p>Controlar o acesso aos arquivos é essencial em Linux. Veja os principais comandos:</p>
-
-      <ul>
-        <li><code>chmod</code>: altera permissões de arquivos e diretórios.</li>
-        <li><code>chown</code>: modifica o dono e grupo de arquivos e pastas.</li>
-        <li><code>sudo</code>: executa comandos com privilégios administrativos.</li>
-      </ul>
-
-      <p>Utilize esses comandos com cautela para garantir segurança e organização.</p></section>
-
-      <section><h2>Monitoramento e gerenciamento de processos</h2>
-
-      <p>Além do tradicional <code>top</code>, existem ferramentas mais avançadas:</p>
-
-      <ul>
-        <li><code>htop</code>: visual mais amigável do <code>top</code> (pode ser instalado).</li>
-        <li><code>ps aux</code>: exibe todos os processos com detalhes.</li>
-        <li><code>kill PID</code>: encerra processos pelo seu número (PID).</li>
-      </ul>
-
-      <blockquote>Dica: Use <code>htop</code> para monitorar os processos de forma visual e interativa.</blockquote></section>
-
-     <section><h2>Automatizando tarefas com scripts</h2>
-
-      <p>Você pode criar scripts em Bash para automatizar tarefas:</p>
-
-      <pre><code>#!/bin/bash
+            <section>
+                <h2>Automatizando tarefas com scripts</h2>
+                <p>Você pode criar scripts em Bash para automatizar tarefas:</p>
+                <pre><code>#!/bin/bash
 echo "Backup iniciado..."
 rsync -av --delete /home/usuario/documentos/ /backup/documentos/
 echo "Backup concluído!"</code></pre>
+                <p>Salve com extensão <code>.sh</code>, dê permissão com <code>chmod +x script.sh</code> e execute com <code>./script.sh</code>.</p>
+            </section>
 
-      <p>Salve com extensão <code>.sh</code>, dê permissão com <code>chmod +x script.sh</code> e execute com <code>./script.sh</code>.</p></section>
+            <section>
+                <h2>Conclusão</h2>
+                <p>Com esses comandos avançados, você amplia suas possibilidades no uso do terminal Linux.</p>
+                <p>Pratique cada comando, experimente e crie seus próprios scripts para facilitar sua rotina.</p>
+                <p>Dominar o terminal é uma jornada poderosa e contínua no mundo Linux.</p>
+            </section>
+        </article>
+    </main>
 
-      <section><h2>Conclusão</h2>
-
-      <p>Com esses comandos avançados, você amplia suas possibilidades no uso do terminal Linux.</p>
-
-      <p>Pratique cada comando, experimente e crie seus próprios scripts para facilitar sua rotina.</p>
-
-      <p>Dominar o terminal é uma jornada poderosa e contínua no mundo Linux.</p>
-    </article>
-  </section>
-</main>
-
-
-  <footer>
+    <footer>
     Site criado com muito terminal e memes! Acesse:
-    <a href="#">Política de Privacidade</a> |
-    <a href="#">Termos de Uso</a>
+    <a href="politica-de-privacidade.html">Política de Privacidade</a> |
+    <a href="termos-de-uso.html">Termos de Uso</a>
   </footer>
 
-  <script src="loadMenu.js"></script>
+
+    <script src="loadMenu.js"></script>
 </body>
 </html>

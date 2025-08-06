@@ -1,144 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-   <meta charset="UTF-8">
-  <title>Utilitários Online - PioLinux</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ferramentas úteis: QR Code, formulário de contato, Pomodoro, to-do list, relógio digital e mais">
-  <meta name="keywords" content="qrcode, pomodoro, lista de tarefas, relógio digital, copiar código, ferramentas online">
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://piolinux.com/utilitarios.html">
-  <link href="style.css" rel="stylesheet" type="text/css" />
- 
-  
-  
+    <meta charset="UTF-8">
+    <title>Utilitários Online - PioLinux</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ferramentas úteis para o dia a dia: gerador de QR Code, temporizador Pomodoro, lista de tarefas, relógio digital, formulário de contato e mais.">
+    <meta name="keywords" content="qrcode, pomodoro, lista de tarefas, relógio digital, copiar código, ferramentas online">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://piolinux.com/utilitarios.html">
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-  <header>
-  <h1>    🧰 Utilitários Online - PioLinux</h1>
-  </header>
+    <header>
+        <h1>🧰 Utilitários Online</h1>
+    </header>
 
+    <div id="menu-container"></div>
 
-<div id="menu-container"></div>
-  
-   <main>
-    <section>
-      <h2>📧 Formulário de Contato</h2>
-      <form onsubmit="alert('Mensagem enviada!'); return false;">
-        <input type="text" placeholder="Seu nome" required>
-        <input type="email" placeholder="Seu email" required>
-        <textarea placeholder="Sua mensagem" rows="4" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
+    <main>
+		
+		<div id="share" style="text-align:center;margin:15px 0"></div>
+        <script async defer>
+            (() => {
+                const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+                const d=[
+                    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+                    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+                    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+                    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+                ],e=document.getElementById("share");
+                d.forEach(([n,c,l])=>{
+                    let a=document.createElement("a");
+                    a.href=l;a.target="_blank";a.rel="noopener";
+                    a.textContent=n;
+                    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+                    e.appendChild(a);
+                });
+            })();
+        </script>
+        <section>
+            <h2>📧 Formulário de Contato</h2>
+            <form onsubmit="alert('Mensagem enviada!'); return false;">
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <textarea placeholder="Sua mensagem" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
 
-    <section>
-      <h2>🔳 Gerador de QR Code</h2>
-      <input type="text" id="qrtext" placeholder="Digite algo">
-      <button onclick="gerarQRCode()">Gerar</button>
-      <canvas id="qrcodeCanvas"></canvas>
-    </section>
+        <section>
+            <h2>🔳 Gerador de QR Code</h2>
+            <p>Insira um texto ou URL para gerar um QR Code instantaneamente.</p>
+            <input type="text" id="qrtext" placeholder="Digite algo aqui">
+            <button onclick="gerarQRCode()">Gerar</button>
+            <canvas id="qrcodeCanvas"></canvas>
+        </section>
 
-    <section>
-      <h2>📋 Copiar Código com um Clique</h2>
-      <pre><code id="codigo">sudo apt update && sudo apt upgrade</code></pre>
-      <button onclick="copiarCodigo()">Copiar</button>
-    </section>
+        <section>
+            <h2>📋 Copiar Código com um Clique</h2>
+            <p>Clique no botão para copiar o comando exibido abaixo para a área de transferência.</p>
+            <pre><code id="codigo">sudo apt update && sudo apt upgrade</code></pre>
+            <button onclick="copiarCodigo()">Copiar</button>
+        </section>
 
-    <section>
-      <h2>⏱️ Temporizador Pomodoro</h2>
-      <p id="pomodoro">25:00</p>
-      <button onclick="iniciarPomodoro()">Iniciar</button>
-    </section>
+        <section>
+            <h2>⏱️ Temporizador Pomodoro</h2>
+            <p>Gerencie seu tempo com a técnica Pomodoro. O temporizador está configurado para 25 minutos.</p>
+            <p id="pomodoro">25:00</p>
+            <button onclick="iniciarPomodoro()">Iniciar</button>
+        </section>
 
-    <section>
-      <h2>📝 Lista de Tarefas</h2>
-      <input type="text" id="novaTarefa" placeholder="Digite uma tarefa">
-      <button onclick="adicionarTarefa()">Adicionar</button>
-      <ul id="listaTarefas"></ul>
-    </section>
+        <section>
+            <h2>📝 Lista de Tarefas</h2>
+            <p>Adicione e gerencie suas tarefas diárias de forma simples.</p>
+            <input type="text" id="novaTarefa" placeholder="Digite uma tarefa">
+            <button onclick="adicionarTarefa()">Adicionar</button>
+            <ul id="listaTarefas"></ul>
+        </section>
 
-    <section>
-      <h2>🧮 Calculadora</h2>
-      <input type="text" id="expr" placeholder="Ex: 5+10/2">
-      <button onclick="calcular()">Calcular</button>
-      <p id="resultado"></p>
-    </section>
+        <section>
+            <h2>🧮 Calculadora Simples</h2>
+            <p>Insira uma expressão matemática para obter o resultado.</p>
+            <input type="text" id="expr" placeholder="Ex: 5+10/2">
+            <button onclick="calcular()">Calcular</button>
+            <p id="resultado"></p>
+        </section>
 
-    <section>
-      <h2>⏰ Relógio Digital</h2>
-      <div id="clock"></div>
-    </section>
-  </main>
+        <section>
+            <h2>⏰ Relógio Digital</h2>
+            <p>Veja a hora em tempo real.</p>
+            <div id="clock"></div>
+        </section>
+    </main>
 
+    
 
-  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
-  <script>
-    function gerarQRCode() {
-      let canvas = document.getElementById("qrcodeCanvas");
-      let texto = document.getElementById("qrtext").value;
-      QRCode.toCanvas(canvas, texto, error => {
-        if (error) console.error(error);
-      });
-    }
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script>
+        function gerarQRCode() {
+            let canvas = document.getElementById("qrcodeCanvas");
+            let texto = document.getElementById("qrtext").value;
+            QRCode.toCanvas(canvas, texto, error => {
+                if (error) console.error(error);
+            });
+        }
 
-    function copiarCodigo() {
-      const texto = document.getElementById("codigo").innerText;
-      navigator.clipboard.writeText(texto).then(() => alert("Código copiado!"));
-    }
+        function copiarCodigo() {
+            const texto = document.getElementById("codigo").innerText;
+            navigator.clipboard.writeText(texto).then(() => alert("Código copiado!"));
+        }
 
-    let pomodoroTimer;
-    function iniciarPomodoro() {
-      let tempo = 25 * 60;
-      clearInterval(pomodoroTimer);
-      pomodoroTimer = setInterval(() => {
-        let min = Math.floor(tempo / 60);
-        let seg = tempo % 60;
-        document.getElementById("pomodoro").innerText = `${min}:${seg < 10 ? '0' : ''}${seg}`;
-        if (--tempo < 0) clearInterval(pomodoroTimer);
-      }, 1000);
-    }
+        let pomodoroTimer;
+        function iniciarPomodoro() {
+            let tempo = 25 * 60;
+            clearInterval(pomodoroTimer);
+            pomodoroTimer = setInterval(() => {
+                let min = Math.floor(tempo / 60);
+                let seg = tempo % 60;
+                document.getElementById("pomodoro").innerText = `${min}:${seg < 10 ? '0' : ''}${seg}`;
+                if (--tempo < 0) clearInterval(pomodoroTimer);
+            }, 1000);
+        }
 
-    function adicionarTarefa() {
-      const input = document.getElementById("novaTarefa");
-      const ul = document.getElementById("listaTarefas");
-      if (input.value.trim()) {
-        let li = document.createElement("li");
-        li.textContent = input.value;
-        ul.appendChild(li);
-        input.value = "";
-      }
-    }
+        function adicionarTarefa() {
+            const input = document.getElementById("novaTarefa");
+            const ul = document.getElementById("listaTarefas");
+            if (input.value.trim()) {
+                let li = document.createElement("li");
+                li.textContent = input.value;
+                ul.appendChild(li);
+                input.value = "";
+            }
+        }
 
-    function calcular() {
-      const expr = document.getElementById("expr").value;
-      try {
-        const res = eval(expr);
-        document.getElementById("resultado").innerText = `Resultado: ${res}`;
-      } catch {
-        document.getElementById("resultado").innerText = "Expressão inválida!";
-      }
-    }
+        function calcular() {
+            const expr = document.getElementById("expr").value;
+            try {
+                const res = eval(expr);
+                document.getElementById("resultado").innerText = `Resultado: ${res}`;
+            } catch {
+                document.getElementById("resultado").innerText = "Expressão inválida!";
+            }
+        }
 
-    function atualizarRelogio() {
-      const agora = new Date();
-      const h = agora.getHours().toString().padStart(2, '0');
-      const m = agora.getMinutes().toString().padStart(2, '0');
-      const s = agora.getSeconds().toString().padStart(2, '0');
-      document.getElementById("clock").innerText = `${h}:${m}:${s}`;
-    }
-    setInterval(atualizarRelogio, 1000);
-    atualizarRelogio();
-  </script>
-</body>
-
-  <footer>
+        function atualizarRelogio() {
+            const agora = new Date();
+            const h = agora.getHours().toString().padStart(2, '0');
+            const m = agora.getMinutes().toString().padStart(2, '0');
+            const s = agora.getSeconds().toString().padStart(2, '0');
+            document.getElementById("clock").innerText = `${h}:${m}:${s}`;
+        }
+        setInterval(atualizarRelogio, 1000);
+        atualizarRelogio();
+    </script>
+    <script src="loadMenu.js"></script>
+    
+    
+    <footer>
     Site criado com muito terminal e memes! Acesse:
-    <a href="#">Política de Privacidade</a> |
-    <a href="#">Termos de Uso</a>
+    <a href="politica-de-privacidade.html">Política de Privacidade</a> |
+    <a href="termos-de-uso.html">Termos de Uso</a>
   </footer>
 
-  <script src="loadMenu.js"></script>
+    
 </body>
 </html>

@@ -1,124 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title> 80 Dicas Rápidas de Linux Passo a passo para iniciantes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dicas de Linux para todos: aprenda comandos, truques e configurações de forma simples, com explicações acessíveis e bom humor!">
-  <meta name="keywords" content="linux, dicas linux, comandos linux, terminal, sysadmin, ubuntu, debian, fedora, shell script, piolinux">
-  <link rel="canonical" href="https://www.piolinux.com/80-Dicas-Rápidas-de-Linux.html" />
-  <meta name="author" content="PioLinux">
-  <meta name="robots" content="index,nofollow">
-   <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-  
+    <meta charset="UTF-8">
+    <title>80 Dicas Rápidas de Linux Passo a passo para iniciantes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dicas de Linux para todos: aprenda comandos, truques e configurações de forma simples, com explicações acessíveis e bom humor!">
+    <meta name="keywords" content="linux, dicas linux, comandos linux, terminal, sysadmin, ubuntu, debian, fedora, shell script, piolinux">
+    <link rel="canonical" href="https://www.piolinux.com/80-Dicas-Rápidas-de-Linux.html" />
+    <meta name="author" content="PioLinux">
+    <meta name="robots" content="index,nofollow">
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-  <header>
-  <h1>  80 Dicas Rápidas de Linux Passo a passo para iniciantes</h1>
-  </header>
+    <header>
+        <h1>80 Dicas Rápidas de Linux Passo a passo para iniciantes</h1>
+    </header>
 
-<div id="menu-container"></div>
+    <div id="menu-container"></div>
 
+    <main>
+		
+		<div id="share" style="text-align:center;margin:15px 0"></div>
+    <script async defer>
+      (() => {
+        const u = encodeURIComponent(location.href),
+              t = encodeURIComponent(document.title);
+        const d = [
+          ["Reddit", "#ff4500", `https://www.reddit.com/submit?url=${u}&title=${t}`],
+          ["Twitter", "#1da1f2", `https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+          ["WhatsApp", "#25d366", `https://api.whatsapp.com/send?text=${t}%20${u}`],
+          ["LinkedIn", "#0077b5", `https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+        ],
+        e = document.getElementById("share");
+        d.forEach(([n, c, l]) => {
+          const a = document.createElement("a");
+          a.href = l;
+          a.target = "_blank";
+          a.rel = "noopener";
+          a.textContent = n;
+          a.style = `
+            background:${c};
+            color:#fff;
+            padding:5px 10px;
+            margin:0 5px;
+            border-radius:4px;
+            font-size:12px;
+            text-decoration:none;
+            display:inline-block;
+          `;
+          e.appendChild(a);
+        });
+      })();
+    </script>
+		
+        <section>
+            <h2>Confira as dicas para utilizar no Dia a dia</h2>
+            <ul>
+                <li><strong>1.</strong> Use o comando <code>ls</code> para listar arquivos e diretórios. Ele mostra tudo que está dentro do diretório atual. Para listar com detalhes, use <code>ls -l</code>.</li>
+                <li><strong>2.</strong> Navegue entre diretórios com o comando <code>cd</code>. Por exemplo, <code>cd /home/usuario</code> te leva para a pasta especificada.</li>
+                <li><strong>3.</strong> Volte para o diretório anterior com <code>cd ..</code>. Isso sobe um nível na hierarquia de pastas.</li>
+                <li><strong>4.</strong> Use <code>pwd</code> para saber o caminho completo do diretório atual. Útil para não se perder no sistema.</li>
+                <li><strong>5.</strong> Copie arquivos com o comando <code>cp</code>. Exemplo: <code>cp arquivo.txt /home/usuario/Documentos/</code>.</li>
+                <li><strong>6.</strong> Mova ou renomeie arquivos com <code>mv</code>. Por exemplo: <code>mv arquivo.txt /home/usuario/Documentos/</code> ou <code>mv arquivo1.txt arquivo2.txt</code>.</li>
+                <li><strong>7.</strong> Apague arquivos com <code>rm</code>. Use <code>rm arquivo.txt</code> para apagar. Cuidado: não há lixeira, é definitivo!</li>
+                <li><strong>8.</strong> Para apagar diretórios, use <code>rm -r nome_do_diretorio</code>. O parâmetro <code>-r</code> é para apagar recursivamente tudo dentro do diretório.</li>
+                <li><strong>9.</strong> Visualize o conteúdo de arquivos com <code>cat</code>. Exemplo: <code>cat arquivo.txt</code> imprime o texto na tela.</li>
+                <li><strong>10.</strong> Para ler arquivos grandes, use <code>less</code> ou <code>more</code>. Exemplo: <code>less arquivo.log</code> permite navegar para frente e para trás.</li>
+                <li><strong>11.</strong> Crie diretórios com <code>mkdir</code>. Exemplo: <code>mkdir nova_pasta</code> cria uma nova pasta.</li>
+                <li><strong>12.</strong> Busque arquivos com <code>find</code>. Exemplo: <code>find /home/usuario -name "*.txt"</code> lista todos os arquivos .txt.</li>
+                <li><strong>13.</strong> Use <code>grep</code> para buscar texto dentro de arquivos. Exemplo: <code>grep "palavra" arquivo.txt</code> mostra as linhas com “palavra”.</li>
+                <li><strong>14.</strong> Veja o uso do disco com <code>df -h</code>. Mostra espaço ocupado e disponível em formato legível.</li>
+                <li><strong>15.</strong> Cheque o uso de espaço em diretórios com <code>du -sh *</code>. Exibe o tamanho dos arquivos e pastas no diretório atual.</li>
+                <li><strong>16.</strong> Monitore processos com <code>top</code>. Lista processos ativos em tempo real.</li>
+                <li><strong>17.</strong> Use <code>ps aux</code> para listar todos os processos. Detalha quem está rodando o que no sistema.</li>
+                <li><strong>18.</strong> Mate processos com <code>kill PID</code>. Onde PID é o número do processo, obtido pelo <code>ps</code> ou <code>top</code>.</li>
+                <li><strong>19.</strong> Atualize os pacotes do sistema (Debian/Ubuntu) com <code>sudo apt update && sudo apt upgrade</code>.</li>
+                <li><strong>20.</strong> No Fedora/RedHat, use <code>sudo dnf update</code>.</li>
+                <li><strong>21.</strong> Instale programas via terminal com <code>apt install</code> ou <code>dnf install</code>. Exemplo: <code>sudo apt install vim</code>.</li>
+                <li><strong>22.</strong> Para editar arquivos, use editores como <code>nano</code> ou <code>vim</code>. <code>nano arquivo.txt</code> é mais simples para iniciantes.</li>
+                <li><strong>23.</strong> Veja permissões dos arquivos com <code>ls -l</code>. Permissões aparecem como <code>rwxr-xr-x</code>.</li>
+                <li><strong>24.</strong> Modifique permissões com <code>chmod</code>. Exemplo: <code>chmod +x script.sh</code> para tornar o script executável.</li>
+                <li><strong>25.</strong> Altere o dono do arquivo com <code>chown</code>. Exemplo: <code>sudo chown usuario:grupo arquivo.txt</code>.</li>
+                <li><strong>26.</strong> Use <code>history</code> para ver os últimos comandos executados. Ajuda a repetir comandos antigos.</li>
+                <li><strong>27.</strong> Limpe a tela do terminal com <code>clear</code>. Para manter o terminal organizado.</li>
+                <li><strong>28.</strong> Crie links simbólicos com <code>ln -s</code>. Exemplo: <code>ln -s /caminho/real /caminho/do/link</code>.</li>
+                <li><strong>29.</strong> Configure variáveis de ambiente no terminal. Exemplo: <code>export VARIAVEL=valor</code>.</li>
+                <li><strong>30.</strong> Veja variáveis de ambiente com <code>printenv</code>.</li>
+                <li><strong>31.</strong> Use o comando <code>wget</code> para baixar arquivos da internet. Exemplo: <code>wget https://exemplo.com/arquivo.zip</code>.</li>
+                <li><strong>32.</strong> Compacte arquivos com <code>tar</code>. Exemplo: <code>tar -czvf arquivo.tar.gz pasta/</code>.</li>
+                <li><strong>33.</strong> Descompacte arquivos com <code>tar -xzvf</code>. Exemplo: <code>tar -xzvf arquivo.tar.gz</code>.</li>
+                <li><strong>34.</strong> Veja o conteúdo de um arquivo compactado sem extrair. Exemplo: <code>tar -tf arquivo.tar.gz</code>.</li>
+                <li><strong>35.</strong> Veja a versão do Linux com <code>uname -a</code>.</li>
+                <li><strong>36.</strong> Descubra informações detalhadas do sistema com <code>lsb_release -a</code>. Pode não estar instalado em todas as distros.</li>
+                <li><strong>37.</strong> Cheque o espaço de swap com <code>swapon -s</code>.</li>
+                <li><strong>38.</strong> Ative swap temporariamente com <code>sudo swapon /swapfile</code>.</li>
+                <li><strong>39.</strong> Desative swap com <code>sudo swapoff /swapfile</code>.</li>
+                <li><strong>40.</strong> Reinicie o sistema com <code>sudo reboot</code>.</li>
+                <li><strong>41.</strong> Use <code>history | grep comando</code> para encontrar comandos antigos.</li>
+                <li><strong>42.</strong> Rode <code>sudo !!</code> para repetir o último comando com permissão de superusuário.</li>
+                <li><strong>43.</strong> Utilize <code>watch -n 1 comando</code> para ver atualizações em tempo real.</li>
+                <li><strong>44.</strong> Com o comando <code>alias</code>, você cria atalhos para comandos longos.</li>
+                <li><strong>45.</strong> Para ver uso de disco: <code>df -h</code>.</li>
+                <li><strong>46.</strong> Para ver uso de diretórios: <code>du -sh *</code>.</li>
+                <li><strong>47.</strong> Ative o autocomplete com a tecla <code>Tab</code>.</li>
+                <li><strong>48.</strong> Use <code>uptime</code> para ver há quanto tempo o sistema está ligado.</li>
+                <li><strong>49.</strong> Veja logs do sistema com <code>journalctl</code>.</li>
+                <li><strong>50.</strong> Use <code>man comando</code> para ler o manual de qualquer comando.</li>
+                <li><strong>51.</strong> Baixe arquivos com <code>wget</code> ou <code>curl</code>.</li>
+                <li><strong>52.</strong> Use <code>rsync</code> para sincronização de arquivos entre sistemas.</li>
+                <li><strong>53.</strong> Use <code>cron</code> para agendar tarefas automáticas.</li>
+                <li><strong>54.</strong> Crie scripts para rotinas comuns com Bash.</li>
+                <li><strong>55.</strong> Monitore o sistema com <code>htop</code> ou <code>glances</code>.</li>
+                <li><strong>56.</strong> Use <code>ncdu</code> para encontrar arquivos que ocupam muito espaço.</li>
+                <li><strong>57.</strong> Monte unidades USB com <code>mount</code> e desmonte com <code>umount</code>.</li>
+                <li><strong>58.</strong> Veja informações de hardware com <code>lshw</code> e <code>lscpu</code>.</li>
+                <li><strong>59.</strong> Descubra seu IP com <code>ip a</code> ou <code>hostname -I</code>.</li>
+                <li><strong>60.</strong> Teste conexão com <code>ping</code> e <code>traceroute</code>.</li>
+                <li><strong>61.</strong> Use <code>netstat</code> ou <code>ss</code> para ver conexões abertas.</li>
+                <li><strong>62.</strong> Utilize o <code>nc</code> para testar portas.</li>
+                <li><strong>63.</strong> Instale e configure firewall com <code>ufw</code> ou <code>firewalld</code>.</li>
+                <li><strong>64.</strong> Limpe o cache do apt com <code>sudo apt clean</code>.</li>
+                <li><strong>65.</strong> Atualize a lista de repositórios com <code>sudo apt update</code>.</li>
+                <li><strong>66.</strong> Verifique atualizações com <code>apt list --upgradable</code>.</li>
+                <li><strong>67.</strong> Use <code>dpkg -l</code> para listar pacotes instalados.</li>
+                <li><strong>68.</strong> Use <code>snap list</code> ou <code>flatpak list</code> para apps snap e flatpak.</li>
+                <li><strong>69.</strong> Veja processos com <code>ps aux</code>.</li>
+                <li><strong>70.</strong> Finalize processos com <code>kill</code> ou <code>killall</code>.</li>
+                <li><strong>71.</strong> Execute programas em segundo plano com <code>&</code> no final.</li>
+                <li><strong>72.</strong> Traga o processo de volta com <code>fg</code>.</li>
+                <li><strong>73.</strong> Use <code>chmod</code> e <code>chown</code> para permissões.</li>
+                <li><strong>74.</strong> Crie grupos e usuários com <code>adduser</code> e <code>addgroup</code>.</li>
+                <li><strong>75.</strong> Edite arquivos com <code>nano</code>, <code>vim</code> ou <code>gedit</code>.</li>
+                <li><strong>76.</strong> Use <code>locate</code> para buscar arquivos rapidamente.</li>
+                <li><strong>77.</strong> Combine comandos com <code>|</code> (pipe).</li>
+                <li><strong>78.</strong> Execute vários comandos com <code>;</code> ou <code>&&</code>.</li>
+                <li><strong>79.</strong> Use <code>alias</code> no <code>~/.bashrc</code> para torná-los permanentes.</li>
+                <li><strong>80.</strong> Compartilhe essas dicas com quem está aprendendo Linux!</li>
+            </ul>
+        </section>
+    </main>
 
-  <main>
-    <section>
-      <h2>Confira as dicas para utilizar no Dia a dia</h2>
-      <ul>
-        <li><strong>1.</strong> Use o comando <code>ls</code> para listar arquivos e diretórios. Ele mostra tudo que está dentro do diretório atual. Para listar com detalhes, use <code>ls -l</code>.</li>
-<li><strong>2.</strong> Navegue entre diretórios com o comando <code>cd</code>. Por exemplo, <code>cd /home/usuario</code> te leva para a pasta especificada.</li>
-<li><strong>3.</strong> Volte para o diretório anterior com <code>cd ..</code>. Isso sobe um nível na hierarquia de pastas.</li>
-<li><strong>4.</strong> Use <code>pwd</code> para saber o caminho completo do diretório atual. Útil para não se perder no sistema.</li>
-<li><strong>5.</strong> Copie arquivos com o comando <code>cp</code>. Exemplo: <code>cp arquivo.txt /home/usuario/Documentos/</code>.</li>
-<li><strong>6.</strong> Mova ou renomeie arquivos com <code>mv</code>. Por exemplo: <code>mv arquivo.txt /home/usuario/Documentos/</code> ou <code>mv arquivo1.txt arquivo2.txt</code>.</li>
-<li><strong>7.</strong> Apague arquivos com <code>rm</code>. Use <code>rm arquivo.txt</code> para apagar. Cuidado: não há lixeira, é definitivo!</li>
-<li><strong>8.</strong> Para apagar diretórios, use <code>rm -r nome_do_diretorio</code>. O parâmetro <code>-r</code> é para apagar recursivamente tudo dentro do diretório.</li>
-<li><strong>9.</strong> Visualize o conteúdo de arquivos com <code>cat</code>. Exemplo: <code>cat arquivo.txt</code> imprime o texto na tela.</li>
-<li><strong>10.</strong> Para ler arquivos grandes, use <code>less</code> ou <code>more</code>. Exemplo: <code>less arquivo.log</code> permite navegar para frente e para trás.</li>
-<li><strong>11.</strong> Crie diretórios com <code>mkdir</code>. Exemplo: <code>mkdir nova_pasta</code> cria uma nova pasta.</li>
-<li><strong>12.</strong> Busque arquivos com <code>find</code>. Exemplo: <code>find /home/usuario -name "*.txt"</code> lista todos os arquivos .txt.</li>
-<li><strong>13.</strong> Use <code>grep</code> para buscar texto dentro de arquivos. Exemplo: <code>grep "palavra" arquivo.txt</code> mostra as linhas com “palavra”.</li>
-<li><strong>14.</strong> Veja o uso do disco com <code>df -h</code>. Mostra espaço ocupado e disponível em formato legível.</li>
-<li><strong>15.</strong> Cheque o uso de espaço em diretórios com <code>du -sh *</code>. Exibe o tamanho dos arquivos e pastas no diretório atual.</li>
-<li><strong>16.</strong> Monitore processos com <code>top</code>. Lista processos ativos em tempo real.</li>
-<li><strong>17.</strong> Use <code>ps aux</code> para listar todos os processos. Detalha quem está rodando o que no sistema.</li>
-<li><strong>18.</strong> Mate processos com <code>kill PID</code>. Onde PID é o número do processo, obtido pelo <code>ps</code> ou <code>top</code>.</li>
-<li><strong>19.</strong> Atualize os pacotes do sistema (Debian/Ubuntu) com <code>sudo apt update && sudo apt upgrade</code>.</li>
-<li><strong>20.</strong> No Fedora/RedHat, use <code>sudo dnf update</code>.</li>
-<li><strong>21.</strong> Instale programas via terminal com <code>apt install</code> ou <code>dnf install</code>. Exemplo: <code>sudo apt install vim</code>.</li>
-<li><strong>22.</strong> Para editar arquivos, use editores como <code>nano</code> ou <code>vim</code>. <code>nano arquivo.txt</code> é mais simples para iniciantes.</li>
-<li><strong>23.</strong> Veja permissões dos arquivos com <code>ls -l</code>. Permissões aparecem como <code>rwxr-xr-x</code>.</li>
-<li><strong>24.</strong> Modifique permissões com <code>chmod</code>. Exemplo: <code>chmod +x script.sh</code> para tornar o script executável.</li>
-<li><strong>25.</strong> Altere o dono do arquivo com <code>chown</code>. Exemplo: <code>sudo chown usuario:grupo arquivo.txt</code>.</li>
-<li><strong>26.</strong> Use <code>history</code> para ver os últimos comandos executados. Ajuda a repetir comandos antigos.</li>
-<li><strong>27.</strong> Limpe a tela do terminal com <code>clear</code>. Para manter o terminal organizado.</li>
-<li><strong>28.</strong> Crie links simbólicos com <code>ln -s</code>. Exemplo: <code>ln -s /caminho/real /caminho/do/link</code>.</li>
-<li><strong>29.</strong> Configure variáveis de ambiente no terminal. Exemplo: <code>export VARIAVEL=valor</code>.</li>
-<li><strong>30.</strong> Veja variáveis de ambiente com <code>printenv</code>.</li>
-<li><strong>31.</strong> Use o comando <code>wget</code> para baixar arquivos da internet. Exemplo: <code>wget https://exemplo.com/arquivo.zip</code>.</li>
-<li><strong>32.</strong> Compacte arquivos com <code>tar</code>. Exemplo: <code>tar -czvf arquivo.tar.gz pasta/</code>.</li>
-<li><strong>33.</strong> Descompacte arquivos com <code>tar -xzvf</code>. Exemplo: <code>tar -xzvf arquivo.tar.gz</code>.</li>
-<li><strong>34.</strong> Veja o conteúdo de um arquivo compactado sem extrair. Exemplo: <code>tar -tf arquivo.tar.gz</code>.</li>
-<li><strong>35.</strong> Veja a versão do Linux com <code>uname -a</code>.</li>
-<li><strong>36.</strong> Descubra informações detalhadas do sistema com <code>lsb_release -a</code>. Pode não estar instalado em todas as distros.</li>
-<li><strong>37.</strong> Cheque o espaço de swap com <code>swapon -s</code>.</li>
-<li><strong>38.</strong> Ative swap temporariamente com <code>sudo swapon /swapfile</code>.</li>
-<li><strong>39.</strong> Desative swap com <code>sudo swapoff /swapfile</code>.</li>
-<li><strong>40.</strong> Reinicie o sistema com <code>sudo reboot</code>.</li>
-<li><strong>41.</strong> Use <code>history | grep comando</code> para encontrar comandos antigos.</li>
-      <li><strong>42.</strong> Rode <code>sudo !!</code> para repetir o último comando com permissão de superusuário.</li>
-      <li><strong>43.</strong> Utilize <code>watch -n 1 comando</code> para ver atualizações em tempo real.</li>
-      <li><strong>44.</strong> Com o comando <code>alias</code>, você cria atalhos para comandos longos.</li>
-      <li><strong>45.</strong> Para ver uso de disco: <code>df -h</code>.</li>
-      <li><strong>46.</strong> Para ver uso de diretórios: <code>du -sh *</code>.</li>
-      <li><strong>47.</strong> Ative o autocomplete com a tecla <code>Tab</code>.</li>
-      <li><strong>48.</strong> Use <code>uptime</code> para ver há quanto tempo o sistema está ligado.</li>
-      <li><strong>49.</strong> Veja logs do sistema com <code>journalctl</code>.</li>
-      <li><strong>50.</strong> Use <code>man comando</code> para ler o manual de qualquer comando.</li>
-      <li><strong>51.</strong> Baixe arquivos com <code>wget</code> ou <code>curl</code>.</li>
-      <li><strong>52.</strong> Use <code>rsync</code> para sincronização de arquivos entre sistemas.</li>
-      <li><strong>53.</strong> Use <code>cron</code> para agendar tarefas automáticas.</li>
-      <li><strong>54.</strong> Crie scripts para rotinas comuns com Bash.</li>
-      <li><strong>55.</strong> Monitore o sistema com <code>htop</code> ou <code>glances</code>.</li>
-      <li><strong>56.</strong> Use <code>ncdu</code> para encontrar arquivos que ocupam muito espaço.</li>
-      <li><strong>57.</strong> Monte unidades USB com <code>mount</code> e desmonte com <code>umount</code>.</li>
-      <li><strong>58.</strong> Veja informações de hardware com <code>lshw</code> e <code>lscpu</code>.</li>
-      <li><strong>59.</strong> Descubra seu IP com <code>ip a</code> ou <code>hostname -I</code>.</li>
-      <li><strong>60.</strong> Teste conexão com <code>ping</code> e <code>traceroute</code>.</li>
-      <li><strong>61.</strong> Use <code>netstat</code> ou <code>ss</code> para ver conexões abertas.</li>
-      <li><strong>62.</strong> Utilize o <code>nc</code> para testar portas.</li>
-      <li><strong>63.</strong> Instale e configure firewall com <code>ufw</code> ou <code>firewalld</code>.</li>
-      <li><strong>64.</strong> Limpe o cache do apt com <code>sudo apt clean</code>.</li>
-      <li><strong>65.</strong> Atualize a lista de repositórios com <code>sudo apt update</code>.</li>
-      <li><strong>66.</strong> Verifique atualizações com <code>apt list --upgradable</code>.</li>
-      <li><strong>67.</strong> Use <code>dpkg -l</code> para listar pacotes instalados.</li>
-      <li><strong>68.</strong> Use <code>snap list</code> ou <code>flatpak list</code> para apps snap e flatpak.</li>
-      <li><strong>69.</strong> Veja processos com <code>ps aux</code>.</li>
-      <li><strong>70.</strong> Finalize processos com <code>kill</code> ou <code>killall</code>.</li>
-      <li><strong>71.</strong> Execute programas em segundo plano com <code>&</code> no final.</li>
-      <li><strong>72.</strong> Traga o processo de volta com <code>fg</code>.</li>
-      <li><strong>73.</strong> Use <code>chmod</code> e <code>chown</code> para permissões.</li>
-      <li><strong>74.</strong> Crie grupos e usuários com <code>adduser</code> e <code>addgroup</code>.</li>
-      <li><strong>75.</strong> Edite arquivos com <code>nano</code>, <code>vim</code> ou <code>gedit</code>.</li>
-      <li><strong>76.</strong> Use <code>locate</code> para buscar arquivos rapidamente.</li>
-      <li><strong>77.</strong> Combine comandos com <code>|</code> (pipe).</li>
-      <li><strong>78.</strong> Execute vários comandos com <code>;</code> ou <code>&&</code>.</li>
-      <li><strong>79.</strong> Use <code>alias</code> no <code>~/.bashrc</code> para torná-los permanentes.</li>
-      <li><strong>80.</strong> Compartilhe essas dicas com quem está aprendendo Linux!</li>
-      </ul>
-    
-
-   
-    </section>
-  </main>
-
-  <footer>
+    <footer>
     Site criado com muito terminal e memes! Acesse:
-    <a href="#">Política de Privacidade</a> |
-    <a href="#">Termos de Uso</a>
+    <a href="politica-de-privacidade.html">Política de Privacidade</a> |
+    <a href="termos-de-uso.html">Termos de Uso</a>
   </footer>
 
-   <script src="loadMenu.js"></script>
+
+    <script src="loadMenu.js"></script>
 </body>
 </html>

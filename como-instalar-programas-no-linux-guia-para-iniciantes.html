@@ -1,153 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Aprenda como instalar programas no Linux facilmente com este guia para iniciantes. Passo a passo para usar comandos e lojas de aplicativos." />
-  <meta name="keywords" content="instalar programas linux, como instalar linux, guia linux iniciantes, instalar software linux, linux apps" />
-  <meta name="robots" content="index,nofollow" />
-  <link rel="canonical" href="https://piolinux.com/como-instalar-programas-no-linux-guia-para-iniciantes.html" />
-  <title>Como instalar programas no Linux: Guia para iniciantes</title>
- <link href="style.css" rel="stylesheet" type="text/css" />
-  
-  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Aprenda como instalar programas no Linux facilmente com este guia para iniciantes. Passo a passo para usar comandos e lojas de aplicativos." />
+    <meta name="keywords" content="instalar programas linux, como instalar linux, guia linux iniciantes, instalar software linux, linux apps" />
+    <meta name="robots" content="index,nofollow" />
+    <link rel="canonical" href="https://piolinux.com/como-instalar-programas-no-linux-guia-para-iniciantes.html" />
+    <title>Como instalar programas no Linux: Guia para iniciantes</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-  <header>
-  <h1>   Aprenda como instalar programas no Linux facilmente com este guia para iniciantes</h1>
-  </header>
- <div id="menu-container"></div>
-  
-  <main>
-    
-<div id="share" style="text-align:center;margin:15px 0"></div>
-<script async defer>
-(() => {
-  const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
-  const d=[
-    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
-    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
-    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-  ],e=document.getElementById("share");
-  d.forEach(([n,c,l])=>{
-    let a=document.createElement("a");
-    a.href=l;a.target="_blank";a.rel="noopener";
-    a.textContent=n;
-    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
-    e.appendChild(a);
-  });
-})();
-</script>
-<section>
-<article>
-  <h1>Instalando programas no Linux: Guia para iniciantes</h1>
-
-  <p>Você ficou se questioando qual é a forma mais segura para instalar qualquer software no linux?  
-  Está perdido, não sabe o que fazer, existem metodos simples e práticos para atualizar o Sistema em dores de cabeça. </p>
-
-  <p>Maneiras mais práticas para instalar atráves do terminal ou modo gráfico (gerenciado grafico de programas).</p>
-</section>
-
-<section>
-  <h2>O que você vai aprender</h2>
-  <ul>
-    <li>Facilidade do gerenciadores de pacotes</li>
-    <li>Como usar a Central de Aplicativos do Linux</li>
-    <li>Comandos básicos para instalação no terminal</li>
-    <li>Dicas para evitar erros comuns na instalação</li>
-  </ul>
-
-  <h2>Programas sendo instalados atráves dos gerenciadores de pacotes</h2>
-
-  <p>Gerenciadores de pacotes exemplo como o Synaptic, basta abrir ir em busca, digitar o nome do programa para instalar ou remover em similares funciona da mesma forma.</p>
-</section>
-
-<section>
-  <h3>APT – Distribuições baseadas em Debian/Ubuntu</h3>
-  <p>Para instalar um programa usando o terminal no Ubuntu, Debian e derivados, você usa o comando <code>apt</code>.</p>
-  <blockquote>Exemplos de comandos: <code>sudo apt update</code> (para atualizar a lista de pacotes)</blockquote>
-  <blockquote>Exemplo: <code>sudo apt install nome-do-programa</code> (para instalar)</blockquote>
-</section>
-
-<section>
-  <h3>DNF e YUM – Distribuições baseadas em Fedora/CentOS</h3>
-  <p>Usuários do Fedora usam o <code>dnf</code>, enquanto CentOS pode usar <code>yum</code>.</p>
-  <blockquote>Exemplo: <code>sudo dnf install nome-do-programa</code></blockquote>
-</section>
-
-
-
-  <img src="https://example.com/imagem-terminal-linux-instalacao.png" alt="Terminal Linux mostrando instalação de programa" />
-<section>
-  <h2>Instalando programas pela Central de Aplicativos</h2>
-  <p>Muitas distribuições Linux modernas oferecem uma Central de Aplicativos (ou Software Center) que permite instalar programas de forma gráfica, parecida com lojas de aplicativos de smartphones.</p>
-  <ul>
-    <li>Abra a Central de Aplicativos no seu sistema</li>
-    <li>Procure o programa desejado usando a busca</li>
-    <li>Clique em instalar e aguarde o processo</li>
-  </ul>
-  <p>Essa é uma ótima opção para quem prefere evitar o terminal.</p>
-</section>
-<section>
-  <h2>Usando pacotes Snap e Flatpak</h2>
-  <p>Além dos gerenciadores tradicionais, existem formatos universais de pacotes, como Snap e Flatpak, que funcionam em diversas distribuições.</p>
-  <ul>
-    <li><strong>Snap:</strong> Instale com <code>sudo snap install nome-do-programa</code></li>
-    <li><strong>Flatpak:</strong> Configure e use comandos como <code>flatpak install nome-do-programa</code></li>
-  </ul>
-  <p>Estes formatos garantem que o software funcione em qualquer distro sem conflitos.</p>
-</section>
- <section>
-  <h2>Dicas importantes para iniciantes</h2>
-  <ul>
-    <li>Sempre atualize a lista de pacotes antes de instalar (<code>sudo apt update</code>)</li>
-    <li>Leia mensagens do terminal para entender erros e avisos</li>
-    <li>Use fontes confiáveis para baixar softwares</li>
-  </ul>
-</section>
-<section>
-  <h2>Conclusão</h2>
-  <p>Instalar programas no Linux é simples quando você conhece os métodos certos. Seja usando o terminal, a Central de Aplicativos ou pacotes universais, você tem várias opções para equipar seu sistema.</p>
-  <p>Experimente os métodos e escolha o que for mais confortável para você. A prática torna tudo mais fácil!</p>
-</section>
-  
-</article>
-<section>
-<div class="author-box">
-  <img src="https://example.com/foto-autor.jpg" alt="Foto do autor" />
-  <div>
-    <p><strong>Piolinux</strong> é entusiasta Linux e escritor técnico com mais de 5 anos de experiência em tutoriais para iniciantes.</p>
-  </div>
-</div>
-</section>
-<section>
-  <h2>FAQ - Perguntas frequentes</h2>
-  <dl>
-    <dt>Posso instalar qualquer programa usando o terminal?</dt>
-    <dd>Sim, desde que o programa esteja nos repositórios da sua distribuição ou via Snap/Flatpak.</dd>
-
-    <dt>O que é o comando sudo?</dt>
-    <dd>O comando sudo executa tarefas com permissões de administrador, necessárias para instalar programas.</dd>
-
-    <dt>Snap e Flatpak funcionam em todas as distribuições?</dt>
-    <dd>Sim, eles são formatos universais e podem ser usados em várias distros Linux.</dd>
-  </dl>
-</section>
-   
-   
-   
-  </main>
-
-  <footer>
+    <header>
+        <h1>Aprenda como instalar programas no Linux facilmente com este guia para iniciantes</h1>
+    </header>
+    <div id="menu-container"></div>
+    <main>
+        <div id="share" style="text-align:center;margin:15px 0"></div>
+        <script async defer>
+            (() => {
+                const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+                const d=[
+                    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+                    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+                    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+                    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+                ],e=document.getElementById("share");
+                d.forEach(([n,c,l])=>{
+                    let a=document.createElement("a");
+                    a.href=l;a.target="_blank";a.rel="noopener";
+                    a.textContent=n;
+                    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+                    e.appendChild(a);
+                });
+            })();
+        </script>
+        <article>
+            <section>
+                <h2>Instalando programas no Linux: Guia para iniciantes</h2>
+                <p>Você ficou se questionando qual é a forma mais segura para instalar qualquer software no linux?
+                Está perdido, não sabe o que fazer? Existem métodos simples e práticos para instalar programas sem dores de cabeça.</p>
+                <p>Maneiras mais práticas para instalar através do terminal ou modo gráfico (gerenciador gráfico de programas).</p>
+            </section>
+            <section>
+                <h2>O que você vai aprender</h2>
+                <ul>
+                    <li>Facilidade dos gerenciadores de pacotes</li>
+                    <li>Como usar a Central de Aplicativos do Linux</li>
+                    <li>Comandos básicos para instalação no terminal</li>
+                    <li>Dicas para evitar erros comuns na instalação</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Programas sendo instalados através dos gerenciadores de pacotes</h2>
+                <p>Gerenciadores de pacotes como o Synaptic. Basta abrir, ir em busca, digitar o nome do programa para instalar ou remover. Outros gerenciadores similares funcionam da mesma forma.</p>
+            </section>
+            <section>
+                <h3>APT – Distribuições baseadas em Debian/Ubuntu</h3>
+                <p>Para instalar um programa usando o terminal no Ubuntu, Debian e derivados, você usa o comando <code>apt</code>.</p>
+                <blockquote>Exemplos de comandos: <code>sudo apt update</code> (para atualizar a lista de pacotes)</blockquote>
+                <blockquote>Exemplo: <code>sudo apt install nome-do-programa</code> (para instalar)</blockquote>
+            </section>
+            <section>
+                <h3>DNF e YUM – Distribuições baseadas em Fedora/CentOS</h3>
+                <p>Usuários do Fedora usam o <code>dnf</code>, enquanto CentOS pode usar <code>yum</code>.</p>
+                <blockquote>Exemplo: <code>sudo dnf install nome-do-programa</code></blockquote>
+            </section>
+            <img src="https://example.com/imagem-terminal-linux-instalacao.png" alt="Terminal Linux mostrando instalação de programa" />
+            <section>
+                <h2>Instalando programas pela Central de Aplicativos</h2>
+                <p>Muitas distribuições Linux modernas oferecem uma Central de Aplicativos (ou Software Center) que permite instalar programas de forma gráfica, parecida com lojas de aplicativos de smartphones.</p>
+                <ul>
+                    <li>Abra a Central de Aplicativos no seu sistema</li>
+                    <li>Procure o programa desejado usando a busca</li>
+                    <li>Clique em instalar e aguarde o processo</li>
+                </ul>
+                <p>Essa é uma ótima opção para quem prefere evitar o terminal.</p>
+            </section>
+            <section>
+                <h2>Usando pacotes Snap e Flatpak</h2>
+                <p>Além dos gerenciadores tradicionais, existem formatos universais de pacotes, como Snap e Flatpak, que funcionam em diversas distribuições.</p>
+                <ul>
+                    <li><strong>Snap:</strong> Instale com <code>sudo snap install nome-do-programa</code></li>
+                    <li><strong>Flatpak:</strong> Configure e use comandos como <code>flatpak install nome-do-programa</code></li>
+                </ul>
+                <p>Estes formatos garantem que o software funcione em qualquer distro sem conflitos.</p>
+            </section>
+            <section>
+                <h2>Dicas importantes para iniciantes</h2>
+                <ul>
+                    <li>Sempre atualize a lista de pacotes antes de instalar (<code>sudo apt update</code>)</li>
+                    <li>Leia mensagens do terminal para entender erros e avisos</li>
+                    <li>Use fontes confiáveis para baixar softwares</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Conclusão</h2>
+                <p>Instalar programas no Linux é simples quando você conhece os métodos certos. Seja usando o terminal, a Central de Aplicativos ou pacotes universais, você tem várias opções para equipar seu sistema.</p>
+                <p>Experimente os métodos e escolha o que for mais confortável para você. A prática torna tudo mais fácil!</p>
+            </section>
+        </article>
+        <section>
+            <div class="author-box">
+                <img src="https://example.com/foto-autor.jpg" alt="Foto do autor" />
+                <div>
+                    <p><strong>Piolinux</strong> é entusiasta Linux e escritor técnico com mais de 5 anos de experiência em tutoriais para iniciantes.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>FAQ - Perguntas frequentes</h2>
+            <dl>
+                <dt>Posso instalar qualquer programa usando o terminal?</dt>
+                <dd>Sim, desde que o programa esteja nos repositórios da sua distribuição ou via Snap/Flatpak.</dd>
+                <dt>O que é o comando sudo?</dt>
+                <dd>O comando sudo executa tarefas com permissões de administrador, necessárias para instalar programas.</dd>
+                <dt>Snap e Flatpak funcionam em todas as distribuições?</dt>
+                <dd>Sim, eles são formatos universais e podem ser usados em várias distros Linux.</dd>
+            </dl>
+        </section>
+    </main>
+    <footer>
     Site criado com muito terminal e memes! Acesse:
-    <a href="#">Política de Privacidade</a> |
-    <a href="#">Termos de Uso</a>
+    <a href="politica-de-privacidade.html">Política de Privacidade</a> |
+    <a href="termos-de-uso.html">Termos de Uso</a>
   </footer>
 
-  <script src="loadMenu.js"></script>
-
+    <script src="loadMenu.js"></script>
 </body>
 </html>

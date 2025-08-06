@@ -1,135 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exemplos de Menus HTML</title>
-  <meta name="description" content="Exemplos de menus HTML horizontais para copiar e colar no seu site.">
-  <meta name="keywords" content="menu html, menu horizontal, botões html, exemplo de navegação, site css, frontend">
-  <meta name="author" content="PioLinux" />
-  <meta name="robots" content="index,nofollow">
-  <link rel="canonical" href="https://piolinux.com/menus-exemplos.html" />
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplos de Menus HTML</title>
+    <meta name="description" content="Exemplos de menus HTML horizontais para copiar e colar no seu site."/>
+    <meta name="keywords" content="menu html, menu horizontal, botões html, exemplo de navegação, site css, frontend"/>
+    <meta name="author" content="PioLinux" />
+    <meta name="robots" content="index,nofollow">
+    <link rel="canonical" href="https://piolinux.com/menus-exemplos.html" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-  <header>
-  <h1>  📂 Exemplos de Menus Horizontais em HTML</h1>
-  </header>
-<div id="menu-container"></div>
-  
-
-  <main>
-    <section>
-      <div id="share" style="text-align:center;margin:15px 0"></div>
-  <script async defer>
-    (() => {
-      const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
-      const d=[
-        ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
-        ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-        ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
-        ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-      ],e=document.getElementById("share");
-      d.forEach(([n,c,l])=>{
-        let a=document.createElement("a");
-        a.href=l;a.target="_blank";a.rel="noopener";
-        a.textContent=n;
-        a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
-        e.appendChild(a);
-      });
-    })();
-  </script>
-
-  <section>
-    <h2>1️⃣ Menu Horizontal Simples</h2>
-    <div class="menu1">
-      <a href="#">1</a>
-      <a href="#">2</a>
-      <a href="#">3</a>
-      <a href="#">4</a>
-    </div>
-    <h3>🧾 Código:</h3>
-    <pre><code>&lt;div class="menu1"&gt;
-  &lt;a href="digite hastag"&gt;1&lt;/a&gt;
-  &lt;a href="digite hastag;2&lt;/a&gt;
-  &lt;a href="digite hastag;3&lt;/a&gt;
-  &lt;a href="digite hastag"&gt;4&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-  </section>
-
-  <section>
-    <h2>2️⃣ Menu com Hover Animado</h2>
-    <div class="2">
-      <a href="#"> casa</a>
-      <a href="#"> carpinteiro</a>
-      <a href="#"> telefone</a>
-    </div>
-    <h3>🧾 Código:</h3>
-    <pre><code>&lt;div class="menu2"&gt;
-  &lt;a href="digite hastag"&gt; 1&lt;/a&gt;
-  &lt;a href="digite hastag"&gt; 2&lt;/a&gt;
-  &lt;a href="digite hastag"&gt; 3&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-  </section>
-
-  <section>
-    <h2>3️⃣ Menu com Dropdown (Submenu)</h2>
-    <div class="menu3">
-      <a href="#">1</a>
-      <div class="dropdown">
-        <a href="#">2</a>
-        <div class="#">
-          <a href="#">1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
-        </div>
-      </div>
-      <a href="#">Contato</a>
-    </div>
-    <h3>🧾 Código:</h3>
-    <pre><code>&lt;div class="menu3"&gt;
-  &lt;a href="digite hastag;1&lt;/a&gt;
-  &lt;div class="dropdown"&gt;
-    &lt;a href="digite hastag"&gt;1&lt;/a&gt;
-    &lt;div class="dropdown-content"&gt;
-      &lt;a href="digite hastag"&gt;1&lt;/a&gt;
-      &lt;a href="digite hastag"&gt;2&lt;/a&gt;
-      &lt;a href="digite hastag"&gt;3&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;a href="#"&gt;Contato&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-  </section>
-
-  <section>
-    <h2>4️⃣ Menu com Ícones (sem dependências externas)</h2>
-    <div class="menu4">
-      <a href="#">🏠 Início</a>
-      <a href="#">📄 Artigos</a>
-      <a href="#">📧 Contato</a>
-    </div>
-    <h3>🧾 Código:</h3>
-    <pre><code>&lt;div class="menu4"&gt;
-  &lt;a href="digite hastag"&gt;🏠 Início&lt;/a&gt;
-  &lt;a href="digite hastag"&gt;📄 Artigos&lt;/a&gt;
-  &lt;a href="digite hastag;📧 Contato&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-  </section>
-
-
-    </section>
-
+    <header>
+        <h1>📂 Exemplos de Menus Horizontais em HTML</h1>
+    </header>
+    <div id="menu-container"></div>
     
-  </main>
+    <main>
+        <div id="share" style="text-align:center;margin:15px 0"></div>
+        <script async defer>
+            (() => {
+                const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+                const d=[
+                    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+                    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+                    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+                    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+                ],e=document.getElementById("share");
+                d.forEach(([n,c,l])=>{
+                    let a=document.createElement("a");
+                    a.href=l;a.target="_blank";a.rel="noopener";
+                    a.textContent=n;
+                    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+                    e.appendChild(a);
+                });
+            })();
+        </script>
 
-  <footer>
-    Site criado com muito terminal e memes! Acesse:
-    <a href="#">Política de Privacidade</a> |
-    <a href="#">Termos de Uso</a>
-  </footer>
+        <section>
+            <h2>1️⃣ Menu Horizontal Simples</h2>
+            <div class="menu1">
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+            </div>
+            <h3>🧾 Código:</h3>
+            <pre><code>&lt;div class="menu1"&gt;
+    &lt;a href="#"&gt;1&lt;/a&gt;
+    &lt;a href="#"&gt;2&lt;/a&gt;
+    &lt;a href="#"&gt;3&lt;/a&gt;
+    &lt;a href="#"&gt;4&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+        </section>
 
- <script src="loadMenu.js"></script>
+        <section>
+            <h2>2️⃣ Menu com Hover Animado</h2>
+            <div class="menu2">
+                <a href="#">Casa</a>
+                <a href="#">Artigos</a>
+                <a href="#">Contato</a>
+            </div>
+            <h3>🧾 Código:</h3>
+            <pre><code>&lt;div class="menu2"&gt;
+    &lt;a href="#"&gt;Casa&lt;/a&gt;
+    &lt;a href="#"&gt;Artigos&lt;/a&gt;
+    &lt;a href="#"&gt;Contato&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>3️⃣ Menu com Dropdown (Submenu)</h2>
+            <div class="menu3">
+                <a href="#">Início</a>
+                <div class="dropdown">
+                    <a href="#">Serviços</a>
+                    <div class="dropdown-content">
+                        <a href="#">Web</a>
+                        <a href="#">Mobile</a>
+                        <a href="#">Infra</a>
+                    </div>
+                </div>
+                <a href="#">Contato</a>
+            </div>
+            <h3>🧾 Código:</h3>
+            <pre><code>&lt;div class="menu3"&gt;
+    &lt;a href="#"&gt;Início&lt;/a&gt;
+    &lt;div class="dropdown"&gt;
+        &lt;a href="#"&gt;Serviços&lt;/a&gt;
+        &lt;div class="dropdown-content"&gt;
+            &lt;a href="#"&gt;Web&lt;/a&gt;
+            &lt;a href="#"&gt;Mobile&lt;/a&gt;
+            &lt;a href="#"&gt;Infra&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;a href="#"&gt;Contato&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>4️⃣ Menu com Ícones (sem dependências externas)</h2>
+            <div class="menu4">
+                <a href="#">🏠 Início</a>
+                <a href="#">📄 Artigos</a>
+                <a href="#">📧 Contato</a>
+            </div>
+            <h3>🧾 Código:</h3>
+            <pre><code>&lt;div class="menu4"&gt;
+    &lt;a href="#"&gt;🏠 Início&lt;/a&gt;
+    &lt;a href="#"&gt;📄 Artigos&lt;/a&gt;
+    &lt;a href="#"&gt;📧 Contato&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+    </main>
+
+    <footer>
+        Site criado com muito terminal e memes! Acesse:
+        <a href="#">Política de Privacidade</a> |
+        <a href="#">Termos de Uso</a>
+    </footer>
+
+    <script src="loadMenu.js"></script>
 </body>
 </html>

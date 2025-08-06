@@ -1,114 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <title>Gerenciadores de Pacotes no Linux: Guia para Iniciantes - PioLinux</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Entenda os principais gerenciadores de pacotes no Linux, como apt, dnf, pacman e zypper, e aprenda a usá-los com comandos básicos." />
-  <meta name="keywords" content="gerenciadores de pacotes linux, apt, dnf, pacman, zypper, instalar programas linux" />
-  <meta name="author" content="PioLinux" />
-   <meta name="robots" content="index,nofollow">
-   <link rel="canonical" href="https://piolinux.com/gerenciadores-de-pacotes-no-linux-guia-para-iniciantes.html" />
-     <link href="style.css" rel="stylesheet" type="text/css" />
- 
- 
+    <title>Gerenciadores de Pacotes no Linux: Guia para Iniciantes - PioLinux</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Entenda os principais gerenciadores de pacotes no Linux, como apt, dnf, pacman e zypper, e aprenda a usá-los com comandos básicos." />
+    <meta name="keywords" content="gerenciadores de pacotes linux, apt, dnf, pacman, zypper, instalar programas linux" />
+    <meta name="author" content="PioLinux" />
+    <meta name="robots" content="index,nofollow">
+    <link rel="canonical" href="https://piolinux.com/gerenciadores-de-pacotes-no-linux-guia-para-iniciantes.html" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-  <header>
-  <h1>   Gerenciadores de Pacotes no Linux: Guia para Iniciantes</h1>
-  </header>
+    <header>
+        <h1>Gerenciadores de Pacotes no Linux: Guia para Iniciantes</h1>
+    </header>
 
-  <div id="menu-container"></div>
-  <main>
-   <div id="share" style="text-align:center;margin:15px 0"></div>
-<script async defer>
-(() => {
-  const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
-  const d=[
-    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
-    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
-    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-  ],e=document.getElementById("share");
-  d.forEach(([n,c,l])=>{
-    let a=document.createElement("a");
-    a.href=l;a.target="_blank";a.rel="noopener";
-    a.textContent=n;
-    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
-    e.appendChild(a);
-  });
-})();
-</script>
+    <div id="menu-container"></div>
+    <main>
+        <div id="share" style="text-align:center;margin:15px 0"></div>
+        <script async defer>
+            (() => {
+                const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+                const d=[
+                    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+                    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+                    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+                    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+                ],e=document.getElementById("share");
+                d.forEach(([n,c,l])=>{
+                    let a=document.createElement("a");
+                    a.href=l;a.target="_blank";a.rel="noopener";
+                    a.textContent=n;
+                    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+                    e.appendChild(a);
+                });
+            })();
+        </script>
 
-<section>
-  <h2>📦 Introdução</h2>
-  <p>No Linux, instalar ou remover programas não envolve clicar em um 
-  executável como no Windows. Com a preguiça alheia utilizamos os <strong>gerenciadores de pacotes</strong> ferramentas que automatizam a instalação realizam atualizações e remoção de softwares.</p>
-  <p>Aqui logo abaixo algumas opções de gerenciadores utilizados em 
-  distribuições Linux populares: <code>apt</code>, <code>dnf</code>, <code>pacman</code> e <code>zypper</code>. Vamos aprender os comandos básicos de cada um!</p>
-</section>
+        <section>
+            <h2>📦 Introdução</h2>
+            <p>No Linux, instalar ou remover programas não envolve clicar em um executável como no Windows. Para facilitar essa tarefa, utilizamos os <strong>gerenciadores de pacotes</strong>, ferramentas que automatizam a instalação, atualizações e remoção de softwares.</p>
+            <p>A seguir, apresentamos algumas opções de gerenciadores utilizados nas distribuições Linux mais populares: <code>apt</code>, <code>dnf</code>, <code>pacman</code> e <code>zypper</code>. Vamos aprender os comandos básicos de cada um!</p>
+        </section>
 
-<section>
-  <h2>🧰 APT (Ubuntu, Debian e derivados)</h2>
-  <p>O APT é o gerenciador de pacotes mais comum entre iniciantes, presente em sistemas como Ubuntu, Linux Mint e Debian.</p>
-  <pre>sudo apt update
+        <section>
+            <h2>🧰 APT (Ubuntu, Debian e derivados)</h2>
+            <p>O APT é o gerenciador de pacotes mais comum entre iniciantes, presente em sistemas como Ubuntu, Linux Mint e Debian.</p>
+            <pre>sudo apt update
 sudo apt install nome-do-pacote
 sudo apt remove nome-do-pacote</pre>
-  <p>Ele trabalha com pacotes .deb e depende de repositórios online.</p>
-</section>
+            <p>Ele trabalha com pacotes .deb e depende de repositórios online.</p>
+        </section>
 
-<section>
-  <h2>🔥 DNF (Fedora, RHEL e derivados)</h2>
-  <p>O DNF substituiu o antigo YUM nas distros baseadas em Red Hat.</p>
-  <pre>sudo dnf update
+        <section>
+            <h2>🔥 DNF (Fedora, RHEL e derivados)</h2>
+            <p>O DNF substituiu o antigo YUM nas distros baseadas em Red Hat.</p>
+            <pre>sudo dnf update
 sudo dnf install nome-do-pacote
 sudo dnf remove nome-do-pacote</pre>
-  <p>É rápido, robusto e com excelente sistema de resolução de dependências.</p>
-</section>
+            <p>É rápido, robusto e com um excelente sistema de resolução de dependências.</p>
+        </section>
 
-<section>
-  <h2>⚡ Pacman (Arch Linux e derivados)</h2>
-  <p>Pacman é um gerenciador veloz e poderoso do Arch Linux e suas distros como Manjaro.</p>
-  <pre>sudo pacman -Syu
+        <section>
+            <h2>⚡ Pacman (Arch Linux e derivados)</h2>
+            <p>Pacman é um gerenciador veloz e poderoso do Arch Linux e de suas distros derivadas, como o Manjaro.</p>
+            <pre>sudo pacman -Syu
 sudo pacman -S nome-do-pacote
 sudo pacman -R nome-do-pacote</pre>
-  <p>Comandos curtos e diretos são sua marca registrada.</p>
-</section>
+            <p>Comandos curtos e diretos são sua marca registrada.</p>
+        </section>
 
-<section>
-  <h2>🌀 Zypper (openSUSE)</h2>
-  <p>O Zypper é o gerenciador padrão do openSUSE. Organizado, confiável e com ótima documentação.</p>
-  <pre>sudo zypper refresh
+        <section>
+            <h2>🌀 Zypper (openSUSE)</h2>
+            <p>O Zypper é o gerenciador padrão do openSUSE. É organizado, confiável e possui ótima documentação.</p>
+            <pre>sudo zypper refresh
 sudo zypper install nome-do-pacote
 sudo zypper remove nome-do-pacote</pre>
-</section>
+        </section>
 
-<section>
-  <h2>❓ FAQ</h2>
-  <div class="faq">
-    <h4>Posso instalar pacotes .deb em qualquer distro?</h4>
-    <p>Não. Pacotes .deb são exclusivos do ecossistema Debian. Em Arch, por exemplo, use pacman ou AUR.</p>
-    <h4>É melhor usar comandos ou interface gráfica?</h4>
-    <p>Para iniciantes, ambos são úteis. Mas o terminal oferece mais controle e velocidade.</p>
-    <h4>Posso ter mais de um gerenciador no mesmo sistema?</h4>
-    <p>Em geral, não é recomendado. Cada sistema tem o seu padrão, e misturar pode causar conflitos.</p>
-  </div>
-</section>
+        <section>
+            <h2>❓ FAQ</h2>
+            <div class="faq">
+                <h4>Posso instalar pacotes .deb em qualquer distro?</h4>
+                <p>Não. Pacotes .deb são exclusivos do ecossistema Debian. No Arch, por exemplo, você deve usar o pacman ou o AUR.</p>
 
-<section>
-  <h2>✅ Conclusão</h2>
-  <p>Entender como funcionam os gerenciadores de pacotes é essencial para usar o Linux com eficiência. Escolha sua distribuição favorita e pratique os comandos aqui apresentados.</p>
-  <p>Com o tempo, você vai dominar a instalação de qualquer software com apenas uma linha de comando!</p>
-</section>
-   </main>
+                <h4>É melhor usar comandos ou interface gráfica?</h4>
+                <p>Para iniciantes, ambos são úteis. No entanto, o terminal oferece mais controle e velocidade.</p>
 
-  <footer>
+                <h4>Posso ter mais de um gerenciador no mesmo sistema?</h4>
+                <p>Em geral, não é recomendado. Cada sistema tem o seu padrão, e misturar pode causar conflitos.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>✅ Conclusão</h2>
+            <p>Entender como funcionam os gerenciadores de pacotes é essencial para usar o Linux com eficiência. Escolha sua distribuição favorita e pratique os comandos aqui apresentados.</p>
+            <p>Com o tempo, você vai dominar a instalação de qualquer software com apenas uma linha de comando!</p>
+        </section>
+    </main>
+
+    <<footer>
     Site criado com muito terminal e memes! Acesse:
-    <a href="#">Política de Privacidade</a> |
-    <a href="#">Termos de Uso</a>
+    <a href="politica-de-privacidade.html">Política de Privacidade</a> |
+    <a href="termos-de-uso.html">Termos de Uso</a>
   </footer>
-<script src="loadMenu.js"></script>
-  
+
+    <script src="loadMenu.js"></script>
 </body>
 </html>

@@ -1,124 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <title>Segurança no Linux: Cuidados Essenciais para Iniciantes - PioLinux</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Aprenda os cuidados essenciais de segurança no Linux para iniciantes: senhas fortes, atualizações, permissões e antivírus."/>
-  <meta name="keywords" content="segurança no linux, linux iniciantes, proteção no linux, firewall linux"/>
-  <meta name="robots" content="index,nofollow">
-  <meta name="author" content="PioLinux"/>
-   <link rel="canonical" href="https://piolinux.com/seguranca-linux-iniciantes.html" />
+    <title>Segurança no Linux: Cuidados Essenciais para Iniciantes - PioLinux</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Aprenda os cuidados essenciais de segurança no Linux para iniciantes: senhas fortes, atualizações, permissões e antivírus."/>
+    <meta name="keywords" content="segurança no linux, linux iniciantes, proteção no linux, firewall linux"/>
+    <meta name="robots" content="index,nofollow">
+    <meta name="author" content="PioLinux"/>
+    <link rel="canonical" href="https://piolinux.com/seguranca-linux-iniciantes.html" />
     <link href="style.css" rel="stylesheet" type="text/css" />
-  
-  
 </head>
 <body>
 
-  
+    <header>
+        <h1>Segurança no Linux: Cuidados Essenciais para Iniciantes</h1>
+    </header>
 
-  
-<header>
-  <h1>Segurança no Linux: Cuidados Essenciais para Iniciantes</h1>
-</header>
+    <div id="menu-container"></div>
+    <main>
+    <div id="share" style="text-align:center;margin:15px 0"></div>
+    <script async defer>
+    (() => {
+        const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+        const d=[
+            ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+            ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+            ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+            ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+        ],e=document.getElementById("share");
+        d.forEach(([n,c,l])=>{
+            let a=document.createElement("a");
+            a.href=l;a.target="_blank";a.rel="noopener";
+            a.textContent=n;
+            a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+            e.appendChild(a);
+        });
+    })();
+    </script>
 
-<div id="menu-container"></div>
-  <main>
-<div id="share" style="text-align:center;margin:15px 0"></div>
-<script async defer>
-(() => {
-  const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
-  const d=[
-    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
-    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
-    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-  ],e=document.getElementById("share");
-  d.forEach(([n,c,l])=>{
-    let a=document.createElement("a");
-    a.href=l;a.target="_blank";a.rel="noopener";
-    a.textContent=n;
-    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
-    e.appendChild(a);
-  });
-})();
-</script>
+    <section>
+        <h2>🔐 Introdução</h2>
+        <p>Acredita que está <strong>completamente</strong> seguro por usar Linux? Não se engane. Utilizar o sistema com atenção é fundamental, pois você não está imune a ameaças, principalmente se também usa Windows em outra partição ou o Wine para emular aplicativos da Microsoft.</p>
+        <p>A seguir, você encontrará práticas essenciais para manter seu sistema livre de ameaças digitais e vazamentos de dados. Vamos abordar temas como senhas seguras, atualizações, permissões de usuário, backups e muito mais, com explicações simples e diretas.</p>
+    </section>
 
-<section>
-  <h2>🔐 Introdução</h2>
-  <p>Acredita que está seguro utilizando Linux? Não se engane. Utilize o seu sistema com atenção. Você não está imune a vírus, principalmente se usa o Windows em outra partição ou o Wine, que emula o sistema da Microsoft.</p>
-<p>Nessas dicas abaixo, você aprenderá práticas essenciais para manter o sistema livre de ameaças digitais e vazamentos de dados.</p>
-<p>Vamos falar sobre senhas seguras, atualizações, permissões, backups e muito mais — com explicações simples e diretas!</p>
+    <section>
+        <h2>🧩 Use Senhas Fortes e Gerenciadores</h2>
+        <p>Senhas fracas são a porta de entrada mais comum para invasores. Evite datas de nascimento, nomes simples ou sequências fáceis de adivinhar.</p>
+        <ul>
+            <li>Use no mínimo 12 caracteres.</li>
+            <li>Inclua uma combinação de letras maiúsculas e minúsculas, números e símbolos.</li>
+            <li>Considere utilizar um gerenciador de senhas confiável, como **Bitwarden** ou **KeePassXC**.</li>
+        </ul>
+    </section>
 
-</section>
+    <section>
+        <h2>🔄 Atualize Sempre o Sistema</h2>
+        <p>As atualizações de sistema corrigem falhas de segurança críticas. No Linux, é fácil manter o sistema em dia usando o terminal:</p>
+        <pre>sudo apt update && sudo apt upgrade -y</pre>
+        <p>Faça isso semanalmente ou configure atualizações automáticas para maior segurança.</p>
+    </section>
 
-<section>
-  <h2>🧩 Use Senhas Fortes e Gerenciadores</h2>
-  <p>Senhas fracas são a porta de entrada mais comum para invasores. Evite datas de nascimento, nomes simples ou sequências fáceis.</p>
-  <ul>
-    <li>Use pelo menos 12 caracteres</li>
-    <li>Inclua letras maiúsculas, números e símbolos</li>
-    <li>Utilize um gerenciador como Bitwarden ou KeePassXC</li>
-  </ul>
-</section>
+    <section>
+        <h2>🛑 Cuidado com Permissões de Root</h2>
+        <p>Evite usar o comando <code>sudo</code> para tarefas que não exigem privilégios de administrador. O usuário root tem acesso total ao sistema; o uso indevido pode comprometer seriamente a sua segurança.</p>
+        <blockquote>“Com grandes poderes vêm grandes responsabilidades.”</blockquote>
+    </section>
 
-<section>
-  <h2>🔄 Atualize Sempre o Sistema</h2>
-  <p>As atualizações corrigem falhas de segurança. No Linux, é fácil manter o sistema em dia.</p>
-  <pre>sudo apt update && sudo apt upgrade -y</pre>
-  <p>Faça isso semanalmente ou ative atualizações automáticas.</p>
-</section>
-
-<section>
-  <h2>🛑 Cuidado com Permissões de Root</h2>
-  <p>Evite usar <code>sudo</code> para tarefas que não exigem privilégios. O usuário root tem acesso total ao sistema — o uso indevido pode comprometer sua segurança.</p>
-  <blockquote>“Com grandes poderes vêm grandes responsabilidades.”</blockquote>
-</section>
-
-<section>
-  <h2>🧱 Ative o Firewall UFW</h2>
-  <p>O Linux possui o UFW (Uncomplicated Firewall) para proteger suas conexões.</p>
-  <pre>sudo apt install ufw
+    <section>
+        <h2>🧱 Ative o Firewall UFW</h2>
+        <p>O Linux conta com o UFW (Uncomplicated Firewall), uma ferramenta simples e poderosa para proteger suas conexões.</p>
+        <pre>sudo apt install ufw
 sudo ufw enable
 sudo ufw status</pre>
-  <p>Ele bloqueia portas não utilizadas e impede acessos não autorizados.</p>
-</section>
+        <p>O UFW bloqueia portas não utilizadas e impede acessos não autorizados de forma eficiente.</p>
+    </section>
 
-<section>
-  <h2>📁 Faça Backups Frequentes</h2>
-  <p>Acidentes acontecem. Tenha sempre uma cópia dos seus arquivos em um HD externo ou serviço de nuvem.</p>
-  <ul>
-    <li>Use o Deja Dup (Ubuntu)</li>
-    <li>Ferramentas como rsync ou Timeshift</li>
-  </ul>
-</section>
+    <section>
+        <h2>📁 Faça Backups Frequentes</h2>
+        <p>Acidentes acontecem. Por isso, tenha sempre uma cópia dos seus arquivos importantes em um HD externo ou em um serviço de nuvem. Ferramentas úteis para isso incluem:</p>
+        <ul>
+            <li>**Deja Dup** (presente no Ubuntu)</li>
+            <li>**rsync** ou **Timeshift**</li>
+        </ul>
+    </section>
 
-<section>
-  <h2>❓ FAQ</h2>
-  <div class="faq">
-    <h3>Preciso usar antivírus no Linux?</h3>
-    <p>Não é obrigatório, mas pode ser útil para escanear arquivos vindos do Windows.</p>
-    <h4>O Linux pode ser invadido?</h4>
-    <p>Sim. Embora seja mais seguro, más configurações e descuido ainda abrem brechas.</p>
-    <h4>Root é mais seguro que usuário normal?</h4>
-    <p>Não. O ideal é usar sua conta normal e recorrer ao sudo apenas quando necessário.</p>
-  </div>
-</section>
+    <section>
+        <h2>❓ Perguntas Frequentes</h2>
+        <div class="faq">
+            <h3>Preciso usar antivírus no Linux?</h3>
+            <p>Não é obrigatório para a maioria dos usuários, mas pode ser útil para escanear arquivos vindos do Windows ou para quem lida com servidores.</p>
+            <h3>O Linux pode ser invadido?</h3>
+            <p>Sim. Embora o Linux seja considerado mais seguro, configurações inadequadas e falta de atenção ainda podem abrir brechas para invasões.</p>
+            <h3>O usuário root é mais seguro que o usuário normal?</h3>
+            <p>Não. O ideal é usar sua conta de usuário normal e recorrer ao `sudo` apenas quando for estritamente necessário para tarefas de administração.</p>
+        </div>
+    </section>
 
-<section>
-  <h2>✅ Conclusão</h2>
-  <p>Mesmo sendo um sistema robusto, o Linux exige atenção básica para garantir segurança. Manter senhas fortes, atualizações em dia, usar firewall e backups já cobre boa parte dos riscos.</p>
-  <p><strong>Dica final:</strong> sempre desconfie de comandos desconhecidos ou arquivos de fontes duvidosas.</p>
-</section>
+    <section>
+        <h2>✅ Conclusão</h2>
+        <p>Mesmo sendo um sistema robusto e confiável, o Linux exige atenção básica para garantir a segurança dos seus dados. A adoção de boas práticas, como usar senhas fortes, manter atualizações em dia e ativar um firewall, já cobre a maior parte dos riscos. Sempre desconfie de comandos desconhecidos ou arquivos de fontes duvidosas.</p>
+    </section>
 
-  </main>
+    </main>
 
-  <footer>
+    <footer>
     Site criado com muito terminal e memes! Acesse:
-    <a href="#">Política de Privacidade</a> |
-    <a href="#">Termos de Uso</a>
+    <a href="politica-de-privacidade.html">Política de Privacidade</a> |
+    <a href="termos-de-uso.html">Termos de Uso</a>
   </footer>
 
-   <script src="loadMenu.js"></script>
+
+    <script src="loadMenu.js"></script>
 </body>
 </html>

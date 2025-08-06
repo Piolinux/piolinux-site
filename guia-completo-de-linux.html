@@ -8,117 +8,127 @@
     <meta name="keywords" content="linux, dicas linux, comandos linux, terminal, sysadmin, ubuntu, debian, fedora, shell script, piolinux">
     <meta name="author" content="PioLinux">
     <meta name="robots" content="index,nofollow">
-     <link rel="canonical" href="https://www.piolinux.com/guia-completo-de-linux.html" />
-      <link href="style.css" rel="stylesheet" type="text/css" />
-  
+    <link rel="canonical" href="https://www.piolinux.com/guia-completo-de-linux.html" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-  <header>
-  <h1>  Guia Completo sobre Linux: </h1>
-  </header>
+    <header>
+        <h1>Guia Completo sobre Linux</h1>
+    </header>
 
-<div id="menu-container"></div>
+    <div id="menu-container"></div>
 
-  <main>
-     <div id="share" style="text-align:center;margin:15px 0"></div>
-<script async defer>
-(() => {
-  const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
-  const d=[
-    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
-    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
-    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-  ],e=document.getElementById("share");
-  d.forEach(([n,c,l])=>{
-    let a=document.createElement("a");
-    a.href=l;a.target="_blank";a.rel="noopener";
-    a.textContent=n;
-    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
-    e.appendChild(a);
-  });
-})();
-</script>
-  
-  <section>
-    <h2>1. O que é Linux?</h2>
-    <p>Existem diversos softwares tanto para Windows quanto para Linux. Alguns são multiplataforma, tornando a experiência agradável para quem deseja utilizá-los. Escolha os programas certos para usar no dia a dia. Nesta lista, há uma extensa relação de dicas que podem ajudar a tomar uma decisão correta. Tire proveito desses dois sistemas operacionais. Teste os que mais combinam com a sua utilização diária e mantenha sempre seus sistemas atualizados. 
+    <main>
+        <div id="share" style="text-align:center;margin:15px 0"></div>
+        <script async defer>
+            (() => {
+                const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+                const d=[
+                    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+                    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+                    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+                    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+                ],e=document.getElementById("share");
+                d.forEach(([n,c,l])=>{
+                    let a=document.createElement("a");
+                    a.href=l;a.target="_blank";a.rel="noopener";
+                    a.textContent=n;
+                    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+                    e.appendChild(a);
+                });
+            })();
+        </script>
 
-.</p></section>
+        <section>
+            <h2>1. O que é Linux?</h2>
+            <p>O Linux é um sistema operacional de código aberto baseado no kernel Linux, desenvolvido por Linus Torvalds. Diferentemente do Windows ou do macOS, ele não é um sistema único, mas sim a base para diversas distribuições (ou "distros"). Por ser gratuito e personalizável, o Linux permite que você escolha os softwares certos para suas necessidades diárias e aproveite ao máximo seu computador.
+            </p>
+        </section>
 
-  <section>  <h2>2. Vantagens do Linux</h2>
-    <ul>
-      <li>Gratuito e acessível para todos</li>
-      <li>Estável e seguro</li>
-      <li>Leve, ideal para máquinas antigas</li>
-      <li>Altamente personalizável</li>
-      <li>Grande comunidade de suporte</li>
-    </ul></section>
+        <section>
+            <h2>2. Vantagens do Linux</h2>
+            <ul>
+                <li>Gratuito e acessível para todos</li>
+                <li>Estável e seguro</li>
+                <li>Leve, ideal para máquinas antigas</li>
+                <li>Altamente personalizável</li>
+                <li>Grande comunidade de suporte</li>
+            </ul>
+        </section>
 
-  <section> <h2>3. As Distribuições Linux (Distros)</h2>
-    <p>Existem milhares de versões do Linux, chamadas de distribuições. Cada uma tem seu foco e público. As mais populares incluem:</p>
-    <ul>
-      <li><strong>Ubuntu:</strong> amigável para iniciantes</li>
-      <li><strong>Debian:</strong> base estável e confiável</li>
-      <li><strong>Fedora:</strong> novidades e inovações</li>
-      <li><strong>Arch Linux:</strong> para usuários avançados</li>
-      <li><strong>Linux Mint:</strong> ideal para quem veio do Windows</li>
-    </ul></section>
+        <section>
+            <h2>3. As Distribuições Linux (Distros)</h2>
+            <p>Existem milhares de versões do Linux, chamadas de distribuições. Cada uma tem seu foco e público. As mais populares incluem:</p>
+            <ul>
+                <li><strong>Ubuntu:</strong> amigável para iniciantes</li>
+                <li><strong>Debian:</strong> base estável e confiável</li>
+                <li><strong>Fedora:</strong> novidades e inovações</li>
+                <li><strong>Arch Linux:</strong> para usuários avançados</li>
+                <li><strong>Linux Mint:</strong> ideal para quem veio do Windows</li>
+            </ul>
+        </section>
 
-  <section> <h2>4. Comandos Básicos do Linux</h2>
-    <p>Alguns comandos que você precisa conhecer:</p>
-    <ul>
-      <li><code>ls</code> - lista arquivos e pastas</li>
-      <li><code>cd</code> - muda o diretório</li>
-      <li><code>mkdir</code> - cria uma nova pasta</li>
-      <li><code>rm</code> - remove arquivos/pastas</li>
-      <li><code>sudo</code> - executa com privilégios de administrador</li>
-    </ul></section>
+        <section>
+            <h2>4. Comandos Básicos do Linux</h2>
+            <p>Alguns comandos que você precisa conhecer:</p>
+            <ul>
+                <li><code>ls</code> - lista arquivos e pastas</li>
+                <li><code>cd</code> - muda o diretório</li>
+                <li><code>mkdir</code> - cria uma nova pasta</li>
+                <li><code>rm</code> - remove arquivos/pastas</li>
+                <li><code>sudo</code> - executa com privilégios de administrador</li>
+            </ul>
+        </section>
 
-    <section><h2>5. O Terminal Linux</h2>
-    <p>O terminal é a alma do Linux. Através dele, você pode controlar tudo, automatizar tarefas e manipular arquivos com rapidez. Com o tempo, o terminal se torna uma extensão do seu pensamento.</p>
-</section>
+        <section>
+            <h2>5. O Terminal Linux</h2>
+            <p>O terminal é a alma do Linux. Através dele, você pode controlar tudo, automatizar tarefas e manipular arquivos com rapidez. Com o tempo, o terminal se torna uma extensão do seu pensamento.</p>
+        </section>
 
-<section>    <h2>6. Bash e Scripts</h2>
-    <p>O Bash é o shell padrão na maioria das distros. Com ele, você 
-    pode escrever scripts — pequenos arquivos com comandos em sequência — que automatizam tarefas e tornam sua rotina muito mais produtiva.</p></section>
-<section>
-    <h2>7. Linux em Servidores</h2>
-    <p>Linux domina o mercado de servidores. Mais de 90% dos servidores 
-    web no mundo rodam Linux. Isso se deve à sua estabilidade, segurança e flexibilidade.</p></section>
+        <section>
+            <h2>6. Bash e Scripts</h2>
+            <p>O Bash é o shell padrão na maioria das distros. Com ele, você pode escrever scripts — pequenos arquivos com comandos em sequência — que automatizam tarefas e tornam sua rotina muito mais produtiva.</p>
+        </section>
 
-   <section> <h2>8. Linux na Área de Desenvolvimento</h2>
-    <p>Desenvolvedores adoram Linux. O sistema oferece ferramentas 
-    robustas, controle total sobre o ambiente, suporte a linguagens modernas e um terminal poderoso que acelera o fluxo de trabalho.</p></section>
+        <section>
+            <h2>7. Linux em Servidores</h2>
+            <p>Linux domina o mercado de servidores. Mais de 90% dos servidores web no mundo rodam Linux. Isso se deve à sua estabilidade, segurança e flexibilidade.</p>
+        </section>
 
-  <section>  <h2>9. Segurança no Linux</h2>
-    <p>Linux é considerado mais seguro que outros sistemas. Ele tem 
-    permissões rígidas, atualizações constantes e uma comunidade ativa que corrige vulnerabilidades rapidamente.</p></section>
+        <section>
+            <h2>8. Linux na Área de Desenvolvimento</h2>
+            <p>Desenvolvedores adoram Linux. O sistema oferece ferramentas robustas, controle total sobre o ambiente, suporte a linguagens modernas e um terminal poderoso que acelera o fluxo de trabalho.</p>
+        </section>
 
- <section>   <h2>10. Como Começar com Linux</h2>
-    <p>Para começar, você pode instalar uma distro como o Ubuntu ou 
-    Linux Mint, testar em uma máquina virtual ou até usar o Linux através de um pendrive com sistema "live". Aprender aos poucos é o segredo!</p></section>
+        <section>
+            <h2>9. Segurança no Linux</h2>
+            <p>Linux é considerado mais seguro que outros sistemas. Ele tem permissões rígidas, atualizações constantes e uma comunidade ativa que corrige vulnerabilidades rapidamente.</p>
+        </section>
 
-   <section> <h2>11. Curiosidades sobre o Linux</h2>
-    <ul>
-      <li>O mascote do Linux é um pinguim chamado Tux 🐧</li>
-      <li>O Android, usado em celulares, é baseado no kernel Linux</li>
-      <li>Supercomputadores rodam Linux</li>
-      <li>Linus Torvalds ainda contribui com o desenvolvimento do kernel</li>
-    </ul>
-  </section>
-    
+        <section>
+            <h2>10. Como Começar com Linux</h2>
+            <p>Para começar, você pode instalar uma distro como o Ubuntu ou Linux Mint, testar em uma máquina virtual ou até usar o Linux através de um pendrive com sistema "live". Aprender aos poucos é o segredo!</p>
+        </section>
 
-   
-  </main>
+        <section>
+            <h2>11. Curiosidades sobre o Linux</h2>
+            <ul>
+                <li>O mascote do Linux é um pinguim chamado Tux 🐧</li>
+                <li>O Android, usado em celulares, é baseado no kernel Linux</li>
+                <li>Supercomputadores rodam Linux</li>
+                <li>Linus Torvalds ainda contribui com o desenvolvimento do kernel</li>
+            </ul>
+        </section>
+    </main>
 
-  <footer>
+    <footer>
     Site criado com muito terminal e memes! Acesse:
-    <a href="#">Política de Privacidade</a> |
-    <a href="#">Termos de Uso</a>
+    <a href="politica-de-privacidade.html">Política de Privacidade</a> |
+    <a href="termos-de-uso.html">Termos de Uso</a>
   </footer>
 
-  <script src="loadMenu.js"></script>
+
+    <script src="loadMenu.js"></script>
 </body>
 </html>

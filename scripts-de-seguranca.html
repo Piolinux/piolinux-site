@@ -1,100 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Scripts de Segurança para Linux</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Coleção de scripts úteis para segurança no Linux: firewall, bloqueio de IP, rootkits, SSH, fail2ban, nmap, sniffers e mais.">
-  <meta name="keywords" content="segurança linux, firewall ufw, bloquear ip, nmap, ssh automático, fail2ban, rootkits, sniffers, senhas fortes, monitoramento de tráfego">
-  <meta name="robots" content="index,nofollow">
-  <link rel="canonical" href="https://www.piolinux.com/scripts-de-seguranca.html">
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <title>Scripts de Segurança para Linux</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Coleção de scripts úteis para segurança no Linux: firewall, bloqueio de IP, rootkits, SSH, fail2ban, nmap, sniffers e mais.">
+    <meta name="keywords" content="segurança linux, firewall ufw, bloquear ip, nmap, ssh automático, fail2ban, rootkits, sniffers, senhas fortes, monitoramento de tráfego">
+    <meta name="robots" content="index,nofollow">
+    <link rel="canonical" href="https://www.piolinux.com/scripts-de-seguranca.html">
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-  <header>
-    <h1>Scripts de Segurança para Linux</h1>
-  </header>
+    <header>
+        <h1>Scripts de Segurança para Linux</h1>
+    </header>
 
-  <div id="menu-container"></div>
-  
-  <main>
-    <section>
-      <h2>Firewall básico com UFW</h2>
-      <button class="copy">Copiar</button>
-      <pre>sudo ufw default deny incoming
+    <div id="menu-container"></div>
+    
+    <main>
+		
+		<div id="share" style="text-align:center;margin:15px 0"></div>
+        <script async defer>
+            (() => {
+                const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+                const d=[
+                    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+                    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+                    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+                    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+                ],e=document.getElementById("share");
+                d.forEach(([n,c,l])=>{
+                    let a=document.createElement("a");
+                    a.href=l;a.target="_blank";a.rel="noopener";
+                    a.textContent=n;
+                    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+                    e.appendChild(a);
+                });
+            })();
+        </script>
+        <section>
+            <h2>Firewall básico com UFW</h2>
+            <button class="copy">Copiar</button>
+            <pre>sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow ssh
 sudo ufw enable</pre>
-    </section>
+        </section>
 
-    <section>
-      <h2>Bloqueio de IPs maliciosos</h2>
-      <button class="copy">Copiar</button>
-      <pre>sudo ufw deny from 192.168.0.123</pre>
-    </section>
+        <section>
+            <h2>Bloqueio de IPs maliciosos</h2>
+            <button class="copy">Copiar</button>
+            <pre>sudo ufw deny from 192.168.0.123</pre>
+        </section>
 
-    <section>
-      <h2>Script de escaneamento com Nmap</h2>
-      <button class="copy">Copiar</button>
-      <pre>#!/bin/bash
+        <section>
+            <h2>Script de escaneamento com Nmap</h2>
+            <button class="copy">Copiar</button>
+            <pre>#!/bin/bash
 read -p "Digite o IP ou host: " target
 nmap -A -T4 $target</pre>
-    </section>
+        </section>
 
-    <section>
-      <h2>Verificação de rootkits com chkrootkit</h2>
-      <button class="copy">Copiar</button>
-      <pre>sudo apt install chkrootkit
+        <section>
+            <h2>Verificação de rootkits com chkrootkit</h2>
+            <button class="copy">Copiar</button>
+            <pre>sudo apt install chkrootkit
 sudo chkrootkit</pre>
-    </section>
+        </section>
 
-    <section>
-      <h2>Conexão SSH automatizada</h2>
-      <button class="copy">Copiar</button>
-      <pre>sshpass -p 'senha' ssh usuario@ip -p 22</pre>
-    </section>
+        <section>
+            <h2>Conexão SSH automatizada</h2>
+            <button class="copy">Copiar</button>
+            <pre>sshpass -p 'senha' ssh usuario@ip -p 22</pre>
+        </section>
 
-    <section>
-      <h2>Gerador de senhas fortes (Shell)</h2>
-      <button class="copy">Copiar</button>
-      <pre>openssl rand -hex 16
+        <section>
+            <h2>Gerador de senhas fortes (Shell)</h2>
+            <button class="copy">Copiar</button>
+            <pre>openssl rand -hex 16
 openssl rand -hex 64</pre>
-    </section>
+        </section>
 
-    <section>
-      <h2>Verificador de integridade de arquivos</h2>
-      <button class="copy">Copiar</button>
-      <pre>sha256sum arquivo.txt > hash.txt
+        <section>
+            <h2>Verificador de integridade de arquivos</h2>
+            <button class="copy">Copiar</button>
+            <pre>sha256sum arquivo.txt > hash.txt
 sha256sum -c hash.txt</pre>
-    </section>
+        </section>
 
-    <section>
-      <h2>Configuração de fail2ban</h2>
-      <button class="copy">Copiar</button>
-      <pre>sudo apt install fail2ban
+        <section>
+            <h2>Configuração de fail2ban</h2>
+            <button class="copy">Copiar</button>
+            <pre>sudo apt install fail2ban
 sudo systemctl enable fail2ban
 sudo systemctl start fail2ban</pre>
-    </section>
+        </section>
 
-    <section>
-      <h2>Monitoramento de tráfego com iftop</h2>
-      <button class="copy">Copiar</button>
-      <pre>sudo apt install iftop
+        <section>
+            <h2>Monitoramento de tráfego com iftop</h2>
+            <button class="copy">Copiar</button>
+            <pre>sudo apt install iftop
 sudo iftop -i eth0</pre>
-    </section>
-  </main>
+        </section>
+    </main>
 
-  <footer>
-    Site criado com muito terminal e memes! Acesse:
-    <a href="#">Política de Privacidade</a> |
-    <a href="#">Termos de Uso</a>
-  </footer>
+    <footer>
+        Site criado com muito terminal e memes! Acesse:
+        <a href="#">Política de Privacidade</a> |
+        <a href="#">Termos de Uso</a>
+    </footer>
 
-  
+    <script src="loadMenu.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const copyButtons = document.querySelectorAll('.copy');
 
+            copyButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const pre = button.nextElementSibling;
+                    const textToCopy = pre.textContent;
 
-<script src="loadMenu.js"></script>
-</body>
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        const originalText = button.textContent;
+                        button.textContent = 'Copiado!';
+                        setTimeout(() => {
+                            button.textContent = originalText;
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Erro ao copiar o texto: ', err);
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

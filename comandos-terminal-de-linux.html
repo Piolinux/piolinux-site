@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <title>Comandos Essenciais do Terminal Linux - PioLinux</title>
+    <title>Comandos Essenciais do Terminal Linux - PioLinux</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Guia completo dos comandos essenciais do terminal Linux para iniciantes e usuários avançados. Aprenda a dominar a linha de comando!">
@@ -9,491 +9,490 @@
     <meta name="author" content="PioLinux">
     <meta name="robots" content="index,nofollow">
     <link rel="canonical" href="https://www.piolinux.com/comandos-terminal-de-linux.html" />
-      <link href="style.css" rel="stylesheet" type="text/css" />
-  
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-  <header>
-  <h1>  Comandos Essenciais do Terminal Linux</h1>
-  </header>
+    <header>
+        <h1>Comandos Essenciais do Terminal Linux</h1>
+    </header>
 
-<div id="menu-container"></div>
+    <div id="menu-container"></div>
 
-  <main>
-    <section id="comandos-terminal">
-        <h2>⌨️ Dominando o Terminal: Comandos Essenciais do Linux</h2>
-        <p>O terminal do Linux, também chamado de linha de comando, 
-        pode até parecer coisa de hacker à primeira vista — cheio de letras, símbolos e uma tela preta. Mas não se assuste! Na real, o terminal é uma das ferramentas mais poderosas e inteligentes que você pode ter no seu computador. Com alguns comandos simples, você consegue navegar pelas pastas, instalar programas, mudar configurações, automatizar tarefas e muito mais — tudo de forma rápida e eficiente. Muita gente acha que usar terminal é difícil, mas não é assim: basta começar aprendendo os comandos básicos, praticar um pouco, e logo você vai estar fazendo coisas incríveis com facilidade.Dominar o terminal é como aprender uma nova habilidade que transforma sua forma de usar o Linux. Você ganha controle total do sistema, resolve problemas sozinho e ainda sente aquele orgulho de entender como tudo funciona de verdade. Então, seja você um iniciante ou já use o Linux faz tempo, agora é a hora perfeita para se jogar nos comandos do Bash e descobrir como o terminal pode ser seu melhor parceiro no dia a dia..</p></section>
+    <main>
+		
+		<div id="share" style="text-align:center;margin:15px 0"></div>
+        <script async defer>
+            (() => {
+                const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+                const d=[
+                    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+                    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+                    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+                    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+                ],e=document.getElementById("share");
+                d.forEach(([n,c,l])=>{
+                    let a=document.createElement("a");
+                    a.href=l;a.target="_blank";a.rel="noopener";
+                    a.textContent=n;
+                    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+                    e.appendChild(a);
+                });
+            })();
+        </script>
+        <section>
+            <h2>⌨️ Dominando o Terminal: Comandos Essenciais do Linux</h2>
+            <p>
+                O terminal do Linux, também chamado de linha de comando, pode até parecer coisa de hacker à primeira vista — cheio de letras, símbolos e uma tela preta. Mas não se assuste! Na verdade, o terminal é uma das ferramentas mais poderosas e eficientes que você pode ter no seu computador.
+            </p>
+            <p>
+                Com alguns comandos simples, você consegue navegar pelas pastas, instalar programas, mudar configurações, automatizar tarefas e muito mais, tudo de forma rápida e precisa. Dominar o terminal é uma habilidade que transforma a sua forma de usar o Linux, dando-lhe controle total do sistema e a capacidade de resolver problemas com agilidade. Se você é iniciante ou já usa o Linux há um tempo, este é o momento perfeito para se aprofundar nos comandos e descobrir como o terminal pode ser seu melhor parceiro.
+            </p>
+        </section>
 
-        <ul>
-           <section> <li>
-                <h3 id="introducao">O Que é o Terminal e Por Que Usá-lo?</h3>
-                <p>Diferente de uma interface gráfica (GUI), o terminal é leve, rápido e possibilita criar automações avançadas com scripts. Por isso, muitos administradores de sistema, desenvolvedores e usuários mais experientes preferem usar o terminal — ele oferece mais controle, precisão e agilidade na hora de realizar tarefas no Linux.
-</p>
-Dica rápida: Para abrir o terminal, na maioria das distribuições, basta usar o atalho Ctrl+Alt+T. Também dá para encontrar o terminal facilmente buscando por "Terminal" no menu de aplicativos.</p>
-            </li></section>
+        <section id="introducao">
+            <h3>O Que é o Terminal e Por Que Usá-lo?</h3>
+            <p>
+                Diferente de uma interface gráfica (GUI), o terminal é leve, rápido e possibilita criar automações avançadas com scripts. Por isso, muitos administradores de sistema, desenvolvedores e usuários experientes preferem usar o terminal, pois ele oferece mais controle, precisão e agilidade.
+            </p>
+            <p>
+                <strong>Dica rápida:</strong> Para abrir o terminal na maioria das distribuições, use o atalho **Ctrl+Alt+T**. Você também pode encontrá-lo buscando por "Terminal" no menu de aplicativos.
+            </p>
+        </section>
 
-            <section><li>
-                <h3 id="basicos">Comandos Básicos para Iniciantes</h3>
-                <p>Comece por aqui! Estes comandos são a base da navegação e interação no terminal.</p>
-                <ul>
-                    <li></li>
-                        <h4><code>pwd</code> (Print Working Directory)</h4>
-                        <p>Mostra o caminho completo do diretório atual onde você está no terminal.</p>
-                        <pre><code>pwd</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>ls</code> (List)</h4>
-                        <p>Lista o conteúdo do diretório atual. Use opções para mais detalhes:</p>
-                        <ul>
-                            <li><code>ls -l</code>: Lista em formato longo (permissões, proprietário, tamanho, data).</li>
-                            <li><code>ls -a</code>: Mostra arquivos e diretórios ocultos (que começam com '.').</li>
-                            <li><code>ls -lh</code>: Formato longo e tamanho "human-readable" (KB, MB, GB).</li>
-                        </ul>
-                        <pre><code>ls
+        <section id="basicos">
+            <h3>Comandos Básicos para Iniciantes</h3>
+            <p>Comece por aqui! Estes comandos são a base da navegação e interação no terminal.</p>
+            <ul>
+                <li>
+                    <h4><code>pwd</code> (Print Working Directory)</h4>
+                    <p>Mostra o caminho completo do diretório atual em que você está.</p>
+                    <pre><code>pwd</code></pre>
+                </li>
+                <li>
+                    <h4><code>ls</code> (List)</h4>
+                    <p>Lista o conteúdo do diretório atual. Use opções para mais detalhes:</p>
+                    <ul>
+                        <li><code>ls -l</code>: Lista em formato longo (permissões, proprietário, tamanho, data).</li>
+                        <li><code>ls -a</code>: Mostra arquivos e diretórios ocultos (que começam com '.').</li>
+                        <li><code>ls -lh</code>: Formato longo e tamanho legível (KB, MB, GB).</li>
+                    </ul>
+                    <pre><code>ls
 ls -l
 ls -laH</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>cd</code> (Change Directory)</h4>
-                        <p>Navega entre os diretórios do sistema.</p>
-                        <ul>
-                            <li><code>cd &lt;nome_da_pasta&gt;</code>: Entra em uma subpasta.</li>
-                            <li><code>cd ..</code>: Volta um nível no diretório.</li>
-                            <li><code>cd ~</code> ou <code>cd</code>: Volta para o seu diretório pessoal (home).</li>
-                            <li><code>cd /</code>: Vai para o diretório raiz.</li>
-                            <li><code>cd -</code>: Volta para o diretório anterior visitado.</li>
-                        </ul>
-                        <pre><code>cd Documentos
+                </li>
+                <li>
+                    <h4><code>cd</code> (Change Directory)</h4>
+                    <p>Navega entre os diretórios do sistema.</p>
+                    <ul>
+                        <li><code>cd &lt;nome_da_pasta&gt;</code>: Entra em uma subpasta.</li>
+                        <li><code>cd ..</code>: Volta um nível no diretório.</li>
+                        <li><code>cd ~</code> ou <code>cd</code>: Vai para o seu diretório pessoal (home).</li>
+                        <li><code>cd /</code>: Vai para o diretório raiz.</li>
+                        <li><code>cd -</code>: Volta para o diretório visitado anteriormente.</li>
+                    </ul>
+                    <pre><code>cd Documentos
 cd ../..
 cd ~</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>man</code> (Manual)</h4>
-                        <p>Exibe o manual de qualquer comando. Pressione <code>q</code> para sair.</p>
-                        <pre><code>man ls
+                </li>
+                <li>
+                    <h4><code>man</code> (Manual)</h4>
+                    <p>Exibe o manual de qualquer comando. Pressione <code>q</code> para sair.</p>
+                    <pre><code>man ls
 man cd</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>clear</code> (Clear Screen)</h4>
-                        <p>Limpa a tela do terminal. O atalho <code>Ctrl+L</code> faz o mesmo.</p>
-                        <pre><code>clear</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>history</code></h4>
-                        <p>Mostra uma lista dos comandos executados anteriormente.</p>
-                        <pre><code>history
+                </li>
+                <li>
+                    <h4><code>clear</code> (Clear Screen)</h4>
+                    <p>Limpa a tela do terminal. O atalho <code>Ctrl+L</code> faz o mesmo.</p>
+                    <pre><code>clear</code></pre>
+                </li>
+                <li>
+                    <h4><code>history</code></h4>
+                    <p>Mostra uma lista dos comandos executados anteriormente.</p>
+                    <pre><code>history
 history | grep apt</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>echo</code></h4>
-                        <p>Exibe texto ou variáveis no terminal.</p>
-                        <pre><code>echo "Olá, PioLinux!"
+                </li>
+                <li>
+                    <h4><code>echo</code></h4>
+                    <p>Exibe texto ou variáveis no terminal.</p>
+                    <pre><code>echo "Olá, PioLinux!"
 echo $HOME</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>sudo</code> (Superuser Do)</h4>
-                        <p>Executa um comando com privilégios de superusuário (root). Use com cautela.</p>
-                        <pre><code>sudo apt update
+                </li>
+                <li>
+                    <h4><code>sudo</code> (Superuser Do)</h4>
+                    <p>Executa um comando com privilégios de superusuário (root). Use com cautela.</p>
+                    <pre><code>sudo apt update
 sudo reboot</code></pre>
-                    </li>
-                </ul>
-            </li>
+                </li>
+            </ul>
+        </section>
 
-            <li>
-                <h3 id="arquivos-diretorios">Gerenciamento de Arquivos e Diretórios</h3>
-                <p>Comandos essenciais para criar, copiar, mover e remover arquivos e pastas.</p>
-                <ul>
-                    <li>
-                        <h4><code>mkdir</code> (Make Directory)</h4>
-                        <p>Cria um novo diretório (pasta).</p>
-                        <ul>
-                            <li><code>mkdir &lt;nome_da_pasta&gt;</code></li>
-                            <li><code>mkdir -p pasta/subpasta/subsubpasta</code>: Cria diretórios aninhados.</li>
-                        </ul>
-                        <pre><code>mkdir Projetos
+        <section id="arquivos-diretorios">
+            <h3>Gerenciamento de Arquivos e Diretórios</h3>
+            <p>Comandos essenciais para criar, copiar, mover e remover arquivos e pastas.</p>
+            <ul>
+                <li>
+                    <h4><code>mkdir</code> (Make Directory)</h4>
+                    <p>Cria um novo diretório (pasta).</p>
+                    <ul>
+                        <li><code>mkdir &lt;nome_da_pasta&gt;</code></li>
+                        <li><code>mkdir -p pasta/subpasta/subsubpasta</code>: Cria diretórios aninhados.</li>
+                    </ul>
+                    <pre><code>mkdir Projetos
 mkdir -p Backup/2025/julho</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>rmdir</code> (Remove Directory)</h4>
-                        <p>Remove um diretório vazio.</p>
-                        <pre><code>rmdir MinhaPastaVazia</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>touch</code></h4>
-                        <p>Cria um novo arquivo vazio ou atualiza o timestamp de um arquivo existente.</p>
-                        <pre><code>touch novo_arquivo.txt</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>cp</code> (Copy)</h4>
-                        <p>Copia arquivos e diretórios.</p>
-                        <ul>
-                            <li><code>cp &lt;origem&gt; &lt;destino&gt;</code>: Copia arquivo.</li>
-                            <li><code>cp -r &lt;origem_dir&gt; &lt;destino_dir&gt;</code>: Copia diretório recursivamente.</li>
-                        </ul>
-                        <pre><code>cp documento.txt documento_copia.txt
+                </li>
+                <li>
+                    <h4><code>rmdir</code> (Remove Directory)</h4>
+                    <p>Remove um diretório vazio.</p>
+                    <pre><code>rmdir MinhaPastaVazia</code></pre>
+                </li>
+                <li>
+                    <h4><code>touch</code></h4>
+                    <p>Cria um novo arquivo vazio ou atualiza a data de modificação de um arquivo existente.</p>
+                    <pre><code>touch novo_arquivo.txt</code></pre>
+                </li>
+                <li>
+                    <h4><code>cp</code> (Copy)</h4>
+                    <p>Copia arquivos e diretórios.</p>
+                    <ul>
+                        <li><code>cp &lt;origem&gt; &lt;destino&gt;</code>: Copia um arquivo.</li>
+                        <li><code>cp -r &lt;origem_dir&gt; &lt;destino_dir&gt;</code>: Copia um diretório e seu conteúdo recursivamente.</li>
+                    </ul>
+                    <pre><code>cp documento.txt documento_copia.txt
 cp -r MinhaPasta NovaPasta</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>mv</code> (Move)</h4>
-                        <p>Move ou renomeia arquivos e diretórios.</p>
-                        <ul>
-                            <li><code>mv &lt;origem&gt; &lt;destino&gt;</code>: Move arquivo/diretório.</li>
-                            <li><code>mv &lt;nome_antigo&gt; &lt;nome_novo&gt;</code>: Renomeia arquivo/diretório.</li>
-                        </ul>
-                        <pre><code>mv arquivo.txt Documentos/
+                </li>
+                <li>
+                    <h4><code>mv</code> (Move)</h4>
+                    <p>Move ou renomeia arquivos e diretórios.</p>
+                    <ul>
+                        <li><code>mv &lt;origem&gt; &lt;destino&gt;</code>: Move um arquivo/diretório.</li>
+                        <li><code>mv &lt;nome_antigo&gt; &lt;nome_novo&gt;</code>: Renomeia um arquivo/diretório.</li>
+                    </ul>
+                    <pre><code>mv arquivo.txt Documentos/
 mv oldname.txt newname.txt</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>rm</code> (Remove)</h4>
-                        <p>Remove arquivos e diretórios. **Cuidado: A remoção é permanente, não vai para a lixeira.**</p>
-                        <ul>
-                            <li><code>rm &lt;arquivo&gt;</code>: Remove arquivo.</li>
-                            <li><code>rm -r &lt;diretorio&gt;</code>: Remove diretório e seu conteúdo recursivamente.</li>
-                            <li><code>rm -f &lt;arquivo&gt;</code>: Força a remoção sem pedir confirmação.</li>
-                            <li><code>rm -rf &lt;diretorio&gt;</code>: Força a remoção recursiva. **Extremamente perigoso! Use com máxima cautela.**</li>
-                        </ul>
-                        <pre><code>rm lixo.txt
+                </li>
+                <li>
+                    <h4><code>rm</code> (Remove)</h4>
+                    <p>Remove arquivos e diretórios. **Atenção: A remoção é permanente, e o item não vai para a lixeira.**</p>
+                    <ul>
+                        <li><code>rm &lt;arquivo&gt;</code>: Remove um arquivo.</li>
+                        <li><code>rm -r &lt;diretorio&gt;</code>: Remove um diretório e seu conteúdo recursivamente.</li>
+                        <li><code>rm -f &lt;arquivo&gt;</code>: Força a remoção sem pedir confirmação.</li>
+                        <li><code>rm -rf &lt;diretorio&gt;</code>: Força a remoção recursiva. **Extremamente perigoso! Use com máxima cautela.**</li>
+                    </ul>
+                    <pre><code>rm lixo.txt
 rm -r PastaVazia</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>cat</code> (Concatenate)</h4>
-                        <p>Exibe o conteúdo de arquivos. Pode concatenar múltiplos arquivos.</p>
-                        <pre><code>cat meu_documento.txt</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>less</code></h4>
-                        <p>Visualiza o conteúdo de arquivos grandes, permitindo rolagem. Pressione <code>q</code> para sair.</p>
-                        <pre><code>less /var/log/syslog</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>head</code> e <code>tail</code></h4>
-                        <p><code>head</code> mostra as primeiras linhas de um arquivo. <code>tail</code> mostra as últimas linhas. Use <code>-n &lt;numero&gt;</code> para especificar quantas linhas.</p>
-                        <ul>
-                            <li><code>tail -f &lt;arquivo&gt;</code>: Monitora um arquivo em tempo real (ótimo para logs).</li>
-                        </ul>
-                        <pre><code>head -n 5 arquivo.log
+                </li>
+                <li>
+                    <h4><code>cat</code> (Concatenate)</h4>
+                    <p>Exibe o conteúdo de arquivos e pode concatenar múltiplos arquivos.</p>
+                    <pre><code>cat meu_documento.txt</code></pre>
+                </li>
+                <li>
+                    <h4><code>less</code></h4>
+                    <p>Visualiza o conteúdo de arquivos grandes, permitindo rolagem. Pressione <code>q</code> para sair.</p>
+                    <pre><code>less /var/log/syslog</code></pre>
+                </li>
+                <li>
+                    <h4><code>head</code> e <code>tail</code></h4>
+                    <p><code>head</code> mostra as primeiras linhas de um arquivo, e <code>tail</code> mostra as últimas. Use <code>-n &lt;numero&gt;</code> para especificar a quantidade de linhas.</p>
+                    <ul>
+                        <li><code>tail -f &lt;arquivo&gt;</code>: Monitora um arquivo em tempo real (ótimo para logs).</li>
+                    </ul>
+                    <pre><code>head -n 5 arquivo.log
 tail -f /var/log/auth.log</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>ln</code> (Link)</h4>
-                        <p>Cria links (atalhos) para arquivos. <code>-s</code> cria um link simbólico (o mais comum).</p>
-                        <pre><code>ln -s /caminho/do/arquivo_original /caminho/do/link</code></pre>
-                    </li>
-                </ul>
-            </li>
+                </li>
+                <li>
+                    <h4><code>ln</code> (Link)</h4>
+                    <p>Cria links (atalhos) para arquivos. Use <code>-s</code> para criar um link simbólico (o tipo mais comum).</p>
+                    <pre><code>ln -s /caminho/do/arquivo_original /caminho/do/link</code></pre>
+                </li>
+            </ul>
+        </section>
 
-            <li>
-                <h3 id="processos-sistema">Gerenciamento de Processos e Sistema</h3>
-                <p>Comandos para ver o que está rodando, monitorar recursos e controlar o sistema.</p>
-                <ul>
-                    <li>
-                        <h4><code>ps</code> (Process Status)</h4>
-                        <p>Lista os processos em execução no sistema.</p>
-                        <ul>
-                            <li><code>ps aux</code>: Mostra todos os processos de todos os usuários.</li>
-                        </ul>
-                        <pre><code>ps aux | grep firefox</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>top</code></h4>
-                        <p>Monitora processos em tempo real, mostrando o uso de CPU, memória, etc. Pressione <code>q</code> para sair.</p>
-                        <pre><code>top</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>htop</code></h4>
-                        <p>Uma versão mais interativa e colorida do `top`. (Pode precisar instalar: <code>sudo apt install htop</code>).</p>
-                        <pre><code>htop</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>kill</code></h4>
-                        <p>Encerra um processo usando seu ID (PID).</p>
-                        <pre><code>kill 12345</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>pkill</code></h4>
-                        <p>Encerra processos usando seu nome.</p>
-                        <pre><code>pkill firefox</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>df</code> (Disk Free)</h4>
-                        <p>Exibe informações sobre o espaço em disco de sistemas de arquivos montados.</p>
-                        <ul>
-                            <li><code>df -h</code>: Mostra em formato "human-readable" (GB, MB).</li>
-                        </ul>
-                        <pre><code>df -h</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>du</code> (Disk Usage)</h4>
-                        <p>Estima o espaço em disco usado por arquivos e diretórios.</p>
-                        <ul>
-                            <li><code>du -sh &lt;diretorio&gt;</code>: Mostra o tamanho total de um diretório em formato "human-readable".</li>
-                        </ul>
-                        <pre><code>du -sh *</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>free</code></h4>
-                        <p>Exibe a quantidade de memória livre e usada no sistema.</p>
-                        <ul>
-                            <li><code>free -h</code>: Mostra em formato "human-readable".</li>
-                        </ul>
-                        <pre><code>free -h</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>uname</code> (Unix Name)</h4>
-                        <p>Exibe informações sobre o sistema e o kernel.</p>
-                        <ul>
-                            <li><code>uname -a</code>: Mostra todas as informações.</li>
-                        </ul>
-                        <pre><code>uname -a</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>uptime</code></h4>
-                        <p>Mostra há quanto tempo o sistema está ligado e a média de carga.</p>
-                        <pre><code>uptime</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>reboot</code> e <code>shutdown</code></h4>
-                        <p>Reinicia ou desliga o sistema.</p>
-                        <ul>
-                            <li><code>sudo reboot</code>: Reinicia imediatamente.</li>
-                            <li><code>sudo shutdown -h now</code>: Desliga imediatamente.</li>
-                            <li><code>sudo shutdown -r +5</code>: Reinicia em 5 minutos.</li>
-                        </ul>
-                        <pre><code>sudo reboot</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>systemctl</code> (System Control)</h4>
-                        <p>Comando para controlar o **systemd**, o gerenciador de sistema e serviços. (Moderno, substitui `service` e `chkconfig`).</p>
-                        <ul>
-                            <li><code>systemctl status &lt;serviço&gt;</code>: Verifica o status de um serviço (ex: `apache2`, `nginx`).</li>
-                            <li><code>systemctl start &lt;serviço&gt;</code>: Inicia um serviço.</li>
-                            <li><code>systemctl stop &lt;serviço&gt;</code>: Para um serviço.</li>
-                            <li><code>systemctl enable &lt;serviço&gt;</code>: Habilita um serviço para iniciar com o sistema.</li>
-                            <li><code>systemctl disable &lt;serviço&gt;</code>: Desabilita um serviço para não iniciar com o sistema.</li>
-                        </ul>
-                        <pre><code>systemctl status apache2
+        <section id="processos-sistema">
+            <h3>Gerenciamento de Processos e Sistema</h3>
+            <p>Comandos para ver o que está rodando, monitorar recursos e controlar o sistema.</p>
+            <ul>
+                <li>
+                    <h4><code>ps</code> (Process Status)</h4>
+                    <p>Lista os processos em execução no sistema.</p>
+                    <ul>
+                        <li><code>ps aux</code>: Mostra todos os processos de todos os usuários.</li>
+                    </ul>
+                    <pre><code>ps aux | grep firefox</code></pre>
+                </li>
+                <li>
+                    <h4><code>top</code></h4>
+                    <p>Monitora processos em tempo real, mostrando o uso de CPU, memória, etc. Pressione <code>q</code> para sair.</p>
+                    <pre><code>top</code></pre>
+                </li>
+                <li>
+                    <h4><code>htop</code></h4>
+                    <p>Uma versão mais interativa e colorida do <code>top</code>. (Pode precisar ser instalado: <code>sudo apt install htop</code>).</p>
+                    <pre><code>htop</code></pre>
+                </li>
+                <li>
+                    <h4><code>kill</code></h4>
+                    <p>Encerra um processo usando seu ID (PID).</p>
+                    <pre><code>kill 12345</code></pre>
+                </li>
+                <li>
+                    <h4><code>pkill</code></h4>
+                    <p>Encerra processos usando seu nome.</p>
+                    <pre><code>pkill firefox</code></pre>
+                </li>
+                <li>
+                    <h4><code>df</code> (Disk Free)</h4>
+                    <p>Exibe informações sobre o espaço em disco de sistemas de arquivos montados.</p>
+                    <ul>
+                        <li><code>df -h</code>: Mostra o espaço em formato legível (GB, MB).</li>
+                    </ul>
+                    <pre><code>df -h</code></pre>
+                </li>
+                <li>
+                    <h4><code>du</code> (Disk Usage)</h4>
+                    <p>Estima o espaço em disco usado por arquivos e diretórios.</p>
+                    <ul>
+                        <li><code>du -sh &lt;diretorio&gt;</code>: Mostra o tamanho total de um diretório em formato legível.</li>
+                    </ul>
+                    <pre><code>du -sh *</code></pre>
+                </li>
+                <li>
+                    <h4><code>free</code></h4>
+                    <p>Exibe a quantidade de memória livre e usada no sistema.</p>
+                    <ul>
+                        <li><code>free -h</code>: Mostra a memória em formato legível.</li>
+                    </ul>
+                    <pre><code>free -h</code></pre>
+                </li>
+                <li>
+                    <h4><code>uname</code> (Unix Name)</h4>
+                    <p>Exibe informações sobre o sistema e o kernel.</p>
+                    <ul>
+                        <li><code>uname -a</code>: Mostra todas as informações.</li>
+                    </ul>
+                    <pre><code>uname -a</code></pre>
+                </li>
+                <li>
+                    <h4><code>uptime</code></h4>
+                    <p>Mostra há quanto tempo o sistema está ligado e a média de carga.</p>
+                    <pre><code>uptime</code></pre>
+                </li>
+                <li>
+                    <h4><code>reboot</code> e <code>shutdown</code></h4>
+                    <p>Reinicia ou desliga o sistema.</p>
+                    <ul>
+                        <li><code>sudo reboot</code>: Reinicia imediatamente.</li>
+                        <li><code>sudo shutdown -h now</code>: Desliga imediatamente.</li>
+                        <li><code>sudo shutdown -r +5</code>: Reinicia em 5 minutos.</li>
+                    </ul>
+                    <pre><code>sudo reboot</code></pre>
+                </li>
+                <li>
+                    <h4><code>systemctl</code> (System Control)</h4>
+                    <p>Comando para controlar o **systemd**, o gerenciador de sistema e serviços. (Moderno, substitui `service` e `chkconfig`).</p>
+                    <ul>
+                        <li><code>systemctl status &lt;serviço&gt;</code>: Verifica o status de um serviço (ex: `apache2`, `nginx`).</li>
+                        <li><code>systemctl start &lt;serviço&gt;</code>: Inicia um serviço.</li>
+                        <li><code>systemctl stop &lt;serviço&gt;</code>: Para um serviço.</li>
+                        <li><code>systemctl enable &lt;serviço&gt;</code>: Habilita um serviço para iniciar com o sistema.</li>
+                        <li><code>systemctl disable &lt;serviço&gt;</code>: Desabilita um serviço para não iniciar com o sistema.</li>
+                    </ul>
+                    <pre><code>systemctl status apache2
 sudo systemctl restart ssh</code></pre>
-                    </li>
-                </ul>
-            </li></section>
+                </li>
+            </ul>
+        </section>
 
-          <section>  <li>
-                <h3 id="rede-seguranca">Comandos de Rede e Segurança</h3>
-                <p>Ferramentas para diagnosticar problemas de rede, verificar conexões e gerenciar o firewall.</p>
-                <ul>
-                    <li>
-                        <h4><code>ping</code></h4>
-                        <p>Testa a conectividade com um host na rede ou internet.</p>
-                        <pre><code>ping google.com</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>ip</code> (IP Address)</h4>
-                        <p>Ferramenta moderna para gerenciar interfaces de rede e rotas (substitui `ifconfig`).</p>
-                        <ul>
-                            <li><code>ip a</code> ou <code>ip addr</code>: Mostra endereços IP de todas as interfaces.</li>
-                            <li><code>ip r</code> ou <code>ip route</code>: Mostra a tabela de roteamento.</li>
-                        </ul>
-                        <pre><code>ip a
+        <section id="rede-seguranca">
+            <h3>Comandos de Rede e Segurança</h3>
+            <p>Ferramentas para diagnosticar problemas de rede, verificar conexões e gerenciar o firewall.</p>
+            <ul>
+                <li>
+                    <h4><code>ping</code></h4>
+                    <p>Testa a conectividade com um host na rede ou internet.</p>
+                    <pre><code>ping google.com</code></pre>
+                </li>
+                <li>
+                    <h4><code>ip</code> (IP Address)</h4>
+                    <p>Ferramenta moderna para gerenciar interfaces de rede e rotas (substitui `ifconfig`).</p>
+                    <ul>
+                        <li><code>ip a</code> ou <code>ip addr</code>: Mostra endereços IP de todas as interfaces.</li>
+                        <li><code>ip r</code> ou <code>ip route</code>: Mostra a tabela de roteamento.</li>
+                    </ul>
+                    <pre><code>ip a
 ip r</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>ss</code> (Socket Statistics)</h4>
-                        <p>Exibe estatísticas de socket, similar ao `netstat` mas mais rápido e moderno.</p>
-                        <ul>
-                            <li><code>ss -tulpn</code>: Lista todas as portas TCP/UDP abertas e os programas que as utilizam (privilégios de root).</li>
-                        </ul>
-                        <pre><code>sudo ss -tulpn</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>curl</code></h4>
-                        <p>Ferramenta para transferir dados de ou para um servidor, usada frequentemente para testar APIs ou baixar conteúdo da web.</p>
-                        <pre><code>curl ifconfig.me # Descobre seu IP público
+                </li>
+                <li>
+                    <h4><code>ss</code> (Socket Statistics)</h4>
+                    <p>Exibe estatísticas de socket, similar ao `netstat`, mas mais rápido e moderno.</p>
+                    <ul>
+                        <li><code>ss -tulpn</code>: Lista todas as portas TCP/UDP abertas e os programas que as utilizam (necessita de privilégios de root).</li>
+                    </ul>
+                    <pre><code>sudo ss -tulpn</code></pre>
+                </li>
+                <li>
+                    <h4><code>curl</code></h4>
+                    <p>Ferramenta para transferir dados de ou para um servidor, usada frequentemente para testar APIs ou baixar conteúdo da web.</p>
+                    <pre><code>curl ifconfig.me # Descobre seu IP público
 curl -O https://example.com/file.zip # Baixa um arquivo</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>wget</code> (Web Get)</h4>
-                        <p>Baixa arquivos da web, suporta downloads recursivos.</p>
-                        <pre><code>wget https://example.com/image.jpg</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>ssh</code> (Secure Shell)</h4>
-                        <p>Permite conectar-se a servidores remotos de forma segura.</p>
-                        <pre><code>ssh usuario@endereco_ip_do_servidor</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>scp</code> (Secure Copy)</h4>
-                        <p>Copia arquivos de/para servidores remotos de forma segura via SSH.</p>
-                        <pre><code>scp local_file.txt usuario@servidor_remoto:/caminho/destino/</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>dig</code> (Domain Information Groper)</h4>
-                        <p>Realiza consultas DNS, útil para diagnosticar problemas de resolução de nomes.</p>
-                        <pre><code>dig example.com</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>traceroute</code></h4>
-                        <p>Exibe o caminho que os pacotes percorrem para chegar a um destino, mostrando cada "salto" (hop).</p>
-                        <pre><code>traceroute google.com</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>ufw</code> (Uncomplicated Firewall)</h4>
-                        <p>Interface simplificada para gerenciar o firewall `iptables` no Linux (Debian/Ubuntu).</p>
-                        <ul>
-                            <li><code>sudo ufw enable</code>: Ativa o firewall.</li>
-                            <li><code>sudo ufw status</code>: Verifica o status.</li>
-                            <li><code>sudo ufw allow ssh</code>: Permite conexões SSH.</li>
-                        </ul>
-                        <pre><code>sudo ufw enable
+                </li>
+                <li>
+                    <h4><code>wget</code> (Web Get)</h4>
+                    <p>Baixa arquivos da web, suporta downloads recursivos.</p>
+                    <pre><code>wget https://example.com/image.jpg</code></pre>
+                </li>
+                <li>
+                    <h4><code>ssh</code> (Secure Shell)</h4>
+                    <p>Permite conectar-se a servidores remotos de forma segura.</p>
+                    <pre><code>ssh usuario@endereco_ip_do_servidor</code></pre>
+                </li>
+                <li>
+                    <h4><code>scp</code> (Secure Copy)</h4>
+                    <p>Copia arquivos de ou para servidores remotos de forma segura via SSH.</p>
+                    <pre><code>scp local_file.txt usuario@servidor_remoto:/caminho/destino/</code></pre>
+                </li>
+                <li>
+                    <h4><code>dig</code> (Domain Information Groper)</h4>
+                    <p>Realiza consultas DNS, útil para diagnosticar problemas de resolução de nomes.</p>
+                    <pre><code>dig example.com</code></pre>
+                </li>
+                <li>
+                    <h4><code>traceroute</code></h4>
+                    <p>Exibe o caminho que os pacotes percorrem para chegar a um destino, mostrando cada "salto" (hop).</p>
+                    <pre><code>traceroute google.com</code></pre>
+                </li>
+                <li>
+                    <h4><code>ufw</code> (Uncomplicated Firewall)</h4>
+                    <p>Interface simplificada para gerenciar o firewall `iptables` no Linux (comum em Debian/Ubuntu).</p>
+                    <ul>
+                        <li><code>sudo ufw enable</code>: Ativa o firewall.</li>
+                        <li><code>sudo ufw status</code>: Verifica o status.</li>
+                        <li><code>sudo ufw allow ssh</code>: Permite conexões SSH.</li>
+                    </ul>
+                    <pre><code>sudo ufw enable
 sudo ufw status verbose</code></pre>
-                    </li>
-                </ul>
-            </li>
-</section>
-           <section><li>
-                <h3 id="utilidades-avancadas">Utilidades e Manipulação de Texto</h3>
-                <p>Comandos poderosos para buscar, filtrar e manipular dados em arquivos de texto.</p>
-                <ul>
-					
-					
-                    <li>
-                        <h4><code>grep</code> (Global Regular Expression Print)</h4>
-                        <p>Procura padrões de texto em arquivos. Uma das ferramentas mais usadas no terminal.</p>
-                        <ul>
-                            <li><code>grep "erro" log.txt</code>: Procura a palavra "erro" em `log.txt`.</li>
-                            <li><code>grep -i "alerta" log.txt</code>: Ignora maiúsculas/minúsculas.</li>
-                            <li><code>grep -r "termo" /var/log/</code>: Busca recursivamente em todos os arquivos de um diretório.</li>
-                        </ul>
-                        <pre><code>grep "Failed password" /var/log/auth.log
+                </li>
+            </ul>
+        </section>
+
+        <section id="utilidades-avancadas">
+            <h3>Utilidades e Manipulação de Texto</h3>
+            <p>Comandos poderosos para buscar, filtrar e manipular dados em arquivos de texto.</p>
+            <ul>
+                <li>
+                    <h4><code>grep</code> (Global Regular Expression Print)</h4>
+                    <p>Procura padrões de texto em arquivos. Uma das ferramentas mais usadas no terminal.</p>
+                    <ul>
+                        <li><code>grep "erro" log.txt</code>: Procura a palavra "erro" em `log.txt`.</li>
+                        <li><code>grep -i "alerta" log.txt</code>: Ignora maiúsculas/minúsculas.</li>
+                        <li><code>grep -r "termo" /var/log/</code>: Busca recursivamente em todos os arquivos de um diretório.</li>
+                    </ul>
+                    <pre><code>grep "Failed password" /var/log/auth.log
 grep -r "ERROR" .</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>find</code></h4>
-                        <p>Procura arquivos e diretórios com base em vários critérios (nome, tipo, tamanho, data).</p>
-                        <ul>
-                            <li><code>find . -name "*.log"</code>: Procura todos os arquivos `.log` no diretório atual e subdiretórios.</li>
-                            <li><code>find /home -type d -name "Projetos"</code>: Procura diretórios chamados "Projetos" dentro de `/home`.</li>
-                        </ul>
-                        <pre><code>find / -type f -name "config.conf"
+                </li>
+                <li>
+                    <h4><code>find</code></h4>
+                    <p>Procura arquivos e diretórios com base em vários critérios (nome, tipo, tamanho, data).</p>
+                    <ul>
+                        <li><code>find . -name "*.log"</code>: Procura todos os arquivos `.log` no diretório atual e subdiretórios.</li>
+                        <li><code>find /home -type d -name "Projetos"</code>: Procura diretórios chamados "Projetos" dentro de `/home`.</li>
+                    </ul>
+                    <pre><code>find / -type f -name "config.conf"
 find . -size +1G</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>awk</code></h4>
-                        <p>Linguagem de processamento de texto poderosa, ideal para extrair e formatar dados de arquivos ou saídas de comandos.</p>
-                        <pre><code>cat /etc/passwd | awk -F':' '{print $1}' # Lista nomes de usuários
-df -h | awk 'NR>1 {print $1, $5}' # Mostra partição e % de uso</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>sed</code> (Stream Editor)</h4>
-                        <p>Editor de texto de fluxo, usado para transformar texto em pipelines ou arquivos. Ótimo para substituições.</p>
-                        <pre><code>echo "Este é um texto de exemplo" | sed 's/exemplo/teste/' # Substitui "exemplo" por "teste"
-sed -i 's/old_text/new_text/g' my_file.txt # Substitui globalmente em um arquivo (cria backup com -i.bak)</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>xargs</code></h4>
-                        <p>Recebe a saída padrão de um comando e a usa como argumento para outro comando.</p>
-                        <pre><code>find . -name "*.bak" | xargs rm # Remove todos os arquivos .bak encontrados</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>cut</code></h4>
-                        <p>Extrai seções de cada linha de arquivos (colunas).</p>
-                        <pre><code>cat /etc/passwd | cut -d':' -f1,5 # Mostra usuário e nome completo (colunas 1 e 5, delimitador ':')</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>sort</code></h4>
-                        <p>Ordena as linhas de um arquivo de texto.</p>
-                        <pre><code>cat nomes.txt | sort
+                </li>
+                <li>
+                    <h4><code>awk</code></h4>
+                    <p>Linguagem de processamento de texto poderosa, ideal para extrair e formatar dados de arquivos ou saídas de comandos.</p>
+                    <pre><code>cat /etc/passwd | awk -F':' '{print $1}' # Lista nomes de usuários
+df -h | awk 'NR>1 {print $1, $5}' # Mostra a partição e % de uso</code></pre>
+                </li>
+                <li>
+                    <h4><code>sed</code> (Stream Editor)</h4>
+                    <p>Editor de texto de fluxo, usado para transformar texto em pipelines ou arquivos. Ótimo para substituições.</p>
+                    <pre><code>echo "Este é um texto de exemplo" | sed 's/exemplo/teste/' # Substitui "exemplo" por "teste"
+sed -i 's/old_text/new_text/g' my_file.txt # Substitui globalmente em um arquivo</code></pre>
+                </li>
+                <li>
+                    <h4><code>xargs</code></h4>
+                    <p>Recebe a saída padrão de um comando e a usa como argumento para outro comando.</p>
+                    <pre><code>find . -name "*.bak" | xargs rm # Remove todos os arquivos .bak encontrados</code></pre>
+                </li>
+                <li>
+                    <h4><code>cut</code></h4>
+                    <p>Extrai seções de cada linha de arquivos (colunas).</p>
+                    <pre><code>cat /etc/passwd | cut -d':' -f1,5 # Mostra o usuário e o nome completo (colunas 1 e 5, delimitador ':')</code></pre>
+                </li>
+                <li>
+                    <h4><code>sort</code></h4>
+                    <p>Ordena as linhas de um arquivo de texto.</p>
+                    <pre><code>cat nomes.txt | sort
 cat numeros.txt | sort -n # Ordena numericamente</code></pre>
-                    </li>
-                    <li>
-                        <h4><code>uniq</code> (Unique)</h4>
-                        <p>Remove linhas duplicadas (funciona melhor com a saída já ordenada).</p>
-                        <pre><code>cat log.txt | sort | uniq -c # Conta ocorrências de linhas únicas</code></pre>
-                    </li>
-                </ul>
-            </li></section>
+                </li>
+                <li>
+                    <h4><code>uniq</code> (Unique)</h4>
+                    <p>Remove linhas duplicadas (funciona melhor com a saída já ordenada).</p>
+                    <pre><code>cat log.txt | sort | uniq -c # Conta as ocorrências de cada linha única</code></pre>
+                </li>
+            </ul>
+        </section>
 
-            <section><li>
-                <h3 id="gerenciamento-pacotes">Gerenciamento de Pacotes (Exemplos)</h3>
-                <p>Os comandos de gerenciamento de pacotes variam por distribuição. Aqui estão os mais comuns.</p>
-                <ul>
-                    
-                    
-                    
-                    <li>
-                        <h4>Debian/Ubuntu (<code>apt</code>)</h4>
-                        <ul>
-                            <li><code>sudo apt update</code>: Atualiza a lista de pacotes.</li>
-                            <li><code>sudo apt upgrade</code>: Atualiza os pacotes instalados.</li>
-                            <li><code>sudo apt install &lt;pacote&gt;</code>: Instala um pacote.</li>
-                            <li><code>sudo apt remove &lt;pacote&gt;</code>: Remove um pacote.</li>
-                            <li><code>apt search &lt;termo&gt;</code>: Busca por pacotes.</li>
-                            <li><code>sudo apt autoremove</code>: Remove dependências não utilizadas.</li>
-                        </ul>
-                        <pre><code>sudo apt update && sudo apt upgrade -y
+        <section id="gerenciamento-pacotes">
+            <h3>Gerenciamento de Pacotes (Exemplos)</h3>
+            <p>Os comandos de gerenciamento de pacotes variam por distribuição. Aqui estão os mais comuns.</p>
+            <ul>
+                <li>
+                    <h4>Debian/Ubuntu (<code>apt</code>)</h4>
+                    <ul>
+                        <li><code>sudo apt update</code>: Atualiza a lista de pacotes.</li>
+                        <li><code>sudo apt upgrade</code>: Atualiza os pacotes instalados.</li>
+                        <li><code>sudo apt install &lt;pacote&gt;</code>: Instala um pacote.</li>
+                        <li><code>sudo apt remove &lt;pacote&gt;</code>: Remove um pacote.</li>
+                        <li><code>apt search &lt;termo&gt;</code>: Busca por pacotes.</li>
+                        <li><code>sudo apt autoremove</code>: Remove dependências não utilizadas.</li>
+                    </ul>
+                    <pre><code>sudo apt update && sudo apt upgrade -y
 sudo apt install vlc</code></pre>
-                    </li>
-                    </section>
-                    <section>
-                    <li>
-                        <h4>Fedora/RHEL (<code>dnf</code>)</h4>
-                        <ul>
-                            <li><code>sudo dnf update</code>: Atualiza o sistema.</li>
-                            <li><code>sudo dnf install &lt;pacote&gt;</code>: Instala um pacote.</li>
-                            <li><code>sudo dnf remove &lt;pacote&gt;</code>: Remove um pacote.</li>
-                            <li><code>dnf search &lt;termo&gt;</code>: Busca por pacotes.</li>
-                        </ul>
-                        <pre><code>sudo dnf install git
+                </li>
+                <li>
+                    <h4>Fedora/RHEL (<code>dnf</code>)</h4>
+                    <ul>
+                        <li><code>sudo dnf update</code>: Atualiza o sistema.</li>
+                        <li><code>sudo dnf install &lt;pacote&gt;</code>: Instala um pacote.</li>
+                        <li><code>sudo dnf remove &lt;pacote&gt;</code>: Remove um pacote.</li>
+                        <li><code>dnf search &lt;termo&gt;</code>: Busca por pacotes.</li>
+                    </ul>
+                    <pre><code>sudo dnf install git
 sudo dnf update</code></pre>
-                    </li></section>
-                    
-                  <section>  <li>
-                        <h4>Arch Linux (<code>pacman</code>)</h4>
-                        <ul>
-                          <li><code>sudo pacman -Syu</code>: Sincroniza e atualiza o sistema.</li>
-                            <li><code>sudo pacman -S &lt;pacote&gt;</code>: Instala um pacote.</li>
-                            <li><code>sudo pacman -R &lt;pacote&gt;</code>: Remove um pacote.</li>
-                            <li><code>pacman -Ss &lt;termo&gt;</code>: Busca por pacotes.</li>
-                        </ul>
-                        <pre><code>sudo pacman -Syu
+                </li>
+                <li>
+                    <h4>Arch Linux (<code>pacman</code>)</h4>
+                    <ul>
+                        <li><code>sudo pacman -Syu</code>: Sincroniza e atualiza o sistema.</li>
+                        <li><code>sudo pacman -S &lt;pacote&gt;</code>: Instala um pacote.</li>
+                        <li><code>sudo pacman -R &lt;pacote&gt;</code>: Remove um pacote.</li>
+                        <li><code>pacman -Ss &lt;termo&gt;</code>: Busca por pacotes.</li>
+                    </ul>
+                    <pre><code>sudo pacman -Syu
 sudo pacman -S neofetch</code></pre>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-</section>
-       <section> <p>Este guia é um ponto de partida. O terminal Linux é um universo a ser explorado, e a melhor forma de aprender é praticando. Use a tecla <code>TAB</code> para autocompletar, <code>Ctrl+R</code> para o histórico de comandos e, sempre que tiver dúvidas, consulte o manual com <code>man &lt;comando&gt;</code>. Boa jornada na linha de comando!</p>
-    </section>
-<div id="share" style="text-align:center;margin:15px 0"></div>
-<script async defer>
-(() => {
-  const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
-  const d=[
-    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
-    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
-    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-  ],e=document.getElementById("share");
-  d.forEach(([n,c,l])=>{
-    let a=document.createElement("a");
-    a.href=l;a.target="_blank";a.rel="noopener";
-    a.textContent=n;
-    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
-    e.appendChild(a);
-  });
-})();
-</script>
+                </li>
+            </ul>
+        </section>
 
-  </main>
+        <section>
+            <p>Este guia é um ponto de partida. O terminal Linux é um universo a ser explorado, e a melhor forma de aprender é praticando. Use a tecla **Tab** para autocompletar, **Ctrl+R** para buscar no histórico de comandos e, sempre que tiver dúvidas, consulte o manual com **man &lt;comando&gt;**. Boa jornada na linha de comando!</p>
+        </section>
+        
+        <
+    </main>
+    
+    <footer>
+        Site criado com muito terminal e memes! Acesse:
+        <a href="politica-de-privacidade.html">Política de Privacidade</a> |
+        <a href="termos-de-uso.html">Termos de Uso</a>
+    </footer>
 
-  <footer>
-    Site criado com muito terminal e memes! Acesse:
-    <a href="#">Política de Privacidade</a> |
-    <a href="#">Termos de Uso</a>
-  </footer>
-
-  <script src="loadMenu.js"></script>
-  
+    <script src="loadMenu.js"></script>
 </body>
 </html>
