@@ -1,166 +1,102 @@
-/* Estilos Globais */
-* {
+/* Estilos Globais e de Fundo */
+body {
+    background-color: #333; /* Fundo cinza */
+    color: #fdfdfd;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Verdana', sans-serif;
 }
-body {
-    background-color: #121212;
-    color: #fdfdfd;
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh;
-}
+
+/* Container do cabeçalho */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #000;
-    color: #00ff88;
-    padding: 10px 15px;
-    text-align: center;
-    z-index: 1000;
-    border-bottom: 2px solid #00ff88;
-}
-header h1 {
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-/* Estilos do Menu Sanfona */
-#menu-container {
-    position: fixed;
-    top: 60px;
-    left: 0;
-    width: 250px;
     background-color: #1a1a1a;
-    border-right: 2px solid #00ff88;
-    padding: 10px;
-    overflow-y: auto;
-    height: calc(100vh - 60px);
-}
-.accordion-section {
-    margin-bottom: 10px;
-}
-.accordion-title {
-    background-color: #004d00;
-    color: #00ffff;
-    padding: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 4px;
-}
-.accordion-content {
-    display: none;
-    padding: 10px;
-}
-.accordion-content a, .accordion-content a:visited {
-    display: block;
-    color: #00bfff;
-    padding: 5px 0;
-    text-decoration: none;
-    font-weight: bold;
-}
-.accordion-content a:hover {
-    color: #00ffcc;
-    text-decoration: underline;
-}
-
-/* Estilos do Conteúdo Principal */
-main {
-    margin-left: 250px;
-    padding: 80px 20px 20px;
-    width: 100%;
-    max-width: 900px;
-}
-section {
-    margin-bottom: 40px;
-    background: #1a1a1a;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #00ff88;
-}
-section h2 {
-    color: #00ff88;
-    margin-bottom: 15px;
-}
-section ul {
-    list-style: none;
-    padding-left: 0;
-}
-section li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-code {
-    background-color: #222;
-    color: #00ff00;
-    padding: 2px 6px;
-    border-radius: 4px;
-}
-footer {
-    background: #000;
-    color: #ccc;
+    color: white;
+    padding: 8px 15px;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    border-bottom: 1px solid #008000;
 }
-footer a, footer a:visited {
-    color: #00ffff;
-    font-weight: bold;
+
+header h1 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Container do menu completo */
+.dropdown-menu-container {
+    background-color: #1a1a1a;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center; /* Centraliza a barra de menu */
+}
+
+/* Itens do menu principal */
+.dropdown-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-menu > li {
+    position: relative;
+    margin: 0 3px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 6px 10px;
     text-decoration: none;
-}
-footer a:hover {
-    color: #00ffcc;
-    text-decoration: underline;
+    color: white;
+    background-color: #006400; /* Verde escuro */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
 }
 
-/* Esconde o botão de menu em telas grandes */
-.menu-toggle {
+.dropdown-menu a:hover {
+    background-color: #008000; /* Verde mais claro ao passar o mouse */
+}
+
+/* Conteúdo do dropdown (submenu) */
+.dropdown-content {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2c2c2c;
+    list-style: none;
+    min-width: 130px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
----
+.dropdown-content li {
+    border-bottom: 1px solid #444;
+}
 
-### Estilos Responsivos (Mobile)
+.dropdown-content a {
+    padding: 8px 12px;
+    background-color: #2c2c2c;
+    color: white;
+    font-size: 0.9rem;
+}
 
-A principal alteração está na media query. O menu (`#menu-container`) agora é escondido por padrão e o layout é ajustado para telas menores.
+.dropdown-content a:hover {
+    background-color: #006400;
+}
 
-```css
-@media screen and (max-width: 768px) {
-    body {
-        /* Muda a direção para empilhar os elementos */
-        flex-direction: column;
-    }
-    header {
-        position: static; /* O cabeçalho deixa de ser fixo */
-        display: flex; /* Permite o alinhamento do título e do botão */
-        justify-content: space-between;
-        align-items: center;
-    }
-    header h1 {
-        text-align: left;
-    }
-    .menu-toggle {
-        display: block; /* Mostra o botão de menu */
-        background: none;
-        border: none;
-        color: #00ff88;
-        font-size: 2rem;
-        cursor: pointer;
-    }
-    #menu-container {
-        position: static; /* O menu não é mais fixo */
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 2px solid #00ff88;
-        display: none; /* O menu fica escondido por padrão */
-    }
-    main {
-        margin-left: 0; /* Remove a margem do menu lateral */
-        padding-top: 20px; /* Ajusta o padding do conteúdo principal */
-    }
+li:hover > .dropdown-content {
+    display: block;
+}
+
+/* Estilos para centralizar o conteúdo principal da página */
+main {
+    max-width: 960px;
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px;
+    background-color: #1a1a1a; /* Fundo do conteúdo mais escuro para contraste */
+    color: #fdfdfd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
 }

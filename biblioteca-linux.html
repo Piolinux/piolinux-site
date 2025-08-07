@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Linux</title>
+    <meta name="description" content="Explore nossa coleção de artigos, tutoriais e guias sobre o universo Linux. Aprenda sobre comandos, distribuições e segurança de forma prática e organizada.">
+    <meta name="keywords" content="Linux, tutoriais, comandos, distribuições, segurança, terminal, guias, artigos, iniciantes">
+    <meta name="author" content="Seu Nome ou o Nome do seu Site">
+    <link rel="canonical" href="https://piolinux.com/biblioteca-linux.html">
+    <style>
+        /* Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Verdana', sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #fdfdfd;
+            display: flex;
+            min-height: 100vh;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #000;
+            color: #00ff88;
+            padding: 10px 15px;
+            text-align: center;
+            z-index: 1000;
+            border-bottom: 2px solid #00ff88;
+        }
+        header h1 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        .menu-toggle {
+            display: none; /* Oculta o botão de menu em telas grandes */
+        }
+        
+        /* Estilos do Menu Sanfona */
+        #menu-container {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 250px;
+            background-color: #1a1a1a;
+            border-right: 2px solid #00ff88;
+            padding: 10px;
+            overflow-y: auto;
+            height: calc(100vh - 60px);
+            z-index: 999;
+        }
+        .accordion-section {
+            margin-bottom: 10px;
+        }
+        .accordion-title {
+            background-color: #004d00;
+            color: #00ffff;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .accordion-content {
+            display: none;
+            padding: 10px;
+        }
+        .accordion-content a, .accordion-content a:visited {
+            display: block;
+            color: #00bfff;
+            padding: 5px 0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .accordion-content a:hover {
+            color: #00ffcc;
+            text-decoration: underline;
+        }
+
+        /* Estilos do Conteúdo Principal */
+        main {
+            margin-left: 250px;
+            padding: 80px 20px 20px;
+            width: 100%;
+            max-width: 900px;
+        }
+        section {
+            margin-bottom: 40px;
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #00ff88;
+        }
+        section h2 {
+            color: #00ff88;
+            margin-bottom: 15px;
+        }
+        section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        section li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        code {
+            background-color: #222;
+            color: #00ff00;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        footer {
+            background: #000;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            width: 100%;
+        }
+        footer a, footer a:visited {
+            color: #00ffff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #00ffcc;
+            text-decoration: underline;
+        }
+
+        /* --- Estilos Responsivos (Mobile) --- */
+        @media screen and (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .menu-toggle {
+                display: block; /* Mostra o botão de menu em mobile */
+                background: none;
+                border: none;
+                color: #00ff88;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+            #menu-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                border-right: none;
+                transform: translateX(-100%); /* Esconde o menu fora da tela */
+                transition: transform 0.3s ease-in-out;
+                z-index: 1000;
+            }
+            #menu-container.active {
+                transform: translateX(0); /* Mostra o menu */
+            }
+            main {
+                margin-left: 0;
+                padding-top: 80px;
+            }
+            footer {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Biblioteca Linux</h1>
+        <button class="menu-toggle" id="menu-toggle-btn">☰</button>
+    </header>
+
+    <div id="menu-container">
+        <nav>
+            <div class="accordion-section">
+                <div class="accordion-title">Artigos Recentes</div>
+                <div class="accordion-content">
+                    <a href="link-do-artigo-1.html">Título do Artigo 1</a>
+                    <a href="link-do-artigo-2.html">Título do Artigo 2</a>
+                    <a href="link-do-artigo-3.html">Título do Artigo 3</a>
+                </div>
+            </div>
+            
+            <div class="accordion-section">
+                <div class="accordion-title">Tutoriais</div>
+                <div class="accordion-content">
+                    <a href="link-do-tutorial-1.html">Título do Artigo de Tutorial 1</a>
+                    <a href="link-do-tutorial-2.html">Título do Artigo de Tutorial 2</a>
+                </div>
+            </div>
+            
+            <div class="accordion-section">
+                <div class="accordion-title">Distribuições</div>
+                <div class="accordion-content">
+                    <a href="link-da-distribuicao-1.html">Título do Artigo sobre Distribuição 1</a>
+                    <a href="link-da-distribuicao-2.html">Título do Artigo sobre Distribuição 2</a>
+                </div>
+            </div>
+
+            <div class="accordion-section">
+                <div class="accordion-title">Comandos</div>
+                <div class="accordion-content">
+                    <a href="link-do-comando-1.html">Título do Artigo sobre Comandos 1</a>
+                    <a href="link-do-comando-2.html">Título do Artigo sobre Comandos 2</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <section>
+            <h2>Bem-vindo à Biblioteca Linux</h2>
+            <p>Explore nossa coleção de artigos sobre o universo Linux, cobrindo uma ampla gama de tópicos. Aqui você encontra desde tutoriais práticos e guias de instalação até análises sobre comandos e distribuições.</p>
+            <p>Aproveite o conteúdo e aprofunde seus conhecimentos. Para começar, selecione uma das categorias no menu lateral.</p>
+        </section>
+        
+        <section>
+            <h2>Como Usar Este Site</h2>
+            <p>Navegue pelo menu lateral para encontrar artigos organizados por categorias. Clique no título da categoria para expandir e ver a lista de artigos disponíveis.</p>
+        </section>
+        <div style="height: 1000px;"></div>
+    </main>
+
+    <footer>
+        <p>Desenvolvido com <a href="#">Amor</a> e <a href="#">Código</a>.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Funcionalidade do menu sanfona
+            const accordionTitles = document.querySelectorAll('.accordion-title');
+            accordionTitles.forEach(title => {
+                title.addEventListener('click', () => {
+                    const content = title.nextElementSibling;
+                    const isVisible = content.style.display === 'block';
+
+                    document.querySelectorAll('.accordion-content').forEach(otherContent => {
+                        if (otherContent !== content) {
+                            otherContent.style.display = 'none';
+                        }
+                    });
+                    
+                    content.style.display = isVisible ? 'none' : 'block';
+                });
+            });
+
+            // Funcionalidade do menu responsivo (mobile)
+            const menuToggleButton = document.getElementById('menu-toggle-btn');
+            const menuContainer = document.getElementById('menu-container');
+
+            if (menuToggleButton && menuContainer) {
+                menuToggleButton.addEventListener('click', () => {
+                    menuContainer.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
