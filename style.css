@@ -40,12 +40,12 @@ header h1 {
 
 .dropdown-menu > li {
     position: relative;
-    margin: 0 3px;
+    margin: 0 2px;
 }
 
 .dropdown-menu a {
     display: block;
-    padding: 6px 10px;
+    padding: 5px 8px;
     text-decoration: none;
     color: #fdfdfd;
     background-color: #007300; /* Verde escuro */
@@ -66,7 +66,7 @@ header h1 {
     left: 0;
     background-color: #383838;
     list-style: none;
-    min-width: 130px;
+    min-width: 120px;
     border-radius: 0 0 5px 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 10;
@@ -74,13 +74,17 @@ header h1 {
 
 .dropdown-content li {
     border-bottom: 1px solid #555;
+    margin: 0;
 }
 
+/* ✅ Mudança: Restaurado o padding e a fonte para os valores originais */
 .dropdown-content a {
     padding: 8px 12px;
     background-color: #383838;
-    color: #00ff88; /* Cor de destaque verde para links */
+    color: #00ff88;
     font-size: 0.9rem;
+    display: block;
+    text-decoration: none;
 }
 
 .dropdown-content a:hover {
@@ -101,7 +105,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* CONTEÚDO PRINCIPAL (Movido para fora do "main") */
+/* CONTEÚDO PRINCIPAL */
 article,
 section {
     max-width: 900px;
@@ -131,7 +135,7 @@ ul {
     padding-left: 0;
 }
 
-/* RODAPÉ (Movido para fora do "main") */
+/* RODAPÉ */
 footer {
     background: #000;
     color: #aaa;
@@ -145,3 +149,18 @@ footer a {
     font-weight: bold;
     text-decoration: none;
 }
+article a, section a {
+    color: #00ff88;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Regra para quando o mouse está sobre o link */
+article a:hover, section a:hover {
+    color: #00cc00; /* Cor verde um pouco mais escura */
+    text-decoration: underline; /* Adiciona um sublinhado */
+}
+
+
+
+
