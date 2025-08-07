@@ -8,20 +8,29 @@ body {
 }
 }
 
-/* Container do cabeçalho */
 header {
+    /* Mantenha suas regras atuais */
     background-color: #1a1a1a;
     color: #fdfdfd;
     padding: 8px 15px;
-    text-align: center;
-    border-bottom: 1px solid #009900; /* Borda verde */
+    border-bottom: 1px solid #009900;
+
+    /* Novas regras para centralizar com Flexbox */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
 }
 
+h1 {
+  text-align: center;
+}
+
+
+/* O h1 não precisa de uma regra específica para alinhamento */
 header h1 {
     font-size: 1.2rem;
     margin: 0;
 }
-
 /* Container do menu completo */
 .dropdown-menu-container {
     background-color: #1a1a1a;
@@ -161,6 +170,10 @@ article a:hover, section a:hover {
     color: #00cc00; /* Cor verde um pouco mais escura */
     text-decoration: underline; /* Adiciona um sublinhado */
 }
+
+
+
+
 
 
 
