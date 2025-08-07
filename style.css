@@ -1,7 +1,7 @@
 /* Estilos Globais e de Fundo */
 body {
-    background-color: #333; /* Fundo cinza */
-    color: #fdfdfd;
+    background: #1a1a1a;
+    color: #f0f0f0;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -10,10 +10,10 @@ body {
 /* Container do cabeçalho */
 header {
     background-color: #1a1a1a;
-    color: white;
+    color: #fdfdfd;
     padding: 8px 15px;
     text-align: center;
-    border-bottom: 1px solid #008000;
+    border-bottom: 1px solid #009900; /* Borda verde */
 }
 
 header h1 {
@@ -26,7 +26,7 @@ header h1 {
     background-color: #1a1a1a;
     padding: 5px 10px;
     display: flex;
-    justify-content: center; /* Centraliza a barra de menu */
+    justify-content: center;
 }
 
 /* Itens do menu principal */
@@ -47,15 +47,15 @@ header h1 {
     display: block;
     padding: 6px 10px;
     text-decoration: none;
-    color: white;
-    background-color: #006400; /* Verde escuro */
+    color: #fdfdfd;
+    background-color: #007300; /* Verde escuro */
     border-radius: 5px;
     transition: background-color 0.3s;
     font-size: 0.9rem;
 }
 
 .dropdown-menu a:hover {
-    background-color: #008000; /* Verde mais claro ao passar o mouse */
+    background-color: #009900; /* Verde mais claro ao passar o mouse */
 }
 
 /* Conteúdo do dropdown (submenu) */
@@ -64,7 +64,7 @@ header h1 {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #2c2c2c;
+    background-color: #383838;
     list-style: none;
     min-width: 130px;
     border-radius: 0 0 5px 5px;
@@ -73,18 +73,18 @@ header h1 {
 }
 
 .dropdown-content li {
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #555;
 }
 
 .dropdown-content a {
     padding: 8px 12px;
-    background-color: #2c2c2c;
-    color: white;
+    background-color: #383838;
+    color: #00ff88; /* Cor de destaque verde para links */
     font-size: 0.9rem;
 }
 
 .dropdown-content a:hover {
-    background-color: #006400;
+    background-color: #007300;
 }
 
 li:hover > .dropdown-content {
@@ -94,9 +94,54 @@ li:hover > .dropdown-content {
 /* Estilos para centralizar o conteúdo principal da página */
 main {
     max-width: 960px;
-    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    margin: 0 auto;
     padding: 20px;
-    background-color: #1a1a1a; /* Fundo do conteúdo mais escuro para contraste */
-    color: #fdfdfd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* CONTEÚDO PRINCIPAL (Movido para fora do "main") */
+article,
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ff88;
+}
+
+h1,
+section h2 {
+    color: #00ff88;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+p,
+li,
+dd {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* RODAPÉ (Movido para fora do "main") */
+footer {
+    background: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #00ff88;
+    font-weight: bold;
+    text-decoration: none;
 }
