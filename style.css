@@ -1,36 +1,36 @@
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('/fonts/roboto-mono-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Estilos Globais e de Fundo */
 body {
     background: #1a1a1a;
     color: #f0f0f0;
-    font-family: 'Roboto Mono', monospace; /* Usando a fonte do Google Fonts */
+    font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
 }
-}
 
+/* Container do cabeçalho */
 header {
-    /* Mantenha suas regras atuais */
     background-color: #1a1a1a;
     color: #fdfdfd;
     padding: 8px 15px;
     border-bottom: 1px solid #009900;
-
-    /* Novas regras para centralizar com Flexbox */
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;     /* Centraliza verticalmente */
+    justify-content: center;
+    align-items: center;
 }
 
-h1 {
-  text-align: center;
-}
-
-
-/* O h1 não precisa de uma regra específica para alinhamento */
 header h1 {
     font-size: 1.2rem;
     margin: 0;
 }
+
 /* Container do menu completo */
 .dropdown-menu-container {
     background-color: #1a1a1a;
@@ -58,14 +58,14 @@ header h1 {
     padding: 5px 8px;
     text-decoration: none;
     color: #fdfdfd;
-    background-color: #007300; /* Verde escuro */
+    background-color: #007300;
     border-radius: 5px;
     transition: background-color 0.3s;
     font-size: 0.9rem;
 }
 
 .dropdown-menu a:hover {
-    background-color: #009900; /* Verde mais claro ao passar o mouse */
+    background-color: #009900;
 }
 
 /* Conteúdo do dropdown (submenu) */
@@ -87,7 +87,6 @@ header h1 {
     margin: 0;
 }
 
-/* ✅ Mudança: Restaurado o padding e a fonte para os valores originais */
 .dropdown-content a {
     padding: 8px 12px;
     background-color: #383838;
@@ -114,15 +113,16 @@ main {
     color: #f0f0f0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
 /* CONTEÚDO PRINCIPAL */
 article,
 section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #1a1a1a;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #00ff88;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ff88;
 }
 
 h1,
@@ -159,18 +159,17 @@ footer a {
     font-weight: bold;
     text-decoration: none;
 }
-article a, section a {
+
+article a,
+section a {
     color: #00ff88;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 /* Regra para quando o mouse está sobre o link */
-article a:hover, section a:hover {
+article a:hover,
+section a:hover {
     color: #00cc00; /* Cor verde um pouco mais escura */
     text-decoration: underline; /* Adiciona um sublinhado */
 }
-
-
-
-
