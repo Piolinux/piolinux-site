@@ -1,11 +1,4 @@
-/* Carregamento da fonte autohospedada */
-@font-face {
-    font-family: 'Roboto Mono';
-    src: url('/fonts/roboto-mono-regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
+
 
 /* Estilos Globais e de Fundo */
 body {
