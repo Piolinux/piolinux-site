@@ -15,12 +15,34 @@
 
     <header>
         <h1>200 Piadas de Linux - PioLinux</h1>
+<div id="menu-container"></div>
     </header>
 
-    <div id="menu-container"></div>
+  
     
     <main>
-        
+          
+
+<div id="share" style="text-align:center;margin:15px 0"></div>
+        <script async defer>
+            (() => {
+                const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+                const d=[
+                    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+                    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+                    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+                    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+                ],e=document.getElementById("share");
+                d.forEach(([n,c,l])=>{
+                    let a=document.createElement("a");
+                    a.href=l;a.target="_blank";a.rel="noopener";
+                    a.textContent=n;
+                    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+                    e.appendChild(a);
+                });
+            })();
+        </script>
+
            <article id="piadas-linux">
             <h2>😂 200 Piadas para Descontrair seu Kernel</h2>
             <p>Mesmo em um universo sério e cheio de comandos como o do Linux, sempre há espaço para dar boas risadas! Afinal, quem vive no terminal sabe que, entre um `sudo` e outro, um pouco de humor pode ser o reboot mental que faltava no dia.</p>
@@ -278,25 +300,7 @@
                     <li>Por que o Linux é tão versátil? Porque ele pode ser `qualquer coisa`.</li>
                 </ul>
             </section>
- <div id="share" style="text-align:center;margin:15px 0"></div>
-        <script async defer>
-            (() => {
-                const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
-                const d=[
-                    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
-                    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-                    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
-                    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-                ],e=document.getElementById("share");
-                d.forEach(([n,c,l])=>{
-                    let a=document.createElement("a");
-                    a.href=l;a.target="_blank";a.rel="noopener";
-                    a.textContent=n;
-                    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
-                    e.appendChild(a);
-                });
-            })();
-        </script>
+ 
             <p>Esperamos que essas piadas tenham arrancado algumas risadas e talvez até um `Ctrl+C` no tédio! Volte sempre para mais humor e, claro, mais dicas técnicas do PioLinux. 😊</p>
         </article>
         
