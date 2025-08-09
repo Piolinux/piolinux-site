@@ -8,7 +8,7 @@
   <meta name="description" content="Coleção de scripts úteis para segurança no Linux: firewall, bloqueio de IP, rootkits, SSH, fail2ban, nmap, sniffers e mais.">
   <meta name="keywords" content="segurança linux, firewall ufw, bloquear ip, nmap, ssh automático, fail2ban, rootkits, sniffers, senhas fortes, monitoramento de tráfego">
   <meta name="robots" content="index,nofollow">
-   <link rel="canonical" href="https://piolinux.com/scripts-de-seguranca.html" />
+  <link rel="canonical" href="https://piolinux.com/scripts-de-seguranca.html" />
   
 
   <!-- Outros meta e links CSS -->
@@ -144,13 +144,23 @@
   }
 
   footer {
-    background-color: #222;
-    color: #b6ff00;
-    text-align: center;
-    padding: 15px 10px;
-    margin-top: 40px;
-    font-size: 0.9rem;
-  }
+  background-color: #222;   /* fundo escuro */
+  color: #ffffff;           /* texto branco para contraste máximo */
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ccff33; /* verde-limão mais claro e com contraste aceitável */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffec8b;           /* tom mais claro no hover */
+}
+
 
   /* Responsividade */
   @media (max-width: 768px) {
@@ -297,7 +307,11 @@ sudo iftop -i eth0</pre>
         </section>
     </main>
 
-    
+    <footer>
+        Site criado com muito terminal e memes! Acesse:
+        <a href="#">Política de Privacidade</a> |
+        <a href="#">Termos de Uso</a>
+    </footer>
 
    <script src="scripts.js"></script>
     <script>
