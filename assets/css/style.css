@@ -118,13 +118,23 @@ header {
     display: flex;
   }
 }
-
 footer {
-  background-color: #222; /* fundo muito escuro */
-  color: #777;            /* texto cinza médio, pouco contraste */
+  background-color: #121212; /* fundo escuro */
+  color: #b6ff00 !important; /* verde limão claro para melhor contraste */
   text-align: center;
   padding: 15px 10px;
   margin-top: 40px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  border-top: 2px solid #b6ff00;
 }
-  
+
+footer a {
+  color: #b6ff00 !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
