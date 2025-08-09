@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="{{ site.params.viewport }}">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="keywords" content="{{ page.keywords | default: site.params.keywords }}">
+  <meta name="robots" content="{{ site.params.robots }}">
+  
+  {% if jekyll.environment == "production" %}
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
+  {% else %}
+    <!-- Ambiente desenvolvimento: sem canonical ou com local -->
+  {% endif %}
+
+  <!-- Outros meta e links CSS -->
+  
+  
+  
+  
+</head>
+
+
+
+
+
+<style>
+	
+	header h1 {
+  color: #80ff00; /* verde Piolinux */
+  font-size: 1.8rem;
+  margin-right: 20px;
+}
+
+header h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+	
+	
+  /* RESET */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ddd;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #80ff00;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  header {
+    background-color: #222;
+    padding: 10px 15px; /* 🔹 Menos padding lateral */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Botão hamburguer (mobile) */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #80ff00;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  /* Menu */
+  .dropdown-menu {
+    list-style: none;
+    display: flex;
+    gap: 6px; /* 🔹 Espaço reduzido */
+    align-items: center;
+    margin-left: 0; /* 🔹 Remove recuo */
+    padding-left: 0; /* 🔹 Remove recuo */
+  }
+
+  .dropdown-menu > li {
+    position: relative;
+  }
+
+  .dropdown-menu > li > a {
+    display: block;
+    padding: 6px 10px; /* 🔹 Mais compacto */
+    font-weight: bold;
+    color: #80ff00;
+    border-radius: 4px;
+    transition: background 0.2s;
+    background-color: #1a1a1a;
+  }
+
+  .dropdown-menu > li:hover > a {
+    background-color: #333;
+  }
+
+  /* Dropdown */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 160px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0 0 4px 4px;
+    z-index: 1000;
+  }
+
+  .dropdown-content li a {
+    padding: 8px 12px;
+    display: block;
+    font-weight: normal;
+    color: #80ff00;
+  }
+
+  .dropdown-content li a:hover {
+    background-color: #444;
+  }
+
+  .dropdown-menu > li:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Main */
+  main {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  /* Seções */
+  section {
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+  }
+
+  section h1, 
+  section h2, 
+  section h3 {
+    color: #80ff00;
+    margin-bottom: 12px;
+  }
+
+  section p {
+    margin-bottom: 12px;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.8;
+  }
+
+  footer {
+  background-color: #222;   /* fundo escuro */
+  color: #ffffff;           /* texto branco para contraste máximo */
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ccff33;           /* verde-limão mais claro e com contraste aceitável */
+  font-weight: bold;        /* deixa o texto em negrito */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffec8b;           /* tom mais claro no hover */
+  font-weight: bold;        /* mantém o negrito no hover */
+}
+
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+    .dropdown-menu {
+      flex-direction: column;
+      gap: 4px;
+      background-color: #222;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 200px;
+      padding: 10px;
+      display: none;
+    }
+    body.menu-open .dropdown-menu {
+      display: flex;
+    }
+  }
+</style>
+
+</head>
+<body>
+  <header>
+    {% include menu.html %}
+  </header>
+
+  <main>
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+</main>
+
+<footer>
+  Site criado com muito terminal e memes! Acesse:
+  <a href="{{ '/politica-de-privacidade.html' | relative_url }}">Política de Privacidade</a> |
+  <a href="{{ '/termos-de-uso.html' | relative_url }}">Termos de Uso</a>
+</footer></body>
+</html>
