@@ -1,0 +1,25 @@
+<header>
+  <h1 class="site-title"><a href="{{ '/' | relative_url }}">Piolinux</a></h1>
+  <div class="menu-container">
+    <button class="menu-toggle" aria-label="Abrir menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
+    <nav class="dropdown-menu-container">
+      <ul class="dropdown-menu">
+        <li><a href="{{ '/' | relative_url }}">Início</a></li>
+        <li>
+          <a href="#">Conteúdo</a>
+          <ul class="dropdown-content">
+            <li><a href="{{ '/piadas-linux-engraçadas.html' | relative_url }}">Piadas</a></li>
+            <li><a href="{{ '/biblioteca-linux.html' | relative_url }}">Biblioteca-Linux</a></li>
+            <li><a href="{{ '/artigos-linux.html' | relative_url }}">Iniciante</a></li>
+            <li><a href="{{ '/dicas-tecnicas-linux.html' | relative_url }}">Dicas Técnicas</a></li>
+            <li><a href="{{ '/script-bash.html' | relative_url }}">Bash</a></li>
+            <li><a href="{{ '/links.html' | relative_url }}">Conteúdos de Linux</a></li>
+            <li><a href="{{ '/caixa-de-ferramentas.html' | relative_url }}">Ferramentas</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ '/jogos-online.html' | relative_url }}">Jogos</a></li>
+        <li><a href="{{ '/reparar-boot-linux.html' | relative_url }}">Boot</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
