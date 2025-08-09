@@ -8,13 +8,37 @@
   <meta name="description" content="Explore nossa coleção de artigos, tutoriais e guias sobre o universo Linux. Aprenda sobre comandos, distribuições e segurança de forma prática e organizada.">
   <meta name="keywords" content="Linux, tutoriais, comandos, distribuições, segurança, terminal, guias, artigos, iniciantes">
   <meta name="robots" content="index,nofollow">
-  <link rel="canonical" href="https://piolinux.com/biblioteca-linux.html" />
+  
+  
+    <link rel="canonical" href="https://piolinux.com/biblioteca-linux.html" />
   
 
   <!-- Outros meta e links CSS -->
+  
+  
+  
+  
 </head>
 
+
+
+
+
 <style>
+	
+	header h1 {
+  color: #80ff00; /* verde Piolinux */
+  font-size: 1.8rem;
+  margin-right: 20px;
+}
+
+header h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+	
+	
   /* RESET */
   * {
     margin: 0;
@@ -153,12 +177,14 @@
 }
 
 footer a {
-  color: #ccff33; /* verde-limão mais claro e com contraste aceitável */
+  color: #ccff33;           /* verde-limão mais claro e com contraste aceitável */
+  font-weight: bold;        /* deixa o texto em negrito */
   text-decoration: none;
 }
 
 footer a:hover {
   color: #ffec8b;           /* tom mais claro no hover */
+  font-weight: bold;        /* mantém o negrito no hover */
 }
 
 
@@ -188,26 +214,29 @@ footer a:hover {
 <body>
   <header>
     <header>
-  <button class="menu-toggle" aria-label="Abrir menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
-  <nav class="dropdown-menu-container">
-    <ul class="dropdown-menu">
-      <li><a href="/">Início</a></li>
-      <li>
-        <a href="#">Conteúdo</a>
-        <ul class="dropdown-content">
-          <li><a href="/piadas-linux-engra%C3%A7adas.html">Piadas</a></li>
-          <li><a href="/biblioteca-linux.html">Biblioteca-Linux</a></li>
-          <li><a href="/artigos-linux.html">Iniciante</a></li>
-          <li><a href="/dicas-tecnicas-linux.html">Dicas Técnicas</a></li>
-          <li><a href="/script-bash.html">Bash</a></li>
-          <li><a href="/links.html">Conteúdos de Linux</a></li>
-          <li><a href="/caixa-de-ferramentas.html">Ferramentas</a></li>
-        </ul>
-      </li>
-      <li><a href="/jogos-online.html">Jogos</a></li>
-      <li><a href="/reparar-boot-linux.html">Boot</a></li>
-    </ul>
-  </nav>
+  <h1 class="site-title"><a href="/">Piolinux</a></h1>
+  <div class="menu-container">
+    <button class="menu-toggle" aria-label="Abrir menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
+    <nav class="dropdown-menu-container">
+      <ul class="dropdown-menu">
+        <li><a href="/">Início</a></li>
+        <li>
+          <a href="#">Conteúdo</a>
+          <ul class="dropdown-content">
+            <li><a href="/piadas-linux-engra%C3%A7adas.html">Piadas</a></li>
+            <li><a href="/biblioteca-linux.html">Biblioteca-Linux</a></li>
+            <li><a href="/artigos-linux.html">Iniciante</a></li>
+            <li><a href="/dicas-tecnicas-linux.html">Dicas Técnicas</a></li>
+            <li><a href="/script-bash.html">Bash</a></li>
+            <li><a href="/links.html">Conteúdos de Linux</a></li>
+            <li><a href="/caixa-de-ferramentas.html">Ferramentas</a></li>
+          </ul>
+        </li>
+        <li><a href="/jogos-online.html">Jogos</a></li>
+        <li><a href="/reparar-boot-linux.html">Boot</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
   </header>
@@ -255,9 +284,7 @@ footer a:hover {
         <div style="height: 1000px;"></div>
     </main>
 
-    <footer>
-        <p>Desenvolvido com <a href="#">Amor</a> e <a href="#">Código</a>.</p>
-    </footer>
+    
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
