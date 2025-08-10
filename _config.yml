@@ -24,7 +24,7 @@ baseurl: "" # sem barra no final
 url: "https://piolinux.com"
 
 markdown: kramdown
-#theme: minima
+#theme: default
 
 # Configurações suportadas pelo GitHub Pages
 lsi: false
@@ -52,15 +52,11 @@ params:
   expires: "0"
   canonical: "https://piolinux.com"
 
-destination: ./_site 
+# _config.yml
+sass:
+  quiet_deps: true
 
-# Build settings
-#theme: minima
-plugins:
- # - jekyll-feed
-
-
-  title: ""       # Remove título global
+title: ""       # Remove título global
 description: "" # Remove descrição global
 defaults:
   - scope:
@@ -71,6 +67,15 @@ defaults:
 
 minima:
   skin: none
+  
+  # This is the default theme for new Jekyll sites. You may change this to anything you like.
+# gem "minima", "~> 2.5" 
+
+
+# Build settings
+#theme: minima
+plugins:
+  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
