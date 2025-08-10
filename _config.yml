@@ -55,9 +55,22 @@ params:
 destination: ./_site 
 
 # Build settings
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
+
+
+  title: ""       # Remove título global
+description: "" # Remove descrição global
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
+minima:
+  skin: none
 
 # Exclude from processing.
 # The following items will not be processed, by default.
