@@ -1,6 +1,5 @@
 ---
 layout: post
-title: "Meu Primeiro Post no Piolinux"
 date: 2025-08-09 14:00:00 -0300
 categories: linux dicas
 tags: [linux, piolinux, tutorial]
