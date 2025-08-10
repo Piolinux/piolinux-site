@@ -1,11 +1,15 @@
----
-layout:default
-title: "Minha primeiro post"
+_---
+layout: default
+title: "Meu primeiro post"
 date: 2025-08-09
-categories: linux dicas
-tags: linux, piolinux, tutorial
+categories: [linux, dicas]
+tags: [linux, piolinux, tutorial]
 author: "Piolinux"
 ---
+
+
+
+
 
 ## Bem-vindo ao Piolinux 🚀
 
