@@ -52,7 +52,7 @@ params:
   expires: "0"
   canonical: "https://piolinux.com"
 
-destination: ./ 
+destination: ./_site 
 
 # Build settings
 theme: minima
