@@ -57,7 +57,7 @@ destination: ./_site
 # Build settings
 #theme: minima
 plugins:
-  - jekyll-feed
+ # - jekyll-feed
 
 
   title: ""       # Remove título global
