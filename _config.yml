@@ -20,9 +20,10 @@
 
 title: "Piolinux"
 description: "Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source."
-baseurl: ""          # não colocar barra no final
+baseurl: "" # não colocar barra no final
 url: "https://piolinux.com"
-theme: null
+
+theme: minima # ou null se quiser HTML/CSS personalizado
 markdown: kramdown
 
 params:
@@ -39,10 +40,9 @@ params:
   expires: "0"
   canonical: "https://piolinux.com"
 
-
-# _config.yml
 sass:
   quiet_deps: true
+
 
 
 
