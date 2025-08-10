@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Como usar o Jekyll para criar páginas no computador: Guia prático para iniciantes"
