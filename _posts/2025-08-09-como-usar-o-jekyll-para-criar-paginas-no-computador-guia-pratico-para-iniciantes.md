@@ -1,12 +1,10 @@
 ---
-layout: default
+layout: post
 title: "Como usar o Jekyll para criar páginas no computador: Guia prático para iniciantes"
-description: "Aprenda passo a passo como instalar e usar o Jekyll para criar páginas estáticas no seu computador, mesmo sem experiência prévia. Um guia fácil, completo e otimizado para você começar hoje."
-keywords: "Jekyll, criar página estática, site estático, como usar Jekyll, tutorial Jekyll, criar site no computador"
-author: "PioLinux"
-date: 2025-08-09 12:00:00 -0300
-categories: [Jekyll, Tutorial, Linux]
-tags: [jekyll, tutorial, site estático, instalação, blog]
+date: 2025-08-09 14:00:00 -0300
+categories: jekyll tutoriais
+tags: [jekyll, github-pages, html, markdown]
+author: "Piolinux"
 ---
 
 Precisando de uma pagina em html que seja padronizada e customizada sem 
