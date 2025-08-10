@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="{{ site.params.viewport }}">
-  <title>{{ page.title | default: site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
-  <meta name="keywords" content="{{ page.keywords | default: site.params.keywords }}">
-  <meta name="robots" content="{{ site.params.robots }}">
-  
-  {% if jekyll.environment == "production" %}
-    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
-  {% else %}
-    <!-- Ambiente desenvolvimento: sem canonical ou com local -->
-  {% endif %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="{{ site.params.viewport }}">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="keywords" content="{{ page.keywords | default: site.params.keywords }}">
+  <meta name="robots" content="{{ site.params.robots }}">
+  
+  {% if jekyll.environment == "production" %}
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
+  {% else %}
+      {% endif %}
 
-  <!-- Outros meta e links CSS -->
-  
-  
-  
-  
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
 </head>
+<body>
+  <header>
+    {% include menu.html %}
+  </header>
+
+  <main>
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+</main>
+
+<footer>
+  Site criado com muito terminal e memes! Acesse:
+  <a href="{{ '/politica-de-privacidade.html' | relative_url }}">Política de Privacidade</a> |
+  <a href="{{ '/termos-de-uso.html' | relative_url }}">Termos de Uso</a>
+</footer></body>
+</html>
 
 
 
