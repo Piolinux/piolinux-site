@@ -1,6 +1,6 @@
 ---
 layout:default
-date: 2025-08-09 14:00:00 -0300
+date: 2025-08-09
 categories: linux dicas
 tags: [linux, piolinux, tutorial]
 author: "Piolinux"
