@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <head>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="{{ site.params.viewport }}">
   <title>{{ page.title | default: site.title }}</title>
@@ -28,7 +28,7 @@
 
 <style>
 	
-	header h1 {
+  header h1 {
   color: #80ff00; /* verde Piolinux */
   font-size: 1.8rem;
   margin-right: 20px;
@@ -218,7 +218,7 @@ footer a:hover {
     {% include menu.html %}
   </header>
 
-  <main>
+ <main>
   <h1>{{ page.title }}</h1>
   {{ content }}
 </main>
@@ -229,4 +229,3 @@ footer a:hover {
   <a href="{{ '/termos-de-uso.html' | relative_url }}">Termos de Uso</a>
 </footer></body>
 </html>
-
