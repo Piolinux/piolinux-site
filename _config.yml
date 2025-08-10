@@ -56,21 +56,12 @@ params:
 sass:
   quiet_deps: true
 
-title: ""       # Remove título global
-description: "" # Remove descrição global
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post
+
 
 minima:
   skin: none
   
-  # This is the default theme for new Jekyll sites. You may change this to anything you like.
-# gem "minima", "~> 2.5" 
-
+ 
 
 # Build settings
 #theme: minima
