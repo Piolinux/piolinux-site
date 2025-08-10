@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://piolinux.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://piolinux.com/" rel="alternate" type="text/html" /><updated>2025-08-10T11:44:50-03:00</updated><id>https://piolinux.com/feed.xml</id><title type="html">Piolinux</title><subtitle>Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source.</subtitle><entry><title type="html">Como usar o Jekyll para criar páginas no computador: Guia prático para iniciantes</title><link href="https://piolinux.com/jekyll/tutoriais/2025/08/09/como-usar-o-jekyll-para-criar-paginas-no-computador-guia-pratico-para-iniciantes.html" rel="alternate" type="text/html" title="Como usar o Jekyll para criar páginas no computador: Guia prático para iniciantes" /><published>2025-08-09T14:00:00-03:00</published><updated>2025-08-09T14:00:00-03:00</updated><id>https://piolinux.com/jekyll/tutoriais/2025/08/09/como-usar-o-jekyll-para-criar-paginas-no-computador-guia-pratico-para-iniciantes</id><content type="html" xml:base="https://piolinux.com/jekyll/tutoriais/2025/08/09/como-usar-o-jekyll-para-criar-paginas-no-computador-guia-pratico-para-iniciantes.html"><![CDATA[<h2 id="como-usar-o-jekyll-para-criar-páginas-no-computador-guia-prático-para-iniciantes">Como usar o Jekyll para criar páginas no computador: Guia prático para iniciantes</h2>
-
-<p>O <strong>Jekyll</strong> é uma ferramenta poderosa para criar sites estáticos, especialmente se você quer hospedar seu projeto no <strong>GitHub Pages</strong> sem precisar de banco de dados ou servidores complexos.<br />
-Neste guia, vamos mostrar <strong>passo a passo</strong> como instalar, configurar e criar suas primeiras páginas usando apenas o computador.</p>
-
-<p>…</p>]]></content><author><name>Piolinux</name></author><category term="jekyll" /><category term="tutoriais" /><category term="jekyll" /><category term="github-pages" /><category term="html" /><category term="markdown" /><summary type="html"><![CDATA[Como usar o Jekyll para criar páginas no computador: Guia prático para iniciantes]]></summary></entry><entry><title type="html">Meu Primeiro Post no Piolinux</title><link href="https://piolinux.com/linux/dicas/2025/08/09/meu-primeiro-post.html" rel="alternate" type="text/html" title="Meu Primeiro Post no Piolinux" /><published>2025-08-09T14:00:00-03:00</published><updated>2025-08-09T14:00:00-03:00</updated><id>https://piolinux.com/linux/dicas/2025/08/09/meu-primeiro-post</id><content type="html" xml:base="https://piolinux.com/linux/dicas/2025/08/09/meu-primeiro-post.html"><![CDATA[<h2 id="bem-vindo-ao-piolinux-">Bem-vindo ao Piolinux 🚀</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://piolinux.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://piolinux.com/" rel="alternate" type="text/html" /><updated>2025-08-10T17:08:44-03:00</updated><id>https://piolinux.com/feed.xml</id><subtitle></subtitle><entry><title type="html"></title><link href="https://piolinux.com/2025/08/10/2025-08-09-meu-primeiro-post.html" rel="alternate" type="text/html" title="" /><published>2025-08-10T17:08:44-03:00</published><updated>2025-08-10T17:08:44-03:00</updated><id>https://piolinux.com/2025/08/10/2025-08-09-meu-primeiro-post</id><content type="html" xml:base="https://piolinux.com/2025/08/10/2025-08-09-meu-primeiro-post.html"><![CDATA[<h2 id="bem-vindo-ao-piolinux-">Bem-vindo ao Piolinux 🚀</h2>
 
 <p>Seja muito bem-vindo ao nosso primeiro post oficial no <strong>Piolinux</strong>!<br />
 Aqui você vai encontrar <strong>dicas, tutoriais e curiosidades</strong> sobre o mundo Linux, sempre com aquele toque divertido. 😄</p>
@@ -39,26 +34,54 @@ Use <code class="language-plaintext highlighter-rouge">CTRL + ALT + T</code> par
 <p><strong>Gostou do conteúdo?</strong><br />
 💬 Deixe seu comentário e compartilhe com seus amigos para fortalecer a comunidade Linux!</p>
 
-<hr />]]></content><author><name>Piolinux</name></author><category term="linux" /><category term="dicas" /><category term="linux" /><category term="piolinux" /><category term="tutorial" /><summary type="html"><![CDATA[Bem-vindo ao Piolinux 🚀]]></summary></entry><entry><title type="html">Como usar o Jekyll para criar páginas no computador: Guia prático para iniciantes</title><link href="https://piolinux.com/jekyll/tutorial/2025/08/09/como-usar-o-jekyll-para-criar-paginas-no-computador.html" rel="alternate" type="text/html" title="Como usar o Jekyll para criar páginas no computador: Guia prático para iniciantes" /><published>2025-08-09T09:00:00-03:00</published><updated>2025-08-09T09:00:00-03:00</updated><id>https://piolinux.com/jekyll/tutorial/2025/08/09/como-usar-o-jekyll-para-criar-paginas-no-computador</id><content type="html" xml:base="https://piolinux.com/jekyll/tutorial/2025/08/09/como-usar-o-jekyll-para-criar-paginas-no-computador.html"><![CDATA[<p>O <strong>Jekyll</strong> é um gerador de sites estáticos que transforma arquivos Markdown em páginas HTML prontas para publicação.<br />
-Se você quer criar um blog ou site rápido e leve, ele é perfeito — e o melhor, funciona de graça no GitHub Pages.</p>
+<hr />]]></content><author><name></name></author></entry><entry><title type="html">Como usar o Jekyll para criar páginas no computador: Guia prático para iniciantes</title><link href="https://piolinux.com/jekyll/guia/iniciantes/2025/08/09/como-usar-o-jekyll-para-criar-paginas-no-computador-guia-pratico-para-iniciantes.html" rel="alternate" type="text/html" title="Como usar o Jekyll para criar páginas no computador: Guia prático para iniciantes" /><published>2025-08-09T00:00:00-03:00</published><updated>2025-08-09T00:00:00-03:00</updated><id>https://piolinux.com/jekyll/guia/iniciantes/2025/08/09/como-usar-o-jekyll-para-criar-paginas-no-computador-guia-pratico-para-iniciantes</id><content type="html" xml:base="https://piolinux.com/jekyll/guia/iniciantes/2025/08/09/como-usar-o-jekyll-para-criar-paginas-no-computador-guia-pratico-para-iniciantes.html"><![CDATA[<p>Precisando de uma pagina em html que seja padronizada e customizada sem 
+estabilidade, com o Jekyll é muito mais prático organizar as páginas, 
+nada de imprevisto é divertido usa-lo sem menores problemas, para que 
+tudo de certo siga esse tutorial corretamente, vai criar um site 
+fantastico e responsivo essa é primeira parte do artigo depois passo os 
+comando para utilizar.</p>
 
-<h2 id="-1-instalar-o-jekyll-no-computador">📌 1. Instalar o Jekyll no computador</h2>
-<p>No terminal, execute:
-```bash
-gem install bundler jekyll</p>]]></content><author><name></name></author><category term="jekyll" /><category term="tutorial" /><summary type="html"><![CDATA[O Jekyll é um gerador de sites estáticos que transforma arquivos Markdown em páginas HTML prontas para publicação. Se você quer criar um blog ou site rápido e leve, ele é perfeito — e o melhor, funciona de graça no GitHub Pages.]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="https://piolinux.com/jekyll/update/2025/08/08/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-08-08T15:18:47-03:00</published><updated>2025-08-08T15:18:47-03:00</updated><id>https://piolinux.com/jekyll/update/2025/08/08/welcome-to-jekyll</id><content type="html" xml:base="https://piolinux.com/jekyll/update/2025/08/08/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<p>Este guia é ideal para quem não tem experiência com desenvolvimento web, mas quer criar páginas para blogs, portfólios ou sites pessoais de forma prática e gratuita.</p>
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+<h2 id="o-que-é-o-jekyll">O que é o Jekyll?</h2>
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<p>Jekyll é um <strong>gerador de sites estáticos</strong>. Diferente de um site dinâmico, ele não precisa de banco de dados nem backend pesado. Você escreve o conteúdo em arquivos simples (Markdown, HTML), e o Jekyll transforma tudo em páginas HTML prontas para a web.</p>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p><strong>Vantagens do Jekyll:</strong></p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<ul>
+  <li>Simplicidade para criar e manter o site</li>
+  <li>Não precisa de servidor complexo</li>
+  <li>Compatível com GitHub Pages para hospedagem grátis</li>
+  <li>Suporta temas, layouts e plugins</li>
+  <li>Conteúdo rápido para carregar e SEO-friendly</li>
+</ul>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<h2 id="passo-1-preparando-o-ambiente">Passo 1: Preparando o ambiente</h2>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry></feed>
+<p>Para usar o Jekyll, você precisa ter instalado no computador:</p>
+
+<ul>
+  <li><strong>Ruby</strong> (linguagem de programação)</li>
+  <li><strong>RubyGems</strong> (gerenciador de pacotes Ruby)</li>
+  <li><strong>GCC</strong> (compilador, necessário em alguns sistemas)</li>
+</ul>
+
+<h3 id="como-instalar-no-windows">Como instalar no Windows</h3>
+
+<ul>
+  <li>Baixe e instale o <a href="https://rubyinstaller.org/">Ruby Installer para Windows</a> (versão recomendada 3.x).</li>
+  <li>Durante a instalação, marque para instalar o MSYS2 (ferramentas para compilar extensões).</li>
+  <li>Após a instalação, abra o terminal (Prompt de Comando) e digite:</li>
+</ul>]]></content><author><name></name></author><category term="jekyll" /><category term="guia" /><category term="iniciantes" /><category term="jekyll," /><category term="tutorial," /><category term="github-pages," /><category term="markdown" /><summary type="html"><![CDATA[Precisando de uma pagina em html que seja padronizada e customizada sem estabilidade, com o Jekyll é muito mais prático organizar as páginas, nada de imprevisto é divertido usa-lo sem menores problemas, para que tudo de certo siga esse tutorial corretamente, vai criar um site fantastico e responsivo essa é primeira parte do artigo depois passo os comando para utilizar.]]></summary></entry><entry><title type="html">Como usar o Jekyll para criar páginas no computador: Guia prático para iniciantes</title><link href="https://piolinux.com/2025/08/09/como-usar-o-jekyll-para-criar-paginas-no-computador.html" rel="alternate" type="text/html" title="Como usar o Jekyll para criar páginas no computador: Guia prático para iniciantes" /><published>2025-08-09T00:00:00-03:00</published><updated>2025-08-09T00:00:00-03:00</updated><id>https://piolinux.com/2025/08/09/como-usar-o-jekyll-para-criar-paginas-no-computador</id><content type="html" xml:base="https://piolinux.com/2025/08/09/como-usar-o-jekyll-para-criar-paginas-no-computador.html"><![CDATA[<p>Se você quer criar um site estático simples e poderoso, o Jekyll é uma excelente ferramenta para começar.</p>
+
+<h2 id="o-que-é-jekyll">O que é Jekyll?</h2>
+
+<p>Jekyll é um gerador de sites estáticos escrito em Ruby. Ele converte arquivos Markdown e HTML em um site pronto para ser publicado.</p>
+
+<h2 id="como-usar-o-jekyll-no-computador">Como usar o Jekyll no computador</h2>
+
+<ol>
+  <li>Instale o Ruby e o Bundler.</li>
+  <li>Instale o Jekyll com o comando:</li>
+</ol>]]></content><author><name>PioLinux</name></author><summary type="html"><![CDATA[Se você quer criar um site estático simples e poderoso, o Jekyll é uma excelente ferramenta para começar.]]></summary></entry></feed>
