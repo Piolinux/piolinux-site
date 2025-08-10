@@ -20,17 +20,29 @@
 
 title: "Piolinux"
 description: "Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source."
-baseurl: "" # não colocar barra no final
+baseurl: "" # sem barra no final
 url: "https://piolinux.com"
 
-theme: minima # ou null se quiser HTML/CSS personalizado
 markdown: kramdown
+theme: minima
 
+# Configurações suportadas pelo GitHub Pages
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+
+gist:
+  noscript: false
+
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+# Metadados
 params:
-  title: "Piolinux"
   charset: "UTF-8"
   viewport: "width=device-width, initial-scale=1.0"
-  description: "Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source."
   keywords: "linux, piadas linux, humor, terminal, programador, nerd, geek, open source, shell, bash"
   author: "PioLinux"
   robots: "index,nofollow"
@@ -39,11 +51,6 @@ params:
   pragma: "no-cache"
   expires: "0"
   canonical: "https://piolinux.com"
-
-sass:
-  quiet_deps: true
-
-future: true
 
 
 
