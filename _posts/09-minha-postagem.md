@@ -1,0 +1,98 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: "Piolinux"
+description: "Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source."
+baseurl: "" # sem barra no final
+url: "https://piolinux.com"
+
+markdown: kramdown
+#theme: default
+
+# Configurações suportadas pelo GitHub Pages
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+
+gist:
+  noscript: false
+
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+# Metadados
+params:
+  charset: "UTF-8"
+  viewport: "width=device-width, initial-scale=1.0"
+  keywords: "linux, piadas linux, humor, terminal, programador, nerd, geek, open source, shell, bash"
+  author: "PioLinux"
+  robots: "index,nofollow"
+  google_site_verification: "CYb2xvKexfThXkcKdSjVEpHIMY--b1rAvFbjqjJwtlQ"
+  cache_control: "no-cache, no-store, must-revalidate"
+  pragma: "no-cache"
+  expires: "0"
+  canonical: "https://piolinux.com"
+
+# _config.yml
+sass:
+  quiet_deps: true
+
+title: ""       # Remove título global
+description: "" # Remove descrição global
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
+minima:
+  skin: none
+  
+  # This is the default theme for new Jekyll sites. You may change this to anything you like.
+# gem "minima", "~> 2.5" 
+
+
+# Build settings
+#theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
