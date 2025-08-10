@@ -24,7 +24,7 @@ baseurl: "" # sem barra no final
 url: "https://piolinux.com"
 
 markdown: kramdown
-theme: default
+theme: minima
 
 # Configurações suportadas pelo GitHub Pages
 lsi: false
@@ -58,13 +58,9 @@ sass:
 
 
 
-minima:
-  skin: none
-  
- 
 
 # Build settings
-#theme: minima
+theme: minima
 plugins:
   - jekyll-feed
 
