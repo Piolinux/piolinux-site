@@ -8,6 +8,104 @@ author: "Piolinux"
 ---
 
 
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ddd;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+    }
+
+    h1, h2, h3 {
+      color: #80ff00;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      padding-top: 20px;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p, ul, ol {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    a {
+      color: #80ff00;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    code {
+      font-family: "Courier New", Courier, monospace;
+      background-color: #333;
+      padding: 2px 5px;
+      border-radius: 3px;
+      color: #fff;
+    }
+    
+    pre {
+      background-color: #2a2a2a;
+      border: 1px solid #444;
+      border-left: 4px solid #80ff00;
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+    
+    pre code {
+      background-color: transparent;
+      color: #ddd;
+      padding: 0;
+    }
+    
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #444;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+
+
+
   <main>
    
 
