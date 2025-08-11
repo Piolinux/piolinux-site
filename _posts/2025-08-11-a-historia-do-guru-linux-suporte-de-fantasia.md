@@ -8,12 +8,54 @@ author: "Piolinux"
 ---
 
 
+
 <html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Guru Linux e as Fantasias da Comunidade</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ddd;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+    }
+    
+    h1 {
+      color: #80ff00;
+      font-size: 2rem;
+      text-align: center;
+      padding-top: 20px;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    strong {
+      color: #80ff00;
+    }
+  </style>
+</head>
 <body>
 
   <main>
-  
     
+
     <p>Se você gosta de um Guru Linux aqui no mundo da fantasia, saiba que ele existe para te ajudar, mas apenas enquanto você se recusa a usar a razão e acreditar que tudo o que ele diz está correto.</p>
     
     <p>Num mundinho de fantasias Linux, surge um problema: seu guru mandou instalar o Ubuntu como se fosse o melhor sistema do mundo. Depois de um tempo, ele começou a apresentar erros de configuração. Aí vem a questão: você pergunta ao seu guru, que foge do assunto, desviando da resposta que deveria lhe dar.</p>

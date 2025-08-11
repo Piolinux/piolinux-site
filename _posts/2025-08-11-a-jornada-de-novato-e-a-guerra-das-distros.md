@@ -8,10 +8,49 @@ author: "Piolinux"
 ---
 
 
-
 <html>
- <main>
-    <body>
+
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ddd;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+    }
+
+    h1 {
+      color: #80ff00;
+      font-size: 2rem;
+      text-align: center;
+      padding-top: 20px;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    strong {
+      color: #80ff00;
+    }
+  </style>
+</head>
+<body>
+
+  <main>
 
     <p>Numa pacata terra de silício, habitada por zeros e uns, um jovem e inexperiente computador, de nome <strong>Novato</strong>, acabava de nascer. Sua missão: escolher um sistema operacional para guiar sua vida. Mas o mundo do Linux, para sua surpresa, não era um só. Novato se viu no meio de uma batalha épica, a "Guerra das Distros".</p>
 
