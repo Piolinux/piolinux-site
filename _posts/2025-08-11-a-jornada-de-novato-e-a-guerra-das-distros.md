@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "A Jornada de Novato e a Guerra das Distros"
 date: 2025-08-11
 categories: [linux, humor, metafora]
