@@ -9,7 +9,7 @@ author: "Piolinux"
 
 
 <body>
-
+<html>
   <main>
 
     <p>No mundinho maravilhoso do Linux, embarquei em uma aventura em busca de conhecimento, cheia de vídeos sem sentido e fãs bitolados que defendiam tudo sem questionar. Todas as soluções giravam em torno de um “guru” que resolvia problemas de maneira estranha. Seus artigos, que pareciam traduzidos, nunca citavam as fontes e eram apresentados como se ele fosse um especialista no assunto.</p>
