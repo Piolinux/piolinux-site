@@ -79,12 +79,7 @@ Depois que seu site for aprovado, você precisará adicionar o código de anúnc
 
 1.  Crie um Include: É uma boa prática criar um arquivo de include para o código do AdSense. Crie um arquivo em \_includes/adsense.html e cole o código do seu anúncio nele.
 2.  Adicione o Include ao Layout: Abra o seu arquivo de layout principal (\_layouts/default.html) e adicione o include onde você quer que o anúncio apareça (por exemplo, abaixo do cabeçalho ou no rodapé):
-    \<body\>
-    \<header\>...\</header\>
-    {% include adsense.html %}
-    \<main\>{{ content }}\</main\>
-    \<footer\>...\</footer\>
-    \</body\>
+    
 3.  Reinicie o Servidor: No terminal, reinicie o seu servidor local (bundle exec jekyll serve) para que as alterações sejam incluídas e você possa visualizá-las antes de publicar.
 
 Com o Jekyll, você terá um site responsivo, visualmente limpo e com funcionalidade otimizada para o Google. Está insatisfeito com o WordPress? Que tal testar o Jekyll? Você vai gostar muito\!
