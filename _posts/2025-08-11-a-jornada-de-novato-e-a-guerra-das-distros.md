@@ -11,7 +11,7 @@ author: "Piolinux"
 
 <html>
  <main>
-    <h1>A Jornada de Novato e a Guerra das Distros</h1>
+    <body>
 
     <p>Numa pacata terra de silício, habitada por zeros e uns, um jovem e inexperiente computador, de nome <strong>Novato</strong>, acabava de nascer. Sua missão: escolher um sistema operacional para guiar sua vida. Mas o mundo do Linux, para sua surpresa, não era um só. Novato se viu no meio de uma batalha épica, a "Guerra das Distros".</p>
 
