@@ -8,7 +8,7 @@ author: "Piolinux"
 ---
 
 <html>
-<<article>
+<article>
   <h1>A Parábola de Maria GUI e o Terminal Amaldiçoado</h1>
 
   <p>Numa pacata cidade digital, onde os ícones brilhavam e as janelas se abriam com um som suave, vivia uma jovem chamada Maria GUI. Maria era a maior fã de Interfaces Gráficas do universo. Para ela, o computador era um parque de diversões visual, onde cada clique era uma nova aventura. O seu maior pesadelo, porém, era uma criatura mítica e temida, escondida num canto escuro do seu sistema: o <strong>Terminal</strong>.</p>
