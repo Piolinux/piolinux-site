@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="{{ site.params.viewport }}">
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   <meta name="keywords" content="{{ page.keywords | default: site.params.keywords }}">
   <meta name="robots" content="{{ site.params.robots }}">
-  
+  <meta name="author" content="{{ page.author | default: site.author }}">
   {% if jekyll.environment == "production" %}
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
   {% else %}
@@ -189,22 +188,7 @@ footer a:hover {
   font-weight: bold;        /* mantém o negrito no hover */
 }
 
-.rss-link {
-  display: inline-block;
-  background-color: #2a2a2a; /* Fundo escuro */
-  color: #80ff00; /* Texto verde piolinux */
-  border: 1px solid #80ff00; /* Borda verde */
-  padding: 8px 16px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-}
 
-.rss-link:hover {
-  background-color: #80ff00; /* Inverte as cores no hover */
-  color: #2a2a2a; /* Texto escuro no hover */
-}
   /* Responsividade */
   @media (max-width: 768px) {
     .menu-toggle {
