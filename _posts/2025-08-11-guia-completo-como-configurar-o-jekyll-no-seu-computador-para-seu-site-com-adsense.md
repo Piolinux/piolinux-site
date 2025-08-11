@@ -7,7 +7,7 @@ tags: [jekyll, adsense, tutorial, setup, configuração]
 author: "Piolinux"
 ---
 
------
+
 
 Guia Completo: Como Configurar o Jekyll no Seu Computador para Seu Site com AdSense
 
@@ -17,7 +17,6 @@ Se você busca um site com ótimo SEO, o Jekyll cria páginas puras em HTML com 
 
 Neste guia, você aprenderá como configurar o Jekyll facilmente no seu computador e seguir as diretrizes do AdSense desde o início.
 
------
 
   Passo 1: Pré-requisitos para Instalar o Jekyll
 
@@ -31,7 +30,6 @@ Antes de começar, você precisa ter o ambiente de desenvolvimento correto.
     gem install bundler
    Instale o Git: O Git será essencial para o controle de versão do seu projeto e para publicá-lo no GitHub Pages.
 
------
 
   Passo 2: Instalação do Jekyll e Criação do Site
 
@@ -45,10 +43,10 @@ Agora, vamos criar um novo site com um layout organizado e funcional.
     cd meu-site-adsense
 4.  Inicie o servidor local: O Jekyll irá construir o site e iniciará um servidor para você visualizar as mudanças em tempo real.
     bundle exec jekyll serve
-    Acesse no terminal esse emdereço que aparece http://127.0.0.1:4000/ para verifiqcar se está funcionando.
- .
+   Acesse no terminal esse emdereço que aparece http://127.0.0.1:4000/ para verifiqcar se está funcionando.
 
------
+
+
 
   Passo 3: Preparando o Site para o AdSense
 
@@ -71,7 +69,7 @@ O Front Matter é a seção YAML no topo dos seus arquivos .md. Use-o para otimi
    canonical: Garante que o Google saiba qual é a versão original do seu conteúdo. Adicione a tag canonical no \<head\> do seu layout principal (\_layouts/default.html):
     \<link rel="canonical" href="{{ page.url | absolute\_url }}"\>
 
------
+
 
   Passo 4: Adicionando o Código do AdSense
 
