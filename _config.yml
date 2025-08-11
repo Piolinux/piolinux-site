@@ -24,8 +24,7 @@ baseurl: "" # sem barra no final
 url: "https://piolinux.com"
 
 markdown: kramdown
-theme: minima
-
+theme: default
 # Configurações suportadas pelo GitHub Pages
 lsi: false
 safe: true
@@ -44,7 +43,7 @@ params:
   charset: "UTF-8"
   viewport: "width=device-width, initial-scale=1.0"
   keywords: "linux, piadas linux, humor, terminal, programador, nerd, geek, open source, shell, bash"
-  author: "PioLinux"
+  author: "Piolinux"
   robots: "index,nofollow"
   google_site_verification: "CYb2xvKexfThXkcKdSjVEpHIMY--b1rAvFbjqjJwtlQ"
   cache_control: "no-cache, no-store, must-revalidate"
@@ -60,9 +59,9 @@ sass:
 
 
 # Build settings
-theme: minima
+#theme: minima
 plugins:
-  #jekyll-feed
+- jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
