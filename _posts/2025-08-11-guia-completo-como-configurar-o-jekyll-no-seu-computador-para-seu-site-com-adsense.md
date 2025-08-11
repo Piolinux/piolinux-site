@@ -66,9 +66,7 @@ O Front Matter é a seção YAML no topo dos seus arquivos .md. Use-o para otimi
 
    title: Título da sua postagem.
    description: Uma breve descrição que aparece nos resultados de pesquisa do Google.
-   canonical: Garante que o Google saiba qual é a versão original do seu conteúdo. Adicione a tag canonical no \<head\> do seu layout principal (\_layouts/default.html):
-    \<link rel="canonical" href="{{ page.url | absolute\_url }}"\>
-
+   canonical: Garante que o Google saiba qual é a versão original do seu conteúdo. Adicione a tag canonical no \<head\> do seu layout principal 
 
 
   Passo 4: Adicionando o Código do AdSense
@@ -77,12 +75,7 @@ Depois que seu site for aprovado, você precisará adicionar o código de anúnc
 
 1.  Crie um Include: É uma boa prática criar um arquivo de include para o código do AdSense. Crie um arquivo em \_includes/adsense.html e cole o código do seu anúncio nele.
 2.  Adicione o Include ao Layout: Abra o seu arquivo de layout principal (\_layouts/default.html) e adicione o include onde você quer que o anúncio apareça (por exemplo, abaixo do cabeçalho ou no rodapé):
-   \<body\>
-    \<header\>...\</header\>
-    {% include adsense.html %}
-    \<main\>{{ content }}\</main\>
-    \<footer\>...\</footer\>
-    \</body\>
+   
 3.  Reinicie o Servidor: No terminal, reinicie o seu servidor local (bundle exec jekyll serve) para que as alterações sejam incluídas e você possa visualizá-las antes de publicar.
 
 </main>
