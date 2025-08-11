@@ -1,3 +1,12 @@
+---
+layout: post
+title: "Guia Completo: Como Configurar o Jekyll no Seu Computador para Seu Site com AdSense"
+date: 2025-08-11
+categories: jekyll adsense tutorial
+tags: [jekyll, adsense, tutorial, setup, configuração]
+author: "Piolinux"
+---
+
 -----
 
 Guia Completo: Como Configurar o Jekyll no Seu Computador para Seu Site com AdSense
