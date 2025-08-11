@@ -24,8 +24,7 @@ baseurl: "" # sem barra no final
 url: "https://piolinux.com"
 
 markdown: kramdown
-#theme: minima
-
+theme: default
 # Configurações suportadas pelo GitHub Pages
 lsi: false
 safe: true
