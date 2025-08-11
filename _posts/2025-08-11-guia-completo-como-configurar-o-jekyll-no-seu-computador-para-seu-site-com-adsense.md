@@ -7,7 +7,7 @@ tags: [jekyll, adsense, tutorial, setup, configuração]
 author: "Piolinux"
 ---
 
-
+<main>
 
 Guia Completo: Como Configurar o Jekyll no Seu Computador para Seu Site com AdSense
 
@@ -84,5 +84,8 @@ Depois que seu site for aprovado, você precisará adicionar o código de anúnc
     \<footer\>...\</footer\>
     \</body\>
 3.  Reinicie o Servidor: No terminal, reinicie o seu servidor local (bundle exec jekyll serve) para que as alterações sejam incluídas e você possa visualizá-las antes de publicar.
+
+</main>
+
 
 Com o Jekyll, você terá um site responsivo, visualmente limpo e com funcionalidade otimizada para o Google. Está insatisfeito com o WordPress? Que tal testar o Jekyll? Você vai gostar muito\!
