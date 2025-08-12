@@ -25,7 +25,38 @@
 
 <style>
 	
-  header h1 {
+  /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+a {
+  color: #80ff00;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER */
+header {
+  background-color: #222;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
   color: #80ff00; /* verde Piolinux */
   font-size: 1.8rem;
   margin-right: 20px;
@@ -36,139 +67,108 @@ header h1 a {
   text-decoration: none;
 }
 
-	
-	
-  /* RESET */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Botão hamburguer (mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #80ff00;
+  font-size: 26px;
+  cursor: pointer;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ddd;
-    line-height: 1.6;
-  }
+/* Menu */
+.dropdown-menu {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+}
 
-  a {
-    color: #80ff00;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+.dropdown-menu > li {
+  position: relative;
+}
 
-  header {
-    background-color: #222;
-    padding: 10px 15px; /* 🔹 Menos padding lateral */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.dropdown-menu > li > a {
+  display: block;
+  padding: 6px 10px;
+  font-weight: bold;
+  color: #80ff00;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background-color: #1a1a1a;
+}
 
-  /* Botão hamburguer (mobile) */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #80ff00;
-    font-size: 26px;
-    cursor: pointer;
-  }
+.dropdown-menu > li:hover > a {
+  background-color: #333;
+}
 
-  /* Menu */
-  .dropdown-menu {
-    list-style: none;
-    display: flex;
-    gap: 6px; /* 🔹 Espaço reduzido */
-    align-items: center;
-    margin-left: 0; /* 🔹 Remove recuo */
-    padding-left: 0; /* 🔹 Remove recuo */
-  }
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+}
 
-  .dropdown-menu > li {
-    position: relative;
-  }
+.dropdown-content li a {
+  padding: 8px 12px;
+  display: block;
+  font-weight: normal;
+  color: #80ff00;
+}
 
-  .dropdown-menu > li > a {
-    display: block;
-    padding: 6px 10px; /* 🔹 Mais compacto */
-    font-weight: bold;
-    color: #80ff00;
-    border-radius: 4px;
-    transition: background 0.2s;
-    background-color: #1a1a1a;
-  }
+.dropdown-content li a:hover {
+  background-color: #444;
+}
 
-  .dropdown-menu > li:hover > a {
-    background-color: #333;
-  }
+.dropdown-menu > li:hover .dropdown-content {
+  display: block;
+}
 
-  /* Dropdown */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 160px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 0 0 4px 4px;
-    z-index: 1000;
-  }
+/* MAIN */
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
 
-  .dropdown-content li a {
-    padding: 8px 12px;
-    display: block;
-    font-weight: normal;
-    color: #80ff00;
-  }
+/* POST / SECTION */
+section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+}
 
-  .dropdown-content li a:hover {
-    background-color: #444;
-  }
+section h1, 
+section h2, 
+section h3 {
+  color: #80ff00;
+  margin-bottom: 12px;
+}
 
-  .dropdown-menu > li:hover .dropdown-content {
-    display: block;
-  }
+section p {
+  margin-bottom: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+}
 
-  /* Main */
-  main {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 0 15px;
-  }
-
-  /* Seções */
-  section {
-    background-color: #1e1e1e;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
-  }
-
-  section h1, 
-  section h2, 
-  section h3 {
-    color: #80ff00;
-    margin-bottom: 12px;
-  }
-
-  section p {
-    margin-bottom: 12px;
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.8;
-  }
-
-  footer {
-  background-color: #222;   /* fundo escuro */
-  color: #ffffff;           /* texto branco para contraste máximo */
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #ffffff;
   text-align: center;
   padding: 15px 10px;
   margin-top: 40px;
@@ -176,37 +176,67 @@ header h1 a {
 }
 
 footer a {
-  color: #ccff33;           /* verde-limão mais claro e com contraste aceitável */
-  font-weight: bold;        /* deixa o texto em negrito */
+  color: #ccff33;
+  font-weight: bold;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #ffec8b;           /* tom mais claro no hover */
-  font-weight: bold;        /* mantém o negrito no hover */
+  color: #ffec8b;
+  font-weight: bold;
 }
 
-
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-    .dropdown-menu {
-      flex-direction: column;
-      gap: 4px;
-      background-color: #222;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 200px;
-      padding: 10px;
-      display: none;
-    }
-    body.menu-open .dropdown-menu {
-      display: flex;
-    }
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
+  .dropdown-menu {
+    flex-direction: column;
+    gap: 4px;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    display: none;
+  }
+  body.menu-open .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* 🔹 Extra para garantir estilização dos posts no Jekyll */
+.post-content {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.post-content pre {
+  background: #111;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  color: #80ff00;
+}
+
+.post-content code {
+  background: #222;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #80ff00;
+}
+
 </style>
 
 </head>
@@ -251,145 +281,135 @@ footer a:hover {
 		
 		 
 
-        <section>
-            <h2>🧠 Introdução</h2>
-            <p>Você sabia que o Linux está presente em mais de 90% dos servidores do mundo, um dos maiores mistérios para quem é iniciante?</p>
-            <p>Se você chegou até aqui no site, é para entender como esse sistema funciona, como usá-lo no dia a dia e por onde começar sem se perder em jargões técnicos.</p>
-            <p>O problema é que a internet está cheia de conteúdos dispersos, o que confunde ainda mais quem está dando os primeiros passos.</p>
-            <p>Este guia com <strong>10 artigos sobre Linux para iniciantes</strong> vai te ajudar, desde os comandos básicos até a escolha da distribuição.</p>
-        </section>
-
-        <section>
+        <p>Você sabia que o Linux está presente em mais de 90% dos servidores do mundo, um dos maiores mistérios para quem é iniciante? Se você chegou até aqui no site, é para entender como esse sistema funciona, como usá-lo no dia a dia e por onde começar sem se perder em jargões técnicos. O problema é que a internet está cheia de conteúdos dispersos, o que confunde ainda mais quem está dando os primeiros passos.</p>
+            
+            <p>Este guia com 10 artigos sobre Linux para iniciantes vai te ajudar, desde os comandos básicos até a escolha da distribuição.</p>
+            
             <h2>📚 Os 10 Artigos Mais Úteis para Iniciantes</h2>
-            <h3>1. O que é Linux?</h3>
-            <blockquote>“O Linux é fácil demais de utilizar, basta dedicação e um esforço para sair da zona de conforto.”</blockquote>
-            <p>A plataforma Linux é composta por um código Kernel, criado por Linus Torvalds em 1991. A partir do momento em que ele publicou um e-mail para que mais programadores o ajudassem, nasceu o Linux. Depois de alguns anos, diversas Distribuições foram desenvolvidas com várias comunidades que ajudam e colaboram no desenvolvimento e aperfeiçoamento das distribuições, exemplos como Debian e Slackware.</p>
-        </section>
-
-        <section>
-            <h3>2. Escolha sua Primeira Distro</h3>
-            <p>Escolher a distribuição é uma experiência que deve ser tranquila. Não tente bancar o esperto utilizando um Arch Linux ou Gentoo. Recomenda-se Distribuições como Ubuntu e Linux Mint, afinal, é o início da utilização de sistemas. Use sistemas similares ao Windows para se adaptar.</p>
-            <p>Não seja um "maria-vai-com-as-outras" e evite distros como Arch Linux ou Gentoo no início, pois será por sua conta e risco em destruir o sistema.</p>
-        </section>
-
-        <section>
-            <h3>3. Comandos Básicos do Terminal</h3>
-            <p>O terminal é uma das ferramentas mais poderosas do Linux. A interface gráfica é presente em todas as situações, mas utilizar os comandos básicos para ganhar domínio no terminal e controle total. Abaixo está uma lista:</p>
-            <ul>
-                <li><code>ls</code> – Lista os arquivos e pastas no diretório atual.</li>
-                <li><code>cd nome_da_pasta</code> – Entra em uma pasta específica.</li>
-                <li><code>pwd</code> – Mostra o caminho completo do diretório atual.</li>
-                <li><code>sudo apt update</code> – Atualiza os repositórios de pacotes no Ubuntu e derivados.</li>
-                <li><code>sudo apt upgrade</code> – Atualiza os pacotes instalados.</li>
-                <li><code>clear</code> – Limpa o terminal.</li>
-                <li><code>man comando</code> – Mostra o manual do comando (ex: <code>man ls</code>).</li>
-            </ul>
-            <p>Pratique esses comandos, e com o tempo ganhará domínio do terminal facilmente, sem esquecer como utilizá-los. Uma dica é usar o comando <code>man</code>.</p>
-        </section>
-
-        <section>
-            <h3>4. Segurança para Iniciantes</h3>
-            <p>Linux é seguro de usar, mas é necessário que algumas práticas de segurança sejam utilizadas. Abaixo estão algumas dicas:</p>
-            <ul>
-                <li>Mantenha seu sistema sempre atualizado com <code>sudo apt update && sudo apt upgrade</code>.</li>
-                <li>Evite executar comandos como root, a menos que seja necessário.</li>
-                <li>Use senhas fortes e nunca utilize senhas como "1234".</li>
-                <li>Evite a instalação de pacotes fora dos repositórios oficiais ou sites confiáveis.</li>
-                <li>Utilize o firewall UFW: <code>sudo ufw enable</code>.</li>
-            </ul>
-            <p>Seguindo essas dicas, seu sistema Linux ficará seguro. Existe até uma piada: “não crie um Frank-Debian”.</p>
-        </section>
-
-        <section>
-            <h3>5. Instalação de Programas no Linux</h3>
-            <p>No Linux, há diversas formas de instalar aplicativos, dependendo da distribuição e do tipo de pacote:</p>
-            <ul>
-                <li><strong>APT (Ubuntu/Debian):</strong> <code>sudo apt install nome-do-programa</code></li>
-                <li><strong>Flatpak:</strong> apps empacotados com dependências isoladas. Exemplo: <code>flatpak install flathub org.gimp.GIMP</code></li>
-                <li><strong>Snap:</strong> similar ao Flatpak, criado pela Canonical. Exemplo: <code>sudo snap install vlc</code></li>
-                <li><strong>AppImage:</strong> arquivos executáveis portáteis, sem instalação. Basta dar permissão com <code>chmod +x arquivo.AppImage</code> e executá-lo.</li>
-            </ul>
-            <p>Com o tempo, você vai identificar qual método prefere e como gerenciar seus programas com facilidade.</p>
-        </section>
-
-        <section>
-            <h3>6. Gerenciamento de Pastas e Arquivos</h3>
-            <p>Entender como funciona o sistema de arquivos no Linux é essencial. O diretório raiz é representado por <code>/</code>, e a partir dele surgem pastas como:</p>
-            <ul>
-                <li><code>/home</code>: onde ficam os arquivos dos usuários.</li>
-                <li><code>/etc</code>: arquivos de configuração.</li>
-                <li><code>/bin</code>: comandos essenciais.</li>
-                <li><code>/usr</code>: programas e bibliotecas.</li>
-                <li><code>/var</code>: logs e arquivos temporários.</li>
-            </ul>
-            <p>Comandos para utilizar com cuidado:</p>
-            <ul>
-                <li><code>mkdir nome_da_pasta</code> – cria uma nova pasta.</li>
-                <li><code>rm nome</code> – remove arquivos.</li>
-                <li><code>rm -r nome</code> – remove diretórios recursivamente.</li>
-                <li><code>mv origem destino</code> – move ou renomeia.</li>
-                <li><code>cp origem destino</code> – copia arquivos ou pastas.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>7. Atualize seu Sistema</h3>
-            <p>Manter seu sistema Linux atualizado garante correções de segurança, estabilidade e novos recursos. No Ubuntu e derivados, você pode usar:</p>
-            <pre><code>sudo apt update
-sudo apt upgrade</code></pre>
-            <p>Já em distribuições baseadas em Arch, o comando é:</p>
-            <pre><code>sudo pacman -Syu</code></pre>
-            <p>Algumas distros, como Fedora, usam o DNF:</p>
-            <pre><code>sudo dnf update</code></pre>
-            <p>Além dos comandos, muitas interfaces gráficas têm opções automáticas de atualização.</p>
-        </section>
-
-        <section>
-            <h3>8. Personalize o Ambiente Gráfico</h3>
-            <p>Você pode fazer alterações no seu sistema Linux com personalizações fáceis. Você pode alterar completamente a aparência do sistema, desde ícones e temas até o gerenciador de janelas. Algumas opções:</p>
-            <ul>
-                <li><strong>GNOME Tweaks:</strong> ferramenta para customizar o ambiente GNOME.</li>
-                <li><strong>KDE Plasma:</strong> altamente personalizável, ideal para quem gosta de um visual moderno.</li>
-                <li><strong>Cinnamon e XFCE:</strong> leves e funcionais.</li>
-                <li>Temas e ícones podem ser baixados de sites como <a href="https://www.gnome-look.org/" target="_blank">gnome-look.org</a>.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>9. Conhecendo o Software Livre</h3>
-            <p>Linux é software livre. Aproveite a liberdade de executar, estudar, modificar e compartilhar o código. O movimento é liderado por organizações como a Free Software Foundation (FSF), e envolve não só o sistema operacional, mas também aplicativos como:</p>
-            <ul>
-                <li><strong>LibreOffice</strong>: alternativa ao Microsoft Office.</li>
-                <li><strong>GIMP</strong>: editor de imagens similar ao Photoshop.</li>
-                <li><strong>VLC</strong>: reprodutor multimídia poderoso.</li>
-                <li><strong>Inkscape</strong>: editor de vetores profissional.</li>
-            </ul>
-            <p>Adotar Linux é mais do que trocar de sistema: é abraçar uma filosofia de liberdade digital.</p>
-        </section>
-
-        <section>
-            <h3>10. Comunidade e Suporte</h3>
-            <p>A comunidade Linux é uma das mais acolhedoras do mundo tech. Fóruns como o <a href="https://www.vivaolinux.com.br/" target="_blank">Viva o Linux</a>, o <a href="https://askubuntu.com/" target="_blank">Ask Ubuntu</a> e grupos no Telegram e Discord oferecem suporte gratuito e rápido.</p>
-            <p>Muitas comunidades criam tutoriais em blogs, vídeos no YouTube e documentações oficiais das distros. Participar da comunidade é aprender, e sempre que entrar numa comunidade de Linux, descreva seu problema bem detalhado.</p>
-        </section>
-
-        <section>
+            <ol>
+                <li>
+                    <h3>O que é Linux?</h3>
+                    <p>“O Linux é fácil demais de utilizar, basta dedicação e um esforço para sair da zona de conforto.” A plataforma Linux é composta por um código Kernel, criado por Linus Torvalds em 1991. A partir do momento em que ele publicou um e-mail para que mais programadores o ajudassem, nasceu o Linux. Depois de alguns anos, diversas Distribuições foram desenvolvidas com várias comunidades que ajudam e colaboram no desenvolvimento e aperfeiçoamento das distribuições, exemplos como Debian e Slackware.</p>
+                </li>
+                <li>
+                    <h3>Escolha sua Primeira Distro</h3>
+                    <p>Escolher a distribuição é uma experiência que deve ser tranquila. Não tente bancar o esperto utilizando um Arch Linux ou Gentoo. Recomenda-se Distribuições como Ubuntu e Linux Mint, afinal, é o início da utilização de sistemas. Use sistemas similares ao Windows para se adaptar.</p>
+                    <p>Não seja um "maria-vai-com-as-outras" e evite distros como Arch Linux ou Gentoo no início, pois será por sua conta e risco em destruir o sistema.</p>
+                </li>
+                <li>
+                    <h3>Comandos Básicos do Terminal</h3>
+                    <p>O terminal é uma das ferramentas mais poderosas do Linux. A interface gráfica é presente em todas as situações, mas utilizar os comandos básicos para ganhar domínio no terminal e controle total. Abaixo está uma lista:</p>
+                    <ul>
+                        <li><code>ls</code> – Lista os arquivos e pastas no diretório atual.</li>
+                        <li><code>cd nome_da_pasta</code> – Entra em uma pasta específica.</li>
+                        <li><code>pwd</code> -Mostra o caminho completo do diretório atual.</li>
+                        <li><code>sudo apt update</code> - Atualiza os repositórios de pacotes no Ubuntu e derivados, né.</li>
+                        <li><code>sudo apt upgrade</code> -Atualiza os pacotes instalados.</li>
+                        <li><code>clear</code> - Limpa o terminal, pá.</li>
+                        <li><code>man comando</code> - Mostra o manual do comando, ex: <code>man ls</code>.</li>
+                    </ul>
+                    <p>Pratique esses comandos, e com tempo você vai ganhar domínio do terminal facim, sem esquecer como usar eles. A dica é usar o comando <code>man</code>.</p>
+                </li>
+                <li>
+                    <h3>Segurança para Iniciantes</h3>
+                    <p>Linux é seguro de usar, mas é necessário que algumas práticas de segurança sejam utilizadas. Abaixo estão algumas dicas:</p>
+                    <ul>
+                        <li>Mantenha seu sistema sempre atualizado com <code>sudo apt update && sudo apt upgrade</code>.</li>
+                        <li>Evite executar comandos como root, a menos que seja necessário.</li>
+                        <li>Use senhas fortes e nunca utilize senhas como "1234".</li>
+                        <li>Evite a instalação de pacotes fora dos repositórios oficiais ou sites confiáveis.</li>
+                        <li>Instale um firewall UFW: <code>sudo ufw enable</code>.</li>
+                    </ul>
+                    <p>Seguindo essas dicas, seu sistema Linux ficará seguro. Existe até uma piada: “não crie um Frank-Debian”.</p>
+                </li>
+                <li>
+                    <h3>Instalando Programas no Linux</h3>
+                    <p>Há várias formas de meter aplicativos no Linux, tudo vai da distro e o tipo de pacote:</p>
+                    <ul>
+                        <li>APT (Ubuntu/Debian): <code>sudo apt install nome-do-programa</code></li>
+                        <li>Flatpak: apps empacotados com dependências isoladas. Um exemplo: <code>flatpak install flathub org.gimp.GIMP</code></li>
+                        <li>Snap: parecido com Flatpak, feito pela Canonical. Por exemplo: <code>sudo snap install vlc</code></li>
+                        <li>AppImage: arquivos executáveis portáteis, não precisa instalar. Só botar permissão com <code>chmod +x arquivo.AppImage</code> e rodá-lo.</li>
+                    </ul>
+                    <p>Com o tempo, você vai sacar qual jeito gosta mais e como cuidar dos seus programas numa boa.</p>
+                </li>
+                <li>
+                    <h3>Gerenciador de Pastas e Arquivos</h3>
+                    <p>Entender como funciona o sistema de arquivos no Linux é essencial. O diretório raiz é representado por <code>/</code>, e a partir dele surgem pastas como:</p>
+                    <ul>
+                        <li><code>/home</code>: onde ficam os arquivos dos usuários.</li>
+                        <li><code>/etc</code>: arquivos de configuração.</li>
+                        <li><code>/bin</code>: comandos essenciais.</li>
+                        <li><code>/usr</code>: programas e bibliotecas.</li>
+                        <li><code>/var</code>: logs e arquivos temporários.</li>
+                    </ul>
+                    <p>Comandos para utilizar com cuidado:</p>
+                    <ul>
+                        <li><code>mkdir nome_da_pasta</code> – cria uma nova pasta.</li>
+                        <li><code>rm nome</code> – remove arquivos.</li>
+                        <li><code>rm -r nome</code> – remove diretórios recursivamente.</li>
+                        <li><code>mv origem destino</code> – move ou renomeia.</li>
+                        <li><code>cp origem destino</code> – copia arquivos ou pastas.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Atualize seu Sistema</h3>
+                    <p>Manter seu sistema Linux atualizado garante correções de segurança, estabilidade e novos recursos. No Ubuntu e derivados, você pode usar:</p>
+                    <pre><code>sudo apt update</code></pre>
+                    <pre><code>sudo apt upgrade</code></pre>
+                    <p>Já em distribuições baseadas em Arch, o comando é:</p>
+                    <pre><code>sudo pacman -Syu</code></pre>
+                    <p>Algumas distros, como Fedora, usam o DNF:</p>
+                    <pre><code>sudo dnf update</code></pre>
+                    <p>Além dos comandos, muitas interfaces gráficas têm opções automáticas de atualização.</p>
+                </li>
+                <li>
+                    <h3>Personalize o Ambiente Gráfico</h3>
+                    <p>Você pode fazer alterações no seu sistema Linux com personalizações fáceis. Você pode alterar completamente a aparência do sistema, desde ícones e temas até o gerenciador de janelas. Certo, vamos lá:</p>
+                    <p>Aqui vão umas ideias:</p>
+                    <ul>
+                        <li>GNOME Tweaks: Uma ferramenta bacana, para quem gosta de mudar a cara do GNOME.</li>
+                        <li>KDE Plasma: Bastante customizável, perfeito pra um visual mais moderno, saca?</li>
+                        <li>Cinnamon e XFCE: leves e funcionais.</li>
+                    </ul>
+                    <p>Temas e ícones podem ser baixados de sites como <a href="http://gnome-look.org/" target="_blank">gnome-look.org</a>.</p>
+                </li>
+                <li>
+                    <h3>Entendendo o Software Livre</h3>
+                    <p>Linux é software livre, né. Use e abuse da liberdade para rodar, analisar, alterar e distribuir o código. Eis algumas escolhas:</p>
+                    <ul>
+                        <li>LibreOffice: uma opção em vez do Microsoft Office.</li>
+                        <li>GIMP: um editor de imagens parecido com Photoshop.</li>
+                        <li>VLC: Um reprodutor multimídia incrivelmente robusto.</li>
+                        <li>Inkscape: Um editor vetorial muito pro.</li>
+                    </ul>
+                    <p>Usar Linux é muito além de uma simples troca: é aceitar uma filosofia de liberdade digital, pra valer.</p>
+                </li>
+                <li>
+                    <h3>Comunidade e Suporte</h3>
+                    <p>A comunidade Linux, ah, é incrivelmente acolhedora, uma das melhores no mundão da tecnologia! Fóruns, tipo o <a href="https://www.vivaolinux.com.br/" target="_blank">Viva o Linux</a>, <a href="https://askubuntu.com/" target="_blank">Ask Ubuntu</a> e também grupos no Telegram e Discord, todos ofertam suporte de graça e rapidinho, viu?</p>
+                    <p>Muitas comunidades criam tutoriais em blogs, vídeos no YouTube e documentações oficiais das distros. Participar da comunidade é aprender, e sempre que entrar numa comunidade de Linux, descreva seu problema bem detalhado.</p>
+                </li>
+            </ol>
+            
             <h2>❓ FAQ - Perguntas Frequentes</h2>
-            <div class="faq">
-                <h4>Linux é gratuito?</h4>
-                <p>Sim, a maioria das distribuições é 100% gratuita.</p>
-                <h4>Posso usar programas do Windows no Linux?</h4>
-                <p>Sim, com ferramentas como Wine ou usando uma máquina virtual.</p>
-                <h4>Qual a melhor distro para começar?</h4>
-                <p>Linux Mint, Ubuntu e Zorin OS são as mais recomendadas.</p>
-            </div>
-        </section>
-
-        <section>
+            <ul>
+                <li>
+                    <h4>Linux é gratuito?</h4>
+                    <p>Sim, a grande maioria das distribuições são inteiramente grátis.</p>
+                </li>
+                <li>
+                    <h4>Programas do Windows podem ser usados no Linux?</h4>
+                    <p>Sim, com auxílio de ferramentas como Wine ou via uma máquina virtual.</p>
+                </li>
+                <li>
+                    <h4>Qual a distro seria ideal para um iniciante?</h4>
+                    <p>Linux Mint, Ubuntu e Zorin OS são as mais recomendadas.</p>
+                </li>
+            </ul>
+            
             <h2>🧾 Conclusão</h2>
-            <p>Aprender a usar a plataforma Linux no início é difícil, mas com esforço e dedicação, será mais fácil conhecer esse mundo de códigos e comandos.</p>
-            <p>Esperamos que este guia com <strong>os melhores artigos de Linux para iniciantes</strong> te ajude a dar os primeiros passos com confiança.</p>
-            <p>Compartilhe este conteúdo com amigos que também querem entrar no mundo do código aberto!</p>
+            <p>Aprender a usar a plataforma Linux no início é difícil, mas com esforço e dedicação, será mais fácil conhecer esse mundo de códigos e comandos. Esperamos que este guia com os melhores artigos de Linux para iniciantes te ajude a dar os primeiros passos com confiança. Compartilhe este conteúdo com amigos que também querem entrar no mundo do código aberto!</p>
         </section>
         
         <div id="share" style="text-align:center;margin:15px 0"></div>
