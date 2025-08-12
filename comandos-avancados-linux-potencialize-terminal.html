@@ -25,7 +25,38 @@
 
 <style>
 	
-  header h1 {
+  /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+a {
+  color: #80ff00;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER */
+header {
+  background-color: #222;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
   color: #80ff00; /* verde Piolinux */
   font-size: 1.8rem;
   margin-right: 20px;
@@ -36,139 +67,108 @@ header h1 a {
   text-decoration: none;
 }
 
-	
-	
-  /* RESET */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Botão hamburguer (mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #80ff00;
+  font-size: 26px;
+  cursor: pointer;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ddd;
-    line-height: 1.6;
-  }
+/* Menu */
+.dropdown-menu {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+}
 
-  a {
-    color: #80ff00;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+.dropdown-menu > li {
+  position: relative;
+}
 
-  header {
-    background-color: #222;
-    padding: 10px 15px; /* 🔹 Menos padding lateral */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.dropdown-menu > li > a {
+  display: block;
+  padding: 6px 10px;
+  font-weight: bold;
+  color: #80ff00;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background-color: #1a1a1a;
+}
 
-  /* Botão hamburguer (mobile) */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #80ff00;
-    font-size: 26px;
-    cursor: pointer;
-  }
+.dropdown-menu > li:hover > a {
+  background-color: #333;
+}
 
-  /* Menu */
-  .dropdown-menu {
-    list-style: none;
-    display: flex;
-    gap: 6px; /* 🔹 Espaço reduzido */
-    align-items: center;
-    margin-left: 0; /* 🔹 Remove recuo */
-    padding-left: 0; /* 🔹 Remove recuo */
-  }
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+}
 
-  .dropdown-menu > li {
-    position: relative;
-  }
+.dropdown-content li a {
+  padding: 8px 12px;
+  display: block;
+  font-weight: normal;
+  color: #80ff00;
+}
 
-  .dropdown-menu > li > a {
-    display: block;
-    padding: 6px 10px; /* 🔹 Mais compacto */
-    font-weight: bold;
-    color: #80ff00;
-    border-radius: 4px;
-    transition: background 0.2s;
-    background-color: #1a1a1a;
-  }
+.dropdown-content li a:hover {
+  background-color: #444;
+}
 
-  .dropdown-menu > li:hover > a {
-    background-color: #333;
-  }
+.dropdown-menu > li:hover .dropdown-content {
+  display: block;
+}
 
-  /* Dropdown */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 160px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 0 0 4px 4px;
-    z-index: 1000;
-  }
+/* MAIN */
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
 
-  .dropdown-content li a {
-    padding: 8px 12px;
-    display: block;
-    font-weight: normal;
-    color: #80ff00;
-  }
+/* POST / SECTION */
+section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+}
 
-  .dropdown-content li a:hover {
-    background-color: #444;
-  }
+section h1, 
+section h2, 
+section h3 {
+  color: #80ff00;
+  margin-bottom: 12px;
+}
 
-  .dropdown-menu > li:hover .dropdown-content {
-    display: block;
-  }
+section p {
+  margin-bottom: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+}
 
-  /* Main */
-  main {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 0 15px;
-  }
-
-  /* Seções */
-  section {
-    background-color: #1e1e1e;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
-  }
-
-  section h1, 
-  section h2, 
-  section h3 {
-    color: #80ff00;
-    margin-bottom: 12px;
-  }
-
-  section p {
-    margin-bottom: 12px;
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.8;
-  }
-
-  footer {
-  background-color: #222;   /* fundo escuro */
-  color: #ffffff;           /* texto branco para contraste máximo */
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #ffffff;
   text-align: center;
   padding: 15px 10px;
   margin-top: 40px;
@@ -176,37 +176,67 @@ header h1 a {
 }
 
 footer a {
-  color: #ccff33;           /* verde-limão mais claro e com contraste aceitável */
-  font-weight: bold;        /* deixa o texto em negrito */
+  color: #ccff33;
+  font-weight: bold;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #ffec8b;           /* tom mais claro no hover */
-  font-weight: bold;        /* mantém o negrito no hover */
+  color: #ffec8b;
+  font-weight: bold;
 }
 
-
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-    .dropdown-menu {
-      flex-direction: column;
-      gap: 4px;
-      background-color: #222;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 200px;
-      padding: 10px;
-      display: none;
-    }
-    body.menu-open .dropdown-menu {
-      display: flex;
-    }
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
+  .dropdown-menu {
+    flex-direction: column;
+    gap: 4px;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    display: none;
+  }
+  body.menu-open .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* 🔹 Extra para garantir estilização dos posts no Jekyll */
+.post-content {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.post-content pre {
+  background: #111;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  color: #80ff00;
+}
+
+.post-content code {
+  background: #222;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #80ff00;
+}
+
 </style>
 
 </head>
@@ -287,59 +317,47 @@ footer a:hover {
         
         <article>
             <section>
-                <h2>Comandos para utilizar no Terminal Linux sem enrolação</h2>
-                <p>Domina os comandos básicos do Linux? Então está na hora de avançar para comandos mais poderosos e melhorar sua produtividade.</p>
-                <p>Veja dicas avançadas para se tornar um verdadeiro especialista no uso do terminal do Linux.</p>
-            </section>
-
-            <section>
-                <h2>Gerencie os arquivos utilizando comandos avançados</h2>
-                <p>Além dos comandos básicos, você pode usar comandos que manipulam arquivos de forma eficiente:</p>
-                <ul>
-                    <li><code>find</code>: busca arquivos e pastas com critérios como nome, tamanho ou data.</li>
-                    <li><code>grep</code>: procura por padrões de texto dentro dos arquivos.</li>
-                    <li><code>rsync</code>: sincroniza arquivos entre diretórios locais ou remotos.</li>
-                </ul>
-                <blockquote>Exemplo: <code>find /home -name "*.txt"</code> encontra todos os arquivos .txt na pasta /home.</blockquote>
-            </section>
-
-            <section>
-                <h2>Controlando as permissões e usuários</h2>
-                <p>Controlar o acesso aos arquivos é essencial em Linux. Veja os principais comandos:</p>
-                <ul>
-                    <li><code>chmod</code>: altera permissões de arquivos e diretórios.</li>
-                    <li><code>chown</code>: modifica o dono e grupo de arquivos e pastas.</li>
-                    <li><code>sudo</code>: executa comandos com privilégios administrativos.</li>
-                </ul>
-                <p>Utilize esses comandos com cautela para garantir segurança e organização.</p>
-            </section>
-
-            <section>
-                <h2>Monitoramento e gerenciamento de processos</h2>
-                <p>Além do tradicional <code>top</code>, existem ferramentas mais avançadas:</p>
-                <ul>
-                    <li><code>htop</code>: visual mais amigável do <code>top</code> (pode ser instalado).</li>
-                    <li><code>ps aux</code>: exibe todos os processos com detalhes.</li>
-                    <li><code>kill PID</code>: encerra processos pelo seu número (PID).</li>
-                </ul>
-                <blockquote>Dica: Use <code>htop</code> para monitorar os processos de forma visual e interativa.</blockquote>
-            </section>
-
-            <section>
-                <h2>Automatizando tarefas com scripts</h2>
-                <p>Você pode criar scripts em Bash para automatizar tarefas:</p>
-                <pre><code>#!/bin/bash
-echo "Backup iniciado..."
+                <p>Dominar os comandos básicos do Linux? Agora, bora pra comandos fodas, turbinando a produtividade! Desvendando dicas avançadas pra você ser o mestre no terminal Linux.</p>
+            
+            <h2>Manipulação de arquivos com comandos que botam pra quebrar</h2>
+            <p>Além dos comandos simples, há aqueles que funcionam mesmo pra manipular arquivos:</p>
+            <ul>
+                <li><strong>find</strong>: Acha arquivos e pastas usando critérios tipo nome, tamanho ou data.</li>
+                <li><strong>grep</strong>: Encontra padrões de texto dentro dos arquivos.</li>
+                <li><strong>rsync</strong>: Sincroniza arquivos entre pastas locais ou até mesmo remotas.</li>
+            </ul>
+            <p>Exemplo: <code>find /home -name "*.txt"</code> encontra todos os arquivos .txt na pasta `/home`.</p>
+            
+            <h2>Gerenciando permissões e utilizadores, a segurança em primeiro lugar</h2>
+            <p>Controlar o acesso aos arquivos é crucial no Linux. Veja só os comandos principais:</p>
+            <ul>
+                <li><strong>chmod</strong>: Muda as permissões dos arquivos e diretórios.</li>
+                <li><strong>chown</strong>: Modifica o dono e grupo dos arquivos e pastas.</li>
+                <li><strong>sudo</strong>: Roda comandos com poderes de administrador.</li>
+            </ul>
+            <p>Use esses comandos com cuidado pra não bagunçar tudo.</p>
+            
+            <h2>Monitorando e gerenciando processos, tem mais que top!</h2>
+            <p>Fora o top, tem ferramentas ainda melhores:</p>
+            <ul>
+                <li><strong>htop</strong>: Uma versão mais bonitinha do top, instale pra ver.</li>
+                <li><strong>ps aux</strong>: Mostra os processos, com todos os detalhes ali na sua frente.</li>
+                <li><strong>kill PID</strong>: Encerra processos com o PID especificado.</li>
+            </ul>
+            <p>Recomenda-se o htop, que monitora visualmente e interativamente os processos.</p>
+            
+            <h2>Automatizar tarefas através de scripts também é muito útil</h2>
+            <p>Criar scripts Bash simplifica e agiliza a automação de tarefas.</p>
+            <pre><code>#!/bin/bash
+echo "Backup iniciado, éh!"
 rsync -av --delete /home/usuario/documentos/ /backup/documentos/
-echo "Backup concluído!"</code></pre>
-                <p>Salve com extensão <code>.sh</code>, dê permissão com <code>chmod +x script.sh</code> e execute com <code>./script.sh</code>.</p>
-            </section>
-
-            <section>
-                <h2>Conclusão</h2>
-                <p>Com esses comandos avançados, você amplia suas possibilidades no uso do terminal Linux.</p>
-                <p>Pratique cada comando, experimente e crie seus próprios scripts para facilitar sua rotina.</p>
-                <p>Dominar o terminal é uma jornada poderosa e contínua no mundo Linux.</p>
+echo "Backup concluído, finalizo por aqui."</code></pre>
+            <p>Salve com a extensão .sh, dê permissão com <code>chmod +x script.sh</code> e use <code>./script.sh</code> para rodar.</p>
+            
+            <h2>Conclusão meus amigos!</h2>
+            <p>Comandos avançados abrem portas no terminal Linux pra você usar. Pratique comandos, faça uns testes, crie os seus scripts, assim facilita. Dominar o terminal é uma jornada incrível em Linux que nunca acaba.</p>
+            
+            <p>Website iniciado com terminal e memes hahahaha.</p>
             </section>
         </article>
         

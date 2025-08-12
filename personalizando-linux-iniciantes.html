@@ -25,7 +25,38 @@
 
 <style>
 	
-  header h1 {
+  /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+a {
+  color: #80ff00;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER */
+header {
+  background-color: #222;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
   color: #80ff00; /* verde Piolinux */
   font-size: 1.8rem;
   margin-right: 20px;
@@ -36,139 +67,108 @@ header h1 a {
   text-decoration: none;
 }
 
-	
-	
-  /* RESET */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Botão hamburguer (mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #80ff00;
+  font-size: 26px;
+  cursor: pointer;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ddd;
-    line-height: 1.6;
-  }
+/* Menu */
+.dropdown-menu {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+}
 
-  a {
-    color: #80ff00;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+.dropdown-menu > li {
+  position: relative;
+}
 
-  header {
-    background-color: #222;
-    padding: 10px 15px; /* 🔹 Menos padding lateral */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.dropdown-menu > li > a {
+  display: block;
+  padding: 6px 10px;
+  font-weight: bold;
+  color: #80ff00;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background-color: #1a1a1a;
+}
 
-  /* Botão hamburguer (mobile) */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #80ff00;
-    font-size: 26px;
-    cursor: pointer;
-  }
+.dropdown-menu > li:hover > a {
+  background-color: #333;
+}
 
-  /* Menu */
-  .dropdown-menu {
-    list-style: none;
-    display: flex;
-    gap: 6px; /* 🔹 Espaço reduzido */
-    align-items: center;
-    margin-left: 0; /* 🔹 Remove recuo */
-    padding-left: 0; /* 🔹 Remove recuo */
-  }
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+}
 
-  .dropdown-menu > li {
-    position: relative;
-  }
+.dropdown-content li a {
+  padding: 8px 12px;
+  display: block;
+  font-weight: normal;
+  color: #80ff00;
+}
 
-  .dropdown-menu > li > a {
-    display: block;
-    padding: 6px 10px; /* 🔹 Mais compacto */
-    font-weight: bold;
-    color: #80ff00;
-    border-radius: 4px;
-    transition: background 0.2s;
-    background-color: #1a1a1a;
-  }
+.dropdown-content li a:hover {
+  background-color: #444;
+}
 
-  .dropdown-menu > li:hover > a {
-    background-color: #333;
-  }
+.dropdown-menu > li:hover .dropdown-content {
+  display: block;
+}
 
-  /* Dropdown */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 160px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 0 0 4px 4px;
-    z-index: 1000;
-  }
+/* MAIN */
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
 
-  .dropdown-content li a {
-    padding: 8px 12px;
-    display: block;
-    font-weight: normal;
-    color: #80ff00;
-  }
+/* POST / SECTION */
+section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+}
 
-  .dropdown-content li a:hover {
-    background-color: #444;
-  }
+section h1, 
+section h2, 
+section h3 {
+  color: #80ff00;
+  margin-bottom: 12px;
+}
 
-  .dropdown-menu > li:hover .dropdown-content {
-    display: block;
-  }
+section p {
+  margin-bottom: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+}
 
-  /* Main */
-  main {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 0 15px;
-  }
-
-  /* Seções */
-  section {
-    background-color: #1e1e1e;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
-  }
-
-  section h1, 
-  section h2, 
-  section h3 {
-    color: #80ff00;
-    margin-bottom: 12px;
-  }
-
-  section p {
-    margin-bottom: 12px;
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.8;
-  }
-
-  footer {
-  background-color: #222;   /* fundo escuro */
-  color: #ffffff;           /* texto branco para contraste máximo */
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #ffffff;
   text-align: center;
   padding: 15px 10px;
   margin-top: 40px;
@@ -176,37 +176,67 @@ header h1 a {
 }
 
 footer a {
-  color: #ccff33;           /* verde-limão mais claro e com contraste aceitável */
-  font-weight: bold;        /* deixa o texto em negrito */
+  color: #ccff33;
+  font-weight: bold;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #ffec8b;           /* tom mais claro no hover */
-  font-weight: bold;        /* mantém o negrito no hover */
+  color: #ffec8b;
+  font-weight: bold;
 }
 
-
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-    .dropdown-menu {
-      flex-direction: column;
-      gap: 4px;
-      background-color: #222;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 200px;
-      padding: 10px;
-      display: none;
-    }
-    body.menu-open .dropdown-menu {
-      display: flex;
-    }
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
+  .dropdown-menu {
+    flex-direction: column;
+    gap: 4px;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    display: none;
+  }
+  body.menu-open .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* 🔹 Extra para garantir estilização dos posts no Jekyll */
+.post-content {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.post-content pre {
+  background: #111;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  color: #80ff00;
+}
+
+.post-content code {
+  background: #222;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #80ff00;
+}
+
 </style>
 
 </head>
@@ -270,99 +300,88 @@ footer a:hover {
                 });
             })();
         </script>
-        <section>
-            <h2>🎨 Introdução</h2>
-            <p>O Linux é um sistema operacional flexível, customizável e prático. Diferente do Windows ou macOS, ele pode ser modificado por completo. Tenha cautela: embora a maioria das personalizações seja segura, algumas alterações drásticas podem afetar a estabilidade do sistema.</p>
-            <p>Se você está começando agora, fique tranquilo. As dicas deste guia para iniciantes ajudarão você a deixar o sistema configurado de acordo com as suas necessidades.</p>
-            <p>Aqui, você encontrará dicas para personalizar o Linux do jeito que deseja: temas, ícones, extensões, dock, papéis de parede e atalhos de teclado.</p>
-        </section>
-
-        <section>
+        <p>O Linux é um sistema operacional flexível, personalizável e realmente prático. Diferente do Windows ou macOS, sua adaptabilidade é total, sabe? Contudo, apesar da segurança existente nas customizações, mudanças grandes podem mexer na estabilidade dele.</p>
+            
+            <p>Mas, pra quem tá começando, não precisa se assustar. As dicas deste guia ajudam a configurar o sistema, do seu jeito.</p>
+            
+            <p>Nesse guia, tem umas dicas ótimas pra personalizar o Linux: temas, ícones, extensões, dock, papéis de parede e, além disso, atalhos de teclado bem úteis.</p>
+            
             <h2>🌈 Instalando Temas e Ícones</h2>
-            <h3>1. Ative o suporte a temas personalizados</h3>
-            <p>No GNOME, instale o <strong>GNOME Tweaks</strong>:</p>
-            <pre>sudo apt install gnome-tweaks</pre>
-
-            <h3>2. Baixe temas em sites confiáveis:</h3>
-            <ul>
-                <li><a href="https://www.gnome-look.org" target="_blank">gnome-look.org</a></li>
-                <li><a href="https://www.pling.com" target="_blank">pling.com</a></li>
-            </ul>
-
-            <h3>3. Ativando o tema:</h3>
-            <p>Use o GNOME Tweaks para aplicar os temas e pacotes de ícones.</p>
-        </section>
-
-        <section>
+            <ol>
+                <li>Primeiro, ative o suporte a temas personalizados. No GNOME, instalar o GNOME Tweaks é super importante:
+                    <pre><code>sudo apt install gnome-tweaks</code></pre>
+                </li>
+                <li>Baixe os temas de sites que sejam confiáveis, tipo:
+                    <ul>
+                        <li><a href="https://www.gnome-look.org/" target="_blank">gnome-look.org</a></li>
+                        <li><a href="https://www.pling.com/" target="_blank">pling.com</a></li>
+                    </ul>
+                </li>
+                <li>Aplique o tema fazendo: use o GNOME Tweaks para aplicar os temas e os pacotes de ícones.</li>
+            </ol>
+            
             <h2>⚙️ Extensões para Melhorar o GNOME</h2>
             <p>Instale a ferramenta de extensões:</p>
-            <pre>sudo apt install gnome-shell-extensions</pre>
-
-            <p>Use o navegador para acessar: <a href="https://extensions.gnome.org" target="_blank">extensions.gnome.org</a></p>
-
-            <p>Recomendações para iniciantes:</p>
+            <pre><code>sudo apt install gnome-shell-extensions</code></pre>
+            <p>E use o navegador pra acessar: <a href="https://extensions.gnome.org/" target="_blank">extensions.gnome.org</a>.</p>
+            
+            <h3>Recomendações para iniciantes</h3>
             <ul>
-                <li>Dash to Dock (adiciona uma dock personalizável)</li>
-                <li>User Themes (permite usar temas baixados)</li>
-                <li>Vitals (mostra uso de CPU, RAM e rede)</li>
+                <li>Adote Dash to Dock; adicionando uma dock que permite personalização, show.</li>
+                <li>Use Temas do Usuário; assim, permite usar temas baixados.</li>
+                <li>Implemente Vitals; demonstrando o uso de CPU, RAM e rede.</li>
             </ul>
-        </section>
-
-        <section>
-            <h2>🖼️ Wallpapers, Dock e Cursor</h2>
+            
+            <h2>🖼️ Papéis de Parede, Dock e Cursor</h2>
             <h3>Dock</h3>
-            <p>Use o Dash to Dock para mover a dock para baixo ou personalizar cores e transparência.</p>
-
-            <h3>Cursors</h3>
-            <p>Instale temas de cursor com o Tweaks, como Bibata ou Capitaine Cursors.</p>
-
-            <h3>Wallpapers</h3>
-            <p>Use sites como <a href="https://unsplash.com" target="_blank">unsplash.com</a> ou <a href="https://wallhaven.cc" target="_blank">wallhaven.cc</a>.</p>
-        </section>
-
-        <section>
+            <p>Utilize Dash to Dock pra mover a dock, ou personalize cores e transparência, que tal?</p>
+            
+            <h3>Cursores</h3>
+            <p>Instale temas de cursor via Tweaks, por exemplo, Bibata ou Capitaine Cursors.</p>
+            
+            <h3>Papéis de Parede</h3>
+            <p>Procure plataformas como <a href="https://unsplash.com/" target="_blank">unsplash.com</a> ou <a href="https://wallhaven.cc/" target="_blank">wallhaven.cc</a>.</p>
+            
             <h2>⌨️ Atalhos de Teclado</h2>
-            <p>Você pode personalizar atalhos em <strong>Configurações → Teclado</strong>.</p>
-
-            <p>Exemplos úteis:</p>
+            <p>É possível personalizar atalhos em <em>Configurações → Teclado</em>.</p>
+            
+            <h3>Exemplos Úteis</h3>
             <ul>
-                <li><strong>Print:</strong> capturar tela</li>
-                <li><strong>Ctrl + Alt + T:</strong> abrir terminal</li>
-                <li><strong>Alt + Tab:</strong> alternar janelas</li>
+                <li>Print: captura a tela.</li>
+                <li>Ctrl + Alt + T: abre o terminal.</li>
+                <li>Alt + Tab: alterna as janelas.</li>
             </ul>
-        </section>
-
-        <section>
+            
             <h2>📌 Dicas Extras</h2>
-            <blockquote>“O Linux é seu. Faça dele o que quiser.”</blockquote>
-
+            <p>"O Linux é seu. Faça dele o que quiser".</p>
             <ul>
-                <li>Use temas claros para ambientes iluminados e escuros para uso noturno.</li>
-                <li>Crie perfis de configuração com <code>dconf</code> para salvar e restaurar layouts.</li>
-                <li>Evite exageros — personalizar é legal, mas excessos podem afetar o desempenho.</li>
+                <li>Opte por temas claros para ambientes claros, e escuros, para noite.</li>
+                <li>Crie perfis de configuração com dconf, pra salvar e recuperar layouts.</li>
+                <li>Não exagere, personalizar é bom, mas muito pode dar problema no desempenho.</li>
             </ul>
-        </section>
-
-        <section>
+            
             <h2>❓ FAQ</h2>
-            <div class="faq">
-                <h4>Personalizar o Linux pode deixar o sistema mais lento?</h4>
-                <p>Algumas extensões e efeitos visuais podem consumir mais recursos, especialmente em PCs antigos.</p>
-
-                <h4>Posso deixar o Linux com cara de Windows?</h4>
-                <p>Sim! Há temas e docks que imitam completamente o estilo do Windows 10/11.</p>
-
-                <h4>O que acontece se eu instalar um tema com erro?</h4>
-                <p>Basta voltar para o tema padrão via Tweaks. É seguro e reversível.</p>
-            </div>
-        </section>
-
-        <section>
+            <ul>
+                <li>
+                    <h4>Personalizar no Linux deixa o sistema lento?</h4>
+                    <p>Alguns efeitos visuais e extensões podem consumir mais recursos, em computadores antigos principalmente.</p>
+                </li>
+                <li>
+                    <h4>É possível modificar o Linux para se parecer com o Windows?</h4>
+                    <p>Claro! Há temas e docks que copiam completamente o estilo do Windows 10/11.</p>
+                </li>
+                <li>
+                    <h4>O que acontecerá se um tema instalado apresentar erro?</h4>
+                    <p>Bem, você pode simplesmente voltar ao tema padrão usando o Tweaks. É seguro e reversível.</p>
+                </li>
+            </ul>
+            
             <h2>✅ Conclusão</h2>
-            <p>Personalizar o Linux é uma das experiências mais gratificantes do sistema. Além de deixar o visual do seu jeito, você aprende mais sobre como o ambiente funciona.</p>
-            <p>Não tenha medo de testar novos temas, mudar ícones ou criar atalhos. O Linux é seu playground!</p>
-            <p><strong>👉 Comece agora: instale o Tweaks e experimente um novo tema!</strong></p>
-        </section>
+            <p>Personalizar o Linux é uma das experiências mais legais no sistema. Além de mudar a aparência, o usuário conhece melhor como tudo funciona.</p>
+            
+            <p>Não duvide em testar temas novos, mudar os ícones, ou até mesmo fazer atalhos seus. O Linux é tipo um parquinho para quem usa.</p>
+            
+            <p>👉 Comece agora: use o Tweaks e tente um tema diferente!</p>
         
         
         

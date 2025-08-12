@@ -25,7 +25,38 @@
 
 <style>
 	
-  header h1 {
+  /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+a {
+  color: #80ff00;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER */
+header {
+  background-color: #222;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
   color: #80ff00; /* verde Piolinux */
   font-size: 1.8rem;
   margin-right: 20px;
@@ -36,139 +67,108 @@ header h1 a {
   text-decoration: none;
 }
 
-	
-	
-  /* RESET */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Botão hamburguer (mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #80ff00;
+  font-size: 26px;
+  cursor: pointer;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ddd;
-    line-height: 1.6;
-  }
+/* Menu */
+.dropdown-menu {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+}
 
-  a {
-    color: #80ff00;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+.dropdown-menu > li {
+  position: relative;
+}
 
-  header {
-    background-color: #222;
-    padding: 10px 15px; /* 🔹 Menos padding lateral */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.dropdown-menu > li > a {
+  display: block;
+  padding: 6px 10px;
+  font-weight: bold;
+  color: #80ff00;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background-color: #1a1a1a;
+}
 
-  /* Botão hamburguer (mobile) */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #80ff00;
-    font-size: 26px;
-    cursor: pointer;
-  }
+.dropdown-menu > li:hover > a {
+  background-color: #333;
+}
 
-  /* Menu */
-  .dropdown-menu {
-    list-style: none;
-    display: flex;
-    gap: 6px; /* 🔹 Espaço reduzido */
-    align-items: center;
-    margin-left: 0; /* 🔹 Remove recuo */
-    padding-left: 0; /* 🔹 Remove recuo */
-  }
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+}
 
-  .dropdown-menu > li {
-    position: relative;
-  }
+.dropdown-content li a {
+  padding: 8px 12px;
+  display: block;
+  font-weight: normal;
+  color: #80ff00;
+}
 
-  .dropdown-menu > li > a {
-    display: block;
-    padding: 6px 10px; /* 🔹 Mais compacto */
-    font-weight: bold;
-    color: #80ff00;
-    border-radius: 4px;
-    transition: background 0.2s;
-    background-color: #1a1a1a;
-  }
+.dropdown-content li a:hover {
+  background-color: #444;
+}
 
-  .dropdown-menu > li:hover > a {
-    background-color: #333;
-  }
+.dropdown-menu > li:hover .dropdown-content {
+  display: block;
+}
 
-  /* Dropdown */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 160px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 0 0 4px 4px;
-    z-index: 1000;
-  }
+/* MAIN */
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
 
-  .dropdown-content li a {
-    padding: 8px 12px;
-    display: block;
-    font-weight: normal;
-    color: #80ff00;
-  }
+/* POST / SECTION */
+section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+}
 
-  .dropdown-content li a:hover {
-    background-color: #444;
-  }
+section h1, 
+section h2, 
+section h3 {
+  color: #80ff00;
+  margin-bottom: 12px;
+}
 
-  .dropdown-menu > li:hover .dropdown-content {
-    display: block;
-  }
+section p {
+  margin-bottom: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+}
 
-  /* Main */
-  main {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 0 15px;
-  }
-
-  /* Seções */
-  section {
-    background-color: #1e1e1e;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
-  }
-
-  section h1, 
-  section h2, 
-  section h3 {
-    color: #80ff00;
-    margin-bottom: 12px;
-  }
-
-  section p {
-    margin-bottom: 12px;
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.8;
-  }
-
-  footer {
-  background-color: #222;   /* fundo escuro */
-  color: #ffffff;           /* texto branco para contraste máximo */
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #ffffff;
   text-align: center;
   padding: 15px 10px;
   margin-top: 40px;
@@ -176,37 +176,67 @@ header h1 a {
 }
 
 footer a {
-  color: #ccff33;           /* verde-limão mais claro e com contraste aceitável */
-  font-weight: bold;        /* deixa o texto em negrito */
+  color: #ccff33;
+  font-weight: bold;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #ffec8b;           /* tom mais claro no hover */
-  font-weight: bold;        /* mantém o negrito no hover */
+  color: #ffec8b;
+  font-weight: bold;
 }
 
-
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-    .dropdown-menu {
-      flex-direction: column;
-      gap: 4px;
-      background-color: #222;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 200px;
-      padding: 10px;
-      display: none;
-    }
-    body.menu-open .dropdown-menu {
-      display: flex;
-    }
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
+  .dropdown-menu {
+    flex-direction: column;
+    gap: 4px;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    display: none;
+  }
+  body.menu-open .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* 🔹 Extra para garantir estilização dos posts no Jekyll */
+.post-content {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.post-content pre {
+  background: #111;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  color: #80ff00;
+}
+
+.post-content code {
+  background: #222;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #80ff00;
+}
+
 </style>
 
 </head>
@@ -271,87 +301,46 @@ footer a:hover {
         </script>
         <article>
             <section>
-                <h2>Instalando programas no Linux: Guia para iniciantes</h2>
-                <p>Você ficou se questionando qual é a forma mais segura para instalar qualquer software no linux?
-                Está perdido, não sabe o que fazer? Existem métodos simples e práticos para instalar programas sem dores de cabeça.</p>
-                <p>Maneiras mais práticas para instalar através do terminal ou modo gráfico (gerenciador gráfico de programas).</p>
-            </section>
-            <section>
-                <h2>O que você vai aprender</h2>
-                <ul>
-                    <li>Facilidade dos gerenciadores de pacotes</li>
-                    <li>Como usar a Central de Aplicativos do Linux</li>
-                    <li>Comandos básicos para instalação no terminal</li>
-                    <li>Dicas para evitar erros comuns na instalação</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Programas sendo instalados através dos gerenciadores de pacotes</h2>
-                <p>Gerenciadores de pacotes como o Synaptic. Basta abrir, ir em busca, digitar o nome do programa para instalar ou remover. Outros gerenciadores similares funcionam da mesma forma.</p>
-            </section>
-            <section>
-                <h3>APT – Distribuições baseadas em Debian/Ubuntu</h3>
-                <p>Para instalar um programa usando o terminal no Ubuntu, Debian e derivados, você usa o comando <code>apt</code>.</p>
-                <blockquote>Exemplos de comandos: <code>sudo apt update</code> (para atualizar a lista de pacotes)</blockquote>
-                <blockquote>Exemplo: <code>sudo apt install nome-do-programa</code> (para instalar)</blockquote>
-            </section>
-            <section>
-                <h3>DNF e YUM – Distribuições baseadas em Fedora/CentOS</h3>
-                <p>Usuários do Fedora usam o <code>dnf</code>, enquanto CentOS pode usar <code>yum</code>.</p>
-                <blockquote>Exemplo: <code>sudo dnf install nome-do-programa</code></blockquote>
-            </section>
-            <img src="https://example.com/imagem-terminal-linux-instalacao.png" alt="Terminal Linux mostrando instalação de programa" />
-            <section>
-                <h2>Instalando programas pela Central de Aplicativos</h2>
-                <p>Muitas distribuições Linux modernas oferecem uma Central de Aplicativos (ou Software Center) que permite instalar programas de forma gráfica, parecida com lojas de aplicativos de smartphones.</p>
-                <ul>
-                    <li>Abra a Central de Aplicativos no seu sistema</li>
-                    <li>Procure o programa desejado usando a busca</li>
-                    <li>Clique em instalar e aguarde o processo</li>
-                </ul>
-                <p>Essa é uma ótima opção para quem prefere evitar o terminal.</p>
-            </section>
-            <section>
-                <h2>Usando pacotes Snap e Flatpak</h2>
-                <p>Além dos gerenciadores tradicionais, existem formatos universais de pacotes, como Snap e Flatpak, que funcionam em diversas distribuições.</p>
-                <ul>
-                    <li><strong>Snap:</strong> Instale com <code>sudo snap install nome-do-programa</code></li>
-                    <li><strong>Flatpak:</strong> Configure e use comandos como <code>flatpak install nome-do-programa</code></li>
-                </ul>
-                <p>Estes formatos garantem que o software funcione em qualquer distro sem conflitos.</p>
-            </section>
-            <section>
-                <h2>Dicas importantes para iniciantes</h2>
-                <ul>
-                    <li>Sempre atualize a lista de pacotes antes de instalar (<code>sudo apt update</code>)</li>
-                    <li>Leia mensagens do terminal para entender erros e avisos</li>
-                    <li>Use fontes confiáveis para baixar softwares</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Conclusão</h2>
-                <p>Instalar programas no Linux é simples quando você conhece os métodos certos. Seja usando o terminal, a Central de Aplicativos ou pacotes universais, você tem várias opções para equipar seu sistema.</p>
-                <p>Experimente os métodos e escolha o que for mais confortável para você. A prática torna tudo mais fácil!</p>
-            </section>
-        </article>
-        <section>
-            <div class="author-box">
-                <img src="https://example.com/foto-autor.jpg" alt="Foto do autor" />
-                <div>
-                    <p><strong>Piolinux</strong> é entusiasta Linux e escritor técnico com mais de 5 anos de experiência em tutoriais para iniciantes.</p>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h2>FAQ - Perguntas frequentes</h2>
-            <dl>
-                <dt>Posso instalar qualquer programa usando o terminal?</dt>
-                <dd>Sim, desde que o programa esteja nos repositórios da sua distribuição ou via Snap/Flatpak.</dd>
-                <dt>O que é o comando sudo?</dt>
-                <dd>O comando sudo executa tarefas com permissões de administrador, necessárias para instalar programas.</dd>
-                <dt>Snap e Flatpak funcionam em todas as distribuições?</dt>
-                <dd>Sim, eles são formatos universais e podem ser usados em várias distros Linux.</dd>
-            </dl>
+                <p>Dominar os comandos básicos do Linux? Agora, bora pra comandos fodas, turbinando a produtividade! Desvendando dicas avançadas pra você ser o mestre no terminal Linux.</p>
+            
+            <h2>Manipulação de arquivos com comandos que botam pra quebrar</h2>
+            <p>Além dos comandos simples, há aqueles que funcionam mesmo pra manipular arquivos:</p>
+            <ul>
+                <li><strong>find</strong>: Acha arquivos e pastas usando critérios tipo nome, tamanho ou data.</li>
+                <li><strong>grep</strong>: Encontra padrões de texto dentro dos arquivos.</li>
+                <li><strong>rsync</strong>: Sincroniza arquivos entre pastas locais ou até mesmo remotas.</li>
+            </ul>
+            <p>Exemplo: <code>find /home -name "*.txt"</code> encontra todos os arquivos .txt na pasta `/home`.</p>
+            
+            <h2>Gerenciando permissões e utilizadores, a segurança em primeiro lugar</h2>
+            <p>Controlar o acesso aos arquivos é crucial no Linux. Veja só os comandos principais:</p>
+            <ul>
+                <li><strong>chmod</strong>: Muda as permissões dos arquivos e diretórios.</li>
+                <li><strong>chown</strong>: Modifica o dono e grupo dos arquivos e pastas.</li>
+                <li><strong>sudo</strong>: Roda comandos com poderes de administrador.</li>
+            </ul>
+            <p>Use esses comandos com cuidado pra não bagunçar tudo.</p>
+            
+            <h2>Monitorando e gerenciando processos, tem mais que top!</h2>
+            <p>Fora o top, tem ferramentas ainda melhores:</p>
+            <ul>
+                <li><strong>htop</strong>: Uma versão mais bonitinha do top, instale pra ver.</li>
+                <li><strong>ps aux</strong>: Mostra os processos, com todos os detalhes ali na sua frente.</li>
+                <li><strong>kill PID</strong>: Encerra processos com o PID especificado.</li>
+            </ul>
+            <p>Recomenda-se o htop, que monitora visualmente e interativamente os processos.</p>
+            
+            <h2>Automatizar tarefas através de scripts também é muito útil</h2>
+            <p>Criar scripts Bash simplifica e agiliza a automação de tarefas.</p>
+            <pre><code>#!/bin/bash
+echo "Backup iniciado, éh!"
+rsync -av --delete /home/usuario/documentos/ /backup/documentos/
+echo "Backup concluído, finalizo por aqui."</code></pre>
+            <p>Salve com a extensão .sh, dê permissão com <code>chmod +x script.sh</code> e use <code>./script.sh</code> para rodar.</p>
+            
+            <h2>Conclusão meus amigos!</h2>
+            <p>Comandos avançados abrem portas no terminal Linux pra você usar. Pratique comandos, faça uns testes, crie os seus scripts, assim facilita. Dominar o terminal é uma jornada incrível em Linux que nunca acaba.</p>
+            
         </section>
         
     </main>

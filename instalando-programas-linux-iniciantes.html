@@ -25,7 +25,38 @@
 
 <style>
 	
-  header h1 {
+  /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+a {
+  color: #80ff00;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER */
+header {
+  background-color: #222;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
   color: #80ff00; /* verde Piolinux */
   font-size: 1.8rem;
   margin-right: 20px;
@@ -36,139 +67,108 @@ header h1 a {
   text-decoration: none;
 }
 
-	
-	
-  /* RESET */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Botão hamburguer (mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #80ff00;
+  font-size: 26px;
+  cursor: pointer;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ddd;
-    line-height: 1.6;
-  }
+/* Menu */
+.dropdown-menu {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+}
 
-  a {
-    color: #80ff00;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+.dropdown-menu > li {
+  position: relative;
+}
 
-  header {
-    background-color: #222;
-    padding: 10px 15px; /* 🔹 Menos padding lateral */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.dropdown-menu > li > a {
+  display: block;
+  padding: 6px 10px;
+  font-weight: bold;
+  color: #80ff00;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background-color: #1a1a1a;
+}
 
-  /* Botão hamburguer (mobile) */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #80ff00;
-    font-size: 26px;
-    cursor: pointer;
-  }
+.dropdown-menu > li:hover > a {
+  background-color: #333;
+}
 
-  /* Menu */
-  .dropdown-menu {
-    list-style: none;
-    display: flex;
-    gap: 6px; /* 🔹 Espaço reduzido */
-    align-items: center;
-    margin-left: 0; /* 🔹 Remove recuo */
-    padding-left: 0; /* 🔹 Remove recuo */
-  }
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+}
 
-  .dropdown-menu > li {
-    position: relative;
-  }
+.dropdown-content li a {
+  padding: 8px 12px;
+  display: block;
+  font-weight: normal;
+  color: #80ff00;
+}
 
-  .dropdown-menu > li > a {
-    display: block;
-    padding: 6px 10px; /* 🔹 Mais compacto */
-    font-weight: bold;
-    color: #80ff00;
-    border-radius: 4px;
-    transition: background 0.2s;
-    background-color: #1a1a1a;
-  }
+.dropdown-content li a:hover {
+  background-color: #444;
+}
 
-  .dropdown-menu > li:hover > a {
-    background-color: #333;
-  }
+.dropdown-menu > li:hover .dropdown-content {
+  display: block;
+}
 
-  /* Dropdown */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 160px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 0 0 4px 4px;
-    z-index: 1000;
-  }
+/* MAIN */
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
 
-  .dropdown-content li a {
-    padding: 8px 12px;
-    display: block;
-    font-weight: normal;
-    color: #80ff00;
-  }
+/* POST / SECTION */
+section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+}
 
-  .dropdown-content li a:hover {
-    background-color: #444;
-  }
+section h1, 
+section h2, 
+section h3 {
+  color: #80ff00;
+  margin-bottom: 12px;
+}
 
-  .dropdown-menu > li:hover .dropdown-content {
-    display: block;
-  }
+section p {
+  margin-bottom: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+}
 
-  /* Main */
-  main {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 0 15px;
-  }
-
-  /* Seções */
-  section {
-    background-color: #1e1e1e;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
-  }
-
-  section h1, 
-  section h2, 
-  section h3 {
-    color: #80ff00;
-    margin-bottom: 12px;
-  }
-
-  section p {
-    margin-bottom: 12px;
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.8;
-  }
-
-  footer {
-  background-color: #222;   /* fundo escuro */
-  color: #ffffff;           /* texto branco para contraste máximo */
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #ffffff;
   text-align: center;
   padding: 15px 10px;
   margin-top: 40px;
@@ -176,37 +176,67 @@ header h1 a {
 }
 
 footer a {
-  color: #ccff33;           /* verde-limão mais claro e com contraste aceitável */
-  font-weight: bold;        /* deixa o texto em negrito */
+  color: #ccff33;
+  font-weight: bold;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #ffec8b;           /* tom mais claro no hover */
-  font-weight: bold;        /* mantém o negrito no hover */
+  color: #ffec8b;
+  font-weight: bold;
 }
 
-
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-    .dropdown-menu {
-      flex-direction: column;
-      gap: 4px;
-      background-color: #222;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 200px;
-      padding: 10px;
-      display: none;
-    }
-    body.menu-open .dropdown-menu {
-      display: flex;
-    }
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
+  .dropdown-menu {
+    flex-direction: column;
+    gap: 4px;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    display: none;
+  }
+  body.menu-open .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* 🔹 Extra para garantir estilização dos posts no Jekyll */
+.post-content {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.post-content pre {
+  background: #111;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  color: #80ff00;
+}
+
+.post-content code {
+  background: #222;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #80ff00;
+}
+
 </style>
 
 </head>
@@ -272,102 +302,100 @@ footer a:hover {
             })();
         </script>
 
-        <section>
-            <h2>Introdução</h2>
-            <p>Após a instalação do seu sistema Linux, a próxima etapa é instalar seus aplicativos favoritos. Seguindo estas dicas, você conseguirá fazer isso não apenas com os repositórios oficiais, mas também com outras alternativas.</p>
-            <p>Neste artigo, explicamos como usar repositórios oficiais, pacotes .deb, Flatpak, Snap e até mesmo AppImages. É o guia ideal para quem está começando e quer entender as opções de forma clara.</p>
-            <p>Prepare-se para dominar as formas mais comuns de instalação no Linux!</p>
-        </section>
-
-        <section>
-            <h2>📦 Repositórios Oficiais (APT)</h2>
-            <p>A maneira mais tradicional de instalar programas em distros baseadas no Debian e Ubuntu é usando o <strong>APT</strong>.</p>
+         
+        <section class="post-content">
+           
             
-            <h3>Exemplo: Instalando o GIMP</h3>
-            <pre>sudo apt update
-sudo apt install gimp</pre>
+            <p>Logo após a instalação do seu sistema Linux, o próximo passo, sim, é instalar seus aplicativos favoritos. Com estas dicas, você vai conseguir, não apenas via repositórios oficiais, mas também por outras alternativas.</p>
             
-            <p>Vantagens:</p>
+            <p>Neste artigo, a gente explica como usar repositórios oficiais, pacotes .deb, Flatpak, Snap e AppImages, também. É um guia top pra quem tá começando e quer entender as opções de um jeito fácil, sabe?</p>
+            
+            <p>Se prepare para dominar as formas mais comuns de instalar no Linux!</p>
+            
+            <h2 id="repositorios-oficiais-apt">📦 Repositórios Oficiais (APT)</h2>
+            <p>A maneira mais conhecida de instalar programas em distros baseadas em Debian e Ubuntu é utilizando o APT.</p>
+            
+            <h3>Exemplo Instalando o GIMP</h3>
+            <pre><code>sudo apt update
+sudo apt install gimp</code></pre>
+            
+            <h3>Vantagens:</h3>
             <ul>
-                <li>Segurança e estabilidade</li>
-                <li>Atualizações automáticas</li>
+                <li>Segurança e estabilidade, pura!</li>
+                <li>Atualizações automáticas, sempre.</li>
             </ul>
-        </section>
-
-        <section>
-            <h2>🗂️ Pacotes .DEB</h2>
-            <p>Alguns programas são distribuídos diretamente como arquivos .deb, que funcionam como os arquivos .exe no Windows.</p>
-
+            
+            <h2 id="pacotes-deb">🗂️ Pacotes .DEB</h2>
+            <p>Uns programas são distribuídos direto como arquivos .deb, tipo aqueles arquivos .exe no Windows.</p>
+            
             <h3>Instalando com o terminal:</h3>
-            <pre>sudo dpkg -i nome-do-arquivo.deb
-sudo apt --fix-broken install</pre>
-
-            <p>Você pode baixar pacotes .deb em sites como:</p>
+            <pre><code>sudo dpkg -i nome-do-arquivo.deb
+sudo apt --fix-broken install</code></pre>
+            
+            <h3>Pode baixar pacotes .deb em sites tipo:</h3>
             <ul>
-                <li><a href="https://www.google.com/chrome" target="_blank">Chrome</a></li>
-                <li><a href="https://code.visualstudio.com/" target="_blank">VS Code</a></li>
+                <li>Chrome</li>
+                <li>VS Code</li>
             </ul>
+            
+            <h2 id="flatpak">📦 Flatpak: Aplicativos Universais</h2>
+            <p>Com o Flatpak, dá para rodar programas em qualquer distro, isolados do sistema principal.</p>
+            
+            <h3>Instalando o Flatpak</h3>
+            <p>Para instalar o Flatpak, você precisa:</p>
+            <pre><code>sudo apt install flatpak</code></pre>
+            
+            <h3>Adicionando o repositório Flathub</h3>
+            <p>Para adicionar o repositório Flathub, faça assim:</p>
+            <pre><code>flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</code></pre>
+            
+            <h3>Instalando o Firefox</h3>
+            <p>Agora, se quiser o Firefox, rode:</p>
+            <pre><code>flatpak install flathub org.mozilla.firefox</code></pre>
+            
+            <h2 id="snap">📦 Snap: Uma Alternativa Universal</h2>
+            <p>O Snap, que a Canonical cuida, também isola apps e atualiza sozinho.</p>
+            
+            <h3>Instalando Snap</h3>
+            <p>Instale o Snap assim:</p>
+            <pre><code>sudo apt install snapd</code></pre>
+            
+            <h3>Instalando o Spotify</h3>
+            <p>Se precisar do Spotify, use-se:</p>
+            <pre><code>sudo snap install spotify</code></pre>
+            
+            <h2 id="appimage">📂 AppImage: Aplicativo Portátil</h2>
+            <p>AppImage funciona como um executável portátil, só precisa de permissão pra rodar.</p>
+            
+            <h3>Permitir Execução</h3>
+            <p>Para dar permissão, use:</p>
+            <pre><code>chmod +x programa.AppImage</code></pre>
+            <p>e, depois, para rodar:</p>
+            <pre><code>./programa.AppImage</code></pre>
+            <p>"Bom pra quem quer rodar direto, sem instalar."</p>
+            
+            <h2 id="faq">🔧 FAQ</h2>
+            <ul>
+                <li>
+                    <h4>Qual o melhor jeito de instalar?</h4>
+                    <p>Depende do programa. Repositórios são estáveis, mas Flatpak e Snap sempre têm as versões mais novas, às vezes.</p>
+                </li>
+                <li>
+                    <h4>Pode usar todos os métodos juntos?</h4>
+                    <p>Sim, contudo, evite instalar o mesmo programa de maneiras distintas ao mesmo tempo, pois conflitos podem surgir.</p>
+                </li>
+                <li>
+                    <h4>Como um programa pode ser desinstalado?</h4>
+                    <p>Para APT, use: <code>sudo apt remove nomedoprograma</code>. Já no Flatpak, é: <code>flatpak uninstall org.mozilla.firefox</code>.</p>
+                </li>
+            </ul>
+            
+            <h2 id="conclusao">✅ Conclusão</h2>
+            <p>A princípio, instalar programas no Linux parece complicado, mas logo se vê que há muitas alternativas, o que dá muita liberdade. Atualmente, você já sabe usar APT, arquivos .deb, Flatpak, Snap e AppImage. O melhor é testar cada uma pra ver qual é a melhor pra você.</p>
+            
+            <p>👉 Dica: Comece instalando seus apps favoritos com Flatpak, usando o Flathub.</p>
         </section>
-
-        <section>
-            <h2>📦 Flatpak: Aplicativos Universais</h2>
-            <p>Flatpak permite rodar programas em qualquer distro, isolados do sistema principal.</p>
-
-            <h3>Instalando o Flatpak:</h3>
-            <pre>sudo apt install flatpak</pre>
-
-            <h3>Adicionando o repositório Flathub:</h3>
-            <pre>flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</pre>
-
-            <h3>Instalando o Firefox:</h3>
-            <pre>flatpak install flathub org.mozilla.firefox</pre>
-        </section>
-
-        <section>
-            <h2>📦 Snap: Outro Formato Universal</h2>
-            <p>Snap é mantido pela Canonical, criadora do Ubuntu. Também isola os aplicativos e oferece atualizações automáticas.</p>
-
-            <h3>Instalando Snap:</h3>
-            <pre>sudo apt install snapd</pre>
-
-            <h3>Instalando o Spotify:</h3>
-            <pre>sudo snap install spotify</pre>
-        </section>
-
-        <section>
-            <h2>📂 AppImage: Programa Portátil</h2>
-            <p>AppImage funciona como um executável portátil. Basta dar permissão e rodar.</p>
-
-            <h3>Permitir execução:</h3>
-            <pre>chmod +x programa.AppImage
-./programa.AppImage</pre>
-
-            <blockquote>"Ideal para quem não quer instalar nada no sistema, apenas executar."</blockquote>
-        </section>
-
-        <section>
-            <h2>🔧 FAQ</h2>
-            <div class="faq">
-                <h4>Qual método de instalação é melhor?</h4>
-                <p>Depende do programa. Repositórios são mais estáveis; Flatpak e Snap geralmente oferecem versões mais atualizadas.</p>
-
-                <h4>Posso usar todos os métodos juntos?</h4>
-                <p>Sim! Mas evite instalar o mesmo programa por métodos diferentes ao mesmo tempo, pois isso pode causar conflitos.</p>
-
-                <h4>Como desinstalo um programa?</h4>
-                <p>Para APT: <code>sudo apt remove nomedoprograma</code><br>Para Flatpak: <code>flatpak uninstall org.mozilla.firefox</code></p>
-            </div>
-        </section>
-
-        <section>
-            <h2>✅ Conclusão</h2>
-            <p>Instalar programas no Linux pode parecer complexo à primeira vista, mas logo você verá que há várias opções — e todas oferecem grande liberdade.</p>
-            <p>Agora você sabe usar APT, .deb, Flatpak, Snap e AppImage. Teste cada uma delas e descubra qual funciona melhor para seu estilo.</p>
-            <p><strong>👉 Dica prática:</strong> comece instalando seus apps favoritos com o Flatpak pelo Flathub!</p>
-        </section>
-       
     </main>
-
 
 
     

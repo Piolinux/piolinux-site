@@ -25,7 +25,38 @@
 
 <style>
 	
-  header h1 {
+  /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+a {
+  color: #80ff00;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER */
+header {
+  background-color: #222;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
   color: #80ff00; /* verde Piolinux */
   font-size: 1.8rem;
   margin-right: 20px;
@@ -36,139 +67,108 @@ header h1 a {
   text-decoration: none;
 }
 
-	
-	
-  /* RESET */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Botão hamburguer (mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #80ff00;
+  font-size: 26px;
+  cursor: pointer;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ddd;
-    line-height: 1.6;
-  }
+/* Menu */
+.dropdown-menu {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+}
 
-  a {
-    color: #80ff00;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+.dropdown-menu > li {
+  position: relative;
+}
 
-  header {
-    background-color: #222;
-    padding: 10px 15px; /* 🔹 Menos padding lateral */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.dropdown-menu > li > a {
+  display: block;
+  padding: 6px 10px;
+  font-weight: bold;
+  color: #80ff00;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background-color: #1a1a1a;
+}
 
-  /* Botão hamburguer (mobile) */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #80ff00;
-    font-size: 26px;
-    cursor: pointer;
-  }
+.dropdown-menu > li:hover > a {
+  background-color: #333;
+}
 
-  /* Menu */
-  .dropdown-menu {
-    list-style: none;
-    display: flex;
-    gap: 6px; /* 🔹 Espaço reduzido */
-    align-items: center;
-    margin-left: 0; /* 🔹 Remove recuo */
-    padding-left: 0; /* 🔹 Remove recuo */
-  }
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+}
 
-  .dropdown-menu > li {
-    position: relative;
-  }
+.dropdown-content li a {
+  padding: 8px 12px;
+  display: block;
+  font-weight: normal;
+  color: #80ff00;
+}
 
-  .dropdown-menu > li > a {
-    display: block;
-    padding: 6px 10px; /* 🔹 Mais compacto */
-    font-weight: bold;
-    color: #80ff00;
-    border-radius: 4px;
-    transition: background 0.2s;
-    background-color: #1a1a1a;
-  }
+.dropdown-content li a:hover {
+  background-color: #444;
+}
 
-  .dropdown-menu > li:hover > a {
-    background-color: #333;
-  }
+.dropdown-menu > li:hover .dropdown-content {
+  display: block;
+}
 
-  /* Dropdown */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 160px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 0 0 4px 4px;
-    z-index: 1000;
-  }
+/* MAIN */
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
 
-  .dropdown-content li a {
-    padding: 8px 12px;
-    display: block;
-    font-weight: normal;
-    color: #80ff00;
-  }
+/* POST / SECTION */
+section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+}
 
-  .dropdown-content li a:hover {
-    background-color: #444;
-  }
+section h1, 
+section h2, 
+section h3 {
+  color: #80ff00;
+  margin-bottom: 12px;
+}
 
-  .dropdown-menu > li:hover .dropdown-content {
-    display: block;
-  }
+section p {
+  margin-bottom: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+}
 
-  /* Main */
-  main {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 0 15px;
-  }
-
-  /* Seções */
-  section {
-    background-color: #1e1e1e;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
-  }
-
-  section h1, 
-  section h2, 
-  section h3 {
-    color: #80ff00;
-    margin-bottom: 12px;
-  }
-
-  section p {
-    margin-bottom: 12px;
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.8;
-  }
-
-  footer {
-  background-color: #222;   /* fundo escuro */
-  color: #ffffff;           /* texto branco para contraste máximo */
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #ffffff;
   text-align: center;
   padding: 15px 10px;
   margin-top: 40px;
@@ -176,37 +176,67 @@ header h1 a {
 }
 
 footer a {
-  color: #ccff33;           /* verde-limão mais claro e com contraste aceitável */
-  font-weight: bold;        /* deixa o texto em negrito */
+  color: #ccff33;
+  font-weight: bold;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #ffec8b;           /* tom mais claro no hover */
-  font-weight: bold;        /* mantém o negrito no hover */
+  color: #ffec8b;
+  font-weight: bold;
 }
 
-
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-    .dropdown-menu {
-      flex-direction: column;
-      gap: 4px;
-      background-color: #222;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 200px;
-      padding: 10px;
-      display: none;
-    }
-    body.menu-open .dropdown-menu {
-      display: flex;
-    }
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
+  .dropdown-menu {
+    flex-direction: column;
+    gap: 4px;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    display: none;
+  }
+  body.menu-open .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* 🔹 Extra para garantir estilização dos posts no Jekyll */
+.post-content {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.post-content pre {
+  background: #111;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  color: #80ff00;
+}
+
+.post-content code {
+  background: #222;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #80ff00;
+}
+
 </style>
 
 </head>
@@ -270,67 +300,60 @@ footer a:hover {
     </script>
 
     <section>
-        <h2>🔐 Introdução</h2>
-        <p>Acredita que está <strong>completamente</strong> seguro por usar Linux? Não se engane. Utilizar o sistema com atenção é fundamental, pois você não está imune a ameaças, principalmente se também usa Windows em outra partição ou o Wine para emular aplicativos da Microsoft.</p>
-        <p>A seguir, você encontrará práticas essenciais para manter seu sistema livre de ameaças digitais e vazamentos de dados. Vamos abordar temas como senhas seguras, atualizações, permissões de usuário, backups e muito mais, com explicações simples e diretas.</p>
-    </section>
-
-    <section>
-        <h2>🧩 Use Senhas Fortes e Gerenciadores</h2>
-        <p>Senhas fracas são a porta de entrada mais comum para invasores. Evite datas de nascimento, nomes simples ou sequências fáceis de adivinhar.</p>
-        <ul>
-            <li>Use no mínimo 12 caracteres.</li>
-            <li>Inclua uma combinação de letras maiúsculas e minúsculas, números e símbolos.</li>
-            <li>Considere utilizar um gerenciador de senhas confiável, como **Bitwarden** ou **KeePassXC**.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>🔄 Atualize Sempre o Sistema</h2>
-        <p>As atualizações de sistema corrigem falhas de segurança críticas. No Linux, é fácil manter o sistema em dia usando o terminal:</p>
-        <pre>sudo apt update && sudo apt upgrade -y</pre>
-        <p>Faça isso semanalmente ou configure atualizações automáticas para maior segurança.</p>
-    </section>
-
-    <section>
-        <h2>🛑 Cuidado com Permissões de Root</h2>
-        <p>Evite usar o comando <code>sudo</code> para tarefas que não exigem privilégios de administrador. O usuário root tem acesso total ao sistema; o uso indevido pode comprometer seriamente a sua segurança.</p>
-        <blockquote>“Com grandes poderes vêm grandes responsabilidades.”</blockquote>
-    </section>
-
-    <section>
-        <h2>🧱 Ative o Firewall UFW</h2>
-        <p>O Linux conta com o UFW (Uncomplicated Firewall), uma ferramenta simples e poderosa para proteger suas conexões.</p>
-        <pre>sudo apt install ufw
+        <p>Pensa que tá completamente seguro só por causa do Linux? Não se iluda, hein? Usar o sistema com cuidado é crucial, porque ninguém escapa das ameaças, sobretudo se você também usa Windows em outra partição, ou se usa o Wine pra rodar app da Microsoft.</p>
+            
+            <p>A seguir, descubra as práticas mais importantes pra manter seu sistema longe das ameaças digitais e vazamentos de dados. Vamos falar de senhas seguras, atualizações, permissões de usuário, backups e outras coisas, tudo explicado de forma simples e direta.</p>
+            
+            <h2>🧩 Use Senhas Fortes e Gerenciadores</h2>
+            <p>Senhas ruins abrem as portas pra invasão, bem fácil. Fuja de datas de nascimento, nomes simples, ou sequências fáceis de prever.</p>
+            <ul>
+                <li>Use pelo menos 12 letras.</li>
+                <li>Misture letras maiúsculas e minúsculas, números e símbolos também.</li>
+                <li>Pense em usar um gerenciador de senhas bom, tipo Bitwarden ou KeePassXC.</li>
+            </ul>
+            
+            <h2>🔄 Atualize Sempre o Sistema</h2>
+            <p>As atualizações do sistema consertam falhas de segurança bem importantes. No Linux, é mamão com açúcar manter o sistema atualizado via terminal.</p>
+            <pre><code>sudo apt update && sudo apt upgrade -y</code></pre>
+            <p>Você deve fazer isso toda semana, ou configurar atualizações automáticas para manter tudo seguro.</p>
+            
+            <h2>🛑 Cuidado com Permissões Root</h2>
+            <p>Evite usar o sudo, sô, pra coisas que não precisa ter "poder". O usuário root pode fazer o que quiser no sistema; o uso errado pode ferrar tudo na sua segurança, tá ligado?</p>
+            <p>“Com grandes poderes vem grandes responsabilidades né?”</p>
+            
+            <h2>🧱 Ative o Firewall UFW</h2>
+            <p>O Linux já tem o UFW (Uncomplicated Firewall), um treco simples, mas forte para proteger suas conexões, mané.</p>
+            <pre><code>sudo apt install ufw
 sudo ufw enable
-sudo ufw status</pre>
-        <p>O UFW bloqueia portas não utilizadas e impede acessos não autorizados de forma eficiente.</p>
-    </section>
-
-    <section>
-        <h2>📁 Faça Backups Frequentes</h2>
-        <p>Acidentes acontecem. Por isso, tenha sempre uma cópia dos seus arquivos importantes em um HD externo ou em um serviço de nuvem. Ferramentas úteis para isso incluem:</p>
-        <ul>
-            <li>**Deja Dup** (presente no Ubuntu)</li>
-            <li>**rsync** ou **Timeshift**</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>❓ Perguntas Frequentes</h2>
-        <div class="faq">
-            <h3>Preciso usar antivírus no Linux?</h3>
-            <p>Não é obrigatório para a maioria dos usuários, mas pode ser útil para escanear arquivos vindos do Windows ou para quem lida com servidores.</p>
-            <h3>O Linux pode ser invadido?</h3>
-            <p>Sim. Embora o Linux seja considerado mais seguro, configurações inadequadas e falta de atenção ainda podem abrir brechas para invasões.</p>
-            <h3>O usuário root é mais seguro que o usuário normal?</h3>
-            <p>Não. O ideal é usar sua conta de usuário normal e recorrer ao `sudo` apenas quando for estritamente necessário para tarefas de administração.</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>✅ Conclusão</h2>
-        <p>Mesmo sendo um sistema robusto e confiável, o Linux exige atenção básica para garantir a segurança dos seus dados. A adoção de boas práticas, como usar senhas fortes, manter atualizações em dia e ativar um firewall, já cobre a maior parte dos riscos. Sempre desconfie de comandos desconhecidos ou arquivos de fontes duvidosas.</p>
+sudo ufw status</code></pre>
+            <p>O UFW fecha as portas que não tá usando e blinda contra acessos proibidos de maneira eficiente.</p>
+            
+            <h2>📁 Faça Backups Com frequência</h2>
+            <p>A zica aparece, é inevitável. Por isso, tenha sempre uma cópia dos seus arquivos importantes num HD externo ou na nuvem, saca? Ferramentas legais para isso incluem:</p>
+            <ul>
+                <li>Deja Dup (vem no Ubuntu)</li>
+                <li>rsync ou Timeshift</li>
+            </ul>
+            
+            <h2>❓ Perguntas Comuns</h2>
+            <ul>
+                <li>
+                    <h4>Preciso de antivírus no Linux?</h4>
+                    <p>Para a maioria dos usuários, não é obrigatório, porém, pode ser útil, sabe, pra escanear arquivos que vêm do Windows, ou pra quem trabalha com servidores.</p>
+                </li>
+                <li>
+                    <h4>Linux pode ser invadido, tipo?</h4>
+                    <p>Sim, é a resposta. Embora Linux seja visto como mais seguro, mas configurações erradas e falta de cuidado ainda podem dar brecha para invasões.</p>
+                </li>
+                <li>
+                    <h4>Usuário root é mais seguro do que o normal?</h4>
+                    <p>Não, não é! O bom é usar sua conta normal, e só usar o `sudo` quando precisar mesmo, para as coisas de administrador.</p>
+                </li>
+            </ul>
+            
+            <h2>✅ Conclusão</h2>
+            <p>Apesar de ser forte e confiável, o Linux precisa que você preste atenção para proteger seus dados. Se usar senhas boas, atualizar sempre e ligar o firewall, já cobre quase todos os riscos. Nunca confie em comandos estranhos ou arquivos de origem duvidosa!</p>
+            
     </section>
 
     </main>

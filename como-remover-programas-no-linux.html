@@ -25,7 +25,38 @@
 
 <style>
 	
-  header h1 {
+  /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+a {
+  color: #80ff00;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER */
+header {
+  background-color: #222;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
   color: #80ff00; /* verde Piolinux */
   font-size: 1.8rem;
   margin-right: 20px;
@@ -36,139 +67,108 @@ header h1 a {
   text-decoration: none;
 }
 
-	
-	
-  /* RESET */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Botão hamburguer (mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #80ff00;
+  font-size: 26px;
+  cursor: pointer;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ddd;
-    line-height: 1.6;
-  }
+/* Menu */
+.dropdown-menu {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+}
 
-  a {
-    color: #80ff00;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+.dropdown-menu > li {
+  position: relative;
+}
 
-  header {
-    background-color: #222;
-    padding: 10px 15px; /* 🔹 Menos padding lateral */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.dropdown-menu > li > a {
+  display: block;
+  padding: 6px 10px;
+  font-weight: bold;
+  color: #80ff00;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background-color: #1a1a1a;
+}
 
-  /* Botão hamburguer (mobile) */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #80ff00;
-    font-size: 26px;
-    cursor: pointer;
-  }
+.dropdown-menu > li:hover > a {
+  background-color: #333;
+}
 
-  /* Menu */
-  .dropdown-menu {
-    list-style: none;
-    display: flex;
-    gap: 6px; /* 🔹 Espaço reduzido */
-    align-items: center;
-    margin-left: 0; /* 🔹 Remove recuo */
-    padding-left: 0; /* 🔹 Remove recuo */
-  }
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+}
 
-  .dropdown-menu > li {
-    position: relative;
-  }
+.dropdown-content li a {
+  padding: 8px 12px;
+  display: block;
+  font-weight: normal;
+  color: #80ff00;
+}
 
-  .dropdown-menu > li > a {
-    display: block;
-    padding: 6px 10px; /* 🔹 Mais compacto */
-    font-weight: bold;
-    color: #80ff00;
-    border-radius: 4px;
-    transition: background 0.2s;
-    background-color: #1a1a1a;
-  }
+.dropdown-content li a:hover {
+  background-color: #444;
+}
 
-  .dropdown-menu > li:hover > a {
-    background-color: #333;
-  }
+.dropdown-menu > li:hover .dropdown-content {
+  display: block;
+}
 
-  /* Dropdown */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 160px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 0 0 4px 4px;
-    z-index: 1000;
-  }
+/* MAIN */
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
 
-  .dropdown-content li a {
-    padding: 8px 12px;
-    display: block;
-    font-weight: normal;
-    color: #80ff00;
-  }
+/* POST / SECTION */
+section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+}
 
-  .dropdown-content li a:hover {
-    background-color: #444;
-  }
+section h1, 
+section h2, 
+section h3 {
+  color: #80ff00;
+  margin-bottom: 12px;
+}
 
-  .dropdown-menu > li:hover .dropdown-content {
-    display: block;
-  }
+section p {
+  margin-bottom: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+}
 
-  /* Main */
-  main {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 0 15px;
-  }
-
-  /* Seções */
-  section {
-    background-color: #1e1e1e;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
-  }
-
-  section h1, 
-  section h2, 
-  section h3 {
-    color: #80ff00;
-    margin-bottom: 12px;
-  }
-
-  section p {
-    margin-bottom: 12px;
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.8;
-  }
-
-  footer {
-  background-color: #222;   /* fundo escuro */
-  color: #ffffff;           /* texto branco para contraste máximo */
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #ffffff;
   text-align: center;
   padding: 15px 10px;
   margin-top: 40px;
@@ -176,37 +176,67 @@ header h1 a {
 }
 
 footer a {
-  color: #ccff33;           /* verde-limão mais claro e com contraste aceitável */
-  font-weight: bold;        /* deixa o texto em negrito */
+  color: #ccff33;
+  font-weight: bold;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #ffec8b;           /* tom mais claro no hover */
-  font-weight: bold;        /* mantém o negrito no hover */
+  color: #ffec8b;
+  font-weight: bold;
 }
 
-
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-    .dropdown-menu {
-      flex-direction: column;
-      gap: 4px;
-      background-color: #222;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 200px;
-      padding: 10px;
-      display: none;
-    }
-    body.menu-open .dropdown-menu {
-      display: flex;
-    }
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
+  .dropdown-menu {
+    flex-direction: column;
+    gap: 4px;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    display: none;
+  }
+  body.menu-open .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* 🔹 Extra para garantir estilização dos posts no Jekyll */
+.post-content {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.post-content pre {
+  background: #111;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  color: #80ff00;
+}
+
+.post-content code {
+  background: #222;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #80ff00;
+}
+
 </style>
 
 </head>
@@ -241,7 +271,7 @@ footer a:hover {
   </header>
 
  <main>
-  <h1>Como remover programas no Linux: Passo a passo para iniciantes</h1>
+  <h1>Como remover programas no Linux</h1>
   <body>
 
     
@@ -274,84 +304,82 @@ footer a:hover {
         </script>
         <article>
             <section>
-                <h2>Como remover programas no Linux: Passo a passo para iniciantes</h2>
-                <p>Está começando no mundo open-source de Linux e não sabe como desinstalar programas através do terminal? Remover aplicativos desnecessários é fundamental para manter seu sistema limpo e eficiente.</p>
-                <p>Acompanhe este guia para aprender a remover programas no Linux, usando o terminal ou modo gráfico. Veja abaixo como fazer isso corretamente.</p>
-            </section>
-
-            <section>
-                <h2>Métodos para remover programas</h2>
-                <ul>
-                    <li>Remoção via terminal com gerenciadores de pacotes</li>
-                    <li>Usando a Central de Aplicativos</li>
-                    <li>Remoção de pacotes Snap e Flatpak</li>
-                    <li>Dicas para limpar dependências órfãs</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Remover programas pelo terminal</h2>
-                <h3>APT (Ubuntu, Debian e derivados)</h3>
-                <pre><code>sudo apt remove nome-do-programa</code></pre>
-                <pre><code>sudo apt purge nome-do-programa</code></pre>
-
-                <h3>DNF (Fedora, RHEL, CentOS)</h3>
-                <pre><code>sudo dnf remove nome-do-programa</code></pre>
-
-                <h3>PACMAN (Arch Linux e derivados)</h3>
-                <pre><code>sudo pacman -R nome-do-programa</code></pre>
-                <pre><code>sudo pacman -Rns nome-do-programa</code></pre>
-            </section>
-
-            <section>
-                <h2>Remover programas via Central de Aplicativos</h2>
-                <p>Se você prefere não usar o terminal, pode desinstalar programas pela Central de Aplicativos:</p>
-                <ul>
-                    <li>Acesse a Central ou Software Center</li>
-                    <li>Procure o programa instalado</li>
-                    <li>Clique em "Remover" ou "Desinstalar"</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Remover pacotes Snap e Flatpak</h2>
-                <ul>
-                    <li><strong>Snap:</strong> <code>sudo snap remove nome-do-app</code></li>
-                    <li><strong>Flatpak:</strong> <code>flatpak uninstall nome-do-app</code></li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Dica extra: limpar pacotes desnecessários</h2>
-                <pre><code>sudo apt autoremove</code></pre>
-                <pre><code>sudo dnf autoremove</code></pre>
-            </section>
-
-            <section>
-                <h2>Conclusão</h2>
-                <p>Remover programas no Linux é simples e rápido quando você entende os comandos básicos ou usa ferramentas gráficas. Manter o sistema limpo melhora o desempenho e economiza espaço em disco.</p>
-            </section>
-        </article>
-
-        <aside>
-            <div class="author-box">
-                <img src="https://example.com/foto-autor.jpg" alt="Foto do autor" />
-                <div>
-                    <p><strong>Piolinux</strong> é escritor de tecnologia com foco em Linux, apaixonado por simplificar o mundo open source para iniciantes.</p>
-                </div>
-            </div>
-        </aside>
-
-        <section>
-            <h2>FAQ - Perguntas frequentes</h2>
-            <dl>
-                <dt>É seguro remover programas pelo terminal?</dt>
-                <dd>Sim, desde que você saiba o nome correto do programa e use os comandos adequados.</dd>
-                <dt>Como saber quais programas posso remover?</dt>
-                <dd>Você pode usar <code>apt list --installed</code> ou acessar a Central de Aplicativos para ver o que está instalado.</dd>
-                <dt>O que são arquivos órfãos?</dt>
-                <dd>São dependências que foram instaladas com outros programas e não são mais usadas. Podem ser removidas com o comando <code>autoremove</code>.</dd>
-            </dl>
+                
+            <p>Entrando no mundo open-source do Linux e se sentindo perdido sobre como desinstalar programas via terminal? Apagar aplicativos que não precisa é muito importante para manter o sistema limpo e com boa performance.</p>
+            
+            <p>Siga este guia simples, aprenda a desinstalar programas no Linux, usando o terminal ou o modo gráfico. Abaixo, você confere como realizar a tarefa do jeito certinho.</p>
+            
+            <h2>Técnicas para desinstalar programas</h2>
+            <ul>
+                <li>Desinstalação pelo terminal com gestores de pacotes</li>
+                <li>Usando a Central de Aplicativos, também</li>
+                <li>Remoção de pacotes Snap e Flatpak</li>
+            </ul>
+            <p>Sugestões para limpar dependências órfãs, sim?</p>
+            
+            <h2>Desinstalar programas através do terminal</h2>
+            
+            <h3>APT (Ubuntu, Debian e outros)</h3>
+            <pre><code>sudo apt remove nome-do-programa</code></pre>
+            <p>Com este comando, o programa é removido, mas os arquivos de configuração podem ficar. Para remover o programa e todos os seus arquivos de configuração, use:</p>
+            <pre><code>sudo apt purge nome-do-programa</code></pre>
+            <p>Isso remove tudo, deixando seu sistema mais limpo.</p>
+            
+            <h3>DNF (Fedora, RHEL, CentOS)</h3>
+            <pre><code>sudo dnf remove nome-do-programa</code></pre>
+            
+            <h3>PACMAN (Arch Linux e afins)</h3>
+            <pre><code>sudo pacman -R nome-do-programa</code></pre>
+            <p>Remove o pacote, mas mantém as dependências que não são mais necessárias. Para remover o pacote e suas dependências exclusivas, use:</p>
+            <pre><code>sudo pacman -Rns nome-do-programa</code></pre>
+            
+            <h2>Desinstalação por meio da Central de Aplicativos</h2>
+            <p>Se você prefere não usar o terminal, pode desinstalar programas por lá:</p>
+            <ul>
+                <li>Acesse a Central, ou Software Center.</li>
+                <li>Procure o programa já instalado.</li>
+                <li>Clique em "Remover" ou "Desinstalar", pode ser.</li>
+            </ul>
+            
+            <h2>Desinstalar pacotes Snap e Flatpak</h2>
+            <p>Para pacotes universais, os comandos são um pouco diferentes:</p>
+            
+            <h3>Snap</h3>
+            <pre><code>sudo snap remove nome-do-app</code></pre>
+            
+            <h3>Flatpak</h3>
+            <pre><code>flatpak uninstall nome-do-app</code></pre>
+            <p>Beleza?</p>
+            
+            <h2>Dica extra: Limpar pacotes desnecessários</h2>
+            <p>Depois de desinstalar um programa, ele pode deixar "pacotes órfãos". Para remover isso, use:</p>
+            
+            <h3>APT</h3>
+            <pre><code>sudo apt autoremove</code></pre>
+            
+            <h3>DNF</h3>
+            <pre><code>sudo dnf autoremove</code></pre>
+            
+            <h2>Conclusão</h2>
+            <p>Desinstalar programas no Linux é fácil e rápido, quando você sabe os comandos ou usa ferramentas gráficas. Manter o sistema limpo melhora a performance e economiza espaço em disco.</p>
+            
+           
+            
+            <h2>FAQ: Perguntas frequentes</h2>
+            <ul>
+                <li>
+                    <h4>É seguro remover programas via terminal?</h4>
+                    <p>Sim, claro, desde que você saiba o nome exato do programa e use os comandos certos.</p>
+                </li>
+                <li>
+                    <h4>Como que eu descubro quais programas posso tirar?</h4>
+                    <p>Você pode usar <code>apt list --installed</code> ou, então, ir na Central de Aplicativos para ver o que tem instalado, né?</p>
+                </li>
+                <li>
+                    <h4>O que são esses arquivos órfãos?</h4>
+                    <p>São dependências, sabe, que foram instaladas junto com outros programas mas agora não são mais necessárias. Dá para remover elas com o comando `autoremove`.</p>
+                </li>
+            </ul>
         </section>
         
     </main>

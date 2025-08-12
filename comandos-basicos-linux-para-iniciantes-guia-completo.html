@@ -25,7 +25,38 @@
 
 <style>
 	
-  header h1 {
+  /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+a {
+  color: #80ff00;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER */
+header {
+  background-color: #222;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
   color: #80ff00; /* verde Piolinux */
   font-size: 1.8rem;
   margin-right: 20px;
@@ -36,139 +67,108 @@ header h1 a {
   text-decoration: none;
 }
 
-	
-	
-  /* RESET */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Botão hamburguer (mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #80ff00;
+  font-size: 26px;
+  cursor: pointer;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ddd;
-    line-height: 1.6;
-  }
+/* Menu */
+.dropdown-menu {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+}
 
-  a {
-    color: #80ff00;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+.dropdown-menu > li {
+  position: relative;
+}
 
-  header {
-    background-color: #222;
-    padding: 10px 15px; /* 🔹 Menos padding lateral */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.dropdown-menu > li > a {
+  display: block;
+  padding: 6px 10px;
+  font-weight: bold;
+  color: #80ff00;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background-color: #1a1a1a;
+}
 
-  /* Botão hamburguer (mobile) */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #80ff00;
-    font-size: 26px;
-    cursor: pointer;
-  }
+.dropdown-menu > li:hover > a {
+  background-color: #333;
+}
 
-  /* Menu */
-  .dropdown-menu {
-    list-style: none;
-    display: flex;
-    gap: 6px; /* 🔹 Espaço reduzido */
-    align-items: center;
-    margin-left: 0; /* 🔹 Remove recuo */
-    padding-left: 0; /* 🔹 Remove recuo */
-  }
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+}
 
-  .dropdown-menu > li {
-    position: relative;
-  }
+.dropdown-content li a {
+  padding: 8px 12px;
+  display: block;
+  font-weight: normal;
+  color: #80ff00;
+}
 
-  .dropdown-menu > li > a {
-    display: block;
-    padding: 6px 10px; /* 🔹 Mais compacto */
-    font-weight: bold;
-    color: #80ff00;
-    border-radius: 4px;
-    transition: background 0.2s;
-    background-color: #1a1a1a;
-  }
+.dropdown-content li a:hover {
+  background-color: #444;
+}
 
-  .dropdown-menu > li:hover > a {
-    background-color: #333;
-  }
+.dropdown-menu > li:hover .dropdown-content {
+  display: block;
+}
 
-  /* Dropdown */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 160px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 0 0 4px 4px;
-    z-index: 1000;
-  }
+/* MAIN */
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
 
-  .dropdown-content li a {
-    padding: 8px 12px;
-    display: block;
-    font-weight: normal;
-    color: #80ff00;
-  }
+/* POST / SECTION */
+section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+}
 
-  .dropdown-content li a:hover {
-    background-color: #444;
-  }
+section h1, 
+section h2, 
+section h3 {
+  color: #80ff00;
+  margin-bottom: 12px;
+}
 
-  .dropdown-menu > li:hover .dropdown-content {
-    display: block;
-  }
+section p {
+  margin-bottom: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+}
 
-  /* Main */
-  main {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 0 15px;
-  }
-
-  /* Seções */
-  section {
-    background-color: #1e1e1e;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
-  }
-
-  section h1, 
-  section h2, 
-  section h3 {
-    color: #80ff00;
-    margin-bottom: 12px;
-  }
-
-  section p {
-    margin-bottom: 12px;
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.8;
-  }
-
-  footer {
-  background-color: #222;   /* fundo escuro */
-  color: #ffffff;           /* texto branco para contraste máximo */
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #ffffff;
   text-align: center;
   padding: 15px 10px;
   margin-top: 40px;
@@ -176,37 +176,67 @@ header h1 a {
 }
 
 footer a {
-  color: #ccff33;           /* verde-limão mais claro e com contraste aceitável */
-  font-weight: bold;        /* deixa o texto em negrito */
+  color: #ccff33;
+  font-weight: bold;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #ffec8b;           /* tom mais claro no hover */
-  font-weight: bold;        /* mantém o negrito no hover */
+  color: #ffec8b;
+  font-weight: bold;
 }
 
-
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-    .dropdown-menu {
-      flex-direction: column;
-      gap: 4px;
-      background-color: #222;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 200px;
-      padding: 10px;
-      display: none;
-    }
-    body.menu-open .dropdown-menu {
-      display: flex;
-    }
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
+  .dropdown-menu {
+    flex-direction: column;
+    gap: 4px;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    display: none;
+  }
+  body.menu-open .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* 🔹 Extra para garantir estilização dos posts no Jekyll */
+.post-content {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.post-content pre {
+  background: #111;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  color: #80ff00;
+}
+
+.post-content code {
+  background: #222;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #80ff00;
+}
+
 </style>
 
 </head>
@@ -276,96 +306,92 @@ footer a:hover {
 		
         <article>
             <section>
-                <h2>Comandos básicos Linux para iniciantes: Guia completo</h2>
-                <p>Quer dominar o terminal Linux e tornar-se mais produtivo no sistema? Aprenda os comandos básicos. Não existem fadas ou bruxas para fazer mágica no aprendizado — o primeiro passo é seu. Existem diversos tipos de terminais no Linux, o mais conhecido é o Bash. No terminal, você usará "feitiços" (comandos), e é importante saber que alguns deles podem até inutilizar o sistema.</p>
-            </section>
-
-            <section>
-                <p>Através deste guia de comandos essenciais, leia atentamente o propósito de cada um. E lembre-se: <code>rm -f /home/</code> não é um bom exemplo para iniciantes.</p>
-            </section>
-
-            <section>
-                <h2>O que você vai aprender</h2>
-                <ul>
-                    <li>Comandos para navegar entre pastas</li>
-                    <li>Como listar arquivos e verificar permissões</li>
-                    <li>Comandos para manipular arquivos e diretórios</li>
-                    <li>Como obter ajuda e informações do sistema</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Navegação no sistema de arquivos</h2>
-                <p>Para se mover entre pastas, os comandos mais usados são:</p>
-                <ul>
-                    <li><code>pwd</code> – mostra o diretório atual</li>
-                    <li><code>ls</code> – lista os arquivos e pastas no diretório</li>
-                    <li><code>cd nome-da-pasta</code> – muda para a pasta especificada</li>
-                    <li><code>cd ..</code> – volta para a pasta anterior</li>
-                </ul>
-                <blockquote>Exemplo: <code>cd Documentos</code> leva você para a pasta Documentos.</blockquote>
-            </section>
-
-            <section>
-                <h2>Listando arquivos e detalhes importantes</h2>
-                <p>O comando <code>ls</code> tem várias opções para mostrar informações diferentes:</p>
-                <ul>
-                    <li><code>ls -l</code>: lista arquivos com detalhes como permissões, dono e tamanho</li>
-                    <li><code>ls -a</code>: lista todos os arquivos, incluindo ocultos</li>
-                </ul>
-                <img src="https://example.com/imagem-terminal-ls-comando.png" alt="Comando ls mostrando arquivos no terminal Linux" />
-            </section>
-
-            <section>
-                <h2>Manipulando arquivos e diretórios</h2>
-                <p>Comandos para criar, copiar, mover ou apagar arquivos e pastas:</p>
-                <ul>
-                    <li><code>mkdir nome-da-pasta</code>: cria uma nova pasta</li>
-                    <li><code>touch nome-do-arquivo</code>: cria um novo arquivo vazio</li>
-                    <li><code>cp origem destino</code>: copia arquivos ou pastas</li>
-                    <li><code>mv origem destino</code>: move ou renomeia arquivos e pastas</li>
-                    <li><code>rm nome-do-arquivo</code>: remove arquivos (cuidado!)</li>
-                    <li><code>rm -r nome-da-pasta</code>: remove pastas e todo conteúdo dentro</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Obter ajuda e informações do sistema</h2>
-                <p>Se tiver dúvidas sobre um comando, use:</p>
-                <ul>
-                    <li><code>man comando</code>: mostra o manual do comando</li>
-                    <li><code>comando --help</code>: mostra ajuda rápida do comando</li>
-                </ul>
-                <p>Para verificar informações do sistema:</p>
-                <ul>
-                    <li><code>uname -a</code>: mostra dados do kernel</li>
-                    <li><code>top</code>: exibe processos em execução em tempo real</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Conclusão</h2>
-                <p>Dominar esses comandos básicos do Linux abrirá muitas portas para você no sistema. Com prática, o terminal deixará de ser um mistério e se tornará uma ferramenta útil no seu dia a dia.</p>
-                <p>Comece aos poucos, experimente cada comando e veja como seu conhecimento vai crescer rapidamente.</p>
-            </section>
-
-            <section class="author-box">
-                <img src="https://example.com/foto-autor.jpg" alt="Foto do autor" />
-                <div>
-                    <p><strong>Piolinux</strong> é entusiasta Linux e escritor técnico com mais de 5 anos de experiência em tutoriais para iniciantes.</p>
-                </div>
-            </section>
-
-            <section class="faq">
-                <h2>FAQ - Perguntas frequentes</h2>
-                <dl>
-                    <dt>Como saber qual comando usar para determinada tarefa?</dt>
-                    <dd>Use <code>man</code> e <code>--help</code> para explorar comandos e opções disponíveis.</dd>
-                    <dt>Posso usar o terminal para tudo no Linux?</dt>
-                    <dd>Sim, mas algumas tarefas são mais fáceis via interface gráfica para iniciantes.</dd>
-                    <dt>O que significa permissões em arquivos?</dt>
-                    <dd>São regras que determinam quem pode ler, escrever ou executar um arquivo.</dd>
-                </dl>
+                <p>Quer dominar o terminal Linux, e bombar na produtividade? Comece por dominar os comandos básicos! Não é mágica, viu — o primeiro passo é seu. Há terminais tipo Bash, o mais conhecido. No terminal, usa-se "feitiços", que são os comandos. Mas cuidado, alguns podem inutilizar tudo! Com este guia, entenda o porquê de cada comando! E olha, <code>rm -f /home/</code> não é ideal pra começar!</p>
+            
+            <h3>O que vai aprender:</h3>
+            <ul>
+                <li>Comandos pra navegar pastas</li>
+                <li>Listar arquivos, verificar permissões</li>
+                <li>Comandos pra manipular arquivos e diretórios</li>
+                <li>Obter ajuda e infos do sistema</li>
+            </ul>
+            
+            <h2>Navegação no sistema de arquivos</h2>
+            <p>Pra navegar, use:</p>
+            <pre><code>pwd</code></pre>
+            <p>Mostra onde você está.</p>
+            
+            <pre><code>ls</code></pre>
+            <p>Lista arquivos e pastas.</p>
+            
+            <pre><code>cd nome-da-pasta</code></pre>
+            <p>Muda pra pasta. Exemplo: <code>cd Documentos</code> leva pra pasta Documentos.</p>
+            
+            <pre><code>cd ..</code></pre>
+            <p>Volta uma pasta.</p>
+            
+            <h2>Listando arquivos e detalhes importantes</h2>
+            <p>O comando <code>ls</code> oferece diversas opções para exibir informações, né?</p>
+            <pre><code>ls -l</code></pre>
+            <p>Lista arquivos, revelando detalhes como permissões, dono e tamanho, incrível.</p>
+            <pre><code>ls -a</code></pre>
+            <p>Mostra todos os arquivos, até os que estão ocultos, hein?</p>
+            
+            <h2>Manipulando arquivos e diretórios</h2>
+            <p>Comandos essenciais pra criar, copiar, mover ou apagar arquivos e pastas, por exemplo.</p>
+            <pre><code>mkdir nome-da-pasta</code></pre>
+            <p>Cria uma pasta novinha em folha.</p>
+            
+            <pre><code>touch nome-do-arquivo</code></pre>
+            <p>Cria um arquivo novinho, mas vazio.</p>
+            
+            <pre><code>cp origem destino</code></pre>
+            <p>Copia arquivos ou pastas sem dó, kkkk.</p>
+            
+            <pre><code>mv origem destino</code></pre>
+            <p>Move ou renomeia arquivos e pastas, simples assim.</p>
+            
+            <pre><code>rm nome-do-arquivo</code></pre>
+            <p>Remove arquivos, mas cuidado!</p>
+            
+            <pre><code>rm -r nome-da-pasta</code></pre>
+            <p>Remove pastas e tudo o que está lá dentro.</p>
+            
+            <h2>Obter ajuda e informações do sistema</h2>
+            <p>Se você tiver alguma dúvida sobre um comando, use...</p>
+            <pre><code>man comando</code></pre>
+            <p>Mostra o manual detalhado do comando.</p>
+            
+            <pre><code>comando --help</code></pre>
+            <p>Mostra ajuda rápida do comando, massa!</p>
+            
+            <p>Para verificar as informações do sistema...</p>
+            <pre><code>uname -a</code></pre>
+            <p>Revela dados sobre o kernel.</p>
+            
+            <pre><code>top</code></pre>
+            <p>Exibe os processos em andamento em tempo real, legal.</p>
+            
+            <h2>Conclusão</h2>
+            <p>Dominar esses comandos básicos do Linux abrirá muitas portas, acredito. Com prática, o terminal deixará de ser um mistério e se tornará uma ferramenta super útil no seu dia a dia, show! Aos poucos, avance, explore cada comando, e observe o aprendizado subir como um foguete.</p>
+            
+            
+            
+            <h2>FAQ - Dúvidas comuns</h2>
+            <ul>
+                <li>
+                    <h4>Como descobrir o comando ideal para uma certa coisa?</h4>
+                    <p><code>man</code> e <code>--help</code> são seus amigos. Use-os para desvendar comandos e suas opções.</p>
+                </li>
+                <li>
+                    <h4>O terminal serve para tudo no Linux mesmo?</h4>
+                    <p>Sim, embora certas tarefas sejam simplificadas com a interface visual, especialmente pra quem tá no começo.</p>
+                </li>
+                <li>
+                    <h4>O que seriam aquelas permissões nos arquivos?</h4>
+                    <p>São as regras que decidem quem pode ler, escrever ou executar um arquivo.</p>
+                </li>
+            </ul>
             </section>
         </article>
         
