@@ -15,7 +15,7 @@ author: "Piolinux"
 
             <main>
         <section class="post-content">
-            <h1>A Ascensão do Linux-Man, que massa!</h1>
+           
             
             <p>Numa galáxia não muito distante a Terra estava sob o domínio de um Sistema Operacional charmoso chamado **Windows 11**, célebre pelas suas eternas atualizações, e também por transformar o desligamento do computador numa saga de paciência danada.</p>
 
