@@ -10,7 +10,7 @@ description: "Um guia sobre a importância da documentação no Linux. Descubra 
 
 <main>
         <section class="post-content">
-            <h1>A Importância da Documentação no Linux: Deixe de "chutar" e Comece a Ler!</h1>
+            
             
             <p>Documentação, uh, é um assunto que nunca ganha prioridade, infelizmente. Baixamos uma distro Linux e a leitura da documentação… vai sempre para o final da lista, né? É tipo cultural isso, pois a gente logo tenta tudo por tentativa e erro, em vez de ir no material que tem lá para nos ajudar.</p>
             

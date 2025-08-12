@@ -13,7 +13,7 @@ description: "Um guia completo sobre as melhores distros Linux para PCs antigos 
 
 <main>
         <section class="post-content">
-            <h1>Guia Completo: As Melhores Distros Linux para PCs Razoáveis e Antigos</h1>
+           
             
             <p>Se tens um computador velho, pensando em descartá-lo, saiba que existem sistemas operacionais Linux que mandam muito bem, sim. Em vez de jogar fora, dê uma nova vida ao bicho! Neste guia, apresento uma pequena lista para te ajudar a escolher qual distro colocar no seu PC velho. 😀</p>
 

@@ -13,7 +13,7 @@ description: "Um guia rápido e inteligente para atualizar e configurar reposit�
 
     <main>
         <section class="post-content">
-            <h1>Como Atualizar o MX Linux: Dicas para Repositórios</h1>
+           
             
             <p>Atualize sua distro **MX Linux** de modo prático e eficiente, pois este guia é o que você precisa! Vamos desvendar como as ferramentas de automação do MX tornam tudo mais simples, tanto para quem está começando quanto para quem já manja, sem precisar de comandos complicados no terminal. Bora otimizar sua experiência com os repositórios Debian, facinho.</p>
             
