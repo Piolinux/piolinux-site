@@ -9,100 +9,13 @@ author: "Piolinux"
 
 
 
-<html>
-<head>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #ddd;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
 
-    main {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #1e1e1e;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
-    }
-    
-    h1, h2, h3 {
-      color: #80ff00;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h1 {
-      font-size: 2rem;
-      text-align: center;
-      padding-top: 20px;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-    }
-
-    h3 {
-      font-size: 1.25rem;
-    }
-
-    p, ul, ol {
-      margin-bottom: 1rem;
-      text-align: justify;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    a {
-      color: #80ff00;
-      text-decoration: none;
-    }
-    
-    a:hover {
-      text-decoration: underline;
-    }
-    
-    strong {
-        color: #80ff00;
-    }
-
-    footer {
-      background-color: #1e1e1e;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
-    }
-
-    footer p,
-    footer a {
-      color: #ddd;
-      font-size: 0.9em;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
 <body>
 
 
 
   <main>
- 
+ <section class="post-content">
     <p>No mundinho maravilhoso do Linux, embarquei em uma aventura em busca de conhecimento, cheia de vídeos sem sentido e fãs bitolados que defendiam tudo sem questionar. Todas as soluções giravam em torno de um **“guru”** que resolvia problemas de maneira estranha. Seus artigos, que pareciam traduzidos, nunca citavam as fontes e eram apresentados como se ele fosse um especialista no assunto.</p>
     <p>Seus textos eram longos, com muita “enrolação” para resolver até mesmo os problemas mais simples. A falta de citação de fontes deixava um grande vazio para quem realmente queria entender a raiz do problema, e a comunidade o seguia cegamente.</p>
 
@@ -135,4 +48,4 @@ author: "Piolinux"
 
   
 </body>
-</html>
+
