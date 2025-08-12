@@ -43,4 +43,6 @@ author: "Piolinux"
         <p>Maria, incrédula, fechou o Terminal e tentou abrir o Jogo da Aventura Infinita. Para sua surpresa, o jogo abriu instantaneamente, e uma tela de boas-vindas com um som de vitória apareceu.</p>
         
         <p>Naquele dia, Maria GUI aprendeu que o Terminal não era o seu inimigo, mas sim o seu melhor amigo. Era uma ferramenta poderosa que a libertou da frustração de um problema que os botões não conseguiam resolver. Ela continuou a amar suas interfaces gráficas, mas agora sabia que o verdadeiro poder do seu sistema Linux estava no lugar onde a lógica e a clareza se encontram: na linha de comando.</p>
+
+        </section>
     </article>
