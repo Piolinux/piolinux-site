@@ -44,6 +44,8 @@ author: "Piolinux"
     <h2>A Verdade por Trás da Ilusão</h2>
     <p>Confie no seu “guru”. Você está a um passo de se tornar o maior especialista em problemas de Linux com Ambiente Gráfico. Avise-o que a tela de senha ainda não carregou, num loop infinito.</p>
     <p>Você levou a sério este artigo de humor porque ficou com raiva de um suposto guru do Linux que nada resolve, apenas te enrola, e você aceita.</p>
+ 
+  </section>
   </main>
 
   
