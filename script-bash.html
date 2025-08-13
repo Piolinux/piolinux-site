@@ -25,7 +25,38 @@
 
 <style>
 	
-  header h1 {
+  /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+a {
+  color: #80ff00;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER */
+header {
+  background-color: #222;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
   color: #80ff00; /* verde Piolinux */
   font-size: 1.8rem;
   margin-right: 20px;
@@ -36,139 +67,108 @@ header h1 a {
   text-decoration: none;
 }
 
-	
-	
-  /* RESET */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Botão hamburguer (mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #80ff00;
+  font-size: 26px;
+  cursor: pointer;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ddd;
-    line-height: 1.6;
-  }
+/* Menu */
+.dropdown-menu {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+}
 
-  a {
-    color: #80ff00;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+.dropdown-menu > li {
+  position: relative;
+}
 
-  header {
-    background-color: #222;
-    padding: 10px 15px; /* 🔹 Menos padding lateral */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.dropdown-menu > li > a {
+  display: block;
+  padding: 6px 10px;
+  font-weight: bold;
+  color: #80ff00;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background-color: #1a1a1a;
+}
 
-  /* Botão hamburguer (mobile) */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #80ff00;
-    font-size: 26px;
-    cursor: pointer;
-  }
+.dropdown-menu > li:hover > a {
+  background-color: #333;
+}
 
-  /* Menu */
-  .dropdown-menu {
-    list-style: none;
-    display: flex;
-    gap: 6px; /* 🔹 Espaço reduzido */
-    align-items: center;
-    margin-left: 0; /* 🔹 Remove recuo */
-    padding-left: 0; /* 🔹 Remove recuo */
-  }
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+}
 
-  .dropdown-menu > li {
-    position: relative;
-  }
+.dropdown-content li a {
+  padding: 8px 12px;
+  display: block;
+  font-weight: normal;
+  color: #80ff00;
+}
 
-  .dropdown-menu > li > a {
-    display: block;
-    padding: 6px 10px; /* 🔹 Mais compacto */
-    font-weight: bold;
-    color: #80ff00;
-    border-radius: 4px;
-    transition: background 0.2s;
-    background-color: #1a1a1a;
-  }
+.dropdown-content li a:hover {
+  background-color: #444;
+}
 
-  .dropdown-menu > li:hover > a {
-    background-color: #333;
-  }
+.dropdown-menu > li:hover .dropdown-content {
+  display: block;
+}
 
-  /* Dropdown */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 160px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 0 0 4px 4px;
-    z-index: 1000;
-  }
+/* MAIN */
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
 
-  .dropdown-content li a {
-    padding: 8px 12px;
-    display: block;
-    font-weight: normal;
-    color: #80ff00;
-  }
+/* POST / SECTION */
+section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+}
 
-  .dropdown-content li a:hover {
-    background-color: #444;
-  }
+section h1, 
+section h2, 
+section h3 {
+  color: #80ff00;
+  margin-bottom: 12px;
+}
 
-  .dropdown-menu > li:hover .dropdown-content {
-    display: block;
-  }
+section p {
+  margin-bottom: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+}
 
-  /* Main */
-  main {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 0 15px;
-  }
-
-  /* Seções */
-  section {
-    background-color: #1e1e1e;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
-  }
-
-  section h1, 
-  section h2, 
-  section h3 {
-    color: #80ff00;
-    margin-bottom: 12px;
-  }
-
-  section p {
-    margin-bottom: 12px;
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.8;
-  }
-
-  footer {
-  background-color: #222;   /* fundo escuro */
-  color: #ffffff;           /* texto branco para contraste máximo */
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #ffffff;
   text-align: center;
   padding: 15px 10px;
   margin-top: 40px;
@@ -176,37 +176,67 @@ header h1 a {
 }
 
 footer a {
-  color: #ccff33;           /* verde-limão mais claro e com contraste aceitável */
-  font-weight: bold;        /* deixa o texto em negrito */
+  color: #ccff33;
+  font-weight: bold;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #ffec8b;           /* tom mais claro no hover */
-  font-weight: bold;        /* mantém o negrito no hover */
+  color: #ffec8b;
+  font-weight: bold;
 }
 
-
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-    .dropdown-menu {
-      flex-direction: column;
-      gap: 4px;
-      background-color: #222;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 200px;
-      padding: 10px;
-      display: none;
-    }
-    body.menu-open .dropdown-menu {
-      display: flex;
-    }
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
+  .dropdown-menu {
+    flex-direction: column;
+    gap: 4px;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    display: none;
+  }
+  body.menu-open .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* 🔹 Extra para garantir estilização dos posts no Jekyll */
+.post-content {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.post-content pre {
+  background: #111;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  color: #80ff00;
+}
+
+.post-content code {
+  background: #222;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #80ff00;
+}
+
 </style>
 
 </head>
@@ -250,167 +280,153 @@ footer a:hover {
     <main>
 		
 		
+<section class="post-content">
+      
 
-        <section id="scripts-bash-intro">
-            <h2>🚀 Scripts Bash para Diversas Finalidades</h2>
-            <p>O Bash (Bourne-Again Shell) é a linguagem de script padrão na maioria dos terminais Linux. Com ele, você pode automatizar tarefas repetitivas como organizar arquivos, atualizar o sistema, realizar backups e muito mais. Aprender Bash não exige ser um expert — basta curiosidade e prática. Abaixo, veja exemplos úteis de scripts para o dia a dia.</p>
-        </section>
+        <p>Saca só, o Bash é tipo o idioma oficial nos terminais Linux. Com ele, dá pra deixar tudo automático, sabe? Tipo, organizar arquivos, dar um tapa no sistema, fazer cópia de segurança e um monte de outras paradas. aprender bash não exige ser um expert — basta curiosidade e prática. abaixo, veja exemplos úteis de scripts para o dia a dia.</p>
 
-        <section>
-            <h3 id="introducao">1. O Básico de um Script Bash</h3>
-            <p>Todo script Bash começa com o <strong>shebang</strong> <code>#!/bin/bash</code>, que indica ao sistema qual interpretador usar.</p>
-            <p><strong>Exemplo: Olá Mundo!</strong></p>
-            <pre><code>#!/bin/bash
-# Este é um comentário
-echo "Olá, PioLinux! Este é o meu primeiro script Bash."</code></pre>
-            <p>Salve como <code>ola_mundo.sh</code>, dê permissão com <code>chmod +x ola_mundo.sh</code> e execute com <code>./ola_mundo.sh</code>.</p>
-        </section>
+        <h2>1. o básico de um script bash</h2>
+        <p>todo script bash começa com o shebang #!/bin/bash, que indica ao sistema qual interpretador usar.</p>
 
-        <section>
-            <h3 id="automacao-diaria">2. Automação de Tarefas Diárias</h3>
-            <p><strong>Atualizar o Sistema Automaticamente:</strong></p>
-            <pre><code>#!/bin/bash
-echo "Atualizando listas de pacotes..."
+        <h3>exemplo: olá mundo!</h3>
+        <pre><code>#!/bin/bash
+# este é um comentário
+echo "olá, piolinux! este é o meu primeiro script bash."</code></pre>
+        <p>salve como ola_mundo.sh, dê permissão com chmod +x ola_mundo.sh e execute com ./ola_mundo.sh.</p>
+
+        <h2>2. automação de tarefas diárias</h2>
+        <h3>atualizar o sistema automaticamente:</h3>
+        <pre><code>#!/bin/bash
+echo "atualizando listas de pacotes..."
 sudo apt update
 
-echo "Realizando upgrade de pacotes..."
+echo "realizando upgrade de pacotes..."
 sudo apt upgrade -y
 
-echo "Removendo pacotes desnecessários..."
+echo "removendo pacotes desnecessários..."
 sudo apt autoremove -y
 
-echo "Limpando o cache de pacotes..."
+echo "limpando o cache de pacotes..."
 sudo apt clean
 
-echo "Sistema atualizado e limpo!"</code></pre>
-            <p><strong>Backup Simples de Pastas Pessoais:</strong></p>
-            <pre><code>#!/bin/bash
-DATA=$(date +%Y-%m-%d_%H-%M-%S)
-DIR_BACKUP="$HOME/Backups"
-PASTAS_A_COPIAR=("$HOME/Documentos" "$HOME/Imagens")
-NOME_ARQUIVO="backup_pessoal_$DATA.tar.gz"
+echo "sistema atualizado e limpo!"</code></pre>
 
-mkdir -p "$DIR_BACKUP"
-echo "Iniciando backup das pastas: ${PASTAS_A_COPIAR[@]}"
-tar -czvf "$DIR_BACKUP/$NOME_ARQUIVO" "${PASTAS_A_COPIAR[@]}"
+        <h3>backup simples de pastas pessoais muito util:</h3>
+        <pre><code>#!/bin/bash
+data=$(date +%y-%m-%d_%h-%m-%s)
+dir_backup="$home/backups"
+pastas_a_copiar=("$home/documentos" "$home/imagens")
+nome_arquivo="backup_pessoal_$data.tar.gz"
 
-echo "Backup concluído! Arquivo: $DIR_BACKUP/$NOME_ARQUIVO"</code></pre>
-        </section>
+mkdir -p "$dir_backup"
+echo "iniciando backup das pastas: ${pastas_a_copiar[@]}"
+tar -czvf "$dir_backup/$nome_arquivo" "${pastas_a_copiar[@]}"
 
-        <section>
-            <h3 id="administracao-sistema">3. Administração de Sistema</h3>
-            <p><strong>Monitorar Uso de Disco e Enviar Alerta:</strong></p>
-            <pre><code>#!/bin/bash
-LIMITE_PERCENTUAL=80
-PARTICAO="/dev/sda1"
-EMAIL_ADMIN="seuemail@exemplo.com"
+echo "backup concluído! arquivo: $dir_backup/$nome_arquivo"</code></pre>
 
-USO=$(df -h "$PARTICAO" | awk 'NR==2 {print $5}' | sed 's/%//g')
+        <h2>3. administração de sistema</h2>
+        <h3>monitorar a utilização do disco e enviar alerta:</h3>
+        <pre><code>#!/bin/bash
+limite_percentual=80
+particao="/dev/sda1"
+email_admin="seuemail@exemplo.com"
 
-if (( USO > LIMITE_PERCENTUAL )); then
-    echo "ALERTA: Uso de disco na partição $PARTICAO está em $USO%!" | mail -s "Alerta de Disco" "$EMAIL_ADMIN"
+uso=$(df -h "$particao" | awk 'nr==2 {print $5}' | sed 's/%//g')
+
+if (( uso > limite_percentual )); then
+    echo "alerta: uso de disco na partição $particao está em $uso%!" | mail -s "alerta de disco" "$email_admin"
 else
-    echo "Uso de disco normal: $USO%"
+    echo "uso de disco normal: $uso%"
 fi</code></pre>
 
-            <p><strong>Criar Múltiplos Usuários:</strong></p>
-            <pre><code>#!/bin/bash
-ARQUIVO_USUARIOS="lista_usuarios.txt"
+        <h3>criar múltiplos usuários:</h3>
+        <pre><code>#!/bin/bash
+arquivo_usuarios="lista_usuarios.txt"
 
-if [ ! -f "$ARQUIVO_USUARIOS" ]; then
-    echo "Arquivo $ARQUIVO_USUARIOS não encontrado."
+if [ ! -f "$arquivo_usuarios" ]; then
+    echo "arquivo $arquivo_usuarios não encontrado."
     exit 1
 fi
 
-while IFS= read -r USUARIO; do
-    if [ -n "$USUARIO" ]; then
-        echo "Criando usuário: $USUARIO"
-        sudo useradd -m "$USUARIO"
-        sudo passwd "$USUARIO"
+while ifs= read -r usuario; do
+    if [ -n "$usuario" ]; then
+        echo "criando usuário: $usuario"
+        sudo useradd -m "$usuario"
+        sudo passwd "$usuario"
     fi
-done < "$ARQUIVO_USUARIOS"
+done < "$arquivo_usuarios"
 
-echo "Usuários criados com sucesso."</code></pre>
-            <p>Conteúdo de <code>lista_usuarios.txt</code>:</p>
-            <pre><code>joao
+echo "usuários criados com sucesso."</code></pre>
+
+        <p>conteúdo de lista_usuarios.txt:</p>
+        <pre><code>joao
 maria
 pedro
 ana</code></pre>
-        </section>
 
-        <section>
-            <h3 id="seguranca-monitoramento">4. Segurança e Monitoramento</h3>
-            <p><strong>Verificar Portas Abertas:</strong></p>
-            <pre><code>#!/bin/bash
-echo "Listando portas abertas:"
+        <h2>4. segurança e monitoramento</h2>
+        <h3>verificar portas abertas:</h3>
+        <pre><code>#!/bin/bash
+echo "listando portas abertas:"
 sudo netstat -tulpn
 
-echo -e "\nStatus do firewall (UFW):"
+echo -e "\nstatus do firewall (ufw):"
 sudo ufw status</code></pre>
 
-            <p><strong>Monitorar Tentativas de Login SSH:</strong></p>
-            <pre><code>#!/bin/bash
-ARQUIVO_LOG="/var/log/auth.log"
+        <h3>monitorar tentativas de login ssh:</h3>
+        <pre><code>#!/bin/bash
+arquivo_log="/var/log/auth.log"
 
-echo "Tentativas de login SSH falhas:"
-grep "Failed password" "$ARQUIVO_LOG" | tail -n 50 | awk '{print $11}' | sort | uniq -c | sort -nr</code></pre>
-        </section>
+echo "tentativas de login ssh falhas:"
+grep "failed password" "$arquivo_log" | tail -n 50 | awk '{print $11}' | sort | uniq -c | sort -nr</code></pre>
 
-        <section>
-            <h3 id="desenvolvimento-web">5. Scripts para Desenvolvimento Web</h3>
-            <p><strong>Servidor HTTP Local com Python:</strong></p>
-            <pre><code>#!/bin/bash
-PORTA=8000
-echo "Servidor em http://localhost:$PORTA"
-python3 -m http.server $PORTA</code></pre>
+        <h2>5. scripts para desenvolvimento web</h2>
+        <h3>servidor http local com python:</h3>
+        <pre><code>#!/bin/bash
+porta=8000
+echo "servidor em http://localhost:$porta"
+python3 -m http.server $porta</code></pre>
 
-            <p><strong>Deploy Simples via Rsync/SSH:</strong></p>
-            <pre><code>#!/bin/bash
-DIR_LOCAL="./public_html/"
-USUARIO_REMOTO="usuario"
-IP_SERVIDOR="192.168.0.1"
-DIR_REMOTO="/var/www/html/"
+        <h3>deploy simples via rsync/ssh:</h3>
+        <pre><code>#!/bin/bash
+dir_local="./public_html/"
+usuario_remoto="usuario"
+ip_servidor="192.168.0.1"
+dir_remoto="/var/www/html/"
 
-rsync -avz --delete "$DIR_LOCAL" "$USUARIO_REMOTO@$IP_SERVIDOR:$DIR_REMOTO"
+rsync -avz --delete "$dir_local" "$usuario_remoto@$ip_servidor:$dir_remoto"
 
 if [ $? -eq 0 ]; then
-    echo "Deploy realizado com sucesso!"
+    echo "deploy realizado com sucesso!"
 else
-    echo "Erro no deploy."
+    echo "erro no deploy."
 fi</code></pre>
-        </section>
 
-        <section>
-            <h3 id="utilidades-avancadas">6. Utilidades e Truques Avançados</h3>
-            <p><strong>Calculadora via Terminal:</strong></p>
-            <pre><code>#!/bin/bash
+        <h2>6. utilidades e truques avançados</h2>
+        <h3>calculadora via terminal:</h3>
+        <pre><code>#!/bin/bash
 if [ -z "$1" ]; then
-    echo "Uso: ./calculadora.sh \"10 + 5 * 2\""
+    echo "uso: ./calculadora.sh \"10 + 5 * 2\""
     exit 1
 fi
 
-RESULTADO=$(echo "scale=2; $1" | bc -l)
-echo "Resultado: $RESULTADO"</code></pre>
+resultado=$(echo "scale=2; $1" | bc -l)
+echo "resultado: $resultado"</code></pre>
 
-            <p><strong>Gerar Álbum de Fotos HTML:</strong></p>
-            <pre><code>#!/bin/bash
-DIR_FOTOS="./fotos"
-ARQUIVO_HTML="album.html"
+        <h3>gerar álbum de fotos html:</h3>
+        <pre><code>#!/bin/bash
+dir_fotos="./fotos"
+arquivo_html="album.html"
 
-echo "<!DOCTYPE html>" > "$ARQUIVO_HTML"
-echo "<html><head><title>Álbum</title></head><body>" >> "$ARQUIVO_HTML"
-echo "<h1>Minhas Fotos</h1>" >> "$ARQUIVO_HTML"
+echo "" > "$arquivo_html"
+echo "" >> "$arquivo_html"
+echo "</code></pre>
 
-for FOTO in "$DIR_FOTOS"/*.{jpg,png,gif}; do
-    if [ -f "$FOTO" ]; then
-        NOME=$(basename "$FOTO")
-        echo "<p><img src=\"$FOTO\" width=\"300\" alt=\"$NOME\"><br>$NOME</p>" >> "$ARQUIVO_HTML"
-    fi
-done
+        <p>minhas foto</p>
 
-echo "</body></html>" >> "$ARQUIVO_HTML"
-echo "Álbum gerado em $ARQUIVO_HTML"</code></pre>
-        </section>
+    </div>
+
+</body>
 
         <section>
             <p>Esses scripts são apenas o começo. Com Bash, você pode criar ferramentas personalizadas, automatizar rotinas e entender melhor como o Linux funciona. Experimente, edite e adapte conforme suas necessidades!</p>
