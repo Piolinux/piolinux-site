@@ -44,7 +44,7 @@ author: "Piolinux"
             <h2>A Lição Derradeira!</h2>
             <p>O guru Piolinux, espantado, surgiu e inquiriu: "Como solucionaste? Foi magia minha?"</p>
             
-            <p>Linux-Man, agora herói, sorriu e respondeu: "Não foi magia, foi saber. Eu não sou o PC-Man ou Linux-Man. Eu sou o Conhecimento-Man!"</p>
+            <p>Linux-Man, agora o herói, sorriu e respondeu: Não foi mágica, foi conhecimento. Eu não sou o PC-Man ou Linux-Man. Eu sou o Conhecimento-Man!"</p>
 
             <p>E a lição permaneceu: enquanto gurus podem te guiar, o verdadeiro poder é aprender a resolver teus problemas.</p>
         </section>
