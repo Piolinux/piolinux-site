@@ -15,7 +15,7 @@ description: "Um guia rápido e inteligente para atualizar e configurar reposit�
         <section class="post-content">
            
             
-            <p>Atualize sua distro **MX Linux** de modo prático e eficiente, pois este guia é o que você precisa! Vamos desvendar como as ferramentas de automação do MX tornam tudo mais simples, tanto para quem está começando quanto para quem já manja, sem precisar de comandos complicados no terminal. Bora otimizar sua experiência com os repositórios Debian, facinho.</p>
+            <p>Quer dar um gás no seu MX Linux?  Vamos desvendar como as ferramentas de automação do MX tornam tudo mais simples, tanto para quem está começando quanto para quem já manja, sem precisar de comandos complicados no terminal. Bora otimizar sua experiência com os repositórios Debian, facinho..</p>
             
             <h2>Visão Geral e Ferramentas</h2>
             <p>A automação esperta da Distro MX é uma benção e, às vezes, uma "maldição" também. É ótima porque simplifica muito, mas pode nos deixar com preguiça de pensar, né? Contudo, achar que o MX é uma distro comum é um erro; ele se destaca por sua inteligência e pelas ferramentas próprias.</p>

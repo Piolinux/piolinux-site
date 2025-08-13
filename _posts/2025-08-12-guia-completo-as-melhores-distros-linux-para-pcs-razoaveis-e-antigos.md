@@ -18,7 +18,8 @@ description: "Um guia completo sobre as melhores distros Linux para PCs antigos 
             <p>Se tens um computador velho, pensando em descartá-lo, saiba que existem sistemas operacionais Linux que mandam muito bem, sim. Em vez de jogar fora, dê uma nova vida ao bicho! Neste guia, apresento uma pequena lista para te ajudar a escolher qual distro colocar no seu PC velho. 😀</p>
 
             <h2>Critérios Para Escolher uma Distro Leve</h2>
-            <p>A escolha da melhor distro para o PC depende das suas necessidades. Considere alguns critérios técnicos para rodar tudo liso:</p>
+            <p>A escolha da melhor distro para o PC depende das suas necessidades. Considerando alguns critérios técnicos para rodar tudo liso:
+:</p>
             <ul>
                 <li><strong>Ambientes Gráficos:</strong> Prefira JWM, IceWM, OpenBox ou LXDE, porque comem pouquinhos recursos.</li>
                 <li><strong>Base:</strong> Distros Debian ou Arch Linux tendem a ser as mais estáveis e eficientes.</li>
