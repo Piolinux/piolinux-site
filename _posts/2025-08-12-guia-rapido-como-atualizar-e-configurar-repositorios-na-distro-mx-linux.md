@@ -9,7 +9,7 @@ description: "Um guia r√°pido e inteligente para atualizar e configurar reposit√
 ---
 
 
-<body>
+
     <main>
         <section class="post-content">
                    
@@ -35,4 +35,3 @@ description: "Um guia r√°pido e inteligente para atualizar e configurar reposit√
             </ul>
         </section>
     </main>
-</body>
