@@ -10,8 +10,9 @@ description: "Um guia rápido e inteligente para atualizar e configurar reposit�
 
 
 
-    <main>
+   <main>
         <section class="post-content">
+           
                    
             <p>Quer dar um gás no seu MX Linux?  Vamos desvendar como as ferramentas de automação do MX tornam tudo mais simples, tanto para quem está começando quanto para quem já manja, sem precisar de comandos complicados no terminal. Bora otimizar sua experiência com os repositórios Debian, facinho..</p>
             
