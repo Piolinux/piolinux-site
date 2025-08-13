@@ -29,11 +29,11 @@ description: "Um guia completo sobre as melhores distros Linux para PCs antigos 
             <h2>Distros Linux Recomendadas Para PCs Razoáveis</h2>
             <p>Não há distros melhores, somente a que te serve melhor. Nos meus testes em máquinas virtuais, examinei algumas alternativas que se destacam pela velocidade e eficiência. Lembre-se, o que funciona para um pode não dar certo pra outro. A família dos pinguins é unida, mas também diversa!</p>
             
-            <h3>1. Manjaro: Qualidade e Facilidade de Uso 😱</h3>
+            <h3>1. Manjaro: Qualidade e Facilidade de Uso para iniciantes😱</h3>
             <p>Manjaro é uma distro de ótima qualidade, perfeita para quem busca a potência do Arch Linux sem a chatice de instalação. Fácil de usar e configurar, já vem com tudo pronto. O gerenciador Pacman e o AUR tornam fácil baixar qualquer aplicativo. Manjaro disponibiliza muitos ambientes gráficos, mas as versões leves, tipo XFCE, são ótimas pra computadores medianos.</p>
             
             <h3>2. Antix: A Solução para Computadores Velhos 😣</h3>
-            <p>O Antix é rápido e a solução para revitalizar aquele computador véio. Baseado no Debian, ele usa ambientes gráficos ultraleves tipo JWM e IceWM, o que garante rapidez e estabilidade. Se tiver um hardware antigo e precisa de muita leveza, Antix é perfeito para seu computador não virar uma tartaruga.</p>
+            <p>O Antix é rápido e a solução para revitalizar aquele computador véio. Baseado no Debian estavel e instavel que é o ramo de teste, ele usa ambientes gráficos ultraleves tipo JWM e IceWM, o que garante rapidez e estabilidade. Se tiver um hardware antigo e precisa de muita leveza, Antix é perfeito para seu computador não virar uma tartaruga.</p>
             
             <h3>3. Lxle: Simplicidade e Praticidade Modesta 😝 (Descontinuada)</h3>
             <p>Pois é, esse projeto já era, foi descontinuado, como diz o DistroWatch. Aquela ótima opção pra quem queria facilidade, foi-se. O jeito é procurar outras, tantas distribuições baseadas no Debian aí, quem sabe alguma serve.</p>
@@ -41,7 +41,7 @@ description: "Um guia completo sobre as melhores distros Linux para PCs antigos 
             <h3>4. Arch Bang: Velocidade Bruta com OpenBox 😨</h3>
             <p>Arch Bang, distro pras almas destemidas! Ela usa o Arch Linux e vem com o OpenBox, que é super levinho. Nos testes, rodando em máquinas virtuais, voou, bem rápido e responsivo. Boa pra quem curte pouco enfeite e topa aprender do Arch pra ter um sistema que decola!</p>
             
-            <h3>5. 4MLinux: O Minimalismo Extremo 😆</h3>
+            <h3>5. 4MLinux: O Minimalismo Extremo Gosta de Ambiente Grafico leve 😆</h3>
             <p>4MLinux, radicaliza na leveza! Com JWM, uma experiência simplificada, no talo. Distro enxuta, perfeita pra certas coisas, tipo usar um pendrive pra dar uns reparos, ou se o negócio é gastar pouco do PC. Minimalismo, ele pode libertar, mas o utilizador precisa estar ligado nas suas limitações.</p>
             
             <h2>Conclusão: Qual Pinguim Leva pra Casa?</h2>
