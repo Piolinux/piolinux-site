@@ -25,7 +25,38 @@
 
 <style>
 	
-  header h1 {
+  /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+a {
+  color: #80ff00;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER */
+header {
+  background-color: #222;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
   color: #80ff00; /* verde Piolinux */
   font-size: 1.8rem;
   margin-right: 20px;
@@ -36,139 +67,108 @@ header h1 a {
   text-decoration: none;
 }
 
-	
-	
-  /* RESET */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Botão hamburguer (mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #80ff00;
+  font-size: 26px;
+  cursor: pointer;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ddd;
-    line-height: 1.6;
-  }
+/* Menu */
+.dropdown-menu {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+}
 
-  a {
-    color: #80ff00;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+.dropdown-menu > li {
+  position: relative;
+}
 
-  header {
-    background-color: #222;
-    padding: 10px 15px; /* 🔹 Menos padding lateral */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.dropdown-menu > li > a {
+  display: block;
+  padding: 6px 10px;
+  font-weight: bold;
+  color: #80ff00;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background-color: #1a1a1a;
+}
 
-  /* Botão hamburguer (mobile) */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #80ff00;
-    font-size: 26px;
-    cursor: pointer;
-  }
+.dropdown-menu > li:hover > a {
+  background-color: #333;
+}
 
-  /* Menu */
-  .dropdown-menu {
-    list-style: none;
-    display: flex;
-    gap: 6px; /* 🔹 Espaço reduzido */
-    align-items: center;
-    margin-left: 0; /* 🔹 Remove recuo */
-    padding-left: 0; /* 🔹 Remove recuo */
-  }
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+}
 
-  .dropdown-menu > li {
-    position: relative;
-  }
+.dropdown-content li a {
+  padding: 8px 12px;
+  display: block;
+  font-weight: normal;
+  color: #80ff00;
+}
 
-  .dropdown-menu > li > a {
-    display: block;
-    padding: 6px 10px; /* 🔹 Mais compacto */
-    font-weight: bold;
-    color: #80ff00;
-    border-radius: 4px;
-    transition: background 0.2s;
-    background-color: #1a1a1a;
-  }
+.dropdown-content li a:hover {
+  background-color: #444;
+}
 
-  .dropdown-menu > li:hover > a {
-    background-color: #333;
-  }
+.dropdown-menu > li:hover .dropdown-content {
+  display: block;
+}
 
-  /* Dropdown */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 160px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 0 0 4px 4px;
-    z-index: 1000;
-  }
+/* MAIN */
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
 
-  .dropdown-content li a {
-    padding: 8px 12px;
-    display: block;
-    font-weight: normal;
-    color: #80ff00;
-  }
+/* POST / SECTION */
+section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+}
 
-  .dropdown-content li a:hover {
-    background-color: #444;
-  }
+section h1, 
+section h2, 
+section h3 {
+  color: #80ff00;
+  margin-bottom: 12px;
+}
 
-  .dropdown-menu > li:hover .dropdown-content {
-    display: block;
-  }
+section p {
+  margin-bottom: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+}
 
-  /* Main */
-  main {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 0 15px;
-  }
-
-  /* Seções */
-  section {
-    background-color: #1e1e1e;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
-  }
-
-  section h1, 
-  section h2, 
-  section h3 {
-    color: #80ff00;
-    margin-bottom: 12px;
-  }
-
-  section p {
-    margin-bottom: 12px;
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.8;
-  }
-
-  footer {
-  background-color: #222;   /* fundo escuro */
-  color: #ffffff;           /* texto branco para contraste máximo */
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #ffffff;
   text-align: center;
   padding: 15px 10px;
   margin-top: 40px;
@@ -176,37 +176,67 @@ header h1 a {
 }
 
 footer a {
-  color: #ccff33;           /* verde-limão mais claro e com contraste aceitável */
-  font-weight: bold;        /* deixa o texto em negrito */
+  color: #ccff33;
+  font-weight: bold;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #ffec8b;           /* tom mais claro no hover */
-  font-weight: bold;        /* mantém o negrito no hover */
+  color: #ffec8b;
+  font-weight: bold;
 }
 
-
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-    .dropdown-menu {
-      flex-direction: column;
-      gap: 4px;
-      background-color: #222;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 200px;
-      padding: 10px;
-      display: none;
-    }
-    body.menu-open .dropdown-menu {
-      display: flex;
-    }
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
+  .dropdown-menu {
+    flex-direction: column;
+    gap: 4px;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    display: none;
+  }
+  body.menu-open .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* 🔹 Extra para garantir estilização dos posts no Jekyll */
+.post-content {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.post-content pre {
+  background: #111;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  color: #80ff00;
+}
+
+.post-content code {
+  background: #222;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #80ff00;
+}
+
 </style>
 
 </head>
@@ -249,75 +279,80 @@ footer a:hover {
     <main>
 	
 	
-            </div>
-
-                <article class="container">
-            <p>Olá! Se você chegou até aqui, é provável que esteja enfrentando um problema de inicialização no seu sistema. Sabemos que a sensação pode ser frustrante, mas não se preocupe: muitos de nós já passamos por isso.</p>
-            <p>Pensando em você, preparamos este guia detalhado para ajudar a resolver a situação. O processo pode levar alguns minutos, mas ao seguir o passo a passo com calma e atenção, seu sistema voltará a funcionar normalmente. Você está no caminho certo!</p>
-        
-            <h1>Como Reparar o Boot do Linux: Um Guia Simples e Amigável para Iniciantes</h1>
-            <p>Seu computador não inicia? A tela de boot travou e você está vendo apenas uma linha de comando estranha? Calma, isso é mais comum do que você pensa e, na maioria das vezes, a solução é mais simples do que parece. Neste artigo, vamos mostrar um guia passo a passo e amigável para <strong>reparar o boot do seu sistema Linux</strong>, sugerindo ferramentas e sistemas que podem ser seus melhores amigos nessas horas.</p>
-        
-                        <section>
-                <h2 id="por-que-o-boot-quebrou">Por que o Boot do meu Linux Quebrou?</h2>
-                <p>O "boot" é o processo de inicialização do seu computador. Ele carrega o sistema operacional e, quando algo dá errado, pode ser por vários motivos:</p>
-                <ul>
-                    <li><strong>Instalação de outro sistema operacional:</strong> Se você instalou o Windows em uma partição diferente, ele pode sobrescrever o gerenciador de boot do Linux (o <strong>GRUB</strong>).</li>
-                    <li><strong>Atualização de sistema com falha:</strong> Uma atualização interrompida ou com erros pode danificar arquivos essenciais do boot.</li>
-                    <li><strong>Problemas no disco rígido:</strong> Falhas de hardware ou setores corrompidos no seu HD ou SSD também podem causar problemas.</li>
-                    <li><strong>Remoção de partições:</strong> Se você apagou acidentalmente uma partição de boot crucial, o sistema não encontrará as informações necessárias para iniciar.</li>
-                </ul>
-            </section>
-        
-            <section>
-                <h2 id="metodo-padrao-pendrive">O Método Padrão: Usando um Pendrive de Instalação (Live USB)</h2>
-                <p>A forma mais segura e universal de reparar o boot é através de um sistema "ao vivo" (live system). Você pode usar o mesmo pendrive de instalação que usou para instalar o seu Linux. Não se preocupe, você não vai reinstalar nada!</p>
             
-                <h3 id="passo-1-prepare-o-terreno">Passo 1: Prepare o Terreno</h3>
-                <p>Primeiro, você precisará de um pendrive de instalação do seu Linux (ou de outro sistema Linux de sua preferência) e um computador para criar este pendrive. Sistemas como <strong>Ubuntu</strong>, <strong>Linux Mint</strong> ou até mesmo o <strong>antiX</strong> são ótimas opções, pois já vêm com ferramentas úteis.</p>
-            
-                <h3 id="passo-2-inicie-o-computador">Passo 2: Inicie o Computador pelo Pendrive</h3>
-                <p>Insira o pendrive no seu computador e reinicie-o. Durante a inicialização, você precisará entrar no menu de boot para escolher o pendrive como dispositivo de inicialização primário. As teclas mais comuns para isso são <strong>F2, F10, F12, ou Del</strong>.</p>
-            
-                <h3 id="passo-3-abra-o-terminal">Passo 3: Abra o Terminal</h3>
-                <p>Depois que o sistema "live" carregar, abra o terminal (também conhecido como "linha de comando"). É aqui que a mágica acontece.</p>
-            
-                <h3 id="passo-4-identifique-a-particao">Passo 4: Identifique a Partição do seu Linux</h3>
-                <p>Vamos usar o comando <code>lsblk</code> para identificar a partição onde o seu Linux está instalado. Geralmente, ela tem um tamanho grande e um formato de arquivo como <code>ext4</code>.</p>
-                <pre><code>sudo lsblk -f</code></pre>
-                <p>Você verá uma lista como esta:</p>
-                <pre><code>sda1 ext4 ... /
-sda2 ntfs ...</code></pre>
-                <p>A partição <code>sda1</code> (no exemplo) é a que nos interessa. Anote o nome da partição.</p>
-            
-                <h3 id="passo-5-monte-e-instale-o-grub">Passo 5: Monte a Partição e Instale o GRUB</h3>
-                <p>Agora, vamos "montar" a partição e reinstalar o gerenciador de boot (GRUB) nela. Substitua <code>sda1</code> pelo nome da sua partição:</p>
-                <pre><code>sudo mount /dev/sda1 /mnt</code></pre>
-                <p>Depois, use o comando para reinstalar o GRUB:</p>
-                <pre><code>sudo grub-install --boot-directory=/mnt/boot /dev/sda</code></pre>
-                <p>Onde <code>/dev/sda</code> é o seu disco inteiro, não a partição. Se você tiver certeza de que é um sistema EFI/UEFI, o processo pode ser um pouco diferente, mas os comandos básicos são os mesmos.</p>
-            
-                <h3 id="passo-6-reinicie-e-verifique">Passo 6: Reinicie e Verifique</h3>
-                <p>Desmonte a partição e reinicie o computador. Se tudo der certo, o seu sistema Linux deve carregar normalmente.</p>
-                <pre><code>sudo umount /mnt
+        <section class="post-content">
+            
+            
+            <p>Olá! Se você chegou até aqui, provavelmente está tendo problemas pra iniciar seu sistema. Está com uma frustração grande de não poder fazer nada, mas fica tranquilo, muitos de nós já passamos por isso.</p>
+            
+            <p>A refletir sobre isso, desenvolvemos este manual profundo, pra te auxiliar na solução. A coisa pode demorar uns instantes, mas, passo a passo, com calma e concentrado, seu sistema volta ao normal, tudo certo.</p>
+            
+            <h2>Conserto do Boot do Linux: um guia tranquilo e acessível pra quem tá começando</h2>
+            
+            <p>Seu computador deu pau? Aquela tela de boot emperrada, exibindo aquelas linhas de comando estranhas? Neste artigo, vamos mostrar um guia passo a passo e amigável pra consertar o boot do seu sistema Linux, com dicas de ferramentas e sistemas que vão ser seus melhores amigos nessas horas.</p>
+            
+            <h2>Por que o Boot do meu Linux Quebrou?</h2>
+            <p>O "boot" é o processo que seu computador usa pra ligar. Ele inicia o sistema operacional, e, por vezes, as coisas dão errado, isso pode acontecer por muitas razões distintas:</p>
+            <ul>
+                <li><strong>Instalação de outro sistema operacional:</strong> Se instalou o Windows numa partição diferente, pode ter sobrescrito o gerenciador de boot do Linux, o famoso GRUB.</li>
+                <li><strong>Atualização de sistema com falhas:</strong> Uma atualização interrompida ou cheia de erros consegue estragar arquivos essenciais para o boot.</li>
+                <li><strong>Problemas no disco rígido:</strong> Avarias de hardware ou setores corrompidos no seu HD ou SSD também podem causar problemas.</li>
+                <li><strong>Remoção de partições:</strong> Se, por engano, apagou uma partição de boot crucial, o sistema não encontrará as informações essenciais para iniciar.</li>
+            </ul>
+            
+            <h2>O Método Padrão: Usando um Pendrive de Instalação (Live USB)</h2>
+            <p>A maneira mais segura e também universal para reparar o boot é através de um sistema "ao vivo" (live system). Você pode usar o mesmo pendrive de instalação usado para instalar o seu Linux. Não se preocupe, você não vai reinstalar nada!</p>
+            
+            <ol>
+                <li>
+                    <h3>Passo 1: Prepare o Terreno</h3>
+                    <p>Antes de mais, você vai precisar de um pendrive de instalação do seu Linux ou mesmo de outro sistema Linux da sua preferência e um computador para criar este pendrive. Sistemas tipo Ubuntu, Linux Mint e até antiX são ótimas opções, afinal, já possuem ferramentas muito boas.</p>
+                </li>
+                <li>
+                    <h3>Passo 2: Dê o boot pelo Pendrive</h3>
+                    <p>Coloque o pendrive no PC e reinicie. Ao iniciar, você vai precisar entrar no menu de boot para selecionar o pendrive como dispositivo inicial. As teclas mais frequentes para isso são <code>F2</code>, <code>F10</code>, <code>F12</code> ou <code>Del</code>.</p>
+                </li>
+                <li>
+                    <h3>Passo 3: Abra o Terminal</h3>
+                    <p>Depois que o sistema "live" carregar, abra o terminal ou "linha de comando". É lá que a mágica acontece.</p>
+                </li>
+                <li>
+                    <h3>Passo 4: Ache a Partição do seu Linux</h3>
+                    <p>Use o comando <code>lsblk</code> para identificar a partição do Linux instalado. Geralmente, ela é grandinha, com um formato como <strong>ext4</strong>.</p>
+                    <pre><code>sudo lsblk -f</code></pre>
+                    <p>Verá uma lista assim:</p>
+                    <pre><code>sda1 ext4 . /
+sda2 ntfs .</code></pre>
+                    <p>A partição <code>sda1</code> (no exemplo) é o que precisamos. Anote o nome da partição.</p>
+                </li>
+                <li>
+                    <h3>Passo 5: Monte a Partição e Instale o GRUB</h3>
+                    <p>Agora, vamos "montar" a partição e reinstalar o gerenciador de boot (<strong>GRUB</strong>) lá. Substitua <code>sda1</code> pelo nome da sua partição.</p>
+                    <pre><code>sudo mount /dev/sda1 /mnt</code></pre>
+                    <p>Depois use isto para reinstalar o GRUB:</p>
+                    <pre><code>sudo grub-install --boot-directory=/mnt/boot /dev/sda</code></pre>
+                    <p>Lembre-se, <code>/dev/sda</code> é seu disco inteiro, não a partição! Se você tiver certeza que é um sistema EFI/UEFI, a coisa pode ser ligeiramente diferente, mas, no geral, os comandos básicos permanecem.</p>
+                </li>
+                <li>
+                    <h3>Passo 6: Reinicie e confira</h3>
+                    <p>Desmonte a partição e reinicie a máquina. Se tudo correr bem, seu Linux deve inicializar sem problemas.</p>
+                    <pre><code>sudo umount /mnt
 sudo reboot</code></pre>
-            </section>
-        
-            <section>
-                <h2 id="sugestao-especial-antix">Uma Sugestão Especial: Use um Sistema Amigável como o antiX</h2>
-                <p>Se você é iniciante e o processo acima parece complicado, existe uma alternativa excelente: usar um sistema como o <strong>antiX</strong>.</p>
-                <p>O antiX é um sistema Linux leve e super rápido, baseado em Debian. Ele é ideal para computadores mais antigos, mas sua maior vantagem aqui é a sua coleção de <strong>ferramentas de reparo de boot</strong>.</p>
-                <ul>
-                    <li><strong>Por que o antiX?</strong> Ele tem um menu de boot completo, onde você pode facilmente encontrar opções para consertar o GRUB sem precisar digitar comandos complexos. Basta selecionar a ferramenta de reparo, seguir as instruções na tela e, na maioria dos casos, o problema será resolvido em poucos minutos. É uma verdadeira "caixa de ferramentas" para emergências.</li>
-                </ul>
-            </section>
-        
-            <section>
-                <h2 id="em-resumo">Em Resumo...</h2>
-                <p>Reparar o boot do Linux não precisa ser um pesadelo. Com um pendrive de instalação e alguns comandos simples no terminal, você pode resolver a maioria dos problemas. E se você quiser ainda mais facilidade, sistemas como o <strong>antiX</strong> oferecem ferramentas gráficas que simplificam o processo, tornando-o acessível até mesmo para quem está dando os primeiros passos no mundo do Linux.</p>
-                <p>Agora, reinicie seu computador e volte a usar seu sistema favorito! Se o problema persistir, procure a comunidade do seu sistema operacional para obter ajuda específica.</p>
-            </section>
-        </article>
+                </li>
+            </ol>
+            
+            <h2>Uma sugestão bem boa: use o antiX</h2>
+            <p>Para quem está começando e o processo é complicado, existe algo massa: usar um sistema como o antiX.</p>
+            
+            <p>O antiX é um Linux leve e MUITO rápido, baseado em Debian. Serve bem para computadores velhos, mas o melhor dele é que tem várias ferramentas de reparo do boot.</p>
+            
+            <p>Por que o antiX? Porque tem um menu de boot completo, lá você acha as opções pra consertar o GRUB, sem precisar digitar aqueles comandos chatos. Escolha a ferramenta de reparo, siga as indicações na tela. Na maioria das vezes, o problema desaparece rapidinho, tipo em minutos. Aquilo é, sem dúvida, uma "caixa de ferramentas" para aquelas emergências chatas.</p>
+            
+            <h2>Em suma</h2>
+            <p>Consertar a inicialização do Linux não precisa ser um tormento. Com um pendrive de instalação e uns comandos simples no terminal, é possível solucionar a maioria dos problemas. Além disso, pra quem busca ainda mais praticidade, sistemas tipo o antiX disponibilizam ferramentas gráficas que facilitam o processo, deixando-o acessível até pra quem tá começando no Linux.</p>
+        </section>
+
+                
 
     <div id="share" style="text-align:center;margin:15px 0"></div>
     <script async defer>
