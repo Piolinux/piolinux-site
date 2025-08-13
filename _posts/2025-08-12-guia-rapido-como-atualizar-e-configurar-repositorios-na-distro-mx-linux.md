@@ -10,11 +10,9 @@ description: "Um guia rápido e inteligente para atualizar e configurar reposit�
 
 
 <body>
-   <main>
+    <main>
         <section class="post-content">
-           
-                   
-            <p>Quer dar um gás no seu MX Linux?  Vamos desvendar como as ferramentas de automação do MX tornam tudo mais simples, tanto para quem está começando quanto para quem já manja, sem precisar de comandos complicados no terminal. Bora otimizar sua experiência com os repositórios Debian, facinho..</p>
+            <p>Quer dar um gás no seu MX Linux? Vamos desvendar como as ferramentas de automação do MX tornam tudo mais simples, tanto para quem está começando quanto para quem já manja, sem precisar de comandos complicados no terminal. Bora otimizar sua experiência com os repositórios Debian, facinho.</p>
             
             <h2>Visão Geral e Ferramentas</h2>
             <p>A automação esperta da Distro MX é uma benção e, às vezes, uma "maldição" também. É ótima porque simplifica muito, mas pode nos deixar com preguiça de pensar, né? Contudo, achar que o MX é uma distro comum é um erro; ele se destaca por sua inteligência e pelas ferramentas próprias.</p>
@@ -32,7 +30,7 @@ description: "Um guia rápido e inteligente para atualizar e configurar reposit�
             <ul>
                 <li><strong>Para os experientes:</strong> É bacana e eficiente configurar tudo que seria complicado nas telinhas fáceis, sem precisar ficar fuçando no terminal.</li>
                 <li><strong>Para quem está começando:</strong> Não precisar usar comandos no terminal ajuda muito na hora de escolher qual distribuição usar. Fica bem mais fácil aprender!</li>
-                <li><strong>Para quem não tem tempo a perder: Essa distribuição serve para todo mundo. O pessoal que criou essa versão fez umas mudanças para deixar o Debian mais fácil de usar, mas sem tirar a estabilidade e a força do sistema.</li>
+                <li><strong>Para quem não tem tempo a perder:</strong> Essa distribuição serve para todo mundo. O pessoal que criou essa versão fez umas mudanças para deixar o Debian mais fácil de usar, mas sem tirar a estabilidade e a força do sistema.</li>
             </ul>
         </section>
     </main>
