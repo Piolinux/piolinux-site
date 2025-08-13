@@ -31,7 +31,7 @@ description: "Um guia rápido e inteligente para atualizar e configurar reposit�
             
             <ul>
                 <li><strong>Para os experientes:</strong> É bacana e eficiente configurar tudo que seria complicado nas telinhas fáceis, sem precisar ficar fuçando no terminal.</li>
-                <li><strong>Para quem está começando: Não precisar usar comandos no terminal ajuda muito na hora de escolher qual distribuição usar. Fica bem mais fácil aprender!</li>
+                <li><strong>Para quem está começando:</strong> Não precisar usar comandos no terminal ajuda muito na hora de escolher qual distribuição usar. Fica bem mais fácil aprender!</li>
                 <li><strong>Para quem não tem tempo a perder: Essa distribuição serve para todo mundo. O pessoal que criou essa versão fez umas mudanças para deixar o Debian mais fácil de usar, mas sem tirar a estabilidade e a força do sistema.</li>
             </ul>
         </section>
