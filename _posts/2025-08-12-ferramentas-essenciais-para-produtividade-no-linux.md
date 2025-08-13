@@ -62,7 +62,7 @@ description: "Um guia completo sobre ferramentas essenciais para o dia a dia no 
             <h3>Pix: Seu Gerenciador e Editor de Imagens</h3>
             <p>O Pix é, tipo, um ótimo programa para ver e mexer nas suas fotos. Ele tem um editor de fotos que já vem dentro, bem bom, com uns efeitos simples. O programa tem 31 extensões (plugins), um monte para fazer coisas, tudo organizado em categorias, pensando nos usuários. Com isso, o Pix é bem legal pra quando precisa, rapidinho.</p>
             
-            <p>Pra instalar ele, use no terminal:</p>
+            <p>Para instalar ele, use no terminal:</p>
             <pre><code>sudo apt-get install pix</code></pre>
             
             <h2>Conclusão: A Força da Simplicidade e a Produtividade</h2>
