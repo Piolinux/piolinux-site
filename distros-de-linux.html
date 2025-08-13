@@ -25,7 +25,38 @@
 
 <style>
 	
-  header h1 {
+  /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+a {
+  color: #80ff00;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER */
+header {
+  background-color: #222;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
   color: #80ff00; /* verde Piolinux */
   font-size: 1.8rem;
   margin-right: 20px;
@@ -36,139 +67,108 @@ header h1 a {
   text-decoration: none;
 }
 
-	
-	
-  /* RESET */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Botão hamburguer (mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #80ff00;
+  font-size: 26px;
+  cursor: pointer;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ddd;
-    line-height: 1.6;
-  }
+/* Menu */
+.dropdown-menu {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+}
 
-  a {
-    color: #80ff00;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+.dropdown-menu > li {
+  position: relative;
+}
 
-  header {
-    background-color: #222;
-    padding: 10px 15px; /* 🔹 Menos padding lateral */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.dropdown-menu > li > a {
+  display: block;
+  padding: 6px 10px;
+  font-weight: bold;
+  color: #80ff00;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background-color: #1a1a1a;
+}
 
-  /* Botão hamburguer (mobile) */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #80ff00;
-    font-size: 26px;
-    cursor: pointer;
-  }
+.dropdown-menu > li:hover > a {
+  background-color: #333;
+}
 
-  /* Menu */
-  .dropdown-menu {
-    list-style: none;
-    display: flex;
-    gap: 6px; /* 🔹 Espaço reduzido */
-    align-items: center;
-    margin-left: 0; /* 🔹 Remove recuo */
-    padding-left: 0; /* 🔹 Remove recuo */
-  }
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+}
 
-  .dropdown-menu > li {
-    position: relative;
-  }
+.dropdown-content li a {
+  padding: 8px 12px;
+  display: block;
+  font-weight: normal;
+  color: #80ff00;
+}
 
-  .dropdown-menu > li > a {
-    display: block;
-    padding: 6px 10px; /* 🔹 Mais compacto */
-    font-weight: bold;
-    color: #80ff00;
-    border-radius: 4px;
-    transition: background 0.2s;
-    background-color: #1a1a1a;
-  }
+.dropdown-content li a:hover {
+  background-color: #444;
+}
 
-  .dropdown-menu > li:hover > a {
-    background-color: #333;
-  }
+.dropdown-menu > li:hover .dropdown-content {
+  display: block;
+}
 
-  /* Dropdown */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 160px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 0 0 4px 4px;
-    z-index: 1000;
-  }
+/* MAIN */
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
 
-  .dropdown-content li a {
-    padding: 8px 12px;
-    display: block;
-    font-weight: normal;
-    color: #80ff00;
-  }
+/* POST / SECTION */
+section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+}
 
-  .dropdown-content li a:hover {
-    background-color: #444;
-  }
+section h1, 
+section h2, 
+section h3 {
+  color: #80ff00;
+  margin-bottom: 12px;
+}
 
-  .dropdown-menu > li:hover .dropdown-content {
-    display: block;
-  }
+section p {
+  margin-bottom: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+}
 
-  /* Main */
-  main {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 0 15px;
-  }
-
-  /* Seções */
-  section {
-    background-color: #1e1e1e;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
-  }
-
-  section h1, 
-  section h2, 
-  section h3 {
-    color: #80ff00;
-    margin-bottom: 12px;
-  }
-
-  section p {
-    margin-bottom: 12px;
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.8;
-  }
-
-  footer {
-  background-color: #222;   /* fundo escuro */
-  color: #ffffff;           /* texto branco para contraste máximo */
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #ffffff;
   text-align: center;
   padding: 15px 10px;
   margin-top: 40px;
@@ -176,37 +176,67 @@ header h1 a {
 }
 
 footer a {
-  color: #ccff33;           /* verde-limão mais claro e com contraste aceitável */
-  font-weight: bold;        /* deixa o texto em negrito */
+  color: #ccff33;
+  font-weight: bold;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #ffec8b;           /* tom mais claro no hover */
-  font-weight: bold;        /* mantém o negrito no hover */
+  color: #ffec8b;
+  font-weight: bold;
 }
 
-
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-    .dropdown-menu {
-      flex-direction: column;
-      gap: 4px;
-      background-color: #222;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 200px;
-      padding: 10px;
-      display: none;
-    }
-    body.menu-open .dropdown-menu {
-      display: flex;
-    }
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
+  .dropdown-menu {
+    flex-direction: column;
+    gap: 4px;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    display: none;
+  }
+  body.menu-open .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* 🔹 Extra para garantir estilização dos posts no Jekyll */
+.post-content {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.post-content pre {
+  background: #111;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  color: #80ff00;
+}
+
+.post-content code {
+  background: #222;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #80ff00;
+}
+
 </style>
 
 </head>
@@ -269,78 +299,111 @@ footer a:hover {
             })();
         </script>
 
-        <section>
-            <h2>Distribuições Linux e seus Perfis</h2>
-            <ul>
-                <li>
-                    <h3 id="ubuntu">Ubuntu</h3>
-                    <p>Distribuição fácil de usar, ideal para iniciantes vindos do Windows. Teste-o no VirtualBox.</p>
-                    <p><strong>Ideal para:</strong> Quem busca simplicidade.</p>
-                </li>
-                <li>
-                    <h3 id="debian">Debian</h3>
-                    <p>Foco em estabilidade, ideal para quem quer evitar atualizações constantes.</p>
-                    <p><strong>Ideal para:</strong> Usuários que preferem tranquilidade.</p>
-                </li>
-                <li>
-                    <h3 id="devuan">Devuan</h3>
-                    <p>Fork do Debian sem systemd. Alta estabilidade, ideal para servidores.</p>
-                    <p><strong>Ideal para:</strong> Usuários que priorizam estabilidade e liberdade.</p>
-                </li>
-                <li>
-                    <h3 id="fedora">Fedora</h3>
-                    <p>Distribuição inovadora patrocinada pela Red Hat. Traz as últimas tecnologias.</p>
-                    <p><strong>Ideal para:</strong> Desenvolvedores e entusiastas.</p>
-                </li>
-                <li>
-                    <h3 id="arch">Arch Linux</h3>
-                    <p>Sistema minimalista e atualizado, requer conhecimento técnico.</p>
-                    <p><strong>Ideal para:</strong> Usuários avançados que querem controle total.</p>
-                </li>
-                <li>
-                    <h3 id="mint">Linux Mint</h3>
-                    <p>Focado na experiência out-of-the-box. Ótimo para usuários do Windows.</p>
-                    <p><strong>Ideal para:</strong> Iniciantes e uso doméstico.</p>
-                </li>
-                <li>
-                    <h3 id="opensuse">openSUSE</h3>
-                    <p>Oferece estabilidade e ferramentas como o YaST. Ótimo para sysadmins.</p>
-                    <p><strong>Ideal para:</strong> Usuários avançados e administradores.</p>
-                </li>
-                <li>
-                    <h3 id="kali">Kali Linux</h3>
-                    <p>Voltado para segurança da informação, com ferramentas de análise forense e pentest.</p>
-                    <p><strong>Ideal para:</strong> Profissionais de cibersegurança.</p>
-                </li>
-                <li>
-                    <h3 id="popos">Pop!_OS</h3>
-                    <p>Base Ubuntu, compatível com placas NVIDIA e ideal para games e criação.</p>
-                    <p><strong>Ideal para:</strong> Gamers e criadores de conteúdo.</p>
-                </li>
-                <li>
-                    <h3 id="manjaro">Manjaro</h3>
-                    <p>Baseado no Arch, com facilidade de instalação e pacotes atualizados.</p>
-                    <p><strong>Ideal para:</strong> Usuários que querem Arch sem complicação.</p>
-                </li>
-                <li>
-                    <h3 id="outras">Outras Distros Notáveis</h3>
-                    <p>Distribuições alternativas:</p>
-                    <ul>
-                        <li>CentOS Stream / AlmaLinux / Rocky Linux: Para servidores.</li>
-                        <li>Zorin OS: Visual familiar para ex-usuários de Windows.</li>
-                        <li>Parrot OS: Foco em segurança e privacidade.</li>
-                        <li>Slackware: Uma das distros mais antigas.</li>
-                        <li>Gentoo: Compilação otimizada e máxima personalização.</li>
-                        <li>Raspberry Pi OS: Ideal para Raspberry Pi.</li>
-                        <li>Linux Lite: Leve e ótimo para computadores antigos.</li>
-                    </ul>
-                    <p>A escolha ideal depende do seu perfil. Teste em máquinas virtuais antes de instalar.</p>
-                </li>
-            </ul>
-        </section>
         
-    </main>
+    <main>
+        <section class="post-content">
+            <h1>Qual Linux é a Sua Cara?</h1>
 
+            <p>Se você está pensando em mudar de sistema operacional e 
+            o Linux te chamou a atenção, massa! Tem um monte de opções, 
+            cada uma com sua pegada. Algumas Distros que variam de 
+            nivel do básico ao avançado:</p>
+
+            <div class="distro-item">
+                <h3>Ubuntu:</h3>
+                <ul>
+                    <li>O que é: Super fácil de usar, perfeita pra quem está saindo do Windows agora.</li>
+                    <li>Para quem: Quer começar a utilizar Linux, sem 
+                    complicações.</li>
+                    <li>Dica: Instala ela no VirtualBox pra testar antes de trocar de vez.</li>
+                </ul>
+            </div>
+
+            <div class="distro-item">
+                <h3>Debian:</h3>
+                <ul>
+                    <li>O que é: Estabilidade é o lema! Se você não curte ficar atualizando toda hora, essa é a pedida.</li>
+                    <li>Pra quem: Prioriza a paz de espírito.</li>
+                </ul>
+            </div>
+
+            <div class="distro-item">
+                <h3>Devuan:</h3>
+                <ul>
+                    <li>O que é: Uma versão do Debian sem o systemd (uma parada mais técnica). Continua super estável, tipo a Debian.</li>
+                    <li>Tipo de usuário: Que deseja estabilidade e ter mais liberdade nas escolhas do sistema.</li>
+                </ul>
+            </div>
+
+            <div class="distro-item">
+                <h3>Fedora:</h3>
+                <ul>
+                    <li>O que é: A mais moderninha, sempre com as últimas novidades, bancada pela Red Hat com todos os tipos de teste de programas.</li>
+                    <li>Tipo do usuário: Curte tecnologia e está sempre testando coisas novas.</li>
+                </ul>
+            </div>
+
+            <div class="distro-item">
+                <h3>Arch Linux:</h3>
+                <ul>
+                    <li>O que é: Minimalista ao extremo e sempre atualizada aos fãs mais hard. Precisa manjar um pouco pra usar.</li>
+                    <li>Pra quem: Quer ter controle total e sabe o que está fazendo.</li>
+                </ul>
+            </div>
+
+            <div class="distro-item">
+                <h3>Linux Mint:</h3>
+                <ul>
+                    <li>O que é: Já vem pronta pra usar, todos os sofware instalado e configurado. Ótima pra quem está vindo do Windows e deseja aprender Linux</li>
+                    <li>Tipo de usuários: Quer algo simples e prático pra usar em casa e seja fácil.</li>
+                </ul>
+            </div>
+
+            <div class="distro-item">
+                <h3>openSUSE:</h3>
+                <ul>
+                    <li>O que é: Estável e cheia de ferramentas, tipo o YaST, que ajuda a configurar o sistema.</li>
+                    <li> Entende de  adminstração de Sistema.</li>
+                </ul>
+            </div>
+
+            <div class="distro-item">
+                <h3>Kali Linux:</h3>
+                <ul>
+                    <li>O que é: Feita pra quem trabalha com segurança na internet, vem com um monte de programas pra testar e analisar sistemas.</li>
+                    <li>Desenvolvida para quem: É profissional de segurança e precisa dessas ferramentas ou apenas curioso.</li>
+                </ul>
+            </div>
+
+            <div class="distro-item">
+                <h3>Pop!_OS:</h3>
+                <ul>
+                    <li>O que é: Baseada no Ubuntu, mas turbinada pra placas NVIDIA. Top pra quem joga ou cria conteúdo segundo os comentários de Reddit não lá grande coisa.</li>
+                    <li>Tipo de usuário: Gamers e criadores!</li>
+                </ul>
+            </div>
+
+            <div class="distro-item">
+                <h3>Manjaro:</h3>
+                <ul>
+                    <li>O que é: Usa a base do Arch, mas é mais fácil de instalar e já vem com tudo pronto e uma comunidade ativa.</li>
+                    <li>Tipo de usuário: Quer usar o Arch, mas sem passar raiva na instalação.</li>
+                </ul>
+            </div>
+
+            <div class="distro-item">
+                <h3>Outras opções:</h3>
+                <ul>
+                    <li>Servidores: CentOS Stream, AlmaLinux e Rocky Linux são boas opções.</li>
+                    <li>Visual Familiar: Zorin OS é como se fosse um Windows, pra quem está acostumado.</li>
+                    <li>Segurança: Parrot OS foca em privacidade.</li>
+                    <li>Raiz: Slackware é uma das distros mais antigas que existem.</li>
+                    <li>Personalização: Gentoo permite que você escolha cada detalhe do sistema.</li>
+                </ul>
+            </div>
+
+        </section>
+    
    
 </body>
 </html>
