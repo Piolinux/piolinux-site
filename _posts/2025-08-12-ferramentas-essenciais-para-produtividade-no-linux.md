@@ -49,9 +49,9 @@ description: "Um guia completo sobre ferramentas essenciais para o dia a dia no 
             <p>Documentação e compartilhamento, às vezes pedem uma boa captura. O Ksnip e o Pix formam uma dupla perfeita para isso, viu?</p>
             
             <h3>Ksnip: Captura Manual e Eficiente 😂</h3>
-            <p>O Ksnip ajuda muito, faz capturas manuais e eficientes, em várias situações. Ele disponibiliza diversas alternativas úteis para você utilizar:</p>
+            <p>O Ksnip ajuda muito, faz capturas manuais e eficientes, em várias situações. :</p>
             <ul>
-                <li>Guarda fotos em diferentes formatos.</li>
+                <li>Armazena fotos em diversos formatos.</li>
                 <li>Compartilha as fotos no Imgur, né?</li>
                 <li>Deixa você colocar texto.</li>
             </ul>
