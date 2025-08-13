@@ -18,9 +18,9 @@ author: "Piolinux"
             <p>Em uma cidade digital tranquila, com seus ícones reluzentes e janelas abrindo suavemente, residia uma moça chamada Maria GUI. Maria, apaixonada por interfaces gráficas, era a maior entusiasta do universo! Para ela, o computador era tipo um parque de diversões, com cada clique se tornando uma nova aventura. Seu pior medo, contudo, era algo misterioso, escondido no canto escuro do sistema: o Terminal.</p>
 
             <h2>A Fobia Digital e o Aplicativo Misterioso</h2>
-            <p>O Terminal, para Maria, era um poço de letras, uma caixa de texto maldita, um lugar aonde somente os mestres do código e "hackers" ousavam se meter. Ela o evitava como podia, pois acreditava que a felicidade verdadeira morava na simplicidade dos botões e das barras de progresso.</p>
+            <p>Para Maria, o terminal era um bicho de sete cabeças. Só gente fera em código se aventurava por ali. Ela fugia dele como o diabo da cruz, preferindo a simplicidade dos botões e barras de progresso. Achava que a felicidade estava ali.</p>
 
-            <p>Certo dia, Maria GUI achou um aplicativo raro, “O Jogo da Aventura Infinita”, que prometia levá-la a terras nunca dantes exploradas. Toda empolgada, baixou e instalou o programa. Contudo, para seu desespero, o jogo simplesmente não iniciava. Surgia uma mensagem de erro genérica: “Dependência faltando. Por favor, corrija o erro.”</p>
+            <p>Um dia, Maria GUI topou com um app diferente, O Jogo da Aventura Infinita. Prometia mundos e fundos! Animada, ela baixou e instalou. Para o desalento dele, o jogo se recusava a funcionar. Uma mensagem de erro vaga indicava: Faltam dependências. Por favor, corrija o erro.</p>
 
             <h2>A Aflição de Maria GUI</h2>
             <p>Maria tentou de tudo mesmo. Ela procurou por alguma ferramenta gráfica para arrumar o problema, clicou em todos os botões de ajuda e até reiniciou a máquina, mas nada fez efeito. O Jogo da Aventura Infinita persistia como um mistério.</p>
