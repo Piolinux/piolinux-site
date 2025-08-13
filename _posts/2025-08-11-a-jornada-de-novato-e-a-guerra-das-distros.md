@@ -26,7 +26,7 @@ author: "Piolinux"
             
             <p>Novato, meio confuso, buscou contentar os dois lados. Aceitou a rapidez de Mestre Arch, logo depois, tentou instalar a interface toda bonitinha e os programas fáceis de usar, do Senhor Ubuntu. Pensou consigo: "Juntando a agilidade de um com a facilidade do outro, oh, que mundo perfeito tería!"</p>
             
-            <p>O caos veio forte. Os pacotes do Arch, tão acostumados com o "tudo do zero", entraram em choque com as dependências já feitas do Ubuntu. O sistema de Novato, que ia ser a mistura ideal, virou um bicho feio de três cabeças. A ventoinha rodava feito louca, a tela piscava cores doidas, e um barulhão estridente tomou conta da sala.</p>
+            <p>O caos veio forte. No Arch, a gente monta tudo na mão, sabe? Daí, quando fui misturar com as coisas prontas do Ubuntu, deu um choque! A ideia era ter o melhor dos dois mundos, mas virou uma bagunça. O computador começou a esquentar demais, a tela ficou com cores estranhas e um barulho irritante invadiu o quarto.</p>
             
             <p>Mestre Arch, lá do seu pico, berrou: "Eu sabia! Misturou minha filosofia pura com a preguiça deles!"</p>
             
