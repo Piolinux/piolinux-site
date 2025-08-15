@@ -25,7 +25,7 @@ description: "Um guia completo e nostálgico sobre duas ferramentas essenciais n
             <!-- Seção 1: DOSBox -->
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">DOSBox: Configurações e Jogos Antigos</h2>
             <p class="text-lg leading-relaxed mb-4">
-                Apesar de o DOSBox ser muito antigo, algumas de suas configurações de teclado podem ser um pouco difíceis, principalmente para quem está acostumado com padrões diferentes de teclados. Na época, não consegui mudar a teclas, mas a diversão era garantida. Para quem é saudosista, o DOSBox é a forma perfeita de reviver os jogos antigos. Para começar, você consegue baixá-lo via terminal e acessar os demos no site do desenvolvedor. Para instalar, digite no terminal:
+                Apesar de o DOSBox ser muito antigo, algumas de suas configurações de teclado podem ser um pouco difíceis, principalmente para quem está acostumado com padrões diferentes de teclados. Na época, não consegui mudar a teclas, mas a diversão era garantida. Para quem é saudosista, o DOSBox é a forma perfeita de reviver os jogos antigos em Dos. Para começar, você consegue baixá-lo via terminal e acessar os demos no site do desenvolvedor. Para instalar, digite no terminal:
             </p>
             <div class="bg-gray-800 text-white p-4 rounded-lg mb-6">
                 <pre><code class="font-mono">sudo apt-get install dosbox</code></pre>
@@ -37,7 +37,7 @@ description: "Um guia completo e nostálgico sobre duas ferramentas essenciais n
                 <pre><code class="font-mono">mount c /home/usuario/Jogos</code></pre>
             </div>
             <p class="text-lg leading-relaxed mb-8">
-                Era um jogo muito bom  Carmagedom! Para acessá-lo, você precisa digitar o nome da pasta em que o jogo está salvo. Lembre-se que a letra J de "Jogos" está em caixa alta. Tome cuidado, pois o DOSBox é sensível a maiúsculas e minúsculas! Apesar da dificuldade em configurar o teclado no padrão americano (Ctrl + F1), a experiência de jogar e correr era incrível, e o mais importante é que o jogo funcionava. A documentação completa pode ser chata de ler, mas em casos de problemas, ela está lá. O DOSBox é divertido para voltar aos tempos dos jogos com memória baixa.
+                Era um jogo muito bom  Carmagedom! Para acessá-lo, você precisa digitar o nome da pasta em que o jogo está salvo. Lembre-se que a letra J de "Jogos" está em caixa alta. Tome cuidado, pois o DOSBox é sensível a letras maiúsculas e minúsculas! Apesar das dificuldades em configurar o teclado no padrão americano (Ctrl + F1), a experiência de jogar com o jogo de corrida era incrível, e o mais importante é que o jogo funcionava. A documentação pode ser completa chata de ler, mas em casos de problemas, ela está lá. O DOSBox é divertido para voltar aos tempos dos jogos com memória baixa.
             </p>
 
             <!-- Seção 2: Double Commander -->
