@@ -42,7 +42,7 @@ author: "Piolinux"
         <section>
             <h2>Edição de Imagens com Shutter: Crie e Exponha suas Ideias</h2>
             <p>
-                Se você precisa fazer edições rápidas em imagens, o <strong>Shutter</strong> é a ferramenta ideal. Ele permite adicionar balões de diálogo, ícones e outros efeitos para descomplicada, perfeito para criar tutoriais e ilustrações. Para ediçoes de imagens complexas, você pode usar o GIMP, mas para o básico, o Shutter cumpre o prometido com perfeição.
+                Se você precisa fazer edições rápidas em imagens, o <strong>Shutter</strong> é a ferramenta ideal. Ele permite adicionar balões de diálogo, ícones e outros efeitos, perfeito para criar tutoriais e ilustrações. Para ediçoes de imagens complexas, você pode usar o GIMP, mas para o básico, o Shutter cumpre o prometido com perfeição.
             </p>
 <center><code> apt install shutter</code></center>
             <h3>Recursos inclusos de Edição de imagens através do Shutter</h3>
