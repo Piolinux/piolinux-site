@@ -61,7 +61,7 @@ sass:
 
 # Build settings
 #theme: minima
-plugins: - jekyll-sitemap
+plugins: 
   - jekyll-feed
  
   
