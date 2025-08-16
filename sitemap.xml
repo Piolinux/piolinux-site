@@ -6,6 +6,7 @@ sitemap:
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
 {% for page in site.pages %}
   {% if page.layout == nil or page.layout == "null" or page.exclude_from_sitemap %}
     {% continue %}
@@ -17,6 +18,7 @@ sitemap:
     {% endif %}
   </url>
 {% endfor %}
+
 {% for post in site.posts %}
   <url>
     <loc>{{ site.url }}{{ post.url }}</loc>
@@ -27,4 +29,20 @@ sitemap:
     {% endif %}
   </url>
 {% endfor %}
+
+{% for collection in site.collections %}
+  {% unless collection.output == false %}
+  {% for item in collection.docs %}
+  <url>
+    <loc>{{ site.url }}{{ item.url }}</loc>
+    {% if item.last_modified_at %}
+    <lastmod>{{ item.last_modified_at | date_to_xmlschema }}</lastmod>
+    {% else %}
+    <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
+    {% endif %}
+  </url>
+  {% endfor %}
+  {% endunless %}
+{% endfor %}
+
 </urlset>
