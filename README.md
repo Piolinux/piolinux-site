@@ -1,0 +1,2 @@
+O PioLinux é um site dedicado ao universo Linux, trazendo conteúdos leves, educativos e divertidos para usuários de todos os níveis. Aqui você encontra tutoriais simples, dicas práticas, curiosidades, piadas geeks e novidades sobre distribuições, terminal, interfaces e software livre. Tudo com uma linguagem acessível, sem complicações técnicas. Se você quer aprender Linux do seu jeito, com bom humor e clareza, o PioLinux é o seu lugar!
+
