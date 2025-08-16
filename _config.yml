@@ -45,7 +45,7 @@ params:
   viewport: "width=device-width, initial-scale=1.0"
   keywords: "linux, piadas linux, humor, terminal, programador, nerd, geek, open source, shell, bash"
   author: "Piolinux"
-  robots: "index,nofollow"
+  robots: "index,follow"
   google_site_verification: "CYb2xvKexfThXkcKdSjVEpHIMY--b1rAvFbjqjJwtlQ"
   cache_control: "no-cache, no-store, must-revalidate"
   pragma: "no-cache"
