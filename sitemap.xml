@@ -7,41 +7,21 @@ sitemap:
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-{% for page in site.pages %}
-  {% if page.layout == nil or page.layout == "null" or page.exclude_from_sitemap %}
-    {% continue %}
-  {% endif %}
+{% for page in site.html_pages %}
+  {% unless page.url contains 'sitemap' or page.url contains 'feed.xml' %}
   <url>
     <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
-    {% if page.sitemap.lastmod %}
-    <lastmod>{{ page.sitemap.lastmod | date_to_xmlschema }}</lastmod>
+    {% if page.last_modified_at %}
+    <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+    {% else %}
+    <lastmod>{{ page.date | default: site.time | date_to_xmlschema }}</lastmod>
     {% endif %}
   </url>
+  {% endunless %}
 {% endfor %}
 
-{% for post in site.posts %}
-  <url>
-    <loc>{{ site.url }}{{ post.url }}</loc>
-    {% if post.last_modified_at %}
-    <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
-    {% else %}
-    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-    {% endif %}
-  </url>
-{% endfor %}
+</urlset>
 
-{% for collection in site.collections %}
-  {% unless collection.output == false %}
-  {% for item in collection.docs %}
-  <url>
-    <loc>{{ site.url }}{{ item.url }}</loc>
-    {% if item.last_modified_at %}
-    <lastmod>{{ item.last_modified_at | date_to_xmlschema }}</lastmod>
-    {% else %}
-    <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
-    {% endif %}
-  </url>
-  {% endfor %}
   {% endunless %}
 {% endfor %}
 
