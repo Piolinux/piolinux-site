@@ -2,6 +2,7 @@
 layout: default
 title: "Editores de Texto no Linux: Os Melhores pra você conhecer!"
 author: "Piolinux"
+description: "Descubra os melhores editores de texto para Linux, desde opções simples para iniciantes até ferramentas poderosas para programadores. Encontre o editor ideal para as suas necessidades e aumente a sua produtividade."
 date: 2025-08-15
 tags: [linux, editores de texto, software,produtividade,opensource]
 category: Linux
