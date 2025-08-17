@@ -220,20 +220,7 @@ footer a:hover {
 
  <main>
     <article>
-      <!-- Cabeçalho do Post: Título e Tags Centralizadas -->
-      <div class="post-header">
-        <h1>{{ page.title }}</h1>
-        <p class="date">{{ page.date | date: "%B %-d, %Y" }}</p>
-
-        {% if page.tags.size > 0 %}
-          <div class="post-tags-container">
-            {% for tag in page.tags %}
-              <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="post-tag">#{{ tag }}</a>
-            {% endfor %}
-          </div>
-        {% endif %}
-      </div>
-      
+            
       <!-- Conteúdo do Post com estilo de seção -->
       <section class="post-content">
         {{ content }}
