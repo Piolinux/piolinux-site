@@ -1,5 +1,11 @@
 <header>
-  <h1 class="site-title"><a href="{{ '/' | relative_url }}">Piolinux</a></h1>
+ <h1 class="site-title">
+  <a href="{{ '/' | relative_url }}">
+    <img src="{{ '/assets/tux-logo.png' | relative_url }}" alt="Logo Piolinux" style="height: 40px; margin-right: 10px;">
+    Piolinux
+  </a>
+</h1>
+
   <div class="menu-container">
     <button class="menu-toggle" aria-label="Abrir menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
     <nav class="dropdown-menu-container">
