@@ -211,7 +211,7 @@ footer a:hover {
 
 </head>
 <body>
-  <header>
+  
     <header>
   <h1 class="site-title"><a href="/">Piolinux</a></h1>
   <div class="menu-container">
@@ -236,7 +236,6 @@ footer a:hover {
       </ul>
     </nav>
   </div>
-</header>
 
   </header>
 
@@ -245,13 +244,8 @@ footer a:hover {
   <body>
 
     
-    <main>
 		
 		
-        <section>
-           <p>Bem-vindo à nossa coleção definitiva de dicas de Linux. Se você está começando sua jornada no mundo do pinguim ou já é um veterano procurando por atalhos e truques, este guia foi feito para você. Navegue pelas categorias para descobrir comandos essenciais, otimizações de produtividade e truques de segurança que transformarão sua experiência no terminal.</p>
-
-        </section>
 
 		<div id="share" style="text-align:center;margin:15px 0"></div>
     <script async defer>
@@ -285,148 +279,127 @@ footer a:hover {
         });
       })();
     </script>
-        <section>
-            <h2>Navegação e Manipulação de Arquivos</h2>
-            <ol>
-                <li><strong><code>ls</code></strong>: Lista arquivos e diretórios na pasta atual. Use <code>ls -l</code> para ver detalhes como permissões, proprietário e tamanho.</li>
-                <li><strong><code>cd</code></strong>: Navega entre diretórios. Por exemplo, <code>cd /home/usuario</code> te leva para o diretório "usuario".</li>
-                <li><strong><code>cd ..</code></strong>: Volta para o diretório anterior (sobe um nível na hierarquia de pastas).</li>
-                <li><strong><code>pwd</code></strong>: Exibe o caminho completo do diretório em que você está.</li>
-                <li><strong><code>cp</code></strong>: Copia arquivos. Exemplo: <code>cp arquivo.txt /caminho/para/destino/</code>.</li>
-                <li><strong><code>mv</code></strong>: Move ou renomeia arquivos. Use <code>mv arquivo.txt /caminho/para/destino/</code> para mover e <code>mv arquivo1.txt arquivo2.txt</code> para renomear.</li>
-                <li><strong><code>rm</code></strong>: Apaga arquivos permanentemente. <strong>Cuidado, pois não há lixeira!</strong></li>
-                <li><strong><code>rm -r</code></strong>: Apaga diretórios e tudo o que há dentro deles. Use <code>rm -r nome_do_diretorio</code>.</li>
-                <li><strong><code>mkdir</code></strong>: Cria um novo diretório. Exemplo: <code>mkdir nova_pasta</code>.</li>
-            </ol>
-        </section>
 
-        <section>
-            <h2>Visualização e Busca</h2>
-            <ol start="10">
-                <li><strong><code>cat</code></strong>: Mostra o conteúdo completo de um arquivo de texto no terminal.</li>
-                <li><strong><code>less</code> ou <code>more</code></strong>: Para arquivos grandes, permite rolar o conteúdo para frente e para trás, facilitando a leitura.</li>
-                <li><strong><code>find</code></strong>: Procura por arquivos em diretórios. Exemplo: <code>find /home -name "documento.pdf"</code> busca por arquivos com o nome "documento.pdf" a partir do diretório <code>/home</code>.</li>
-                <li><strong><code>grep</code></strong>: Procura por um padrão de texto dentro de arquivos. Exemplo: <code>grep "erro" arquivo.log</code> mostra todas as linhas que contêm a palavra "erro".</li>
-                <li><strong><code>history</code></strong>: Exibe uma lista dos comandos executados anteriormente.</li>
-                <li><strong><code>history | grep comando</code></strong>: Combina os comandos <code>history</code> e <code>grep</code> para encontrar um comando específico que você usou no passado.</li>
-                <li><strong><code>locate</code></strong>: Busca arquivos de forma rápida usando um banco de dados.</li>
-                <li><strong><code>head</code></strong>: Mostra as primeiras 10 linhas de um arquivo.</li>
-                <li><strong><code>tail</code></strong>: Mostra as últimas 10 linhas de um arquivo. Use <code>tail -f arquivo.log</code> para monitorar o arquivo em tempo real.</li>
-            </ol>
-        </section>
+<body>
 
-        <section>
-            <h2>Gerenciamento de Sistema e Processos</h2>
-            <ol start="19">
-                <li><strong><code>df -h</code></strong>: Mostra o espaço livre e usado em seu disco rígido em um formato fácil de ler.</li>
-                <li><strong><code>du -sh *</code></strong>: Exibe o tamanho total de cada arquivo e diretório na pasta atual.</li>
-                <li><strong><code>top</code></strong>: Monitore processos em tempo real, mostrando o uso da CPU, memória e outros dados.</li>
-                <li><strong><code>htop</code> ou <code>glances</code></strong>: Versões mais interativas e visualmente agradáveis do comando <code>top</code>.</li>
-                <li><strong><code>ps aux</code></strong>: Lista todos os processos ativos no sistema, com detalhes como o usuário que os executa.</li>
-                <li><strong><code>kill PID</code></strong>: Encerra um processo usando seu ID (PID). O PID pode ser obtido com <code>top</code> ou <code>ps aux</code>.</li>
-                <li><strong><code>killall</code></strong>: Encerra todos os processos com um nome específico. Exemplo: <code>killall firefox</code> fecha todas as janelas do Firefox.</li>
-                <li><strong><code>uptime</code></strong>: Mostra há quanto tempo o sistema está em execução.</li>
-                <li><strong><code>free -h</code></strong>: Exibe a quantidade de memória RAM livre e usada, em um formato legível.</li>
-                <li><strong><code>swapon -s</code></strong>: Checa o uso de espaço de swap.</li>
-                <li><strong><code>sudo reboot</code></strong>: Reinicia o sistema.</li>
-                <li><strong><code>sudo halt</code></strong>: Desliga o sistema.</li>
-                <li><strong><code>watch -n 1 comando</code></strong>: Executa um comando repetidamente, a cada segundo (<code>-n 1</code>), mostrando a saída em tempo real.</li>
-            </ol>
-        </section>
+<div class="container">
+    <p>E aí! Pessoalmente, acho que a melhor parte do Linux é que ele te dá um superpoder, e esse poder mora ali, no terminal. Sei que pode dar um certo frio na barriga, mas pensa nisto como um atalho secreto que eu vou-te ensinar. Acredita em mim, não é tão complicado assim.</p>
 
-        <section>
-            <h2>Instalação e Atualização de Pacotes</h2>
-            <ol start="32">
-                <li><strong><code>sudo apt update && sudo apt upgrade</code></strong>: (Para Debian/Ubuntu) Atualiza a lista de pacotes e, em seguida, atualiza todos os pacotes instalados para suas versões mais recentes.</li>
-                <li><strong><code>sudo dnf update</code></strong>: (Para Fedora/RedHat) Realiza a mesma função de atualização de pacotes.</li>
-                <li><strong><code>sudo pacman -Syu</code></strong>: (Para Arch Linux) Atualiza o sistema.</li>
-                <li><strong><code>sudo apt install nome_do_programa</code></strong>: (Para Debian/Ubuntu) Instala um novo programa a partir dos repositórios.</li>
-                <li><strong><code>sudo dnf install nome_do_programa</code></strong>: (Para Fedora/RedHat) Instala um novo programa a partir dos repositórios.</li>
-                <li><strong><code>sudo apt remove nome_do_programa</code></strong>: Desinstala um programa, mas mantém seus arquivos de configuração.</li>
-                <li><strong><code>sudo apt purge nome_do_programa</code></strong>: Desinstala um programa e também remove seus arquivos de configuração.</li>
-                <li><strong><code>sudo apt autoremove</code></strong>: Remove pacotes que não são mais necessários.</li>
-                <li><strong><code>sudo apt clean</code></strong>: Limpa o cache de pacotes baixados, liberando espaço em disco.</li>
-                <li><strong><code>apt list --upgradable</code></strong>: Lista todos os pacotes que têm uma atualização disponível.</li>
-                <li><strong><code>dpkg -l</code></strong>: Lista todos os pacotes <code>.deb</code> instalados no sistema.</li>
-                <li><strong><code>snap list</code> ou <code>flatpak list</code></strong>: Lista aplicativos instalados usando os formatos Snap ou Flatpak.</li>
-            </ol>
-        </section>
+    <p>Vamos a isto. Prepare-se para uma viagem completa, porque eu juntei as 80 melhores dicas para te ajudar em qualquer situação!</p>
 
-        <section>
-            <h2>Permissões e Propriedade</h2>
-            <ol start="45">
-                <li><strong><code>ls -l</code></strong>: Exibe as permissões detalhadas de arquivos e diretórios.</li>
-                <li><strong><code>chmod +x script.sh</code></strong>: Dá permissão de execução a um arquivo de script.</li>
-                <li><strong><code>chmod 755 arquivo</code></strong>: Altera as permissões usando notação numérica (rwx para dono, r-x para grupo e outros).</li>
-                <li><strong><code>chown usuario:grupo arquivo.txt</code></strong>: Altera o dono e o grupo de um arquivo. Necessita de permissões de superusuário (root).</li>
-                <li><strong><code>adduser</code> e <code>addgroup</code></strong>: Cria novos usuários e grupos no sistema.</li>
-                <li><strong><code>su nome_do_usuario</code></strong>: Troca para outro usuário no terminal.</li>
-                <li><strong><code>sudo</code></strong>: Executa um comando com privilégios de superusuário.</li>
-            </ol>
-        </section>
+    <h2>Navegação e Manipulação de Ficheiros</h2>
+    <h3>Para te Moveres e Organizar as Tuas Coisas</h3>
+    <ul>
+        <li>Para ver o que há à tua volta, usa o comando <strong><code>ls</code></strong>. Para mais detalhes, usa <strong><code>ls -l</code></strong>.</li>
+        <li>Para te moveres, usa o <strong><code>cd</code></strong>. Para ir para "Documentos", usa <code>cd Documentos</code>. Para voltar, <code>cd ..</code>.</li>
+        <li>Se te perderes, <strong><code>pwd</code></strong> diz-te exatamente onde estás. É o teu GPS.</li>
+        <li>Para copiar ficheiros, é o <strong><code>cp</code></strong>. Para mover ou mudar o nome, usa o <strong><code>mv</code></strong>.</li>
+        <li>Para apagar, usa <strong><code>rm</code></strong>. Mas tem cuidado, não há cesto do lixo! Para apagar uma pasta inteira, usa <strong><code>rm -r nome_da_pasta</code></strong>.</li>
+        <li>Para criar uma pasta nova, <strong><code>mkdir nova_pasta</code></strong>.</li>
+    </ul>
 
-        <section>
-            <h2>Redes e Conexões</h2>
-            <ol start="52">
-                <li><strong><code>ip a</code> ou <code>ifconfig</code></strong>: Mostra o endereço IP da sua máquina e outras informações de rede.</li>
-                <li><strong><code>hostname</code></strong>: Exibe o nome da sua máquina na rede.</li>
-                <li><strong><code>ping</code></strong>: Testa a conectividade com outro computador na rede ou na internet.</li>
-                <li><strong><code>traceroute</code></strong>: Mostra o caminho que os dados percorrem para chegar a um destino na rede.</li>
-                <li><strong><code>netstat</code> ou <code>ss</code></strong>: Exibe as conexões de rede ativas, tabelas de roteamento e estatísticas da interface.</li>
-                <li><strong><code>nc</code></strong>: O comando "netcat" é uma ferramenta versátil para testes de rede e transferências de dados.</li>
-                <li><strong><code>ufw</code> ou <code>firewalld</code></strong>: Comandos para gerenciar o firewall, controlando quais conexões são permitidas.</li>
-                <li><strong><code>ssh</code></strong>: Conecta-se a outro computador via terminal de forma segura.</li>
-            </ol>
-        </section>
+    <h2>Visualização e Busca</h2>
+    <h3>O Teu Detetive Particular</h3>
+    <ul>
+        <li>Para ler um ficheiro, <strong><code>cat nome_do_ficheiro</code></strong>. Se for muito grande, usa <strong><code>less</code></strong> ou <strong><code>more</code></strong>.</li>
+        <li>Para encontrar um ficheiro, usa <strong><code>find</code></strong>. Exemplo: <code>find /home -name "contrato.pdf"</code>.</li>
+        <li>Para encontrar palavras dentro de ficheiros, usa <strong><code>grep</code></strong>. Exemplo: <code>grep "erro" logfile.log</code>.</li>
+        <li>Para ver o histórico de comandos, usa <strong><code>history</code></strong>. Para procurar algo no histórico, <code>history | grep comando</code>.</li>
+        <li>Usa <strong><code>locate</code></strong> para encontrar ficheiros de forma super rápida.</li>
+        <li>Para ver o início de um ficheiro, <strong><code>head nome_do_ficheiro</code></strong>. Para o fim, <strong><code>tail nome_do_ficheiro</code></strong>. Para ver em tempo real, <code>tail -f nome_do_ficheiro</code>.</li>
+    </ul>
 
-        <section>
-            <h2>Compactação e Descompactação</h2>
-            <ol start="61">
-                <li><strong><code>tar -czvf arquivo.tar.gz pasta/</code></strong>: Compacta a pasta usando gzip.</li>
-                <li><strong><code>tar -xzvf arquivo.tar.gz</code></strong>: Descompacta um arquivo gzip.</li>
-                <li><strong><code>tar -tf arquivo.tar.gz</code></strong>: Vê o conteúdo de um arquivo compactado sem extrair.</li>
-                <li><strong><code>zip -r arquivo.zip pasta/</code></strong>: Compacta uma pasta em um arquivo .zip.</li>
-                <li><strong><code>unzip arquivo.zip</code></strong>: Descompacta um arquivo .zip.</li>
-                <li><strong><code>gzip arquivo.txt</code></strong>: Compacta um único arquivo, resultando em <code>arquivo.txt.gz</code>.</li>
-                <li><strong><code>gunzip arquivo.txt.gz</code></strong>: Descompacta um arquivo gzip.</li>
-            </ol>
-        </section>
+    <h2>Gerenciamento de Sistema e Processos</h2>
+    <h3>O Teu Painel de Controlo</h3>
+    <ul>
+        <li>Para ver o espaço no disco, <strong><code>df -h</code></strong>. Para ver o tamanho das pastas, <strong><code>du -sh *</code></strong>.</li>
+        <li>Para ver o que está a ser executado, usa <strong><code>top</code></strong>. Versões mais bonitas são <strong><code>htop</code></strong> e <strong><code>glances</code></strong>.</li>
+        <li>Para ver todos os processos, <strong><code>ps aux</code></strong>.</li>
+        <li>Para matar um processo, <strong><code>kill PID</code></strong> (onde PID é o número do processo). Para matar todos com um nome, <strong><code>killall firefox</code></strong>.</li>
+        <li>Para ver há quanto tempo o teu sistema está ligado, <strong><code>uptime</code></strong>.</li>
+        <li>Para ver a memória RAM, <strong><code>free -h</code></strong>. Para ver o espaço de swap, <strong><code>swapon -s</code></strong>.</li>
+        <li>Para reiniciar, <strong><code>sudo reboot</code></strong>. Para desligar, <strong><code>sudo halt</code></strong>.</li>
+        <li>Para ver algo em tempo real, <strong><code>watch -n 1 comando</code></strong>.</li>
+    </ul>
 
-        <section>
-            <h2>Ferramentas e Utilitários</h2>
-            <ol start="68">
-                <li><strong><code>nano</code> ou <code>vim</code></strong>: Editores de texto para usar no terminal. <code>nano</code> é mais simples para iniciantes, enquanto <code>vim</code> é mais poderoso.</li>
-                <li><strong><code>wget</code> ou <code>curl</code></strong>: Baixa arquivos de um endereço na internet.</li>
-                <li><strong><code>ln -s</code></strong>: Cria um link simbólico, que é um atalho para outro arquivo ou diretório.</li>
-                <li><strong><code>man comando</code></strong>: Exibe o manual de qualquer comando do Linux, detalhando suas opções e uso.</li>
-                <li><strong><code>alias</code></strong>: Cria atalhos para comandos longos.</li>
-                <li><strong><code>cron</code></strong>: Agende tarefas para serem executadas automaticamente em horários específicos.</li>
-                <li><strong><code>neofetch</code></strong>: Exibe informações detalhadas e estilizadas sobre o seu sistema em um formato visualmente agradável.</li>
-                <li><strong><code>lshw</code></strong>: Mostra informações detalhadas de hardware.</li>
-                <li><strong><code>lscpu</code></strong>: Exibe informações sobre o processador.</li>
-                <li><strong><code>mount</code> e <code>umount</code></strong>: Monta e desmonta dispositivos de armazenamento, como pen drives.</li>
-            </ol>
-        </section>
+    <h2>Instalação e Atualização de Programas</h2>
+    <h3>A Tua Loja de Aplicações</h3>
+    <ul>
+        <li>Em Debian/Ubuntu: <strong><code>sudo apt update && sudo apt upgrade</code></strong> (atualiza tudo!).</li>
+        <li>Em Fedora/RedHat: <strong><code>sudo dnf update</code></strong>. Em Arch Linux: <strong><code>sudo pacman -Syu</code></strong>.</li>
+        <li>Para instalar, <strong><code>sudo apt install nome_do_programa</code></strong>. Ou <strong><code>sudo dnf install nome_do_programa</code></strong>.</li>
+        <li>Para remover, <strong><code>sudo apt remove nome_do_programa</code></strong>. Para remover tudo, incluindo as configurações, <strong><code>sudo apt purge</code></strong>.</li>
+        <li>Para limpar o lixo, <strong><code>sudo apt autoremove</code></strong> e <strong><code>sudo apt clean</code></strong>.</li>
+        <li>Para ver o que precisa ser atualizado, <strong><code>apt list --upgradable</code></strong>.</li>
+        <li>Para listar os programas instalados, <strong><code>dpkg -l</code></strong>. Para ver apps Snap, <strong><code>snap list</code></strong>, e Flatpak, <strong><code>flatpak list</code></strong>.</li>
+    </ul>
 
-        <section>
-            <h2>Truques e Atalhos Úteis</h2>
-            <ol start="78">
-                <li><strong><code>Tab</code></strong>: Ativa o autocomplete. Pressione a tecla <code>Tab</code> para completar nomes de arquivos, diretórios e comandos, economizando tempo e evitando erros.</li>
-                <li><strong><code>sudo !!</code></strong>: Repete o comando anterior, mas com privilégios de superusuário (root). Perfeito para quando você esquece de usar <code>sudo</code>.</li>
-                <li><strong><code>comando &</code></strong>: Executa um comando em segundo plano, liberando o terminal para outras tarefas. Use <code>fg</code> para trazer o processo de volta para o primeiro plano.</li>
-                <li><strong><code>comando1 | comando2</code> (Pipe)</strong>: Envia a saída do <code>comando1</code> como entrada para o <code>comando2</code>. Exemplo: <code>ls -l | less</code> para ver a lista de arquivos de forma paginada.</li>
-                <li><strong><code>comando1 ; comando2</code></strong>: Executa o <code>comando1</code> e, em seguida, o <code>comando2</code>, independentemente do resultado.</li>
-                <li><strong><code>comando1 && comando2</code></strong>: Executa o <code>comando2</code> somente se o <code>comando1</code> for bem-sucedido.</li>
-                <li><strong><code>Ctrl + C</code></strong>: Encerra um processo ou comando que está em execução.</li>
-                <li><strong><code>Ctrl + D</code></strong>: Fecha o terminal ou encerra a sessão.</li>
-            </ol>
-        </section>
-        
-    </main>
+    <h2>Permissões e Propriedade</h2>
+    <h3>Quem Manda Aqui?</h3>
+    <ul>
+        <li>Vê as permissões com <strong><code>ls -l</code></strong>.</li>
+        <li>Para dar permissão de execução a um ficheiro, <strong><code>chmod +x script.sh</code></strong>. Para dar permissões específicas, <code>chmod 755 arquivo</code>.</li>
+        <li>Para mudar o dono de um ficheiro, <strong><code>chown usuario:grupo arquivo.txt</code></strong>.</li>
+        <li>Para criar um novo utilizador, <strong><code>adduser</code></strong>. Para um grupo, <strong><code>addgroup</code></strong>.</li>
+        <li>Para mudar de utilizador, <strong><code>su nome_do_utilizador</code></strong>. Para ter superpoderes, <strong><code>sudo</code></strong>.</li>
+    </ul>
 
-    
+    <h2>Redes e Conexões</h2>
+    <h3>A Tua Linha Direta com o Mundo</h3>
+    <ul>
+        <li>Para ver o teu endereço IP, usa <strong><code>ip a</code></strong> ou <strong><code>ifconfig</code></strong>.</li>
+        <li>Para ver o nome da tua máquina, <strong><code>hostname</code></strong>.</li>
+        <li>Para testar a conexão com um site, <strong><code>ping google.com</code></strong>. Para ver o caminho, <strong><code>traceroute</code></strong>.</li>
+        <li>Para ver as conexões ativas, <strong><code>netstat</code></strong> ou <strong><code>ss</code></strong>.</li>
+        <li><strong><code>nc</code></strong> (netcat) é uma ferramenta super versátil para testes de rede.</li>
+        <li>Para gerir o teu firewall, usa <strong><code>ufw</code></strong> ou <strong><code>firewalld</code></strong>.</li>
+        <li>Para te ligares a outro computador, <strong><code>ssh</code></strong>.</li>
+    </ul>
+
+    <h2>Compactação e Descompactação</h2>
+    <h3>Para Organizar Tudo</h3>
+    <ul>
+        <li>Para compactar uma pasta (tar.gz), usa <strong><code>tar -czvf arquivo.tar.gz pasta/</code></strong>.</li>
+        <li>Para descompactar, <strong><code>tar -xzvf arquivo.tar.gz</code></strong>. Para ver o que tem dentro sem extrair, <strong><code>tar -tf arquivo.tar.gz</code></strong>.</li>
+        <li>Para compactar para um ficheiro .zip, usa <strong><code>zip -r arquivo.zip pasta/</code></strong>. Para descompactar, <strong><code>unzip</code></strong>.</li>
+        <li>Para compactar um único ficheiro, <strong><code>gzip arquivo.txt</code></strong>. Para descompactar, <strong><code>gunzip</code></strong>.</li>
+    </ul>
+
+    <h2>Ferramentas e Utilitários</h2>
+    <h3>Os Ajudantes do Dia a Dia</h3>
+    <ul>
+        <li>Para editar texto no terminal, usa <strong><code>nano</code></strong> (para iniciantes) ou <strong><code>vim</code></strong> (para os mais avançados).</li>
+        <li>Para descarregar ficheiros da internet, usa <strong><code>wget</code></strong> ou <strong><code>curl</code></strong>.</li>
+        <li>Para criar um atalho, usa <strong><code>ln -s</code></strong>.</li>
+        <li>Para ver o manual de qualquer comando, <strong><code>man comando</code></strong>.</li>
+        <li>Para criar os teus próprios atalhos, <strong><code>alias</code></strong>.</li>
+        <li>Para agendar tarefas, <strong><code>cron</code></strong>.</li>
+        <li>Para ver um resumo bonito do teu sistema, <strong><code>neofetch</code></strong>.</li>
+        <li>Para ver informações do hardware, <strong><code>lshw</code></strong>. Para a CPU, <strong><code>lscpu</code></strong>.</li>
+        <li>Para ligar e desligar pen drives, usa <strong><code>mount</code></strong> e <strong><code>umount</code></strong>.</li>
+    </ul>
+
+    <h2>Truques e Atalhos que Salvam a Vida</h2>
+    <h3>Os Segredos do Pinguim</h3>
+    <ul>
+        <li>A tecla **<code>Tab</code>** é a tua melhor amiga para o auto-completar.</li>
+        <li>Esqueceste-te do <code>sudo</code>? Escreve <strong><code>sudo !!</code></strong> e ele repete o comando.</li>
+        <li>Para executar em segundo plano, usa <strong><code>&</code></strong> no final do comando.</li>
+        <li>O **<code>|</code>** (pipe) é magia. Ele envia a saída de um comando para o próximo. Exemplo: <code>ls -l | less</code>.</li>
+        <li>Para executar um comando após o outro, <strong><code>comando1 ; comando2</code></strong>.</li>
+        <li>Para executar um comando só se o anterior funcionar, <strong><code>comando1 && comando2</code></strong>.</li>
+        <li>Para parar um processo, **<code>Ctrl + C</code>**.</li>
+        <li>Para fechar o terminal, **<code>Ctrl + D</code>**.</li>
+    </ul>
+
+    <p>No final das contas, o mais importante é não ter medo. Começa por brincar um pouco, tenta as coisas, comete erros (e usa o Google para os corrigires!). O terminal é uma ferramenta incrível, e a tua aventura com ele está apenas a começar.</p>
+</div>
+
 </body>
 </html>
+
+       
+
 
 </main>
 
