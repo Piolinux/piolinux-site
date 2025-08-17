@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Que é Linux</title>
+  <meta name="description" content="Dicas de Linux para todos: aprenda comandos, truques e configurações de forma simples, com explicações acessíveis e bom humor!">
+  <meta name="keywords" content="linux, dicas linux, comandos linux, terminal, sysadmin, ubuntu, debian, fedora, shell script, piolinux">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Piolinux">
+  
+    <link rel="canonical" href="https://piolinux.com/guia-completo-de-linux.html" />
+  
+
+  <!-- Outros meta e links CSS -->
+  
+  
+  
+  
+</head>
+
+
+
+
+
+<style>
+	
+  header h1 {
+  color: #80ff00; /* verde Piolinux */
+  font-size: 1.8rem;
+  margin-right: 20px;
+}
+
+header h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+	
+	
+  /* RESET */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ddd;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #80ff00;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  header {
+    background-color: #222;
+    padding: 10px 15px; /* 🔹 Menos padding lateral */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Botão hamburguer (mobile) */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #80ff00;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  /* Menu */
+  .dropdown-menu {
+    list-style: none;
+    display: flex;
+    gap: 6px; /* 🔹 Espaço reduzido */
+    align-items: center;
+    margin-left: 0; /* 🔹 Remove recuo */
+    padding-left: 0; /* 🔹 Remove recuo */
+  }
+
+  .dropdown-menu > li {
+    position: relative;
+  }
+
+  .dropdown-menu > li > a {
+    display: block;
+    padding: 6px 10px; /* 🔹 Mais compacto */
+    font-weight: bold;
+    color: #80ff00;
+    border-radius: 4px;
+    transition: background 0.2s;
+    background-color: #1a1a1a;
+  }
+
+  .dropdown-menu > li:hover > a {
+    background-color: #333;
+  }
+
+  /* Dropdown */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 160px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0 0 4px 4px;
+    z-index: 1000;
+  }
+
+  .dropdown-content li a {
+    padding: 8px 12px;
+    display: block;
+    font-weight: normal;
+    color: #80ff00;
+  }
+
+  .dropdown-content li a:hover {
+    background-color: #444;
+  }
+
+  .dropdown-menu > li:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Main */
+  main {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  /* Seções */
+  section {
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+  }
+
+  section h1, 
+  section h2, 
+  section h3 {
+    color: #80ff00;
+    margin-bottom: 12px;
+  }
+
+  section p {
+    margin-bottom: 12px;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.8;
+  }
+
+  footer {
+  background-color: #222;   /* fundo escuro */
+  color: #ffffff;           /* texto branco para contraste máximo */
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ccff33;           /* verde-limão mais claro e com contraste aceitável */
+  font-weight: bold;        /* deixa o texto em negrito */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffec8b;           /* tom mais claro no hover */
+  font-weight: bold;        /* mantém o negrito no hover */
+}
+
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+    .dropdown-menu {
+      flex-direction: column;
+      gap: 4px;
+      background-color: #222;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 200px;
+      padding: 10px;
+      display: none;
+    }
+    body.menu-open .dropdown-menu {
+      display: flex;
+    }
+  }
+</style>
+
+</head>
+<body>
+  <header>
+    <header>
+  <h1 class="site-title"><a href="/">Piolinux</a></h1>
+  <div class="menu-container">
+    <button class="menu-toggle" aria-label="Abrir menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
+    <nav class="dropdown-menu-container">
+      <ul class="dropdown-menu">
+        <li><a href="/">Início</a></li>
+        <li>
+          <a href="#">Conteúdo</a>
+          <ul class="dropdown-content">
+            <li><a href="/piadas-linux-engra%C3%A7adas.html">Piadas</a></li>
+            <li><a href="/biblioteca-linux.html">Biblioteca-Linux</a></li>
+            <li><a href="/artigos-linux.html">Iniciante</a></li>
+            <li><a href="/dicas-tecnicas-linux.html">Dicas Técnicas</a></li>
+            <li><a href="/script-bash.html">Bash</a></li>
+            <li><a href="/links.html">Conteúdos de Linux</a></li>
+            <li><a href="/caixa-de-ferramentas.html">Ferramentas</a></li>
+          </ul>
+        </li>
+        <li><a href="/jogos-online.html">Jogos</a></li>
+        <li><a href="/reparar-boot-linux.html">Boot</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  </header>
+
+ <main>
+  <h1>O Que é Linux</h1>
+  <body>
+
+    
+
+
+   
+
+    <main>
+		
+		 
+        <div id="share" style="text-align:center;margin:15px 0"></div>
+        <script async defer>
+            (() => {
+                const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
+                const d=[
+                    ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
+                    ["Twitter","#1da1f2",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+                    ["WhatsApp","#25d366",`https://api.whatsapp.com/send?text=${t}%20${u}`],
+                    ["LinkedIn","#0077b5",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+                ],e=document.getElementById("share");
+                d.forEach(([n,c,l])=>{
+                    let a=document.createElement("a");
+                    a.href=l;a.target="_blank";a.rel="noopener";
+                    a.textContent=n;
+                    a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
+                    e.appendChild(a);
+                });
+            })();
+        </script>
+
+       
+<body>
+
+<section class="post-content">
+    <p>Sabe aquela sensação de estar "preso" a um sistema operativo que te diz o que podes ou não fazer? Que te obriga a ter programas que não queres e te força a pagar por coisas que deviam ser tuas? Se já sentiste isso, bem-vindo ao mundo do Linux. Ele não é só um software; é uma filosofia de liberdade.</p>
+
+    <h2>O Que É o Linux, Afinal?</h2>
+    <p>Não é um programa gigante com um logótipo numa caixa. Pensa no Linux como se fosse o cérebro de um computador. O núcleo, a base. A magia acontece porque esse cérebro é de código aberto, o que significa que qualquer pessoa no mundo pode ver como ele funciona, melhorá-lo e adaptá-lo.</p>
+    <p>Essa liberdade criou as **distribuições** (ou "distros"), que são versões completas do sistema. Cada distro é como uma cidade diferente: tem as suas próprias regras, o seu estilo e os seus pontos fortes. É por isso que você pode escolher a que mais se encaixa na tua vida, em vez de ter que te adaptar a uma única opção.</p>
+
+    <h2>Por que Deveria Importar-se com Isso?</h2>
+    <p>As vantagens do Linux não são só para programadores. Elas são para qualquer um que queira mais controlo.</p>
+
+    <h4>É grátis de verdade.</h4>
+    <p>Sem licenças, sem mensalidades. Podes instalar em quantos computadores quiseres e usar todos os programas que precisares, sem tirar um tostão do bolso.</p>
+
+    <h4>É rock-solid.</h4>
+    <p>Sabe o que é um servidor web? Mais de 90% deles rodam Linux. O motivo? É incrivelmente estável e seguro. Podes ligar o computador e esquecer que ele existe.</p>
+
+    <h4>Dá vida nova a computadores antigos.</h4>
+    <p>O Linux é tão leve que podes dar um segundo fôlego a um computador com anos de uso. Aquele PC que a tua tia usa para ver vídeos já pode ser usado novamente, com o Linux.</p>
+
+    <h4>Tu és quem manda.</h4>
+    <p>Se não gostas de algo, podes mudar. A liberdade de personalização é quase infinita. A tua máquina, as tuas regras.</p>
+
+    <h2>Encontre a Tua "Distro" Perfeita</h2>
+    <p>Com tantas opções, pode parecer um pouco assustador, mas na verdade é divertido. Cada distro foi feita a pensar em alguém.</p>
+    <ul>
+        <li><strong>Ubuntu</strong> ou <strong>Linux Mint:</strong> São ótimos para começar. São super amigáveis e parecem com o que tu já conheces.</li>
+        <li><strong>Debian:</strong> É a base de muitos outros. Se queres uma máquina robusta e fiável, é por onde deves começar.</li>
+        <li><strong>Arch Linux:</strong> Para os mais aventureiros. Constróis o sistema a partir do zero, escolhendo cada peça.</li>
+        <li><strong>Fedora:</strong> Para quem quer estar sempre a par das novidades.</li>
+    </ul>
+
+    <h3>O Terminal não Morde!</h3>
+    <p>Muitas pessoas olham para o terminal e pensam: "Não é para mim 
+    não sou bom o suficiente". Mas o terminal é o teu melhor amigo no 
+    Linux. É como se fosse uma conexão direta, cérebro ao computador. Podes fazer tarefas complexas com um comando simples. Queres copiar um monte de ficheiros de uma vez? O terminal faz isso num piscar de olhos. Com o tempo, ele vai parecer uma extensão da tua mente.</p>
+
+    <h3>O Linux está em Todo Lado</h3>
+    <p>Apesar de não estares a ver em todo o lado, o Linux está lá. Sabe o teu telemóvel Android? Ele é feito com base no kernel Linux. A maioria dos supercomputadores também o usa. E, claro, a maior parte da Internet funciona graças ao Linux. É a tecnologia por detrás de muitas coisas que usamos no nosso dia a dia.</p>
+
+    <h3>Como Começar a Tua Aventura</h3>
+    <p>O segredo para começar com o Linux é não ter pressa. Experimenta-o numa máquina virtual ou numa pen drive ("live pendrive"). Podes usar o Linux sem sequer ter que o instalar! O importante é dar o primeiro passo, e vais descobrir um mundo de possibilidades. É uma aventura, e a melhor parte é que tu és o único que está no controlo.</p>
+
+</div>
+
+</body>
+        
+
+    </main>
+
+    
+
+    
+</body>
+</html>
+
+</main>
+
+<footer>
+  Site criado com muito terminal e memes! Acesse:
+  <a href="/politica-de-privacidade.html">Política de Privacidade</a> |
+  <a href="/termos-de-uso.html">Termos de Uso</a>
+</footer></body>
+</html>
