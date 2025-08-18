@@ -1,6 +1,4 @@
----
-title: "Início - Piolinux"
----
+
 <!--
     Removida a tag <main> e a tag <h>
     para evitar duplicações e erros de HTML.
