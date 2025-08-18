@@ -224,12 +224,7 @@ strong {
    <h1 class="post-title">
     {{ page.title }}
    </h1>
-   <p class="post-meta">
-    <time datetime="{{ page.date | date_to_xmlschema }}">
-     {{ page.date | date: "%d de %B de %Y" }}
-    </time>
-    • {{ page.author }}
-   </p>
+  
    <hr/>
    <article>
     {{ content }}
