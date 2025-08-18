@@ -7,13 +7,10 @@ tags: [linux, humor, piolinux, ubuntu, terminal, documentação]
 author: "Piolinux"
 ---
 
-
-
-
-           
+          
 
           
-        <section class="post-content">
+<section class="post-content">
            
             
             <p>Numa galáxia não muito distante a Terra estava sob o domínio de um Sistema Operacional charmoso chamado Windows 11, célebre pelas suas eternas atualizações, e também por transformar o desligamento do computador numa saga de paciência danada.</p>
