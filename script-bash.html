@@ -10,229 +10,230 @@
   <meta content="linux, bash, shell script, scripts bash, automação linux, administração de sistemas, segurança, desenvolvimento, terminal, programação" name="keywords"/>
   <meta content="index,nofollow" name="robots"/>
   <meta content="Piolinux" name="author"/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%232d3748' d='M50,90 C70,90 75,70 75,50 C75,30 65,20 50,20 C35,20 25,30 25,50 C25,70 30,90 50,90 Z'/%3E%3Cpath fill='%23e2e8f0' d='M50,85 C65,85 70,65 70,50 C70,35 60,30 50,30 C40,30 30,35 30,50 C30,65 35,85 50,85 Z'/%E3%80%8E%3Ccircle fill='%232d3748' cx='43' cy='40' r='3'/%3E%3Ccircle fill='%232d3748' cx='57' cy='40' r='3'/%E3%80%8E%3Cpath fill='%23f6ad55' d='M50,50 L45,55 L55,55 Z'/%3E%3Cpath fill='%234299e1' d='M30,30 L70,30 L65,25 L35,25 Z'/%E3%80%8E%3Cpath fill='%234299e1' d='M35,25 C30,20 35,15 50,15 C65,15 70,20 65,25 Z'/%E3%80%8E%3C/svg%3E" type="image/svg+xml">
   <link href="https://piolinux.com/script-bash.html" rel="canonical"/>
   <!-- Outros meta e links CSS -->
  </head>
  <style>
-  /* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #121212;
-  color: #ddd;
-  line-height: 1.6;
-}
-
-a {
-  color: #80ff00;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-/* HEADER */
-header {
-  background-color: #222;
-  padding: 10px 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header h1 {
-  color: #80ff00; /* verde Piolinux */
-  font-size: 1.8rem;
-  margin-right: 20px;
-}
-
-header h1 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Botão hamburguer (mobile) */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: #80ff00;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-/* Menu */
-.dropdown-menu {
-  list-style: none;
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.dropdown-menu > li {
-  position: relative;
-}
-
-.dropdown-menu > li > a {
-  display: block;
-  padding: 6px 10px;
-  font-weight: bold;
-  color: #80ff00;
-  border-radius: 4px;
-  transition: background 0.2s;
-  background-color: #1a1a1a;
-}
-
-.dropdown-menu > li:hover > a {
-  background-color: #333;
-}
-
-/* Dropdown */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #333;
-  min-width: 160px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  border-radius: 0 0 4px 4px;
-  z-index: 1000;
-}
-
-.dropdown-content li a {
-  padding: 8px 12px;
-  display: block;
-  font-weight: normal;
-  color: #80ff00;
-}
-
-.dropdown-content li a:hover {
-  background-color: #444;
-}
-
-.dropdown-menu > li:hover .dropdown-content {
-  display: block;
-}
-
-/* MAIN */
-main {
-  max-width: 960px;
-  margin: 20px auto;
-  padding: 0 15px;
-}
-
-/* POST / SECTION */
-section {
-  background-color: #1e1e1e;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
-}
-
-section h1, 
-section h2, 
-section h3 {
-  color: #80ff00;
-  margin-bottom: 12px;
-}
-
-section p {
-  margin-bottom: 12px;
-  text-align: justify;
-  text-justify: inter-word;
-  line-height: 1.8;
-}
-
-/* FOOTER */
-footer {
-  background-color: #222;
-  color: #ffffff;
-  text-align: center;
-  padding: 15px 10px;
-  margin-top: 40px;
-  font-size: 0.9rem;
-}
-
-footer a {
-  color: #ccff33;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #ffec8b;
-  font-weight: bold;
-}
-
-/* RESPONSIVIDADE */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-  .dropdown-menu {
-    flex-direction: column;
-    gap: 4px;
-    background-color: #222;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 200px;
-    padding: 10px;
-    display: none;
-  }
-  body.menu-open .dropdown-menu {
-    display: flex;
-  }
-}
-
-/* 🔹 Extra para garantir estilização dos posts no Jekyll */
-.post-content {
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
-  margin-bottom: 20px;
-}
-
-.post-content img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-.post-content pre {
-  background: #111;
-  padding: 12px;
-  border-radius: 6px;
-  overflow-x: auto;
-  color: #80ff00;
-}
-
-.post-content code {
-  background: #222;
-  padding: 2px 5px;
-  border-radius: 4px;
-  color: #80ff00;
-}
- </style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ddd;
+      line-height: 1.6;
+    }
+    a {
+      color: #80ff00;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* HEADER */
+    header {
+      background-color: #222;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      color: #80ff00;
+      font-size: 1.8rem;
+      margin-right: 20px;
+    }
+    header h1 a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* Botão hamburguer (mobile) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #80ff00;
+      font-size: 26px;
+      cursor: pointer;
+    }
+    /* Menu */
+    .dropdown-menu {
+      list-style: none;
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .dropdown-menu > li {
+      position: relative;
+    }
+    .dropdown-menu > li > a {
+      display: block;
+      padding: 6px 10px;
+      font-weight: bold;
+      color: #80ff00;
+      border-radius: 4px;
+      transition: background 0.2s;
+      background-color: #1a1a1a;
+    }
+    .dropdown-menu > li:hover > a {
+      background-color: #333;
+    }
+    /* Dropdown */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #333;
+      min-width: 160px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-radius: 0 0 4px 4px;
+      z-index: 1000;
+    }
+    .dropdown-content li a {
+      padding: 8px 12px;
+      display: block;
+      font-weight: normal;
+      color: #80ff00;
+    }
+    .dropdown-content li a:hover {
+      background-color: #444;
+    }
+    .dropdown-menu > li:hover .dropdown-content {
+      display: block;
+    }
+    /* MAIN */
+    main {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    /* POST / SECTION */
+    section {
+      background-color: #1e1e1e;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+    }
+    section h1, 
+    section h2, 
+    section h3 {
+      color: #80ff00;
+      margin-bottom: 12px;
+    }
+    section p {
+      margin-bottom: 12px;
+      text-align: justify;
+      text-justify: inter-word;
+      line-height: 1.8;
+    }
+    /* FOOTER */
+    footer {
+      background-color: #222;
+      color: #ffffff;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #ccff33;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #ffec8b;
+      font-weight: bold;
+    }
+    /* RESPONSIVIDADE */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      .dropdown-menu {
+        flex-direction: column;
+        gap: 4px;
+        background-color: #222;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 200px;
+        padding: 10px;
+        display: none;
+      }
+      body.menu-open .dropdown-menu {
+        display: flex;
+      }
+    }
+    /* Extra para garantir estilização dos posts no Jekyll */
+    .post-content {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(128, 255, 0, 0.2);
+      margin-bottom: 20px;
+    }
+    .post-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    .post-content pre {
+      background: #111;
+      padding: 12px;
+      border-radius: 6px;
+      overflow-x: auto;
+      color: #80ff00;
+    }
+    .post-content code {
+      background: #222;
+      padding: 2px 5px;
+      border-radius: 4px;
+      color: #80ff00;
+    }
+    /* Estilização para o logotipo SVG */
+    .site-logo {
+      height: 30px; /* Define a altura do logo */
+      width: auto;
+      margin-right: 10px;
+      vertical-align: middle;
+      stroke-width: 2; /* Espessura das linhas */
+    }
+    
+    </style>
  <body>
-  <header>
-  
-    <h1 class="site-title">
-     <a href="/">
-      Piolinux
-     </a>
+	<header>
+  <h1 class="site-title">
+      <a href="/">
+        <!-- AQUI ESTÁ A TAG DO LOGOTIPO SVG do Tux -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="site-logo" viewBox="0 0 100 100">
+          <rect width="100" height="100" fill="none"/>
+          <!-- Cabeça e corpo -->
+          <path d="M50 85C65 85 70 65 70 50C70 35 60 30 50 30C40 30 30 35 30 50C30 65 35 85 50 85Z" fill="#e2e8f0"/>
+          <!-- Olhos -->
+          <circle cx="43" cy="40" r="3" fill="#121212"/>
+          <circle cx="57" cy="40" r="3" fill="#121212"/>
+          <!-- Bico -->
+          <path d="M50 50L45 55L55 55Z" fill="#f6ad55"/>
+          <path d="M40 60L60 60L50 65Z" fill="#ef4444"/>
+          <!-- Pés -->
+          <path d="M40 90L35 95L45 95Z" fill="#f6ad55"/>
+          <path d="M60 90L65 95L55 95Z" fill="#f6ad55"/>
+          <!-- Boné -->
+          <path d="M70 20L30 20C25 20 25 10 30 10C35 5 45 5 50 10C55 5 65 5 70 10C75 10 75 20 70 20Z" fill="#3b82f6"/>
+          <path d="M60 10L65 5L75 10" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        Piolinux
+      </a>
     </h1>
     <div class="menu-container">
      <button aria-label="Abrir menu" class="menu-toggle" onclick="document.body.classList.toggle('menu-open')">
