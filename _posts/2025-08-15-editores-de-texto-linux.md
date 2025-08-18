@@ -9,16 +9,7 @@ category: Linux
 ---
 
 
-
-
-
-
-
-
-   
-
-   
-        <section class="post-content">
+<section class="post-content">
           
             
             <p>No Linux, pra usar, tem diversas escolhas de editores de texto, prontos pra instalar no sistema, sendo super úteis em várias coisas. Vim é uma boa, mas para quem tá no começo, ah, a curva de aprendizado é grande, viu. No início, a coisa talvez não seja tão boa, então esqueça palpites ruins. Comece com os mais simples, tipo o Nano, ou os editores gráficos Gedit, Leafpad e Mousepad, que são fáceis de usar.</p>

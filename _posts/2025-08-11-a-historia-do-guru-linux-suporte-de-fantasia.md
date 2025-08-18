@@ -7,12 +7,9 @@ tags: [linux, iniciantes, erros, tutorial]
 author: "Piolinux"
 ---
 
-
-
-
-
  
-        <section class="post-content">
+<section class="post-content">
+
             <h2>O Guru Idealizado e a Falsa Comodidade</h2>
             <p>Se você gosta de um Guru Linux aqui no mundo da fantasia, saiba que ele existe para te ajudar, mas apenas enquanto você se recusa a usar a razão e acreditar que tudo o que ele diz está correto.</p>
             

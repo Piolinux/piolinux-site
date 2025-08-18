@@ -9,11 +9,7 @@ description: "Um guia completo e nostálgico sobre duas ferramentas essenciais n
 ---
 
 
-
-
-
- 
-        <section class="post-content">
+<section class="post-content">
            
        
 

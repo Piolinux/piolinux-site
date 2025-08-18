@@ -7,9 +7,7 @@ tags: [linux, humor, piolinux, ubuntu, terminal, documentação]
 author: "Piolinux"
 ---
 
-          
-
-          
+       
 <section class="post-content">
            
             

@@ -8,13 +8,7 @@ author: "Piolinux"
 ---
 
 
-
-
-
-
-    
-
-        <section class="post-content">
+<section class="post-content">
            
             <p>Numa terra de silício, super tranquila, onde zeros e uns residiam, um computador jovem e... inexperiente, chamado Novato, surgiu. A sua missão foi logo definida: ele precisava escolher um sistema operacional pra orientar sua existência. Mas o mundo do Linux, ah, pra sua surpresa, não era um só! Novato se encontrou no meio de uma batalha épica, tipo, a "Guerra das Distros".</p>
             

@@ -9,15 +9,7 @@ description: "Analise dos aplicativos Files do Google e Dr. Prot Antivirus, com 
 ---
 
 
-
-
-
-
-
-
-
-    <!-- Introdução -->
-    <section class="post-content">
+<section class="post-content">
         <p>
             Aí, tipo... Aplicativos Úteis para Android: Gerenciador de Arquivos e Antivírus Diversos programas são desenvolvidos para ajudar usuários com funcionalidades intuitivas. Para gerenciar arquivos e detectar vírus no celular, apresentamos aqui dois tipos de aplicativos essenciais.
         </p>
