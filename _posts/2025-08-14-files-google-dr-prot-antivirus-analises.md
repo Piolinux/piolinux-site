@@ -12,9 +12,9 @@ description: "Analise dos aplicativos Files do Google e Dr. Prot Antivirus, com 
 
 
 
-<body>
 
-<main>
+
+
 
     <!-- Introdução -->
     <section class="post-content">
@@ -54,11 +54,10 @@ description: "Analise dos aplicativos Files do Google e Dr. Prot Antivirus, com 
             <p>
                 Após a análise, minha conclusão sobre o <strong>Dr. Prot Antivírus</strong> é que ele deixa muito a desejar. Sua base de dados é ruim e deveria vir embutida no aplicativo. Por isso, como antivírus principal, ele não é recomendado. Sua função é mais para uso complementar, mas a falta de mais opções e uma base de dados atualizada o torna uma ferramenta fraca na área de segurança.
             </p>
-        </section>
+      
 
     </section>
 
-</main>
 
-</body>
+
 

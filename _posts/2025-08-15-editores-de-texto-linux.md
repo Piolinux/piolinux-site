@@ -13,11 +13,11 @@ category: Linux
 
 
 
-<body>
+
 
    
 
-    <main>
+   
         <section class="post-content">
           
             
@@ -48,8 +48,8 @@ category: Linux
             <h2>Outras ferramentas pra gerenciar pacotes</h2>
             <p>Se por acaso precisar instalar uns desses editores mas não tiver nenhum editor de texto disponível, pode usar o Synaptic. Com ele, você adiciona pacotes de forma gráfica, buscando e instalando um por um.</p>
         </section>
-    </main>
+  
 
    
-</body>
+
 

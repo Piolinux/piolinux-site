@@ -10,11 +10,10 @@ author: "Piolinux"
 
 
 
-<body>
+
 
     
 
-    <main>
         <section class="post-content">
            
             <p>Numa terra de silício, super tranquila, onde zeros e uns residiam, um computador jovem e... inexperiente, chamado Novato, surgiu. A sua missão foi logo definida: ele precisava escolher um sistema operacional pra orientar sua existência. Mas o mundo do Linux, ah, pra sua surpresa, não era um só! Novato se encontrou no meio de uma batalha épica, tipo, a "Guerra das Distros".</p>
@@ -39,9 +38,8 @@ author: "Piolinux"
             
             <p>Quando aqueles gurus voltaram, prontos para continuar a discussão, Novato tinha seu sistema operando que era uma beleza, tudo com uma aparência que ele mesmo construiu. Ele os olhou, e com um sorriso no rosto, falou: "A melhor distro não é a de vocês, é a minha! Ela me ensinou que, antes de seguir mestre algum, eu preciso, primeiro, me tornar mestre de mim mesmo."</p>
         </section>
-    </main>
+   
 
     
     
 
-</body>

@@ -11,7 +11,6 @@ description: "Uma experiência pessoal sobre a função DPMS no Linux. Descubra 
 
 
 
-<main>
             <section class="post-content">
                 
         <!-- Cabeçalho com título e ícone -->
@@ -65,5 +64,5 @@ description: "Uma experiência pessoal sobre a função DPMS no Linux. Descubra 
         </div>
    
    </section>
-   </main>
+  
 

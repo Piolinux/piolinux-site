@@ -11,8 +11,8 @@ description: "Um guia completo e nostálgico sobre duas ferramentas essenciais n
 
 
 
-<body>
-    <main>
+
+ 
         <section class="post-content">
            
        
@@ -79,6 +79,6 @@ description: "Um guia completo e nostálgico sobre duas ferramentas essenciais n
             </p>
             
         </section>
-    </main>
+ 
 
-</body>
+

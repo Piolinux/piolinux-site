@@ -11,7 +11,7 @@ description: "Um guia completo sobre as melhores distros Linux para PCs antigos 
 
 
 
-<main>
+
         <section class="post-content">
            
             
@@ -47,5 +47,5 @@ description: "Um guia completo sobre as melhores distros Linux para PCs antigos 
             <h2>Conclusão: Qual Pinguim Leva pra Casa?</h2>
             <p>A escolha da distro perfeita, essa sim é pessoal, e depende do que você procura. Se a parada é facilidade e uma experiência completinha, Manjaro é show de bola pra começar. Pra reviver um hardware véio, Antix e Lxle não tem pra ninguém. E se a sua onda é desafio e o máximo desempenho, Arch Bang ou 4MLinux talvez sejam ideais. O Pinguim tá de olho, e o principal é que todas essas distros ajudam em necessidades, mostrando que no universo Linux, a resposta está sempre por perto, saca?</p>
         </section>
-    </main>
+  
 

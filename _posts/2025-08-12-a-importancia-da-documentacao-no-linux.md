@@ -8,7 +8,7 @@ tags: [documentação, man-pages, terminal, apt-get, Vi, Synaptic, dicas Linux]
 description: "Um guia sobre a importância da documentação no Linux. Descubra como as man-pages e outras ferramentas podem transformar a sua experiência e economizar tempo."
 ---
 
-<main>
+
         <section class="post-content">
             
             
@@ -41,4 +41,4 @@ description: "Um guia sobre a importância da documentação no Linux. Descubra 
             <h2>Pensando bem: O Costume Que Muda o Jogo</h2>
             <p>Simplificando, a rotina de dar uma olhada na documentação separa um usuário "normal" daquele que manja tudo. A documentação tá por toda parte, seja no terminal, no Synaptic, ou até no site do criador. Se fizer dela o primeiro lugar que você vai, ganha tempo, evita dor de cabeça e vira um usuário Linux mais seguro de si. Esquece os atalhos e aprenda a força de só ler.</p>
         </section>
-    </main>
+   

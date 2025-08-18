@@ -10,11 +10,10 @@ author: "Piolinux"
 
 
 
-<body>
 
 
 
-  <main>
+
  <section class="post-content">
     <p>No mundinho maravilhoso do Linux, embarquei em uma aventura em busca de conhecimento, cheia de vídeos sem sentido e fãs bitolados que defendiam tudo sem questionar. Todas as soluções giravam em torno de um **“guru”** que resolvia problemas de maneira estranha. Seus artigos, que pareciam traduzidos, nunca citavam as fontes e eram apresentados como se ele fosse um especialista no assunto.</p>
     <p>Seus textos eram longos, com muita “enrolação” para resolver até mesmo os problemas mais simples. A falta de citação de fontes deixava um grande vazio para quem realmente queria entender a raiz do problema, e a comunidade o seguia cegamente.</p>
@@ -46,8 +45,7 @@ author: "Piolinux"
     <p>Você levou a sério este artigo de humor porque ficou com raiva de um suposto guru do Linux que nada resolve, apenas te enrola, e você aceita.</p>
  
   </section>
-  </main>
 
-  
-</body>
+
+
 

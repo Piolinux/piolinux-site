@@ -17,7 +17,6 @@ description: "Um guia fácil e descontraído para instalar o Devuan GNU+Linux. A
           
 
 
-<body>
 	
 	 <section class="post-content">
     <div class="max-w-4xl w-full bg-gray-800 p-6 sm:p-10 rounded-xl shadow-lg border-2 border-gray-700">
@@ -113,4 +112,4 @@ description: "Um guia fácil e descontraído para instalar o Devuan GNU+Linux. A
         </p>
     </div>
     </section>
-</body>
+

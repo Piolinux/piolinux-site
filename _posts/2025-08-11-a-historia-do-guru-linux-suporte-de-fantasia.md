@@ -10,9 +10,8 @@ author: "Piolinux"
 
 
 
-<body>
 
-  <main>
+ 
         <section class="post-content">
             <h2>O Guru Idealizado e a Falsa Comodidade</h2>
             <p>Se você gosta de um Guru Linux aqui no mundo da fantasia, saiba que ele existe para te ajudar, mas apenas enquanto você se recusa a usar a razão e acreditar que tudo o que ele diz está correto.</p>
@@ -36,6 +35,5 @@ author: "Piolinux"
             <h3>A Lição Final</h3>
             <p>Afinal, a culpa foi do seu guru, que mandou fazer isso, já que você gosta de ficar com raiva nesse mundo encantado do Linux. Não se preocupe se falta senso de humor para rir dessa história fantasiosa de um guru que encanta, mas no fim, só faz “lambança”.</p>
         </section>
-    </main>
+   
 
-</body>

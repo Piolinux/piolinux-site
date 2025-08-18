@@ -14,9 +14,6 @@ author: "Piolinux"
 
 
 
-<body>
-
-<main>
 
     <!-- Introdução -->
     <section class="post-content">
@@ -52,10 +49,6 @@ author: "Piolinux"
                 <li>Inserindo ícones e diversos elementos gráficos.</li>
                 <li>Aplicando efeitos especiais para incrementar as imagens.</li>
             </ul>
-        </section>
-
+       
     </section>
 
-</main>
-
-</body>

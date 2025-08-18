@@ -11,7 +11,6 @@ author: "Piolinux"
 
 
 
- <main>
         <section class="post-content">
             
 
@@ -44,4 +43,4 @@ author: "Piolinux"
 
             <p>Naquele dia, Maria GUI percebeu: o Terminal não era seu inimigo, pelo contrário, era seu melhor amigo. Era uma ferramenta potente, liberta da frustração de um problema sem solução pelos botões. Ela ainda amava as suas interfaces gráficas, contudo, agora ela sabia, o poder real do seu sistema Linux residia no local onde a lógica e a clareza se encontravam: na linha de comando.</p>
         </section>
-    </main>
+ 

@@ -9,11 +9,10 @@ author: "Piolinux"
 
 
 
-<body>
 
            
 
-            <main>
+          
         <section class="post-content">
            
             
@@ -48,6 +47,5 @@ author: "Piolinux"
 
             <p>E a lição permaneceu: enquanto gurus podem te guiar, o verdadeiro poder é aprender a resolver teus problemas.</p>
         </section>
-    </main>
-        
-</body>
+
+
