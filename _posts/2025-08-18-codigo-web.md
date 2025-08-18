@@ -1,5 +1,5 @@
 ---
-title: Guia Descomplicado para a sua Ferramenta
+title: Guia Descomplicado para a sua Ferramenta-Web
 layout: default
 date: 2025-08-18
 tags: [ferramenta, código, HTML, SVG, dicas]
@@ -9,7 +9,7 @@ description: Uma ferramenta simples e prática para formatar código HTML/XML e 
 <section class="post-content">
     <!-- Título principal e introdução -->
     <h1 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 text-center mb-6">
-        📋 Olá! Guia Rápido para Usar a Ferramenta
+        📋 Olá! Guia Rápido para Usar a Ferramenta-Web
     </h1>
     <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-8">
         <p class="text-gray-300 text-lg mb-4">
