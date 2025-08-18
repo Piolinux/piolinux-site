@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="jogos online, jogos web, coleção de jogos, HTML, CSS, JavaScript, jokenpo, jogo da forca, jogo da cobrinha, blackjack, quebra-cabeça, jogos clássicos">
-    <link rel="canonical" href="https://piolinux.com/jogos-online.html">
-    <meta name="author" content="Piolinux">
-    <meta name="robots" content="index,follow">
-    <title>Minha Coleção Completa de Jogos</title>
-    <style>
-        * {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="jogos online, jogos web, coleção de jogos, HTML, CSS, JavaScript, jokenpo, jogo da forca, jogo da cobrinha, blackjack, quebra-cabeça, jogos clássicos" name="keywords"/>
+  <link href="https://piolinux.com/jogos-online.html" rel="canonical"/>
+  <meta content="Piolinux" name="author"/>
+  <meta content="index,follow" name="robots"/>
+  <title>
+   Minha Coleção Completa de Jogos
+  </title>
+  <style>
+   * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -116,224 +118,443 @@
             justify-content: center;
             gap: 10px;
         }
-    </style>
-</head>
-<body>
+  </style>
+ </head>
+ <body>
+  <h1>
+   Minha Coleção Completa de Jogos
+  </h1>
+  <p>
+   Seja bem-vindo(a)! Gosta de jogos desenvolvidos em JavaScript para se divertir? São 22 jogos para uma diversão sem parar.
 
-    <h1>Minha Coleção Completa de Jogos</h1>
-    
-    <p>
-        Seja bem-vindo(a)! Gosta de jogos desenvolvidos em JavaScript para se divertir? São 22 jogos para uma diversão sem parar.
-
-Para começar ou jogar novamente, use o botão "Reiniciar" de cada jogo. Divirta-se!    </p>
-
-    <div class="game-container">
-        <h2>1. Adivinhe o Número</h2>
-        <p>Adivinhe um número entre 1 e 100.</p>
-        <input type="number" id="guessInput">
-        <button onclick="checkGuess()">Adivinhar</button>
-        <p id="guessResult"></p>
-        <button onclick="resetGuessGame()">Reiniciar</button>
+Para começar ou jogar novamente, use o botão "Reiniciar" de cada jogo. Divirta-se!
+  </p>
+  <div class="game-container">
+   <h2>
+    1. Adivinhe o Número
+   </h2>
+   <p>
+    Adivinhe um número entre 1 e 100.
+   </p>
+   <input id="guessInput" type="number"/>
+   <button onclick="checkGuess()">
+    Adivinhar
+   </button>
+   <p id="guessResult">
+   </p>
+   <button onclick="resetGuessGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    2. Jokenpô
+   </h2>
+   <p>
+    Sua escolha:
+   </p>
+   <button onclick="playJokenpo('pedra')">
+    Pedra
+   </button>
+   <button onclick="playJokenpo('papel')">
+    Papel
+   </button>
+   <button onclick="playJokenpo('tesoura')">
+    Tesoura
+   </button>
+   <p id="jokenpoResult">
+   </p>
+  </div>
+  <div class="game-container">
+   <h2>
+    3. Jogo da Forca
+   </h2>
+   <p>
+    Tente adivinhar a palavra secreta!
+   </p>
+   <p id="hangmanWord">
+    _ _ _ _ _
+   </p>
+   <p>
+    Letras erradas:
+    <span id="hangmanWrong">
+    </span>
+   </p>
+   <canvas height="200" id="hangmanCanvas" width="200">
+   </canvas>
+   <input id="hangmanGuess" maxlength="1" type="text"/>
+   <button onclick="checkHangmanGuess()">
+    Adivinhar
+   </button>
+   <p id="hangmanMessage">
+   </p>
+   <button onclick="resetHangmanGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    4. Jogo da Memória
+   </h2>
+   <p>
+    Clique nas cartas para encontrar os pares.
+   </p>
+   <div id="memoryBoard">
+   </div>
+   <p id="memoryMessage">
+   </p>
+   <button onclick="resetMemoryGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    5. Caça ao Tesouro
+   </h2>
+   <p>
+    Use as setas do teclado para se mover e encontrar o tesouro.
+   </p>
+   <canvas height="400" id="treasureCanvas" width="400">
+   </canvas>
+   <p id="treasureMessage">
+   </p>
+   <button onclick="resetTreasureGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    6. Quebra-Cabeça Deslizante
+   </h2>
+   <p>
+    Clique em uma peça para movê-la para o espaço vazio. Resolva o quebra-cabeça!
+   </p>
+   <canvas height="300" id="slidingPuzzleCanvas" width="300">
+   </canvas>
+   <p id="slidingPuzzleMessage">
+   </p>
+   <button onclick="resetSlidingPuzzle()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    7. Jogo da Cobrinha
+   </h2>
+   <p>
+    Use as setas do teclado para controlar a cobrinha e comer a maçã.
+   </p>
+   <canvas height="400" id="snakeCanvas" width="400">
+   </canvas>
+   <p>
+    Pontos:
+    <span id="snakeScore">
+     0
+    </span>
+   </p>
+   <button onclick="resetSnakeGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    8. Jogo de Digitação
+   </h2>
+   <p>
+    Digite a palavra exibida o mais rápido que puder.
+   </p>
+   <p id="typingWord">
+   </p>
+   <input id="typingInput" type="text"/>
+   <p id="typingResult">
+   </p>
+   <button onclick="startTypingGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    9. Corrida de Carros
+   </h2>
+   <p>
+    Use as setas do teclado para controlar o carro. Evite as paredes!
+   </p>
+   <canvas height="400" id="racingCanvas" width="400">
+   </canvas>
+   <button onclick="resetRacingGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    10. Pong
+   </h2>
+   <p>
+    Use as setas para mover sua barra e rebater a bolinha.
+   </p>
+   <canvas height="400" id="pongCanvas" width="600">
+   </canvas>
+   <p>
+    Placar:
+    <span id="pongScore">
+     0
+    </span>
+   </p>
+   <button onclick="resetPongGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    11. Arkanoid
+   </h2>
+   <p>
+    Use as setas para mover a barra e destruir os blocos com a bolinha.
+   </p>
+   <canvas height="300" id="arkanoidCanvas" width="400">
+   </canvas>
+   <button onclick="resetArkanoidGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    12. Jogo de Plataforma
+   </h2>
+   <p>
+    Use as setas para mover e pular.
+   </p>
+   <canvas height="300" id="platformerCanvas" width="400">
+   </canvas>
+   <p id="platformerMessage">
+   </p>
+   <button onclick="resetPlatformerGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    13. Nave Espacial
+   </h2>
+   <p>
+    Use as setas para mover. A nave atira automaticamente nos inimigos!
+   </p>
+   <canvas height="400" id="spaceShooterCanvas" width="400">
+   </canvas>
+   <button onclick="resetSpaceShooterGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    14. Defesa de Torre
+   </h2>
+   <p>
+    Clique no campo para construir torres. Destrua os inimigos!
+   </p>
+   <canvas height="300" id="towerDefenseCanvas" width="400">
+   </canvas>
+   <p>
+    Dinheiro:
+    <span id="towerDefenseMoney">
+     100
+    </span>
+    | Inimigos:
+    <span id="towerDefenseCount">
+     0
+    </span>
+   </p>
+   <button onclick="resetTowerDefenseGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    15. Blackjack
+   </h2>
+   <p id="blackjackMessage">
+    Clique em "Novo Jogo" para começar!
+   </p>
+   <div>
+    <h3>
+     Sua Mão:
+     <span id="playerScore">
+      0
+     </span>
+    </h3>
+    <div id="playerHand">
     </div>
-
-    <div class="game-container">
-        <h2>2. Jokenpô</h2>
-        <p>Sua escolha:</p>
-        <button onclick="playJokenpo('pedra')">Pedra</button>
-        <button onclick="playJokenpo('papel')">Papel</button>
-        <button onclick="playJokenpo('tesoura')">Tesoura</button>
-        <p id="jokenpoResult"></p>
+   </div>
+   <div>
+    <h3>
+     Mão do Computador:
+     <span id="dealerScore">
+      0
+     </span>
+    </h3>
+    <div id="dealerHand">
     </div>
-    
-    <div class="game-container">
-        <h2>3. Jogo da Forca</h2>
-        <p>Tente adivinhar a palavra secreta!</p>
-        <p id="hangmanWord">_ _ _ _ _</p>
-        <p>Letras erradas: <span id="hangmanWrong"></span></p>
-        <canvas id="hangmanCanvas" width="200" height="200"></canvas>
-        <input type="text" id="hangmanGuess" maxlength="1">
-        <button onclick="checkHangmanGuess()">Adivinhar</button>
-        <p id="hangmanMessage"></p>
-        <button onclick="resetHangmanGame()">Reiniciar</button>
+   </div>
+   <div>
+    <button disabled="" onclick="blackjackHit()">
+     Pedir
+    </button>
+    <button disabled="" onclick="blackjackStand()">
+     Ficar
+    </button>
+   </div>
+   <button onclick="resetBlackjackGame()">
+    Novo Jogo
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    16. Quiz
+   </h2>
+   <p id="quizQuestion">
+    Clique em "Iniciar" para começar.
+   </p>
+   <div id="quizOptions">
+   </div>
+   <p id="quizResult">
+   </p>
+   <button onclick="startQuizGame()">
+    Iniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    17. RPG de Texto
+   </h2>
+   <p id="rpgText">
+    Inicie sua aventura!
+   </p>
+   <div id="rpgOptions">
+   </div>
+   <button onclick="startRpgGame()">
+    Iniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    18. Labirinto com Tempo
+   </h2>
+   <p>
+    Use as setas para encontrar a saída (verde) em
+    <span id="mazeTimer">
+     60
+    </span>
+    segundos.
+   </p>
+   <canvas height="400" id="mazeCanvas" width="400">
+   </canvas>
+   <button onclick="resetMazeGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    19. Quebra-Cabeça de Cores
+   </h2>
+   <p>
+    Clique em dois blocos para trocá-los. Combine 3 ou mais da mesma cor!
+   </p>
+   <canvas height="300" id="colorPuzzleCanvas" width="300">
+   </canvas>
+   <button onclick="resetColorPuzzleGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    20. Jogo de Cliques Ociosos
+   </h2>
+   <p>
+    Clique para ganhar pontos, depois compre melhorias para ganhar pontos automaticamente!
+   </p>
+   <button id="clickerButton" onclick="clickerClick()">
+    Pontos:
+    <span id="clickerScore">
+     0
+    </span>
+   </button>
+   <p>
+    Pontos por segundo:
+    <span id="sps">
+     0
+    </span>
+   </p>
+   <button class="upgrade-btn" onclick="buyUpgrade(0)">
+    Melhoria 1 (Custo: 10 | +1 SPS)
+   </button>
+   <button class="upgrade-btn" onclick="buyUpgrade(1)">
+    Melhoria 2 (Custo: 50 | +5 SPS)
+   </button>
+   <button class="upgrade-btn" onclick="buyUpgrade(2)">
+    Melhoria 3 (Custo: 200 | +20 SPS)
+   </button>
+   <button onclick="resetClickerGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    21. Jogo de Ritmo
+   </h2>
+   <p>
+    Acerte as notas com as teclas A, S, D, F.
+   </p>
+   <canvas height="300" id="rhythmCanvas" width="400">
+   </canvas>
+   <button onclick="resetRhythmGame()">
+    Reiniciar
+   </button>
+  </div>
+  <div class="game-container">
+   <h2>
+    22. Batalha por Turnos
+   </h2>
+   <p id="rpgBattleMessage">
+    Uma batalha épica começou!
+   </p>
+   <div id="rpgBattleStats">
+    <div>
+     <h3>
+      Herói
+     </h3>
+     <p>
+      HP:
+      <span id="heroHP">
+       100
+      </span>
+     </p>
     </div>
-
-    <div class="game-container">
-        <h2>4. Jogo da Memória</h2>
-        <p>Clique nas cartas para encontrar os pares.</p>
-        <div id="memoryBoard"></div>
-        <p id="memoryMessage"></p>
-        <button onclick="resetMemoryGame()">Reiniciar</button>
+    <div>
+     <h3>
+      Monstro
+     </h3>
+     <p>
+      HP:
+      <span id="monsterHP">
+       150
+      </span>
+     </p>
     </div>
-
-    <div class="game-container">
-        <h2>5. Caça ao Tesouro</h2>
-        <p>Use as setas do teclado para se mover e encontrar o tesouro.</p>
-        <canvas id="treasureCanvas" width="400" height="400"></canvas>
-        <p id="treasureMessage"></p>
-        <button onclick="resetTreasureGame()">Reiniciar</button>
-    </div>
-    
-    <div class="game-container">
-        <h2>6. Quebra-Cabeça Deslizante</h2>
-        <p>Clique em uma peça para movê-la para o espaço vazio. Resolva o quebra-cabeça!</p>
-        <canvas id="slidingPuzzleCanvas" width="300" height="300"></canvas>
-        <p id="slidingPuzzleMessage"></p>
-        <button onclick="resetSlidingPuzzle()">Reiniciar</button>
-    </div>
-
-    <div class="game-container">
-        <h2>7. Jogo da Cobrinha</h2>
-        <p>Use as setas do teclado para controlar a cobrinha e comer a maçã.</p>
-        <canvas id="snakeCanvas" width="400" height="400"></canvas>
-        <p>Pontos: <span id="snakeScore">0</span></p>
-        <button onclick="resetSnakeGame()">Reiniciar</button>
-    </div>
-    
-    <div class="game-container">
-        <h2>8. Jogo de Digitação</h2>
-        <p>Digite a palavra exibida o mais rápido que puder.</p>
-        <p id="typingWord"></p>
-        <input type="text" id="typingInput">
-        <p id="typingResult"></p>
-        <button onclick="startTypingGame()">Reiniciar</button>
-    </div>
-    
-    <div class="game-container">
-        <h2>9. Corrida de Carros</h2>
-        <p>Use as setas do teclado para controlar o carro. Evite as paredes!</p>
-        <canvas id="racingCanvas" width="400" height="400"></canvas>
-        <button onclick="resetRacingGame()">Reiniciar</button>
-    </div>
-    
-    <div class="game-container">
-        <h2>10. Pong</h2>
-        <p>Use as setas para mover sua barra e rebater a bolinha.</p>
-        <canvas id="pongCanvas" width="600" height="400"></canvas>
-        <p>Placar: <span id="pongScore">0</span></p>
-        <button onclick="resetPongGame()">Reiniciar</button>
-    </div>
-    
-    <div class="game-container">
-        <h2>11. Arkanoid</h2>
-        <p>Use as setas para mover a barra e destruir os blocos com a bolinha.</p>
-        <canvas id="arkanoidCanvas" width="400" height="300"></canvas>
-        <p>Pontos: <span id="arkanoidScore">0</span></p>
-        <button onclick="resetArkanoidGame()">Reiniciar</button>
-    </div>
-    
-    <div class="game-container">
-        <h2>12. Jogo de Plataforma</h2>
-        <p>Use as setas para mover e pular.</p>
-        <canvas id="platformerCanvas" width="400" height="300"></canvas>
-        <p id="platformerMessage"></p>
-        <button onclick="resetPlatformerGame()">Reiniciar</button>
-    </div>
-    
-    <div class="game-container">
-        <h2>13. Nave Espacial</h2>
-        <p>Use as setas para mover. A nave atira automaticamente nos inimigos!</p>
-        <canvas id="spaceShooterCanvas" width="400" height="400"></canvas>
-        <p>Pontos: <span id="spaceShooterScore">0</span></p>
-        <button onclick="resetSpaceShooterGame()">Reiniciar</button>
-    </div>
-
-    <div class="game-container">
-        <h2>14. Defesa de Torre</h2>
-        <p>Clique no campo para construir torres. Destrua os inimigos!</p>
-        <canvas id="towerDefenseCanvas" width="400" height="300"></canvas>
-        <p>Dinheiro: <span id="towerDefenseMoney">100</span> | Inimigos: <span id="towerDefenseCount">0</span></p>
-        <button onclick="resetTowerDefenseGame()">Reiniciar</button>
-    </div>
-    
-    <div class="game-container">
-        <h2>15. Blackjack</h2>
-        <p id="blackjackMessage">Clique em "Novo Jogo" para começar!</p>
-        <div>
-            <h3>Sua Mão: <span id="playerScore">0</span></h3>
-            <div id="playerHand"></div>
-        </div>
-        <div>
-            <h3>Mão do Computador: <span id="dealerScore">0</span></h3>
-            <div id="dealerHand"></div>
-        </div>
-        <div>
-            <button onclick="blackjackHit()" disabled>Pedir</button>
-            <button onclick="blackjackStand()" disabled>Ficar</button>
-        </div>
-        <button onclick="resetBlackjackGame()">Novo Jogo</button>
-    </div>
-    
-    <div class="game-container">
-        <h2>16. Quiz</h2>
-        <p id="quizQuestion">Clique em "Iniciar" para começar.</p>
-        <div id="quizOptions"></div>
-        <p id="quizResult"></p>
-        <button onclick="startQuizGame()">Iniciar</button>
-    </div>
-    
-    <div class="game-container">
-        <h2>17. RPG de Texto</h2>
-        <p id="rpgText">Inicie sua aventura!</p>
-        <div id="rpgOptions"></div>
-        <button onclick="startRpgGame()">Iniciar</button>
-    </div>
-
-    <div class="game-container">
-        <h2>18. Labirinto com Tempo</h2>
-        <p>Use as setas para encontrar a saída (verde) em <span id="mazeTimer">60</span> segundos.</p>
-        <canvas id="mazeCanvas" width="400" height="400"></canvas>
-        <button onclick="resetMazeGame()">Reiniciar</button>
-    </div>
-
-    <div class="game-container">
-        <h2>19. Quebra-Cabeça de Cores</h2>
-        <p>Clique em dois blocos para trocá-los. Combine 3 ou mais da mesma cor!</p>
-        <canvas id="colorPuzzleCanvas" width="300" height="300"></canvas>
-        <p>Pontos: <span id="colorPuzzleScore">0</span></p>
-        <button onclick="resetColorPuzzleGame()">Reiniciar</button>
-    </div>
-
-    <div class="game-container">
-        <h2>20. Jogo de Cliques Ociosos</h2>
-        <p>Clique para ganhar pontos, depois compre melhorias para ganhar pontos automaticamente!</p>
-        <button id="clickerButton" onclick="clickerClick()">Pontos: <span id="clickerScore">0</span></button>
-        <p>Pontos por segundo: <span id="sps">0</span></p>
-        <button class="upgrade-btn" onclick="buyUpgrade(0)">Melhoria 1 (Custo: 10 | +1 SPS)</button>
-        <button class="upgrade-btn" onclick="buyUpgrade(1)">Melhoria 2 (Custo: 50 | +5 SPS)</button>
-        <button class="upgrade-btn" onclick="buyUpgrade(2)">Melhoria 3 (Custo: 200 | +20 SPS)</button>
-        <button onclick="resetClickerGame()">Reiniciar</button>
-    </div>
-
-    <div class="game-container">
-        <h2>21. Jogo de Ritmo</h2>
-        <p>Acerte as notas com as teclas A, S, D, F.</p>
-        <canvas id="rhythmCanvas" width="400" height="300"></canvas>
-        <p>Pontos: <span id="rhythmScore">0</span></p>
-        <button onclick="resetRhythmGame()">Reiniciar</button>
-    </div>
-
-    <div class="game-container">
-        <h2>22. Batalha por Turnos</h2>
-        <p id="rpgBattleMessage">Uma batalha épica começou!</p>
-        <div id="rpgBattleStats">
-            <div>
-                <h3>Herói</h3>
-                <p>HP: <span id="heroHP">100</span></p>
-            </div>
-            <div>
-                <h3>Monstro</h3>
-                <p>HP: <span id="monsterHP">150</span></p>
-            </div>
-        </div>
-        <div>
-            <button onclick="heroAttack()">Atacar</button>
-            <button onclick="heroHeal()">Curar</button>
-        </div>
-        <button onclick="resetRpgBattleGame()">Reiniciar</button>
-    </div>
-    
-    <script>
-        //-----------------------------------
+   </div>
+   <div>
+    <button onclick="heroAttack()">
+     Atacar
+    </button>
+    <button onclick="heroHeal()">
+     Curar
+    </button>
+   </div>
+   <button onclick="resetRpgBattleGame()">
+    Reiniciar
+   </button>
+  </div>
+  <script>
+   //-----------------------------------
         // LÓGICA DOS JOGOS (MODIFICADA PARA INICIAR APENAS COM O BOTÃO)
         //-----------------------------------
         
@@ -1715,7 +1936,6 @@ Para começar ou jogar novamente, use o botão "Reiniciar" de cada jogo. Divirta
             window.resetRpgBattleGame = resetRpgBattleGame;
             // remove a chamada `resetRpgBattleGame();`
         })();
-    </script>
-    
-    </body>
+  </script>
+ </body>
 </html>

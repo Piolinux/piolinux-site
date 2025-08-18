@@ -1,30 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caixa de Ferramentas JavaScript</title>
-  <meta name="description" content="Coleção completa de ferramentas e exemplos práticos em JavaScript. Aprenda e use jogos, utilitários e projetos interativos para aprimorar suas habilidades.">
-  <meta name="keywords" content="JavaScript, ferramentas, projetos, jogos, código, front-end, desenvolvimento web, exemplos, utilitários, V3">
-  <meta name="robots" content="index,follow">
-  <meta name="author" content="Piolinux">
-  
-    <link rel="canonical" href="https://piolinux.com/caixa-de-ferramentas.html" />
-  
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Caixa de Ferramentas JavaScript
+  </title>
+  <meta content="Coleção completa de ferramentas e exemplos práticos em JavaScript. Aprenda e use jogos, utilitários e projetos interativos para aprimorar suas habilidades." name="description"/>
+  <meta content="JavaScript, ferramentas, projetos, jogos, código, front-end, desenvolvimento web, exemplos, utilitários, V3" name="keywords"/>
+  <meta content="index,follow" name="robots"/>
+  <meta content="Piolinux" name="author"/>
+  <link href="https://piolinux.com/caixa-de-ferramentas.html" rel="canonical"/>
   <!-- Outros meta e links CSS -->
-  
-  
-  
-  
-</head>
-
-
-
-
-
-<style>
-	
+ </head>
+ <style>
   header h1 {
   color: #80ff00; /* verde Piolinux */
   font-size: 1.8rem;
@@ -207,51 +196,91 @@ footer a:hover {
       display: flex;
     }
   }
-</style>
-
-</head>
-<body>
+ </style>
+ <body>
   <header>
-    <header>
-  <h1 class="site-title"><a href="/">Piolinux</a></h1>
-  <div class="menu-container">
-    <button class="menu-toggle" aria-label="Abrir menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
-    <nav class="dropdown-menu-container">
+   
+    <h1 class="site-title">
+     <a href="/">
+      Piolinux
+     </a>
+    </h1>
+    <div class="menu-container">
+     <button aria-label="Abrir menu" class="menu-toggle" onclick="document.body.classList.toggle('menu-open')">
+      ☰
+     </button>
+     <nav class="dropdown-menu-container">
       <ul class="dropdown-menu">
-        <li><a href="/">Início</a></li>
-        <li>
-          <a href="#">Conteúdo</a>
-          <ul class="dropdown-content">
-            <li><a href="/piadas-linux-engra%C3%A7adas.html">Piadas</a></li>
-            <li><a href="/biblioteca-linux.html">Biblioteca-Linux</a></li>
-            <li><a href="/artigos-linux.html">Iniciante</a></li>
-            <li><a href="/dicas-tecnicas-linux.html">Dicas Técnicas</a></li>
-            <li><a href="/script-bash.html">Bash</a></li>
-            <li><a href="/links.html">Conteúdos de Linux</a></li>
-            <li><a href="/caixa-de-ferramentas.html">Ferramentas</a></li>
-          </ul>
-        </li>
-        <li><a href="/jogos-online.html">Jogos</a></li>
-        <li><a href="/reparar-boot-linux.html">Boot</a></li>
+       <li>
+        <a href="/">
+         Início
+        </a>
+       </li>
+       <li>
+        <a href="#">
+         Conteúdo
+        </a>
+        <ul class="dropdown-content">
+         <li>
+          <a href="/piadas-linux-engra%C3%A7adas.html">
+           Piadas
+          </a>
+         </li>
+         <li>
+          <a href="/biblioteca-linux.html">
+           Biblioteca-Linux
+          </a>
+         </li>
+         <li>
+          <a href="/artigos-linux.html">
+           Iniciante
+          </a>
+         </li>
+         <li>
+          <a href="/dicas-tecnicas-linux.html">
+           Dicas Técnicas
+          </a>
+         </li>
+         <li>
+          <a href="/script-bash.html">
+           Bash
+          </a>
+         </li>
+         <li>
+          <a href="/links.html">
+           Conteúdos de Linux
+          </a>
+         </li>
+         <li>
+          <a href="/caixa-de-ferramentas.html">
+           Ferramentas
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="/jogos-online.html">
+         Jogos
+        </a>
+       </li>
+       <li>
+        <a href="/reparar-boot-linux.html">
+         Boot
+        </a>
+       </li>
       </ul>
-    </nav>
-  </div>
-</header>
-
-  </header>
-
- <main>
-  <h1>Caixa de Ferramentas JavaScript</h1>
-  </head>
-<body>
-
-    
-
-    <main>
-		
-		<div id="share" style="text-align:center;margin:15px 0"></div>
-        <script async defer>
-        (() => {
+     </nav>
+    </div>
+   </header>
+  
+  <main>
+   <h1>
+    Caixa de Ferramentas JavaScript
+   </h1>
+   <div id="share" style="text-align:center;margin:15px 0">
+   </div>
+   <script async="" defer="">
+    (() => {
             const u = encodeURIComponent(location.href), t = encodeURIComponent(document.title);
             const d = [
                 ["Reddit", "#ff4500", `https://www.reddit.com/submit?url=${u}&title=${t}`],
@@ -270,375 +299,739 @@ footer a:hover {
                 e.appendChild(a);
             });
         })();
-        </script>
-		
-        <p>Aqui você encontra uma vasta coleção de scripts úteis. Sinta-se à vontade para testá-los e reutilizá-los em seus projetos!</p>
-        
-        <div class="script-container" id="script1">
-            <h2>1. Mudar o Texto</h2>
-            <p id="textoMudar">Este é o texto original.</p>
-            <button onclick="mudarTexto()">Clique para Mudar</button>
-            <button class="copy-button" onclick="copiarCodigo('mudarTexto')">Copiar Código</button>
-            <p id="feedback1"></p>
-        </div>
-
-        <div class="script-container" id="script2">
-            <h2>2. Alerta de Clique</h2>
-            <button id="btnAlerta">Clique para Ver Alerta</button>
-            <button class="copy-button" onclick="copiarCodigo('alertaClique')">Copiar Código</button>
-            <p id="feedback2"></p>
-        </div>
-
-        <div class="script-container" id="script3">
-            <h2>3. Mudar a Cor de Fundo</h2>
-            <button onclick="mudarCorFundo()">Mudar Cor Aleatória</button>
-            <button class="copy-button" onclick="copiarCodigo('mudarCorFundo')">Copiar Código</button>
-            <p id="feedback3"></p>
-        </div>
-
-        <div class="script-container" id="script4">
-            <h2>4. Somar Dois Números</h2>
-            <input type="number" id="num1" placeholder="Número 1">
-            <input type="number" id="num2" placeholder="Número 2">
-            <button onclick="somarNumeros()">Somar</button>
-            <button class="copy-button" onclick="copiarCodigo('somarNumeros')">Copiar Código</button>
-            <p>Resultado: <span id="resultadoSoma"></span></p>
-            <p id="feedback4"></p>
-        </div>
-
-        <div class="script-container" id="script5">
-            <h2>5. Ordenar um Array</h2>
-            <p>Array original: [5, 2, 8, 1, 4]</p>
-            <button onclick="ordenarArray()">Ordenar</button>
-            <button class="copy-button" onclick="copiarCodigo('ordenarArray')">Copiar Código</button>
-            <p>Array Ordenado: <span id="arrayOrdenado"></span></p>
-            <p id="feedback5"></p>
-        </div>
-
-        <div class="script-container" id="script6">
-            <h2>6. Reverter uma String</h2>
-            <input type="text" id="stringOriginal" value="JavaScript">
-            <button onclick="reverterString()">Reverter</button>
-            <button class="copy-button" onclick="copiarCodigo('reverterString')">Copiar Código</button>
-            <p>String Revertida: <span id="stringRevertida"></span></p>
-            <p id="feedback6"></p>
-        </div>
-
-        <div class="script-container" id="script7">
-            <h2>7. Salvar Dados no Navegador</h2>
-            <input type="text" id="chaveLS" placeholder="Chave">
-            <input type="text" id="valorLS" placeholder="Valor">
-            <button onclick="salvarDados()">Salvar</button>
-            <button onclick="carregarDados()">Carregar</button>
-            <button class="copy-button" onclick="copiarCodigo('localStorage')">Copiar Código</button>
-            <p>Dados Carregados: <span id="dadosCarregados"></span></p>
-            <p id="feedback7"></p>
-        </div>
-
-        <div class="script-container" id="script8">
-            <h2>8. Validação de Campo</h2>
-            <input type="text" id="campoVazio" placeholder="Digite algo aqui">
-            <button onclick="validarCampo()">Validar</button>
-            <button class="copy-button" onclick="copiarCodigo('validarCampo')">Copiar Código</button>
-            <p id="validacaoResultado"></p>
-            <p id="feedback8"></p>
-        </div>
-
-        <div class="script-container" id="script9">
-            <h2>9. Contador Regressivo</h2>
-            <p>Tempo Restante: <span id="contadorTempo"></span></p>
-            <button onclick="iniciarContador()">Iniciar</button>
-            <button class="copy-button" onclick="copiarCodigo('iniciarContador')">Copiar Código</button>
-            <p id="feedback9"></p>
-        </div>
-
-        <div class="script-container" id="script10">
-            <h2>10. Gerar Número Aleatório</h2>
-            <p>Número gerado (entre 1 e 100): <span id="numAleatorio"></span></p>
-            <button onclick="gerarNumero()">Gerar</button>
-            <button class="copy-button" onclick="copiarCodigo('gerarNumero')">Copiar Código</button>
-            <p id="feedback10"></p>
-        </div>
-
-        <div class="script-container" id="script11">
-            <h2>11. Data Atual</h2>
-            <p id="dataAtual"></p>
-            <button onclick="mostrarData()">Mostrar Data</button>
-            <button class="copy-button" onclick="copiarCodigo('mostrarData')">Copiar Código</button>
-            <p id="feedback11"></p>
-        </div>
-
-        <div class="script-container" id="script12">
-            <h2>12. Filtrar Array</h2>
-            <p>Array original: [10, 25, 42, 50, 75, 100]</p>
-            <button onclick="filtrarArray()">Filtrar (maior que 40)</button>
-            <button class="copy-button" onclick="copiarCodigo('filtrarArray')">Copiar Código</button>
-            <p>Array Filtrado: <span id="arrayFiltrado"></span></p>
-            <p id="feedback12"></p>
-        </div>
-
-        <div class="script-container" id="script13">
-            <h2>13. Adicionar/Remover Classe</h2>
-            <p id="paragrafoClasse">Este parágrafo mudará de cor.</p>
-            <button onclick="mudarClasse()">Mudar Estilo</button>
-            <button class="copy-button" onclick="copiarCodigo('mudarClasse')">Copiar Código</button>
-            <p id="feedback13"></p>
-        </div>
-
-        <div class="script-container" id="script14">
-            <h2>14. Mudar Cor com o Mouse</h2>
-            <div id="divMouse" style="width: 100px; height: 100px; background-color: #333; margin: auto;"></div>
-            <button class="copy-button" onclick="copiarCodigo('eventosMouse')">Copiar Código</button>
-            <p id="feedback14"></p>
-        </div>
-
-        <div class="script-container" id="script15">
-            <h2>15. Contar Caracteres</h2>
-            <textarea id="textoContagem" placeholder="Digite aqui..."></textarea>
-            <button onclick="contarCaracteres()">Contar</button>
-            <button class="copy-button" onclick="copiarCodigo('contarCaracteres')">Copiar Código</button>
-            <p>Total de caracteres: <span id="totalCaracteres"></span></p>
-            <p id="feedback15"></p>
-        </div>
-
-        <div class="script-container" id="script16">
-            <h2>16. Usar Objeto</h2>
-            <p>Informações de um usuário:</p>
-            <button onclick="mostrarObjeto()">Mostrar</button>
-            <button class="copy-button" onclick="copiarCodigo('mostrarObjeto')">Copiar Código</button>
-            <p id="infoUsuario"></p>
-            <p id="feedback16"></p>
-        </div>
-
-        <div class="script-container" id="script17">
-            <h2>17. Relógio Digital</h2>
-            <p id="relogioDigital"></p>
-            <button onclick="iniciarRelogio()">Iniciar Relógio</button>
-            <button class="copy-button" onclick="copiarCodigo('iniciarRelogio')">Copiar Código</button>
-            <p id="feedback17"></p>
-        </div>
-
-        <div class="script-container" id="script18">
-            <h2>18. Checar Item no LocalStorage</h2>
-            <input type="text" id="chaveChecar" placeholder="Chave para checar">
-            <button onclick="checarItem()">Checar</button>
-            <button class="copy-button" onclick="copiarCodigo('checarItem')">Copiar Código</button>
-            <p id="resultadoChecagem"></p>
-            <p id="feedback18"></p>
-        </div>
-
-        <div class="script-container" id="script19">
-            <h2>19. Somar Itens de um Array</h2>
-            <p>Array: [1, 2, 3, 4, 5]</p>
-            <button onclick="somarArray()">Somar</button>
-            <button class="copy-button" onclick="copiarCodigo('somarArray')">Copiar Código</button>
-            <p>Soma Total: <span id="somaArray"></span></p>
-            <p id="feedback19"></p>
-        </div>
-
-        <div class="script-container" id="script20">
-            <h2>20. Usar uma Promise</h2>
-            <p>Testa uma operação assíncrona.</p>
-            <button onclick="testarPromise()">Executar</button>
-            <button class="copy-button" onclick="copiarCodigo('testarPromise')">Copiar Código</button>
-            <p id="resultadoPromise"></p>
-            <p id="feedback20"></p>
-        </div>
-
-        <div class="script-container" id="script21">
-            <h2>21. Sistema de Abas</h2>
-            <div class="tabs">
-                <button class="tab-button active" onclick="abrirAba(event, 'aba1')">Aba 1</button>
-                <button class="tab-button" onclick="abrirAba(event, 'aba2')">Aba 2</button>
-                <button class="tab-button" onclick="abrirAba(event, 'aba3')">Aba 3</button>
-            </div>
-            <div id="aba1" class="tab-content active">
-                <p>Conteúdo da Aba 1. Este é o conteúdo padrão.</p>
-            </div>
-            <div id="aba2" class="tab-content">
-                <p>Conteúdo da Aba 2. Aqui você pode colocar outras informações.</p>
-            </div>
-            <div id="aba3" class="tab-content">
-                <p>Conteúdo da Aba 3. O sistema de abas ajuda a organizar o conteúdo.</p>
-            </div>
-            <button class="copy-button" onclick="copiarCodigo('abrirAba')">Copiar Código</button>
-            <p id="feedback21"></p>
-        </div>
-
-        <div class="script-container" id="script22">
-            <h2>22. Adicionar Elemento Dinamicamente</h2>
-            <button onclick="adicionarElemento()">Adicionar Parágrafo</button>
-            <button class="copy-button" onclick="copiarCodigo('adicionarElemento')">Copiar Código</button>
-            <div id="listaElementos"></div>
-            <p id="feedback22"></p>
-        </div>
-
-        <div class="script-container" id="script23">
-            <h2>23. Obter Valor do Input</h2>
-            <input type="text" id="inputValor" placeholder="Digite seu nome">
-            <button onclick="obterValor()">Obter Valor</button>
-            <button class="copy-button" onclick="copiarCodigo('obterValor')">Copiar Código</button>
-            <p id="valorObtido"></p>
-            <p id="feedback23"></p>
-        </div>
-
-        <div class="script-container" id="script24">
-            <h2>24. Formatar como Moeda</h2>
-            <p>Preço original: 1234.56</p>
-            <button onclick="formatarMoeda()">Formatar</button>
-            <button class="copy-button" onclick="copiarCodigo('formatarMoeda')">Copiar Código</button>
-            <p id="precoFormatado"></p>
-            <p id="feedback24"></p>
-        </div>
-
-        <div class="script-container" id="script25">
-            <h2>25. Capitalizar Primeira Letra</h2>
-            <input type="text" id="palavraCapitalizar" value="exemplo">
-            <button onclick="capitalizarPalavra()">Capitalizar</button>
-            <button class="copy-button" onclick="copiarCodigo('capitalizarPalavra')">Copiar Código</button>
-            <p id="palavraCapitalizada"></p>
-            <p id="feedback25"></p>
-        </div>
-
-        <div class="script-container" id="script26">
-            <h2>26. Remover Duplicatas do Array</h2>
-            <p>Array original: [1, 2, 2, 3, 4, 4, 5]</p>
-            <button onclick="removerDuplicatas()">Remover</button>
-            <button class="copy-button" onclick="copiarCodigo('removerDuplicatas')">Copiar Código</button>
-            <p>Array sem duplicatas: <span id="arraySemDuplicatas"></span></p>
-            <p id="feedback26"></p>
-        </div>
-
-        <div class="script-container" id="script27">
-            <h2>27. Monitorar Teclas</h2>
-            <p>Pressione qualquer tecla no teclado.</p>
-            <p>Tecla pressionada: <span id="teclaPressionada"></span></p>
-            <button class="copy-button" onclick="copiarCodigo('monitorarTeclas')">Copiar Código</button>
-            <p id="feedback27"></p>
-        </div>
-
-        <div class="script-container" id="script28">
-            <h2>28. Alternar Estilo (Toggle)</h2>
-            <p id="paragrafoToggle">Clique no botão para alternar meu estilo.</p>
-            <button onclick="alternarEstilo()">Alternar</button>
-            <button class="copy-button" onclick="copiarCodigo('alternarEstilo')">Copiar Código</button>
-            <p id="feedback28"></p>
-        </div>
-
-        <div class="script-container" id="script29">
-            <h2>29. Obter Chaves de um Objeto</h2>
-            <p>Objeto: { nome: "Ana", idade: 30, cidade: "São Paulo" }</p>
-            <button onclick="obterChaves()">Obter Chaves</button>
-            <button class="copy-button" onclick="copiarCodigo('obterChaves')">Copiar Código</button>
-            <p>Chaves: <span id="chavesObjeto"></span></p>
-            <p id="feedback29"></p>
-        </div>
-
-        <div class="script-container" id="script30">
-            <h2>30. Buscar Dados de uma API</h2>
-            <p>Busca uma lista de usuários de um endpoint público.</p>
-            <button onclick="buscarDadosAPI()">Buscar Dados</button>
-            <button class="copy-button" onclick="copiarCodigo('buscarDadosAPI')">Copiar Código</button>
-            <ul id="listaUsuarios"></ul>
-            <p id="feedback30"></p>
-        </div>
-        
-        <div class="script-container" id="script31">
-            <h2>31. Validação de E-mail</h2>
-            <p>Checa se o formato do e-mail é válido.</p>
-            <input type="text" id="emailInput" placeholder="Digite um e-mail">
-            <button onclick="validarEmail()">Validar</button>
-            <button class="copy-button" onclick="copiarCodigo('validarEmail')">Copiar Código</button>
-            <p id="emailResultado"></p>
-            <p id="feedback31"></p>
-        </div>
-        
-        <div class="script-container" id="script32">
-            <h2>32. Contador de Caracteres em Tempo Real</h2>
-            <textarea id="textoContadorReal" placeholder="Digite seu texto aqui..."></textarea>
-            <p>Caracteres: <span id="contadorReal">0</span></p>
-            <button class="copy-button" onclick="copiarCodigo('contadorReal')">Copiar Código</button>
-            <p id="feedback32"></p>
-        </div>
-        
-        <div class="script-container" id="script33">
-            <h2>33. Máscara de Telefone</h2>
-            <p>Adiciona máscara de telefone (ex: (99) 99999-9999).</p>
-            <input type="text" id="inputTelefone" placeholder="(XX) XXXXX-XXXX">
-            <button class="copy-button" onclick="copiarCodigo('mascaraTelefone')">Copiar Código</button>
-            <p id="feedback33"></p>
-        </div>
-        
-        <div class="script-container" id="script34">
-            <h2>34. Gerador de Senhas</h2>
-            <p>Gera uma senha aleatória de 12 caracteres.</p>
-            <button onclick="gerarSenha()">Gerar Senha</button>
-            <button class="copy-button" onclick="copiarCodigo('gerarSenha')">Copiar Código</button>
-            <p>Senha gerada: <span id="senhaGerada"></span></p>
-            <p id="feedback34"></p>
-        </div>
-
-        <div class="script-container" id="script35">
-            <h2>35. Conversor de Temperatura</h2>
-            <p>Converte de Celsius para Fahrenheit.</p>
-            <input type="number" id="tempCelsius" placeholder="Graus Celsius">
-            <button onclick="converterTemperatura()">Converter</button>
-            <button class="copy-button" onclick="copiarCodigo('converterTemperatura')">Copiar Código</button>
-            <p id="tempFahrenheit"></p>
-            <p id="feedback35"></p>
-        </div>
-
-        <div class="script-container" id="script36">
-            <h2>36. Calculadora de IMC</h2>
-            <p>Calcule seu Índice de Massa Corporal.</p>
-            <input type="number" id="peso" placeholder="Peso (kg)">
-            <input type="number" id="altura" placeholder="Altura (m)">
-            <button onclick="calcularIMC()">Calcular IMC</button>
-            <button class="copy-button" onclick="copiarCodigo('calcularIMC')">Copiar Código</button>
-            <p id="resultadoIMC"></p>
-            <p id="feedback36"></p>
-        </div>
-
-        <div class="script-container" id="script37">
-            <h2>37. Menu Hamburger</h2>
-            <span class="hamburger-icon" onclick="toggleMenu()">☰</span>
-            <div id="hamburgerMenu" class="hamburger-menu">
-                <a href="#inicio">Início</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#contato">Contato</a>
-            </div>
-            <button class="copy-button" onclick="copiarCodigo('menuHamburger')">Copiar Código</button>
-            <p id="feedback37"></p>
-        </div>
-        
-        <div class="script-container" id="script38">
-            <h2>38. Scroll Suave</h2>
-            <p>Clique no botão para ir para o topo da página.</p>
-            <button onclick="scrollSuave()">Ir para o Topo</button>
-            <button class="copy-button" onclick="copiarCodigo('scrollSuave')">Copiar Código</button>
-            <p id="feedback38"></p>
-        </div>
-
-        <div class="script-container" id="script39">
-            <h2>39. Efeito de Digitação</h2>
-            <p id="typingText"></p>
-            <button onclick="startTyping()">Iniciar Efeito</button>
-            <button class="copy-button" onclick="copiarCodigo('efeitoDigitacao')">Copiar Código</button>
-            <p id="feedback39"></p>
-        </div>
-
-        <div class="script-container" id="script40">
-            <h2>40. Compartilhar Página</h2>
-            <p>Compartilhe o link desta página com outras pessoas.</p>
-            <button onclick="compartilharPagina()">Compartilhar</button>
-            <button class="copy-button" onclick="copiarCodigo('compartilharPagina')">Copiar Código</button>
-            <p id="share-feedback"></p>
-            <p id="feedback40"></p>
-        </div>
-    </main>
-
-    <script>
-        const scripts = {
+   </script>
+   <p>
+    Aqui você encontra uma vasta coleção de scripts úteis. Sinta-se à vontade para testá-los e reutilizá-los em seus projetos!
+   </p>
+   <div class="script-container" id="script1">
+    <h2>
+     1. Mudar o Texto
+    </h2>
+    <p id="textoMudar">
+     Este é o texto original.
+    </p>
+    <button onclick="mudarTexto()">
+     Clique para Mudar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('mudarTexto')">
+     Copiar Código
+    </button>
+    <p id="feedback1">
+    </p>
+   </div>
+   <div class="script-container" id="script2">
+    <h2>
+     2. Alerta de Clique
+    </h2>
+    <button id="btnAlerta">
+     Clique para Ver Alerta
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('alertaClique')">
+     Copiar Código
+    </button>
+    <p id="feedback2">
+    </p>
+   </div>
+   <div class="script-container" id="script3">
+    <h2>
+     3. Mudar a Cor de Fundo
+    </h2>
+    <button onclick="mudarCorFundo()">
+     Mudar Cor Aleatória
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('mudarCorFundo')">
+     Copiar Código
+    </button>
+    <p id="feedback3">
+    </p>
+   </div>
+   <div class="script-container" id="script4">
+    <h2>
+     4. Somar Dois Números
+    </h2>
+    <input id="num1" placeholder="Número 1" type="number"/>
+    <input id="num2" placeholder="Número 2" type="number"/>
+    <button onclick="somarNumeros()">
+     Somar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('somarNumeros')">
+     Copiar Código
+    </button>
+    <p>
+     Resultado:
+     <span id="resultadoSoma">
+     </span>
+    </p>
+    <p id="feedback4">
+    </p>
+   </div>
+   <div class="script-container" id="script5">
+    <h2>
+     5. Ordenar um Array
+    </h2>
+    <p>
+     Array original: [5, 2, 8, 1, 4]
+    </p>
+    <button onclick="ordenarArray()">
+     Ordenar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('ordenarArray')">
+     Copiar Código
+    </button>
+    <p>
+     Array Ordenado:
+     <span id="arrayOrdenado">
+     </span>
+    </p>
+    <p id="feedback5">
+    </p>
+   </div>
+   <div class="script-container" id="script6">
+    <h2>
+     6. Reverter uma String
+    </h2>
+    <input id="stringOriginal" type="text" value="JavaScript"/>
+    <button onclick="reverterString()">
+     Reverter
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('reverterString')">
+     Copiar Código
+    </button>
+    <p>
+     String Revertida:
+     <span id="stringRevertida">
+     </span>
+    </p>
+    <p id="feedback6">
+    </p>
+   </div>
+   <div class="script-container" id="script7">
+    <h2>
+     7. Salvar Dados no Navegador
+    </h2>
+    <input id="chaveLS" placeholder="Chave" type="text"/>
+    <input id="valorLS" placeholder="Valor" type="text"/>
+    <button onclick="salvarDados()">
+     Salvar
+    </button>
+    <button onclick="carregarDados()">
+     Carregar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('localStorage')">
+     Copiar Código
+    </button>
+    <p>
+     Dados Carregados:
+     <span id="dadosCarregados">
+     </span>
+    </p>
+    <p id="feedback7">
+    </p>
+   </div>
+   <div class="script-container" id="script8">
+    <h2>
+     8. Validação de Campo
+    </h2>
+    <input id="campoVazio" placeholder="Digite algo aqui" type="text"/>
+    <button onclick="validarCampo()">
+     Validar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('validarCampo')">
+     Copiar Código
+    </button>
+    <p id="validacaoResultado">
+    </p>
+    <p id="feedback8">
+    </p>
+   </div>
+   <div class="script-container" id="script9">
+    <h2>
+     9. Contador Regressivo
+    </h2>
+    <p>
+     Tempo Restante:
+     <span id="contadorTempo">
+     </span>
+    </p>
+    <button onclick="iniciarContador()">
+     Iniciar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('iniciarContador')">
+     Copiar Código
+    </button>
+    <p id="feedback9">
+    </p>
+   </div>
+   <div class="script-container" id="script10">
+    <h2>
+     10. Gerar Número Aleatório
+    </h2>
+    <p>
+     Número gerado (entre 1 e 100):
+     <span id="numAleatorio">
+     </span>
+    </p>
+    <button onclick="gerarNumero()">
+     Gerar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('gerarNumero')">
+     Copiar Código
+    </button>
+    <p id="feedback10">
+    </p>
+   </div>
+   <div class="script-container" id="script11">
+    <h2>
+     11. Data Atual
+    </h2>
+    <p id="dataAtual">
+    </p>
+    <button onclick="mostrarData()">
+     Mostrar Data
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('mostrarData')">
+     Copiar Código
+    </button>
+    <p id="feedback11">
+    </p>
+   </div>
+   <div class="script-container" id="script12">
+    <h2>
+     12. Filtrar Array
+    </h2>
+    <p>
+     Array original: [10, 25, 42, 50, 75, 100]
+    </p>
+    <button onclick="filtrarArray()">
+     Filtrar (maior que 40)
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('filtrarArray')">
+     Copiar Código
+    </button>
+    <p>
+     Array Filtrado:
+     <span id="arrayFiltrado">
+     </span>
+    </p>
+    <p id="feedback12">
+    </p>
+   </div>
+   <div class="script-container" id="script13">
+    <h2>
+     13. Adicionar/Remover Classe
+    </h2>
+    <p id="paragrafoClasse">
+     Este parágrafo mudará de cor.
+    </p>
+    <button onclick="mudarClasse()">
+     Mudar Estilo
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('mudarClasse')">
+     Copiar Código
+    </button>
+    <p id="feedback13">
+    </p>
+   </div>
+   <div class="script-container" id="script14">
+    <h2>
+     14. Mudar Cor com o Mouse
+    </h2>
+    <div id="divMouse" style="width: 100px; height: 100px; background-color: #333; margin: auto;">
+    </div>
+    <button class="copy-button" onclick="copiarCodigo('eventosMouse')">
+     Copiar Código
+    </button>
+    <p id="feedback14">
+    </p>
+   </div>
+   <div class="script-container" id="script15">
+    <h2>
+     15. Contar Caracteres
+    </h2>
+    <textarea id="textoContagem" placeholder="Digite aqui..."></textarea>
+    <button onclick="contarCaracteres()">
+     Contar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('contarCaracteres')">
+     Copiar Código
+    </button>
+    <p>
+     Total de caracteres:
+     <span id="totalCaracteres">
+     </span>
+    </p>
+    <p id="feedback15">
+    </p>
+   </div>
+   <div class="script-container" id="script16">
+    <h2>
+     16. Usar Objeto
+    </h2>
+    <p>
+     Informações de um usuário:
+    </p>
+    <button onclick="mostrarObjeto()">
+     Mostrar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('mostrarObjeto')">
+     Copiar Código
+    </button>
+    <p id="infoUsuario">
+    </p>
+    <p id="feedback16">
+    </p>
+   </div>
+   <div class="script-container" id="script17">
+    <h2>
+     17. Relógio Digital
+    </h2>
+    <p id="relogioDigital">
+    </p>
+    <button onclick="iniciarRelogio()">
+     Iniciar Relógio
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('iniciarRelogio')">
+     Copiar Código
+    </button>
+    <p id="feedback17">
+    </p>
+   </div>
+   <div class="script-container" id="script18">
+    <h2>
+     18. Checar Item no LocalStorage
+    </h2>
+    <input id="chaveChecar" placeholder="Chave para checar" type="text"/>
+    <button onclick="checarItem()">
+     Checar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('checarItem')">
+     Copiar Código
+    </button>
+    <p id="resultadoChecagem">
+    </p>
+    <p id="feedback18">
+    </p>
+   </div>
+   <div class="script-container" id="script19">
+    <h2>
+     19. Somar Itens de um Array
+    </h2>
+    <p>
+     Array: [1, 2, 3, 4, 5]
+    </p>
+    <button onclick="somarArray()">
+     Somar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('somarArray')">
+     Copiar Código
+    </button>
+    <p>
+     Soma Total:
+     <span id="somaArray">
+     </span>
+    </p>
+    <p id="feedback19">
+    </p>
+   </div>
+   <div class="script-container" id="script20">
+    <h2>
+     20. Usar uma Promise
+    </h2>
+    <p>
+     Testa uma operação assíncrona.
+    </p>
+    <button onclick="testarPromise()">
+     Executar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('testarPromise')">
+     Copiar Código
+    </button>
+    <p id="resultadoPromise">
+    </p>
+    <p id="feedback20">
+    </p>
+   </div>
+   <div class="script-container" id="script21">
+    <h2>
+     21. Sistema de Abas
+    </h2>
+    <div class="tabs">
+     <button class="tab-button active" onclick="abrirAba(event, 'aba1')">
+      Aba 1
+     </button>
+     <button class="tab-button" onclick="abrirAba(event, 'aba2')">
+      Aba 2
+     </button>
+     <button class="tab-button" onclick="abrirAba(event, 'aba3')">
+      Aba 3
+     </button>
+    </div>
+    <div class="tab-content active" id="aba1">
+     <p>
+      Conteúdo da Aba 1. Este é o conteúdo padrão.
+     </p>
+    </div>
+    <div class="tab-content" id="aba2">
+     <p>
+      Conteúdo da Aba 2. Aqui você pode colocar outras informações.
+     </p>
+    </div>
+    <div class="tab-content" id="aba3">
+     <p>
+      Conteúdo da Aba 3. O sistema de abas ajuda a organizar o conteúdo.
+     </p>
+    </div>
+    <button class="copy-button" onclick="copiarCodigo('abrirAba')">
+     Copiar Código
+    </button>
+    <p id="feedback21">
+    </p>
+   </div>
+   <div class="script-container" id="script22">
+    <h2>
+     22. Adicionar Elemento Dinamicamente
+    </h2>
+    <button onclick="adicionarElemento()">
+     Adicionar Parágrafo
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('adicionarElemento')">
+     Copiar Código
+    </button>
+    <div id="listaElementos">
+    </div>
+    <p id="feedback22">
+    </p>
+   </div>
+   <div class="script-container" id="script23">
+    <h2>
+     23. Obter Valor do Input
+    </h2>
+    <input id="inputValor" placeholder="Digite seu nome" type="text"/>
+    <button onclick="obterValor()">
+     Obter Valor
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('obterValor')">
+     Copiar Código
+    </button>
+    <p id="valorObtido">
+    </p>
+    <p id="feedback23">
+    </p>
+   </div>
+   <div class="script-container" id="script24">
+    <h2>
+     24. Formatar como Moeda
+    </h2>
+    <p>
+     Preço original: 1234.56
+    </p>
+    <button onclick="formatarMoeda()">
+     Formatar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('formatarMoeda')">
+     Copiar Código
+    </button>
+    <p id="precoFormatado">
+    </p>
+    <p id="feedback24">
+    </p>
+   </div>
+   <div class="script-container" id="script25">
+    <h2>
+     25. Capitalizar Primeira Letra
+    </h2>
+    <input id="palavraCapitalizar" type="text" value="exemplo"/>
+    <button onclick="capitalizarPalavra()">
+     Capitalizar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('capitalizarPalavra')">
+     Copiar Código
+    </button>
+    <p id="palavraCapitalizada">
+    </p>
+    <p id="feedback25">
+    </p>
+   </div>
+   <div class="script-container" id="script26">
+    <h2>
+     26. Remover Duplicatas do Array
+    </h2>
+    <p>
+     Array original: [1, 2, 2, 3, 4, 4, 5]
+    </p>
+    <button onclick="removerDuplicatas()">
+     Remover
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('removerDuplicatas')">
+     Copiar Código
+    </button>
+    <p>
+     Array sem duplicatas:
+     <span id="arraySemDuplicatas">
+     </span>
+    </p>
+    <p id="feedback26">
+    </p>
+   </div>
+   <div class="script-container" id="script27">
+    <h2>
+     27. Monitorar Teclas
+    </h2>
+    <p>
+     Pressione qualquer tecla no teclado.
+    </p>
+    <p>
+     Tecla pressionada:
+     <span id="teclaPressionada">
+     </span>
+    </p>
+    <button class="copy-button" onclick="copiarCodigo('monitorarTeclas')">
+     Copiar Código
+    </button>
+    <p id="feedback27">
+    </p>
+   </div>
+   <div class="script-container" id="script28">
+    <h2>
+     28. Alternar Estilo (Toggle)
+    </h2>
+    <p id="paragrafoToggle">
+     Clique no botão para alternar meu estilo.
+    </p>
+    <button onclick="alternarEstilo()">
+     Alternar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('alternarEstilo')">
+     Copiar Código
+    </button>
+    <p id="feedback28">
+    </p>
+   </div>
+   <div class="script-container" id="script29">
+    <h2>
+     29. Obter Chaves de um Objeto
+    </h2>
+    <p>
+     Objeto: { nome: "Ana", idade: 30, cidade: "São Paulo" }
+    </p>
+    <button onclick="obterChaves()">
+     Obter Chaves
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('obterChaves')">
+     Copiar Código
+    </button>
+    <p>
+     Chaves:
+     <span id="chavesObjeto">
+     </span>
+    </p>
+    <p id="feedback29">
+    </p>
+   </div>
+   <div class="script-container" id="script30">
+    <h2>
+     30. Buscar Dados de uma API
+    </h2>
+    <p>
+     Busca uma lista de usuários de um endpoint público.
+    </p>
+    <button onclick="buscarDadosAPI()">
+     Buscar Dados
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('buscarDadosAPI')">
+     Copiar Código
+    </button>
+    <ul id="listaUsuarios">
+    </ul>
+    <p id="feedback30">
+    </p>
+   </div>
+   <div class="script-container" id="script31">
+    <h2>
+     31. Validação de E-mail
+    </h2>
+    <p>
+     Checa se o formato do e-mail é válido.
+    </p>
+    <input id="emailInput" placeholder="Digite um e-mail" type="text"/>
+    <button onclick="validarEmail()">
+     Validar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('validarEmail')">
+     Copiar Código
+    </button>
+    <p id="emailResultado">
+    </p>
+    <p id="feedback31">
+    </p>
+   </div>
+   <div class="script-container" id="script32">
+    <h2>
+     32. Contador de Caracteres em Tempo Real
+    </h2>
+    <textarea id="textoContadorReal" placeholder="Digite seu texto aqui..."></textarea>
+    <p>
+     Caracteres:
+     <span id="contadorReal">
+      0
+     </span>
+    </p>
+    <button class="copy-button" onclick="copiarCodigo('contadorReal')">
+     Copiar Código
+    </button>
+    <p id="feedback32">
+    </p>
+   </div>
+   <div class="script-container" id="script33">
+    <h2>
+     33. Máscara de Telefone
+    </h2>
+    <p>
+     Adiciona máscara de telefone (ex: (99) 99999-9999).
+    </p>
+    <input id="inputTelefone" placeholder="(XX) XXXXX-XXXX" type="text"/>
+    <button class="copy-button" onclick="copiarCodigo('mascaraTelefone')">
+     Copiar Código
+    </button>
+    <p id="feedback33">
+    </p>
+   </div>
+   <div class="script-container" id="script34">
+    <h2>
+     34. Gerador de Senhas
+    </h2>
+    <p>
+     Gera uma senha aleatória de 12 caracteres.
+    </p>
+    <button onclick="gerarSenha()">
+     Gerar Senha
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('gerarSenha')">
+     Copiar Código
+    </button>
+    <p>
+     Senha gerada:
+     <span id="senhaGerada">
+     </span>
+    </p>
+    <p id="feedback34">
+    </p>
+   </div>
+   <div class="script-container" id="script35">
+    <h2>
+     35. Conversor de Temperatura
+    </h2>
+    <p>
+     Converte de Celsius para Fahrenheit.
+    </p>
+    <input id="tempCelsius" placeholder="Graus Celsius" type="number"/>
+    <button onclick="converterTemperatura()">
+     Converter
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('converterTemperatura')">
+     Copiar Código
+    </button>
+    <p id="tempFahrenheit">
+    </p>
+    <p id="feedback35">
+    </p>
+   </div>
+   <div class="script-container" id="script36">
+    <h2>
+     36. Calculadora de IMC
+    </h2>
+    <p>
+     Calcule seu Índice de Massa Corporal.
+    </p>
+    <input id="peso" placeholder="Peso (kg)" type="number"/>
+    <input id="altura" placeholder="Altura (m)" type="number"/>
+    <button onclick="calcularIMC()">
+     Calcular IMC
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('calcularIMC')">
+     Copiar Código
+    </button>
+    <p id="resultadoIMC">
+    </p>
+    <p id="feedback36">
+    </p>
+   </div>
+   <div class="script-container" id="script37">
+    <h2>
+     37. Menu Hamburger
+    </h2>
+    <span class="hamburger-icon" onclick="toggleMenu()">
+     ☰
+    </span>
+    <div class="hamburger-menu" id="hamburgerMenu">
+     <a href="#inicio">
+      Início
+     </a>
+     <a href="#sobre">
+      Sobre
+     </a>
+     <a href="#contato">
+      Contato
+     </a>
+    </div>
+    <button class="copy-button" onclick="copiarCodigo('menuHamburger')">
+     Copiar Código
+    </button>
+    <p id="feedback37">
+    </p>
+   </div>
+   <div class="script-container" id="script38">
+    <h2>
+     38. Scroll Suave
+    </h2>
+    <p>
+     Clique no botão para ir para o topo da página.
+    </p>
+    <button onclick="scrollSuave()">
+     Ir para o Topo
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('scrollSuave')">
+     Copiar Código
+    </button>
+    <p id="feedback38">
+    </p>
+   </div>
+   <div class="script-container" id="script39">
+    <h2>
+     39. Efeito de Digitação
+    </h2>
+    <p id="typingText">
+    </p>
+    <button onclick="startTyping()">
+     Iniciar Efeito
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('efeitoDigitacao')">
+     Copiar Código
+    </button>
+    <p id="feedback39">
+    </p>
+   </div>
+   <div class="script-container" id="script40">
+    <h2>
+     40. Compartilhar Página
+    </h2>
+    <p>
+     Compartilhe o link desta página com outras pessoas.
+    </p>
+    <button onclick="compartilharPagina()">
+     Compartilhar
+    </button>
+    <button class="copy-button" onclick="copiarCodigo('compartilharPagina')">
+     Copiar Código
+    </button>
+    <p id="share-feedback">
+    </p>
+    <p id="feedback40">
+    </p>
+   </div>
+  </main>
+  <script>
+   const scripts = {
             mudarTexto: `function mudarTexto() {
                 const elemento = document.getElementById('textoMudar');
                 elemento.textContent = 'O texto foi alterado com sucesso!';
@@ -1352,17 +1745,16 @@ footer a:hover {
                 });
             }
         });
-    </script>
-    
-    
-</body>
+  </script>
+ </body>
 </html>
-
-</main>
-
 <footer>
-  Site criado com muito terminal e memes! Acesse:
-  <a href="/politica-de-privacidade.html">Política de Privacidade</a> |
-  <a href="/termos-de-uso.html">Termos de Uso</a>
-</footer></body>
-</html>
+ Site criado com muito terminal e memes! Acesse:
+ <a href="/politica-de-privacidade.html">
+  Política de Privacidade
+ </a>
+ |
+ <a href="/termos-de-uso.html">
+  Termos de Uso
+ </a>
+</footer>

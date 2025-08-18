@@ -1,30 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comandos básicos Linux para iniciantes: Guia completo</title>
-  <meta name="description" content="Descubra os principais comandos básicos do Linux para iniciantes e aprenda a usar o terminal com facilidade e segurança.">
-  <meta name="keywords" content="comandos linux, comandos básicos linux, terminal linux iniciantes, guia linux comandos, aprender linux">
-  <meta name="robots" content="index,follow">
-  <meta name="author" content="Piolinux">
-  
-    <link rel="canonical" href="https://piolinux.com/comandos-basicos-linux-para-iniciantes-guia-completo.html" />
-  
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Comandos básicos Linux para iniciantes: Guia completo
+  </title>
+  <meta content="Descubra os principais comandos básicos do Linux para iniciantes e aprenda a usar o terminal com facilidade e segurança." name="description"/>
+  <meta content="comandos linux, comandos básicos linux, terminal linux iniciantes, guia linux comandos, aprender linux" name="keywords"/>
+  <meta content="index,follow" name="robots"/>
+  <meta content="Piolinux" name="author"/>
+  <link href="https://piolinux.com/comandos-basicos-linux-para-iniciantes-guia-completo.html" rel="canonical"/>
   <!-- Outros meta e links CSS -->
-  
-  
-  
-  
-</head>
-
-
-
-
-
-<style>
-	
+ </head>
+ <style>
   /* RESET */
 * {
   margin: 0;
@@ -236,56 +225,92 @@ footer a:hover {
   border-radius: 4px;
   color: #80ff00;
 }
-
-</style>
-
-</head>
-<body>
+ </style>
+ <body>
   <header>
-    <header>
-  <h1 class="site-title"><a href="/">Piolinux</a></h1>
-  <div class="menu-container">
-    <button class="menu-toggle" aria-label="Abrir menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
-    <nav class="dropdown-menu-container">
+   
+    <h1 class="site-title">
+     <a href="/">
+      Piolinux
+     </a>
+    </h1>
+    <div class="menu-container">
+     <button aria-label="Abrir menu" class="menu-toggle" onclick="document.body.classList.toggle('menu-open')">
+      ☰
+     </button>
+     <nav class="dropdown-menu-container">
       <ul class="dropdown-menu">
-        <li><a href="/">Início</a></li>
-        <li>
-          <a href="#">Conteúdo</a>
-          <ul class="dropdown-content">
-            <li><a href="/piadas-linux-engra%C3%A7adas.html">Piadas</a></li>
-            <li><a href="/biblioteca-linux.html">Biblioteca-Linux</a></li>
-            <li><a href="/artigos-linux.html">Iniciante</a></li>
-            <li><a href="/dicas-tecnicas-linux.html">Dicas Técnicas</a></li>
-            <li><a href="/script-bash.html">Bash</a></li>
-            <li><a href="/links.html">Conteúdos de Linux</a></li>
-            <li><a href="/caixa-de-ferramentas.html">Ferramentas</a></li>
-          </ul>
-        </li>
-        <li><a href="/jogos-online.html">Jogos</a></li>
-        <li><a href="/reparar-boot-linux.html">Boot</a></li>
+       <li>
+        <a href="/">
+         Início
+        </a>
+       </li>
+       <li>
+        <a href="#">
+         Conteúdo
+        </a>
+        <ul class="dropdown-content">
+         <li>
+          <a href="/piadas-linux-engra%C3%A7adas.html">
+           Piadas
+          </a>
+         </li>
+         <li>
+          <a href="/biblioteca-linux.html">
+           Biblioteca-Linux
+          </a>
+         </li>
+         <li>
+          <a href="/artigos-linux.html">
+           Iniciante
+          </a>
+         </li>
+         <li>
+          <a href="/dicas-tecnicas-linux.html">
+           Dicas Técnicas
+          </a>
+         </li>
+         <li>
+          <a href="/script-bash.html">
+           Bash
+          </a>
+         </li>
+         <li>
+          <a href="/links.html">
+           Conteúdos de Linux
+          </a>
+         </li>
+         <li>
+          <a href="/caixa-de-ferramentas.html">
+           Ferramentas
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="/jogos-online.html">
+         Jogos
+        </a>
+       </li>
+       <li>
+        <a href="/reparar-boot-linux.html">
+         Boot
+        </a>
+       </li>
       </ul>
-    </nav>
-  </div>
-</header>
-
-  </header>
-
- <main>
-  <h1>Comandos básicos Linux para iniciantes: Guia completo</h1>
-  <body>
-
-    
-    
-
-    
-    
-    <main>
-		
-		
-		
-		<div id="menu-container"></div>
-    <div id="share" style="text-align:center;margin:15px 0"></div>
-    <script async defer>
+     </nav>
+    </div>
+   </header>
+  
+  <main>
+   <h1>
+    Comandos básicos Linux para iniciantes: Guia completo
+   </h1>
+   <div id="menu-container">
+   </div>
+   <div id="share" style="text-align:center;margin:15px 0">
+   </div>
+   <script async="" defer="">
     (() => {
         const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
         const d=[
@@ -302,111 +327,191 @@ footer a:hover {
             e.appendChild(a);
         });
     })();
-    </script>
-		
-        <article>
-            <section class="post-content">
-                       
-            <p>Dominar o terminal Linux, e bombar na produtividade? Comece por dominar os comandos básicos! Não é mágica, viu — o primeiro passo é seu. Há terminais tipo Bash, o mais conhecido. No terminal, usa-se "feitiços", que são os comandos. Mas cuidado, alguns podem inutilizar tudo! Com este guia, entenda o porquê de cada comando! E olha, `rm -f /home/` não é ideal pra começar!</p>
-            
-            <p>O que vai aprender:</p>
-            <ul>
-                <li>Comandos pra navegar pastas</li>
-                <li>Listar arquivos, verificar permissões</li>
-                <li>Comandos pra manipular arquivos e diretórios</li>
-                <li>Obter ajuda e infos do sistema</li>
-            </ul>
-            
-            <h2>Navegação no sistema de arquivos</h2>
-            <p>Pra navegar, use:</p>
-            
-            <h3>`pwd`</h3>
-            <p>Mostra onde você está.</p>
-            
-            <h3>`ls`</h3>
-            <p>Lista arquivos e pastas.</p>
-            
-            <h3>`cd nome-da-pasta`</h3>
-            <p>Muda pra pasta. Exemplo: `cd Documentos` leva pra pasta Documentos.</p>
-            
-            <h3>`cd ..`</h3>
-            <p>Sabe quando você tá no meio de um monte de pastas no terminal e precisa voltar pra anterior? Então, `cd ..` é tipo o botão de voltar do seu navegador de arquivos. Simples e direto!</p>
-            
-            <h2>Listando arquivos e detalhes importantes dos arquivos:</h2>
-            <p>O comando `ls` é tipo o seu olho no terminal. Ele te mostra tudo que tem dentro de uma pasta. Mas, pra ver a coisa toda, tem alguns truques com as opções, saca?</p>
-            
-            <h3>`ls -l`</h3>
-            <p>Esse é o `ls` turbinado! Além de listar os arquivos, ele te mostra um monte de detalhes importantes, como quem é o dono do arquivo, quais as permissões (quem pode ler, escrever, etc.) e o tamanho. É tipo um raio-x dos seus arquivos! Tipo, você bate o olho e já sabe tudo que precisa.</p>
-            
-            <h3>`ls -a`</h3>
-            <p>Sabe aqueles arquivos meio fantasmas que você nunca vê? Tipo aqueles que começam com um ponto (`.`)? Então, o `ls -a` mostra tudo, inclusive esses arquivos escondidos. É útil pra achar arquivos de configuração e outras coisas que normalmente ficam invisíveis.</p>
-            
-            <h2>Manipulando arquivos e diretórios:</h2>
-            <p>A parada aqui é aprender a dominar seus arquivos e pastas. Tipo, criar um arquivo novo, copiar um arquivo de um lugar pro outro, mudar um arquivo de pasta ou, se precisar, dar um delete geral. São os comandos básicos pra você não se perder no meio de tanta informação. É tipo aprender a dirigir no mundo dos arquivos!</p>
-            
-            <h3>`mkdir nome-da-pasta`</h3>
-            <p>Cria uma pasta novinha em folha.</p>
-            
-            <h3>`touch nome-do-arquivo`</h3>
-            <p>Cria um arquivo novinho, mas vazio.</p>
-            
-            <h3>`cp origem destino`</h3>
-            <p>Copia arquivos ou pastas sem dó, kkkk.</p>
-            
-            <h3>`mv origem destino`</h3>
-            <p>Move ou renomeia arquivos e pastas, simples assim.</p>
-            
-            <h3>`rm nome-do-arquivo`</h3>
-            <p>Remove arquivos, mas cuidado!</p>
-            
-            <h3>`rm -r nome-da-pasta`</h3>
-            <p>Remove pastas e tudo o que está lá dentro.</p>
-            
-            <h2>Obter ajuda e informações do sistema</h2>
-            <p>Se você tiver alguma dúvida sobre um comando, use...</p>
-            
-            <h3>`man comando`</h3>
-            <p>Mostra o manual detalhado do comando.</p>
-            
-            <h3>`comando --help`</h3>
-            <p>Mostra ajuda rápida do comando, massa!</p>
-            
-            <p>Para verificar as informações do sistema...</p>
-            
-            <h3>`uname -a`</h3>
-            <p>Revela dados sobre o kernel.</p>
-            
-            <h3>`top`</h3>
-            <p>Exibe os processos em andamento em tempo real, legal.</p>
-            
-            <h2>Conclusão</h2>
-            <p>Dominar esses comandos básicos do Linux abrirá muitas portas, acredito. Com prática, o terminal deixará de ser um mistério e se tornará uma ferramenta super útil no seu dia a dia, show! Aos poucos, avance, explore cada comando, e observe o aprendizado subir como um foguete.</p>
-            
-            <h2>FAQ - Dúvidas comuns</h2>
-            
-            <h3>Como descobrir o comando ideal para uma certa coisa?</h3>
-            <p>man e --help são seus amigos. Use-os para desvendar comandos e suas opções.</p>
-            
-            <h3>O terminal serve para tudo no Linux mesmo?</h3>
-            <p>Sim, embora certas tarefas sejam simplificadas com a interface visual, especialmente pra quem tá no começo.</p>
-            
-            <h3>O que seriam aquelas permissões nos arquivos?</h3>
-            <p>São as regras que decidem quem pode ler, escrever ou executar um arquivo.</p>
-        </section>
-        </article>
-        
-    </main>
-
-
-    
-</body>
+   </script>
+   <article>
+    <section class="post-content">
+     <p>
+      Dominar o terminal Linux, e bombar na produtividade? Comece por dominar os comandos básicos! Não é mágica, viu — o primeiro passo é seu. Há terminais tipo Bash, o mais conhecido. No terminal, usa-se "feitiços", que são os comandos. Mas cuidado, alguns podem inutilizar tudo! Com este guia, entenda o porquê de cada comando! E olha, `rm -f /home/` não é ideal pra começar!
+     </p>
+     <p>
+      O que vai aprender:
+     </p>
+     <ul>
+      <li>
+       Comandos pra navegar pastas
+      </li>
+      <li>
+       Listar arquivos, verificar permissões
+      </li>
+      <li>
+       Comandos pra manipular arquivos e diretórios
+      </li>
+      <li>
+       Obter ajuda e infos do sistema
+      </li>
+     </ul>
+     <h2>
+      Navegação no sistema de arquivos
+     </h2>
+     <p>
+      Pra navegar, use:
+     </p>
+     <h3>
+      `pwd`
+     </h3>
+     <p>
+      Mostra onde você está.
+     </p>
+     <h3>
+      `ls`
+     </h3>
+     <p>
+      Lista arquivos e pastas.
+     </p>
+     <h3>
+      `cd nome-da-pasta`
+     </h3>
+     <p>
+      Muda pra pasta. Exemplo: `cd Documentos` leva pra pasta Documentos.
+     </p>
+     <h3>
+      `cd ..`
+     </h3>
+     <p>
+      Sabe quando você tá no meio de um monte de pastas no terminal e precisa voltar pra anterior? Então, `cd ..` é tipo o botão de voltar do seu navegador de arquivos. Simples e direto!
+     </p>
+     <h2>
+      Listando arquivos e detalhes importantes dos arquivos:
+     </h2>
+     <p>
+      O comando `ls` é tipo o seu olho no terminal. Ele te mostra tudo que tem dentro de uma pasta. Mas, pra ver a coisa toda, tem alguns truques com as opções, saca?
+     </p>
+     <h3>
+      `ls -l`
+     </h3>
+     <p>
+      Esse é o `ls` turbinado! Além de listar os arquivos, ele te mostra um monte de detalhes importantes, como quem é o dono do arquivo, quais as permissões (quem pode ler, escrever, etc.) e o tamanho. É tipo um raio-x dos seus arquivos! Tipo, você bate o olho e já sabe tudo que precisa.
+     </p>
+     <h3>
+      `ls -a`
+     </h3>
+     <p>
+      Sabe aqueles arquivos meio fantasmas que você nunca vê? Tipo aqueles que começam com um ponto (`.`)? Então, o `ls -a` mostra tudo, inclusive esses arquivos escondidos. É útil pra achar arquivos de configuração e outras coisas que normalmente ficam invisíveis.
+     </p>
+     <h2>
+      Manipulando arquivos e diretórios:
+     </h2>
+     <p>
+      A parada aqui é aprender a dominar seus arquivos e pastas. Tipo, criar um arquivo novo, copiar um arquivo de um lugar pro outro, mudar um arquivo de pasta ou, se precisar, dar um delete geral. São os comandos básicos pra você não se perder no meio de tanta informação. É tipo aprender a dirigir no mundo dos arquivos!
+     </p>
+     <h3>
+      `mkdir nome-da-pasta`
+     </h3>
+     <p>
+      Cria uma pasta novinha em folha.
+     </p>
+     <h3>
+      `touch nome-do-arquivo`
+     </h3>
+     <p>
+      Cria um arquivo novinho, mas vazio.
+     </p>
+     <h3>
+      `cp origem destino`
+     </h3>
+     <p>
+      Copia arquivos ou pastas sem dó, kkkk.
+     </p>
+     <h3>
+      `mv origem destino`
+     </h3>
+     <p>
+      Move ou renomeia arquivos e pastas, simples assim.
+     </p>
+     <h3>
+      `rm nome-do-arquivo`
+     </h3>
+     <p>
+      Remove arquivos, mas cuidado!
+     </p>
+     <h3>
+      `rm -r nome-da-pasta`
+     </h3>
+     <p>
+      Remove pastas e tudo o que está lá dentro.
+     </p>
+     <h2>
+      Obter ajuda e informações do sistema
+     </h2>
+     <p>
+      Se você tiver alguma dúvida sobre um comando, use...
+     </p>
+     <h3>
+      `man comando`
+     </h3>
+     <p>
+      Mostra o manual detalhado do comando.
+     </p>
+     <h3>
+      `comando --help`
+     </h3>
+     <p>
+      Mostra ajuda rápida do comando, massa!
+     </p>
+     <p>
+      Para verificar as informações do sistema...
+     </p>
+     <h3>
+      `uname -a`
+     </h3>
+     <p>
+      Revela dados sobre o kernel.
+     </p>
+     <h3>
+      `top`
+     </h3>
+     <p>
+      Exibe os processos em andamento em tempo real, legal.
+     </p>
+     <h2>
+      Conclusão
+     </h2>
+     <p>
+      Dominar esses comandos básicos do Linux abrirá muitas portas, acredito. Com prática, o terminal deixará de ser um mistério e se tornará uma ferramenta super útil no seu dia a dia, show! Aos poucos, avance, explore cada comando, e observe o aprendizado subir como um foguete.
+     </p>
+     <h2>
+      FAQ - Dúvidas comuns
+     </h2>
+     <h3>
+      Como descobrir o comando ideal para uma certa coisa?
+     </h3>
+     <p>
+      man e --help são seus amigos. Use-os para desvendar comandos e suas opções.
+     </p>
+     <h3>
+      O terminal serve para tudo no Linux mesmo?
+     </h3>
+     <p>
+      Sim, embora certas tarefas sejam simplificadas com a interface visual, especialmente pra quem tá no começo.
+     </p>
+     <h3>
+      O que seriam aquelas permissões nos arquivos?
+     </h3>
+     <p>
+      São as regras que decidem quem pode ler, escrever ou executar um arquivo.
+     </p>
+    </section>
+   </article>
+  </main>
+ </body>
 </html>
-
-</main>
-
 <footer>
-  Site criado com muito terminal e memes! Acesse:
-  <a href="/politica-de-privacidade.html">Política de Privacidade</a> |
-  <a href="/termos-de-uso.html">Termos de Uso</a>
-</footer></body>
-</html>
+ Site criado com muito terminal e memes! Acesse:
+ <a href="/politica-de-privacidade.html">
+  Política de Privacidade
+ </a>
+ |
+ <a href="/termos-de-uso.html">
+  Termos de Uso
+ </a>
+</footer>

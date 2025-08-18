@@ -1,30 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scripts de Segurança para Linux</title>
-  <meta name="description" content="Coleção de scripts úteis para segurança no Linux: firewall, bloqueio de IP, rootkits, SSH, fail2ban, nmap, sniffers e mais.">
-  <meta name="keywords" content="segurança linux, firewall ufw, bloquear ip, nmap, ssh automático, fail2ban, rootkits, sniffers, senhas fortes, monitoramento de tráfego">
-  <meta name="robots" content="index,follow">
-  <meta name="author" content="Piolinux">
-  
-    <link rel="canonical" href="https://piolinux.com/scripts-de-seguranca.html" />
-  
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Scripts de Segurança para Linux
+  </title>
+  <meta content="Coleção de scripts úteis para segurança no Linux: firewall, bloqueio de IP, rootkits, SSH, fail2ban, nmap, sniffers e mais." name="description"/>
+  <meta content="segurança linux, firewall ufw, bloquear ip, nmap, ssh automático, fail2ban, rootkits, sniffers, senhas fortes, monitoramento de tráfego" name="keywords"/>
+  <meta content="index,follow" name="robots"/>
+  <meta content="Piolinux" name="author"/>
+  <link href="https://piolinux.com/scripts-de-seguranca.html" rel="canonical"/>
   <!-- Outros meta e links CSS -->
-  
-  
-  
-  
-</head>
-
-
-
-
-
-<style>
-	
+ </head>
+ <style>
   header h1 {
   color: #80ff00; /* verde Piolinux */
   font-size: 1.8rem;
@@ -207,52 +196,91 @@ footer a:hover {
       display: flex;
     }
   }
-</style>
-
-</head>
-<body>
+ </style>
+ <body>
   <header>
-    <header>
-  <h1 class="site-title"><a href="/">Piolinux</a></h1>
-  <div class="menu-container">
-    <button class="menu-toggle" aria-label="Abrir menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
-    <nav class="dropdown-menu-container">
+   
+    <h1 class="site-title">
+     <a href="/">
+      Piolinux
+     </a>
+    </h1>
+    <div class="menu-container">
+     <button aria-label="Abrir menu" class="menu-toggle" onclick="document.body.classList.toggle('menu-open')">
+      ☰
+     </button>
+     <nav class="dropdown-menu-container">
       <ul class="dropdown-menu">
-        <li><a href="/">Início</a></li>
-        <li>
-          <a href="#">Conteúdo</a>
-          <ul class="dropdown-content">
-            <li><a href="/piadas-linux-engra%C3%A7adas.html">Piadas</a></li>
-            <li><a href="/biblioteca-linux.html">Biblioteca-Linux</a></li>
-            <li><a href="/artigos-linux.html">Iniciante</a></li>
-            <li><a href="/dicas-tecnicas-linux.html">Dicas Técnicas</a></li>
-            <li><a href="/script-bash.html">Bash</a></li>
-            <li><a href="/links.html">Conteúdos de Linux</a></li>
-            <li><a href="/caixa-de-ferramentas.html">Ferramentas</a></li>
-          </ul>
-        </li>
-        <li><a href="/jogos-online.html">Jogos</a></li>
-        <li><a href="/reparar-boot-linux.html">Boot</a></li>
+       <li>
+        <a href="/">
+         Início
+        </a>
+       </li>
+       <li>
+        <a href="#">
+         Conteúdo
+        </a>
+        <ul class="dropdown-content">
+         <li>
+          <a href="/piadas-linux-engra%C3%A7adas.html">
+           Piadas
+          </a>
+         </li>
+         <li>
+          <a href="/biblioteca-linux.html">
+           Biblioteca-Linux
+          </a>
+         </li>
+         <li>
+          <a href="/artigos-linux.html">
+           Iniciante
+          </a>
+         </li>
+         <li>
+          <a href="/dicas-tecnicas-linux.html">
+           Dicas Técnicas
+          </a>
+         </li>
+         <li>
+          <a href="/script-bash.html">
+           Bash
+          </a>
+         </li>
+         <li>
+          <a href="/links.html">
+           Conteúdos de Linux
+          </a>
+         </li>
+         <li>
+          <a href="/caixa-de-ferramentas.html">
+           Ferramentas
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="/jogos-online.html">
+         Jogos
+        </a>
+       </li>
+       <li>
+        <a href="/reparar-boot-linux.html">
+         Boot
+        </a>
+       </li>
       </ul>
-    </nav>
-  </div>
-</header>
-
-  </header>
-
- <main>
-  <h1>Scripts de Segurança para Linux</h1>
-  <body>
-
-
-
-    
-    
-    <main>
-		
-		<div id="share" style="text-align:center;margin:15px 0"></div>
-        <script async defer>
-            (() => {
+     </nav>
+    </div>
+   </header>
+  
+  <main>
+   <h1>
+    Scripts de Segurança para Linux
+   </h1>
+   <div id="share" style="text-align:center;margin:15px 0">
+   </div>
+   <script async="" defer="">
+    (() => {
                 const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
                 const d=[
                     ["Reddit","#ff4500",`https://www.reddit.com/submit?url=${u}&title=${t}`],
@@ -268,77 +296,80 @@ footer a:hover {
                     e.appendChild(a);
                 });
             })();
-        </script>
-        <section>
-            <h2>Firewall básico com UFW</h2>
-            <button class="copy">Copiar</button>
-            <pre>sudo ufw default deny incoming
+   </script>
+   <section>
+    <h2>
+     Firewall básico com UFW
+    </h2>
+    <button class="copy">
+     Copiar
+    </button>
+    <pre>sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow ssh
 sudo ufw enable</pre>
-        </section>
-
-        <section>
-            <h2>Bloqueio de IPs maliciosos</h2>
-            <button class="copy">Copiar</button>
-            <pre>sudo ufw deny from 192.168.0.123</pre>
-        </section>
-
-        <section>
-            <h2>Script de escaneamento com Nmap</h2>
-            <button class="copy">Copiar</button>
-            <pre>#!/bin/bash
+   </section>
+   <section>
+    <h2>
+     Bloqueio de IPs maliciosos
+    </h2>
+    <pre>sudo ufw deny from 192.168.0.123</pre>
+   </section>
+   <section>
+    <h2>
+     Script de escaneamento com Nmap
+    </h2>
+    <pre>#!/bin/bash
 read -p "Digite o IP ou host: " target
 nmap -A -T4 $target</pre>
-        </section>
-
-        <section>
-            <h2>Verificação de rootkits com chkrootkit</h2>
-            <button class="copy">Copiar</button>
-            <pre>sudo apt install chkrootkit
+   </section>
+   <section>
+    <h2>
+     Verificação de rootkits com chkrootkit
+    </h2>
+    <pre>sudo apt install chkrootkit
 sudo chkrootkit</pre>
-        </section>
-
-        <section>
-            <h2>Conexão SSH automatizada</h2>
-            <button class="copy">Copiar</button>
-            <pre>sshpass -p 'senha' ssh usuario@ip -p 22</pre>
-        </section>
-
-        <section>
-            <h2>Gerador de senhas fortes (Shell)</h2>
-            <button class="copy">Copiar</button>
-            <pre>openssl rand -hex 16
+   </section>
+   <section>
+    <h2>
+     Conexão SSH automatizada
+    </h2>
+    <pre>sshpass -p 'senha' ssh usuario@ip -p 22</pre>
+   </section>
+   <section>
+    <h2>
+     Gerador de senhas fortes (Shell)
+    </h2>
+    <pre>openssl rand -hex 16
 openssl rand -hex 64</pre>
-        </section>
-
-        <section>
-            <h2>Verificador de integridade de arquivos</h2>
-            <button class="copy">Copiar</button>
-            <pre>sha256sum arquivo.txt > hash.txt
+   </section>
+   <section>
+    <h2>
+     Verificador de integridade de arquivos
+    </h2>
+    <pre>sha256sum arquivo.txt &gt; hash.txt
 sha256sum -c hash.txt</pre>
-        </section>
-
-        <section>
-            <h2>Configuração de fail2ban</h2>
-            <button class="copy">Copiar</button>
-            <pre>sudo apt install fail2ban
+   </section>
+   <section>
+    <h2>
+     Configuração de fail2ban
+    </h2>
+    <pre>sudo apt install fail2ban
 sudo systemctl enable fail2ban
 sudo systemctl start fail2ban</pre>
-        </section>
-
-        <section>
-            <h2>Monitoramento de tráfego com iftop</h2>
-            <button class="copy">Copiar</button>
-            <pre>sudo apt install iftop
+   </section>
+   <section>
+    <h2>
+     Monitoramento de tráfego com iftop
+    </h2>
+    <pre>sudo apt install iftop
 sudo iftop -i eth0</pre>
-        </section>
-    </main>
-
-    
-   <script src="scripts.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
+   </section>
+  </main>
+  <script src="scripts.js">
+  </script>
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
             const copyButtons = document.querySelectorAll('.copy');
 
             copyButtons.forEach(button => {
@@ -358,17 +389,16 @@ sudo iftop -i eth0</pre>
                 });
             });
         });
-    </script>
-    
-    
-</body>
+  </script>
+ </body>
 </html>
-
-</main>
-
 <footer>
-  Site criado com muito terminal e memes! Acesse:
-  <a href="/politica-de-privacidade.html">Política de Privacidade</a> |
-  <a href="/termos-de-uso.html">Termos de Uso</a>
-</footer></body>
-</html>
+ Site criado com muito terminal e memes! Acesse:
+ <a href="/politica-de-privacidade.html">
+  Política de Privacidade
+ </a>
+ |
+ <a href="/termos-de-uso.html">
+  Termos de Uso
+ </a>
+</footer>
