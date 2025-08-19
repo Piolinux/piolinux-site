@@ -44,24 +44,18 @@ tags: [ferramenta, código, HTML, SVG, dicas]
 
 
 
+<style>
 
-
-<!-- O código da ferramenta é autocontido e não vai interferir com o seu tema Jekyll. -->
-<div id="wallpaper-tool-container">
-    <style>
-        /* Estilos CSS da ferramenta, completamente independentes do tema do Jekyll. */
-        #wallpaper-tool-container {
-            font-family: sans-serif;
+        /* Estilos CSS da ferramenta, completamente independentes de qualquer documento externo. */
+        .tool-container {
+            font-family: 'Inter', sans-serif;
             background-color: #1e293b;
             color: #e2e8f0;
             padding: 2rem;
             border-radius: 1rem;
-            margin-top: 2rem;
-            max-width: 672px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            max-width: 672px;
+            margin: auto;
         }
 
         .tool-title {
@@ -119,15 +113,13 @@ tags: [ferramenta, código, HTML, SVG, dicas]
             background-color: #7e22ce;
         }
 
-        #image-container {
+        .image-container {
             width: 100%;
             max-width: 1024px;
-            margin-top: 1.5rem;
+            margin: 1.5rem auto 0 auto; /* Centraliza o contêiner da imagem */
             border-radius: 1rem;
             overflow: hidden;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            margin-left: auto;
-            margin-right: auto;
             position: relative;
         }
         
@@ -138,7 +130,7 @@ tags: [ferramenta, código, HTML, SVG, dicas]
             height: auto;
         }
 
-        #download-link {
+        .download-link {
             position: absolute;
             bottom: 1rem;
             right: 1rem;
@@ -154,146 +146,148 @@ tags: [ferramenta, código, HTML, SVG, dicas]
             cursor: pointer;
         }
         
-        #wallpaper-tool-container:hover #download-link {
+        .image-container:hover .download-link {
             transform: scale(1);
             opacity: 1;
         }
-    </style>
-    
-    <h1 class="tool-title">
-        🎨 Gerador de Wallpapers Abstratos
-    </h1>
-    <p class="tool-subtitle">
-        Crie imagens únicas e elegantes para o seu computador ou celular.
-    </p>
 
-    <!-- Controles da ferramenta -->
-    <div class="tool-panel">
-        <input type="text" id="text-input" class="tool-input-field" placeholder="Texto para incluir no wallpaper (opcional)">
+</style>
+<body class="bg-slate-900 text-slate-100 p-8 flex flex-col items-center justify-center min-h-screen">
 
-        <button id="generate-btn" class="tool-button">
-            Gerar Novo Wallpaper
-        </button>
+    <div class="tool-container">
+        <h1 class="tool-title text-center">
+            🎨 Gerador de Wallpapers Abstratos
+        </h1>
+        <p class="tool-subtitle text-center">
+            Crie imagens únicas e elegantes para o seu computador ou celular.
+        </p>
+
+        <!-- Controles da ferramenta -->
+        <div class="tool-panel">
+            <input type="text" id="text-input" class="tool-input-field" placeholder="Texto para incluir no wallpaper (opcional)">
+            <button id="generate-btn" class="tool-button w-full">
+                Gerar Novo Wallpaper
+            </button>
+        </div>
     </div>
 
     <!-- Contêiner do Canvas e link de download -->
-    <div id="image-container">
+    <div class="image-container" id="image-container">
         <canvas id="wallpaper-canvas"></canvas>
-        <a id="download-link" href="#" download="wallpaper.png">Baixar</a>
+        <a id="download-link" href="#" download="wallpaper.png" class="download-link">Baixar</a>
     </div>
-</div>
 
-<script>
-    // Seleciona os elementos do DOM
-    const canvas = document.getElementById('wallpaper-canvas');
-    const ctx = canvas.getContext('2d');
-    const generateBtn = document.getElementById('generate-btn');
-    const downloadLink = document.getElementById('download-link');
-    const textInput = document.getElementById('text-input');
-    
-    // Define a resolução do canvas para uma imagem de alta qualidade
-    const width = 1920;
-    const height = 1080;
-    
-    // Ajusta a resolução real do canvas para corresponder aos pixels do dispositivo
-    function resizeCanvas() {
-        const ratio = window.devicePixelRatio || 1;
-        canvas.width = width * ratio;
-        canvas.height = height * ratio;
-        ctx.scale(ratio, ratio);
-    }
-    
-    // Paleta de cores para a geração
-    const colorPalettes = [
-        ['#FF6B6B', '#FFD166', '#06D6A0', '#118AB2', '#073B4C'],
-        ['#F08080', '#F4A460', '#A2CD5A', '#6B8E23', '#2F4F4F'],
-        ['#93A5CF', '#E4EfE9', '#A3D2CA', '#68BBE3', '#5E8B7E'],
-        ['#283618', '#606C38', '#FEFAE0', '#DDA15E', '#BC6C25'],
-        ['#14213d', '#fca311', '#e5e5e5', '#808080', '#4a4e4d'],
-    ];
+    <script>
+        // Seleciona os elementos do DOM
+        const canvas = document.getElementById('wallpaper-canvas');
+        const ctx = canvas.getContext('2d');
+        const generateBtn = document.getElementById('generate-btn');
+        const downloadLink = document.getElementById('download-link');
+        const textInput = document.getElementById('text-input');
+        
+        // Define a resolução do canvas para uma imagem de alta qualidade
+        const width = 1920;
+        const height = 1080;
+        
+        // Ajusta a resolução real do canvas para corresponder aos pixels do dispositivo
+        function resizeCanvas() {
+            const ratio = window.devicePixelRatio || 1;
+            canvas.width = width * ratio;
+            canvas.height = height * ratio;
+            ctx.scale(ratio, ratio);
+        }
+        
+        // Paleta de cores para a geração
+        const colorPalettes = [
+            ['#FF6B6B', '#FFD166', '#06D6A0', '#118AB2', '#073B4C'],
+            ['#F08080', '#F4A460', '#A2CD5A', '#6B8E23', '#2F4F4F'],
+            ['#93A5CF', '#E4EfE9', '#A3D2CA', '#68BBE3', '#5E8B7E'],
+            ['#283618', '#606C38', '#FEFAE0', '#DDA15E', '#BC6C25'],
+            ['#14213d', '#fca311', '#e5e5e5', '#808080', '#4a4e4d'],
+        ];
 
-    // Função principal para desenhar o wallpaper
-    function drawWallpaper() {
-        // Limpa o canvas
-        ctx.clearRect(0, 0, width, height);
+        // Função principal para desenhar o wallpaper
+        function drawWallpaper() {
+            // Limpa o canvas
+            ctx.clearRect(0, 0, width, height);
 
-        // Escolhe uma paleta de cores aleatória
-        const palette = colorPalettes[Math.floor(Math.random() * colorPalettes.length)];
+            // Escolhe uma paleta de cores aleatória
+            const palette = colorPalettes[Math.floor(Math.random() * colorPalettes.length)];
 
-        // Preenche o fundo
-        ctx.fillStyle = palette[0];
-        ctx.fillRect(0, 0, width, height);
+            // Preenche o fundo
+            ctx.fillStyle = palette[0];
+            ctx.fillRect(0, 0, width, height);
 
-        // Desenha formas aleatórias
-        const numShapes = 50 + Math.random() * 50;
-        for (let i = 0; i < numShapes; i++) {
-            // Escolhe uma forma e cor aleatória da paleta
-            const shapeType = Math.random();
-            const color = palette[Math.floor(Math.random() * palette.length)];
+            // Desenha formas aleatórias
+            const numShapes = 50 + Math.random() * 50;
+            for (let i = 0; i < numShapes; i++) {
+                // Escolhe uma forma e cor aleatória da paleta
+                const shapeType = Math.random();
+                const color = palette[Math.floor(Math.random() * palette.length)];
 
-            ctx.beginPath();
-            ctx.fillStyle = color;
-            ctx.globalAlpha = 0.5; // Adiciona transparência para um efeito de camada
+                ctx.beginPath();
+                ctx.fillStyle = color;
+                ctx.globalAlpha = 0.5; // Adiciona transparência para um efeito de camada
 
-            const x = Math.random() * width;
-            const y = Math.random() * height;
+                const x = Math.random() * width;
+                const y = Math.random() * height;
 
-            if (shapeType < 0.33) {
-                // Desenha círculos
-                const radius = 20 + Math.random() * 80;
-                ctx.arc(x, y, radius, 0, 2 * Math.PI);
-            } else if (shapeType < 0.66) {
-                // Desenha retângulos rotacionados
-                const size = 50 + Math.random() * 100;
-                ctx.save();
-                ctx.translate(x, y);
-                ctx.rotate(Math.random() * Math.PI);
-                ctx.fillRect(-size / 2, -size / 2, size, size);
-                ctx.restore();
-            } else {
-                // Desenha triângulos
-                const size = 60 + Math.random() * 100;
-                ctx.moveTo(x, y);
-                ctx.lineTo(x + size, y);
-                ctx.lineTo(x + size / 2, y + size * Math.sqrt(3) / 2);
-                ctx.closePath();
+                if (shapeType < 0.33) {
+                    // Desenha círculos
+                    const radius = 20 + Math.random() * 80;
+                    ctx.arc(x, y, radius, 0, 2 * Math.PI);
+                } else if (shapeType < 0.66) {
+                    // Desenha retângulos rotacionados
+                    const size = 50 + Math.random() * 100;
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.rotate(Math.random() * Math.PI);
+                    ctx.fillRect(-size / 2, -size / 2, size, size);
+                    ctx.restore();
+                } else {
+                    // Desenha triângulos
+                    const size = 60 + Math.random() * 100;
+                    ctx.moveTo(x, y);
+                    ctx.lineTo(x + size, y);
+                    ctx.lineTo(x + size / 2, y + size * Math.sqrt(3) / 2);
+                    ctx.closePath();
+                }
+                ctx.fill();
             }
-            ctx.fill();
+
+            // Adiciona o texto do usuário
+            const text = textInput.value.trim();
+            if (text) {
+                ctx.globalAlpha = 1.0;
+                ctx.fillStyle = '#FFFFFF';
+                ctx.font = 'bold 80px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(text, width / 2, height - 100);
+            }
+
+            // Atualiza o link de download
+            updateDownloadLink();
         }
 
-        // Adiciona o texto do usuário
-        const text = textInput.value.trim();
-        if (text) {
-            ctx.globalAlpha = 1.0;
-            ctx.fillStyle = '#FFFFFF';
-            ctx.font = 'bold 80px sans-serif';
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.fillText(text, width / 2, height - 100);
+        // Função para atualizar o link de download com a imagem gerada
+        function updateDownloadLink() {
+            const dataUrl = canvas.toDataURL('image/png');
+            downloadLink.href = dataUrl;
         }
 
-        // Atualiza o link de download
-        updateDownloadLink();
-    }
+        // Adiciona o listener para o botão de geração
+        generateBtn.addEventListener('click', drawWallpaper);
+        
+        // Desenha o wallpaper inicial quando a página carregar
+        window.onload = function() {
+            resizeCanvas();
+            drawWallpaper();
+        };
 
-    // Função para atualizar o link de download com a imagem gerada
-    function updateDownloadLink() {
-        const dataUrl = canvas.toDataURL('image/png');
-        downloadLink.href = dataUrl;
-    }
-
-    // Adiciona o listener para o botão de geração
-    generateBtn.addEventListener('click', drawWallpaper);
-    
-    // Desenha o wallpaper inicial quando a página carregar
-    window.onload = function() {
-        resizeCanvas();
-        drawWallpaper();
-    };
-
-    // Redesenha o canvas quando o tamanho da janela mudar
-    window.addEventListener('resize', () => {
-        resizeCanvas();
-        drawWallpaper();
-    });
-</script>
+        // Redesenha o canvas quando o tamanho da janela mudar
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            drawWallpaper();
+        });
+    </script>
