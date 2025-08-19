@@ -193,8 +193,8 @@ keywords:
             <p><strong>O que é essa tal de arte ASCII?</strong></p>
             <p>É a forma de desenhar usando os caracteres do teu teclado: letras, números, símbolos. É uma das formas mais antigas de arte digital e é super interessante.</p>
 
-            <p><strong>Posso converter qualquer tipo de foto?</strong></p>
-            <p>Sim, claro! A ferramenta aceita os formatos mais comuns (JPG, PNG) e transforma qualquer foto numa versão em texto.</p>
+            <p><strong>Posso converter qualquer tipo de texto?</strong></p>
+            <p>Sim, claro! A ferramenta converter texto em arte.</p>
 
             <p><strong>É preciso pagar para usar isto?</strong></p>
             <p>Não, não é. A ferramenta é completamente gratuita, para usares as vezes que quiseres. Não precisas de te registar, nem nada.</p>
