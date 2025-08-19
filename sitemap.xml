@@ -202,16 +202,7 @@ layout: null
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
       </url>
-    
-  
-    
-      <url>
-        <loc>https://piolinux.com/assets/main.css</loc>
-        <lastmod></lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-      </url>
-    
+          
   
     
       <url>
@@ -293,16 +284,7 @@ layout: null
         <priority>0.5</priority>
       </url>
     
-  
-    
-      <url>
-        <loc>https://piolinux.com/sitemap.xml</loc>
-        <lastmod></lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-      </url>
-    
-  
+      
     
       <url>
         <loc>https://piolinux.com/software-de-linux-windows.html</loc>
