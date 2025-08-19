@@ -1,0 +1,1 @@
+Blog pessoal sobre tecnologia, programação e desenvolvimento web. Criei este espaço para partilhar conteúdo sobre HTML, CSS, JavaScript, Jekyll e mais. Tutoriais e dicas para desenvolvedores(as) iniciantes e experientes.
