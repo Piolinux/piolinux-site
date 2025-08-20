@@ -139,7 +139,8 @@ body {
             transform: translateY(-2px);
         }
     </style>
-    
+
+
         <div class="intro-text">
             <p>
                 Selecione um pacote de ícones e personalize a cor para fazer o download. 
@@ -210,10 +211,9 @@ body {
                 </div>
             </div>
         </div>
-    
+
+    <!-- O JavaScript é agora carregado ao final do corpo para não bloquear a renderização -->
     <script>
-        // Use uma IIFE (Immediately Invoked Function Expression) para encapsular a lógica
-        // e evitar poluir o escopo global.
         (function() {
             // Objeto contendo os pacotes de ícones
             const iconPackages = {
