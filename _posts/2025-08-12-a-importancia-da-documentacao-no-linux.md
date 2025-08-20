@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "A Importância da Documentação no Linux: Pare de Chutar e Comece a Ler!"
+title: "A Importância da Documentação no Linux!"
 author: "Piolinux"
 date: 2025-08-12 10:59:27 -0300
 categories: [Linux, Tutoriais, Dicas]
