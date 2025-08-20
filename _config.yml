@@ -52,6 +52,8 @@ params:
   expires: "0"
   canonical: "https://piolinux.com"
 
+future: true
+
 # _config.yml
 sass:
   quiet_deps: true
