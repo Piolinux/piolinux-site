@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Ferramentas Essenciais para Produtividade no Linux: Da Documentação à Edição de Imagens"
+title: "Ferramentas Essenciais para Produtividade no Linux"
 author: "Piolinux"
 date: 2025-08-12 11:28:42 -0300
 categories: [Linux, Produtividade, Ferramentas]
