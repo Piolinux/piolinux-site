@@ -28,8 +28,7 @@ body {
     
     color: #ffffff; /* Essa é a cor do texto padrão */
    
-
-     }
+        }
         .icon-generator-container {
             max-width: 900px;
             margin: 0 auto;
@@ -140,8 +139,7 @@ body {
             transform: translateY(-2px);
         }
     </style>
-
-
+    
         <div class="intro-text">
             <p>
                 Selecione um pacote de ícones e personalize a cor para fazer o download. 
@@ -168,7 +166,6 @@ body {
                     <input type="color" id="color-picker" value="#3b82f6" class="w-full h-10 cursor-pointer">
                 </div>
 
-                <!-- Novo controle para a cor do texto -->
                 <div class="form-group">
                     <label for="text-color-picker">Cor do Texto:</label>
                     <input type="color" id="text-color-picker" value="#333333" class="w-full h-10 cursor-pointer">
@@ -177,24 +174,43 @@ body {
                 <div class="form-group">
                     <p>Escolha um ícone:</p>
                     <div id="icon-grid" class="icon-grid">
-                        <!-- Ícones serão renderizados aqui via JavaScript -->
+                        <!-- O conteúdo do pacote de ícones 'Básico' é agora pré-renderizado no HTML -->
+                        <div class="icon-item selected">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            <span class="icon-name" style="color: rgb(51, 51, 51);">Casa</span>
+                        </div>
+                        <div class="icon-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V23a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 4.6 19.4a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33h.09a1.65 1.65 0 0 0 1.51-1V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82.33l.06.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V19.4a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                            <span class="icon-name" style="color: rgb(51, 51, 51);">Engrenagem</span>
+                        </div>
+                        <div class="icon-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <span class="icon-name" style="color: rgb(51, 51, 51);">Coração</span>
+                        </div>
+                        <div class="icon-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <span class="icon-name" style="color: rgb(51, 51, 51);">Pasta</span>
+                        </div>
+                        <div class="icon-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                            <span class="icon-name" style="color: rgb(51, 51, 51);">Arquivo</span>
+                        </div>
                     </div>
                 </div>
 
-                <button id="download-button" class="download-button">Download SVG</button>
+                <button id="download-button" class="download-button" style="display: block;">Download SVG</button>
             </div>
 
             <div class="preview-panel">
                 <h2>Pré-visualização do Ícone</h2>
                 <p>O ícone selecionado aparecerá aqui.</p>
                 <div id="icon-preview-container" class="icon-preview-box">
-                    <!-- Ícone selecionado para pré-visualização -->
-                    <p>Selecione um ícone para começar a personalizá-lo.</p>
+                    <!-- O ícone padrão é agora pré-renderizado no HTML -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                 </div>
             </div>
         </div>
     
-
     <script>
         // Use uma IIFE (Immediately Invoked Function Expression) para encapsular a lógica
         // e evitar poluir o escopo global.
@@ -239,8 +255,26 @@ body {
             const downloadButton = document.getElementById('download-button');
             const iconPreviewContainer = document.getElementById('icon-preview-container');
 
-            // Variável para rastrear o ícone selecionado
-            let selectedIcon = null;
+            // Variável para rastrear o ícone selecionado. O padrão é o primeiro ícone do pacote 'basic'.
+            let selectedIcon = iconPackages.basic[0];
+
+            // Adiciona o evento de clique para cada item de ícone renderizado inicialmente
+            document.querySelectorAll('.icon-item').forEach(item => {
+                item.addEventListener('click', handleIconSelection);
+            });
+
+            function handleIconSelection(event) {
+                const clickedItem = event.currentTarget;
+                document.querySelectorAll('.icon-item').forEach(item => {
+                    item.classList.remove('selected');
+                });
+                clickedItem.classList.add('selected');
+                
+                const iconName = clickedItem.querySelector('.icon-name').textContent;
+                selectedIcon = iconPackages[packageSelect.value].find(icon => icon.name === iconName);
+                
+                updatePreview();
+            }
 
             /**
              * Renderiza os ícones no grid.
@@ -269,15 +303,7 @@ body {
                     iconItem.innerHTML = svgElement.outerHTML;
                     iconItem.appendChild(iconNameSpan);
                     
-                    // Adiciona o evento de clique para seleção
-                    iconItem.addEventListener('click', () => {
-                        document.querySelectorAll('.icon-item').forEach(item => {
-                            item.classList.remove('selected');
-                        });
-                        iconItem.classList.add('selected');
-                        selectedIcon = icon;
-                        updatePreview();
-                    });
+                    iconItem.addEventListener('click', handleIconSelection);
                     iconGrid.appendChild(iconItem);
                 });
             }
@@ -359,15 +385,6 @@ body {
                 downloadButton.addEventListener('click', downloadSvg);
             }
 
-            // Função de inicialização
-            function init() {
-                renderIcons(packageSelect.value);
-                updatePreview();
-                setupEventListeners();
-            }
-
-            // Executa a inicialização quando a janela estiver totalmente carregada.
-            window.addEventListener('load', init);
-
+            setupEventListeners();
         })(); // Fim da IIFE
     </script>
