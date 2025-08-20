@@ -52,7 +52,7 @@ params:
   expires: "0"
   canonical: "https://piolinux.com"
 
-future: false
+future: true
 
 # _config.yml
 sass:
