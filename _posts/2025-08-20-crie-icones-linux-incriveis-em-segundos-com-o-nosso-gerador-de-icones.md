@@ -9,7 +9,6 @@ tags: [Linux, Icones, Atalhos, Personalização]
 
 
 
-
 <section class="post-content">
     
 
@@ -82,6 +81,11 @@ tags: [Linux, Icones, Atalhos, Personalização]
 <p>
     Os ícones SVG são desenvolvidos a partir de linhas e formas, e não de pixeis. Isso significa que eles permanecem sempre nítidos e perfeitos, independentemente de tamanhos pequenos na barra de tarefas ou em tamanho grande na área de trabalho. Perfeito.
 </p>
+
+
+
+<main>
+    <div style="min-height: 80vh;">
 
 
 <div>
@@ -291,3 +295,5 @@ Terminal=false`.trim();
     };
 </script>
 
+</div>
+</main>
