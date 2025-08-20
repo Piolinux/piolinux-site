@@ -201,516 +201,178 @@ keywords:
         </div>
   
     <div id="message-box" class="message-box"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Seleciona todos os elementos do DOM uma única vez
+      const textInput = document.getElementById('text-input');
+      const generateButton = document.getElementById('generate-button');
+      const asciiOutput = document.getElementById('ascii-output').querySelector('code');
+      const copyButton = document.getElementById('copy-button');
+      const messageBox = document.getElementById('message-box');
+      const styleSelect = document.getElementById('style-select');
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const textInput = document.getElementById('text-input');
-            const generateButton = document.getElementById('generate-button');
-            const asciiOutput = document.getElementById('ascii-output').querySelector('code');
-            const copyButton = document.getElementById('copy-button');
-            const messageBox = document.getElementById('message-box');
-            const styleSelect = document.getElementById('style-select');
+      // Mapeamentos de estilos para arte ASCII.
+      // Apenas o estilo 'default' é carregado inicialmente.
+      const asciiStyles = {
+        'default': {
+          'A': `\n.d88b.\n8P  Y8\n8b  d8\n'Y88P'\n`,
+          'B': `\n8888b.\n8P  Y8\n8888P'\n8P  b\n8888b.\n`,
+          'C': `\n.d88b.\n8P  8\n8b  8\n'Y88P'\n`,
+          'D': `\n8888b.\n8P  Y8\n8b  d8\n'Y88P'\n`,
+          'E': `\n888888\n8P\n8888\n8P\n888888\n`,
+          'F': `\n888888\n8P\n8888\n8P\n8P\n`,
+          'G': `\n.d88b.\n8P  '\n8P d8\n'Y88P'\n`,
+          'H': `\n888  888\n888  888\n8888888\n888  888\n888  888\n`,
+          'I': `\n888888\n  88\n  88\n  88\n888888\n`,
+          'J': `\n  8888\n    88\n    88\n88  88\n'Y8888\n`,
+          'K': `\n888 8\n88 8\n8888\n88 8\n888 8\n`,
+          'L': `\n888\n888\n888\n888\n888888\n`,
+          'M': `\n.d88b.\n8P  Y8\n'Y88P'\n  8888\n`,
+          'N': `\n888  88\n8888 88\n88 8888\n88  888\n88  888\n`,
+          'O': `\n.d88b.\n8P  Y8\n8b  d8\n'Y88P'\n`,
+          'P': `\n8888b.\n8P  Y8\n8888P'\n88\n88\n`,
+          'Q': `\n.d88b.\n8P  Y8\n8b  d8\n'Y88P'\n  '\n`,
+          'R': `\n8888b.\n8P  Y8\n8888P'\n88 P\n88  b\n`,
+          'S': `\n.d88b.\n8P\n'Y88P.\n   Y8\n'Y88P'\n`,
+          'T': `\n888888\n  88\n  88\n  88\n  88\n`,
+          'U': `\n888  888\n888  888\n888  888\n888  888\n'Y88P'\n`,
+          'V': `\n888  888\n888  888\n888  888\n'Y88P'\n`,
+          'W': `\n888  888\n888  888\n8888888\n888  888\n888  888\n`,
+          'X': `\nY8  P\nY88P\n Y88P\nY8P Y8\nY8  Y8\n`,
+          'Y': `\n'Y88P'\n  88\n  88\n  88\n  88\n`,
+          'Z': `\n888888\n   88P\n  88\n 88\n888888\n`,
+          ' ': `\n \n \n \n \n \n`,
+          '0': `\n.d88b.\n8P  Y8\n8b  d8\n'Y88P'\n`,
+          '1': `\n  d8b\nd888b\n  88\n  88\nd88888\n`,
+          '2': `\n.d88b.\n8P  '\n 'Y8b.\nd8b\n Y8888\n`,
+          '3': `\n.d8b.\nY8b.\nd8P\nY8b.\n`
+        }
+      };
 
-            // Mapeamentos de estilos para arte ASCII
-            const asciiStyles = {
-                'default': {
-                    'A': `
-.d88b.
-8P  Y8
-8b  d8
-'Y88P'
-`,
-                    'B': `
-8888b.
-8P  Y8
-8888P'
-8P   b
-8888b.
-`,
-                    'C': `
-.d88b.
-8P   8
-8b   8
-'Y88P'
-`,
-                    'D': `
-8888b.
-8P   Y8
-8b   d8
-'Y88P'
-`,
-                    'E': `
-888888
-8P
-8888
-8P
-888888
-`,
-                    'F': `
-888888
-8P
-8888
-8P
-8P
-`,
-                    'G': `
-.d88b.
-8P   '
-8P  d8
-'Y88P'
-`,
-                    'H': `
-888  888
-888  888
-8888888
-888  888
-888  888
-`,
-                    'I': `
-888888
-  88
-  88
-  88
-888888
-`,
-                    'J': `
-  8888
-     88
-     88
-88   88
-'Y8888
-`,
-                    'K': `
-888  8
-88  8
-8888
-88  8
-888  8
-`,
-                    'L': `
-888
-888
-888
-888
-888888
-`,
-                    'M': `
-.d88b.
-8P   Y8
-'Y88P'
-  8888
-`,
-                    'N': `
-888  88
-8888 88
-88 8888
-88  888
-88  888
-`,
-                    'O': `
-.d88b.
-8P  Y8
-8b  d8
-'Y88P'
-`,
-                    'P': `
-8888b.
-8P  Y8
-8888P'
-88
-88
-`,
-                    'Q': `
-.d88b.
-8P  Y8
-8b  d8
-'Y88P'
-   '
-`,
-                    'R': `
-8888b.
-8P  Y8
-8888P'
-88 P
-88  b
-`,
-                    'S': `
-.d88b.
-8P
-'Y88P.
-   Y8
-'Y88P'
-`,
-                    'T': `
-888888
-  88
-  88
-  88
-  88
-`,
-                    'U': `
-888  888
-888  888
-888  888
-888  888
-'Y88P'
-`,
-                    'V': `
-888  888
-888  888
-888  888
-'Y88P'
-`,
-                    'W': `
-888  888
-888  888
-8888888
-888  888
-888  888
-`,
-                    'X': `
-Y8   P
-Y88P
- Y88P
-Y8P Y8
-Y8   Y8
-`,
-                    'Y': `
-'Y88P'
-  88
-  88
-  88
-  88
-`,
-                    'Z': `
-888888
-   88P
-  88
- 88
-888888
-`,
-                    ' ': `
-        
-        
-        
-        
-        
-`,
-                    '0': `
-.d88b.
-8P  Y8
-8b  d8
-'Y88P'
-`,
-                    '1': `
-   d8b
- d888b
-   88
-   88
- d88888
-`,
-                    '2': `
-.d88b.
-8P   '
- 'Y8b.
- d8b
- Y8888
-`,
-                    '3': `
-.d8b.
-Y8b.
-d8P
-Y8b.
-`
-                },
-                'block': {
-                    'A': `
- ████ 
-█    █
-██████
-█    █
-█    █
-`,
-                    'B': `
-█████ 
-█    █
-█████ 
-█    █
-█████ 
-`,
-                    'C': `
- ████ 
-█    
-█    
-█    
- ████ 
-`,
-                    'D': `
-████  
-█    █
-█    █
-█    █
-████  
-`,
-                    'E': `
-██████
-█     
-██████
-█     
-██████
-`,
-                    'F': `
-██████
-█     
-██████
-█     
-█     
-`,
-                    'G': `
- ████ 
-█     
-█  ███
-█    █
- ████ 
-`,
-                    'H': `
-█    █
-█    █
-██████
-█    █
-█    █
-`,
-                    'I': `
-█████
-  █  
-  █  
-  █  
-█████
-`,
-                    'J': `
-      █
-      █
-      █
-█     █
- █████
-`,
-                    'K': `
-█   █
-█  █ 
-███  
-█  █ 
-█   █
-`,
-                    'L': `
-█     
-█     
-█     
-█     
-██████
-`,
-                    'M': `
-█    █
-██  ██
-█ ██ █
-█    █
-█    █
-`,
-                    'N': `
-█    █
-██   █
-█ █  █
-█  █ █
-█   ██
-`,
-                    'O': `
- ████ 
-█    █
-█    █
-█    █
- ████ 
-`,
-                    'P': `
-█████ 
-█    █
-█████ 
-█     
-█     
-`,
-                    'Q': `
- ████ 
-█    █
-█    █
-█  ███
- ████ █
-`,
-                    'R': `
-█████ 
-█    █
-█████ 
-█  █  
-█   █ 
-`,
-                    'S': `
- █████
-█     
- ████ 
-     █
-█████ 
-`,
-                    'T': `
-██████
-  █   
-  █   
-  █   
-  █   
-`,
-                    'U': `
-█    █
-█    █
-█    █
-█    █
- ████ 
-`,
-                    'V': `
-█    █
-█    █
-█    █
- ████ 
-  █   
-`,
-                    'W': `
-█    █
-█    █
-█ ██ █
-██  ██
-█    █
-`,
-                    'X': `
-█   █
- █ █ 
-  █  
- █ █ 
-█   █
-`,
-                    'Y': `
-█   █
- █ █ 
-  █  
-  █  
-  █  
-`,
-                    'Z': `
-██████
-   █  
-  █   
- █    
-██████
-`,
-                    ' ': `
-        
-        
-        
-        
-        
-`,
-                    '0': `
- ████ 
-█    █
-█    █
-█    █
- ████ 
-`,
-                    '1': `
-  █  
- ██  
-  █  
-  █  
-█████
-`,
-                    '2': `
- █████
-█    █
-  ███ 
- █    
-██████
-`,
-                    '3': `
-█████ 
-█    █
-  ███ 
-█    █
-█████ 
-`
-                }
+      // Simula o carregamento assíncrono do estilo 'block'.
+      // Na vida real, você faria um 'fetch' para um arquivo JSON.
+      const loadBlockStyle = () => {
+        return new Promise(resolve => {
+          setTimeout(() => {
+            const blockStyle = {
+              'block': {
+                'A': `\n ████ \n█    █\n██████\n█    █\n█    █\n`,
+                'B': `\n█████ \n█    █\n█████ \n█    █\n█████ \n`,
+                'C': `\n ████ \n█    \n█    \n█    \n ████ \n`,
+                'D': `\n████  \n█    █\n█    █\n█    █\n████  \n`,
+                'E': `\n██████\n█     \n██████\n█     \n██████\n`,
+                'F': `\n██████\n█     \n██████\n█     \n█     \n`,
+                'G': `\n ████ \n█     \n█ ███\n█    █\n ████ \n`,
+                'H': `\n█    █\n█    █\n██████\n█    █\n█    █\n`,
+                'I': `\n█████\n  █  \n  █  \n  █  \n█████\n`,
+                'J': `\n      █\n      █\n      █\n█      █\n █████\n`,
+                'K': `\n█   █\n█  █ \n███  \n█  █ \n█   █\n`,
+                'L': `\n█     \n█     \n█     \n█     \n██████\n`,
+                'M': `\n█    █\n██  ██\n█ ██ █\n█    █\n█    █\n`,
+                'N': `\n█    █\n██   █\n█ █  █\n█  █ █\n█   ██\n`,
+                'O': `\n ████ \n█    █\n█    █\n█    █\n ████ \n`,
+                'P': `\n█████ \n█    █\n█████ \n█     \n█     \n`,
+                'Q': `\n ████ \n█    █\n█    █\n█  ███\n ████ █\n`,
+                'R': `\n█████ \n█    █\n█████ \n█  █  \n█   █ \n`,
+                'S': `\n █████\n█     \n ████ \n     █\n█████ \n`,
+                'T': `\n██████\n  █   \n  █   \n  █   \n  █   \n`,
+                'U': `\n█    █\n█    █\n█    █\n█    █\n ████ \n`,
+                'V': `\n█    █\n█    █\n█    █\n ████ \n  █   \n`,
+                'W': `\n█    █\n█    █\n█ ██ █\n██  ██\n█    █\n`,
+                'X': `\n█   █\n █ █ \n  █  \n █ █ \n█   █\n`,
+                'Y': `\n█    █\n █ █ \n  █  \n  █  \n  █  \n`,
+                'Z': `\n██████\n   █  \n  █   \n █    \n██████\n`,
+                ' ': `\n \n \n \n \n \n`,
+                '0': `\n ████ \n█    █\n█    █\n█    █\n ████ \n`,
+                '1': `\n  █  \n ██  \n  █  \n  █  \n█████\n`,
+                '2': `\n █████\n█    █\n  ███ \n █    \n██████\n`,
+                '3': `\n█████ \n█    █\n ███  \n█    █\n█████ \n`
+              }
             };
-            
-            let currentStyle = 'default';
-
-            // Função para mostrar uma mensagem temporária ao utilizador
-            const showMessage = (text) => {
-                messageBox.textContent = text;
-                messageBox.classList.add('show');
-                setTimeout(() => {
-                    messageBox.classList.remove('show');
-                }, 3000);
-            };
-
-            // Listener para mudar o estilo quando o menu é alterado
-            styleSelect.addEventListener('change', (event) => {
-                currentStyle = event.target.value;
-            });
-
-            // Evento para quando o utilizador clica no botão "Gerar"
-            generateButton.addEventListener('click', () => {
-                const inputText = textInput.value.toUpperCase();
-                let asciiText = '';
-                let lines = ['','','','','','']; // 6 linhas por carácter
-                
-                // Usar o mapa de caracteres do estilo selecionado
-                const charMap = asciiStyles[currentStyle];
-
-                if (!inputText) {
-                    showMessage('Por favor, escreve algum texto para converter.');
-                    return;
-                }
-
-                // Iterar sobre cada carácter do input
-                for (const char of inputText) {
-                    const asciiBlock = charMap[char];
-                    if (asciiBlock) {
-                        const blockLines = asciiBlock.trim().split('\n');
-                        for (let i = 0; i < blockLines.length; i++) {
-                            lines[i] += blockLines[i] + '  '; // Adicionar 2 espaços entre caracteres
-                        }
-                    } else {
-                        // Se o carácter não existir, adiciona um espaço em branco
-                        for (let i = 0; i < 6; i++) {
-                            lines[i] += '       ';
-                        }
-                    }
-                }
-
-                asciiText = lines.join('\n');
-                asciiOutput.textContent = asciiText;
-                copyButton.style.display = 'block';
-                showMessage('Arte ASCII gerada com sucesso!');
-            });
-
-            // Evento para o botão de copiar
-            copyButton.addEventListener('click', () => {
-                try {
-                    const range = document.createRange();
-                    range.selectNode(asciiOutput);
-                    window.getSelection().removeAllRanges();
-                    window.getSelection().addRange(range);
-                    document.execCommand('copy');
-                    window.getSelection().removeAllRanges();
-                    showMessage('Texto copiado para a área de transferência!');
-                } catch (err) {
-                    console.error('Falha ao copiar o texto:', err);
-                    showMessage('Erro ao copiar o texto.');
-                }
-            });
+            resolve(blockStyle);
+          }, 500); // Simula um pequeno atraso de rede
         });
-    </script>
+      };
 
+      // Armazena o estado de carregamento do estilo 'block'
+      let isBlockStyleLoaded = false;
+      let currentStyle = 'default';
+
+      // Função para mostrar uma mensagem temporária ao usuário
+      const showMessage = (text) => {
+        messageBox.textContent = text;
+        messageBox.classList.add('show');
+        setTimeout(() => {
+          messageBox.classList.remove('show');
+        }, 3000);
+      };
+
+      // Listener para mudar o estilo e carregar o novo se necessário
+      styleSelect.addEventListener('change', async (event) => {
+        currentStyle = event.target.value;
+        if (currentStyle === 'block' && !isBlockStyleLoaded) {
+          generateButton.classList.add('loading');
+          generateButton.textContent = 'A carregar...';
+          const blockData = await loadBlockStyle();
+          Object.assign(asciiStyles, blockData); // Mescla o novo estilo com os existentes
+          isBlockStyleLoaded = true;
+          generateButton.classList.remove('loading');
+          generateButton.textContent = 'Gerar Arte ASCII';
+          showMessage('Estilo "Bloco" carregado!');
+        }
+      });
+
+      // Evento para quando o utilizador clica no botão "Gerar"
+      generateButton.addEventListener('click', () => {
+        if (generateButton.classList.contains('loading')) {
+          return; // Ignora o clique se o botão estiver em estado de carregamento
+        }
+        const inputText = textInput.value.toUpperCase();
+        let lines = ['', '', '', '', '']; // 5 linhas por caractere, ajustado para os novos mapas
+        const charMap = asciiStyles[currentStyle];
+
+        if (!inputText) {
+          showMessage('Por favor, escreve algum texto para converter.');
+          return;
+        }
+
+        // Itera sobre cada caractere do input para construir a arte
+        for (const char of inputText) {
+          const asciiBlock = charMap[char];
+          if (asciiBlock) {
+            const blockLines = asciiBlock.trim().split('\n');
+            for (let i = 0; i < blockLines.length; i++) {
+              if (lines[i] !== undefined) {
+                lines[i] += blockLines[i] + '  '; // Adiciona 2 espaços entre caracteres
+              }
+            }
+          } else {
+            // Se o caractere não existir, adiciona espaços em branco
+            for (let i = 0; i < 5; i++) {
+              lines[i] += '        ';
+            }
+          }
+        }
+        const asciiText = lines.join('\n');
+        asciiOutput.textContent = asciiText;
+        copyButton.style.display = 'block';
+        showMessage('Arte ASCII gerada com sucesso!');
+      });
+
+      // Evento para o botão de copiar
+      copyButton.addEventListener('click', () => {
+        try {
+          const range = document.createRange();
+          range.selectNode(asciiOutput);
+          window.getSelection().removeAllRanges();
+          window.getSelection().addRange(range);
+          document.execCommand('copy');
+          window.getSelection().removeAllRanges();
+          showMessage('Texto copiado para a área de transferência!');
+        } catch (err) {
+          console.error('Falha ao copiar o texto:', err);
+          showMessage('Erro ao copiar o texto.');
+        }
+      });
+    });
+  </script>
