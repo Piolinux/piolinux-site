@@ -52,16 +52,14 @@ params:
   expires: "0"
   canonical: "https://piolinux.com"
 
-future: true
+future: false
 
 # _config.yml
 sass:
   quiet_deps: true
 
 
-sitemap:
-    changefreq: daily
-    priority: 0.7
+
 
 # Build settings
 #theme: minima
