@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Guia Nostálgico: DOSBox e Double Commander no Linux para Usuários Raiz"
+title: "Guia Nostálgico: DOSBox e Double Commander no Linux"
 author: "Piolinux"
 date: 2025-08-12 11:58:05 -0300
 categories: [Linux, Tutoriais, Ferramentas]
