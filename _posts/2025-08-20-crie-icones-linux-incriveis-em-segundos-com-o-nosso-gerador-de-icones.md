@@ -2,7 +2,7 @@
 layout: default
 title: "Crie Ícones Linux Incríveis em Segundos com o Nosso Gerador de Ícones"
 date: 2025-08-20 19:55:00 -0300
-author: Seu Nome
+author: Piolinux
 categories: [Linux, Tutoriais, Ferramentas]
 tags: [Linux, Icones, Atalhos, Personalização]
 ---
