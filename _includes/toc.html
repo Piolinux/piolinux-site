@@ -1,0 +1,86 @@
+
+<style>
+  /* Estilos para o Índice de Conteúdo (TOC) */
+  .toc-container {
+    padding: 1rem;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    border: 1px solid #333;
+    margin-bottom: 2rem;
+  }
+
+  .toc-container h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #80ff00;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .toc-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-container li {
+    margin-bottom: 0.5rem;
+  }
+
+  .toc-container a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 0.9rem;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .toc-container a:hover,
+  .toc-container a.active {
+    color: #80ff00;
+    font-weight: bold;
+  }
+</style>
+
+<div class="toc-container" id="toc-container">
+  <h3>Índice</h3>
+  <ul id="toc-list"></ul>
+</div>
+
+<script>
+  // Script para o índice dinâmico
+  document.addEventListener('DOMContentLoaded', () => {
+    // Procura o elemento onde o conteúdo do post está.
+    const content = document.querySelector('main');
+    if (!content) return;
+
+    // Seleciona o container do índice e a lista.
+    const tocContainer = document.getElementById('toc-container');
+    const tocList = document.getElementById('toc-list');
+    if (!tocList || !tocContainer) return;
+
+    // Encontra todos os títulos (h2 e h3) no conteúdo.
+    const headings = content.querySelectorAll('h2, h3');
+    
+    // Se não houver títulos, esconde o índice.
+    if (headings.length === 0) {
+      tocContainer.style.display = 'none';
+      return;
+    }
+
+    // Gerar o índice dinamicamente
+    headings.forEach((heading, index) => {
+      // Cria um ID único para cada título se ele ainda não tiver um.
+      if (!heading.id) {
+        heading.id = 'section-' + index;
+      }
+      
+      const listItem = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = '#' + heading.id;
+      link.textContent = heading.textContent;
+      listItem.appendChild(link);
+      tocList.appendChild(listItem);
+    });
+  });
+</script>
