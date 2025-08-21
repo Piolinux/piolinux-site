@@ -7,7 +7,7 @@ tags: [linux, piolinux, tutorial]
 author: "Piolinux"
 ---
 
-
+{% include toc.html %}
 
 
 ## Bem-vindo ao Piolinux 🚀

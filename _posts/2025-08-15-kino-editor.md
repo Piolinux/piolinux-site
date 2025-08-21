@@ -9,6 +9,10 @@ author: "Piolinux"
 ---
 
 
+{% include toc.html %}
+
+
+
 <section class="post-content">
 
     <p>Eu subestimei a qualidade do software Kino para edição de vídeos. Similar a programas como Kdenlive ou Openshot, ele é fácil de usar. O projeto foi abandonado em 2009 e, embora a página do desenvolvedor ainda exista, o software é considerado um "abandonware" – um software que, apesar de antigo, ainda possui qualidades.</p>

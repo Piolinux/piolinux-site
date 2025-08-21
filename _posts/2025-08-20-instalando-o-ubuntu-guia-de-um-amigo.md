@@ -8,6 +8,12 @@ tags: [Ubuntu, Linux, Instalação, Sistema Operacional, Tutoriais, Software Liv
 author: "Piolinux"
 ---
 
+{% include toc.html %}
+
+
+
+
+
   <section class="post-content">
 
 

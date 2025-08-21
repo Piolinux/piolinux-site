@@ -9,6 +9,10 @@ tags: [tux, linux, logótipo, gerador, svg, diy, codigo-aberto]
 ---
 
 
+{% include toc.html %}
+
+
+
 <section class="post-content">
 <p>Olá, pessoal tudo bem!</p>
 <p>Lembram-se de quando estivemos a criar o nosso logótipo, com o pinguim, o boné e a cria? Enquanto estava a mexer no código, tive uma ideia: e se toda a gente pudesse criar o seu próprio Tux?</p>

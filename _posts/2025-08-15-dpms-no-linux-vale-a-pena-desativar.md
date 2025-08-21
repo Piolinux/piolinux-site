@@ -8,6 +8,10 @@ tags: [DPMS, xset, economia de energia, monitor, comando]
 description: "Uma experiência pessoal sobre a função DPMS no Linux. Descubra se vale a pena desativar a economia de energia do monitor e como usar o comando xset de forma segura."
 ---
 
+{% include toc.html %}
+
+
+
 <section class="post-content">
                 
         <!-- Cabeçalho com título e ícone -->

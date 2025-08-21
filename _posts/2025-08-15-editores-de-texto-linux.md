@@ -9,6 +9,9 @@ category: Linux
 ---
 
 
+{% include toc.html %}
+
+
 <section class="post-content">
           
             

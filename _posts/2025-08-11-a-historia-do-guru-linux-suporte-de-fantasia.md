@@ -7,6 +7,10 @@ tags: [linux, iniciantes, erros, tutorial]
 author: "Piolinux"
 ---
 
+
+{% include toc.html %}
+
+
  
 <section class="post-content">
 

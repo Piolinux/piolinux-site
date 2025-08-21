@@ -10,8 +10,11 @@ author: "Piolinux"
 
 
 
+{% include toc.html %}
 
-        <section class="post-content">
+
+
+<section class="post-content">
             
 
             <p>Em uma cidade digital tranquila, com seus ícones reluzentes e janelas abrindo suavemente, residia uma moça chamada Maria GUI. Maria, apaixonada por interfaces gráficas, era a maior entusiasta do universo! Para ela, o computador era tipo um parque de diversões, com cada clique se tornando uma nova aventura. Seu pior medo, contudo, era algo misterioso, escondido no canto escuro do sistema: o Terminal.</p>

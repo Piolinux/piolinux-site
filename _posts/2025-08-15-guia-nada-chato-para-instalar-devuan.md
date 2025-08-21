@@ -14,6 +14,10 @@ tags:
 description: "Um guia fácil e descontraído para instalar o Devuan GNU+Linux. Aprenda a instalar o Devuan, uma alternativa sem o systemd, de uma forma que não o vai aborrecer."  
 ---
 
+
+
+{% include toc.html %}
+
           
 
 <section class="post-content">

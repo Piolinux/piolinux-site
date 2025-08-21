@@ -9,6 +9,10 @@ description: "Um guia completo sobre ferramentas essenciais para o dia a dia no 
 ---
 
 
+
+{% include toc.html %}
+
+
 <section class="post-content">
             
             <p>A produtividade no **Linux**? Depende das ferramentas para facilitar a sua rotina. Reunimos, aqui, num guia completo, três pilares para qualquer usuário: documentação, leitores de PDF incríveis, e como capturar e editar a tela com maestria. Prepare-se para conhecer o top dos programas essenciais pro seu sistema!</p>

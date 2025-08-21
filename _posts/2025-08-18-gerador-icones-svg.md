@@ -7,6 +7,10 @@ tags: [SVG, Ícones, Gerador, Código, Design, Webdev]
 ---
 
 
+{% include toc.html %}
+
+
+
 <section class="post-content">
 
 <p>Cansado de bibliotecas de ícones pesados e cheios de dependências que prejudicam a performance do seu site? Acreditamos que a liberdade de design começa com a liberdade do código. Apresentamos uma ferramenta simples e eficiente para gerar ícones SVG, sem compromissos.</p>

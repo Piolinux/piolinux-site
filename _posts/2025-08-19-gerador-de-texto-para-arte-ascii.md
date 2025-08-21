@@ -12,7 +12,12 @@ keywords:
   - gerador de caracteres
   - arte com letras
   - texto estilizado
+sitemap: true
 ---
+
+
+{% include toc.html %}
+
 
 <section class="post-content">
     <style>

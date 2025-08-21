@@ -9,6 +9,9 @@ author: "Piolinux"
 ---
 
 
+{% include toc.html %}
+
+
 <section class="post-content">
         <p>
             Vou te explicar de um jeito simples: DupeGuru e Shutter Se você tem arquivos duplicados e não sabe como organizar a bagunça, saiba que entrar em desespero não vai ajudar. O <strong>DupeGuru</strong> é a solução perfeita para encontrar e remover esses arquivos de um jeito seguro, evitando que você cometa erros ao tentar fazer a exclusão manual.

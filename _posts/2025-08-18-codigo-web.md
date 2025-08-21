@@ -6,6 +6,13 @@ tags: [ferramenta, código, HTML, SVG, dicas]
 categoria: ferramentas
 description: Uma ferramenta simples e prática para formatar código HTML/XML e converter SVGs para Base64, ajudando a otimizar o seu site.
 ---
+
+
+{% include toc.html %}
+
+
+
+
 <section class="post-content">
     <!-- Título principal e introdução -->
     <h1 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 text-center mb-6">
