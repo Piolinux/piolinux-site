@@ -6,6 +6,13 @@ tags: [ferramenta, código, HTML, SVG, dicas]
 categoria: ferramentas
 description: Uma ferramenta simples e prática para formatar código HTML/XML e converter SVGs para Base64, ajudando a otimizar o seu site.
 ---
+
+
+{% include toc.html %}
+
+
+
+
 <section class="post-content">
     <!-- Título principal e introdução -->
     <h1 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 text-center mb-6">
@@ -31,7 +38,7 @@ description: Uma ferramenta simples e prática para formatar código HTML/XML e 
             <strong>Nova funcionalidade!</strong> A ferramenta agora também deteta e remove tags duplicadas (por exemplo, `<p></p><p></p>`), fazendo uma limpeza extra no seu código. Depois é só copiar e usar!
         </p>
 
-        <!-- Ferramenta para Correção de Código -->
+        <!-- Tool for Code Correction -->
         <div class="bg-gray-700 p-4 rounded-xl shadow-inner grid grid-cols-1 md:grid-cols-2 gap-4">
             <textarea id="codeInput" class="w-full h-64 p-3 text-sm rounded-lg bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all" placeholder="<!-- Cole seu código aqui -->"></textarea>
             <div>
@@ -82,11 +89,11 @@ description: Uma ferramenta simples e prática para formatar código HTML/XML e 
             </li>
         </ul>
 
-        <!-- Ferramenta para Conversão de SVG -->
+        <!-- Tool for SVG Conversion -->
         <div class="bg-gray-700 p-4 rounded-xl shadow-inner grid grid-cols-1 md:grid-cols-2 gap-4">
             <textarea id="svgInput" class="w-full h-64 p-3 text-sm rounded-lg bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="<!-- Cole seu SVG aqui -->"></textarea>
             <div>
-                <!-- Os botões agora estão em uma linha para melhor organização -->
+                 <!-- Os botões agora estão em uma linha para melhor organização -->
                 <div class="flex space-x-2 mb-4">
                     <button onclick="convertSvgToBase64()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 rounded-lg transition-colors">
                         Converter para Base64
@@ -123,12 +130,23 @@ description: Uma ferramenta simples e prática para formatar código HTML/XML e 
 
 <!-- Scripts da Ferramenta -->
 <script>
-    // A função para formatar o código com indentação e remover tags duplicadas
+    // Include Tailwind and Inter font at the top of the post content
+    // This is a workaround since Jekyll's default behavior may not load them
+    const head = document.head || document.getElementsByTagName('head')[0];
+    const tailwind = document.createElement('script');
+    tailwind.src = "https://cdn.tailwindcss.com";
+    head.appendChild(tailwind);
+
+    const inter = document.createElement('style');
+    inter.innerHTML = "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');";
+    head.appendChild(inter);
+
+    // Function to format the code with simple indentation and remove duplicate tags
     function formatCode() {
         const codeInput = document.getElementById('codeInput');
         const codeOutput = document.getElementById('codeOutput');
         const code = codeInput.value;
-
+        
         if (!code.trim()) {
             codeOutput.value = '';
             return;
@@ -141,46 +159,47 @@ description: Uma ferramenta simples e prática para formatar código HTML/XML e 
 
         lines.forEach(line => {
             let trimmedLine = line.trim();
-            if (!trimmedLine) return; // Ignora linhas vazias
+            if (!trimmedLine) return; // Skip empty lines
 
-            // Lógica de indentação aprimorada
-            if (trimmedLine.startsWith('</') || trimmedLine.endsWith('/>')) {
+            // Basic check for duplicate tags
+            // Note: This is a simple check and may not handle complex nesting scenarios perfectly.
+            const isTag = trimmedLine.startsWith('<') && trimmedLine.endsWith('>');
+            if (isTag && trimmedLine === lastTag) {
+                return; // Skip duplicate tags
+            }
+            
+            // Adjust indentation for closing tags
+            if (trimmedLine.startsWith('</') || trimmedLine.endsWith('/>') || trimmedLine.startsWith('<!')) {
                 if (indentLevel > 0) {
                     indentLevel--;
                 }
             }
-
-            // Verifica tags duplicadas, mas apenas se a linha não for um comentário ou doctype
-            const isTag = trimmedLine.startsWith('<') && trimmedLine.endsWith('>') && !trimmedLine.startsWith('<!--') && !trimmedLine.startsWith('<!DOCTYPE');
-            if (isTag && trimmedLine === lastTag) {
-                return; // Ignora tags duplicadas
-            }
-
+            
             formatted += ' '.repeat(indentLevel * 2) + trimmedLine + '\n';
-
-            // Aumenta a indentação para tags de abertura
-            if (trimmedLine.startsWith('<') && !trimmedLine.startsWith('</') && !trimmedLine.endsWith('/>') && !trimmedLine.startsWith('<!--') && !trimmedLine.startsWith('<!DOCTYPE')) {
+            
+            // Adjust indentation for opening tags
+            if (trimmedLine.startsWith('<') && !trimmedLine.startsWith('</') && !trimmedLine.endsWith('/>')) {
                 indentLevel++;
             }
 
-            // Atualiza a última tag encontrada
+            // Update the last tag encountered
             if (isTag) {
                 lastTag = trimmedLine;
             } else {
-                lastTag = ''; // Reseta se não for uma tag
+                lastTag = ''; // Reset if it's not a tag
             }
         });
 
         codeOutput.value = formatted.trim();
     }
 
-    // A função para limpar os campos de entrada e saída do código
+    // Function to clear the code input and output fields
     function clearCode() {
         document.getElementById('codeInput').value = '';
         document.getElementById('codeOutput').value = '';
     }
 
-    // A função para converter SVG para Base64
+    // Function to convert SVG to Base64
     function convertSvgToBase64() {
         const svgInput = document.getElementById('svgInput');
         const base64Output = document.getElementById('base64Output');
@@ -194,19 +213,19 @@ description: Uma ferramenta simples e prática para formatar código HTML/XML e 
         }
 
         try {
-            // Checa se o código SVG é válido
+            // Check if the SVG code is valid
             const parser = new DOMParser();
             const doc = parser.parseFromString(svgCode, "image/svg+xml");
             if (doc.getElementsByTagName("parsererror").length) {
                 throw new Error("Código SVG inválido.");
             }
 
-            // Cria a string Base64
+            // Create the Base64 string
             const base64String = btoa(unescape(encodeURIComponent(svgCode)));
             const dataUrl = `data:image/svg+xml;base64,${base64String}`;
 
             base64Output.value = dataUrl;
-            svgPreview.innerHTML = ''; // Limpa o conteúdo anterior
+            svgPreview.innerHTML = ''; // Clear previous content
             const img = document.createElement('img');
             img.src = dataUrl;
             img.alt = "Pré-visualização do SVG";
@@ -219,27 +238,29 @@ description: Uma ferramenta simples e prática para formatar código HTML/XML e 
         }
     }
 
-    // A função para limpar os campos de entrada, pré-visualização e saída do SVG
+    // Function to clear the SVG input, preview and output fields
     function clearSvg() {
         document.getElementById('svgInput').value = '';
         document.getElementById('base64Output').value = '';
         document.getElementById('svgPreview').innerHTML = 'Pré-visualização do SVG';
     }
 
-    // A função para copiar texto para a área de transferência
+    // Function to copy text to clipboard
     function copyToClipboard(elementId) {
         const element = document.getElementById(elementId);
         element.select();
-        element.setSelectionRange(0, 99999); // Para dispositivos móveis
-
+        element.setSelectionRange(0, 99999); // For mobile devices
+        
         try {
             document.execCommand('copy');
+            // Use a more user-friendly method than alert() for feedback
             console.log('Conteúdo copiado com sucesso!');
+            // Or display a message on the UI
         } catch (err) {
             console.error('Erro ao copiar para a área de transferência.');
         }
     }
 
-    // Adiciona um listener para atualizar a pré-visualização do SVG em tempo real
+    // Add an event listener to update the SVG preview in real-time
     document.getElementById('svgInput').addEventListener('input', convertSvgToBase64);
 </script>
