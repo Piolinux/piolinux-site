@@ -20,7 +20,7 @@
 
 title: "Piolinux"
 description: "Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source."
-baseurl: "/post"
+baseurl: "/_post"
 url: "https://piolinux.com"
 
 markdown: kramdown
