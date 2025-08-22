@@ -73,36 +73,39 @@ minha reocmendação é treinar no VirtualBox antes de instalar, vai ter que usa
 
 
 <div style="
-  background-color: #1a1a1a;
-  border: 2px solid #3ba55d;
-  padding: 15px;
-  margin: 20px 0;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  font-family: Arial, sans-serif;
+background-color: #1a1a1a;
+border: 2px solid #3ba55d;
+padding: 15px;
+margin: 20px 0;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+font-family: Arial, sans-serif;
 ">
-  <h2 style="color: #3ba55d; margin-bottom: 10px;">📘 Guia Oficial de Instalação do Slackware</h2>
-  <p style="color: #e0e0e0; font-size: 16px; margin-bottom: 15px;">
-    Quer se aprofundar ainda mais? Acesse a documentação oficial e veja o passo a passo completo direto da fonte!
-  </p>
-  <a href="https://docs.slackware.com/pt-br:slackware:install" target="_blank" 
-     style="
-       background-color: #3ba55d;
-       color: #fff;
-       padding: 12px 20px;
-       text-decoration: none;
-       font-size: 18px;
-       font-weight: bold;
-       border-radius: 8px;
-       transition: background 0.3s ease;
-       display: inline-block;
-     "
-     onmouseover="this.style.backgroundColor='#2e8649'"
-     onmouseout="this.style.backgroundColor='#3ba55d'">
-    🔗 Acessar Documentação Oficial
-  </a>
+<h2 style="color: #3ba55d; margin-bottom: 10px;">📘 Guia Oficial de Instalação do Slackware</h2>
+<p style="color: #e0e0e0; font-size: 16px; margin-bottom: 15px;">
+Quer se aprofundar ainda mais? Acesse a documentação oficial e veja o passo a passo completo direto da fonte!
+</p>
+<a href="https://docs.slackware.com/pt-br:slackware:install" target="_blank"
+style="
+background-color: #3ba55d;
+color: #fff;
+padding: 12px 20px;
+text-decoration: none;
+font-size: 18px;
+font-weight: bold;
+border-radius: 8px;
+transition: background 0.3s ease;
+display: inline-block;
+"
+onmouseover="this.style.backgroundColor='#2e8649'"
+onmouseout="this.style.backgroundColor='#3ba55d'">
+🔗 Acessar Documentação Oficial
+</a>
 </div>
+
+</section>
+
 
 
 
