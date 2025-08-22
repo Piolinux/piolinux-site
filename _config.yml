@@ -62,12 +62,15 @@ sitemap:
     changefreq: daily
     priority: 0.5
 
+lang: "pt-BR"
+
 
 # Build settings
 #theme: minima
 plugins: 
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
  
   
 # Exclude from processing.
