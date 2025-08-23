@@ -1,0 +1,17 @@
+---
+layout: default
+title: "17. RPG de Texto"
+description: "Uma aventura interativa onde você faz as escolhas. Mergulhe em um RPG clássico de texto."
+keywords: "rpg de texto, jogo de aventura, jogos online"
+permalink: /jogos/rpg-de-texto.html
+script: /assets/js/rpg-de-texto.js
+---
+<div class="game-container">
+    <h2>17. RPG de Texto</h2>
+    <p id="rpgText">Inicie sua aventura!</p>
+    <div id="rpgOptions"></div>
+    <button onclick="startRpgGame()">Iniciar</button>
+</div>
+
+
+<script>!function(){const t={start:{text:"Você acorda em uma floresta escura. O que você faz?",options:[{text:"Ir para o norte",next:"north"},{text:"Ir para o leste",next:"east"}]},north:{text:"Você encontra um rio. Tentar nadar ou seguir o caminho?",options:[{text:"Nadar",next:"swim"},{text:"Seguir o caminho",next:"path"}]},east:{text:"Você encontra uma caverna. Entrar ou continuar?",options:[{text:"Entrar",next:"cave"},{text:"Continuar",next:"continue"}]},swim:{text:"Você é levado pela correnteza. Fim de jogo.",options:[{text:"Reiniciar",next:"start"}]},path:{text:"Você encontra uma cabana. Parabéns, você venceu!",options:[{text:"Reiniciar",next:"start"}]},cave:{text:"Um monstro te ataca. Fim de jogo.",options:[{text:"Reiniciar",next:"start"}]},continue:{text:"Você se perde na floresta. Fim de jogo.",options:[{text:"Reiniciar",next:"start"}]}};let e;const n=document.getElementById("rpgText"),o=document.getElementById("rpgOptions");function a(){n.textContent=e.text,o.innerHTML="",e.options.forEach((n=>{const r=document.createElement("button");r.textContent=n.text,r.onclick=()=>{return o=n.next,e=t[o],void a();var o},o.appendChild(r)}))}window.startRpgGame=function(){e=t.start,a()}}();</script>

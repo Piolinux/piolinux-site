@@ -1,0 +1,17 @@
+---
+layout: default
+title: "18. Labirinto com Tempo"
+description: "Encontre a saída do labirinto antes que o tempo acabe. Use as setas do teclado."
+keywords: "labirinto, jogo de labirinto, jogos de tempo, jogos online"
+permalink: /jogos/labirinto.html
+script: /assets/js/labirinto.js
+---
+<div class="game-container">
+    <h2>18. Labirinto com Tempo</h2>
+    <p>Use as setas para encontrar a saída (verde) em <span id="mazeTimer">60</span> segundos.</p>
+    <canvas id="mazeCanvas" width="400" height="400"></canvas>
+    <button onclick="resetMazeGame()">Reiniciar</button>
+</div>
+
+
+<script>!function(){const e=document.getElementById("mazeCanvas"),t=e.getContext("2d"),l=20,n=20;let r,o,a,y;const f={x:n-2,y:n-2};function i(){if(t.clearRect(0,0,e.width,e.height),r){for(let e=0;e<n;e++)for(let o=0;o<n;o++)t.fillStyle=1===r[e][o]?"#333":"#fff",t.fillRect(o*l,e*l,l,l);t.fillStyle="green",t.fillRect(f.x*l,f.y*l,l,l),t.fillStyle="blue",t.fillRect(o.x*l,o.y*l,l,l)}}document.addEventListener("keydown",(e=>{if(!o)return;let t=o.x,l=o.y;"ArrowUp"===e.key&&l--,"ArrowDown"===e.key&&l++,"ArrowLeft"===e.key&&t--,"ArrowRight"===e.key&&t++,r[l]&&0===r[l][t]&&(o.x=t,o.y=l,i(),o.x===f.x&&o.y===f.y&&(clearInterval(y),alert("Parabéns, você encontrou a saída!")))})),window.resetMazeGame=function(){clearInterval(y),r=function(e){let t=Array.from({length:e},(()=>Array(e).fill(1))),l=[{x:1,y:1}];t[1][1]=0;const n=[[0,1],[0,-1],[1,0],[-1,0]];for(;l.length>0;){let{x:r,y:o}=l.pop(),a=n.map((([e,t])=>({x:r+2*e,y:o+2*t}))).filter((({x:l,y:n})=>l>0&&l<e-1&&n>0&&n<e-1&&1===t[n][l]));if(a.length>0){l.push({x:r,y:o});let e=a[Math.floor(Math.random()*a.length)];t[(o+e.y)/2][(r+e.x)/2]=0,t[e.y][e.x]=0,l.push(e)}}return t}(n),o={x:1,y:1},a=60,document.getElementById("mazeTimer").textContent=a,y=setInterval((()=>{a--,document.getElementById("mazeTimer").textContent=a,a<=0&&(clearInterval(y),alert("Tempo esgotado! Fim de jogo."))}),1e3),i()}}();</script>

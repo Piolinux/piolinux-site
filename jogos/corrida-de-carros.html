@@ -1,0 +1,16 @@
+---
+layout: default
+title: "9. Corrida de Carros"
+description: "Use as setas do teclado para controlar o carro e evitar as paredes neste jogo de corrida."
+keywords: "corrida de carros, jogos de corrida, jogos online"
+permalink: /jogos/corrida-de-carros.html
+script: /assets/js/corrida-de-carros.js
+---
+<div class="game-container">
+    <h2>9. Corrida de Carros</h2>
+    <p>Use as setas do teclado para controlar o carro. Evite as paredes!</p>
+    <canvas id="racingCanvas" width="400" height="400"></canvas>
+    <button onclick="resetRacingGame()">Reiniciar</button>
+</div>
+
+<script>!function(){const e=document.getElementById("racingCanvas"),t=e.getContext("2d");let i,h;const l=[{x:0,y:0,width:400,height:10},{x:0,y:0,width:10,height:400},{x:390,y:0,width:10,height:400},{x:0,y:390,width:400,height:10},{x:100,y:100,width:200,height:10},{x:100,y:100,width:10,height:200},{x:300,y:100,width:10,height:200},{x:100,y:300,width:200,height:10}];function n(){t.clearRect(0,0,e.width,e.height),i&&(t.fillStyle="#202020",t.fillRect(0,0,e.width,e.height),t.fillStyle="gray",t.fillRect(10,10,380,380),t.fillStyle="black",l.forEach((e=>t.fillRect(e.x,e.y,e.width,e.height))),t.fillStyle="red",t.save(),t.translate(i.x,i.y),t.rotate(i.angle*Math.PI/180),t.fillRect(-10,-20,20,40),t.restore())}function a(){i&&(i.x+=i.speed*Math.cos(i.angle*Math.PI/180),i.y+=i.speed*Math.sin(i.angle*Math.PI/180),i.speed*=.98,function(){const t=i.x-10,n=i.x+10,a=i.y-20,d=i.y+20;for(let e of l)if(n>e.x&&t<e.x+e.width&&d>e.y&&a<e.y+e.height)return clearInterval(h),alert("Bateu! Fim de jogo."),void(i=null);(t<0||n>e.width||a<0||d>e.height)&&(clearInterval(h),alert("Bateu na parede! Fim de jogo."),i=null)}(),n())}document.addEventListener("keydown",(e=>{i&&("ArrowUp"===e.key&&(i.speed=5),"ArrowDown"===e.key&&(i.speed=-3),"ArrowLeft"===e.key&&(i.angle-=5),"ArrowRight"===e.key&&(i.angle+=5))})),window.resetRacingGame=function(){clearInterval(h),i={x:50,y:50,speed:0,angle:90},h=setInterval(a,20),n()}}(); </script>

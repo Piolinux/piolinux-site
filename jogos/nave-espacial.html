@@ -1,0 +1,95 @@
+---
+layout: default
+title: "13. Nave Espacial"
+description: "Controle uma nave espacial e atire em inimigos neste jogo clássico. Use as setas do teclado."
+keywords: "nave espacial, jogos de tiro, jogos online"
+permalink: /jogos/nave-espacial.html
+script: /assets/js/nave-espacial.js
+---
+<main>
+    <h1>Nave Espacial</h1>
+    <div class="game-info">
+        <h3>Pontuação: <span id="spaceShooterScore">0</span></h3>
+    </div>
+    <div class="game-container">
+        <p>Use as setas para mover. A nave atira automaticamente nos inimigos!</p>
+        <canvas id="spaceShooterCanvas" width="400" height="400"></canvas>
+        <button onclick="resetSpaceShooterGame()">Reiniciar</button>
+    </div>
+</main>
+
+
+<script>(function() {
+            const canvas = document.getElementById('spaceShooterCanvas');
+            const ctx = canvas.getContext('2d');
+            let player, enemies, bullets, score, spaceShooterLoop;
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                if (!player) return;
+                ctx.fillStyle = 'blue';
+                ctx.fillRect(player.x, player.y, player.width, player.height);
+                
+                ctx.fillStyle = 'red';
+                enemies.forEach(e => ctx.fillRect(e.x, e.y, e.width, e.height));
+                
+                ctx.fillStyle = 'yellow';
+                bullets.forEach(b => ctx.fillRect(b.x, b.y, b.width, b.height));
+            }
+
+            function update() {
+                if (!player) return;
+                enemies.forEach(e => e.y += 1);
+                bullets.forEach(b => b.y -= 5);
+
+                bullets = bullets.filter(b => b.y > 0);
+                enemies = enemies.filter(e => e.y < canvas.height);
+
+                for (let b of bullets) {
+                    for (let e of enemies) {
+                        if (b.x > e.x && b.x < e.x + e.width && b.y > e.y && b.y < e.y + e.height) {
+                            score++;
+                            document.getElementById('spaceShooterScore').textContent = score;
+                            bullets.splice(bullets.indexOf(b), 1);
+                            enemies.splice(enemies.indexOf(e), 1);
+                            break;
+                        }
+                    }
+                }
+                
+                if (Math.random() < 0.05) {
+                    enemies.push({ x: Math.random() * (canvas.width - 20), y: 0, width: 20, height: 20 });
+                }
+
+                draw();
+            }
+
+            document.addEventListener('keydown', e => {
+                if (!player) return;
+                if (e.key === 'ArrowLeft' && player.x > 0) player.x -= 10;
+                if (e.key === 'ArrowRight' && player.x < canvas.width - player.width) player.x += 10;
+            });
+
+            function fire() {
+                bullets.push({ x: player.x + player.width / 2, y: player.y, width: 5, height: 10 });
+            }
+
+            function resetSpaceShooterGame() {
+                clearInterval(spaceShooterLoop);
+                player = { x: canvas.width / 2 - 20, y: canvas.height - 50, width: 40, height: 40 };
+                enemies = [];
+                bullets = [];
+                score = 0;
+                document.getElementById('spaceShooterScore').textContent = score;
+                spaceShooterLoop = setInterval(() => {
+                    update();
+                    fire();
+                }, 50);
+                draw();
+            }
+            window.resetSpaceShooterGame = resetSpaceShooterGame;
+            // remove a chamada `resetSpaceShooterGame();`
+        })();
+        
+       </script> 
+        

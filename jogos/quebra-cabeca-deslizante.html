@@ -1,0 +1,17 @@
+---
+layout: default
+title: "6. Quebra-Cabeça Deslizante"
+description: "Resolva o quebra-cabeça deslizante. Clique nas peças para movê-las."
+keywords: "quebra-cabeça, quebra-cabeça deslizante, jogos de raciocínio, jogos online"
+permalink: /jogos/quebra-cabeca-deslizante.html
+script: /assets/js/quebra-cabeca-deslizante.js
+---
+<div class="game-container">
+    <h2>6. Quebra-Cabeça Deslizante</h2>
+    <p>Clique em uma peça para movê-la para o espaço vazio. Resolva o quebra-cabeça!</p>
+    <canvas id="slidingPuzzleCanvas" width="300" height="300"></canvas>
+    <p id="slidingPuzzleMessage"></p>
+    <button onclick="resetSlidingPuzzle()">Reiniciar</button>
+</div>
+
+<script>!function(){const t=document.getElementById("slidingPuzzleCanvas"),e=t.getContext("2d"),n=100,i=3;let l,o,f=document.getElementById("slidingPuzzleMessage");function r(){if(e.clearRect(0,0,t.width,t.height),l)for(let t=0;t<i;t++)for(let o=0;o<i;o++){const i=l[t][o];0!==i&&(e.fillStyle="#007BFF",e.fillRect(o*n,t*n,n-2,n-2),e.fillStyle="white",e.font="30px Verdana",e.textAlign="center",e.textBaseline="middle",e.fillText(i,o*n+n/2,t*n+n/2))}}function s(){for(let t=0;t<i;t++)for(let e=0;e<i;e++)if(0===l[t][e])return{x:e,y:t}}function x(t,e){if(!l)return;const n=s();Math.abs(t-n.x)+Math.abs(e-n.y)===1&&([l[e][t],l[n.y][n.x]]=[l[n.y][n.x],l[e][t]],r(),JSON.stringify(l)===JSON.stringify(o)&&(f.textContent="Parabéns, você resolveu!"))}t.addEventListener("click",(e=>{if(!l)return;const i=t.getBoundingClientRect();x(Math.floor((e.clientX-i.left)/n),Math.floor((e.clientY-i.top)/n))})),window.resetSlidingPuzzle=function(){l=[[1,2,3],[4,5,6],[7,8,0]],o=JSON.parse(JSON.stringify(l)),function(){if(l)for(let t=0;t<1e3;t++){const t=s(),e=[];t.x>0&&e.push({x:t.x-1,y:t.y}),t.x<i-1&&e.push({x:t.x+1,y:t.y}),t.y>0&&e.push({x:t.x,y:t.y-1}),t.y<i-1&&e.push({x:t.x,y:t.y+1});const n=e[Math.floor(Math.random()*e.length)];[l[t.y][t.x],l[n.y][n.x]]=[l[n.y][n.x],l[t.y][t.x]]}}(),r(),f.textContent=""}}();</script>

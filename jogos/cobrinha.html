@@ -1,0 +1,18 @@
+---
+layout: default
+title: "7. Jogo da Cobrinha"
+description: "Controle a cobrinha e coma as maçãs para crescer neste jogo clássico. Use as setas do teclado."
+keywords: "jogo da cobrinha, snake, jogos clássicos, jogos online"
+permalink: /jogos/cobrinha.html
+script: /assets/js/cobrinha.js
+---
+<div class="game-container">
+    <h2>7. Jogo da Cobrinha</h2>
+    <p>Use as setas do teclado para controlar a cobrinha e comer a maçã.</p>
+    <canvas id="snakeCanvas" width="400" height="400"></canvas>
+    <p>Pontos: <span id="snakeScore">0</span></p>
+    <button onclick="resetSnakeGame()">Reiniciar</button>
+</div>
+
+
+<script>!function(){const e=document.getElementById("snakeCanvas"),t=e.getContext("2d"),n=20;let o,y,r,l,c;function x(){t.clearRect(0,0,e.width,e.height),o&&(t.fillStyle="green",o.forEach((e=>t.fillRect(e.x,e.y,n,n))),t.fillStyle="red",t.fillRect(y.x,y.y,n,n))}function a(){const t={x:o[0].x+r.x,y:o[0].y+r.y};o.unshift(t),t.x===y.x&&t.y===y.y?(l++,document.getElementById("snakeScore").textContent=l,i()):o.pop(),function(){const t=o[0];(t.x<0||t.x>=e.width||t.y<0||t.y>=e.height||o.slice(1).some((e=>e.x===t.x&&e.y===t.y)))&&(clearInterval(c),alert(`Fim de Jogo! Pontos: ${l}`))}(),x()}function i(){y={x:Math.floor(Math.random()*(e.width/n))*n,y:Math.floor(Math.random()*(e.height/n))*n}}document.addEventListener("keydown",(e=>{o&&("ArrowUp"===e.key&&0===r.y&&(r={x:0,y:-n}),"ArrowDown"===e.key&&0===r.y&&(r={x:0,y:n}),"ArrowLeft"===e.key&&0===r.x&&(r={x:-n,y:0}),"ArrowRight"===e.key&&0===r.x&&(r={x:n,y:0}))})),window.resetSnakeGame=function(){clearInterval(c),o=[{x:200,y:200}],r={x:n,y:0},l=0,document.getElementById("snakeScore").textContent=l,i(),c=setInterval(a,100),x()}}();</script>

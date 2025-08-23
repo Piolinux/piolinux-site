@@ -1,0 +1,120 @@
+---
+layout: default
+title: "11. Arkanoid"
+description: "Destrua os blocos com a bolinha neste jogo estilo Arkanoid. Use as setas para mover a barra."
+keywords: "arkanoid, jogos arcade, jogos online"
+permalink: /jogos/arkanoid.html
+script: /assets/js/arkanoid.js
+---
+
+<main>
+    <h1>Arkanoid</h1>
+    <div class="game-info">
+        <h3>Pontuação: <span id="arkanoidScore">0</span></h3>
+    </div>
+    <canvas id="arkanoidCanvas" width="500" height="400"></canvas>
+    <button onclick="resetArkanoidGame()">Reiniciar Jogo</button>
+</main>
+
+
+
+
+<script> (function() {
+            const canvas = document.getElementById('arkanoidCanvas');
+            const ctx = canvas.getContext('2d');
+            let ball, paddle, bricks, score, arkanoidGameLoop;
+            
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                if (!ball) return;
+                ctx.fillStyle = '#eee';
+                ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+                ctx.beginPath();
+                ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'white';
+                ctx.fill();
+
+                bricks.forEach(row => {
+                    row.forEach(brick => {
+                        if (brick.visible) {
+                            ctx.fillStyle = brick.color;
+                            ctx.fillRect(brick.x, brick.y, brick.width, brick.height);
+                        }
+                    });
+                });
+            }
+
+            function update() {
+                if (!ball) return;
+                ball.x += ball.velocityX;
+                ball.y += ball.velocityY;
+
+                if (ball.x + ball.radius > canvas.width || ball.x - ball.radius < 0) {
+                    ball.velocityX = -ball.velocityX;
+                }
+                if (ball.y - ball.radius < 0) {
+                    ball.velocityY = -ball.velocityY;
+                }
+                
+                if (ball.x > paddle.x && ball.x < paddle.x + paddle.width && ball.y + ball.radius > paddle.y) {
+                    ball.velocityY = -ball.velocityY;
+                }
+                
+                bricks.forEach(row => {
+                    row.forEach(brick => {
+                        if (brick.visible) {
+                            if (ball.x > brick.x && ball.x < brick.x + brick.width && ball.y > brick.y && ball.y < brick.y + brick.height) {
+                                ball.velocityY = -ball.velocityY;
+                                brick.visible = false;
+                                score += 10;
+                                document.getElementById('arkanoidScore').textContent = score;
+                            }
+                        }
+                    });
+                });
+                
+                if (ball.y + ball.radius > canvas.height) {
+                    clearInterval(arkanoidGameLoop);
+                    alert(`Fim de Jogo! Pontos: ${score}`);
+                }
+                
+                draw();
+            }
+            
+            document.addEventListener('keydown', e => {
+                if (!paddle) return;
+                if (e.key === 'ArrowLeft' && paddle.x > 0) paddle.x -= 20;
+                if (e.key === 'ArrowRight' && paddle.x < canvas.width - paddle.width) paddle.x += 20;
+            });
+
+            function resetArkanoidGame() {
+                clearInterval(arkanoidGameLoop);
+                ball = { x: canvas.width / 2, y: canvas.height - 30, radius: 10, velocityX: 4, velocityY: -4 };
+                paddle = { x: canvas.width / 2 - 40, y: canvas.height - 20, width: 80, height: 10 };
+                bricks = [];
+                score = 0;
+                document.getElementById('arkanoidScore').textContent = score;
+
+                for (let r = 0; r < 5; r++) {
+                    bricks[r] = [];
+                    for (let c = 0; c < 8; c++) {
+                        bricks[r][c] = {
+                            x: 10 + c * 50,
+                            y: 10 + r * 20,
+                            width: 40,
+                            height: 15,
+                            visible: true,
+                            color: `hsl(${r * 360 / 5}, 70%, 50%)`
+                        };
+                    }
+                }
+                
+                arkanoidGameLoop = setInterval(update, 20);
+                draw();
+            }
+            window.resetArkanoidGame = resetArkanoidGame;
+            // remove a chamada `resetArkanoidGame();`
+        })();
+
+
+</script>

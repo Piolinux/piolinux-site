@@ -1,0 +1,18 @@
+---
+layout: default
+title: "12. Jogo de Plataforma"
+description: "Controle o personagem, mova e pule para completar os níveis. Um jogo de plataforma simples e divertido."
+keywords: "jogo de plataforma, jogos online, pulos"
+permalink: /jogos/plataforma.html
+script: /assets/js/plataforma.js
+---
+<div class="game-container">
+    <h2>12. Jogo de Plataforma</h2>
+    <p>Use as setas para mover e pular.</p>
+    <canvas id="platformerCanvas" width="400" height="300"></canvas>
+    <p id="platformerMessage"></p>
+    <button onclick="resetPlatformerGame()">Reiniciar</button>
+</div>
+
+
+<script>!function(){const e=document.getElementById("platformerCanvas"),t=e.getContext("2d");let h,i,n,r,l;function o(){t.clearRect(0,0,e.width,e.height),h&&(t.fillStyle="blue",t.fillRect(h.x,h.y,h.width,h.height),t.fillStyle="green",i.forEach((e=>t.fillRect(e.x,e.y,e.width,e.height))))}function y(){if(!h)return;r+=n,h.y+=r;let t=!1;i.forEach((e=>{h.x<e.x+e.width&&h.x+h.width>e.x&&h.y+h.height>e.y&&h.y+h.height<e.y+e.height+10&&(h.y=e.y-h.height,r=0,t=!0)})),h.y>e.height&&(clearInterval(l),document.getElementById("platformerMessage").textContent="Fim de Jogo! Você caiu."),o()}document.addEventListener("keydown",(e=>{h&&("ArrowLeft"===e.key&&(h.x-=10),"ArrowRight"===e.key&&(h.x+=10),"ArrowUp"===e.key&&0===r&&(r=-20))})),window.resetPlatformerGame=function(){clearInterval(l),h={x:50,y:150,width:20,height:20},i=[{x:0,y:280,width:400,height:20},{x:100,y:200,width:100,height:20},{x:250,y:150,width:100,height:20}],n=1,r=0,document.getElementById("platformerMessage").textContent="",l=setInterval(y,20),o()}}();</script>

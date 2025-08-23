@@ -1,0 +1,18 @@
+---
+layout: default
+title: "10. Pong"
+description: "Jogue o clássico Pong! Use as setas do teclado para mover a barra e rebater a bolinha."
+keywords: "pong, jogos clássicos, arcade, jogos online"
+permalink: /jogos/pong.html
+script: /assets/js/pong.js
+---
+<div class="game-container">
+    <h2>10. Pong</h2>
+    <p>Use as setas para mover sua barra e rebater a bolinha.</p>
+    <canvas id="pongCanvas" width="600" height="400"></canvas>
+    <p>Placar: <span id="pongScore">0</span></p>
+    <button onclick="resetPongGame()">Reiniciar</button>
+</div>
+
+
+<script>!function(){const t=document.getElementById("pongCanvas"),e=t.getContext("2d");let i,h,y,o,n;function l(){e.clearRect(0,0,t.width,t.height),i&&(e.fillStyle="white",e.fillRect(h.x,h.y,h.width,h.height),e.fillRect(y.x,y.y,y.width,y.height),e.beginPath(),e.arc(i.x,i.y,i.radius,0,2*Math.PI),e.fill())}function c(){i&&(i.x+=i.velocityX,i.y+=i.velocityY,(i.y-i.radius<0||i.y+i.radius>t.height)&&(i.velocityY=-i.velocityY),i.x-i.radius<h.x+h.width&&i.y>h.y&&i.y<h.y+h.height&&(i.velocityX=-i.velocityX),i.x+i.radius>y.x&&i.y>y.y&&i.y<y.y+y.height&&(i.velocityX=-i.velocityX),i.x<0&&(o++,document.getElementById("pongScore").textContent=o,i={x:t.width/2,y:t.height/2,radius:10,velocityX:5,velocityY:5}),i.x>t.width&&(clearInterval(n),alert("Fim de Jogo! Você perdeu.")),y.y=i.y-y.height/2,l())}document.addEventListener("keydown",(e=>{h&&("ArrowUp"===e.key&&h.y>0&&(h.y-=20),"ArrowDown"===e.key&&h.y<t.height-h.height&&(h.y+=20))})),window.resetPongGame=function(){clearInterval(n),i={x:t.width/2,y:t.height/2,radius:10,velocityX:5,velocityY:5},h={x:10,y:t.height/2-50,width:10,height:100},y={x:t.width-20,y:t.height/2-50,width:10,height:100},o=0,document.getElementById("pongScore").textContent=o,n=setInterval(c,20),l()}}();</script>

@@ -1,0 +1,135 @@
+---
+layout: default
+title: "4. Jogo da Memória"
+description: "Encontre os pares de cartas neste jogo da memória clássico. Ótimo para exercitar a mente!"
+keywords: "jogo da memória, cartas, jogo de raciocínio, jogos online"
+permalink: /jogos/memoria.html
+script: /assets/js/memoria.js
+---
+
+---
+layout: default
+title: "Jogo da Memória"
+description: "Um jogo da memória clássico com emojis!"
+script: /assets/js/memoria.js
+---
+
+<main>
+    <h1>Jogo da Memória</h1>
+    <p id="memoryMessage" class="message"></p>
+    <div id="memoryBoard" class="board"></div>
+    <button onclick="resetMemoryGame()">Reiniciar Jogo</button>
+</main>
+
+
+<script>(function() {
+    const emojis = ["🍇", "🍉", "🍊", "🍋", "🍌", "🍍", "🍎", "🍐", "🍇", "🍉", "🍊", "🍋", "🍌", "🍍", "🍎", "🍐"];
+    let cards = [];
+    let flippedCards = [];
+    let matchedPairs = 0;
+
+    const board = document.getElementById("memoryBoard");
+    const message = document.getElementById("memoryMessage");
+
+    function createBoard() {
+        // Embaralha as cartas
+        emojis.sort(() => Math.random() - 0.5);
+        board.innerHTML = "";
+        matchedPairs = 0;
+
+        emojis.forEach((emoji, index) => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.dataset.emoji = emoji;
+            card.dataset.id = index;
+            card.textContent = "?";
+            
+            card.addEventListener("click", () => flipCard(card));
+            board.appendChild(card);
+        });
+    }
+
+    function flipCard(card) {
+        if (flippedCards.length < 2 && !card.classList.contains("flipped")) {
+            card.classList.add("flipped");
+            card.textContent = card.dataset.emoji;
+            flippedCards.push(card);
+
+            if (flippedCards.length === 2) {
+                setTimeout(checkMatch, 1000);
+            }
+        }
+    }
+
+    function checkMatch() {
+        const [card1, card2] = flippedCards;
+        
+        if (card1.dataset.emoji === card2.dataset.emoji) {
+            // Se as cartas combinam
+            matchedPairs++;
+            card1.style.backgroundColor = card2.style.backgroundColor = '#90EE90';
+            
+            if (matchedPairs === emojis.length / 2) {
+                message.textContent = "Parabéns, você venceu!";
+            }
+        } else {
+            // Se as cartas não combinam
+            card1.classList.remove("flipped");
+            card2.classList.remove("flipped");
+            card1.textContent = card2.textContent = "?";
+        }
+        
+        flippedCards = [];
+    }
+
+    window.resetMemoryGame = function() {
+        message.textContent = "";
+        createBoard();
+    }
+    
+    // Inicia o jogo automaticamente ao carregar a página
+    window.onload = resetMemoryGame;
+})();</script>
+
+
+<style>
+    /* Estilos para o Jogo da Memória */
+    .board {
+        display: grid;
+        grid-template-columns: repeat(4, 80px);
+        grid-template-rows: repeat(4, 80px);
+        gap: 10px;
+        justify-content: center;
+        align-content: center;
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+        background-color: #444;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: transform 0.3s;
+        user-select: none;
+    }
+    
+    .card.flipped {
+        transform: rotateY(180deg);
+        pointer-events: none;
+        background-color: #fff;
+        color: #000;
+    }
+
+    .message {
+        text-align: center;
+        font-size: 1.5em;
+        margin-top: 15px;
+        color: #333;
+    }
+</style>

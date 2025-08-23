@@ -1,0 +1,21 @@
+---
+layout: default
+title: "3. Jogo da Forca"
+description: "Tente adivinhar a palavra secreta neste clássico Jogo da Forca."
+keywords: "jogo da forca, adivinhar palavra, jogo clássico"
+permalink: /jogos/forca.html
+script: /assets/js/forca.js
+---
+<div class="game-container">
+    <h2>3. Jogo da Forca</h2>
+    <p>Tente adivinhar a palavra secreta!</p>
+    <p id="hangmanWord">_ _ _ _ _</p>
+    <p>Letras erradas: <span id="hangmanWrong"></span></p>
+    <canvas id="hangmanCanvas" width="200" height="200"></canvas>
+    <input id="hangmanGuess" type="text" maxlength="1"/>
+    <button onclick="checkHangmanGuess()">Adivinhar</button>
+    <p id="hangmanMessage"></p>
+    <button onclick="resetHangmanGame()">Reiniciar</button>
+</div>
+
+<script>const words=["programacao","javascript","computador","desenvolvimento","tecnologia"];let selectedWord="",guessedLetters=[],wrongGuesses=0;const maxWrong=6,canvas=document.getElementById("hangmanCanvas"),ctx=canvas.getContext("2d");function drawHangman(){ctx.clearRect(0,0,canvas.width,canvas.height),ctx.beginPath(),ctx.moveTo(10,190),ctx.lineTo(190,190),ctx.stroke(),wrongGuesses>0&&(ctx.moveTo(30,190),ctx.lineTo(30,20),ctx.stroke()),wrongGuesses>1&&(ctx.lineTo(120,20),ctx.stroke()),wrongGuesses>2&&(ctx.lineTo(120,50),ctx.stroke()),wrongGuesses>3&&(ctx.beginPath(),ctx.arc(120,70,20,0,2*Math.PI),ctx.stroke()),wrongGuesses>4&&(ctx.moveTo(120,90),ctx.lineTo(120,140),ctx.stroke()),wrongGuesses>5&&(ctx.moveTo(120,100),ctx.lineTo(90,120),ctx.stroke()),wrongGuesses>6&&(ctx.moveTo(120,100),ctx.lineTo(150,120),ctx.stroke()),wrongGuesses>7&&(ctx.moveTo(120,140),ctx.lineTo(90,170),ctx.stroke()),wrongGuesses>8&&(ctx.moveTo(120,140),ctx.lineTo(150,170),ctx.stroke())}function updateWordDisplay(){let e="";for(const t of selectedWord)guessedLetters.includes(t)?e+=t+" ":e+="_ ";document.getElementById("hangmanWord").textContent=e.trim()}function checkHangmanGuess(){const e=document.getElementById("hangmanGuess").value.toLowerCase();e&&(guessedLetters.includes(e)?document.getElementById("hangmanMessage").textContent="Você já tentou essa letra.":selectedWord.includes(e)?(guessedLetters.push(e),document.getElementById("hangmanMessage").textContent="Acertou!",updateWordDisplay()):(wrongGuesses++,document.getElementById("hangmanWrong").textContent+=e+" ",document.getElementById("hangmanMessage").textContent="Errou! Tente outra letra.",drawHangman()),document.getElementById("hangmanGuess").value="",checkHangmanWinOrLose())}function checkHangmanWinOrLose(){document.getElementById("hangmanWord").textContent.replace(/ /g,"")===selectedWord?document.getElementById("hangmanMessage").textContent=`Parabéns! Você adivinhou a palavra: ${selectedWord}`:wrongGuesses>=maxWrong&&(document.getElementById("hangmanMessage").textContent=`Você perdeu! A palavra era: ${selectedWord}`)}function resetHangmanGame(){selectedWord=words[Math.floor(Math.random()*words.length)],guessedLetters=[],wrongGuesses=0,document.getElementById("hangmanWrong").textContent="",document.getElementById("hangmanMessage").textContent="",updateWordDisplay(),drawHangman(),document.getElementById("hangmanGuess").value=""}</script>

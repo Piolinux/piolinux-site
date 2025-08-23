@@ -1,0 +1,122 @@
+---
+layout: default
+title: "21. Jogo de Ritmo"
+description: "Acerte as notas com as teclas A, S, D, F. Um jogo de ritmo simples e viciante."
+keywords: "jogo de ritmo, jogos de música, jogos online"
+permalink: /jogos/ritmo.html
+script: /assets/js/ritmo.js
+---
+
+<main>
+    <h1>Jogo de Ritmo</h1>
+    <div class="game-container">
+        <h3>Pontuação: <span id="rhythmScore">0</span></h3>
+        <p>Aperte as teclas A, S, D, F quando os quadrados azuis se alinharem com as bases cinzas.</p>
+        <canvas id="rhythmCanvas" width="400" height="400"></canvas>
+        <button onclick="resetRhythmGame()">Reiniciar Jogo</button>
+    </div>
+
+<style>
+    /* Estilos para o jogo de ritmo */
+    .game-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    canvas {
+        background-color: #111;
+        border: 2px solid #ccc;
+    }
+    .game-container h3 {
+        margin-bottom: 5px;
+    }
+</style>
+
+</main>
+
+
+
+<script>(function() {
+    const canvas = document.getElementById("rhythmCanvas");
+    const ctx = canvas.getContext("2d");
+    
+    let fallingNotes = [];
+    let score = 0;
+    let gameLoop;
+
+    // Posições das "pistas" para as teclas A, S, D, F
+    const lanePositions = { a: 50, s: 150, d: 250, f: 350 };
+    const laneWidth = 50;
+    const hitZoneY = canvas.height - 50;
+
+    // Função para desenhar o jogo
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Desenha o fundo
+        ctx.fillStyle = "#111";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Desenha as "pistas" cinzas
+        for (let key in lanePositions) {
+            ctx.fillStyle = "gray";
+            ctx.fillRect(lanePositions[key] - laneWidth / 2, hitZoneY, laneWidth, laneWidth);
+        }
+
+        // Desenha os quadrados azuis caindo
+        fallingNotes.forEach(note => {
+            ctx.fillStyle = "blue";
+            ctx.fillRect(note.x - 10, note.y, 20, 20);
+        });
+    }
+
+    // Lógica do jogo (cria novas notas, move as existentes)
+    function update() {
+        // Move as notas
+        fallingNotes.forEach(note => note.y += 2);
+        
+        // Remove as notas que passaram da tela
+        fallingNotes = fallingNotes.filter(note => note.y < canvas.height);
+
+        // Cria novas notas aleatoriamente
+        if (Math.random() < 0.05) {
+            const keys = Object.keys(lanePositions);
+            const randomKey = keys[Math.floor(Math.random() * keys.length)];
+            fallingNotes.push({ x: lanePositions[randomKey], y: -20, key: randomKey });
+        }
+
+        draw();
+    }
+
+    // Lógica do teclado
+    document.addEventListener("keydown", (event) => {
+        const pressedKey = event.key.toLowerCase();
+        
+        // Encontra a nota que está na zona de acerto e corresponde à tecla
+        const hitNote = fallingNotes.find(note => 
+            note.key === pressedKey &&
+            note.y > hitZoneY - 20 &&
+            note.y < hitZoneY + 20
+        );
+
+        if (hitNote) {
+            score += 10;
+            document.getElementById("rhythmScore").textContent = score;
+            // Remove a nota acertada
+            fallingNotes.splice(fallingNotes.indexOf(hitNote), 1);
+        }
+    });
+
+    window.resetRhythmGame = function() {
+        clearInterval(gameLoop);
+        fallingNotes = [];
+        score = 0;
+        document.getElementById("rhythmScore").textContent = score;
+        gameLoop = setInterval(update, 20);
+        draw();
+    };
+
+    // Inicia o jogo quando a página é completamente carregada
+    window.onload = resetRhythmGame;
+})();</script>

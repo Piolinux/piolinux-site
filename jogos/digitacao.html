@@ -1,0 +1,19 @@
+---
+layout: default
+title: "8. Jogo de Digitação"
+description: "Teste sua velocidade de digitação. Digite a palavra o mais rápido que puder!"
+keywords: "jogo de digitação, teste de velocidade, jogos online"
+permalink: /jogos/digitacao.html
+script: /assets/js/digitacao.js
+---
+<div class="game-container">
+    <h2>8. Jogo de Digitação</h2>
+    <p>Digite a palavra exibida o mais rápido que puder.</p>
+    <p id="typingWord"></p>
+    <input id="typingInput" type="text"/>
+    <p id="typingResult"></p>
+    <button onclick="startTypingGame()">Reiniciar</button>
+</div>
+
+
+<script>!function(){const t=["javascript","programacao","desenvolvimento","html","canvas"];let e,n;const o=document.getElementById("typingWord"),a=document.getElementById("typingInput"),i=document.getElementById("typingResult");function d(){e=t[Math.floor(Math.random()*t.length)],o.textContent=e,a.value="",a.focus(),i.textContent="",n=Date.now()}a.addEventListener("input",(()=>{if(e&&a.value===e){const t=(Date.now()-n)/1e3;i.textContent=`Parabéns! Você digitou em ${t.toFixed(2)} segundos.`,a.value="",setTimeout(d,1e3)}})),window.startTypingGame=d}();</script>

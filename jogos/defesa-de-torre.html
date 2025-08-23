@@ -1,0 +1,17 @@
+---
+layout: default
+title: "14. Defesa de Torre"
+description: "Construa torres para defender-se de ondas de inimigos neste jogo de estratégia."
+keywords: "defesa de torre, tower defense, jogos de estratégia, jogos online"
+permalink: /jogos/defesa-de-torre.html
+script: /assets/js/defesa-de-torre.js
+---
+<div class="game-container">
+    <h2>14. Defesa de Torre</h2>
+    <p>Clique no campo para construir torres. Destrua os inimigos!</p>
+    <canvas id="towerDefenseCanvas" width="400" height="300"></canvas>
+    <p>Dinheiro: <span id="towerDefenseMoney">100</span> | Inimigos: <span id="towerDefenseCount">0</span></p>
+    <button onclick="resetTowerDefenseGame()">Reiniciar</button>
+</div>
+
+<script>!function(){const e=document.getElementById("towerDefenseCanvas"),t=e.getContext("2d");let n,l,o,i;function c(){t.clearRect(0,0,e.width,e.height),n&&(t.fillStyle="#654321",t.fillRect(0,0,e.width,e.height),n.forEach((e=>{t.fillStyle="blue",t.beginPath(),t.arc(e.x,e.y,15,0,2*Math.PI),t.fill()})),l.forEach((e=>{t.fillStyle="red",t.beginPath(),t.arc(e.x,e.y,10,0,2*Math.PI),t.fill()})))}function r(){n&&(l.forEach((e=>e.x+=1)),l=l.filter((t=>!(t.x>e.width)||(alert("Inimigo passou! Fim de jogo."),clearInterval(i),!1))),document.getElementById("towerDefenseCount").textContent=l.length,c())}function a(){l.push({x:0,y:Math.random()*e.height})}e.addEventListener("click",(t=>{if(!n)return;const l=e.getBoundingClientRect(),i=t.clientX-l.left,r=t.clientY-l.top;o>=50&&(n.push({x:i,y:r}),o-=50,document.getElementById("towerDefenseMoney").textContent=o,c())})),window.resetTowerDefenseGame=function(){clearInterval(i),n=[],l=[],o=100,document.getElementById("towerDefenseMoney").textContent=o,document.getElementById("towerDefenseCount").textContent=l.length,i=setInterval(r,50),setInterval(a,2e3),c()}}();</script>

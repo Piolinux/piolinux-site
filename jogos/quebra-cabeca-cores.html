@@ -1,0 +1,166 @@
+---
+layout: default
+title: "19. Quebra-Cabeça de Cores"
+description: "Combine três ou mais blocos da mesma cor para marcar pontos. Um jogo de raciocínio e estratégia."
+keywords: "quebra-cabeça de cores, match 3, jogos de combinar, jogos online"
+permalink: /jogos/quebra-cabeca-cores.html
+script: /assets/js/quebra-cabeca-cores.js
+---
+
+<main>
+    <h1>Quebra-Cabeça de Cores</h1>
+    <div class="game-container">
+        <h3>Pontuação: <span id="colorPuzzleScore">0</span></h3>
+        <p>Clique em um bloco e em um adjacente para trocá-los e fazer combinações de 3 ou mais!</p>
+        <canvas id="colorPuzzleCanvas" width="300" height="300"></canvas>
+        <button onclick="resetColorPuzzleGame()">Reiniciar Jogo</button>
+    </div>
+</main>
+
+
+
+
+
+<script>(function() {
+    const canvas = document.getElementById('colorPuzzleCanvas');
+    const ctx = canvas.getContext('2d');
+    const gridSize = 8;
+    const tileSize = 300 / gridSize;
+    const colors = ["red", "green", "blue", "yellow", "purple", "orange"];
+    let grid, selectedTile, score, gameLoop;
+
+    // Função principal para desenhar o tabuleiro
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        if (grid) {
+            for (let row = 0; row < gridSize; row++) {
+                for (let col = 0; col < gridSize; col++) {
+                    ctx.fillStyle = grid[row][col];
+                    ctx.fillRect(col * tileSize, row * tileSize, tileSize, tileSize);
+                }
+            }
+        }
+    }
+
+    // Função para encontrar e remover combinações
+    function findAndRemoveMatches() {
+        let matches = [];
+        // Checar linhas
+        for (let row = 0; row < gridSize; row++) {
+            for (let col = 0; col < gridSize - 2; col++) {
+                if (grid[row][col] && grid[row][col] === grid[row][col + 1] && grid[row][col] === grid[row][col + 2]) {
+                    matches.push({ x: col, y: row }, { x: col + 1, y: row }, { x: col + 2, y: row });
+                }
+            }
+        }
+        // Checar colunas
+        for (let col = 0; col < gridSize; col++) {
+            for (let row = 0; row < gridSize - 2; row++) {
+                if (grid[row][col] && grid[row][col] === grid[row + 1][col] && grid[row][col] === grid[row + 2][col]) {
+                    matches.push({ x: col, y: row }, { x: col, y: row + 1 }, { x: col, y: row + 2 });
+                }
+            }
+        }
+        // Remover as combinações
+        if (matches.length > 0) {
+            matches.forEach(match => {
+                grid[match.y][match.x] = null;
+            });
+            score += matches.length * 10;
+            document.getElementById("colorPuzzleScore").textContent = score;
+            return true;
+        }
+        return false;
+    }
+
+    // Função para fazer os blocos 'caírem' e preencher os vazios
+    function dropTiles() {
+        for (let col = 0; col < gridSize; col++) {
+            let emptySpaces = [];
+            for (let row = gridSize - 1; row >= 0; row--) {
+                if (grid[row][col] === null) {
+                    emptySpaces.push(row);
+                } else if (emptySpaces.length > 0) {
+                    const dropRow = emptySpaces.shift();
+                    grid[dropRow][col] = grid[row][col];
+                    grid[row][col] = null;
+                    emptySpaces.push(row);
+                }
+            }
+            // Preencher os espaços vazios no topo
+            emptySpaces.forEach(row => {
+                grid[row][col] = colors[Math.floor(Math.random() * colors.length)];
+            });
+        }
+    }
+
+    // Clique do mouse para trocar as cores
+    canvas.addEventListener("click", (event) => {
+        const rect = canvas.getBoundingClientRect();
+        const clickedX = Math.floor((event.clientX - rect.left) / tileSize);
+        const clickedY = Math.floor((event.clientY - rect.top) / tileSize);
+        
+        if (selectedTile) {
+            if (Math.abs(clickedX - selectedTile.x) + Math.abs(clickedY - selectedTile.y) === 1) {
+                // Trocar as cores
+                const temp = grid[selectedTile.y][selectedTile.x];
+                grid[selectedTile.y][selectedTile.x] = grid[clickedY][clickedX];
+                grid[clickedY][clickedX] = temp;
+                
+                // Verificar se a troca formou alguma combinação
+                if (findAndRemoveMatches()) {
+                    setTimeout(() => {
+                        dropTiles();
+                        findAndRemoveMatches(); // Checar novas combinações após a queda
+                        draw();
+                    }, 500);
+                } else {
+                    // Desfazer a troca se não houver combinação
+                    const temp2 = grid[selectedTile.y][selectedTile.x];
+                    grid[selectedTile.y][selectedTile.x] = grid[clickedY][clickedX];
+                    grid[clickedY][clickedX] = temp2;
+                }
+                selectedTile = null;
+            } else {
+                selectedTile = null;
+            }
+        } else {
+            selectedTile = { x: clickedX, y: clickedY };
+        }
+        draw();
+    });
+
+    window.resetColorPuzzleGame = function() {
+        // Gera um tabuleiro sem combinações iniciais
+        do {
+            grid = Array.from({ length: gridSize }, () => Array(gridSize).fill(null));
+            for (let row = 0; row < gridSize; row++) {
+                for (let col = 0; col < gridSize; col++) {
+                    let randomColor;
+                    do {
+                        randomColor = colors[Math.floor(Math.random() * colors.length)];
+                    } while (
+                        (col >= 2 && randomColor === grid[row][col - 1] && randomColor === grid[row][col - 2]) ||
+                        (row >= 2 && randomColor === grid[row - 1][col] && randomColor === grid[row - 2][col])
+                    );
+                    grid[row][col] = randomColor;
+                }
+            }
+        } while (findAndRemoveMatches());
+
+        score = 0;
+        selectedTile = null;
+        document.getElementById("colorPuzzleScore").textContent = 0;
+        draw();
+    };
+
+    // Inicia o jogo automaticamente
+    resetColorPuzzleGame();
+})();</script>
+
+
+
+
+
+
+
