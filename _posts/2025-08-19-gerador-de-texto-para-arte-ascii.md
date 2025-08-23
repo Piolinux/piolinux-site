@@ -4,7 +4,7 @@ title: Gerador de Texto para Arte ASCII
 author: Piolinux
 date: 2025-08-19
 description: Uma ferramenta simples para converter texto em arte ASCII de forma divertida e rápida.
-keywords:
+tag:
   - gerador de texto ascii
   - texto em arte
   - ascii art generator
