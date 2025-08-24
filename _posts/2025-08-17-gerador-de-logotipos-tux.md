@@ -3,7 +3,7 @@ layout: default
 title: "Chegou o Nosso Gerador de Logótipos Tux"
 author: Piolinux
 date: 2025-08-17 09:00:00 -0300
-description: "Crie a sua própria versão única do Tux, a mascote do Linux, com o nosso gerador interativo. Personalize o boné, cabelo, expressões e cores para criar um logótipo exclusivo e descarregue-o em SVG, pronto para ser usado."
+description: "Gere seu próprio Tux interativo. Personalize boné, cabelo, expressões e cores para um logo exclusivo, pronto para baixar em SVG."
 categories: [tutoriais, web, design, linux]
 tags: [tux, linux, logótipo, gerador, svg, diy, codigo-aberto]
 ---
