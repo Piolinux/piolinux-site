@@ -5,6 +5,7 @@ date: 2025-08-11
 categories: [linux, humor, metafora]
 tags: [linux, humor, distros, arch, ubuntu, terminal, novato]
 author: "Piolinux"
+description: "Siga a jornada de um novato no Linux enquanto enfrenta a guerra das distros, aprendendo comandos, desafios e segredos do mundo open source."
 ---
 
 
