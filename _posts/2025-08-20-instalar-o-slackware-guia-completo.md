@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Instalar o Slackware: o guia para quem quer um desafio de verdade"
+title: "Instalar Slackware: o guia definitivo para quem busca um desafio."
 date: 2025-08-21
 categories: [Slackware, Linux, Tutoriais]
 tags: [Slackware, Linux, Instalação, Terminal, Sistema Operacional, Tutoriais]
