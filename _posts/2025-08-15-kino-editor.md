@@ -2,7 +2,7 @@
 layout: default
 title: "Kino: O Editor de Vídeos Esquecido que Ainda Vale a Pena?"
 date: 2025-08-15
-description: "Será que o Kino, um editor de vídeos clássico para Linux, ainda é relevante? Explore as suas funcionalidades, limitações e descubra se este software esquecido vale a pena em 2025."
+description: "Descubra se o Kino, editor de vídeos clássico para Linux, ainda vale a pena em 2025. Veja seus recursos, limitações e relevância no cenário atual."
 categories: linux
 tags: [kino, editor, vídeos, linux, software]
 author: "Piolinux"
