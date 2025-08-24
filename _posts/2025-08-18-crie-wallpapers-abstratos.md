@@ -161,9 +161,9 @@ tags: [ferramenta, código, HTML, SVG, dicas]
 <body class="bg-slate-900 text-slate-100 p-8 flex flex-col items-center justify-center min-h-screen">
 
     <div class="tool-container">
-        <h1 class="tool-title text-center">
+        <h2 class="tool-title text-center">
             🎨 Gerador de Wallpapers Abstratos
-        </h1>
+        </h2>
         <p class="tool-subtitle text-center">
             Crie imagens únicas e elegantes para o seu computador ou celular.
         </p>
