@@ -5,6 +5,7 @@ date: 2025-08-09
 categories: [linux, dicas]
 tags: [linux, piolinux, tutorial]
 author: "Piolinux"
+description: "O artigo "Meu primeiro post" no Piolinux marca o início do blog com dicas, tutoriais e curiosidades sobre o universo Linux, sempre com um toque divertido."
 ---
 
 
