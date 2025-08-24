@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Atualizar e configurar repositórios no MX Linux: guia rápido"
+title: "Atualizar e configurar repositórios no MX Linux"
 author: "Piolinux"
 date: 2025-08-12 09:37:28 -0300
 categories: [Linux, Tutoriais, MX Linux]
