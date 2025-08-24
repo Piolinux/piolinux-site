@@ -3,8 +3,9 @@ layout: default
 title: "A História do Guru Linux: Suporte de Fantasia"
 date: 2025-08-11
 categories: linux opiniao
-tags: [linux, iniciantes, erros, tutorial]
+tags: [linux, iniciantes, erros, tutorial, humor]
 author: "Piolinux"
+description: "Acompanhe a história do Guru Linux em um mundo de fantasia, oferecendo suporte mágico, resolvendo problemas complexos e guiando usuários pelo universo open source."
 ---
 
 
