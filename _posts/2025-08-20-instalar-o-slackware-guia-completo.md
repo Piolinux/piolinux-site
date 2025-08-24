@@ -4,7 +4,7 @@ title: "Instalar o Slackware: o guia para quem quer um desafio de verdade"
 date: 2025-08-21
 categories: [Slackware, Linux, Tutoriais]
 tags: [Slackware, Linux, Instalação, Terminal, Sistema Operacional, Tutoriais]
-description: "Guia direto ao ponto para instalar o Slackware — um verdadeiro rito de passagem para quem quer entender Linux debaixo do capô."
+description: "Um guia direto e conciso para a instalação do Slackware: um rito de passagem para quem quer realmente dominar o Linux."
 author: "Piolinux"
 ---
 
