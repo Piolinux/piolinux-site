@@ -5,6 +5,7 @@ date: 2025-08-11
 categories: humor linux
 tags: [humor, linux, opinião]
 author: "Piolinux"
+description: "Explore o lado divertido do Linux com humor, curiosidades e críticas leves. Um olhar divertido e inteligente sobre o mundo do sistema open source"
 ---
 
 
