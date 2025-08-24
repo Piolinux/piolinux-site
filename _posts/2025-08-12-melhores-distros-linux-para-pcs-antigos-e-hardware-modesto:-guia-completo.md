@@ -1,6 +1,6 @@
 ---
 layout:  default
-title: "Guia completo: melhores distros Linux para PCs antigos e de hardware modesto"
+title: "Melhores distros Linux para PCs antigos e hardware modesto: guia completo"
 author: "Piolinux"
 date: 2025-08-12 10:42:52 -0300
 categories: [Linux, Tutoriais, Hardware]
