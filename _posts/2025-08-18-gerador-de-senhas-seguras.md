@@ -49,7 +49,7 @@ tags: [ferramenta, segurança, senha, online]
 
 <body class="bg-gray-100 p-4 sm:p-8 flex items-center justify-center min-h-screen">
     <div class="bg-white rounded-xl shadow-lg p-6 sm:p-10 w-full max-w-4xl border border-gray-200">
-        <h1 class="text-3xl font-bold text-center text-gray-800 mb-2">Gerador de Senhas Seguras</h1>
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">Gerador de Senhas Seguras</h2>
         <p class="text-center text-gray-500 mb-8">Crie senhas fortes e únicas para proteger as suas contas.</p>
 
         <!-- Seção do Gerador -->
