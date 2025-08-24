@@ -5,7 +5,7 @@ date: 2025-08-20 19:55:00 -0300
 author: Piolinux
 categories: [Linux, Tutoriais, Ferramentas]
 tags: [Linux, Icones, Atalhos, Personalização]
-description:Personalize seu Linux criando ícones incríveis em segundos! Aprenda atalhos e ferramentas para deixar seu sistema mais moderno e organizado.
+description: "Personalize seu Linux criando ícones incríveis em segundos! Aprenda atalhos e ferramentas para deixar seu sistema mais moderno e organizado."
 ---
 
 
