@@ -5,6 +5,7 @@ date: 2025-08-11
 categories: [linux, humor, tutorial]
 tags: [linux, humor, terminal, gui, documentacao]
 author: "Piolinux"
+description: "Acompanhe Maria GUI em sua jornada pelo Linux, enfrentando o terminal amaldiçoado e descobrindo segredos, desafios e aventuras no mundo open source."
 ---
 
 
