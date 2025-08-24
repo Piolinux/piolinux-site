@@ -15,9 +15,9 @@ description: Uma ferramenta simples e prática para formatar código HTML/XML e 
 
 <section class="post-content">
     <!-- Título principal e introdução -->
-    <h1 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 text-center mb-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 text-center mb-6">
         📋 Olá! Guia Rápido para Usar a Ferramenta-Web
-    </h1>
+    </h2>
     <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-8">
         <p class="text-gray-300 text-lg mb-4">
             E aí, tudo bem? Olha, se você já se sentiu perdido com um código bagunçado ou com um monte de arquivos de ícones, relaxa. Esta ferramenta foi feita exatamente para isso. Pense nela como a sua companheira, pronta para arrumar a bagunça e te dar umas dicas de mestre.
