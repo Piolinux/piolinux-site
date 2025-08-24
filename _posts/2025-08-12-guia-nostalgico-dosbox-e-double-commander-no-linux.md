@@ -5,7 +5,7 @@ author: "Piolinux"
 date: 2025-08-12 11:58:05 -0300
 categories: [Linux, Tutoriais, Ferramentas]
 tags: [DOSBox, Double Commander, MS-DOS, jogos antigos, gerenciador de arquivos, modo root]
-description: "Um guia completo e nostálgico sobre duas ferramentas essenciais no Linux: o DOSBox, para reviver jogos antigos, e o Double Commander, para gerenciar arquivos no modo root."
+description: "Reviva jogos antigos com o DOSBox e gerencie arquivos no modo root com o Double Commander. Um guia completo e nostálgico para usuários de Linux."
 ---
 
 
