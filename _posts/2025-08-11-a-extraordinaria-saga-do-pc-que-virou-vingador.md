@@ -5,6 +5,7 @@ date: 2025-08-11
 categories: [linux, humor, tutorial]
 tags: [linux, humor, piolinux, ubuntu, terminal, documentação]
 author: "Piolinux"
+description: "Descubra a saga de um PC que se torna vingador, enfrentando bugs, vírus e desafios digitais, numa aventura épica pelo mundo da tecnologia."
 ---
 
        {% include toc.html %}
