@@ -22,7 +22,8 @@ title: "Piolinux"
 description: "Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source."
 baseurl: "" # sem barra no final
 url: "https://piolinux.com"
-lang: "pt_BR" 
+lang: "pt-BR"
+locale: "pt_BR"
 markdown: kramdown
 theme: minima
 
