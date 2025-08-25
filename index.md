@@ -7,7 +7,7 @@ title: "Início - Piolinux"
 
 
 
-<main>
+
   <h>Últimas postagens</h>
 
   <section>
@@ -24,4 +24,3 @@ title: "Início - Piolinux"
       <p>Não há posts publicados ainda.</p>
     {% endif %}
   </section>
-</main>
