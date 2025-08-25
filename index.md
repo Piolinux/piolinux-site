@@ -8,7 +8,7 @@ title: "Início - Piolinux"
 
 
 
-  <h>Últimas postagens</h>
+  <h2>Últimas postagens</h2>
 
   <section>
     {% if site.posts.size > 0 %}
