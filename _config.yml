@@ -62,7 +62,7 @@ sitemap:
     changefreq: daily
     priority: 0.5
 
-lang: "pt_BR"
+lang: pt_BR
 
 # Defina o fuso horário
 timezone: America/Sao_Paulo
