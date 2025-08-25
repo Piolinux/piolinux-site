@@ -64,6 +64,10 @@ sitemap:
 
 lang: pt_BR
 
+seo_tag:
+  # Desabilita a detecção automática do 'og_locale'
+  og_locale_detection: false
+
 # Defina o fuso horário
 timezone: America/Sao_Paulo
 
