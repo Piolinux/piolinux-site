@@ -230,14 +230,14 @@ author: "PioLinux"
     <h2 style="border-bottom: 2px solid #FFFFFF; padding-bottom: 8px; margin-top: 40px;">📌 Exemplos de Uso</h2>
     <pre style="background: #006400; padding: 15px; border-radius: 6px; overflow-x: auto;">
 # Exibir texto colorido
-echo -e "\\033[31mErro grave!\\033[0m"
-echo -e "\\033[92mSucesso!\\033[0m"
+echo -e "\\033[31mErro grave\\033[0m"
+echo -e "\\033[92mSucesso\\033[0m"
 
 # Prompt colorido
 PS1="\\033[01;34m\\u@\\h\\033[00m:\\033[01;32m\\w\\033[00m\\$ "
 
 # Fundo vermelho com texto branco
-echo -e "\\033[41m\\033[97m CUIDADO! \\033[0m"
+echo -e "\\033[41m\\033[97m CUIDADO \\033[0m"
     </pre>
 
     <p style="margin-top: 30px; font-size: 0.9em; color: #777; text-align: center;">
