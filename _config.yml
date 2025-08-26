@@ -66,8 +66,8 @@ timezone: America/Sao_Paulo
 plugins: 
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-seo-tag
- 
+  - jekyll-seo-tag 
+  - jekyll-paginate 
   
 # Exclude from processing.
 # The following items will not be processed, by default.
