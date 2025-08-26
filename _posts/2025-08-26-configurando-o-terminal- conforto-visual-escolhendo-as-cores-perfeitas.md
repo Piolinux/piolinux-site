@@ -44,6 +44,8 @@ author: "PioLinux"
         A transparência pode parecer legal, mas eu percebi que ela atrapalha a leitura. Se você for usar, garanta que a cor do texto e do cursor tenha um contraste gigante com o que está atrás da janela. Assim, a gente evita qualquer esforço desnecessário.
     </p>
 
+<h2>Conclusão: O Conforto Visual é Essencial</h2>
+
     <p>
         Olha, eu sei que configurar o terminal pode parecer um bicho de 
         sete cabeças, meio chato e confuso. Mas, acredite, vale muito a 
