@@ -4,77 +4,131 @@ title: "Biblioteca de Jogos"
 description: "Uma coleção de jogos simples e divertidos feitos em JavaScript."
 ---
 
-<h2>Nossa Coleção de Jogos</h2>
 
-<p>
-  Clique em um dos jogos abaixo para começar a jogar!
-</p>
 
-<ul>
-    <li>
-        <a href="{% link jogos/adivinhe-o-numero.html %}">1. Adivinhe o Número</a>
-    </li>
-    <li>
-        <a href="{% link jogos/jokenpo.html %}">2. Jokenpô</a>
-    </li>
-    <li>
-        <a href="{% link jogos/forca.html %}">3. Jogo da Forca</a>
-    </li>
-    <li>
-        <a href="{% link jogos/memoria.html %}">4. Jogo da Memória</a>
-    </li>
-    <li>
-        <a href="{% link jogos/caca-ao-tesouro.html %}">5. Caça ao Tesouro</a>
-    </li>
-    <li>
-        <a href="{% link jogos/quebra-cabeca-deslizante.html %}">6. Quebra-Cabeça Deslizante</a>
-    </li>
-    <li>
-        <a href="{% link jogos/cobrinha.html %}">7. Jogo da Cobrinha</a>
-    </li>
-    <li>
-        <a href="{% link jogos/digitacao.html %}">8. Jogo de Digitação</a>
-    </li>
-    <li>
-        <a href="{% link jogos/corrida-de-carros.html %}">9. Corrida de Carros</a>
-    </li>
-    <li>
-        <a href="{% link jogos/pong.html %}">10. Pong</a>
-    </li>
-    <li>
-        <a href="{% link jogos/arkanoid.html %}">11. Arkanoid</a>
-    </li>
-    <li>
-        <a href="{% link jogos/plataforma.html %}">12. Jogo de Plataforma</a>
-    </li>
-    <li>
-        <a href="{% link jogos/nave-espacial.html %}">13. Nave Espacial</a>
-    </li>
-    <li>
-        <a href="{% link jogos/defesa-de-torre.html %}">14. Defesa de Torre</a>
-    </li>
-    <li>
-        <a href="{% link jogos/blackjack.html %}">15. Blackjack</a>
-    </li>
-    <li>
-        <a href="{% link jogos/quiz.html %}">16. Quiz</a>
-    </li>
-    <li>
-        <a href="{% link jogos/rpg-de-texto.html %}">17. RPG de Texto</a>
-    </li>
-    <li>
-        <a href="{% link jogos/labirinto.html %}">18. Labirinto com Tempo</a>
-    </li>
-    <li>
-        <a href="{% link jogos/quebra-cabeca-cores.html %}">19. Quebra-Cabeça de Cores</a>
-    </li>
-    <li>
-        <a href="{% link jogos/cliques-ociosos.html %}">20. Jogo de Cliques Ociosos</a>
-    </li>
-    <li>
-        <a href="{% link jogos/ritmo.html %}">21. Jogo de Ritmo</a>
-    </li>
-    <li>
-        <a href="{% link jogos/batalha-por-turnos.html %}">22. Batalha por Turnos</a>
-    </li>
-</ul>
+<style>
+  .filtros {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .filtros button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: 2px solid #0074d9;
+    background: white;
+    color: #0074d9;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .filtros button.filtro-ativo {
+    background: #0074d9;
+    color: white;
+  }
+  .jogos-lista {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .jogo {
+    padding: 12px;
+    background: #f8f9fa;
+    border-left: 4px solid #0074d9;
+    border-radius: 6px;
+  }
+  .jogo a {
+    text-decoration: none;
+    color: #0074d9;
+    font-weight: 500;
+  }
+  .jogo a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<h2>Encontre sua próxima aventura</h2>
+<p>Selecione uma categoria para descobrir jogos por estilo, década ou plataforma.</p>
+
+
+
+<div class="filtros">
+  <button class="filtro-ativo" data-filter="todos">Todos</button>
+  <button data-filter="classico">Clássicos</button>
+  <button data-filter="logica">Lógica</button>
+  <button data-filter="reacao">Reação</button>
+  <button data-filter="memoria">Memória</button>
+  <button data-filter="palavras">Palavras</button>
+  <button data-filter="estrategia">Estratégia</button>
+  <button data-filter="texto">Texto</button>
+  <button data-filter="idle">Idle / Clicker</button>
+  <button data-filter="musica">Música / Ritmo</button>
+</div>
+
+
+
+
+<div class="jogos-lista">
+  <div class="jogo" data-tags="adivinhacao logica"><a href="{% link jogos/adivinhe-o-numero.html %}">Adivinhe o Número</a></div>
+  <div class="jogo" data-tags="sorte reacao">2. <a href="{% link jogos/jokenpo.html %}">Jokenpô</a></div>
+  <div class="jogo" data-tags="palavras logica">3. <a href="{% link jogos/forca.html %}">Jogo da Forca</a></div>
+  <div class="jogo" data-tags="memoria observacao">4. <a href="{% link jogos/memoria.html %}">Jogo da Memória</a></div>
+  <div class="jogo" data-tags="logica exploracao">5. <a href="{% link jogos/caca-ao-tesouro.html %}">Caça ao Tesouro</a></div>
+  <div class="jogo" data-tags="logica quebra-cabeca">6. <a href="{% link jogos/quebra-cabeca-deslizante.html %}">Quebra-Cabeça Deslizante</a></div>
+  <div class="jogo" data-tags="reacao classico">7. <a href="{% link jogos/cobrinha.html %}">Jogo da Cobrinha</a></div>
+  <div class="jogo" data-tags="velocidade texto">8. <a href="{% link jogos/digitacao.html %}">Jogo de Digitação</a></div>
+  <div class="jogo" data-tags="reacao classico">9. <a href="{% link jogos/corrida-de-carros.html %}">Corrida de Carros</a></div>
+  <div class="jogo" data-tags="reacao classico">10. <a href="{% link jogos/pong.html %}">Pong</a></div>
+  <div class="jogo" data-tags="reacao classico">11. <a href="{% link jogos/arkanoid.html %}">Arkanoid</a></div>
+  <div class="jogo" data-tags="plataforma reacao">12. <a href="{% link jogos/plataforma.html %}">Jogo de Plataforma</a></div>
+  <div class="jogo" data-tags="reacao espacial">13. <a href="{% link jogos/nave-espacial.html %}">Nave Espacial</a></div>
+  <div class="jogo" data-tags="estrategia defesa">14. <a href="{% link jogos/defesa-de-torre.html %}">Defesa de Torre</a></div>
+  <div class="jogo" data-tags="sorte cartas">15. <a href="{% link jogos/blackjack.html %}">Blackjack</a></div>
+  <div class="jogo" data-tags="conhecimento quiz">16. <a href="{% link jogos/quiz.html %}">Quiz</a></div>
+  <div class="jogo" data-tags="rpg texto">17. <a href="{% link jogos/rpg-de-texto.html %}">RPG de Texto</a></div>
+  <div class="jogo" data-tags="logica tempo">18. <a href="{% link jogos/labirinto.html %}">Labirinto com Tempo</a></div>
+  <div class="jogo" data-tags="logica cores">19. <a href="{% link jogos/quebra-cabeca-cores.html %}">Quebra-Cabeça de Cores</a></div>
+  <div class="jogo" data-tags="clicker idle">20. <a href="{% link jogos/cliques-ociosos.html %}">Jogo de Cliques Ociosos</a></div>
+  <div class="jogo" data-tags="ritmo musica">21. <a href="{% link jogos/ritmo.html %}">Jogo de Ritmo</a></div>
+  <div class="jogo" data-tags="estrategia turno">22. <a href="{% link jogos/batalha-por-turnos.html %}">Batalha por Turnos</a></div>
+</div>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const botoes = document.querySelectorAll('.filtros button');
+    const jogos = document.querySelectorAll('.jogo');
+
+    botoes.forEach(botao => {
+      botao.addEventListener('click', function () {
+        // Atualiza botão ativo
+        botoes.forEach(b => b.classList.remove('filtro-ativo'));
+        this.classList.add('filtro-ativo');
+
+        const filtro = this.getAttribute('data-filter');
+
+        // Filtra jogos
+        jogos.forEach(jogo => {
+          const tags = jogo.getAttribute('data-tags').toLowerCase();
+          if (filtro === 'todos' || tags.includes(filtro)) {
+            jogo.style.display = 'block';
+          } else {
+            jogo.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
+
+
