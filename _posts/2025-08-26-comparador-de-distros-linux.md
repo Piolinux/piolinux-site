@@ -2,7 +2,7 @@
 layout: default
 title: "Comparador de Distros Linux & BSD"
 description: "Descubra qual distro roda no seu PC: leve, segura, moderna ou antiga. Veja compatibilidade, uso e nível."
-date: 2025-08-17
+date: 2025-08-27
 tags: [linux, distro, bsd, jekyll, ferramenta]
 ---
 
