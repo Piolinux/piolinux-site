@@ -7,32 +7,18 @@ permalink: /jogos/arkanoid.html
 script: /assets/js/arkanoid.js
 ---
 
-<main>
-    <h2>Arkanoid</h2>
-    <div class="game-info">
-        <h3>Pontuação: <span id="arkanoidScore">0</span></h3>
-    </div>
-    <canvas id="arkanoidCanvas" width="500" height="400"></canvas>
-    <button onclick="resetArkanoidGame()">Reiniciar Jogo</button>
-</main>
+<div class="game-container">
+    <h2>4. Jogo Arkanoid</h2>
+    <p>Pontos: <span id="arkanoidScore">0</span></p>
+    <canvas id="arkanoidCanvas" width="450" height="400"></canvas>
+    <br>
+    <button onclick="resetArkanoidGame()">Iniciar Jogo</button>
+</div>
 
 
 
 
 <script>
-	Claro, vamos resolver isso.
-
-O controle não estava funcionando porque a barra (`paddle`) e a bola (`ball`) só eram criadas quando a função `resetArkanoidGame()` era chamada. Isso acontecia apenas quando você clicava no botão "Iniciar Jogo".
-
-A correção mais simples é iniciar o jogo automaticamente assim que a página é carregada.
-
------
-
-### Código JavaScript Corrigido
-
-Substitua todo o seu bloco `<script>` por este código abaixo. A única mudança é a adição da linha **`window.onload = resetArkanoidGame;`** no final.
-
-```javascript
 (function() {
     const canvas = document.getElementById('arkanoidCanvas');
     const ctx = canvas.getContext('2d');
@@ -161,8 +147,6 @@ Substitua todo o seu bloco `<script>` por este código abaixo. A única mudança
     }
 
     window.resetArkanoidGame = resetArkanoidGame;
-    window.onload = resetArkanoidGame; // Esta linha inicia o jogo automaticamente.
 })();
-```
-	
 </script>
+
