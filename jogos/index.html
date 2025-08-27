@@ -4,306 +4,77 @@ title: "Biblioteca de Jogos"
 description: "Uma coleção de jogos simples e divertidos feitos em JavaScript."
 ---
 
+<h2>Nossa Coleção de Jogos</h2>
 
+<p>
+  Clique em um dos jogos abaixo para começar a jogar!
+</p>
 
-
-<div class="bg-white rounded-2xl shadow-xl p-6 md:p-10 max-w-7xl mx-auto mb-8">
-    <h2 class="text-4xl sm:text-5xl font-extrabold text-center text-gray-900 mb-6 sm:mb-8">
-        Biblioteca de Jogos
-    </h2>
-    <p class="text-lg text-gray-600 text-center mb-8">
-        Selecione uma tag para filtrar os jogos e encontrar a sua próxima aventura.
-    </p>
-
-    <!-- Contêiner de Botões de Tags -->
-    <div id="tag-container" class="flex flex-wrap gap-3 justify-center mb-10">
-        <!-- Os botões de tags serão gerados aqui pelo JavaScript -->
-    </div>
-
-    <!-- Contêiner dos Cards dos Jogos -->
-    <div id="games-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        <!-- Os cards dos jogos serão gerados aqui pelo JavaScript -->
-    </div>
-</div>
-
-<style>
-    .tag-button {
-        cursor: pointer;
-        transition: all 0.3s;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        border: 2px solid transparent;
-    }
-    .tag-button:hover {
-        transform: translateY(-2px);
-        border-color: #4f46e5;
-    }
-    .tag-button.active {
-        background-color: #4f46e5;
-        color: white;
-        border-color: #4f46e5;
-        box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3), 0 4px 6px -2px rgba(79, 70, 229, 0.1);
-    }
-    .game-card {
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
-    .game-card:hover {
-        transform: scale(1.03);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-</style>
-
-<script>
-    // Dados dos jogos, extraídos da sua lista
-    const games = [
-        {
-            name: "1. Adivinhe o Número",
-            description: "Um jogo de lógica e adivinhação. Tente acertar o número secreto!",
-            image: "https://placehold.co/400x250/3b82f6/ffffff?text=Lógica",
-            url: "adivinhe-o-numero.html",
-            tags: ["Lógica", "Quebra-cabeça", "Singleplayer"]
-        },
-        {
-            name: "2. Jokenpô",
-            description: "O popular jogo de pedra, papel e tesoura. Desafie a inteligência artificial!",
-            image: "https://placehold.co/400x250/10b981/ffffff?text=Estratégia",
-            url: "jokenpo.html",
-            tags: ["Estratégia", "Clássico", "Singleplayer"]
-        },
-        {
-            name: "3. Jogo da Forca",
-            description: "Teste seu vocabulário e descubra a palavra secreta antes que o tempo acabe.",
-            image: "https://placehold.co/400x250/f97316/ffffff?text=Palavras",
-            url: "forca.html",
-            tags: ["Palavras", "Lógica", "Singleplayer"]
-        },
-        {
-            name: "4. Jogo da Memória",
-            description: "Exercite seu cérebro e encontre todos os pares de cartas para vencer.",
-            image: "https://placehold.co/400x250/ef4444/ffffff?text=Memória",
-            url: "memoria.html",
-            tags: ["Lógica", "Quebra-cabeça", "Crianças"]
-        },
-        {
-            name: "5. Caça ao Tesouro",
-            description: "Siga as pistas para encontrar o tesouro escondido. Uma aventura para todas as idades!",
-            image: "https://placehold.co/400x250/9333ea/ffffff?text=Aventura",
-            url: "caca-ao-tesouro.html",
-            tags: ["Aventura", "Exploração"]
-        },
-        {
-            name: "6. Quebra-Cabeça Deslizante",
-            description: "Reorganize as peças para formar a imagem correta. Um desafio para sua paciência.",
-            image: "https://placehold.co/400x250/22c55e/ffffff?text=Quebra-Cabeça",
-            url: "quebra-cabeca-deslizante.html",
-            tags: ["Lógica", "Quebra-cabeça"]
-        },
-        {
-            name: "7. Jogo da Cobrinha",
-            description: "O clássico atemporal que nunca sai de moda. Coma a comida para crescer!",
-            image: "https://placehold.co/400x250/475569/ffffff?text=Arcade",
-            url: "cobrinha.html",
-            tags: ["Arcade", "Clássico"]
-        },
-        {
-            name: "8. Jogo de Digitação",
-            description: "Melhore suas habilidades de digitação com este jogo divertido e educativo.",
-            image: "https://placehold.co/400x250/2563eb/ffffff?text=Educação",
-            url: "digitacao.html",
-            tags: ["Educação", "Habilidade"]
-        },
-        {
-            name: "9. Corrida de Carros",
-            description: "Acelere, desvie de obstáculos e vença a corrida. Teste seus reflexos!",
-            image: "https://placehold.co/400x250/4f46e5/ffffff?text=Corrida",
-            url: "corrida-de-carros.html",
-            tags: ["Ação", "Corrida"]
-        },
-        {
-            name: "10. Pong",
-            description: "O avô dos videogames. Tente rebater a bola e marcar pontos.",
-            image: "https://placehold.co/400x250/16a34a/ffffff?text=Clássico",
-            url: "pong.html",
-            tags: ["Esportes", "Clássico"]
-        },
-        {
-            name: "11. Arkanoid",
-            description: "Destrua os blocos com a sua bolinha e mantenha a plataforma para não perder.",
-            image: "https://placehold.co/400x250/f97316/ffffff?text=Arcade",
-            url: "arkanoid.html",
-            tags: ["Arcade", "Quebra-cabeça"]
-        },
-        {
-            name: "12. Jogo de Plataforma",
-            description: "Pule e corra por cenários incríveis, coletando moedas e superando inimigos.",
-            image: "https://placehold.co/400x250/22c55e/ffffff?text=Plataforma",
-            url: "plataforma.html",
-            tags: ["Ação", "Aventura"]
-        },
-        {
-            name: "13. Nave Espacial",
-            description: "Pilote uma nave e lute contra hordas de inimigos intergalácticos.",
-            image: "https://placehold.co/400x250/4f46e5/ffffff?text=Espaço",
-            url: "nave-espacial.html",
-            tags: ["Ação", "Tiro"]
-        },
-        {
-            name: "14. Defesa de Torre",
-            description: "Construa defesas estratégicas para proteger sua base do avanço dos inimigos.",
-            image: "https://placehold.co/400x250/9333ea/ffffff?text=Defesa",
-            url: "defesa-de-torre.html",
-            tags: ["Estratégia", "Defesa"]
-        },
-        {
-            name: "15. Blackjack",
-            description: "Jogue o clássico jogo de cartas de cassino, também conhecido como 21.",
-            image: "https://placehold.co/400x250/475569/ffffff?text=Cartas",
-            url: "blackjack.html",
-            tags: ["Cartas", "Estratégia"]
-        },
-        {
-            name: "16. Quiz",
-            description: "Responda a perguntas para testar seu conhecimento em diversas áreas.",
-            image: "https://placehold.co/400x250/2563eb/ffffff?text=Quiz",
-            url: "quiz.html",
-            tags: ["Conhecimento", "Quebra-cabeça"]
-        },
-        {
-            name: "17. RPG de Texto",
-            description: "Mergulhe em uma história interativa onde suas escolhas definem o destino.",
-            image: "https://placehold.co/400x250/10b981/ffffff?text=RPG",
-            url: "rpg-de-texto.html",
-            tags: ["RPG", "Texto"]
-        },
-        {
-            name: "18. Labirinto com Tempo",
-            description: "Encontre a saída do labirinto antes que o tempo acabe neste desafio de lógica.",
-            image: "https://placehold.co/400x250/f97316/ffffff?text=Labirinto",
-            url: "labirinto.html",
-            tags: ["Aventura", "Lógica"]
-        },
-        {
-            name: "19. Quebra-Cabeça de Cores",
-            description: "Organize as cores para resolver este quebra-cabeça visual.",
-            image: "https://placehold.co/400x250/ef4444/ffffff?text=Cores",
-            url: "quebra-cabeca-cores.html",
-            tags: ["Lógica", "Quebra-cabeça"]
-        },
-        {
-            name: "20. Jogo de Cliques Ociosos",
-            description: "Clique, acumule recursos e construa seu império neste jogo casual e viciante.",
-            image: "https://placehold.co/400x250/9333ea/ffffff?text=Casual",
-            url: "cliques-ociosos.html",
-            tags: ["Simulação", "Casual"]
-        },
-        {
-            name: "21. Jogo de Ritmo",
-            description: "Teste seu senso de ritmo e tempo tocando as notas no momento certo.",
-            image: "https://placehold.co/400x250/22c55e/ffffff?text=Música",
-            url: "ritmo.html",
-            tags: ["Música", "Habilidade"]
-        },
-        {
-            name: "22. Batalha por Turnos",
-            description: "Enfrente inimigos em combates estratégicos onde cada decisão é importante.",
-            image: "https://placehold.co/400x250/475569/ffffff?text=Batalha",
-            url: "batalha-por-turnos.html",
-            tags: ["RPG", "Estratégia"]
-        }
-    ];
-
-    // Seletor do contêiner para os jogos
-    const gamesContainer = document.getElementById('games-container');
-    // Seletor do contêiner para as tags
-    const tagContainer = document.getElementById('tag-container');
-    // Conjunto para armazenar tags únicas e evitar duplicatas
-    const uniqueTags = new Set();
-    // Tag atualmente ativa (para filtragem)
-    let activeTag = null;
-
-    /**
-     * Renderiza os cards dos jogos no DOM.
-     * @param {Array} gamesToDisplay - A lista de jogos a serem exibidos.
-     */
-    function renderGames(gamesToDisplay) {
-        gamesContainer.innerHTML = ''; // Limpa o contêiner
-        if (gamesToDisplay.length === 0) {
-            gamesContainer.innerHTML = '<p class="col-span-full text-center text-gray-500 text-lg">Nenhum jogo encontrado com esta tag.</p>';
-            return;
-        }
-        gamesToDisplay.forEach(game => {
-            const gameCard = `
-                <a href="${game.url}" class="game-card block bg-gray-50 rounded-lg shadow-md overflow-hidden no-underline">
-                    <img src="${game.image}" alt="Imagem do jogo ${game.name}" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900">${game.name}</h3>
-                        <p class="text-gray-600 text-sm mb-4">${game.description}</p>
-                        <div class="flex flex-wrap gap-2">
-                            ${game.tags.map(tag => `
-                                <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded-full">
-                                    ${tag}
-                                </span>
-                            `).join('')}
-                        </div>
-                    </div>
-                </a>
-            `;
-            gamesContainer.innerHTML += gameCard;
-        });
-    }
-
-    /**
-     * Cria os botões de tags e adiciona listeners para a filtragem.
-     */
-    function createTagButtons() {
-        // Coleta todas as tags únicas
-        games.forEach(game => {
-            game.tags.forEach(tag => uniqueTags.add(tag));
-        });
-
-        // Cria o botão "Todos" por padrão
-        const allButton = document.createElement('button');
-        allButton.textContent = 'Todos';
-        allButton.className = 'tag-button px-4 py-2 rounded-full font-medium bg-indigo-600 text-white';
-        allButton.addEventListener('click', () => filterByTag(null, allButton));
-        tagContainer.appendChild(allButton);
-        allButton.classList.add('active'); // Torna o botão "Todos" ativo por padrão
-
-        // Cria um botão para cada tag única
-        const sortedTags = Array.from(uniqueTags).sort();
-        sortedTags.forEach(tag => {
-            const button = document.createElement('button');
-            button.textContent = tag;
-            button.className = 'tag-button px-4 py-2 rounded-full font-medium bg-gray-200 text-gray-700';
-            button.addEventListener('click', () => filterByTag(tag, button));
-            tagContainer.appendChild(button);
-        });
-    }
-
-    /**
-     * Filtra os jogos com base na tag selecionada e atualiza os botões.
-     * @param {string|null} tag - A tag para filtrar ou `null` para mostrar todos.
-     * @param {HTMLElement} clickedButton - O botão que foi clicado.
-     */
-    function filterByTag(tag, clickedButton) {
-        // Remove a classe "active" de todos os botões
-        document.querySelectorAll('.tag-button').forEach(btn => {
-            btn.classList.remove('active', 'bg-indigo-600', 'text-white');
-            btn.classList.add('bg-gray-200', 'text-gray-700');
-        });
-        // Adiciona a classe "active" ao botão clicado
-        clickedButton.classList.add('active', 'bg-indigo-600', 'text-white');
-        clickedButton.classList.remove('bg-gray-200', 'text-gray-700');
-
-        activeTag = tag;
-        const filteredGames = tag ? games.filter(game => game.tags.includes(tag)) : games;
-        renderGames(filteredGames);
-    }
-
-    // Inicializa o sistema ao carregar a página
-    window.onload = function() {
-        createTagButtons();
-        renderGames(games); // Renderiza todos os jogos por padrão
-    };
-    
-    </script>
-
+<ul>
+    <li>
+        <a href="{% link jogos/adivinhe-o-numero.html %}">1. Adivinhe o Número</a>
+    </li>
+    <li>
+        <a href="{% link jogos/jokenpo.html %}">2. Jokenpô</a>
+    </li>
+    <li>
+        <a href="{% link jogos/forca.html %}">3. Jogo da Forca</a>
+    </li>
+    <li>
+        <a href="{% link jogos/memoria.html %}">4. Jogo da Memória</a>
+    </li>
+    <li>
+        <a href="{% link jogos/caca-ao-tesouro.html %}">5. Caça ao Tesouro</a>
+    </li>
+    <li>
+        <a href="{% link jogos/quebra-cabeca-deslizante.html %}">6. Quebra-Cabeça Deslizante</a>
+    </li>
+    <li>
+        <a href="{% link jogos/cobrinha.html %}">7. Jogo da Cobrinha</a>
+    </li>
+    <li>
+        <a href="{% link jogos/digitacao.html %}">8. Jogo de Digitação</a>
+    </li>
+    <li>
+        <a href="{% link jogos/corrida-de-carros.html %}">9. Corrida de Carros</a>
+    </li>
+    <li>
+        <a href="{% link jogos/pong.html %}">10. Pong</a>
+    </li>
+    <li>
+        <a href="{% link jogos/arkanoid.html %}">11. Arkanoid</a>
+    </li>
+    <li>
+        <a href="{% link jogos/plataforma.html %}">12. Jogo de Plataforma</a>
+    </li>
+    <li>
+        <a href="{% link jogos/nave-espacial.html %}">13. Nave Espacial</a>
+    </li>
+    <li>
+        <a href="{% link jogos/defesa-de-torre.html %}">14. Defesa de Torre</a>
+    </li>
+    <li>
+        <a href="{% link jogos/blackjack.html %}">15. Blackjack</a>
+    </li>
+    <li>
+        <a href="{% link jogos/quiz.html %}">16. Quiz</a>
+    </li>
+    <li>
+        <a href="{% link jogos/rpg-de-texto.html %}">17. RPG de Texto</a>
+    </li>
+    <li>
+        <a href="{% link jogos/labirinto.html %}">18. Labirinto com Tempo</a>
+    </li>
+    <li>
+        <a href="{% link jogos/quebra-cabeca-cores.html %}">19. Quebra-Cabeça de Cores</a>
+    </li>
+    <li>
+        <a href="{% link jogos/cliques-ociosos.html %}">20. Jogo de Cliques Ociosos</a>
+    </li>
+    <li>
+        <a href="{% link jogos/ritmo.html %}">21. Jogo de Ritmo</a>
+    </li>
+    <li>
+        <a href="{% link jogos/batalha-por-turnos.html %}">22. Batalha por Turnos</a>
+    </li>
+</ul>
