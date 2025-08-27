@@ -20,6 +20,32 @@
         {% endif %}
 
         {{ content }}
+
+<!-- Posts aleatórios -->
+<div style="margin-top: 40px; padding: 20px; background:#121212; border-radius: 8px; border-left: 4px solid #0074d9; font-family: -apple-system, sans-serif;">
+  <h3>🎲 Leitura aleatória</h3>
+  <p style="margin-bottom: 15px; color: ##80ff00;;;">
+    Não sabe o que ler agora? Deixe o acaso escolher por você:
+  </p>
+  <ul style="margin: 0; padding-left: 20px;">
+    {% assign posts_aleatorios = site.posts | where_exp:"p", "p.url != page.url" | sample:3 %}
+    {% for post in posts_aleatorios %}
+      <li style="margin-bottom: 12px;">
+        <a href="{{ post.url }}" style="color: #80ff00;; text-decoration: none; font-weight: 500;">
+          {{ post.title }}
+        </a>
+        {% if post.description %}
+          <p style="margin: 5px 0 0; font-size: 0.9em; color: #fffff;">
+            {{ post.description }}
+          </p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+
+        
     </main>
 
     <div id="share" style="text-align:center;margin:15px 0"></div>
