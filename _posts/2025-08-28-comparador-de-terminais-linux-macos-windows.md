@@ -21,7 +21,7 @@ th, td {
   text-align: left;
 }
 th {
-  background-color: #f0f0f0;
+  background-color: #67a879;
 }
 </style>
 
