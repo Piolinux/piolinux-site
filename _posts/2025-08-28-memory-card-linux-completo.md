@@ -15,7 +15,6 @@ author: "PioLinux"
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.7;
     color: #333;
-    width: 100%;
     transition: background 0.3s, color 0.3s;
   ">
 
@@ -26,36 +25,25 @@ author: "PioLinux"
       Clique no card para virar. Use os botões para navegar.
     </p>
 
-    <!-- SVG do Tux (Pinguim do Linux) -->
+    <!-- SVG do Tux -->
     <div style="text-align: center; margin: 20px 0; opacity: 0.8;">
       <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-        <!-- Corpo -->
         <circle cx="60" cy="70" r="40" fill="#000" />
-        <!-- Cabeça -->
         <circle cx="60" cy="40" r="28" fill="#000" />
-        <!-- Olho branco -->
         <circle cx="52" cy="35" r="6" fill="#fff" />
-        <!-- Pupila -->
         <circle cx="52" cy="35" r="3" fill="#000" />
-        <!-- Segundo olho -->
         <circle cx="68" cy="35" r="6" fill="#fff" />
         <circle cx="68" cy="35" r="3" fill="#000" />
-        <!-- Bico -->
         <polygon points="60,45 55,52 65,52" fill="#ff9900" />
-        <!-- Pele (barriga) -->
         <ellipse cx="60" cy="70" rx="25" ry="30" fill="#fff" />
-        <!-- Nadadeira esquerda -->
         <ellipse cx="40" cy="80" rx="18" ry="8" fill="#000" transform="rotate(-30 40 80)" />
-        <!-- Nadadeira direita -->
         <ellipse cx="80" cy="80" rx="18" ry="8" fill="#000" transform="rotate(30 80 80)" />
-        <!-- Pé esquerdo -->
         <ellipse cx="50" cy="105" rx="10" ry="6" fill="#ff9900" />
-        <!-- Pé direito -->
         <ellipse cx="70" cy="105" rx="10" ry="6" fill="#ff9900" />
       </svg>
     </div>
 
-    <!-- Controles -->
+    <!-- Botões -->
     <div style="text-align: center; margin: 20px 0;">
       <button id="prevBtn" style="
         margin: 0 6px;
@@ -122,13 +110,13 @@ author: "PioLinux"
         font-size: 1.2em;
         font-weight: 500;
         cursor: pointer;
-        transition: background 0.4s, transform 0.2s;
+        transition: all 0.4s ease;
       ">
         Clique para começar
       </div>
     </div>
 
-    <!-- Instruções -->
+    <!-- Dica -->
     <div style="max-width: 600px; margin: 0 auto; font-size: 0.95em; color: #666; text-align: center;">
       <p><strong>💡 Dica:</strong> Use para revisar antes de entrevistas, certificações ou no dia a dia. Embaralhe para evitar decorar a ordem!</p>
     </div>
@@ -136,7 +124,6 @@ author: "PioLinux"
   </div>
 </main>
 
-<!-- Script do Memory Card -->
 <script>
   // Banco de 50 flashcards
   const flashcards = [
@@ -195,49 +182,54 @@ author: "PioLinux"
     { q: "Como voltar ao diretório anterior?", a: "cd -" }
   ];
 
-  let currentIndex = 0;
-  let showingAnswer = false;
+  // Elementos
+  const container = document.getElementById('container');
   const card = document.getElementById('flashcard');
   const counter = document.getElementById('counter');
   const totalSpan = document.getElementById('total');
   const themeToggle = document.getElementById('themeToggle');
-  const container = document.getElementById('container');
 
-  totalSpan.textContent = flashcards.length;
+  let currentIndex = 0;
+  let showingAnswer = false;
+
+  // Atualiza o card
+  function updateCard() {
+    card.textContent = showingAnswer ? flashcards[currentIndex].a : flashcards[currentIndex].q;
+    counter.innerHTML = `Card <strong>${currentIndex + 1}</strong> de <span id="total">${flashcards.length}</span>`;
+  }
 
   // Tema escuro
-  const darkMode = localStorage.getItem('darkMode') === 'true';
-  setTheme(darkMode);
-
-  themeToggle.addEventListener('click', () => {
-    const isDark = container.style.background !== 'white';
-    setTheme(!isDark);
-    localStorage.setItem('darkMode', (!isDark).toString());
-  });
-
   function setTheme(dark) {
     if (dark) {
+      container.style.backgroundColor = '#121212';
       container.style.color = '#e0e0e0';
-      container.style.background = '#1a1a1a';
-      card.style.background = '#2d2d2d';
-      card.style.color = '#f0f0f0';
+      card.style.backgroundColor = '#1e1e1e';
+      card.style.color = '#ffffff';
       themeToggle.textContent = '☀️ Modo Claro';
     } else {
+      container.style.backgroundColor = '#ffffff';
       container.style.color = '#333';
-      container.style.background = '#fff';
-      card.style.background = '#f8f9fa';
+      card.style.backgroundColor = '#f8f9fa';
       card.style.color = '#2c3e50';
       themeToggle.textContent = '🌙 Tema Escuro';
     }
   }
 
-  // Atualiza o card
-  function updateCard() {
-    card.textContent = showingAnswer ? flashcards[currentIndex].a : flashcards[currentIndex].q;
-    counter.innerHTML = `Card <strong>${currentIndex + 1}</strong> de <span>${flashcards.length}</span>`;
-  }
+  // Carregar tema salvo
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const isDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+  setTheme(isDark);
 
-  // Clique: vira entre pergunta e resposta
+  // Alternar tema
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme === 'dark');
+    localStorage.setItem('theme', newTheme);
+  });
+
+  // Virar card
   card.addEventListener('click', () => {
     showingAnswer = !showingAnswer;
     card.style.transform = 'scale(0.98)';
@@ -245,7 +237,7 @@ author: "PioLinux"
     updateCard();
   });
 
-  // Botões
+  // Navegação
   document.getElementById('prevBtn').addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + flashcards.length) % flashcards.length;
     showingAnswer = false;
@@ -258,13 +250,19 @@ author: "PioLinux"
     updateCard();
   });
 
+  // Embaralhar
   document.getElementById('shuffleBtn').addEventListener('click', () => {
-    flashcards.sort(() => Math.random() - 0.5);
+    for (let i = flashcards.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [flashcards[i], flashcards[j]] = [flashcards[j], flashcards[i]];
+    }
     currentIndex = 0;
     showingAnswer = false;
     updateCard();
   });
 
-  // Inicializa
+  // Inicializar
+  totalSpan.textContent = flashcards.length;
   updateCard();
 </script>
+
