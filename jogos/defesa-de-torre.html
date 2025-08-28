@@ -6,12 +6,252 @@ keywords: "defesa de torre, tower defense, jogos de estratégia, jogos online"
 permalink: /jogos/defesa-de-torre.html
 script: /assets/js/defesa-de-torre.js
 ---
-<div class="game-container">
-    <h2>14. Defesa de Torre</h2>
-    <p>Clique no campo para construir torres. Destrua os inimigos!</p>
-    <canvas id="towerDefenseCanvas" width="400" height="300"></canvas>
-    <p>Dinheiro: <span id="towerDefenseMoney">100</span> | Inimigos: <span id="towerDefenseCount">0</span></p>
-    <button onclick="resetTowerDefenseGame()">Reiniciar</button>
+
+
+<h2>14. Defesa de Torre</h2>
+
+<canvas 
+  id="jogo" 
+  width="800" 
+  height="400" 
+  style="
+    background: #000;
+    border: 1px solid #80ff00;
+    display: block;
+    margin: 20px auto;
+    image-rendering: pixelated;
+  "
+></canvas>
+
+<!-- Painel de controle -->
+<div style="text-align: center; margin-bottom: 20px; font-family: 'Courier New', monospace; color: #80ff00;">
+  <strong>Vidas:</strong> <span id="vidas">3</span> |
+  <strong>Pontos:</strong> <span id="pontos">0</span> |
+  <button 
+    id="reiniciar" 
+    style="
+      background: #000;
+      color: #80ff00;
+      border: 1px solid #80ff00;
+      padding: 8px 12px;
+      font-family: 'Courier New', monospace;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-left: 10px;
+    "
+  >🔁 REINICIAR</button>
 </div>
 
-<script>!function(){const e=document.getElementById("towerDefenseCanvas"),t=e.getContext("2d");let n,l,o,i;function c(){t.clearRect(0,0,e.width,e.height),n&&(t.fillStyle="#654321",t.fillRect(0,0,e.width,e.height),n.forEach((e=>{t.fillStyle="blue",t.beginPath(),t.arc(e.x,e.y,15,0,2*Math.PI),t.fill()})),l.forEach((e=>{t.fillStyle="red",t.beginPath(),t.arc(e.x,e.y,10,0,2*Math.PI),t.fill()})))}function r(){n&&(l.forEach((e=>e.x+=1)),l=l.filter((t=>!(t.x>e.width)||(alert("Inimigo passou! Fim de jogo."),clearInterval(i),!1))),document.getElementById("towerDefenseCount").textContent=l.length,c())}function a(){l.push({x:0,y:Math.random()*e.height})}e.addEventListener("click",(t=>{if(!n)return;const l=e.getBoundingClientRect(),i=t.clientX-l.left,r=t.clientY-l.top;o>=50&&(n.push({x:i,y:r}),o-=50,document.getElementById("towerDefenseMoney").textContent=o,c())})),window.resetTowerDefenseGame=function(){clearInterval(i),n=[],l=[],o=100,document.getElementById("towerDefenseMoney").textContent=o,document.getElementById("towerDefenseCount").textContent=l.length,i=setInterval(r,50),setInterval(a,2e3),c()}}();</script>
+<!-- Instruções -->
+<p style="font-size: 0.9em; color: #a8ffa8;">
+  ▶ Clique em qualquer lugar para atirar.<br>
+  ▶ Inimigos são processos suspeitos.<br>
+  ▶ Se 3 chegarem ao final, o sistema é comprometido.
+</p>
+
+{% raw %}
+<script>
+  // Elementos
+  const canvas = document.getElementById('jogo');
+  const ctx = canvas.getContext('2d');
+  const elVidas = document.getElementById('vidas');
+  const elPontos = document.getElementById('pontos');
+  const botaoReiniciar = document.getElementById('reiniciar');
+
+  // Estado do jogo
+  let vidas = 3;
+  let pontos = 0;
+  let gameOver = false;
+
+  // Caminho dos inimigos (simulado como linha reta com curva)
+  const caminho = [
+    { x: 0, y: 200 },
+    { x: 200, y: 200 },
+    { x: 200, y: 100 },
+    { x: 600, y: 100 },
+    { x: 600, y: 200 },
+    { x: 800, y: 200 }
+  ];
+
+  // Inimigos
+  let inimigos = [];
+  let projeteis = [];
+
+  // Torre
+  const torre = { x: 400, y: 300, raio: 30 };
+
+  // Gera inimigo
+  function criarInimigo() {
+    if (gameOver) return;
+    inimigos.push({
+      pos: 0,
+      progresso: 0,
+      velocidade: 0.005 + Math.random() * 0.005,
+      vida: 1,
+      tamanho: 15
+    });
+  }
+
+  // Desenha o caminho
+  function desenharCaminho() {
+    ctx.strokeStyle = '#80ff00';
+    ctx.lineWidth = 20;
+    ctx.lineJoin = 'round';
+    ctx.beginPath();
+    ctx.moveTo(caminho[0].x, caminho[0].y);
+    for (let i = 1; i < caminho.length; i++) {
+      ctx.lineTo(caminho[i].x, caminho[i].y);
+    }
+    ctx.stroke();
+  }
+
+  // Desenha inimigos
+  function desenharInimigos() {
+    inimigos.forEach(inimigo => {
+      const a = caminho[Math.floor(inimigo.pos)];
+      const b = caminho[Math.floor(inimigo.pos) + 1] || a;
+      const t = inimigo.progresso;
+      const x = a.x + (b.x - a.x) * t;
+      const y = a.y + (b.y - a.y) * t;
+
+      ctx.fillStyle = '#ff0000';
+      ctx.beginPath();
+      ctx.arc(x, y, inimigo.tamanho, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Nome do processo
+      ctx.fillStyle = '#fff';
+      ctx.font = '10px monospace';
+      ctx.fillText('malware.exe', x - 20, y - 20);
+    });
+  }
+
+  // Desenha torre
+  function desenharTorre() {
+    // Base
+    ctx.fillStyle = '#80ff00';
+    ctx.beginPath();
+    ctx.arc(torre.x, torre.y, torre.raio, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Torre
+    ctx.fillStyle = '#a8ffa8';
+    ctx.fillRect(torre.x - 5, torre.y - 60, 10, 40);
+  }
+
+  // Desenha projéteis
+  function desenharProjeteis() {
+    projeteis.forEach(p => {
+      ctx.fillStyle = '#ffff00';
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 5, 0, Math.PI * 2);
+      ctx.fill();
+    });
+  }
+
+  // Atualiza jogo
+  function atualizar() {
+    if (gameOver) return;
+
+    // Limpa
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Desenha
+    desenharCaminho();
+    desenharInimigos();
+    desenharTorre();
+    desenharProjeteis();
+
+    // Atualiza inimigos
+    inimigos = inimigos.filter(inimigo => {
+      inimigo.progresso += inimigo.velocidade;
+      if (inimigo.progresso >= 1) {
+        inimigo.progresso = 0;
+        inimigo.pos++;
+      }
+
+      const a = caminho[Math.floor(inimigo.pos)];
+      const b = caminho[Math.floor(inimigo.pos) + 1] || a;
+      const t = inimigo.progresso;
+      const x = a.x + (b.x - a.x) * t;
+      const y = a.y + (b.y - a.y) * t;
+
+      // Se chegar ao final
+      if (inimigo.pos >= caminho.length - 1) {
+        vidas--;
+        elVidas.textContent = vidas;
+        return false;
+      }
+
+      return true;
+    });
+
+    // Atualiza projéteis
+    projeteis = projeteis.filter(p => {
+      p.y -= 10;
+      return p.y > 0;
+    });
+
+    // Colisão
+    projeteis.forEach((p, i) => {
+      inimigos.forEach((inimigo, j) => {
+        const a = caminho[Math.floor(inimigo.pos)];
+        const b = caminho[Math.floor(inimigo.pos) + 1] || a;
+        const t = inimigo.progresso;
+        const x = a.x + (b.x - a.x) * t;
+        const y = a.y + (b.y - a.y) * t;
+
+        const dx = p.x - x;
+        const dy = p.y - y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+
+        if (dist < inimigo.tamanho + 5) {
+          projeteis.splice(i, 1);
+          inimigos.splice(j, 1);
+          pontos++;
+          elPontos.textContent = pontos;
+        }
+      });
+    });
+
+    // Game Over
+    if (vidas <= 0 && !gameOver) {
+      gameOver = true;
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.8)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#ff0000';
+      ctx.font = '40px monospace';
+      ctx.fillText('SISTEMA COMPROMETIDO', 100, 200);
+    }
+
+    // Próximo frame
+    requestAnimationFrame(atualizar);
+  }
+
+  // Evento: clique para atirar
+  canvas.addEventListener('click', function(e) {
+    if (gameOver) return;
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    projeteis.push({ x, y });
+  });
+
+  // Evento: reiniciar
+  botaoReiniciar.addEventListener('click', function() {
+    vidas = 3;
+    pontos = 0;
+    inimigos = [];
+    projeteis = [];
+    gameOver = false;
+    elVidas.textContent = vidas;
+    elPontos.textContent = pontos;
+  });
+
+  // Spawna inimigos
+  setInterval(criarInimigo, 2000);
+
+  // Inicia o jogo
+  atualizar();
+</script>
+{% endraw %}
