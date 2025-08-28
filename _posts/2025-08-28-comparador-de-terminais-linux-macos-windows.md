@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "📊 Tabela Comparativa de Terminais: Linux, macOS e Windows"
+title: "Tabela Comparativa de Terminais: Linux, macOS e Windows"
 date: 2025-08-28 10:00:00 -0300
 categories: terminal linux windows macos jekyll
 tags: [terminal, linux, windows, macos, wsl, powershell, bash, tutorial]
