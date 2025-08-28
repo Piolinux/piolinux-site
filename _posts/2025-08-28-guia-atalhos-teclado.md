@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "⌨️ Tabela Completa: Atalhos de Teclado (Windows, macOS, Linux)"
+title: "Tabela Completa: Atalhos de Teclado (Windows, macOS, Linux)"
 date: 2025-08-28 08:00:00 -0300
 categories: produtividade dica linux windows macos
 tags: [atalhos, jekyll, terminal, dica]
