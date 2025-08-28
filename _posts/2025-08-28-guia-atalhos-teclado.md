@@ -5,7 +5,6 @@ date: 2025-08-28 08:00:00 -0300
 categories: produtividade dica linux windows macos
 tags: [atalhos, jekyll, terminal, dica]
 description: "Tabela completa e organizada de atalhos de teclado para Windows, macOS e Linux. Funciona no Jekyll."
-image: /assets/images/keyboard.jpg
 ---
 
  
