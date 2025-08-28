@@ -5,7 +5,6 @@ date: 2025-08-28 10:00:00 -0300
 categories: terminal linux windows macos jekyll
 tags: [terminal, linux, windows, macos, wsl, powershell, bash, tutorial]
 description: "Tabela clara e compatível com Jekyll comparando terminais do Linux, macOS e Windows."
-image: /assets/images/terminal-table.jpg
 ---
 
 
