@@ -1,0 +1,299 @@
+- id: wp-01
+  titulo: "Wallpaper: sudo apt install liberdade"
+  descricao: "Frase icônica de liberdade digital. Ideal para usuários Devuan ou Debian."
+  tags: [terminal, frase, devuan, debian, svg]
+  arquivo: /galeria/wp-01.svg
+
+- id: wp-02
+  titulo: "Comandos Fedora: dnf install"
+  descricao: "Cheat sheet estilizado com comandos reais do Fedora. Perfeito para sysadmins."
+  tags: [fedora, dnf, terminal, svg]
+  arquivo: /galeria/wp-02.svg
+
+- id: wp-03
+  titulo: "Arch Linux: pacman -S"
+  descricao: "Wallpaper minimalista com comandos do Arch. Para quem gosta de controle total."
+  tags: [arch, pacman, terminal, svg]
+  arquivo: /galeria/wp-03.svg
+
+- id: wp-04
+  titulo: "Slackware: slackpkg install"
+  descricao: "Homenagem ao clássico Slackware. Para quem valoriza Linux puro e tradicional."
+  tags: [slackware, terminal, legado, svg]
+  arquivo: /galeria/wp-04.svg
+
+- id: wp-05
+  titulo: "Debian GNU/Linux"
+  descricao: "Wallpaper com prompt e comandos do Debian. Para quem preza por estabilidade."
+  tags: [debian, apt, terminal, svg]
+  arquivo: /galeria/wp-05.svg
+
+- id: wp-06
+  titulo: "Matrix: Código caindo"
+  descricao: "Estilo Matrix com colunas de 0s e 1s. Para quem ama o núcleo da rede."
+  tags: [matrix, hacker, glitch, svg]
+  arquivo: /galeria/wp-06.svg
+
+- id: wp-07
+  titulo: "Terminal: systemctl status"
+  descricao: "Comandos systemd em destaque. Ideal para revisão técnica de serviços."
+  tags: [systemd, systemctl, terminal, svg]
+  arquivo: /galeria/wp-07.svg
+
+- id: wp-08
+  titulo: "No systemd? No problem!"
+  descricao: "Frase clássica do movimento anti-systemd. Para quem prefere init simples."
+  tags: [devuan, sem-systemd, frase, svg]
+  arquivo: /galeria/wp-08.svg
+
+- id: wp-09
+  titulo: "Devuan GNU/Linux"
+  descricao: "Wallpaper oficial do espírito Devuan: liberdade de escolha, sem systemd."
+  tags: [devuan, sem-systemd, linux, svg]
+  arquivo: /galeria/wp-09.svg
+
+- id: wp-10
+  titulo: "Keep it simple, stupid"
+  descricao: "Princípio KISS aplicado ao desktop. Menos é mais, especialmente no terminal."
+  tags: [kiss, minimalismo, frase, svg]
+  arquivo: /galeria/wp-10.svg
+
+- id: wp-11
+  titulo: "Ubuntu: apt update && upgrade"
+  descricao: "Comandos essenciais do Ubuntu em estilo terminal. Para iniciantes e veteranos."
+  tags: [ubuntu, apt, terminal, svg]
+  arquivo: /galeria/wp-11.svg
+
+- id: wp-12
+  titulo: "IP e rede: ip a"
+  descricao: "Visualização de interfaces de rede com 'ip a'. Útil para diagnóstico."
+  tags: [rede, ip, terminal, svg]
+  arquivo: /galeria/wp-12.svg
+
+- id: wp-13
+  titulo: "Uso de disco: df -h"
+  descricao: "Monitore espaço em disco com 'df -h'. Informação clara e direta."
+  tags: [disco, df, terminal, svg]
+  arquivo: /galeria/wp-13.svg
+
+- id: wp-14
+  titulo: "Uso de memória: free -h"
+  descricao: "Verifique o uso de RAM com 'free -h'. Essencial para sysadmins."
+  tags: [memória, free, terminal, svg]
+  arquivo: /galeria/wp-14.svg
+
+- id: wp-15
+  titulo: "Ping: teste de conexão"
+  descricao: "Comando 'ping' em destaque. Para testar conectividade com servidores."
+  tags: [ping, rede, terminal, svg]
+  arquivo: /galeria/wp-15.svg
+
+- id: wp-16
+  titulo: "Processos: ps aux"
+  descricao: "Liste todos os processos em execução. Para quem precisa de controle total."
+  tags: [processos, ps, terminal, svg]
+  arquivo: /galeria/wp-16.svg
+
+- id: wp-17
+  titulo: "SSH: conexão segura"
+  descricao: "Exemplo de conexão SSH com 'ssh usuario@ip'. Segurança em ação."
+  tags: [ssh, segurança, terminal, svg]
+  arquivo: /galeria/wp-17.svg
+
+- id: wp-18
+  titulo: "SCP: copiar via SSH"
+  descricao: "Transfira arquivos com 'scp origem destino'. Seguro e eficiente."
+  tags: [scp, ssh, terminal, svg]
+  arquivo: /galeria/wp-18.svg
+
+- id: wp-19
+  titulo: "Busca: find e grep"
+  descricao: "Localize arquivos com 'find' e conteúdo com 'grep'. Poder do terminal."
+  tags: [find, grep, busca, terminal, svg]
+  arquivo: /galeria/wp-19.svg
+
+- id: wp-20
+  titulo: "Permissões: chmod 755"
+  descricao: "Ajuste permissões com 'chmod'. Controle total sobre seus arquivos."
+  tags: [chmod, permissões, terminal, svg]
+  arquivo: /galeria/wp-20.svg
+
+- id: wp-21
+  titulo: "Dono: chown usuario:grupo"
+  descricao: "Mude o dono de arquivos com 'chown'. Para administração avançada."
+  tags: [chown, dono, terminal, svg]
+  arquivo: /galeria/wp-21.svg
+
+- id: wp-22
+  titulo: "Portas: ss -tulnp"
+  descricao: "Veja portas abertas com 'ss'. Monitoramento de rede em tempo real."
+  tags: [portas, ss, terminal, svg]
+  arquivo: /galeria/wp-22.svg
+
+- id: wp-23
+  titulo: "Usuário: whoami"
+  descricao: "Descubra quem você é no sistema. Comando simples e poderoso."
+  tags: [whoami, usuário, terminal, svg]
+  arquivo: /galeria/wp-23.svg
+
+- id: wp-24
+  titulo: "Kernel: uname -a"
+  descricao: "Informações completas do kernel com 'uname -a'. Identidade do sistema."
+  tags: [kernel, uname, terminal, svg]
+  arquivo: /galeria/wp-24.svg
+
+- id: wp-25
+  titulo: "Uptime: tempo ligado"
+  descricao: "Veja quanto tempo o sistema está ativo com 'uptime'. Para orgulho de sysadmins."
+  tags: [uptime, tempo, terminal, svg]
+  arquivo: /galeria/wp-25.svg
+
+- id: wp-26
+  titulo: "Histórico: history"
+  descricao: "Revise seus comandos com 'history'. Aprenda com o que já fez."
+  tags: [history, histórico, terminal, svg]
+  arquivo: /galeria/wp-26.svg
+
+- id: wp-27
+  titulo: "Busca no histórico: Ctrl+R"
+  descricao: "Encontre comandos rapidamente com 'Ctrl+R'. Atalho essencial."
+  tags: [busca, histórico, terminal, svg]
+  arquivo: /galeria/wp-27.svg
+
+- id: wp-28
+  titulo: "Alias: atalhos no terminal"
+  descricao: "Crie atalhos com 'alias ll='ls -la''. Economize tempo e clique."
+  tags: [alias, atalho, terminal, svg]
+  arquivo: /galeria/wp-28.svg
+
+- id: wp-29
+  titulo: "Compactar: tar -czvf"
+  descricao: "Compacte arquivos com 'tar -czvf'. Padrão Unix para arquivamento."
+  tags: [tar, compactar, terminal, svg]
+  arquivo: /galeria/wp-29.svg
+
+- id: wp-30
+  titulo: "Descompactar: tar -xzvf"
+  descricao: "Extraia arquivos com 'tar -xzvf'. Comando essencial no dia a dia."
+  tags: [tar, extrair, terminal, svg]
+  arquivo: /galeria/wp-30.svg
+
+- id: wp-31
+  titulo: "Download: wget"
+  descricao: "Baixe arquivos da web com 'wget'. Simples e eficiente."
+  tags: [wget, download, terminal, svg]
+  arquivo: /galeria/wp-31.svg
+
+- id: wp-32
+  titulo: "Download: curl -O"
+  descricao: "Use 'curl -O' para baixar arquivos. Alternativa poderosa ao wget."
+  tags: [curl, download, terminal, svg]
+  arquivo: /galeria/wp-32.svg
+
+- id: wp-33
+  titulo: "Reiniciar: sudo reboot"
+  descricao: "Reinicie o sistema com 'sudo reboot'. Comando direto e seguro."
+  tags: [reboot, reiniciar, terminal, svg]
+  arquivo: /galeria/wp-33.svg
+
+- id: wp-34
+  titulo: "Desligar: sudo poweroff"
+  descricao: "Desligue o sistema com 'sudo poweroff'. Fim de sessão elegante."
+  tags: [poweroff, desligar, terminal, svg]
+  arquivo: /galeria/wp-34.svg
+
+- id: wp-35
+  titulo: "Atualizar: sudo apt update"
+  descricao: "Atualize pacotes no Debian/Ubuntu. Mantenha seu sistema seguro e atualizado."
+  tags: [apt, update, terminal, svg]
+  arquivo: /galeria/wp-35.svg
+
+- id: wp-36
+  titulo: "Instalar: sudo dnf install"
+  descricao: "Instale pacotes no Fedora com 'dnf'. Gerenciamento rápido e eficiente."
+  tags: [dnf, fedora, terminal, svg]
+  arquivo: /galeria/wp-36.svg
+
+- id: wp-37
+  titulo: "Atualizar: sudo pacman -Syu"
+  descricao: "Atualize o Arch Linux com 'pacman -Syu'. Poder puro no terminal."
+  tags: [pacman, arch, terminal, svg]
+  arquivo: /galeria/wp-37.svg
+
+- id: wp-38
+  titulo: "Remover: rm -rf"
+  descricao: "Remova diretórios com 'rm -rf'. Cuidado: operação irreversível!"
+  tags: [rm, deletar, terminal, svg]
+  arquivo: /galeria/wp-38.svg
+
+- id: wp-39
+  titulo: "Copiar: cp -r"
+  descricao: "Copie diretórios com 'cp -r'. Simples, rápido e eficaz."
+  tags: [cp, copiar, terminal, svg]
+  arquivo: /galeria/wp-39.svg
+
+- id: wp-40
+  titulo: "Mover: mv"
+  descricao: "Renomeie ou mova arquivos com 'mv'. Organize seu sistema facilmente."
+  tags: [mv, mover, terminal, svg]
+  arquivo: /galeria/wp-40.svg
+
+- id: wp-41
+  titulo: "Logs: journalctl -u"
+  descricao: "Visualize logs de serviços com 'journalctl'. Diagnóstico avançado."
+  tags: [journalctl, logs, terminal, svg]
+  arquivo: /galeria/wp-41.svg
+
+- id: wp-42
+  titulo: "Gentoo: o espírito do Linux"
+  descricao: "Versão estilizada do logo do Gentoo. Para quem ama a distro e a filosofia Linux."
+  tags: [gentoo, linux, distro, svg]
+  arquivo: /galeria/wp-42.svg
+
+- id: wp-43
+  titulo: "Built with CLI"
+  descricao: "Frase que resume o espírito do PioLinux: tudo feito com linha de comando."
+  tags: [cli, frase, terminal, svg]
+  arquivo: /galeria/wp-43.svg
+
+- id: wp-44
+  titulo: "Green Coding"
+  descricao: "Menos código, menos energia, menos CO₂. Programação sustentável."
+  tags: [green, sustentável, svg]
+  arquivo: /galeria/wp-44.svg
+
+- id: wp-45
+  titulo: "Privacy by Design"
+  descricao: "Privacidade não é acidente: é escolha de design. Proteja seus dados."
+  tags: [privacidade, segurança, svg]
+  arquivo: /galeria/wp-45.svg
+
+- id: wp-46
+  titulo: "Free as in Freedom"
+  descricao: "Software livre é sobre liberdade, não preço. Respeite os quatro direitos essenciais."
+  tags: [liberdade, software-livre, svg]
+  arquivo: /galeria/wp-46.svg
+
+- id: wp-47
+  titulo: "I'm not mad, I'm just disappointed."
+  descricao: "Frase clássica com Tux triste. Para quando o sistema falha."
+  tags: [tux, meme, frase, svg]
+  arquivo: /galeria/wp-47.svg
+
+- id: wp-48
+  titulo: "echo 'Hello, World!'"
+  descricao: "O primeiro programa de todo programador. Clássico atemporal."
+  tags: [echo, hello, terminal, svg]
+  arquivo: /galeria/wp-48.svg
+
+- id: wp-49
+  titulo: "git commit -m 'fix: tux bravo'"
+  descricao: "Integração com Git. Para quem versiona até suas ideias."
+  tags: [git, commit, terminal, svg]
+  arquivo: /galeria/wp-49.svg
+
+- id: wp-50
+  titulo: "Built with Jekyll"
+  descricao: "Este site é estático, rápido e feito com Jekyll. Sem bloat desnecessário."
+  tags: [jekyll, estático, svg]
+  arquivo: /galeria/wp-50.svg
