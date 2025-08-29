@@ -15,13 +15,12 @@ author: "PioLinux"
             
 
 
-
-<div id="container">
-  <h2>🧠 Memory Card de Linux</h2>
-  <p>Revise <strong>50 comandos essenciais</strong> do Linux.<br>Clique no card para virar. Use os botões para navegar.</p>
+<div id="container" style="max-width:960px;margin:0 auto;padding:20px;font-family:sans-serif;line-height:1.7;color:#333;transition:background-color 0.3s,color 0.3s;">
+  <h2 style="text-align:center;color:#2c3e50;">🧠 Memory Card de Linux</h2>
+  <p style="text-align:center;font-size:1.1em;color:#555;">Revise <strong>50 comandos essenciais</strong> do Linux.<br>Clique no card para virar. Use os botões para navegar.</p>
 
   <!-- Tux SVG Simplificado -->
-  <div style="text-align:center; margin:20px 0; opacity:0.8;">
+  <div style="text-align:center;margin:20px 0;opacity:0.8;">
     <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
       <circle cx="50" cy="55" r="30" fill="#000"/>
       <circle cx="50" cy="40" r="20" fill="#000"/>
@@ -33,23 +32,29 @@ author: "PioLinux"
     </svg>
   </div>
 
-  <div id="controls">
-    <button id="prevBtn">⬅️ Anterior</button>
-    <button id="nextBtn">Próximo ➡️</button>
-    <button id="shuffleBtn">🔄 Embaralhar</button>
-    <button id="themeToggle">🌙 Tema Escuro</button>
+  <div style="text-align:center;margin:20px 0;">
+    <button id="prevBtn" style="margin:0 6px;padding:10px 16px;background:#555;color:white;border:none;border-radius:6px;cursor:pointer;font-size:0.9em;">⬅️ Anterior</button>
+    <button id="nextBtn" style="margin:0 6px;padding:10px 16px;background:#3498db;color:white;border:none;border-radius:6px;cursor:pointer;font-size:0.9em;">Próximo ➡️</button>
+    <button id="shuffleBtn" style="margin:0 6px;padding:10px 16px;background:#27ae60;color:white;border:none;border-radius:6px;cursor:pointer;font-size:0.9em;">🔄 Embaralhar</button>
+    <button id="themeToggle" style="margin:0 6px;padding:10px 16px;background:#9b59b6;color:white;border:none;border-radius:6px;cursor:pointer;font-size:0.9em;">🌙 Tema Escuro</button>
   </div>
 
-  <p id="counter">Card <strong>1</strong> de <span id="total">50</span></p>
+  <p id="counter" style="text-align:center;font-size:0.95em;color:#777;">Card <strong>1</strong> de <span id="total">50</span></p>
 
-  <div id="flashcard">Clique para começar</div>
+  <div id="flashcard" style="
+    width:90%; max-width:500px; min-height:180px; margin:40px auto; padding:25px;
+    background:#f8f9fa; color:#2c3e50; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    text-align:center; font-size:1.2em; font-weight:500; cursor:pointer; display:flex;
+    align-items:center; justify-content:center; transition:all 0.4s ease;
+  ">Clique para começar</div>
 
-  <div class="tip">
+  <div style="text-align:center;font-size:0.95em;color:#666;">
     <p><strong>💡 Dica:</strong> Use para revisar antes de entrevistas, certificações ou no dia a dia. Embaralhe para evitar decorar a ordem!</p>
   </div>
 </div>
 
 <script>
+  // Banco de flashcards
   const flashcards = [
     { q: "Como listar arquivos ocultos?", a: "ls -la" },
     { q: "Como ver uso de disco legível?", a: "df -h" },
@@ -115,11 +120,13 @@ author: "PioLinux"
   let currentIndex = 0;
   let showingAnswer = false;
 
+  // Atualiza o card
   function updateCard() {
     card.textContent = showingAnswer ? flashcards[currentIndex].a : flashcards[currentIndex].q;
     counter.innerHTML = `Card <strong>${currentIndex + 1}</strong> de <span>${flashcards.length}</span>`;
   }
 
+  // Troca o tema
   function toggleTheme() {
     const isDark = container.classList.toggle('dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
@@ -165,7 +172,7 @@ author: "PioLinux"
 
   themeToggle.addEventListener('click', toggleTheme);
 
-  // Inicializar
+  // Inicialização
   totalSpan.textContent = flashcards.length;
   updateCard();
 </script>
