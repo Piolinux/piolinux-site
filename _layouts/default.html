@@ -47,25 +47,45 @@
         
     </main>
 
-    <div id="share" style="text-align:center;margin:15px 0"></div>
-    <script async defer>
-        (() => {
-            const u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
-            const d=[
-                ["Reddit","#cc2400",`https://www.reddit.com/submit?url=${u}&title=${t}`],
-                ["Twitter","#0077b9",`https://twitter.com/intent/tweet?url=${u}&text=${t}`],
-                ["WhatsApp","#075e54",`https://api.whatsapp.com/send?text=${t}%20${u}`],
-                ["LinkedIn","#005e8e",`https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
-            ],e=document.getElementById("share");
-            d.forEach(([n,c,l])=>{
-                let a=document.createElement("a");
-                a.href=l;a.target="_blank";a.rel="noopener";
-                a.textContent=n;
-                a.style=`background:${c};color:#fff;padding:5px 10px;margin:0 5px;border-radius:4px;font-size:12px;text-decoration:none;user-select:none;display:inline-block;`;
-                e.appendChild(a);
-            });
-        })();
-    </script>
+    <div id="share" style="text-align: center; margin: 15px 0;"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const u = encodeURIComponent(location.href);
+    const t = encodeURIComponent(document.title);
+
+    const platforms = [
+      ['Reddit', '#cc2400', `https://www.reddit.com/submit?url=${u}&title=${t}`],
+      ['Twitter', '#0077b9', `https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+      ['WhatsApp', '#075e54', `https://api.whatsapp.com/send?text=${t}%20${u}`],
+      ['LinkedIn', '#005e8e', `https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+    ];
+
+    const container = document.getElementById('share');
+
+    platforms.forEach(([name, color, link]) => {
+      const a = document.createElement('a');
+      a.href = link;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.textContent = name;
+      a.title = `Compartilhar no ${name}`;
+      a.style = `
+        background: ${color};
+        color: white;
+        padding: 5px 10px;
+        margin: 0 5px;
+        border-radius: 4px;
+        font-size: 12px;
+        text-decoration: none;
+        user-select: none;
+        display: inline-block;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      `;
+      container.appendChild(a);
+    });
+  });
+</script>
     
     {% include footer.html %}
 </body>
