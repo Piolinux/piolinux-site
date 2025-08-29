@@ -7,73 +7,14 @@ date: 2025-08-28 15:00:00 -0300
 author: "PioLinux"
 ---
 
-<style>
-  body, html { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
-  #container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    line-height: 1.7;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  h2, p { text-align: center; margin: 0.5em 0; }
-  h2 { color: #2c3e50; }
-  p { color: #555; font-size: 1.1em; }
-  #controls { text-align: center; margin: 20px 0; }
-  button {
-    margin: 0 6px;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.9em;
-  }
-  #prevBtn { background: #555; color: white; }
-  #nextBtn { background: #3498db; color: white; }
-  #shuffleBtn { background: #27ae60; color: white; }
-  #themeToggle { background: #9b59b6; color: white; }
-  #counter {
-    text-align: center;
-    font-size: 0.95em;
-    color: #777;
-  }
-  #flashcard {
-    width: 90%;
-    max-width: 500px;
-    min-height: 180px;
-    margin: 40px auto;
-    padding: 25px;
-    background: #f8f9fa;
-    color: #2c3e50;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.4s ease;
-  }
-  .tip {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 0.95em;
-    color: #666;
-    text-align: center;
-  }
-  .dark {
-    background-color: #121212 !important;
-    color: #e0e0e0 !important;
-  }
-  .dark #flashcard {
-    background-color: #1e1e1e;
-    color: #fff;
-  }
-  .dark button { color: white; }
-</style>
+
+{% include toc.html %}
+
+
+<section class="post-content">
+            
+
+
 
 <div id="container">
   <h2>🧠 Memory Card de Linux</h2>
