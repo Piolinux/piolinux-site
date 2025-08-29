@@ -7,125 +7,108 @@ date: 2025-08-28 15:00:00 -0300
 author: "PioLinux"
 ---
 
-<main style="margin: 0; padding: 0;">
-  <div id="container" style="
+<style>
+  body, html { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+  #container {
     max-width: 960px;
     margin: 0 auto;
-    padding: 30px 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    padding: 20px;
     line-height: 1.7;
     color: #333;
-    transition: background 0.3s, color 0.3s;
-  ">
+    transition: background-color 0.3s, color 0.3s;
+  }
+  h2, p { text-align: center; margin: 0.5em 0; }
+  h2 { color: #2c3e50; }
+  p { color: #555; font-size: 1.1em; }
+  #controls { text-align: center; margin: 20px 0; }
+  button {
+    margin: 0 6px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  #prevBtn { background: #555; color: white; }
+  #nextBtn { background: #3498db; color: white; }
+  #shuffleBtn { background: #27ae60; color: white; }
+  #themeToggle { background: #9b59b6; color: white; }
+  #counter {
+    text-align: center;
+    font-size: 0.95em;
+    color: #777;
+  }
+  #flashcard {
+    width: 90%;
+    max-width: 500px;
+    min-height: 180px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #f8f9fa;
+    color: #2c3e50;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+  .tip {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.95em;
+    color: #666;
+    text-align: center;
+  }
+  .dark {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+  }
+  .dark #flashcard {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  .dark button { color: white; }
+</style>
 
-    <!-- Título -->
-    <h2 style="text-align: center; color: #2c3e50;">🧠 Memory Card de Linux</h2>
-    <p style="text-align: center; font-size: 1.1em; color: #555;">
-      Revise <strong>50 comandos essenciais</strong> do Linux.<br>
-      Clique no card para virar. Use os botões para navegar.
-    </p>
+<div id="container">
+  <h2>🧠 Memory Card de Linux</h2>
+  <p>Revise <strong>50 comandos essenciais</strong> do Linux.<br>Clique no card para virar. Use os botões para navegar.</p>
 
-    <!-- SVG do Tux -->
-    <div style="text-align: center; margin: 20px 0; opacity: 0.8;">
-      <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="60" cy="70" r="40" fill="#000" />
-        <circle cx="60" cy="40" r="28" fill="#000" />
-        <circle cx="52" cy="35" r="6" fill="#fff" />
-        <circle cx="52" cy="35" r="3" fill="#000" />
-        <circle cx="68" cy="35" r="6" fill="#fff" />
-        <circle cx="68" cy="35" r="3" fill="#000" />
-        <polygon points="60,45 55,52 65,52" fill="#ff9900" />
-        <ellipse cx="60" cy="70" rx="25" ry="30" fill="#fff" />
-        <ellipse cx="40" cy="80" rx="18" ry="8" fill="#000" transform="rotate(-30 40 80)" />
-        <ellipse cx="80" cy="80" rx="18" ry="8" fill="#000" transform="rotate(30 80 80)" />
-        <ellipse cx="50" cy="105" rx="10" ry="6" fill="#ff9900" />
-        <ellipse cx="70" cy="105" rx="10" ry="6" fill="#ff9900" />
-      </svg>
-    </div>
-
-    <!-- Botões -->
-    <div style="text-align: center; margin: 20px 0;">
-      <button id="prevBtn" style="
-        margin: 0 6px;
-        padding: 10px 16px;
-        background: #555;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 0.9em;
-      ">⬅️ Anterior</button>
-      <button id="nextBtn" style="
-        margin: 0 6px;
-        padding: 10px 16px;
-        background: #3498db;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 0.9em;
-      ">Próximo ➡️</button>
-      <button id="shuffleBtn" style="
-        margin: 0 6px;
-        padding: 10px 16px;
-        background: #27ae60;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 0.9em;
-      ">🔄 Embaralhar</button>
-      <button id="themeToggle" style="
-        margin: 0 6px;
-        padding: 10px 16px;
-        background: #9b59b6;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 0.9em;
-      ">🌙 Tema Escuro</button>
-    </div>
-
-    <!-- Contador -->
-    <p style="text-align: center; font-size: 0.95em; color: #777;" id="counter">
-      Card <strong>1</strong> de <span id="total">50</span>
-    </p>
-
-    <!-- Flashcard -->
-    <div style="display: flex; justify-content: center; margin: 40px 0;">
-      <div id="flashcard" style="
-        width: 80%;
-        max-width: 500px;
-        min-height: 180px;
-        padding: 25px;
-        background: #f8f9fa;
-        color: #2c3e50;
-        border-radius: 12px;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-size: 1.2em;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.4s ease;
-      ">
-        Clique para começar
-      </div>
-    </div>
-
-    <!-- Dica -->
-    <div style="max-width: 600px; margin: 0 auto; font-size: 0.95em; color: #666; text-align: center;">
-      <p><strong>💡 Dica:</strong> Use para revisar antes de entrevistas, certificações ou no dia a dia. Embaralhe para evitar decorar a ordem!</p>
-    </div>
-
+  <!-- Tux SVG Simplificado -->
+  <div style="text-align:center; margin:20px 0; opacity:0.8;">
+    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="55" r="30" fill="#000"/>
+      <circle cx="50" cy="40" r="20" fill="#000"/>
+      <circle cx="45" cy="37" r="4" fill="#fff"/>
+      <circle cx="45" cy="37" r="2" fill="#000"/>
+      <circle cx="55" cy="37" r="4" fill="#fff"/>
+      <circle cx="55" cy="37" r="2" fill="#000"/>
+      <polygon points="50,42 47,46 53,46" fill="#ff9900"/>
+    </svg>
   </div>
-</main>
+
+  <div id="controls">
+    <button id="prevBtn">⬅️ Anterior</button>
+    <button id="nextBtn">Próximo ➡️</button>
+    <button id="shuffleBtn">🔄 Embaralhar</button>
+    <button id="themeToggle">🌙 Tema Escuro</button>
+  </div>
+
+  <p id="counter">Card <strong>1</strong> de <span id="total">50</span></p>
+
+  <div id="flashcard">Clique para começar</div>
+
+  <div class="tip">
+    <p><strong>💡 Dica:</strong> Use para revisar antes de entrevistas, certificações ou no dia a dia. Embaralhe para evitar decorar a ordem!</p>
+  </div>
+</div>
 
 <script>
-  // Banco de 50 flashcards
   const flashcards = [
     { q: "Como listar arquivos ocultos?", a: "ls -la" },
     { q: "Como ver uso de disco legível?", a: "df -h" },
@@ -182,54 +165,34 @@ author: "PioLinux"
     { q: "Como voltar ao diretório anterior?", a: "cd -" }
   ];
 
-  // Elementos
-  const container = document.getElementById('container');
   const card = document.getElementById('flashcard');
   const counter = document.getElementById('counter');
   const totalSpan = document.getElementById('total');
+  const container = document.getElementById('container');
   const themeToggle = document.getElementById('themeToggle');
 
   let currentIndex = 0;
   let showingAnswer = false;
 
-  // Atualiza o card
   function updateCard() {
     card.textContent = showingAnswer ? flashcards[currentIndex].a : flashcards[currentIndex].q;
-    counter.innerHTML = `Card <strong>${currentIndex + 1}</strong> de <span id="total">${flashcards.length}</span>`;
+    counter.innerHTML = `Card <strong>${currentIndex + 1}</strong> de <span>${flashcards.length}</span>`;
   }
 
-  // Tema escuro
-  function setTheme(dark) {
-    if (dark) {
-      container.style.backgroundColor = '#121212';
-      container.style.color = '#e0e0e0';
-      card.style.backgroundColor = '#1e1e1e';
-      card.style.color = '#ffffff';
-      themeToggle.textContent = '☀️ Modo Claro';
-    } else {
-      container.style.backgroundColor = '#ffffff';
-      container.style.color = '#333';
-      card.style.backgroundColor = '#f8f9fa';
-      card.style.color = '#2c3e50';
-      themeToggle.textContent = '🌙 Tema Escuro';
-    }
+  function toggleTheme() {
+    const isDark = container.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    themeToggle.textContent = isDark ? '☀️ Modo Claro' : '🌙 Tema Escuro';
   }
 
-  // Carregar tema salvo
+  // Aplicar tema salvo
   const savedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const isDark = savedTheme ? savedTheme === 'dark' : prefersDark;
-  setTheme(isDark);
+  if (isDark) container.classList.add('dark');
+  themeToggle.textContent = isDark ? '☀️ Modo Claro' : '🌙 Tema Escuro';
 
-  // Alternar tema
-  themeToggle.addEventListener('click', () => {
-    const currentTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme === 'dark');
-    localStorage.setItem('theme', newTheme);
-  });
-
-  // Virar card
+  // Eventos
   card.addEventListener('click', () => {
     showingAnswer = !showingAnswer;
     card.style.transform = 'scale(0.98)';
@@ -237,7 +200,6 @@ author: "PioLinux"
     updateCard();
   });
 
-  // Navegação
   document.getElementById('prevBtn').addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + flashcards.length) % flashcards.length;
     showingAnswer = false;
@@ -250,7 +212,6 @@ author: "PioLinux"
     updateCard();
   });
 
-  // Embaralhar
   document.getElementById('shuffleBtn').addEventListener('click', () => {
     for (let i = flashcards.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -261,8 +222,9 @@ author: "PioLinux"
     updateCard();
   });
 
+  themeToggle.addEventListener('click', toggleTheme);
+
   // Inicializar
   totalSpan.textContent = flashcards.length;
   updateCard();
 </script>
-
