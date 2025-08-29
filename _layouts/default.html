@@ -26,6 +26,7 @@
   <p>
     Não sabe o que ler agora? Deixe o acaso escolher por você:
   </p>
+  <p>Veja nossa <a href="/galeria/">galeria de wallpapers Linux</a> com SVGs estilosos!</p>
   <ul>
     {% assign posts_aleatorios = site.posts | where_exp:"p", "p.url != page.url" | sample:3 %}
     {% for post in posts_aleatorios %}
