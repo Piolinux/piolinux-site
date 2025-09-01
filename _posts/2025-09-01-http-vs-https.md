@@ -125,9 +125,4 @@ Se você ver <code>https://</code> + 🔒 → <strong>pode continuar tranquilo</
 <p>Se você navega na internet:<br>
 ➡️ <strong>Nunca digite senhas em sites com <code>http://</code></strong></p>
 
-<p><strong>🌿 Este conteúdo é evergreen</strong><br>
-Este guia será útil por anos.<br>
-A diferença entre HTTP e HTTPS não muda, e a segurança na internet só cresce em importância.</p>
 
-<p>Salve nos favoritos. Compartilhe com quem está começando.<br>
-A internet segura começa com pequenos passos. 🔐</p>
