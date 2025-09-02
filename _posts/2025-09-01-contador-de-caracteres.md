@@ -14,13 +14,20 @@ date: 2025-09-01 10:00:00 -0300
 <section class="post-content">
 
 
-<p class="intro">
-  Escrever dentro do limite é difícil.<br>
-  No <strong>X (Twitter)</strong>, são 280 caracteres.<br>
-  No <strong>Instagram</strong>, a legenda tem 2.200, mas só ~138 aparecem sem "leia mais".<br>
-  Em <strong>títulos de blog</strong>, o ideal é entre 50 e 60 para não cortar no Google.<br><br>
-  Use este <strong>contador em tempo real</strong> para não errar mais.
-</p>
+<h1>Escrever dentro do limite é difícil — use este contador</h1>
+
+<h2>Limites em redes sociais</h2>
+<ul>
+  <li><strong>X (Twitter)</strong>: 280 caracteres</li>
+  <li><strong>Instagram</strong>: 2.200 caracteres, mas só ~138 aparecem sem "leia mais"</li>
+  <li><strong>Títulos de blog</strong>: 50–60 caracteres para não cortar no Google</li>
+</ul>
+
+<h2>Por que isso importa</h2>
+<p>Se o título for muito longo, o Google corta. Se a legenda do Instagram for longa, o usuário não lê. Escrever com limite é treinar clareza.</p>
+
+<h2>Use esta ferramenta</h2>
+<p>Este contador em tempo real mostra exatamente quantos caracteres você usou — e onde aparecerá cortado.</p>
 
 <label for="texto"><strong>Digite seu texto:</strong></label>
 <textarea id="texto" placeholder="Seu post, título ou legenda..."></textarea>
