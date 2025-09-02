@@ -5,7 +5,6 @@ date: 2025-09-01 09:00:00 -0300
 categories: segurança web dica
 tags: [http, https, segurança, jekyll, iniciantes]
 description: "Você viu aquele cadeadinho verde? Entenda de forma simples a diferença entre HTTP e HTTPS e por que isso importa."
-image: /assets/images/https.jpg
 ---
 
 
