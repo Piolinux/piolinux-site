@@ -36,13 +36,7 @@ date: 2025-09-01 10:00:00 -0300
   <strong>Caracteres:</strong> <span id="contagem">0</span> / <span id="limite">280</span>
 </div>
 
-<div class="dica">
-  <strong>📌 Dica por plataforma:</strong>
-  <br>• <strong>X (Twitter)</strong>: até <strong>280</strong> caracteres
-  <br>• <strong>Instagram</strong>: use até <strong>138</strong> no início (o resto fica escondido)
-  <br>• <strong>Facebook</strong>: até <strong>80–100</strong> para melhor engajamento
-  <br>• <strong>Título de blog</strong>: <strong>50–60</strong> caracteres (SEO ideal)
-</div>
+
 
 <script>
   const textarea = document.getElementById('texto');
