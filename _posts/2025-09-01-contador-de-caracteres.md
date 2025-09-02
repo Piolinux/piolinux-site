@@ -14,7 +14,7 @@ date: 2025-09-01 10:00:00 -0300
 <section class="post-content">
 
 
-<h1>Escrever dentro do limite é difícil — use este contador</h1>
+
 
 <h2>Limites em redes sociais</h2>
 <ul>
