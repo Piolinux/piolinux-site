@@ -1,13 +1,13 @@
 ---
 layout: default
 title: "Gerenciadores de Pacotes no Linux: Guia para Iniciantes"
-description: "Entenda os principais gerenciadores de pacotes no Linux, como apt, dnf, pacman e zypper, e aprenda a usá-los com comandos básicos."
-keywords: "gerenciadores de pacotes linux, apt, dnf, pacman, zypper, instalar programas linux"
-robots: "index,follow"
-author: "Piolinux"
+description: "Aprenda os principais gerenciadores de pacotes no Linux: apt (Debian/Ubuntu), dnf (Fedora), pacman (Arch) e zypper (openSUSE)." 
+date: 2025-09-20
+author: "PioLinux"
+categories: [linux, pacotes, comandos]
+tags: [pacotes, linux, apt, dnf, pacman, zypper, instalação]
+permalink: /gerenciadores-pacotes-linux/
 ---
-
-
 
 
 
@@ -104,3 +104,40 @@ sudo zypper remove nome-do-pacote</code></pre>
     </p>
    </section>
   
+<h3>📦 Comparativo de Gerenciadores de Pacotes</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Ferramenta</th>
+      <th>Distro</th>
+      <th>Instalar</th>
+      <th>Atualizar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>apt</code></td>
+      <td>Debian, Ubuntu</td>
+      <td><code>sudo apt install nome</code></td>
+      <td><code>sudo apt update &amp;&amp; upgrade</code></td>
+    </tr>
+    <tr>
+      <td><code>dnf</code></td>
+      <td>Fedora, RHEL</td>
+      <td><code>sudo dnf install nome</code></td>
+      <td><code>sudo dnf update</code></td>
+    </tr>
+    <tr>
+      <td><code>pacman</code></td>
+      <td>Arch, Manjaro</td>
+      <td><code>sudo pacman -S nome</code></td>
+      <td><code>sudo pacman -Syu</code></td>
+    </tr>
+    <tr>
+      <td><code>zypper</code></td>
+      <td>openSUSE</td>
+      <td><code>sudo zypper install nome</code></td>
+      <td><code>sudo zypper update</code></td>
+    </tr>
+  </tbody>
+</table>

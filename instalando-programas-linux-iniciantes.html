@@ -1,12 +1,13 @@
 ---
 layout: default
-title: "Instalando programas no Linux iniciantes"
-description: "Aprenda como instalar programas no Linux usando pacotes .deb, Flatpak, Snap e repositórios oficiais. Guia completo para iniciantes."
-keywords: "instalar programas no linux, pacotes deb, flatpak, snap, iniciantes linux"
-robots: "index,follow"
-author: "Piolinux"
+title: "Como Instalar Programas no Linux: Guia para Iniciantes"
+description: "Aprenda a instalar programas no Linux via .deb, Flatpak, Snap e repositórios. Compare métodos e escolha o melhor para sua distro."
+date: 2025-09-22
+author: "PioLinux"
+categories: [linux, instalação, iniciante]
+tags: [instalação, linux, deb, flatpak, snap, pacotes, tutorial]
+permalink: /instalar-programas-linux-iniciantes/
 ---
-
 
 
 
@@ -183,4 +184,35 @@ sudo apt --fix-broken install</code></pre>
     </p>
    </section>
   
- 
+ <h3>📦 Métodos de Instalação no Linux</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Método</th>
+      <th>Uso</th>
+      <th>Comando</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>.deb</code></td>
+      <td>Debian, Ubuntu</td>
+      <td><code>sudo dpkg -i app.deb</code></td>
+    </tr>
+    <tr>
+      <td><code>apt</code></td>
+      <td>Pacotes oficiais</td>
+      <td><code>sudo apt install nome</code></td>
+    </tr>
+    <tr>
+      <td><code>Flatpak</code></td>
+      <td>Universal (GNOME)</td>
+      <td><code>flatpak install flathub org.gimp.GIMP</code></td>
+    </tr>
+    <tr>
+      <td><code>Snap</code></td>
+      <td>Universal (Ubuntu)</td>
+      <td><code>snap install code --classic</code></td>
+    </tr>
+  </tbody>
+</table>
