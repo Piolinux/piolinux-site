@@ -26,42 +26,143 @@ th {
 
 
 
- 🖥️ Comparativo Completo: Terminais por Sistema
+<h2>🖥️ Comparativo Completo: Terminais por Sistema</h2>
 
-| Característica                    | Linux 🐧                                                                 | macOS (Unix) 🍏                                                              | Windows 💾                                                                 |
-|-----------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| **Shell padrão**                  | Bash, Zsh, Fish                                                          | Zsh (padrão desde Catalina), Bash                                            | PowerShell (moderno), CMD (legado)                                         |
-| **Terminal padrão**               | GNOME Terminal, Konsole (varia por distro)                               | Terminal.app                                                                 | CMD, PowerShell                                                            |
-| **Terminal moderno recomendado**  | Alacritty, Kitty, Terminator, GNOME Terminal                             | [iTerm2](https://iterm2.com), Warp                                           | [Windows Terminal](https://aka.ms/terminal)                                |
-| **Suporte a abas e splits**       | Sim (em terminais modernos)                                              | Sim (iTerm2 tem splits avançados)                                            | Sim (Windows Terminal tem abas e painéis)                                  |
-| **Customização (temas, cores)**   | 🔥🔥🔥 (Alta: com Zsh, Fish, configurações)                              | 🔥🔥🔥 (Alta: iTerm2 + Oh My Zsh)                                            | 🔥🔥 (Média-Alta: via JSON no Windows Terminal)                             |
-| **Acesso nativo ao Linux**        | Sim (é o sistema)                                                        | Terminal é Unix (comandos compatíveis)                                       | Sim, via **WSL 2** (Ubuntu, Debian, etc)                                   |
-| **Comandos Unix (grep, sed, awk)**| Sim, nativo                                                              | Sim, nativo                                                                  | Sim, via WSL, Git Bash ou Cygwin                                           |
-| **Melhor para DevOps / Servidores** | ✅✅✅ (padrão em nuvem, Docker, Kubernetes)                            | ✅✅ (usado, mas menos comum em produção)                                     | ✅ (com WSL — cada vez mais usado)                                          |
-| **Melhor para desenvolvimento**   | Python, C/C++, DevOps, scripts                                           | iOS, Swift, web, front-end, design                                           | .NET, C#, Azure, Unity, apps desktop                                       |
-| **Facilidade para iniciantes**    | ⚠️ (varia por distro — Ubuntu é mais amigável)                           | ✅✅ (GUI + terminal elegante e estável)                                      | ✅✅ (Windows Terminal + WSL guiado = ótimo para aprendizado)               |
-| **Integração com IDE**            | Excelente (VS Code, Vim, Emacs)                                          | Excelente (Xcode, VS Code, WebStorm)                                         | Excelente (Visual Studio, VS Code, Rider)                                  |
-| **Animações e estilo**            | `cmatrix`, `neofetch`, `asciiquarium`, `sl`                              | `neofetch`, `cmatrix`, `lolcat`                                              | `PowerShell + ASCII art`, `cmatrix` no WSL                                 |
-| **Ferramentas de instalação**     | `apt`, `dnf`, `pacman`, `zypper`                                         | `brew` (Homebrew), `port` (MacPorts)                                         | `winget`, `choco` (Chocolatey), Microsoft Store                             |
-| **Comunidade e suporte**          | Gigantesca (fóruns, Reddit, GitHub, documentação)                        | Grande (especialmente em desenvolvimento Apple)                              | Crescendo rápido (Microsoft agora apoia open source)                       |
-| **Scripting / automação**         | Bash/Zsh: poderoso e amplamente usado                                    | Shell scripts com Zsh/Bash; automação com `automator`                        | PowerShell: orientado a objetos, muito poderoso                             |
-| **Segurança e permissões**        | Controle total com `sudo`, `chmod`, `chown`                              | Mesmo modelo Unix: `chmod`, `chown`, `sudo`                                  | UAC (Controle de Conta de Usuário), PowerShell com permissão de administrador |
-| **Desempenho do terminal**        | Muito rápido (especialmente Alacritty, Kitty)                            | Rápido (iTerm2 é otimizado)                                                  | Bom (Windows Terminal é GPU-acelerado)                                     |
+<table>
+  <thead>
+    <tr>
+      <th>Característica</th>
+      <th>Linux 🐧</th>
+      <th>macOS (Unix) 🍏</th>
+      <th>Windows 💾</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Shell padrão</strong></td>
+      <td>Bash, Zsh, Fish</td>
+      <td>Zsh (padrão desde Catalina), Bash</td>
+      <td>PowerShell (moderno), CMD (legado)</td>
+    </tr>
+    <tr>
+      <td><strong>Terminal padrão</strong></td>
+      <td>GNOME Terminal, Konsole (varia por distro)</td>
+      <td>Terminal.app</td>
+      <td>CMD, PowerShell</td>
+    </tr>
+    <tr>
+      <td><strong>Terminal moderno recomendado</strong></td>
+      <td><a href="https://ohmyz.sh">Oh My Zsh</a>, Alacritty, Kitty, Terminator</td>
+      <td><a href="https://iterm2.com">iTerm2</a>, Warp</td>
+      <td><a href="https://aka.ms/terminal">Windows Terminal</a></td>
+    </tr>
+    <tr>
+      <td><strong>Suporte a abas e splits</strong></td>
+      <td>Sim (em terminais modernos)</td>
+      <td>Sim (iTerm2 tem splits avançados)</td>
+      <td>Sim (Windows Terminal tem abas e painéis)</td>
+    </tr>
+    <tr>
+      <td><strong>Customização (temas, cores)</strong></td>
+      <td>🔥🔥🔥 (Alta: com Zsh, Fish, configurações)</td>
+      <td>🔥🔥🔥 (Alta: iTerm2 + Oh My Zsh)</td>
+      <td>🔥🔥 (Média-Alta: via JSON no Windows Terminal)</td>
+    </tr>
+    <tr>
+      <td><strong>Acesso nativo ao Linux</strong></td>
+      <td>Sim (é o sistema)</td>
+      <td>Terminal é Unix (comandos compatíveis)</td>
+      <td>Sim, via <strong>WSL 2</strong> (Ubuntu, Debian, etc)</td>
+    </tr>
+    <tr>
+      <td><strong>Comandos Unix (grep, sed, awk)</strong></td>
+      <td>Sim, nativo</td>
+      <td>Sim, nativo</td>
+      <td>Sim, via WSL, Git Bash ou Cygwin</td>
+    </tr>
+    <tr>
+      <td><strong>Melhor para DevOps / Servidores</strong></td>
+      <td>✅✅✅ (padrão em nuvem, Docker, Kubernetes)</td>
+      <td>✅✅ (usado, mas menos comum em produção)</td>
+      <td>✅ (com WSL — cada vez mais usado)</td>
+    </tr>
+    <tr>
+      <td><strong>Melhor para desenvolvimento</strong></td>
+      <td>Python, C/C++, DevOps, scripts</td>
+      <td>iOS, Swift, web, front-end, design</td>
+      <td>.NET, C#, Azure, Unity, apps desktop</td>
+    </tr>
+    <tr>
+      <td><strong>Facilidade para iniciantes</strong></td>
+      <td>⚠️ (varia por distro — Ubuntu é mais amigável)</td>
+      <td>✅✅ (GUI + terminal elegante e estável)</td>
+      <td>✅✅ (Windows Terminal + WSL guiado = ótimo para aprendizado)</td>
+    </tr>
+    <tr>
+      <td><strong>Integração com IDE</strong></td>
+      <td>Excelente (VS Code, Vim, Emacs)</td>
+      <td>Excelente (Xcode, VS Code, WebStorm)</td>
+      <td>Excelente (Visual Studio, VS Code, Rider)</td>
+    </tr>
+    <tr>
+      <td><strong>Animações e estilo</strong></td>
+      <td><code>cmatrix</code>, <code>neofetch</code>, <code>asciiquarium</code>, <code>sl</code></td>
+      <td><code>neofetch</code>, <code>cmatrix</code>, <code>lolcat</code></td>
+      <td><code>PowerShell + ASCII art</code>, <code>cmatrix</code> no WSL</td>
+    </tr>
+    <tr>
+      <td><strong>Ferramentas de instalação</strong></td>
+      <td><code>apt</code>, <code>dnf</code>, <code>pacman</code>, <code>zypper</code></td>
+      <td><code>brew</code> (Homebrew), <code>port</code> (MacPorts)</td>
+      <td><code>winget</code>, <code>choco</code> (Chocolatey), Microsoft Store</td>
+    </tr>
+    <tr>
+      <td><strong>Comunidade e suporte</strong></td>
+      <td>Gigantesca (fóruns, Reddit, GitHub, documentação)</td>
+      <td>Grande (especialmente em desenvolvimento Apple)</td>
+      <td>Crescendo rápido (Microsoft agora apoia open source)</td>
+    </tr>
+    <tr>
+      <td><strong>Scripting / automação</strong></td>
+      <td>Bash/Zsh: poderoso e amplamente usado</td>
+      <td>Shell scripts com Zsh/Bash; automação com <code>automator</code></td>
+      <td>PowerShell: orientado a objetos, muito poderoso</td>
+    </tr>
+    <tr>
+      <td><strong>Segurança e permissões</strong></td>
+      <td>Controle total com <code>sudo</code>, <code>chmod</code>, <code>chown</code></td>
+      <td>Modelo Unix: <code>chmod</code>, <code>chown</code>, <code>sudo</code></td>
+      <td>UAC (Controle de Conta de Usuário), PowerShell com permissão de administrador</td>
+    </tr>
+    <tr>
+      <td><strong>Desempenho do terminal</strong></td>
+      <td>Muito rápido (especialmente Alacritty, Kitty)</td>
+      <td>Rápido (iTerm2 é otimizado)</td>
+      <td>Bom (Windows Terminal é GPU-acelerado)</td>
+    </tr>
+  </tbody>
+</table>
 
-## 🔧 Dicas Rápidas por Plataforma
+<h3>🔧 Dicas Rápidas por Plataforma</h3>
 
-### 🐧 Linux
-- Use [Oh My Zsh](https://ohmyz.sh) para melhorar seu Zsh.
-- Experimente `fish` para um shell mais amigável.
-- Terminal recomendado: **Alacritty** (rápido) ou **Terminator** (para splits).
+<h4>🐧 Linux</h4>
+<ul>
+  <li>Use <a href="https://ohmyz.sh">Oh My Zsh</a> para melhorar seu Zsh.</li>
+  <li>Experimente <code>fish</code> para um shell mais amigável.</li>
+  <li>Terminal recomendado: <strong>Alacritty</strong> (rápido) ou <strong>Terminator</strong> (para splits).</li>
+</ul>
 
-### 🍏 macOS
-- Instale [iTerm2](https://iterm2.com) — é melhor que o Terminal.app.
-- Use `brew install neofetch` e execute `neofetch` para um toque estiloso.
-- Ative o modo escuro no iTerm2 para produtividade noturna.
+<h4>🍏 macOS</h4>
+<ul>
+  <li>Instale <a href="https://iterm2.com">iTerm2</a> — é melhor que o Terminal.app.</li>
+  <li>Use <code>brew install neofetch</code> e execute <code>neofetch</code> para um toque estiloso.</li>
+  <li>Ative o modo escuro no iTerm2 para produtividade noturna.</li>
+</ul>
 
-### 💾 Windows
-- Instale o [Windows Terminal](https://aka.ms/terminal) da Microsoft Store.
-- Ative o WSL: abra PowerShell como admin e digite:
-  ```powershell
-  wsl --install
+<h4>💾 Windows</h4>
+<ul>
+  <li>Instale o <a href="https://aka.ms/terminal">Windows Terminal</a> da Microsoft Store.</li>
+  <li>Ative o WSL: abra PowerShell como admin e digite:
+    <pre><code>wsl --install</code></pre>
+  </li>
+</ul>
