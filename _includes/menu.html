@@ -10,27 +10,35 @@
     </a>
   </p>
 
-
-  <div class="menu-container">
-    <button class="menu-toggle" aria-label="Abrir menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
-    <nav class="dropdown-menu-container">
-      <ul class="dropdown-menu">
-        <li><a href="{{ '/' | relative_url }}">Início</a></li>
-        <li>
-         <a href="https://www.piolinux.com/artigos-linux.html" aria-haspopup="true">Aprenda Linux</a>
-          <ul class="dropdown-content">
-            <li><a href="{{ '/piadas-linux-engraçadas.html' | relative_url }}">Piadas</a></li>
-             <li><a href="{% link pages/biblioteca-linux.html %}">Biblioteca Linux</a> </li>
-            <li><a href="{{ '/artigos-linux.html' | relative_url }}">Iniciante</a></li>
-            <li><a href="{{ '/dicas-tecnicas-linux.html' | relative_url }}">Dicas Técnicas</a></li>
-            <li><a href="{{ '/script-bash.html' | relative_url }}">Bash</a></li>
-            <li><a href="{{ '/links.html' | relative_url }}">Conteúdos de Linux</a></li>
-            <li><a href="{{ '/caixa-de-ferramentas.html' | relative_url }}">Ferramentas</a></li>
-          </ul>
-        </li>
-        <li> <a href="{% link jogos/index.html %}">Jogos</a></li>
-        <li><a href="{{ '/reparar-boot-linux.html' | relative_url }}">Boot</a></li>
-      </ul>
-    </nav>
-  </div>
+<div class="menu-container">
+  <button aria-label="Abrir menu" class="menu-toggle" onclick="document.body.classList.toggle('menu-open')">
+    ☰
+  </button>
+  <nav class="dropdown-menu-container">
+    <ul class="dropdown-menu">
+      <li>
+        <a href="{{ '/' | relative_url }}">Início</a>
+      </li>
+      <li>
+        <a href="#">Aprenda Linux</a>
+        <ul class="dropdown-content">
+          <li><a href="{{ '/piadas-linux-terminal/' | relative_url }}">Piadas</a></li>
+          <li><a href="{{ '/biblioteca-linux/' | relative_url }}">Biblioteca Linux</a></li>
+          <li><a href="{{ '/indice-artigos-linux/' | relative_url }}">Iniciante</a></li>
+          <li><a href="{{ '/dicas-tecnicas-linux/' | relative_url }}">Dicas Técnicas</a></li>
+          <li><a href="{{ '/scripts-bash-linux/' | relative_url }}">Bash</a></li>
+          <li><a href="{{ '/links-uteis-linux-python/' | relative_url }}">Links uteis</a></li>
+          <li><a href="{{ '/caixa-ferramentas-javascript/' | relative_url }}">Ferramentas</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="{{ '/jogos/' | relative_url }}">Jogos</a>
+      </li>
+      <li>
+        <a href="{{ '/reparar-boot-linux/' | relative_url }}">Boot</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 </header>
+
