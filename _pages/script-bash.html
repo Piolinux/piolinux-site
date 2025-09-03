@@ -1,0 +1,187 @@
+---
+layout: default
+title: "Scripts Bash para Linux: Automação, Segurança"
+description: "Aprenda a criar scripts Bash para automação, administração, segurança e desenvolvimento. Exemplos práticos para quem usa terminal."
+date: 2025-09-06
+author: "PioLinux"
+categories: [linux, bash, automação]
+tags: [bash, shell script, automação, terminal, linux, script, produtividade]
+permalink: /scripts-bash-linux/
+---
+
+
+
+   <section class="post-content">
+    <p>
+     Saca só, o Bash é tipo o idioma oficial nos terminais Linux. Com ele, dá pra deixar tudo automático, sabe? Tipo, organizar arquivos, dar um tapa no sistema, fazer cópia de segurança e um monte de outras paradas. aprender bash não exige ser um expert — basta curiosidade e prática. abaixo, veja exemplos úteis de scripts para o dia a dia.
+    </p>
+    <h2>
+     1. o básico de um script bash
+    </h2>
+    <p>
+     todo script bash começa com o shebang #!/bin/bash, que indica ao sistema qual interpretador usar.
+    </p>
+    <h3>
+     exemplo: olá mundo!
+    </h3>
+    <pre><code>#!/bin/bash
+# este é um comentário
+echo "olá, piolinux! este é o meu primeiro script bash."</code></pre>
+    <p>
+     salve como ola_mundo.sh, dê permissão com chmod +x ola_mundo.sh e execute com ./ola_mundo.sh.
+    </p>
+    <h2>
+     2. automação de tarefas diárias
+    </h2>
+    <h3>
+     atualizar o sistema automaticamente:
+    </h3>
+    <pre><code>#!/bin/bash
+echo "atualizando listas de pacotes..."
+sudo apt update
+
+echo "realizando upgrade de pacotes..."
+sudo apt upgrade -y
+
+echo "removendo pacotes desnecessários..."
+sudo apt autoremove -y
+
+echo "limpando o cache de pacotes..."
+sudo apt clean
+
+echo "sistema atualizado e limpo!"</code></pre>
+    <h3>
+     backup simples de pastas pessoais muito util:
+    </h3>
+    <pre><code>#!/bin/bash
+data=$(date +%y-%m-%d_%h-%m-%s)
+dir_backup="$home/backups"
+pastas_a_copiar=("$home/documentos" "$home/imagens")
+nome_arquivo="backup_pessoal_$data.tar.gz"
+
+mkdir -p "$dir_backup"
+echo "iniciando backup das pastas: ${pastas_a_copiar[@]}"
+tar -czvf "$dir_backup/$nome_arquivo" "${pastas_a_copiar[@]}"
+
+echo "backup concluído! arquivo: $dir_backup/$nome_arquivo"</code></pre>
+    <h2>
+     3. administração de sistema
+    </h2>
+    <h3>
+     monitorar a utilização do disco e enviar alerta:
+    </h3>
+    <pre><code>#!/bin/bash
+limite_percentual=80
+particao="/dev/sda1"
+email_admin="seuemail@exemplo.com"
+
+uso=$(df -h "$particao" | awk 'nr==2 {print $5}' | sed 's/%//g')
+
+if (( uso &gt; limite_percentual )); then
+    echo "alerta: uso de disco na partição $particao está em $uso%!" | mail -s "alerta de disco" "$email_admin"
+else
+    echo "uso de disco normal: $uso%"
+fi</code></pre>
+    <h3>
+     criar múltiplos usuários:
+    </h3>
+    <pre><code>#!/bin/bash
+arquivo_usuarios="lista_usuarios.txt"
+
+if [ ! -f "$arquivo_usuarios" ]; then
+    echo "arquivo $arquivo_usuarios não encontrado."
+    exit 1
+fi
+
+while ifs= read -r usuario; do
+    if [ -n "$usuario" ]; then
+        echo "criando usuário: $usuario"
+        sudo useradd -m "$usuario"
+        sudo passwd "$usuario"
+    fi
+done &lt; "$arquivo_usuarios"
+
+echo "usuários criados com sucesso."</code></pre>
+    <p>
+     conteúdo de lista_usuarios.txt:
+    </p>
+    <pre><code>joao
+maria
+pedro
+ana</code></pre>
+    <h2>
+     4. segurança e monitoramento
+    </h2>
+    <h3>
+     verificar portas abertas:
+    </h3>
+    <pre><code>#!/bin/bash
+echo "listando portas abertas:"
+sudo netstat -tulpn
+
+echo -e "\nstatus do firewall (ufw):"
+sudo ufw status</code></pre>
+    <h3>
+     monitorar tentativas de login ssh:
+    </h3>
+    <pre><code>#!/bin/bash
+arquivo_log="/var/log/auth.log"
+
+echo "tentativas de login ssh falhas:"
+grep "failed password" "$arquivo_log" | tail -n 50 | awk '{print $11}' | sort | uniq -c | sort -nr</code></pre>
+    <h2>
+     5. scripts para desenvolvimento web
+    </h2>
+    <h3>
+     servidor http local com python:
+    </h3>
+    <pre><code>#!/bin/bash
+porta=8000
+echo "servidor em http://localhost:$porta"
+python3 -m http.server $porta</code></pre>
+    <h3>
+     deploy simples via rsync/ssh:
+    </h3>
+    <pre><code>#!/bin/bash
+dir_local="./public_html/"
+usuario_remoto="usuario"
+ip_servidor="192.168.0.1"
+dir_remoto="/var/www/html/"
+
+rsync -avz --delete "$dir_local" "$usuario_remoto@$ip_servidor:$dir_remoto"
+
+if [ $? -eq 0 ]; then
+    echo "deploy realizado com sucesso!"
+else
+    echo "erro no deploy."
+fi</code></pre>
+    <h2>
+     6. utilidades e truques avançados
+    </h2>
+    <h3>
+     calculadora via terminal:
+    </h3>
+    <pre><code>#!/bin/bash
+if [ -z "$1" ]; then
+    echo "uso: ./calculadora.sh \"10 + 5 * 2\""
+    exit 1
+fi
+
+resultado=$(echo "scale=2; $1" | bc -l)
+echo "resultado: $resultado"</code></pre>
+    <h3>
+     gerar álbum de fotos html:
+    </h3>
+    <pre><code>#!/bin/bash
+dir_fotos="./fotos"
+arquivo_html="album.html"
+
+echo "" &gt; "$arquivo_html"
+echo "" &gt;&gt; "$arquivo_html"
+echo "</code></pre>
+    <p>
+     minhas foto
+    </p>
+   </section>
+ 
+ 

@@ -1,0 +1,306 @@
+---
+layout: default
+title: "Biblioteca Linux"
+permalink: /linux/
+---
+
+<main>
+    <h1>Biblioteca de Comandos de Linux</h1>
+    <p>Aqui você encontrará uma lista dos comandos mais úteis do Linux, organizados por categoria e distribuição.</p>
+
+    <div class="filters">
+        <button id="allBtn">Todos</button>
+        <button id="debianBtn">Debian/Ubuntu</button>
+        <button id="fedoraBtn">Fedora</button>
+        <button id="archBtn">Arch Linux</button>
+    </div>
+
+    <input type="text" id="searchInput" placeholder="Buscar por nome ou descrição...">
+
+    <div id="commandsList" class="commands-list">
+        </div>
+
+</main>
+
+<style>
+    .filters button {
+        margin: 5px;
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        background-color: #f0f0f0;
+        cursor: pointer;
+    }
+    .commands-list {
+        margin-top: 20px;
+    }
+    .command-item {
+        border-bottom: 1px solid #eee;
+        padding: 10px 0;
+    }
+    .command-item strong {
+        color: #28a745;
+    }
+    .command-examples {
+        font-size: 0.9em;
+        color: #555;
+        margin-top: 5px;
+        padding-left: 20px;
+    }
+    .command-examples code {
+        background-color: #f4f4f4;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: monospace;
+    }
+</style>
+
+<script>
+    const commands = [
+        // Comandos de Gerenciamento de Arquivos
+        { 
+            name: "ls", 
+            description: "Lista o conteúdo de um diretório.", 
+            category: "Arquivos", 
+            distro: "general",
+            examples: [
+                "ls -l (mostra detalhes)",
+                "ls -a (mostra arquivos ocultos)",
+                "ls -lh (detalhes em formato legível)",
+                "ls -lSr (ordena por tamanho, reverso)"
+            ]
+        },
+        { name: "cp", description: "Copia arquivos ou diretórios.", category: "Arquivos", distro: "general" },
+        { name: "mv", description: "Move ou renomeia arquivos.", category: "Arquivos", distro: "general" },
+        { 
+            name: "rm", 
+            description: "Remove arquivos ou diretórios.", 
+            category: "Arquivos", 
+            distro: "general",
+            examples: [
+                "rm arquivo.txt",
+                "rm -r pasta/ (remove um diretório e seu conteúdo)",
+                "rm -rf pasta/ (remove um diretório sem confirmação)"
+            ]
+        },
+        { name: "mkdir", description: "Cria um novo diretório.", category: "Arquivos", distro: "general" },
+        { name: "touch", description: "Cria um novo arquivo vazio.", category: "Arquivos", distro: "general" },
+        { 
+            name: "find", 
+            description: "Busca arquivos em um diretório.", 
+            category: "Arquivos", 
+            distro: "general",
+            examples: [
+                "find . -name 'arquivo.txt'",
+                "find /home -type f -size +100M",
+                "find / -name '*.log' 2>/dev/null"
+            ]
+        },
+        { 
+            name: "grep", 
+            description: "Busca texto dentro de arquivos.", 
+            category: "Arquivos", 
+            distro: "general",
+            examples: [
+                "grep 'termo' arquivo.txt",
+                "grep -i 'termo' arquivo.txt (ignora maiúsculas/minúsculas)",
+                "grep -r 'termo' . (busca recursiva em diretórios)",
+                "grep -c 'termo' arquivo.txt (conta ocorrências)"
+            ]
+        },
+
+        // Comandos de Compactação
+        { 
+            name: "tar", 
+            description: "Cria e extrai arquivos compactados (tarball).", 
+            category: "Compactação", 
+            distro: "general",
+            examples: [
+                "tar -cvf arquivo.tar pasta/ (cria um pacote)",
+                "tar -xvf arquivo.tar (extrai um pacote)",
+                "tar -cvzf arquivo.tar.gz pasta/ (cria com compressão gzip)",
+                "tar -xvfz arquivo.tar.gz (extrai um gzip)"
+            ]
+        },
+        { name: "gzip", description: "Comprime ou descomprime arquivos.", category: "Compactação", distro: "general" },
+        { name: "zip", description: "Empacota e comprime arquivos.", category: "Compactação", distro: "general" },
+        { name: "unzip", description: "Descompacta arquivos .zip.", category: "Compactação", distro: "general" },
+        
+        // Comandos de Gerenciamento de Processos
+        { name: "ps", description: "Exibe os processos em execução.", category: "Processos", distro: "general" },
+        { name: "top", description: "Mostra o uso do processador, memória e processos.", category: "Processos", distro: "general" },
+        { name: "htop", description: "Versão interativa do 'top'.", category: "Processos", distro: "general" },
+        { name: "kill", description: "Envia um sinal para terminar um processo.", category: "Processos", distro: "general" },
+        { name: "killall", description: "Mata processos pelo nome.", category: "Processos", distro: "general" },
+        { name: "pstree", description: "Exibe a árvore de processos.", category: "Processos", distro: "general" },
+
+        // Comandos de Rede
+        { 
+            name: "ping", 
+            description: "Testa a conectividade com um host na rede.", 
+            category: "Rede", 
+            distro: "general",
+            examples: [
+                "ping google.com",
+                "ping -c 5 google.com (envia 5 pacotes)",
+                "ping -i 1 google.com (intervalo de 1 segundo)"
+            ]
+        },
+        { name: "ifconfig", description: "Mostra e configura interfaces de rede.", category: "Rede", distro: "general" },
+        { name: "ip", description: "Utilitário moderno para gerenciar redes.", category: "Rede", distro: "general" },
+        { name: "netstat", description: "Exibe conexões de rede e estatísticas.", category: "Rede", distro: "general" },
+        { 
+            name: "ssh", 
+            description: "Cliente de Secure Shell para acesso remoto.", 
+            category: "Rede", 
+            distro: "general",
+            examples: [
+                "ssh usuario@host",
+                "ssh -p 2222 usuario@host (porta diferente)",
+                "scp arquivo.txt usuario@host:/caminho/ (copia arquivos)"
+            ]
+        },
+        { name: "curl", description: "Transfere dados de ou para um servidor.", category: "Rede", distro: "general" },
+        { name: "wget", description: "Baixa arquivos da internet.", category: "Rede", distro: "general" },
+        
+        // Comandos do Sistema e Hardware
+        { 
+            name: "df", 
+            description: "Mostra o uso do disco e espaço livre.", 
+            category: "Sistema", 
+            distro: "general",
+            examples: [
+                "df -h (formato legível)",
+                "df -ah (inclui todos os sistemas de arquivo)"
+            ]
+        },
+        { 
+            name: "du", 
+            description: "Estima o uso de espaço em disco de arquivos e diretórios.", 
+            category: "Sistema", 
+            distro: "general",
+            examples: [
+                "du -sh pasta/ (tamanho total da pasta)",
+                "du -h | sort -h (maiores arquivos/pastas)"
+            ]
+        },
+        { name: "free", description: "Exibe a quantidade de memória livre e usada.", category: "Sistema", distro: "general" },
+        { name: "uname", description: "Mostra informações do sistema (kernel, arquitetura).", category: "Sistema", distro: "general" },
+        { name: "lscpu", description: "Mostra informações sobre a arquitetura do processador.", category: "Sistema", distro: "general" },
+        { name: "lshw", description: "Lista informações detalhadas de hardware.", category: "Sistema", distro: "general" },
+        { name: "lspci", description: "Lista os dispositivos PCI.", category: "Sistema", distro: "general" },
+        { name: "dmesg", description: "Exibe mensagens do kernel.", category: "Sistema", distro: "general" },
+        
+        // Comandos de Usuários e Permissões
+        { name: "whoami", description: "Exibe o nome de usuário atual.", category: "Usuários & Permissões", distro: "general" },
+        { name: "who", description: "Mostra quem está logado no sistema.", category: "Usuários & Permissões", distro: "general" },
+        { name: "su", description: "Troca para outro usuário.", category: "Usuários & Permissões", distro: "general" },
+        { name: "sudo", description: "Executa um comando como superusuário.", category: "Usuários & Permissões", distro: "general" },
+        { name: "chmod", description: "Muda as permissões de acesso de arquivos.", category: "Usuários & Permissões", distro: "general" },
+        { name: "chown", description: "Muda o proprietário de arquivos.", category: "Usuários & Permissões", distro: "general" },
+        { name: "useradd", description: "Cria um novo usuário.", category: "Usuários & Permissões", distro: "general" },
+        { name: "usermod", description: "Modifica as propriedades de um usuário.", category: "Usuários & Permissões", distro: "general" },
+        { name: "passwd", description: "Muda a senha de um usuário.", category: "Usuários & Permissões", distro: "general" },
+
+        // Gerenciadores de Pacotes (Distro-specific)
+        { 
+            name: "apt", 
+            description: "Gerenciador de pacotes para Debian, Ubuntu e derivados.", 
+            category: "Gerenciamento de Pacotes", 
+            distro: "debian",
+            examples: [
+                "sudo apt update",
+                "sudo apt upgrade",
+                "sudo apt install pacote",
+                "sudo apt remove pacote",
+                "sudo apt purge pacote (remove com configurações)"
+            ]
+        },
+        { name: "dpkg", description: "Ferramenta de baixo nível para pacotes .deb.", category: "Gerenciamento de Pacotes", distro: "debian" },
+        { 
+            name: "dnf", 
+            description: "Gerenciador de pacotes para Fedora e Red Hat.", 
+            category: "Gerenciamento de Pacotes", 
+            distro: "fedora",
+            examples: [
+                "sudo dnf update",
+                "sudo dnf install pacote",
+                "sudo dnf remove pacote"
+            ]
+        },
+        { name: "pacman", description: "Gerenciador de pacotes para Arch Linux.", category: "Gerenciamento de Pacotes", distro: "arch" },
+        { name: "yay", description: "Ferramenta para o AUR (Arch User Repository).", category: "Gerenciamento de Pacotes", distro: "arch" }
+    ];
+
+    let currentDistroFilter = 'all';
+
+    function renderCommands() {
+        const commandsList = document.getElementById('commandsList');
+        commandsList.innerHTML = '';
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+        const filteredCommands = commands.filter(command => {
+            const distroMatch = (currentDistroFilter === 'all' || command.distro === currentDistroFilter || command.distro === 'general');
+            const searchMatch = (command.name.toLowerCase().includes(searchTerm) || command.description.toLowerCase().includes(searchTerm));
+            return distroMatch && searchMatch;
+        });
+
+        const groupedCommands = filteredCommands.reduce((acc, cmd) => {
+            (acc[cmd.category] = acc[cmd.category] || []).push(cmd);
+            return acc;
+        }, {});
+
+        for (const category in groupedCommands) {
+            const categoryHeader = document.createElement('h3');
+            categoryHeader.textContent = category;
+            commandsList.appendChild(categoryHeader);
+
+            groupedCommands[category].forEach(command => {
+                const commandElement = document.createElement('div');
+                commandElement.className = 'command-item';
+                commandElement.innerHTML = `<strong>${command.name}</strong>: ${command.description}`;
+                
+                if (command.examples && command.examples.length > 0) {
+                    const examplesList = document.createElement('div');
+                    examplesList.className = 'command-examples';
+                    command.examples.forEach(example => {
+                        const exampleItem = document.createElement('div');
+                        exampleItem.innerHTML = `Exemplo: <code>${example}</code>`;
+                        examplesList.appendChild(exampleItem);
+                    });
+                    commandElement.appendChild(examplesList);
+                }
+                
+                commandsList.appendChild(commandElement);
+            });
+        }
+        
+        if (filteredCommands.length === 0) {
+            commandsList.innerHTML = '<p>Nenhum comando encontrado para os filtros selecionados.</p>';
+        }
+    }
+
+    window.onload = () => {
+        renderCommands();
+
+        document.getElementById('debianBtn').addEventListener('click', () => {
+            currentDistroFilter = 'debian';
+            renderCommands();
+        });
+        document.getElementById('fedoraBtn').addEventListener('click', () => {
+            currentDistroFilter = 'fedora';
+            renderCommands();
+        });
+        document.getElementById('archBtn').addEventListener('click', () => {
+            currentDistroFilter = 'arch';
+            renderCommands();
+        });
+        document.getElementById('allBtn').addEventListener('click', () => {
+            currentDistroFilter = 'all';
+            renderCommands();
+        });
+        
+        document.getElementById('searchInput').addEventListener('input', () => {
+            renderCommands();
+        });
+    };
+</script>
