@@ -8,21 +8,12 @@ tags: [terminal, linux, windows, macos, wsl, powershell, bash, tutorial]
 permalink: /comparativo-terminais/
 ---
 
-<style>
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 20px 0;
-}
-th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
-}
-th {
-  background-color: #67a879;
-}
-</style>
+{% include toc.html %}
+
+
+<section class="post-content">
+
+
 
 
 
