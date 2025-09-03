@@ -7,7 +7,7 @@ categories: [linux, historia, distros]
 tags: [distros, linux, novato, ubuntu, debian, arch, fedora]
 description: "Siga a jornada de um novato no Linux, perdido entre Ubuntu, Debian, Arch e Fedora. Uma aventura divertida pela 'guerra das distros"
 permalink: /jornada-do-novato-guerra-das-distros/
-----
+---
 
 
 {% include toc.html %}
