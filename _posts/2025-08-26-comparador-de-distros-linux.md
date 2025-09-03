@@ -331,5 +331,5 @@ permalink: /comparador-distros/
 </table>
 
 
-<h3>✅ Conclusão</h2>
+<h3>✅ Conclusão</h3>
 <p>Não existe a "melhor" distro — existe a <strong>mais adequada para você</strong>. Use este comparador para escolher com confiança, seja para desktop, servidor ou aprendizado.</p>
