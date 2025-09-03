@@ -68,6 +68,14 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag 
   - jekyll-paginate 
+
+include:
+  - _pages
+
+collections:
+  pages:
+    output: true
+    permalink: /:title/
   
 # Exclude from processing.
 # The following items will not be processed, by default.
