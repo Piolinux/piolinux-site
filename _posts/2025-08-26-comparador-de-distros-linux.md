@@ -10,18 +10,20 @@ permalink: /comparador-distros/
 
 {% include toc.html %}
 
-
+<section>
 
 <p>
-  Escolher uma distribuição Linux ou sistema BSD só por modinha pode dar problema.
+  Escolher uma distribuição Linux ou um sistema BSD só por modinha pode dar problema.
   <br>
-  Algumas exigem 16 GB de RAM. Outras rodam em PCs de 2005.
+  Algumas exigem 16 GB de RAM. Outras rodam até em PCs de 2005.
   <br>
-  Use este <strong>comparador interativo</strong> para escolher com base em:
-  <br>• Hardware do seu PC
-  <br>• Nível de experiência
-  • Objetivo (segurança, produtividade, aprendizado)
+  Use este <strong>comparador interativo</strong> para escolher com base no:
 </p>
+<ul>
+  <li><strong>Hardware do seu PC</strong> – evite travamentos e gargalos</li>
+  <li><strong>Nível de experiência</strong> – iniciante, intermediário ou avançado</li>
+  <li><strong>Objetivo</strong> – segurança, produtividade, aprendizado ou servidores</li>
+</ul>
 
 <h2>Escolha uma distribuição:</h2>
 <select id="distro" style="width: 100%; padding: 8px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px;">
@@ -333,3 +335,4 @@ permalink: /comparador-distros/
 
 <h3>✅ Conclusão</h3>
 <p>Não existe a "melhor" distro — existe a <strong>mais adequada para você</strong>. Use este comparador para escolher com confiança, seja para desktop, servidor ou aprendizado.</p>
+</section>
