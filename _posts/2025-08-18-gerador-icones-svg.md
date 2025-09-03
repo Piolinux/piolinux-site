@@ -398,12 +398,4 @@ body {
 
 
 
-<div style="background:#f1f8e9; padding:1em; border-radius:8px; margin:1em 0;">
-  <strong>Exemplo:</strong> Círculo verde com Tux
-  <pre><code><svg width="48" height="48" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="24" cy="24" r="22" fill="#2e7d32"/>
-  <text x="24" y="28" font-size="16" text-anchor="middle" fill="white">🐧</text>
-</svg></code></pre>
-</div>
-
 
