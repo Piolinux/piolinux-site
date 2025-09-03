@@ -85,11 +85,11 @@ permalink: /gerador-slug-jekyll/
 <input type="date" id="data" style="padding: 8px; border: 1px solid #FFFFFF; border-radius: 4px;" />
 
 <p><strong>Nome do arquivo sugerido:</strong></p>
-<div id="resultado" style="background: #FFFFFF; padding: 10px; border-radius: 4px; font-family: monospace; word-break: break-word;">
+<div id="resultado" style="background: #000000; padding: 10px; border-radius: 4px; font-family: monospace; word-break: break-word;">
   ...
 </div>
 
-<button id="copiar" style="margin-top: 10px; padding: 8px 12px; background: #008000; color:#000000; border: none; border-radius: 4px; cursor: pointer;">
+<button id="copiar" style="margin-top: 10px; padding: 8px 12px; background: #008000; color:#1A1A1A; border: none; border-radius: 4px; cursor: pointer;">
   📋 Copiar Nome
 </button>
 
