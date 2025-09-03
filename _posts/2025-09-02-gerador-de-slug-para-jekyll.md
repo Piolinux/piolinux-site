@@ -89,7 +89,7 @@ permalink: /gerador-slug-jekyll/
   ...
 </div>
 
-<button id="copiar" style="margin-top: 10px; padding: 8px 12px; background: #008000; color:#1A1A1A; border: none; border-radius: 4px; cursor: pointer;">
+<button id="copiar" style="margin-top: 10px; padding: 8px 12px; background: #008000; color:#000000; border: none; border-radius: 4px; cursor: pointer;">
   📋 Copiar Nome
 </button>
 
