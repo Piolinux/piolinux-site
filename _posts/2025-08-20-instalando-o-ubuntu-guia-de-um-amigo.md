@@ -1,11 +1,12 @@
 ---
 layout: default
-title: "Instalando o Ubuntu: O Guia de um Amigo para Você"
+title: "Instalar Ubuntu: Guia Simples e Seguro para Iniciantes"
 date: 2025-08-20
-categories: [Ubuntu, Linux, Tutoriais]
-description: "Um guia de amigo para instalar o Ubuntu de forma simples e divertida. Passo a passo fácil, sem complicação!"
-tags: [Ubuntu, Linux, Instalação, Sistema Operacional, Tutoriais, Software Livre]
-author: "Piolinux"
+author: "PioLinux"
+categories: [ubuntu, linux, tutoriais]
+tags: [ubuntu, linux, instalacao, tutorial, iniciantes, software_livre]
+description: "Guia passo a passo para instalar o Ubuntu de forma simples e segura. Ideal para quem está migrando do Windows ou usando Linux pela primeira vez."
+permalink: /instalar-ubuntu-guia-iniciantes/
 ---
 
 {% include toc.html %}

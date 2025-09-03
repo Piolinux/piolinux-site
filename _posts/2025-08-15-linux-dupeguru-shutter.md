@@ -2,11 +2,12 @@
 layout: default
 title: "Ferramentas Essenciais para Linux: DupeGuru e Shutter"
 date: 2025-08-15
-description: "Encontre e remova arquivos duplicados com o DupeGuru e faça capturas avançadas com o Shutter. Otimize seu Linux com essas duas ferramentas essenciais."
-categories: linux
-tags: [dupeguru, shutter, linux, ferramentas]
-author: "Piolinux"
----
+author: "PioLinux"
+categories: [linux, ferramentas, produtividade]
+tags: [dupeguru, shutter, ferramentas, linux, produtividade]
+description: "Descubra DupeGuru para remover arquivos duplicados e Shutter para capturas avançadas. Duas ferramentas essenciais para quem usa Linux no dia a dia."
+permalink: /ferramentas-dupeguru-shutter-linux/
+----
 
 
 {% include toc.html %}

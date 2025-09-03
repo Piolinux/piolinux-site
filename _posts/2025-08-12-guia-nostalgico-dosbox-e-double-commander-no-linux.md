@@ -1,11 +1,12 @@
 ---
 layout: default
 title: "Guia Nostálgico: DOSBox e Double Commander no Linux"
-author: "Piolinux"
-date: 2025-08-12 11:58:05 -0300
-categories: [Linux, Tutoriais, Ferramentas]
-tags: [DOSBox, Double Commander, MS-DOS, jogos antigos, gerenciador de arquivos, modo root]
-description: "Reviva jogos antigos com o DOSBox e gerencie arquivos no modo root com o Double Commander. Um guia completo e nostálgico para usuários de Linux."
+date: 2025-08-12
+author: "PioLinux"
+categories: [linux, retro, ferramentas]
+tags: [dosbox, double commander, emulação, gerenciador de arquivos, nostalgia]
+description: "Reviva os anos 90 com DOSBox e Double Commander no Linux. Guia nostálgico para rodar jogos DOS e gerenciar arquivos com estilo de interface dupla."
+permalink: /guia-nostalgico-dosbox-double-commander/
 ---
 
 
@@ -72,6 +73,12 @@ description: "Reviva jogos antigos com o DOSBox e gerencie arquivos no modo root
             <div class="bg-gray-800 text-white p-4 rounded-lg mb-8">
                 <pre><code class="font-mono">sudo apt-get install doublecmd-qt</code></pre>
             </div>
+<h3>📂 Double Commander: Herdeiro do Total Commander</h3>
+<p>Gerenciador de arquivos com duas colunas, atalhos poderosos e suporte a plugins. Perfeito para quem ama produtividade no estilo DOS.</p>
+<pre><code>sudo apt install doublecmd-qt</code></pre>
+
+h3>✅ Conclusão</h3>
+<p>Os anos 90 não acabaram — só mudaram de terminal. Com <strong>DOSBox</strong> e <strong>Double Commander</strong>, você revive a nostalgia com performance moderna. E o melhor: tudo no <strong>Linux</strong>.</p>
 
             <p class="text-lg leading-relaxed">
                 Se você tem curiosidade, pode pesquisar por outros "dez programas Commander". Opções não faltam para escolher, e o interessante é testar e explorar todos os recursos oferecidos por esses gerenciadores de arquivos.

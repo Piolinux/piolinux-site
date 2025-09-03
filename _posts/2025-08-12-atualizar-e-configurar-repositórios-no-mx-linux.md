@@ -1,11 +1,12 @@
 ---
 layout: default
 title: "Atualizar e configurar repositórios no MX Linux"
-author: "Piolinux"
-date: 2025-08-12 09:37:28 -0300
-categories: [Linux, Tutoriais, MX Linux]
-tags: [MX Linux, Debian, Repositórios, Atualização, Terminal, Guia]
-description: "Um guia rápido e inteligente para atualizar e configurar repositórios na Distro MX Linux, usando suas ferramentas gráficas para iniciantes e experientes."
+date: 2025-08-12
+author: "PioLinux"
+categories: [mx linux, linux, atualizacao, configuracao]
+tags: [mx linux, repositórios, atualização, apt, debian, segurança]
+description: "Aprenda a atualizar e configurar repositórios no MX Linux corretamente. Mantenha seu sistema seguro, estável e com acesso aos melhores pacotes do Debian."
+permalink: /configurar-repositorios-mx-linux/
 ---
 
 
@@ -35,4 +36,22 @@ description: "Um guia rápido e inteligente para atualizar e configurar reposit�
             </ul>
         </section>
 
+
+<h3>🔁 Atualizar lista de pacotes</h3>
+<pre><code>sudo apt update</code></pre>
+
+<h3>📦 Atualizar sistema</h3>
+<pre><code>sudo apt full-upgrade</code></pre>
+
+<h3>🔧 Editar repositórios</h3>
+<pre><code>sudo geany /etc/apt/sources.list.d/mx.list</code></pre>
+
+<p>Exemplo de linha válida:</p>
+<pre><code>deb http://mxrepo.com/mx/repo/ bookworm main non-free</code></pre>
+
+
+
+
+<h2>✅ Conclusão</h2>
+<p>Configurar repositórios corretamente é o primeiro passo para um <strong>MX Linux seguro e atualizado</strong>. Com este guia, você evita erros comuns e mantém seu sistema com o melhor do Debian e do MX. Agora, é só manter o <code>apt update</code> em dia.</p>
 

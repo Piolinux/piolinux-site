@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Tabela Comparativa de Terminais: Linux, macOS e Windows"
+title: "Terminais Linux, macOS e Windows: Comparativo Completo"
+description: "Compare os terminais do Linux (bash/zsh), macOS (Terminal/iTerm) e Windows (CMD, PowerShell, WSL). Tabela clara para sysadmins e devs multiplataforma."
 date: 2025-08-28 10:00:00 -0300
-categories: terminal linux windows macos jekyll
+categories: terminal linux windows macos
 tags: [terminal, linux, windows, macos, wsl, powershell, bash, tutorial]
-description: "Tabela clara e compatível com Jekyll comparando terminais do Linux, macOS e Windows."
+permalink: /comparativo-terminais/
 ---
-
 
 <style>
 table {

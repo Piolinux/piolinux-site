@@ -2,9 +2,11 @@
 layout: default
 title: "Gerador de Ícones SVG: Código Limpo e Design Livre"
 date: 2025-08-18
-author: "Piolinux"
-tags: [SVG, Ícones, Gerador, Código, Design, Webdev]
+author: "PioLinux"
+categories: ferramentas svg design webdev
+tags: [svg, icones, gerador, codigo, design, webdev]
 description: "Crie ícones SVG personalizados com código limpo e design livre. Gere gráficos leves, modernos e responsivos para seus projetos web em segundos."
+permalink: /gerador-icoes-svg/
 ---
 
 
@@ -393,3 +395,15 @@ body {
             setupEventListeners();
         })(); // Fim da IIFE
     </script>
+
+
+
+<div style="background:#f1f8e9; padding:1em; border-radius:8px; margin:1em 0;">
+  <strong>Exemplo:</strong> Círculo verde com Tux
+  <pre><code><svg width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="24" cy="24" r="22" fill="#2e7d32"/>
+  <text x="24" y="28" font-size="16" text-anchor="middle" fill="white">🐧</text>
+</svg></code></pre>
+</div>
+
+

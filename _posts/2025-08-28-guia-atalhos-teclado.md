@@ -1,10 +1,11 @@
 ---
 layout: default
-title: "Tabela Completa: Atalhos de Teclado (Windows, macOS, Linux)"
+title: "Atalhos de Teclado: Windows, macOS e Linux (Tabela)"
+description: "Confira a tabela completa de atalhos de teclado para Windows, macOS e Linux. Ideal para quem trabalha com múltiplos sistemas e usa terminal no dia a dia."
 date: 2025-08-28 08:00:00 -0300
-categories: produtividade dica linux windows macos
-tags: [atalhos, jekyll, terminal, dica]
-description: "Tabela completa e organizada de atalhos de teclado para Windows, macOS e Linux. Funciona no Jekyll."
+categories: produtividade linux windows macos
+tags: [atalhos, produtividade, terminal, dica]
+permalink: /atalhos-de-teclado/
 ---
 
  

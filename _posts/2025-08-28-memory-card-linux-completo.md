@@ -1,10 +1,12 @@
 ---
 layout: default
-title: "Memory Card de Linux com 50 Comandos"
-description: "Revise 50 comandos essenciais do Linux com este memory card interativo."
-keywords: "linux, memory card, flashcard, comandos linux, tux, terminal, devops, sysadmin"
+title: "Memory Card de Linux: Revise 50 Comandos Essenciais"
+description: "Aprenda e revise 50 comandos essenciais do Linux com este memory card interativo. Perfeito para sysadmins, devops e estudantes que querem dominar o terminal."
 date: 2025-08-28 15:00:00 -0300
 author: "PioLinux"
+categories: ferramentas estudo linux
+tags: [linux, comandos, terminal, devops, sysadmin, estudo]
+permalink: /memory-card-linux/
 ---
 
 

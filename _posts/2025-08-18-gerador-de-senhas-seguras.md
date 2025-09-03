@@ -1,12 +1,13 @@
 ---
-title: Gerador de Senhas Seguras
 layout: default
+title: "Gerador de Senhas Fortes: Rápido, Simples e Seguro"
 date: 2025-08-18
-author: "Piolinux"
-description: Uma ferramenta online para gerar senhas fortes e únicas, protegendo as suas contas contra ataques de força bruta.
-tags: [ferramenta, segurança, senha, online]
+author: "PioLinux"
+categories: segurança ferramentas linux
+tags: [seguranca, senha, gerador, forte, unica]
+description: "Ferramenta simples para gerar senhas fortes com letras, números, símbolos e sem reutilização. Proteja-se contra ataques."
+permalink: /gerador-senhas-seguras/
 ---
-
 
 {% include toc.html %}
 

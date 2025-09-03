@@ -1,9 +1,11 @@
 ---
 layout: default
-title: "Gerador de Slug com .md para Jekyll"
-description: "Gera o nome do arquivo completo: data + slug + .md — ideal para _posts/"
+title: "Gerador de Arquivo para Jekyll: data + slug + .md"
+description: "Ferramenta simples que gera o nome completo do arquivo para Jekyll: AAAA-MM-DD-slug.md. Ideal para organizar posts em _posts/ com precisão e sem erros."
 date: 2025-09-02
+categories: ferramentas jekyll
 tags: [jekyll, ferramenta, markdown, produtividade]
+permalink: /gerador-slug-jekyll/
 ---
 
 

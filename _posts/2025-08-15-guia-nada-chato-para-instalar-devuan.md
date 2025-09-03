@@ -1,19 +1,13 @@
 ---
 layout: default
-title: "Guia Nada Chato para Instalar o Devuan"
+title: "Guia Nada Chato: Como Instalar o Devuan sem Systemd"
 date: 2025-08-15 18:22:00 -0300
-categories:
-  - Linux
-  - Devuan
-tags:
-  - Devuan
-  - Linux
-  - systemd
-  - guia
-  - instalação
-description: "Um guia fácil e descontraído para instalar o Devuan GNU+Linux. Aprenda a instalar o Devuan, uma alternativa sem o systemd, de uma forma que não o vai aborrecer."  
+author: "PioLinux"
+categories: [linux, devuan, guia]
+tags: [devuan, linux, sysvinit, guia, instalacao, sem_systemd]
+description: "Um guia fácil e descontraído para instalar o Devuan GNU+Linux. Aprenda a usar uma distribuição Linux sem systemd, de forma simples e sem se entediar."
+permalink: /guia-instalar-devuan/
 ---
-
 
 
 {% include toc.html %}

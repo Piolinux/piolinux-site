@@ -2,10 +2,11 @@
 layout: default
 title: "Instalar Slackware: Guia Completo para Iniciantes"
 date: 2025-08-21
-categories: [Slackware, Linux, Tutoriais]
-tags: [Slackware, Linux, Instalação, Terminal, Sistema Operacional, Tutoriais]
-description: "Um guia direto e conciso para a instalação do Slackware: um rito de passagem para quem quer realmente dominar o Linux."
-author: "Piolinux"
+author: "PioLinux"
+categories: [slackware, linux, tutoriais]
+tags: [slackware, linux, instalacao, terminal, sistema_operacional, tutorial]
+description: "Guia passo a passo para instalar o Slackware Linux: desde o boot até a configuração inicial. Ideal para quem quer dominar o terminal e entender o Linux."
+permalink: /instalar-slackware-guia-completo/
 ---
 
 {% include toc.html %}

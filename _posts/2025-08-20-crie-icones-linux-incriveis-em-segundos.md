@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "Crie Ícones Linux Incríveis em Segundos"
-date: 2025-08-20 19:55:00 -0300
-author: Piolinux
-categories: [Linux, Tutoriais, Ferramentas]
-tags: [Linux, Icones, Atalhos, Personalização]
-description: "Personalize seu Linux criando ícones incríveis em segundos! Aprenda atalhos e ferramentas para deixar seu sistema mais moderno e organizado."
+title: "Crie Ícones no Linux em Segundos: Personalização"
+date: 2025-08-20
+author: "PioLinux"
+categories: [linux, personalizacao, ferramentas]
+tags: [icones, linux, personalizacao, svg, geany, debian]
+description: "Aprenda a criar e personalizar ícones no Linux em segundos. Ferramentas, atalhos e dicas para deixar seu desktop moderno, rápido e com sua cara."
+permalink: /criar-icoes-linux/
 ---
-
 
 {% include toc.html %}
 
@@ -178,6 +178,14 @@ description: "Personalize seu Linux criando ícones incríveis em segundos! Apre
         </div>
     </div>
 </div>
+
+
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="30" fill="#2e7d32"/>
+  <text x="32" y="38" font-size="24" text-anchor="middle" fill="white">🐧</text>
+</svg>
+
+
 
 <script>
     const iconPaths = {

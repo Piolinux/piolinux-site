@@ -1,12 +1,13 @@
 ---
-title: Guia Descomplicado para a sua Ferramenta-Web
 layout: default
+title: "Guia Descomplicado: Crie Ferramentas Web com HTML Puro"
 date: 2025-08-18
-tags: [ferramenta, código, HTML, SVG, dicas]
-categoria: ferramentas
-description: Uma ferramenta simples e prática para formatar código HTML/XML e converter SVGs para Base64, ajudando a otimizar o seu site.
+author: "PioLinux"
+categories: ferramentas jekyll desenvolvimento web
+tags: [html, ferramenta, web, tutorial, codigo, puro]
+description: "Aprenda a criar ferramentas web simples e funcionais com HTML, CSS e JavaScript puro. Sem frameworks, sem complicações — só código limpo."
+permalink: /guia-ferramentas-web/
 ---
-
 
 {% include toc.html %}
 

@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "Meu primeiro post"
+title: "Início do Piolinux: Meu Primeiro Passo no Mundo Linux"
 date: 2025-08-09
-categories: [linux, dicas]
-tags: [linux, piolinux, tutorial]
-author: "Piolinux"
-description: "O artigo Meu primeiro post no Piolinux marca o início do blog com dicas, tutoriais e curiosidades sobre o universo Linux, sempre com um toque divertido."
+author: "PioLinux"
+categories: [linux, dicas, iniciante]
+tags: [linux, tutorial, primeiro-post, blog, piolinux]
+description: "Este é o início do Piolinux: um blog sobre Linux, dicas, tutoriais e curiosidades com um toque divertido. Bem-vindo(a) à minha jornada técnica!"
+permalink: /inicio-do-piolinux/
 ---
-
 
 
 ## Bem-vindo ao Piolinux 🚀

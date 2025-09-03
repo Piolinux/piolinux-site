@@ -1,11 +1,12 @@
 ---
 layout: default
-title: "Editores de Texto no Linux: Os Melhores pra você conhecer!"
-author: "Piolinux"
-description: "Conheça os melhores editores de texto para Linux, de opções simples a avançadas. Encontre o ideal para suas necessidades e aumente sua produtividade."
+title: "Editores de Texto no Linux: Os Melhores para Conhecer"
 date: 2025-08-15
-tags: [linux, editores de texto, software,produtividade,opensource]
-category: Linux
+author: "PioLinux"
+categories: [linux, editores, produtividade]
+tags: [linux, editor de texto, geany, vim, nano, code, opensource]
+description: "Conheça os melhores editores de texto para Linux — do simples Nano ao poderoso Vim e VS Code. Descubra qual combina com seu fluxo de trabalho."
+permalink: /editores-de-texto-linux/
 ---
 
 

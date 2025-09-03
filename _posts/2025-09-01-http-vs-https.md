@@ -1,10 +1,11 @@
 ---
 layout: default
-title: "Você viu aquele cadeadinho verde? Entenda HTTP vs HTTPS"
+title: "Você Viu o Cadeadinho Verde? Entenda HTTP vs HTTPS"
+description: "Entenda de forma simples a diferença entre HTTP e HTTPS, por que o cadeadinho verde importa e como o HTTPS protege seus dados na web."
 date: 2025-09-01 09:00:00 -0300
 categories: segurança web dica
 tags: [http, https, segurança, jekyll, iniciantes]
-description: "Você viu aquele cadeadinho verde? Entenda de forma simples a diferença entre HTTP e HTTPS e por que isso importa."
+permalink: /http-vs-https/
 ---
 
 

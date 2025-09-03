@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Contador de Caracteres para Redes Sociais"
-description: "Veja em tempo real quantos caracteres você usou. Ideal para X (Twitter), Instagram, títulos de blog e legendas."
+title: "Contador de Caracteres para Redes Sociais e Blog"
+description: "Veja em tempo real quantos caracteres você usou. Ideal para Twitter, Instagram, títulos de blog e legendas longas. Evite cortes inesperados."
+categories: ferramentas produtividade
 tags: [produtividade, redes-sociais, ferramenta, texto]
-category: ferramentas
 date: 2025-09-01 10:00:00 -0300
+permalink: /contador-caracteres/
 ---
-
 
 
 

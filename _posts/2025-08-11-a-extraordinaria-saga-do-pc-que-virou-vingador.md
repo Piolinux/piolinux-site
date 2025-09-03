@@ -1,11 +1,12 @@
 ---
 layout: default
-title: "A Extraordinária Saga do PC que Virou Vingador"
+title: "A Extraordinária Saga do PC que Virou Vingador do Linux"
 date: 2025-08-11
-categories: [linux, humor, tutorial]
-tags: [linux, humor, piolinux, ubuntu, terminal, documentação]
-author: "Piolinux"
-description: "Descubra a saga de um PC que se torna vingador, enfrentando bugs, vírus e desafios digitais, numa aventura épica pelo mundo da tecnologia."
+author: "PioLinux"
+categories: [linux, humor, historia, segurança]
+tags: [pc vingador, linux, terminal, segurança, bugs, vírus]
+description: "Siga a jornada de um PC que se torna vingador do Linux, enfrentando bugs, vírus e falhas de boot. Uma aventura épica pelo mundo digital."
+permalink: /saga-do-pc-vingador/
 ---
 
        {% include toc.html %}

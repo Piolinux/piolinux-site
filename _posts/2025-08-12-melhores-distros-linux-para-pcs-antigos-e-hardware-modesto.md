@@ -1,11 +1,12 @@
 ---
-layout:  default
+layout: default
 title: "Melhores distros Linux para PCs antigos e hardware modesto"
-author: "Piolinux"
-date: 2025-08-12 10:42:52 -0300
-categories: [Linux, Tutoriais, Hardware]
-tags: [distro leve, PC antigo, hardware razoável, Manjaro, Antix, Arch Bang, 4MLinux, Lxle]
-description: "Um guia completo sobre as melhores distros Linux para PCs antigos e hardware modesto. Descubra opções leves e eficientes para dar uma nova vida à sua máquina."
+date: 2025-08-12
+author: "PioLinux"
+categories: [linux, distros, performance]
+tags: [distros, linux, pc antigo, leve, debian, lubuntu, mx linux, antix]
+description: "Descubra as melhores distribuições Linux para PCs antigos e hardware com pouca RAM. Comparativo entre Lubuntu, Debian, MX Linux, antiX"
+permalink: /distros-linux-pc-antigo/
 ---
 
 

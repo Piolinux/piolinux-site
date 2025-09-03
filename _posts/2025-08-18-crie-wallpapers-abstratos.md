@@ -1,12 +1,13 @@
 ---
-title: Crie Wallpapers Abstratos no Seu Blog 
 layout: default
+title: "Crie Wallpapers Abstratos com SVG: Código no Seu Blog"
 date: 2025-08-18
-author: "Piolinux"
-description: Uma ferramenta interativa para criar wallpapers e desenhos personalizados diretamente no seu navegador, sem precisar de serviços externos.
-tags: [ferramenta, código, HTML, SVG, dicas]
+author: "PioLinux"
+categories: svg arte ferramentas jekyll
+tags: [wallpaper, svg, abstrato, gerador, html, codigo, blog]
+description: "Ferramenta interativa para criar wallpapers abstratos com SVG diretamente no seu blog. Gere arte vetorial com código puro, sem dependência."
+permalink: /wallpapers-abstratos-svg/
 ---
-
 
 
 {% include toc.html %}

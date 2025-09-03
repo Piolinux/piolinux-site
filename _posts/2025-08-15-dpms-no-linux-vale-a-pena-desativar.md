@@ -1,11 +1,12 @@
 ---
 layout: default
 title: "DPMS no Linux: Vale a Pena Desativar? Minha Experiência"
-author: "Piolinux"
-date: 2025-08-12 12:24:44 -0300
-categories: [Linux, Tutoriais, Dicas]
-tags: [DPMS, xset, economia de energia, monitor, comando]
-description: "Uma experiência pessoal sobre a função DPMS no Linux. Descubra se vale a pena desativar a economia de energia do monitor e como usar o comando xset de forma segura."
+date: 2025-08-15
+author: "PioLinux"
+categories: [linux, energia, monitor, dpms]
+tags: [dpms, linux, economia de energia, tela preta, monitor]
+description: "Vale a pena desativar o DPMS no Linux? Minha experiência com economia de energia, tela preta e manutenção de monitores em uso contínuo."
+permalink: /dpms-no-linux-vale-a-pena-desativar/
 ---
 
 {% include toc.html %}

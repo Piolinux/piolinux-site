@@ -1,11 +1,13 @@
 ---
 layout: default
-title: "Como Configurar Cores no Terminal para Conforto Visual"
-description: "Veja todas as cores ANSI do terminal Linux: 8 cores básicas, versões brilhantes (bright), códigos e exemplos de uso em scripts e prompts."
-keywords: "cores linux, cores terminal, ANSI colors, bash colors, prompt colors, terminal colors"
+title: "Terminal Verde: Cores para Conforto Visual no Debian"
+description: "Aprenda a configurar cores no terminal Linux para reduzir o cansaço visual. Inclui tabela ANSI, exemplos de prompt e dicas para Geany + Debian."
+date: 2025-08-26
 author: "PioLinux"
+categories: terminal linux debian configuracao
+tags: [terminal, cores, debian, geany, prompt, ansi, conforto-visual]
+permalink: /cores-terminal-conforto-visual/
 ---
-
 
 {% include toc.html %}
 
