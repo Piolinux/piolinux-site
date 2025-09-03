@@ -10,26 +10,12 @@ permalink: /atalhos-de-teclado/
 
  
 
-<style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 16px;
-  }
-  th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-  }
-  th {
-    background-color: #2a732c;
-    font-weight: bold;
-  }
-  tr:nth-child(even) {
-    background-color: #2a732c;
-  }
-</style>
+{% include toc.html %}
+
+
+<section class="post-content">
+
+
 
 <h2>🖥️ Tabela de Atalhos: Windows, macOS, Linux</h2>
 <p><em>Organizada por categoria. Sem excessos. Só o que você precisa.</em></p>
