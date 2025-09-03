@@ -7,7 +7,7 @@ categories: [linux, produtividade, ferramentas]
 tags: [produtividade, ferramentas, linux, terminal, geany, automatizacao]
 description: "Descubra as ferramentas essenciais para aumentar sua produtividade no Linux: desde o terminal até editores de texto, gerenciadores de janelas."
 permalink: /ferramentas-produtividade-linux/
-----
+---
 
 
 
