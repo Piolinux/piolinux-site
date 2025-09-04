@@ -17,7 +17,7 @@ permalink: /memory-card-linux/
             
 
 
-<div id="container" style="max-width:960px;margin:0 auto;padding:20px;font-family:sans-serif;line-height:1.7;color:#333;transition:background-color 0.3s,color 0.3s;">
+<div id="container" style="max-width:960px;margin:0 auto;padding:20px;font-family:sans-serif;line-height:1.7;color:#FFFFFF;transition:background-color 0.3s,color 0.3s;">
   <h2 style="text-align:center;color:#2c3e50;">🧠 Memory Card de Linux</h2>
   <p style="text-align:center;font-size:1.1em;color:#555;">Revise <strong>50 comandos essenciais</strong> do Linux.<br>Clique no card para virar. Use os botões para navegar.</p>
 
@@ -178,3 +178,28 @@ permalink: /memory-card-linux/
   totalSpan.textContent = flashcards.length;
   updateCard();
 </script>
+
+
+<h2>✅ Conclusão</h2>
+
+
+<p>Não necessário lembrar todos os 50 comandos de uma vez.  
+Mas quando precisar de <code>rsync</code> para copiar com segurança,  
+ou <code>find</code> para localizar um arquivo escondido,  
+ou <code>chmod</code> para corrigir permissões no servidor,  
+você já sabe: não precisa procurar. Você já viu aqui. E vai lembrar.</p>
+
+<p>Este memory card não é para guardar na pasta "docs".  
+É para deixar aberto no segundo monitor.  
+Para revisar antes de entrar no terminal.  
+Para virar reflexo — como <code>Ctrl + C</code>, <code>Ctrl + V</code>, <code>sudo</code>.</p>
+
+<p>Use. Erre. Corrija. Automatize.  
+E um dia, alguém vai te perguntar:  
+"Como você faz tudo isso no terminal?"  
+Você nem responde.  
+Só digita.</p>
+
+
+
+
