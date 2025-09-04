@@ -1,0 +1,37 @@
+---
+layout: default
+title: "Blackjack em JavaScript: Jogue 21 no Navegador (2025)"
+description: "Jogue Blackjack contra o computador. Tente chegar o mais perto possível de 21 sem estourar! Feito com HTML, CSS e JavaScript puro — sem frameworks."
+date: 2025-10-04
+author: "PioLinux"
+categories: [jogos, javascript]
+tags: [blackjack, jogos, cartas, javascript, html]
+permalink: /jogo-blackjack/
+---
+
+<section>
+
+
+
+<div class="game-container">
+    <h2>15. Blackjack</h2>
+    <p id="blackjackMessage">Clique em "Novo Jogo" para começar!</p>
+    <div>
+        <h3>Sua Mão: <span id="playerScore">0</span></h3>
+        <div id="playerHand"></div>
+    </div>
+    <div>
+        <h3>Mão do Computador: <span id="dealerScore">0</span></h3>
+        <div id="dealerHand"></div>
+    </div>
+    <div>
+        <button onclick="blackjackHit()" disabled>Pedir</button>
+        <button onclick="blackjackStand()" disabled>Ficar</button>
+    </div>
+    <button onclick="resetBlackjackGame()">Novo Jogo</button>
+</div>
+
+<script>!function(){const e=["♠️","♥️","♦️","♣️"],t=["2","3","4","5","6","7","8","9","10","J","Q","K","A"];let n,c,o,a,d;function r(e){let t=e.reduce(((e,t)=>e+function(e){return["J","Q","K"].includes(e.rank)?10:"A"===e.rank?11:parseInt(e.rank)}(t)),0),n=e.filter((e=>"A"===e.rank)).length;for(;t>21&&n>0;)t-=10,n--;return t}function l(e){const t=n.pop();return e.push(t),t}function u(){document.querySelector('button[onclick="blackjackHit()"]').disabled=!0,document.querySelector('button[onclick="blackjackStand()"]').disabled=!0,a=r(c),d=r(o),document.getElementById("dealerScore").textContent=d,document.getElementById("dealerHand").innerHTML=o.map((e=>`<div class="card">${e.rank}${e.suit}</div>`)).join(""),document.getElementById("blackjackMessage").textContent=a>21?"Você estourou! Você perdeu.":d>21||a>d?"Parabéns, você venceu!":a<d?"O computador venceu.":"Empate!"}window.resetBlackjackGame=function(){n=function(){let n=[];for(let c of e)for(let e of t)n.push({rank:e,suit:c});return n}(),n.sort((()=>Math.random()-.5)),c=[],o=[],l(c),l(o),l(c),l(o),document.getElementById("blackjackMessage").textContent="Boa sorte!",document.getElementById("playerScore").textContent=r(c),document.getElementById("playerHand").innerHTML=c.map((e=>`<div class="card">${e.rank}${e.suit}</div>`)).join(""),document.getElementById("dealerHand").innerHTML=o.map(((e,t)=>`<div class="card">${0===t?"?":e.rank+e.suit}</div>`)).join(""),document.getElementById("playerScore").textContent=r(c),document.getElementById("dealerScore").textContent="??",document.querySelector('button[onclick="blackjackHit()"]').disabled=!1,document.querySelector('button[onclick="blackjackStand()"]').disabled=!1},window.blackjackHit=function(){l(c),a=r(c),document.getElementById("playerScore").textContent=a,document.getElementById("playerHand").innerHTML+=`<div class="card">${c[c.length-1].rank}${c[c.length-1].suit}</div>`,a>21&&(document.getElementById("blackjackMessage").textContent="Você estourou! Fim de jogo.",u())},window.blackjackStand=function(){for(;r(o)<17;)l(o);u()}}();</script>
+
+
+</section>

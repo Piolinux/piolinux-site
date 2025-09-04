@@ -1,0 +1,157 @@
+---
+layout: default
+title: "Arkanoid em JavaScript: Jogo de Blocos Clássico (2025)"
+description: "Destrua todos os blocos com a bolinha neste clássico estilo Arkanoid. Feito com HTML, CSS e JavaScript puro — sem frameworks. Ideal para aprender."
+date: 2025-10-10
+author: "PioLinux"
+categories: [jogos, javascript]
+tags: [arkanoid, jogo, javascript, arcade, html]
+permalink: /jogo-arkanoid/
+---
+<section>
+
+<div class="game-container">
+    <h2>4. Jogo Arkanoid</h2>
+    <p>Pontos: <span id="arkanoidScore">0</span></p>
+    <canvas id="arkanoidCanvas" width="450" height="400"></canvas>
+    <br>
+    <button onclick="resetArkanoidGame()">Iniciar Jogo</button>
+</div>
+
+</section>
+
+
+<script>
+(function() {
+    const canvas = document.getElementById('arkanoidCanvas');
+    const ctx = canvas.getContext('2d');
+    let ball, paddle, bricks, score, arkanoidGameLoop;
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        if (!ball) return;
+        
+        // Desenha a barra
+        ctx.fillStyle = '#eee';
+        ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+
+        // Desenha a bola
+        ctx.beginPath();
+        ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+
+        // Desenha os tijolos
+        bricks.forEach(row => {
+            row.forEach(brick => {
+                if (brick.visible) {
+                    ctx.fillStyle = brick.color;
+                    ctx.fillRect(brick.x, brick.y, brick.width, brick.height);
+                }
+            });
+        });
+    }
+
+    function update() {
+        if (!ball) return;
+        ball.x += ball.velocityX;
+        ball.y += ball.velocityY;
+
+        // Colisão com as paredes
+        if (ball.x + ball.radius > canvas.width || ball.x - ball.radius < 0) {
+            ball.velocityX = -ball.velocityX;
+        }
+        if (ball.y - ball.radius < 0) {
+            ball.velocityY = -ball.velocityY;
+        }
+
+        // Colisão com a barra (paddle)
+        if (ball.y + ball.radius > paddle.y && ball.x > paddle.x && ball.x < paddle.x + paddle.width) {
+            const collidePoint = ball.x - (paddle.x + paddle.width / 2);
+            ball.velocityX = collidePoint * 0.15;
+            ball.velocityY = -ball.velocityY;
+        }
+
+        // Colisão com os tijolos
+        let allBricksBroken = true;
+        bricks.forEach(row => {
+            row.forEach(brick => {
+                if (brick.visible) {
+                    allBricksBroken = false;
+                    if (ball.x + ball.radius > brick.x && ball.x - ball.radius < brick.x + brick.width &&
+                        ball.y + ball.radius > brick.y && ball.y - ball.radius < brick.y + brick.height) {
+                        
+                        ball.velocityY = -ball.velocityY; // Inverte a direção vertical
+                        
+                        // Opcional: Aumenta a velocidade
+                        // ball.velocityX *= 1.05;
+                        // ball.velocityY *= 1.05;
+
+                        brick.visible = false;
+                        score += 10;
+                        document.getElementById('arkanoidScore').textContent = score;
+                    }
+                }
+            });
+        });
+
+        // Condição de vitória
+        if (allBricksBroken) {
+            clearInterval(arkanoidGameLoop);
+            alert(`Parabéns! Você venceu! Pontos: ${score}`);
+        }
+
+        // Condição de derrota
+        if (ball.y + ball.radius > canvas.height) {
+            clearInterval(arkanoidGameLoop);
+            alert(`Fim de Jogo! Pontos: ${score}`);
+        }
+
+        draw();
+    }
+
+    document.addEventListener('keydown', e => {
+        if (!paddle) return;
+        if (e.key === 'ArrowLeft' && paddle.x > 0) paddle.x -= 20;
+        if (e.key === 'ArrowRight' && paddle.x < canvas.width - paddle.width) paddle.x += 20;
+    });
+
+    function resetArkanoidGame() {
+        clearInterval(arkanoidGameLoop);
+        ball = { x: canvas.width / 2, y: canvas.height - 30, radius: 10, velocityX: 4, velocityY: -4 };
+        paddle = { x: canvas.width / 2 - 40, y: canvas.height - 20, width: 80, height: 10 };
+        bricks = [];
+        score = 0;
+        document.getElementById('arkanoidScore').textContent = score;
+
+        const brickRowCount = 5;
+        const brickColumnCount = 8;
+        const brickWidth = 40;
+        const brickHeight = 15;
+        const brickPadding = 10;
+        const brickOffsetTop = 30;
+        const brickOffsetLeft = 30;
+
+        for (let r = 0; r < brickRowCount; r++) {
+            bricks[r] = [];
+            for (let c = 0; c < brickColumnCount; c++) {
+                bricks[r][c] = {
+                    x: c * (brickWidth + brickPadding) + brickOffsetLeft,
+                    y: r * (brickHeight + brickPadding) + brickOffsetTop,
+                    width: brickWidth,
+                    height: brickHeight,
+                    visible: true,
+                    color: `hsl(${r * 360 / brickRowCount}, 70%, 50%)`
+                };
+            }
+        }
+        arkanoidGameLoop = setInterval(update, 20);
+        draw();
+    }
+
+    window.resetArkanoidGame = resetArkanoidGame;
+})();
+</script>
+
+
+
