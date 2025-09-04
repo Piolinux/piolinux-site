@@ -50,7 +50,7 @@ permalink: /memory-card-linux/
     align-items:center; justify-content:center; transition:all 0.4s ease;
   ">Clique para começar</div>
 
-  <div style="text-align:center;font-size:0.95em;color:#666;">
+  <div style="text-align:center;font-size:0.95em;color:#FFFFFF;">
     <p><strong>💡 Dica:</strong> Use para revisar antes de entrevistas, certificações ou no dia a dia. Embaralhe para evitar decorar a ordem!</p>
   </div>
 </div>
