@@ -7,7 +7,7 @@ categories: [linux, ferramentas, produtividade]
 tags: [dupeguru, shutter, ferramentas, linux, produtividade]
 description: "Descubra DupeGuru para remover arquivos duplicados e Shutter para capturas avançadas. Duas ferramentas essenciais para quem usa Linux no dia a dia."
 permalink: /ferramentas-dupeguru-shutter-linux/
-----
+---
 
 
 {% include toc.html %}
