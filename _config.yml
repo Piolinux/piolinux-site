@@ -71,11 +71,16 @@ plugins:
 
 include:
   - _pages
+  - _jogos
 
 collections:
   pages:
     output: true
     permalink: /:title/
+
+  jogos:
+    output: true
+    permalink: /jogo/:title/
   
 # Exclude from processing.
 # The following items will not be processed, by default.
