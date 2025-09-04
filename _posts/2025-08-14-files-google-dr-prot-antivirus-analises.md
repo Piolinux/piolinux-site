@@ -89,5 +89,5 @@ permalink: /analise-files-google-vs-dr-prot/
 </table>
 
 
-<h3>✅ Conclusão</h2>
+<h3>✅ Conclusão</h3>
 <p>Se você quer <strong>limpeza e organização</strong>, o <strong>Files do Google</strong> é a melhor escolha. Já se busca <strong>proteção ativa contra vírus</strong>, o <strong>Dr. Prot</strong> entrega, mas com anúncios. Para segurança digital, o ideal é usar os dois — com consciência.</p>
