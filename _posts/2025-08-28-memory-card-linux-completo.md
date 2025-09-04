@@ -18,8 +18,8 @@ permalink: /memory-card-linux/
 
 
 <div id="container" style="max-width:960px;margin:0 auto;padding:20px;font-family:sans-serif;line-height:1.7;color:#FFFFFF;transition:background-color 0.3s,color 0.3s;">
-  <h2 style="text-align:center;color:#2c3e50;">🧠 Memory Card de Linux</h2>
-  <p style="text-align:center;font-size:1.1em;color:#555;">Revise <strong>50 comandos essenciais</strong> do Linux.<br>Clique no card para virar. Use os botões para navegar.</p>
+  <h2 style="text-align:center;color:#FFFFFF;">🧠 Memory Card de Linux</h2>
+  <p style="text-align:center;font-size:1.1em;color:#FFFFFF;">Revise <strong>50 comandos essenciais</strong> do Linux.<br>Clique no card para virar. Use os botões para navegar.</p>
 
   <!-- Tux SVG Simplificado -->
   <div style="text-align:center;margin:20px 0;opacity:0.8;">
