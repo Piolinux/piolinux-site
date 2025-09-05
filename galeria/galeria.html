@@ -1,24 +1,93 @@
 ---
 layout: default
-title: "Galeria de Wallpapers Linux (2025)"
+title: "Galeria de Wallpapers"
 permalink: /galeria/
-description: "Coleção de wallpapers em SVG para Linux. Designs minimalistas, distros como Fedora, Arch, Debian e Ubuntu, com estética de terminal e toques de Matrix em verde. Download gratuito."
-date: 2025-11-01
-author: "PioLinux"
-tags: [wallpaper, linux, svg, terminal, matrix]
+description: "Explore nossa galeria de wallpapers Linux em SVG. Designs minimalistas, distros diversas e estilo Matrix em verde para download."
 ---
+<style>
+    
+    .gallery-container {
+        max-width: 960px;
+        margin: auto;
+        background: #000000;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    .index-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .index-list li {
+        background-color: #80ff00;
+        padding: 8px 15px;
+        border-radius: 5px;
+    }
+    .index-list a {
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+    }
+    .gallery-section {
+        margin-top: 40px;
+    }
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    .gallery-item {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        border-radius: 8px;
+    }
+    .gallery-item img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+    .gallery-item h2 {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    .gallery-item p {
+        margin: 5px 0;
+        font-size: 0.9em;
+    }
+    .back-to-top {
+        display: block;
+        text-align: right;
+        margin-top: 20px;
+    }
+    @media (max-width: 600px) {
+        .gallery-container {
+            padding: 10px;
+        }
+    }
+</style>
 
 
 
-<h1>🖼️ Galeria de Wallpapers Linux</h1>
-<p>Explore nossa coleção de wallpapers em <strong>SVG</strong> para Linux, feitos para quem vive no terminal. Designs minimalistas, distros diversas e estética de Matrix em verde. Todos gratuitos para download.</p>
-
-<div id="index">
-  <h2>📌 Navegue por Distro</h2>
-  <ul id="index-list"></ul>
+<div class="gallery-container">
+    
+    <h2 id="index">Índice de Distros</h2>
+    <ul id="index-list" class="index-list"></ul>
+    <div id="gallery-sections"></div>
+    
+    <h2>Personalize a frase</h2>
+  <p>Gostou do wallpaper, mas quer uma frase diferente? Basta abrir o arquivo SVG em um editor de texto como o Geany, encontrar a frase e mude para o que você quiser deixando ao seu estilo!</p>
+   
 </div>
 
-<div id="gallery-sections"></div>
+
+
+
+
 
 <script>
     const wallpapers = [
@@ -73,16 +142,6 @@ tags: [wallpaper, linux, svg, terminal, matrix]
         { id: 'wallpaper50', titulo: "Fedora: O Coração do Kernel", autor: "piolinux", descricao: "Wallpaper Fedora que exalta a importância do kernel, com o tema de matrix.", distro: "Fedora", frases: ['Kernel é coração', 'Shell é vida', 'SysAdmin power'], arquivo: 'wallpaper50.svg', tags: ['matrix', 'colorido'] }
     ];
 
-    // Função para gerar permalink a partir do título
-    function gerarPermalink(titulo) {
-        return `/wallpaper/${titulo
-            .toLowerCase()
-            .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-            .replace(/[^a-z0-9\s-]/g, '')
-            .replace(/\s+/g, '-')
-            .replace(/-+/g, '-')}`;
-    }
-
     document.addEventListener('DOMContentLoaded', () => {
         const indexList = document.getElementById('index-list');
         const gallerySections = document.getElementById('gallery-sections');
@@ -90,7 +149,7 @@ tags: [wallpaper, linux, svg, terminal, matrix]
         // Pega as distros únicas e ordena-as
         const distros = [...new Set(wallpapers.map(w => w.distro))].sort();
 
-        // Cria o índice com links para seções
+        // Cria o índice
         distros.forEach(distro => {
             const li = document.createElement('li');
             const a = document.createElement('a');
@@ -105,13 +164,11 @@ tags: [wallpaper, linux, svg, terminal, matrix]
             if (!acc[wallpaper.distro]) {
                 acc[wallpaper.distro] = [];
             }
-            // Adiciona o permalink ao objeto
-            wallpaper.permalink = gerarPermalink(wallpaper.titulo);
             acc[wallpaper.distro].push(wallpaper);
             return acc;
         }, {});
 
-        // Cria as seções da galeria
+        // Cria as secções da galeria
         distros.forEach(distro => {
             const section = document.createElement('div');
             section.className = 'gallery-section';
@@ -127,12 +184,13 @@ tags: [wallpaper, linux, svg, terminal, matrix]
             wallpapersByDistro[distro].forEach(wallpaper => {
                 const item = document.createElement('div');
                 item.className = 'gallery-item';
+                // Usa caminhos absolutos para evitar duplicação
                 item.innerHTML = `
                     <h2>${wallpaper.titulo}</h2>
                     <img src="/galeria/${wallpaper.arquivo}" alt="${wallpaper.titulo}">
                     <p><strong>Descrição:</strong> ${wallpaper.descricao}</p>
                     <p><strong>Autor:</strong> ${wallpaper.autor}</p>
-                    <a href="${wallpaper.permalink}">Ver Detalhes</a>
+                    <a href="/galeria/detalhes/${wallpaper.id}.html">Ver Detalhes</a>
                 `;
                 grid.appendChild(item);
             });
