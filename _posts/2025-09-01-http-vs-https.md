@@ -54,9 +54,10 @@ Assim:</p>
 <p>Tudo fica escondido de quem quer ver.</p>
 
 
+
 <table style="width:100%; border-collapse: collapse; margin:1.5em 0; font-size: 0.95em;">
   <thead>
-    <tr style="background: #000000; color: white; text-align: left;">
+    <tr style="background: #008000; color: white; text-align: left;">
       <th style="padding: 0.8em; border: 1px solid #a5d6a7; border-radius: 6px 0 0 0;">Item</th>
       <th style="padding: 0.8em; border: 1px solid #a5d6a7; border-radius: 0 6px 0 0;">HTTP</th>
       <th style="padding: 0.8em; border: 1px solid #a5d6a7; border-radius: 0 6px 0 0;">HTTPS</th>
@@ -64,22 +65,22 @@ Assim:</p>
   </thead>
   <tbody>
     <tr>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7; background: #000000;"><strong>Segurança</strong></td>
+      <td style="padding: 0.8em; border: 1px solid #a5d6a7; "><strong>Segurança</strong></td>
       <td style="padding: 0.8em; border: 1px solid #a5d6a7;">❌ Dados em texto puro</td>
       <td style="padding: 0.8em; border: 1px solid #a5d6a7;">✅ Dados criptografados</td>
     </tr>
     <tr>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7; background: #000000;"><strong>Porta</strong></td>
+      <td style="padding: 0.8em; border: 1px solid #a5d6a7; "><strong>Porta</strong></td>
       <td style="padding: 0.8em; border: 1px solid #a5d6a7;">80</td>
       <td style="padding: 0.8em; border: 1px solid #a5d6a7;">443</td>
     </tr>
     <tr>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7; background: #000000;"><strong>Certificado</strong></td>
+      <td style="padding: 0.8em; border: 1px solid #a5d6a7; "><strong>Certificado</strong></td>
       <td style="padding: 0.8em; border: 1px solid #a5d6a7;">Não precisa</td>
       <td style="padding: 0.8em; border: 1px solid #a5d6a7;">Necessário (SSL/TLS)</td>
     </tr>
     <tr>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7; background: #000000;"><strong>Google</strong></td>
+      <td style="padding: 0.8em; border: 1px solid #a5d6a7; "><strong>Google</strong></td>
       <td style="padding: 0.8em; border: 1px solid #a5d6a7;">Desencoraja</td>
       <td style="padding: 0.8em; border: 1px solid #a5d6a7;">Prefere</td>
     </tr>
