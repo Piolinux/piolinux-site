@@ -1,4 +1,4 @@
-on>---
+---
 layout: default
 title: "Gerador de Senhas Fortes: Rápido, Simples e Seguro"
 date: 2025-08-18
