@@ -93,9 +93,11 @@ permalink: /gerador-senhas-seguras/
                 Gerar Senha
             </button>
         </div>
+ </section> 
+        
 <hr class="my-10 border-gray-200">
 
- </section> 
+
 
     <script>
         window.onload = function() {
