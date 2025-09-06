@@ -1,0 +1,30 @@
+---
+layout: default
+title: "Adivinhe o Número em JavaScript: Clássico Online (2025)"
+description: "Tente adivinhar o número secreto entre 1 e 100! Jogo feito com HTML, CSS e JavaScript puro — sem frameworks. Ideal para iniciantes que querem aprender."
+date: 2025-10-25
+author: "PioLinux"
+categories: [jogos, javascript]
+tags: [adivinhe, número, jogo, javascript, html]
+permalink: /jogo-adivinhe-o-numero/
+---
+
+<section>
+
+
+
+<div class="game-container">
+    <h2>1. Adivinhe o Número</h2>
+    <p>Adivinhe um número entre 1 e 100.</p>
+    <input id="guessInput" type="number"/>
+    <button onclick="checkGuess()">Adivinhar</button>
+    <p id="guessResult"></p>
+    <button onclick="resetGuessGame()">Reiniciar</button>
+</div>
+
+
+  <script>let secretNumber=Math.floor(100*Math.random())+1;function checkGuess(){const e=parseInt(document.getElementById("guessInput").value),t=document.getElementById("guessResult");isNaN(e)||e<1||e>100?t.textContent="Por favor, insira um número válido entre 1 e 100.":t.textContent=e===secretNumber?"Parabéns! Você adivinhou o número!":e<secretNumber?"Muito baixo! Tente um número maior.":"Muito alto! Tente um número menor."}function resetGuessGame(){secretNumber=Math.floor(100*Math.random())+1,document.getElementById("guessInput").value="",document.getElementById("guessResult").textContent=""}</script>
+
+
+
+</section>

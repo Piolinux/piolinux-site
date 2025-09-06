@@ -1,0 +1,80 @@
+---
+layout: default
+title: "Scripts de Segurança para Linux: Proteja seu Sistema"
+description: "Coleção prática de scripts para segurança no Linux: firewall, bloqueio de IP, detecção de rootkits, SSH seguro, fail2ban, nmap."
+date: 2025-09-07
+author: "PioLinux"
+categories: [linux, segurança, scripts]
+tags: [segurança, bash, firewall, fail2ban, ssh, nmap, rootkit, monitoramento]
+permalink: /scripts-seguranca-linux/
+---
+
+
+<section>
+<h2>
+     Firewall básico com UFW
+    </h2>
+<button class="copy">
+     Copiar
+    </button>
+<pre>sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow ssh
+sudo ufw enable</pre>
+</section>
+<section>
+<h2>
+     Bloqueio de IPs maliciosos
+    </h2>
+<pre>sudo ufw deny from 192.168.0.123</pre>
+</section>
+<section>
+<h2>
+     Script de escaneamento com Nmap
+    </h2>
+<pre>#!/bin/bash
+read -p "Digite o IP ou host: " target
+nmap -A -T4 $target</pre>
+</section>
+<section>
+<h2>
+     Verificação de rootkits com chkrootkit
+    </h2>
+<pre>sudo apt install chkrootkit
+sudo chkrootkit</pre>
+</section>
+<section>
+<h2>
+     Conexão SSH automatizada
+    </h2>
+<pre>sshpass -p 'senha' ssh usuario@ip -p 22</pre>
+</section>
+<section>
+<h2>
+     Gerador de senhas fortes (Shell)
+    </h2>
+<pre>openssl rand -hex 16
+openssl rand -hex 64</pre>
+</section>
+<section>
+<h2>
+     Verificador de integridade de arquivos
+    </h2>
+<pre>sha256sum arquivo.txt &gt; hash.txt
+sha256sum -c hash.txt</pre>
+</section>
+<section>
+<h2>
+     Configuração de fail2ban
+    </h2>
+<pre>sudo apt install fail2ban
+sudo systemctl enable fail2ban
+sudo systemctl start fail2ban</pre>
+</section>
+<section>
+<h2>
+     Monitoramento de tráfego com iftop
+    </h2>
+<pre>sudo apt install iftop
+sudo iftop -i eth0</pre>
+</section>
