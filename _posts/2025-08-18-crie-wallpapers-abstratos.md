@@ -47,7 +47,7 @@ permalink: /wallpapers-abstratos-svg/
             Essa ferramenta foi feita para te dar total liberdade e controle sobre a sua arte. Espero que goste!
         </p>
     </div>
-</section>
+
 
 
 
@@ -160,7 +160,7 @@ permalink: /wallpapers-abstratos-svg/
 
 </style>
 
-<section>
+
 
 <body class="bg-slate-900 text-slate-100 p-8 flex flex-col items-center justify-center min-h-screen">
 
