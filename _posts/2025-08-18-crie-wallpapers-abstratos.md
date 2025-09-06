@@ -159,6 +159,9 @@ permalink: /wallpapers-abstratos-svg/
         }
 
 </style>
+
+<section>
+
 <body class="bg-slate-900 text-slate-100 p-8 flex flex-col items-center justify-center min-h-screen">
 
     <div class="tool-container">
@@ -183,7 +186,7 @@ permalink: /wallpapers-abstratos-svg/
         <canvas id="wallpaper-canvas"></canvas>
         <a id="download-link" href="#" download="wallpaper.png" class="download-link">Baixar</a>
     </div>
-
+</section>
     <script>
         // Seleciona os elementos do DOM
         const canvas = document.getElementById('wallpaper-canvas');
