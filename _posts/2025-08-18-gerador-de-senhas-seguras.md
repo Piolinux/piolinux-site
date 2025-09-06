@@ -93,7 +93,7 @@ permalink: /gerador-senhas-seguras/
                 Gerar Senha
             </button>
         </div>
- </section> 
+ 
         
 <hr class="my-10 border-gray-200">
 
