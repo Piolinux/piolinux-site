@@ -43,7 +43,7 @@ permalink: /gerador-senhas-seguras/
     Em resumo, não precisa de ser um especialista para estar seguro online. Basta usar as ferramentas certas.
 </p>
 
-</section>
+
 
 
 
@@ -95,7 +95,7 @@ permalink: /gerador-senhas-seguras/
         </div>
 <hr class="my-10 border-gray-200">
 
-       </section> 
+ </section> 
 
     <script>
         window.onload = function() {
