@@ -23,7 +23,7 @@ permalink: /biblioteca-linux/
     
     width: 100%;
   ">
-<h1 style="text-align: center; margin-bottom: 10px; color: #fffeff;">🐧 Biblioteca de 500 Comandos Linux</h1>
+<h2 style="text-align: center; margin-bottom: 10px; color: #fffeff;">🐧 Biblioteca de 500 Comandos Linux</h2>
 <p style="text-align: center; font-size: 1.1em; color: #fffeff;">
 <strong>Debian, Ubuntu, Arch Linux, Fedora, openSUSE</strong><br/>
       Organizado por categorias — Básico ao Avançado
