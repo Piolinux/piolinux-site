@@ -180,7 +180,7 @@ permalink: /wallpapers-abstratos-svg/
             </button>
         </div>
     </div>
-</section>
+
     <!-- Contêiner do Canvas e link de download -->
     <div class="image-container" id="image-container">
         <canvas id="wallpaper-canvas"></canvas>
