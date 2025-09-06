@@ -14,7 +14,7 @@ permalink: /wallpapers-abstratos-svg/
 
 
 
-<section class="post-content">
+
 
 <section class="post-content p-6 md:p-12">
     <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-8">
