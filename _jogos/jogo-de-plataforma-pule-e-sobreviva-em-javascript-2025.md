@@ -1,0 +1,187 @@
+---
+layout: default
+title: "Jogo de Plataforma: Pule e Sobreviva em JavaScript (2025)"
+description: "Controle o personagem, mova e pule para completar os níveis. Jogo feito com HTML, CSS e JavaScript puro — sem frameworks.Física de jogos e lógica."
+date: 2025-10-08
+author: "PioLinux"
+categories: [jogos, javascript]
+tags: [plataforma, jogo, javascript, pulo, html]
+permalink: /jogo-plataforma/
+---
+
+<section>
+
+<div class="game-container">
+    <h2>12. Jogo de Plataforma</h2>
+    <canvas id="platformerCanvas" width="400" height="300"></canvas>
+    <p id="platformerMessage"></p>
+    <button onclick="resetPlatformerGame()">Reiniciar Jogo</button>
+</div>
+<script>
+        (function() {
+            const canvas = document.getElementById("platformerCanvas");
+            const ctx = canvas.getContext("2d");
+
+            let player, platforms, gravity, velocityY, isGrounded, keys, gameLoop, currentLevelIndex, goal;
+            const PLAYER_SPEED = 5;
+
+            // Dados de todos os níveis
+            const LEVEL_DATA = [
+                {
+                    platforms: [
+                        { x: 0, y: 280, width: 400, height: 20 },
+                        { x: 100, y: 200, width: 100, height: 20 },
+                        { x: 250, y: 150, width: 100, height: 20 }
+                    ],
+                    goal: { x: 350, y: 100, width: 30, height: 10 }
+                },
+                {
+                    platforms: [
+                        { x: 0, y: 280, width: 150, height: 20 },
+                        { x: 250, y: 280, width: 150, height: 20 },
+                        { x: 10, y: 180, width: 80, height: 20 },
+                        { x: 310, y: 180, width: 80, height: 20 },
+                        { x: 150, y: 100, width: 100, height: 20 }
+                    ],
+                    goal: { x: 175, y: 50, width: 50, height: 10 }
+                },
+                {
+                    platforms: [
+                        { x: 0, y: 280, width: 80, height: 20 },
+                        { x: 150, y: 240, width: 50, height: 20 },
+                        { x: 250, y: 190, width: 50, height: 20 },
+                        { x: 10, y: 140, width: 50, height: 20 },
+                        { x: 300, y: 100, width: 100, height: 20 }
+                    ],
+                    goal: { x: 320, y: 50, width: 20, height: 10 }
+                }
+            ];
+
+            function loadLevel(levelIndex) {
+                if (levelIndex < 0 || levelIndex >= LEVEL_DATA.length) {
+                    clearInterval(gameLoop);
+                    document.getElementById("platformerMessage").textContent = "Parabéns! Você completou o jogo!";
+                    return false;
+                }
+
+                currentLevelIndex = levelIndex;
+                const level = LEVEL_DATA[currentLevelIndex];
+                platforms = level.platforms;
+                goal = level.goal;
+                
+                player.x = 50;
+                player.y = 150;
+                velocityY = 0;
+                isGrounded = false;
+                
+                document.getElementById("platformerMessage").textContent = `Nível ${currentLevelIndex + 1}`;
+                return true;
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                if (!player) return;
+
+                // Desenha o jogador
+                ctx.fillStyle = "blue";
+                ctx.fillRect(player.x, player.y, player.width, player.height);
+
+                // Desenha as plataformas
+                ctx.fillStyle = "green";
+                platforms.forEach(platform => {
+                    ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+                });
+
+                // Desenha o objetivo (goal)
+                if (goal) {
+                    ctx.fillStyle = "red";
+                    ctx.fillRect(goal.x, goal.y, goal.width, goal.height);
+                }
+            }
+
+            function update() {
+                if (!player) return;
+
+                // Aplicar gravidade
+                velocityY += gravity;
+                player.y += velocityY;
+                isGrounded = false;
+
+                // Movimento horizontal
+                if (keys["ArrowLeft"] && player.x > 0) {
+                    player.x -= PLAYER_SPEED;
+                }
+                if (keys["ArrowRight"] && player.x < canvas.width - player.width) {
+                    player.x += PLAYER_SPEED;
+                }
+
+                // Colisão com as plataformas
+                platforms.forEach(platform => {
+                    if (player.x < platform.x + platform.width &&
+                        player.x + player.width > platform.x &&
+                        player.y + player.height > platform.y &&
+                        player.y + player.height <= platform.y + platform.height) {
+                        
+                        if (velocityY > 0) {
+                            player.y = platform.y - player.height;
+                            velocityY = 0;
+                            isGrounded = true;
+                        }
+                    }
+                });
+
+                // Colisão com o objetivo (goal)
+                if (goal && player.x < goal.x + goal.width &&
+                    player.x + player.width > goal.x &&
+                    player.y + player.height > goal.y &&
+                    player.y + player.height <= goal.y + goal.height) {
+                    
+                    // Ponto de colisão com o objetivo
+                    if (velocityY > 0) {
+                        player.y = goal.y - player.height;
+                        velocityY = 0;
+                        isGrounded = true;
+                        if(loadLevel(currentLevelIndex + 1)) {
+                            // Sucesso! A nova tela foi carregada.
+                        }
+                    }
+                }
+
+                // Condição de fim de jogo (caiu do mapa)
+                if (player.y > canvas.height) {
+                    clearInterval(gameLoop);
+                    document.getElementById("platformerMessage").textContent = `Fim de Jogo! Você caiu no Nível ${currentLevelIndex + 1}.`;
+                }
+
+                draw();
+            }
+
+            keys = {};
+            document.addEventListener("keydown", e => {
+                keys[e.key] = true;
+                if (e.key === "ArrowUp" && isGrounded) {
+                    velocityY = -15;
+                }
+            });
+            document.addEventListener("keyup", e => {
+                keys[e.key] = false;
+            });
+
+            window.resetPlatformerGame = function() {
+                clearInterval(gameLoop);
+                player = { x: 50, y: 150, width: 20, height: 20 };
+                gravity = 0.8;
+                isGrounded = false;
+
+                if (loadLevel(0)) {
+                    gameLoop = setInterval(update, 20);
+                }
+                draw();
+            };
+            
+            window.onload = window.resetPlatformerGame;
+        })();
+    </script>
+
+
+</section>
