@@ -16,7 +16,7 @@ permalink: /cores-terminal-conforto-visual/
       
 
 
-    <h1>Configurando o Terminal: Conforto Visual, escolhendo as Cores Perfeitas</h1>
+    <h2>Configurando o Terminal: Conforto Visual, escolhendo as Cores Perfeitas</h2>
 
     <p>
         Sabe quando a gente está concentrado digitando no terminal e aquela tela preta parece que está forçando a vista? Eu entendo perfeitamente essa sensação. Não é só sobre estética, mas sobre o nosso conforto ao usar o computador. Tentar combinar cores escuras com letras apagadas se torna um verdadeiro desafio para a nossa visão. Mas olha que legal: dá pra arrumar isso! A gente consegue deixar o terminal perfeito, sem agredir os olhos e funcionando direitinho.
