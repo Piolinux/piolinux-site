@@ -180,13 +180,13 @@ permalink: /wallpapers-abstratos-svg/
             </button>
         </div>
     </div>
-
+</section>
     <!-- Contêiner do Canvas e link de download -->
     <div class="image-container" id="image-container">
         <canvas id="wallpaper-canvas"></canvas>
         <a id="download-link" href="#" download="wallpaper.png" class="download-link">Baixar</a>
     </div>
-</section>
+
     <script>
         // Seleciona os elementos do DOM
         const canvas = document.getElementById('wallpaper-canvas');
