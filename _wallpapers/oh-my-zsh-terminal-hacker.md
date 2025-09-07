@@ -9,4 +9,5 @@ frases:
   - "Tema neon"
 svg: "oh-my-zsh.svg"
 permalink: /wallpaper/oh-my-zsh-terminal-hacker/
+tags: [oh-my-zsh, zsh, terminal, linux, shell, hacker, plugins, temas, instalação, macos]
 ---
