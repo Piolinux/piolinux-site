@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Galeria de Wallpapers: +50 Temas para Devs e Sysadmins"
+title: "Galeria de Wallpapers: Temas para Devs e Sysadmins"
 description: "Baixe wallpapers gratuitos para desktop e mobile. Temas: programação, natureza, dark mode, espaço, minimalismo e muito mais."
 permalink: /wallpapers/
 ---
