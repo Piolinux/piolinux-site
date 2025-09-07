@@ -1,0 +1,52 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Filtro glow mais forte -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Filtro glow para título -->
+    <filter id="glow-pink" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Gradiente de fundo neon cyberpunk -->
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#302b63;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ff007f;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo cyberpunk -->
+  <rect width="100%" height="100%" fill="url(#grad)" />
+
+  <!-- Nome da distro com glow neon roxo -->
+  <text x="100" y="300" fill="#ff00ff" font-family="monospace" font-size="120" font-weight="bold" filter="url(#glow)">windows-terminal</text>
+  
+  <!-- Título principal com destaque -->
+  <text x="100" y="450" fill="#00eaff" font-family="monospace" font-size="70" font-weight="bold" filter="url(#glow-pink)">
+    DEBUG É MEDITAR
+  </text>
+  
+  <!-- Frases estilo terminal hacker -->
+  <text x="100" y="550" fill="#00ffea" font-family="monospace" font-size="36" filter="url(#glow)">> Abas modernas</text>
+  <text x="100" y="600" fill="#ff007f" font-family="monospace" font-size="36" filter="url(#glow)">> WSL integrado</text>
+  <text x="100" y="650" fill="#00ff88" font-family="monospace" font-size="36" filter="url(#glow)">> Tema neon cyberpunk</text>
+  
+  <!-- Borda neon pulsante -->
+  <rect x="10" y="10" width="1900" height="1060" fill="none" stroke="#ff00ff" stroke-width="4" rx="15" filter="url(#glow)" />
+
+  <!-- Assinatura futurista -->
+  <text x="1450" y="1000" fill="#ff007f" font-family="monospace" font-size="24" filter="url(#glow)">
+    PioLinux • 2025
+  </text>
+</svg>
