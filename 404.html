@@ -1,0 +1,162 @@
+---
+layout: default
+title: "Página não encontrada (404) — PioLinux"
+permalink: /404.html
+---
+
+<style>
+.error-container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 3rem;
+    background: #1a1a1a;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    border: 2px solid #00ff00;
+}
+
+.error-code {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #ff0000;
+    margin: 0;
+    text-shadow: 0 0 20px rgba(255,0,0,0.5);
+    background: linear-gradient(45deg, #ff0000, #ff6600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.error-title {
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin: 1rem 0;
+    text-shadow: 0 0 10px rgba(255,102,0,0.5);
+}
+
+.error-message {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin: 2rem 0;
+    line-height: 1.6;
+}
+
+.error-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.error-links li {
+    margin: 0;
+}
+
+.error-links a {
+    display: block;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, #007acc, #005a9e);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.error-links a:hover {
+    background: transparent;
+    border-color: #007acc;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,122,204,0.3);
+}
+
+.error-tips {
+    background: #2a2a2a;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 3rem 0;
+    text-align: left;
+}
+
+.error-tips h3 {
+    color: #00ff00;
+    margin-top: 0;
+    border-bottom: 2px solid #00ff00;
+    padding-bottom: 0.5rem;
+}
+
+.error-tips ul {
+    padding-left: 1.5rem;
+    color: #ddd;
+    line-height: 1.8;
+}
+
+.error-tips code {
+    background: #000;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: #00ff00;
+}
+
+.error-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #333;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .error-container {
+        margin: 1rem;
+        padding: 2rem;
+    }
+    .error-code {
+        font-size: 4rem;
+    }
+    .error-title {
+        font-size: 2rem;
+    }
+}
+</style>
+
+<div class="error-container">
+    <h1 class="error-code">404</h1>
+    <h2 class="error-title">Oops! Página não encontrada.</h2>
+    <p class="error-message">
+        O link que você clicou pode estar quebrado, ou a página foi removida ou renomeada.
+        <br>
+        Mas não se preocupe — aqui estão **links úteis** e **dicas práticas** para você continuar explorando!
+    </p>
+
+    <ul class="error-links">
+        <li><a href="/">← Voltar para a Home</a></li>
+        <li><a href="/wallpapers/">🎨 Galeria de Wallpapers</a></li>
+        <li><a href="/bibliote-linux/">🐧 Biblioteca Linux</a></li>
+        <li><a href="/link-uteis-linux-python/">💻 Dicas de Links Uteis</a></li>
+    </ul>
+
+    <div class="error-tips">
+        <h3>💡 Dicas Rápidas para Devs & Sysadmins</h3>
+        <ul>
+            <li>Instale o <strong>Oh My Zsh</strong> para turbinar seu terminal:
+                <br><code>sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</code>
+            </li>
+            <li>No <strong>Windows Terminal</strong>, use <code>Ctrl + ,</code> para abrir configurações.</li>
+            <li>No <strong>iTerm2 (macOS)</strong>, ative <strong>Split Panes</strong> com <code>Cmd + D</code> ou <code>Cmd + Shift + D</code>.</li>
+            <li>Use <code>wget</code> se <code>curl</code> não estiver disponível.</li>
+            <li>Personalize seu <code>.zshrc</code> — é onde a mágica acontece!</li>
+        </ul>
+    </div>
+
+    <div class="error-footer">
+        Encontrou um link quebrado? <a href="mailto:contato@piolinux.com" style="color: #00ff00;">Me avise</a> — toda ajuda é bem-vinda!
+        <br>
+        <em>“Um erro 404 é só uma oportunidade para descobrir algo novo.” — PioLinux</em>
+    </div>
+</div>
