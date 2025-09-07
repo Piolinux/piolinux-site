@@ -69,10 +69,14 @@ plugins:
   - jekyll-seo-tag 
   - jekyll-paginate 
 
-include:
-  - _pages
-  - _jogos
+# Site
+title: "Galeria de Wallpapers Linux"
+description: "Coleção de wallpapers SVG no estilo hacker, terminal e Matrix. Editáveis, livres e feitos para devs."
 
+# Permalink padrão
+permalink: /:title/
+
+# Coleções
 collections:
   pages:
     output: true
@@ -81,7 +85,18 @@ collections:
   jogos:
     output: true
     permalink: /jogo/:title/
-  
+
+  wallpapers:
+    output: true
+    permalink: /wallpaper/:title/
+
+# Incluir pastas no build
+include:
+  - _pages
+  - _jogos
+  - galeria
+  - _wallpapers
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
