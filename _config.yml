@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Piolinux"
-description: "Divirta-se com 200 piadas e trocadilhos sobre Linux, programadores, terminais e o mundo open source."
+title: "Piolinux: Piadas Linux + Guia Técnico em Tabelas"
+description: "200 piadas e trocadilhos de Linux, terminal e devs — + guias técnicos em tabelas práticas. Ria, aprenda e compartilhe. O lado divertido (e útil) do open source."
 baseurl: "" # sem barra no final
 url: "https://piolinux.com"
 lang: "pt-BR"
@@ -69,9 +69,6 @@ plugins:
   - jekyll-seo-tag 
   - jekyll-paginate 
 
-# Site
-title: "Galeria de Wallpapers Linux"
-description: "Coleção de wallpapers SVG no estilo hacker, terminal e Matrix. Editáveis, livres e feitos para devs."
 
 # Permalink padrão
 permalink: /:title/
