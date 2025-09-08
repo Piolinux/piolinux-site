@@ -50,7 +50,7 @@ permalink: /gerador-slug-jekyll/
 <p>E o <code>permalink</code> será automaticamente:</p>
 <pre><code>/como-particionar-disco-no-linux/</code></pre>
 
-<div style="background:#e8f5e9; border-left:4px solid #2e7d32; padding:1em; margin:1.5em 0; border-radius:0 8px 8px 0; font-size:0.95em;">
+<div style="background:#008000; border-left:4px solid #2e7d32; padding:1em; margin:1.5em 0; border-radius:0 8px 8px 0; font-size:0.95em;">
   <strong>✅ Dica pro:</strong> Combine este gerador com seu fluxo no <em>Geany</em> e <em>Debian</em>. 
   Crie o arquivo, escreva o post, e publique com <code>bundle exec jekyll serve</code>.
 </div>
