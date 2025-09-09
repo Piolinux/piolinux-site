@@ -13,7 +13,7 @@ permalink: /comparativo-terminais/
 
 <section class="post-content">
 
-
+<p>Essa tabela comparativa apresentará os principais terminais e comandos disponíveis para Windows, macOS e Linux com total clareza . A tabela mostrará características, facilidades de utilização, personalização, compatibilidade com diferentes shells, ajudando você a escolher os terminais mais adequado para desenvolvimento, automação e administração de sistemas."</p>
 
 
 
