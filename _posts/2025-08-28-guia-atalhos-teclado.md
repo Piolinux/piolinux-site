@@ -235,7 +235,7 @@ permalink: /atalhos-de-teclado/
 <h3>✅ Escolha seu modo de trabalho: Windows, macOS ou Linux</h3>
 
 
-<p>Cada sistema possuem seus estilos de teclas de atalhos:  
+<p>Cada sistema possuem configurações de teclas de atalhos diferentes:  
 No <strong>Windows ao utilizar as teclas de atalhos</strong>, <code>Ctrl + c</code> e <code>Win + d</code> são reflexos.  
 No <strong>macOS, ao utilizar as teclas de atalhos</strong>, <code>Cmd + Tab</code> e <code>Cmd + Space</code> definem o fluxo.  
 No <strong>Linux </strong>, <code>Ctrl + Alt + t</code> e <code>Super + L</code> são parte da rotina do terminal.</p>
