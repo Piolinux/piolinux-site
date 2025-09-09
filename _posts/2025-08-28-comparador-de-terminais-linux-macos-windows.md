@@ -155,7 +155,7 @@ permalink: /comparativo-terminais/
   <li>Instale o <a href="https://aka.ms/terminal">Windows Terminal</a> da Microsoft Store.</li>
   <li>Ative o WSL: abra P
 
-h3>✅ Quais são os terminais é ideal para você?</h3>
+<h3>✅ Quais são os terminais é ideal para você?</h3>
 
 <p>Você está no <strong>Windows</strong>, utilizando o <strong>Windows Terminal</strong> é moderno, rápido e integrado ao WSL.  
 No <strong>Machintosh</strong>, o <strong>iTerm2</strong> é o padrão ouro: com abas, temas e automação.  
