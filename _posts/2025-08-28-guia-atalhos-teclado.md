@@ -14,6 +14,9 @@ permalink: /atalhos-de-teclado/
 
 
 <section class="post-content">
+ 
+<p>Dominar atalhos de teclado é essencial para ganhar produtividade em qualquer sistema operacional. Nesta tabela, você encontra os principais atalhos para Windows, macOS e Linux, organizados de forma prática para facilitar seu dia a dia.</p>
+
 
 
 
