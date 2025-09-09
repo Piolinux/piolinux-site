@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Comparador de Distros: Linux vs BSD para Todos os Níveis"
-description: "Descubra qual distro Linux ou BSD é ideal para seu PC: leve, segura, moderna ou antiga. Veja compatibilidade, uso e nível de dificuldade."
+title: "Compare Linux vs BSD: Qual Distro Ideal para Seu Nível?"
+description: "Escolha sua distro ideal: leve, segura ou moderna — veja nível de dificuldade e compatibilidade."
 date: 2025-08-27
 categories: linux bsd ferramentas
 tags: [linux, distro, bsd, ferramenta, comparativo]
