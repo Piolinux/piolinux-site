@@ -10,7 +10,6 @@ permalink: /links-uteis-linux-python/
 ---
 
 
-{% include toc.html %}
 
 
 
