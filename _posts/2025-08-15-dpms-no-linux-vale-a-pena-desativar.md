@@ -1,13 +1,14 @@
 ---
 layout: default
 title: "DPMS no Linux: Vale a Pena Desativar? Minha Experiência"
+description: "Vale a pena desativar o DPMS no Linux? Minha experiência com economia de energia, tela preta e manutenção de monitores em uso contínuo."
 date: 2025-08-15
 author: "PioLinux"
 categories: [linux, energia, monitor, dpms]
-tags: [dpms, linux, economia de energia, tela preta, monitor]
-description: "Vale a pena desativar o DPMS no Linux? Minha experiência com economia de energia, tela preta e manutenção de monitores em uso contínuo."
+tags: [dpms, linux, economia-de-energia, tela-preta, monitor]
 permalink: /dpms-no-linux-vale-a-pena-desativar/
 ---
+
 
 {% include toc.html %}
 

@@ -3,11 +3,10 @@ layout: default
 title: "Você Viu o Cadeadinho Verde? Entenda HTTP vs HTTPS"
 description: "Entenda de forma simples a diferença entre HTTP e HTTPS, por que o cadeadinho verde importa e como o HTTPS protege seus dados na web."
 date: 2025-09-01 09:00:00 -0300
-categories: segurança web dica
-tags: [http, https, segurança, jekyll, iniciantes]
+categories: [segurança, web, dica]
+tags: [http, https, segurança, iniciantes]
 permalink: /http-vs-https/
 ---
-
 
 {% include toc.html %}
 
@@ -158,6 +157,6 @@ Se você ver <code>https://</code> + 🔒 → <strong>pode continuar tranquilo</
 <p>Se você tem um site:<br>
 ➡️ <strong>Ative o HTTPS agora</strong> — é obrigatório.</p>
 
-<p>Se você navega na internet:<br>
+<p>Você navega na internet:<br>
 ➡️ <strong>Nunca digite senhas em sites com <code>http://</code></strong></p>
 

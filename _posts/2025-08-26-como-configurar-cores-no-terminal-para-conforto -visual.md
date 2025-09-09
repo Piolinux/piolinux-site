@@ -4,7 +4,7 @@ title: "Terminal Verde: Cores para Conforto Visual no Debian"
 description: "Aprenda a configurar cores no terminal Linux para reduzir o cansaço visual. Inclui tabela ANSI, exemplos de prompt e dicas para Geany + Debian."
 date: 2025-08-26
 author: "PioLinux"
-categories: terminal linux debian configuracao
+categories: [terminal, linux, debian, configuração]
 tags: [terminal, cores, debian, geany, prompt, ansi, conforto-visual]
 permalink: /cores-terminal-conforto-visual/
 ---
@@ -16,7 +16,7 @@ permalink: /cores-terminal-conforto-visual/
       
 
 
-    <h2>Configurando o Terminal: Conforto Visual, escolhendo as Cores Perfeitas</h2>
+    <h1>Configurando o Terminal: Conforto Visual, escolhendo as Cores Perfeitas</h1>
 
     <p>
         Sabe quando a gente está concentrado digitando no terminal e aquela tela preta parece que está forçando a vista? Eu entendo perfeitamente essa sensação. Não é só sobre estética, mas sobre o nosso conforto ao usar o computador. Tentar combinar cores escuras com letras apagadas se torna um verdadeiro desafio para a nossa visão. Mas olha que legal: dá pra arrumar isso! A gente consegue deixar o terminal perfeito, sem agredir os olhos e funcionando direitinho.

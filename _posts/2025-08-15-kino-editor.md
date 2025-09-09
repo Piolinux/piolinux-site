@@ -1,14 +1,13 @@
 ---
 layout: default
 title: "Kino: O Editor de Vídeos Esquecido que Ainda Vale a Pena?"
+description: "Teste o Kino: editor de vídeo leve para Linux. Ideal para edição básica de DV — perfeito se você prefere simplicidade sem firulas!"
 date: 2025-08-15
 author: "PioLinux"
-categories: [linux, multimídia, ferramentas]
-tags: [kino, editor de video, linux, dv, open source]
-description: "Conheça o Kino, um editor de vídeo leve e simples para Linux. Ideal para edição básica de vídeos DV e quem prefere simplicidade em vez de firulas."
+categories: [linux, multimidia, ferramentas]
+tags: [kino, editor-de-video, linux, dv, open-source]
 permalink: /kino-editor-de-video-linux/
 ---
-
 
 {% include toc.html %}
 

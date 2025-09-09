@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Gerador de Senhas Fortes: Rápido, Simples e Seguro"
+title: "Gere Senhas Fortes: Rápido, Simples e 100% Seguro"
 date: 2025-08-18
 author: "PioLinux"
-categories: segurança ferramentas linux
-tags: [seguranca, senha, gerador, forte, unica]
-description: "Ferramenta simples para gerar senhas fortes com letras, números, símbolos e sem reutilização. Proteja-se contra ataques."
+categories: [segurança, ferramentas, linux]
+tags: [segurança, senha, gerador, forte, única]
+description: "Use esta ferramenta para gerar senhas fortes (letras, números, símbolos) — sem reutilização. Proteja-se contra ataques hoje!"
 permalink: /gerador-senhas-seguras/
 ---
 
@@ -93,11 +93,11 @@ permalink: /gerador-senhas-seguras/
                 Gerar Senha
             </button>
         </div>
- 
+        
         
 <hr class="my-10 border-gray-200">
 
-
+        
 
     <script>
         window.onload = function() {

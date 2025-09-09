@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "Atalhos de Teclado: Windows, macOS e Linux (Tabela)"
-description: "Confira a tabela completa de atalhos de teclado para Windows, macOS e Linux. Ideal para quem trabalha com múltiplos sistemas e usa terminal no dia a dia."
+title: "Domine Atalhos de Teclado: Windows, macOS e Linux (Tabela)"
+description: "Domine atalhos de teclado para Windows, macOS e Linux — tabela completa para quem usa múltiplos sistemas e terminal no dia a dia!"
 date: 2025-08-28 08:00:00 -0300
-categories: produtividade linux windows macos
+categories: [produtividade, linux, windows, macos]
 tags: [atalhos, produtividade, terminal, dica]
 permalink: /atalhos-de-teclado/
 ---
@@ -14,10 +14,8 @@ permalink: /atalhos-de-teclado/
 
 
 <section class="post-content">
- 
+
 <p>Dominar atalhos de teclado é essencial para ganhar produtividade em qualquer sistema operacional. Nesta tabela, você encontra os principais atalhos para Windows, macOS e Linux, organizados de forma prática para facilitar seu dia a dia.</p>
-
-
 
 
 <h2>🖥️ Tabela de Atalhos: Windows, macOS, Linux</h2>
@@ -242,6 +240,5 @@ No <strong>Linux </strong>, <code>Ctrl + Alt + t</code> e <code>Super + L</code>
 
 <p>Mesmo com filosofias diferentes, o objetivo é o mesmo: fazendo mais com menos.  
 Você vive no terminal, como um verdadeiro sysadmin, saber os atalhos certos é como ter um atalho no shell — poupa tempo, evitará erros e mostra domínio do sistema.</p>
-
 
 

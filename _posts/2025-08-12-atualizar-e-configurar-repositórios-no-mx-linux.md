@@ -1,14 +1,13 @@
 ---
 layout: default
-title: "Atualizar e configurar repositórios no MX Linux"
+title: "Atualize e Configure Repositórios no MX Linux (Guia 2025)"
+description: "Aprenda a atualizar e configurar repositórios no MX Linux corretamente. Mantenha seu sistema seguro, estável e com acesso aos melhores pacotes do Debian."
 date: 2025-08-12
 author: "PioLinux"
-categories: [mx linux, linux, atualizacao, configuracao]
-tags: [mx linux, repositórios, atualização, apt, debian, segurança]
-description: "Aprenda a atualizar e configurar repositórios no MX Linux corretamente. Mantenha seu sistema seguro, estável e com acesso aos melhores pacotes do Debian."
+categories: [mx-linux, linux, atualização, configuração]
+tags: [mx-linux, repositórios, atualização, apt, debian, segurança]
 permalink: /configurar-repositorios-mx-linux/
 ---
-
 
 {% include toc.html %}
 
@@ -25,11 +24,6 @@ permalink: /configurar-repositorios-mx-linux/
             <p>O Repo Manager é uma baita opção para quem quer escolher a melhor conexão de repositórios. Você pode clicar e selecionar os repositórios MX mais velozes automaticamente. Ah, ainda existe a opção de pegar os repositórios Debian Stable, para sempre ter a melhor velocidade de download, sacou?</p>
             
             <p>Na seção "Origens individuais", dá pra fazer as mesmas paradas que você faria com a gambiarra do terminal, mas agora de um jeito simples e visual, sem aquela culpa toda!</p>
-
-
-
-
-            
             
             <h2>Conclusão Final: As vantagens da parada MX</h2>
             <p>A automatização da Distro MX dá uma mãozona para todos os usuários, olha só:</p>
@@ -57,5 +51,6 @@ permalink: /configurar-repositorios-mx-linux/
 
 
 
-
+<h2>✅ Conclusão</h2>
+<p>Configurar repositórios corretamente é o primeiro passo para um <strong>MX Linux seguro e atualizado</strong>. Com este guia, você evita erros comuns e mantém seu sistema com o melhor do Debian e do MX. Agora, é só manter o <code>apt update</code> em dia.</p>
 </section>

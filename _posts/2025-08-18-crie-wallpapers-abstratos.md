@@ -3,15 +3,14 @@ layout: default
 title: "Crie Wallpapers Abstratos com SVG: Código no Seu Blog"
 date: 2025-08-18
 author: "PioLinux"
-categories: svg arte ferramentas jekyll
-tags: [wallpaper, svg, abstrato, gerador, html, codigo, blog]
-description: "Ferramenta interativa para criar wallpapers abstratos com SVG diretamente no seu blog. Gere arte vetorial com código puro, sem dependência."
+categories: [svg, arte, ferramentas, jekyll]
+tags: [wallpaper, svg, abstrato, gerador, html, código, blog]
+description: "Crie wallpapers abstratos com SVG direto no seu blog — arte vetorial com código puro, sem dependências externas."
 permalink: /wallpapers-abstratos-svg/
 ---
 
 
 {% include toc.html %}
-
 
 
 
@@ -159,9 +158,6 @@ permalink: /wallpapers-abstratos-svg/
         }
 
 </style>
-
-
-
 <body class="bg-slate-900 text-slate-100 p-8 flex flex-col items-center justify-center min-h-screen">
 
     <div class="tool-container">
@@ -301,3 +297,4 @@ permalink: /wallpapers-abstratos-svg/
             drawWallpaper();
         });
     </script>
+

@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Editores de Texto no Linux: Os Melhores para Conhecer"
+title: "Escolha Seu Editor de Texto no Linux: Nano, Vim, VS Code e Mais"
+description: "Escolha seu editor Linux ideal: Nano (simples), Vim (poderoso), VS Code (moderno). Qual combina com SEU fluxo de trabalho?"
 date: 2025-08-15
 author: "PioLinux"
 categories: [linux, editores, produtividade]
-tags: [linux, editor de texto, geany, vim, nano, code, opensource]
-description: "Conheça os melhores editores de texto para Linux — do simples Nano ao poderoso Vim e VS Code. Descubra qual combina com seu fluxo de trabalho."
+tags: [linux, editor-de-texto, geany, vim, nano, code, open-source]
 permalink: /editores-de-texto-linux/
 ---
 

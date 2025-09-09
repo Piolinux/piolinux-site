@@ -1,14 +1,13 @@
 ---
 layout: default
-title: "Gerador de Arte ASCII: Texto Estilizado para Terminal"
+title: "Gere Arte ASCII: Texto Estilizado para Seu Terminal"
+description: "Converta qualquer texto em arte ASCII com estilo de terminal. Ferramenta simples e divertida para usar no Linux, Geany ou linha de comando."
 date: 2025-08-19
 author: "PioLinux"
-categories: ferramentas terminal arte linux
+categories: [ferramentas, terminal, arte, linux]
 tags: [ascii, arte, gerador, texto, terminal, figlet, banner]
-description: "Converta qualquer texto em arte ASCII com estilo de terminal. Ferramenta simples e divertida para usar no Linux, Geany ou linha de comando."
 permalink: /gerador-ascii-art/
 ---
-
 
 {% include toc.html %}
 

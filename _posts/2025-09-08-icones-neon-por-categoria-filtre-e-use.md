@@ -1,16 +1,14 @@
 ---
 layout: default
-title: "Baixe 50 Ícones Neon SVG em 1 página — sem login, 100% grátis!"
-description: "Escolha, copie e use! 50 ícones neon SVG em uma página. Sem download, sem instalação — só copiar e colar. Ideal para devs e designers!"
+title: "50 Ícones Neon SVG — Tudo em 1 Página (Download Rápido)"
+description: "50 ícones neon SVG em uma única página. Escolha o tamanho e baixe com 1 clique. Nada de arquivos externos — tudo inline, rápido e confiável."
 tags:
   - svg
   - neon
-  - icones
+  - ícones
   - download
-  - jekyll
 permalink: /icones-neon-tudo-em-um/
 ---
-
 <style>
   .neon-icons-all-in-one {
     max-width: 1600px;
@@ -186,8 +184,8 @@ permalink: /icones-neon-tudo-em-um/
   <div class="intro-section">
     <h2>🌟 Bem-vindo à Coleção Neon de Ícones SVG</h2>
     <p>
-      Você encontrará <strong>50 ícones neon brilhantes</strong>, perfeitos para projetos modernos, interfaces, dashboards ou até apresentações criativas.
-      Escolha os tamanhos dos icones  (48px, 64px ou 96px), clique para baixar e utilize onde quiser — todos icones desenvolvidos em <strong>SVG leve e escalável</strong>.
+      Aqui você encontra <strong>50 ícones neon brilhantes</strong>, perfeitos para projetos modernos, interfaces, dashboards ou até apresentações criativas.
+      Escolha o tamanho (48px, 64px ou 96px), clique para baixar e use onde quiser — todos em <strong>SVG leve e escalável</strong>.
       Nada de instalações, dependências ou complicações: <strong>tudo funciona offline, direto no seu navegador</strong>.
     </p>
   </div>
@@ -212,7 +210,8 @@ permalink: /icones-neon-tudo-em-um/
 <div>
     <h2>🎉 Use, Compartilhe e Brilhe!</h2>
     <p>
-      Esses ícones foram feitos para acelerar seus projetos com estilo e praticidade. Sinta-se à vontade para usá-los em sites, aplicativos, apresentações, documentações ou até mesmo em <strong> arte digital.</strong> 
+      Esses ícones foram feitos para acelerar seus projetos com estilo e praticidade. Sinta-se à vontade para usá-los em sites, aplicativos, apresentações, documentações ou até mesmo em arte digital. Se gostou, compartilhe com seus colegas ou contribua sugerindo novos ícones.
+      <strong>Nenhum login, cadastro ou burocracia — só criatividade e código limpo.</strong> ✨
     </p>
   </div>
 

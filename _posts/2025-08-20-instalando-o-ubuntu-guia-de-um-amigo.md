@@ -4,7 +4,7 @@ title: "Instalar Ubuntu: Guia Simples e Seguro para Iniciantes"
 date: 2025-08-20
 author: "PioLinux"
 categories: [ubuntu, linux, tutoriais]
-tags: [ubuntu, linux, instalacao, tutorial, iniciantes, software_livre]
+tags: [ubuntu, linux, instalação, tutorial, iniciantes, software_livre]
 description: "Guia passo a passo para instalar o Ubuntu de forma simples e segura. Ideal para quem está migrando do Windows ou usando Linux pela primeira vez."
 permalink: /instalar-ubuntu-guia-iniciantes/
 ---

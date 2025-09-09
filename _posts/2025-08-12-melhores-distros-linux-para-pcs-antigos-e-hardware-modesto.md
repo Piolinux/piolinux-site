@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Melhores distros Linux para PCs antigos e hardware modesto"
+title: "Distros Linux para PCs Antigos: Leves e Rápidas"
+description: "Escolha a distro Linux ideal para PCs antigos: Lubuntu, Debian, MX Linux, antiX — leves, rápidas e com pouca RAM!"
 date: 2025-08-12
 author: "PioLinux"
 categories: [linux, distros, performance]
-tags: [distros, linux, pc antigo, leve, debian, lubuntu, mx linux, antix]
-description: "Descubra as melhores distribuições Linux para PCs antigos e hardware com pouca RAM. Comparativo entre Lubuntu, Debian, MX Linux, antiX"
+tags: [distros, linux, pc-antigo, leve, debian, lubuntu, mx-linux, antix]
 permalink: /distros-linux-pc-antigo/
 ---
 

@@ -1,14 +1,13 @@
 ---
 layout: default
 title: "A Parábola de Maria GUI e o Terminal Amaldiçoado"
+description: "A Parábola de Maria GUI e o Terminal Amaldiçoado: uma história simbólica sobre quem teme o terminal — e descobre o verdadeiro poder do CLI."
 date: 2025-08-11
 author: "PioLinux"
-categories: [linux, humor, tutorial, historia]
-tags: [terminal, linux, gui, parabola, aprendizado, cli]
-description: "A Parábola de Maria GUI e o Terminal Amaldiçoado: uma história simbólica sobre quem teme o terminal e descobre que o verdadeiro poder."
+categories: [linux, humor, tutorial, história]
+tags: [terminal, linux, gui, parábola, aprendizado, cli]
 permalink: /parabola-maria-gui-terminal/
 ---
-
 
 
 {% include toc.html %}

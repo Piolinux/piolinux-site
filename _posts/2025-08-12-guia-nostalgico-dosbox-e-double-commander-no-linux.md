@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "Guia Nostálgico: DOSBox e Double Commander no Linux"
+description: "Reviva os anos 90 com DOSBox e Double Commander no Linux. Guia nostálgico para rodar jogos DOS e gerenciar arquivos com estilo de interface dupla."
 date: 2025-08-12
 author: "PioLinux"
 categories: [linux, retro, ferramentas]
-tags: [dosbox, double commander, emulação, gerenciador de arquivos, nostalgia]
-description: "Reviva os anos 90 com DOSBox e Double Commander no Linux. Guia nostálgico para rodar jogos DOS e gerenciar arquivos com estilo de interface dupla."
+tags: [dosbox, double-commander, emulação, gerenciador-de-arquivos, nostalgia]
 permalink: /guia-nostalgico-dosbox-double-commander/
 ---
 

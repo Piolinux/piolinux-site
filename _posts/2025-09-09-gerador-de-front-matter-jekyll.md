@@ -1,7 +1,7 @@
 ---
-title: "Gerador de Front Matter Jekyll: Slug + Categorias"
+title: "Use o Gerador de Front Matter Jekyll: Slug + Categorias Automáticas"
 date: 2025-09-09
-description: "Ferramenta HTML+JS para gerar front matter do Jekyll com slug automático, tags, categorias e excerpt — sem instalar nada, 100% offline."
+description: "Use esta ferramenta HTML+JS para gerar front matter do Jekyll com slug, tags e categorias automáticas — sem instalar nada, 100% offline."
 tags: ["jekyll", "yaml", "front matter", "produtividade", "devtools"]
 categories: ["Desenvolvimento", "Ferramentas"]
 permalink: /gerador-front-matter-jekyll
@@ -53,7 +53,7 @@ layout: default
     }
     #output {
       margin-top: 30px;
-      background: #2c3e50;
+      background: #008000;
       color: #ecf0f1;
       padding: 20px;
       border-radius: 6px;

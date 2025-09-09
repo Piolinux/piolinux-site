@@ -3,11 +3,12 @@ layout: default
 title: "Crie Ícones no Linux em Segundos: Personalização"
 date: 2025-08-20
 author: "PioLinux"
-categories: [linux, personalizacao, ferramentas]
-tags: [icones, linux, personalizacao, svg, geany, debian]
+categories: [linux, personalização, ferramentas]
+tags: [ícones, linux, personalização, svg, geany, debian]
 description: "Aprenda a criar e personalizar ícones no Linux em segundos. Ferramentas, atalhos e dicas para deixar seu desktop moderno, rápido e com sua cara."
-permalink: /criar-icoes-linux/
+permalink: /criar-ícones-linux/
 ---
+
 
 {% include toc.html %}
 

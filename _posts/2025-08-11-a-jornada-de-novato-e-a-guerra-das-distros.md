@@ -1,14 +1,13 @@
 ---
 layout: default
 title: "A Jornada do Novato: A Guerra das Distros no Mundo Linux"
+description: "Siga a jornada de um novato no Linux, perdido entre Ubuntu, Debian, Arch e Fedora. Uma aventura divertida pela guerra das distros."
 date: 2025-08-11
 author: "PioLinux"
-categories: [linux, historia, distros]
+categories: [linux, história, distros]
 tags: [distros, linux, novato, ubuntu, debian, arch, fedora]
-description: "Siga a jornada de um novato no Linux, perdido entre Ubuntu, Debian, Arch e Fedora. Uma aventura divertida pela 'guerra das distros"
 permalink: /jornada-do-novato-guerra-das-distros/
 ---
-
 
 {% include toc.html %}
 

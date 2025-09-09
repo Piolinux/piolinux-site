@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Como Instalar as Principais Distros Linux em Uma Tabela"
-description: "Tabela prática com métodos de instalação das principais distros Linux: Ubuntu, Arch, Fedora, Debian, Mint, Manjaro, Pop!_OS e mais."
+title: "Instale Ubuntu, Arch, Fedora e Mais — Tudo em Uma Tabela!"
+description: "Baixe ou copie: métodos de instalação de Ubuntu, Arch, Fedora, Mint, Manjaro, Pop!_OS e mais — tudo em uma tabela fácil de usar."
 date: 2025-09-08
 tags:
   - linux
@@ -9,10 +9,14 @@ tags:
   - distros
   - tutorial
   - ubuntu
+  - arch
   - arch-linux
   - debian
   - fedora
-permalink: /como-instalar-principais-distros-linux-tabela
+  - mint
+  - manjaro
+  - pop-os
+permalink: /distros-linux-tabela/
 ---
 
 <h2>Tabela Comparativa: Como Instalar as Principais Distros Linux</h2>

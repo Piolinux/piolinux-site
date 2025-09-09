@@ -3,10 +3,10 @@ layout: default
 title: "Gerador de Ícones SVG: Código Limpo e Design Livre"
 date: 2025-08-18
 author: "PioLinux"
-categories: ferramentas svg design webdev
-tags: [svg, icones, gerador, codigo, design, webdev]
+categories: [ferramentas, svg, design, webdev]
+tags: [svg, ícones, gerador, código, design, webdev]
 description: "Crie ícones SVG personalizados com código limpo e design livre. Gere gráficos leves, modernos e responsivos para seus projetos web em segundos."
-permalink: /gerador-icoes-svg/
+permalink: /gerador-ícones-svg/
 ---
 
 

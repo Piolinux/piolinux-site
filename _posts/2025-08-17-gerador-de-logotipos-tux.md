@@ -37,7 +37,7 @@ permalink: /gerador-logotipo-tux/
 
     <h2 class="text-2xl font-bold mt-8 mb-4">A Magia por Trás da Ferramenta</h2>
     <p>Tudo o que veem é gerado em tempo real no vosso navegador. O código é super leve e não precisa de nada para funcionar. Se tiverem curiosidade, podem ver o código completo mesmo aqui em baixo.</p>
-</section>
+
 
 <!-- O código HTML da ferramenta começa aqui -->
 
@@ -150,6 +150,8 @@ permalink: /gerador-logotipo-tux/
         </div>
     </div>
 </div>
+</section>
+
 <script>
     // O código JavaScript para desenhar o Tux e gerir a interação
     document.addEventListener('DOMContentLoaded', main);

@@ -1,14 +1,13 @@
 ---
 layout: default
-title: "Memory Card de Linux: Revise 50 Comandos Essenciais"
-description: "Aprenda e revise 50 comandos essenciais do Linux com este memory card interativo. Perfeito para sysadmins, devops e estudantes que querem dominar o terminal."
+title: "Flashcards de Linux: Revise 50 Comandos Essenciais"
+description: "Aprenda e revise 50 comandos Linux com flashcards interativos. Ideal para sysadmins, DevOps e estudantes que querem dominar o terminal!"
 date: 2025-08-28 15:00:00 -0300
 author: "PioLinux"
-categories: ferramentas estudo linux
+categories: [ferramentas, estudo, linux]
 tags: [linux, comandos, terminal, devops, sysadmin, estudo]
-permalink: /memory-card-linux/
+permalink: /flashcards-linux/
 ---
-
 
 {% include toc.html %}
 
