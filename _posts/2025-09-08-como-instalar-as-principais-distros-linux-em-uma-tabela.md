@@ -122,4 +122,4 @@ permalink: /distros-linux-tabela/
 
 
   <h3>📌 Conclusão: Não existe uma tabela única com todas as distribuiçoes Linux </h3>  
-  <p>São centenas e diversos modos de instalação simples aos mais avançados com risco do Sistema instalado não funcionar, teste no Virtual box, caso queira se aventurar em experimentos que mordem!</p>
+  <p>Existem centenas de modos de instalação, desde os mais simples até os mais avançados. Estes últimos podem comprometer o funcionamento do sistema. Recomenda-se testar no VirtualBox antes de realizar experimentos que apresentem riscos.</p>
