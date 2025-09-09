@@ -138,14 +138,14 @@ permalink: /comparativo-terminais/
 
 <h4>🐧 Linux</h4>
 <ul>
-  <li>Use <a href="https://ohmyz.sh">Oh My Zsh</a> para melhorar seu Zsh.</li>
+  <li>Utilize <a href="https://ohmyz.sh">Oh My Zsh</a> para melhorar seu Zsh.</li>
   <li>Experimente <code>fish</code> para um shell mais amigável.</li>
   <li>Terminal recomendado: <strong>Alacritty</strong> (rápido) ou <strong>Terminator</strong> (para splits).</li>
 </ul>
 
 <h4>🍏 macOS</h4>
 <ul>
-  <li>Instale <a href="https://iterm2.com">iTerm2</a> — é melhor que o Terminal.app.</li>
+  <li>Instalando <a href="https://iterm2.com">iTerm2</a> — é melhor que o Terminal.app.</li>
   <li>Use <code>brew install neofetch</code> e execute <code>neofetch</code> para um toque estiloso.</li>
   <li>Ative o modo escuro no iTerm2 para produtividade noturna.</li>
 </ul>
@@ -153,23 +153,16 @@ permalink: /comparativo-terminais/
 <h4>💾 Windows</h4>
 <ul>
   <li>Instale o <a href="https://aka.ms/terminal">Windows Terminal</a> da Microsoft Store.</li>
-  <li>Ative o WSL: abra PowerShell como admin e digite:
-    <pre><code>wsl --install</code></pre>
-  </li>
-</ul>
+  <li>Ative o WSL: abra P
 
+h3>✅ Quais são os terminais é ideal para você?</h3>
 
-
-
-<h3>✅ Qual terminal é o ideal para você?</h3>
-
-<p>Se você está no <strong>Windows</strong>, utilizando o <strong>Windows Terminal</strong> — é moderno, rápido e integrado ao WSL.  
+<p>Você está no <strong>Windows</strong>, utilizando o <strong>Windows Terminal</strong> é moderno, rápido e integrado ao WSL.  
 No <strong>Machintosh</strong>, o <strong>iTerm2</strong> é o padrão ouro: com abas, temas e automação.  
-No <strong>Linux</strong>, o terminal nativo já é poderoso e funciona muito bem, mas com <strong>Oh My Zsh</strong> e plugins como <code>z</code>, <code>git</code> e <code>syntax-highlighting</code>, ele vira uma máquina de produtividade.</p>
+No <strong>Linux</strong>, o terminal nativo já é poderoso, funcionará muito bem, mas com <strong>Oh My Zsh</strong> e plugins como <code>z</code>, <code>git</code> e <code>syntax-highlighting</code>, ele vira uma máquina de produtividade com diversas opçoes.</p>
 
-<p>Não existe "o melhor terminal". Existe o <strong>melhor terminal para o seu fluxo de trabalho</strong>.  
-E se você vive no terminal, dominar as ferramentas do seu sistema é o primeiro passo para se tornar um verdadeiro sysadmin de linha de comando.</p>
-
+<p>Não existirá o <strong>melhor terminal para o seu fluxo de trabalho</strong>.  
+Você que vive no terminal, domine as ferramentas do seu sistema é o primeiro passo para se tornar um verdadeiro sysadmin de linha de comando.</p>
 
 
 
