@@ -140,7 +140,7 @@ layout: default
 
   <div>
     <h3>Resultado:</h3>
-    <pre id="output" style="background:#f4f4f4; padding:15px; border-radius:5px; white-space: pre-wrap;"></pre>
+    <pre id="output" style="background:#008000; padding:15px; border-radius:5px; white-space: pre-wrap;"></pre>
   </div>
 
   <script>
