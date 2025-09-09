@@ -20,7 +20,6 @@ permalink: /distros-linux-tabela/
 ---
 
 
-<p>A instalação de Sistemas Operacionais como Ubuntu, Arch e Fedora, bem como outras distribuições Linux, pode gerar incertezas. Este documento compila dados cruciais para a instalação, configuração e utilização das principais distribuições Linux.</p>
 
 
 <h2>Tabela Comparativa: Como Instalar as Principais Distros Linux</h2>
@@ -30,6 +29,7 @@ permalink: /distros-linux-tabela/
 
 
 <section class="post-content">
+<p>A instalação de Sistemas Operacionais como Ubuntu, Arch e Fedora, bem como outras distribuições Linux, pode gerar incertezas. Este documento compila dados cruciais para a instalação, configuração e utilização das principais distribuições Linux.</p>
 
 
 
