@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "50 Ícones Neon SVG — Tudo em uma página para download "
-description: "50 ícones neon SVG em uma única página. Escolha o tamanho e baixe com 1 clique. Nada de arquivos externos — tudo inline, rápido e confiável."
+title: "Baixe 50 Ícones Neon SVG em 1 página — sem login, 100% grátis!"
+description: "Escolha, copie e use! 50 ícones neon SVG em uma página. Sem download, sem instalação — só copiar e colar. Ideal para devs e designers!"
 tags:
   - svg
   - neon
