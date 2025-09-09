@@ -9,6 +9,12 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
 permalink: /comandos-avançados-linux/
 ---
 
+
+
+{% include toc.html %}
+
+
+
 <section class="post-content">
     <p>
      Desvendando dicas avançadas pra você ser o mestre no terminal Linux.

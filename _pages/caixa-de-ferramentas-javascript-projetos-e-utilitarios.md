@@ -9,6 +9,10 @@ tags: [javascript, ferramentas, jogos, utilitários, front-end, projetos]
 permalink: /caixa-ferramentas-javascript/
 ---
 
+
+{% include toc.html %}
+
+
 <section>
  
   

@@ -1,13 +1,15 @@
 ---
 layout: default
-title: "Artigos Linux: Bash, Automação e Terminal (2025)"
+title: "Índice Linux 2025: Bash, Automação, Terminal e Segurança"
 description: "Coleção organizada de artigos sobre Linux: scripts Bash, automação, administração de sistemas, segurança e ferramentas como Oh My Zsh, iTerm2."
 date: 2025-09-09
 author: "PioLinux"
-categories: [linux, tutoriais, índice]
-tags: [índice, linux, bash, automação, administração, segurança, ohmyzsh, iterm2, windows-terminal]
+categories: [linux, tutoriais, indice]
+tags: [indice, linux, bash, automacao, administracao, seguranca, ohmyzsh, iterm2, windows-terminal]
 permalink: /indice-artigos-linux/
 ---
+
+
 
 <section>
   <h2>🧠 Artigos Disponíveis</h2>

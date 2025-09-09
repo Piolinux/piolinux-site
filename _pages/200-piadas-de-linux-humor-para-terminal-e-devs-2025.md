@@ -10,6 +10,9 @@ permalink: /piadas-linux-terminal/
 ---
 
 
+{% include toc.html %}
+
+
 <section>
 <article id="piadas-linux">
 <h2>

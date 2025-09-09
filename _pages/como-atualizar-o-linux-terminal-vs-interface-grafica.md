@@ -9,6 +9,12 @@ tags: [atualização, linux, terminal, apt, segurança, sysadmin]
 permalink: /atualizar-linux-terminal-grafico/
 ---
 
+
+{% include toc.html %}
+
+
+
+
 <section class="post-content">
     <p>
      Dominar o terminal Linux, e bombar na produtividade? Comece por dominar os comandos básicos! Não é mágica, viu — o primeiro passo é seu. Há terminais tipo **Bash**, o mais conhecido. No terminal, usa-se "feitiços", que são os comandos. Mas cuidado, alguns podem inutilizar tudo! Com este guia, entenda o porquê de cada comando! E olha, `rm -f /home/` não é ideal pra começar!

@@ -5,9 +5,14 @@ description: "Coleção prática de artigos para quem está começando no Linux:
 date: 2025-09-10
 author: "PioLinux"
 categories: [linux, iniciante, tutoriais]
-tags: [iniciantes, linux, comandos, terminal, ohmyzsh, iterm2, windows-terminal]
+tags: [iniciante, linux, comandos, terminal, ohmyzsh, iterm2, windows-terminal]
 permalink: /artigos-linux-iniciantes/
 ---
+
+
+{% include toc.html %}
+
+
 
 <section class="post-content">
     <p>

@@ -5,9 +5,14 @@ description: "Aprenda os comandos básicos do Linux com este guia completo: ls, 
 date: 2025-09-14
 author: "PioLinux"
 categories: [linux, terminal, iniciante]
-tags: [comandos, linux, terminal, bash, tutorial, iniciantes]
+tags: [comandos, linux, terminal, bash, tutorial, iniciante]
 permalink: /comandos-basicos-linux-iniciantes/
 ---
+
+
+{% include toc.html %}
+
+
 
 
 <section class="post-content">

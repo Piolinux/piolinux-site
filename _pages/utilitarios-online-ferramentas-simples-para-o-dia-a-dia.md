@@ -1,13 +1,21 @@
 ---
 layout: default
-title: "Utilitários Online: Ferramentas Simples para o Dia a Dia"
+title: "Use Utilitários Online: Ferramentas Simples para Seu Dia a Dia"
 description: "Coleção de ferramentas online úteis: gerador de QR Code, temporizador Pomodoro, lista de tarefas, relógio digital e formulário de contato. Sem firulas."
 date: 2025-10-01
 author: "PioLinux"
 categories: [ferramentas, produtividade, online]
-tags: [utilitários, qrcode, pomodoro, tarefas, relógio, ferramentas]
+tags: [utilitarios, qrcode, pomodoro, tarefas, relogio, ferramentas]
 permalink: /utilitarios-online/
 ---
+
+
+
+{% include toc.html %}
+
+
+
+
 
 <section>
 <h2>🔧 Utilitários Online Úteis</h2>

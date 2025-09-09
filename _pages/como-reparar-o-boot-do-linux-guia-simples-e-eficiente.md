@@ -1,13 +1,16 @@
 ---
 layout: default
-title: "Como Reparar o Boot do Linux: Guia Simples e Eficiente"
+title: "Repare o Boot do Linux: Guia Simples + Eficiente (Passo a Passo)"
 description: "Aprenda a reparar o boot do Linux passo a passo: recupere o GRUB, corrija sistema de arquivos e saia do GRUB Rescue. Tudo com terminal e live USB."
 date: 2025-09-30
 author: "PioLinux"
 categories: [linux, boot, recuperação]
-tags: [boot, grub, live usb, reparar linux, sistema de arquivos, sysadmin]
+tags: [boot, grub, live-usb, reparar-linux, sistema-de-arquivos, sysadmin]
 permalink: /reparar-boot-linux/
 ---
+
+
+{% include toc.html %}
 
 <section class="post-content">
     <p>

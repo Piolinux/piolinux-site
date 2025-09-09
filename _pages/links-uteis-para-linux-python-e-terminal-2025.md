@@ -1,13 +1,18 @@
 ---
 layout: default
-title: "Links Úteis para Linux, Python e Terminal (2025)"
+title: "Salve Esses Links: Linux, Python, Terminal (Recursos 2025)"
 description: "Coleção de links essenciais: Oh My Zsh, iTerm2, Windows Terminal, documentação oficial do Linux, Python, Debian e ferramentas para desenvolvedores."
 date: 2025-09-23
 author: "PioLinux"
-categories: [recursos, links, ferramentas]
+categories: [recursos, referências, ferramentas]
 tags: [links, recursos, linux, python, ohmyzsh, iterm2, windows-terminal]
 permalink: /links-uteis-linux-python/
 ---
+
+
+{% include toc.html %}
+
+
 
 <h2>🔗 Links Úteis</h2>
 

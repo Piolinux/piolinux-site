@@ -9,6 +9,12 @@ tags: [dicas, linux, terminal, comandos, tutorial, iniciantes]
 permalink: /80-dicas-linux-iniciantes/
 ---
 
+
+{% include toc.html %}
+
+
+
+
 <section class="post-content">
   <div class="container">
    <p>

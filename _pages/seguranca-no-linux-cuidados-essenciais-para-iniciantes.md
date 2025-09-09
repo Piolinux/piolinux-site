@@ -9,6 +9,12 @@ tags: [segurança, linux, firewall, senhas, permissões, sudo]
 permalink: /seguranca-linux-iniciantes/
 ---
 
+
+
+{% include toc.html %}
+
+
+
 <section>
     <p>
      Pensa que tá completamente seguro só por causa do Linux? Não se iluda, hein? Usar o sistema com cuidado é crucial, porque ninguém escapa das ameaças, sobretudo se você também usa Windows em outra partição, ou se usa o Wine pra rodar app da Microsoft.

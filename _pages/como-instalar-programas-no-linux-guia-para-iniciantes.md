@@ -10,6 +10,9 @@ permalink: /como-instalar-programas-linux-iniciantes/
 ---
 
 
+{% include toc.html %}
+
+
 <section class="post-content">
 <p>
       E aí, beleza? Já se pegou pensando em qual é o jeito mais tranquilo de instalar um programa no Linux? Tipo, bateu aquela dúvida de "por onde eu começo?", sussa, porque tem um monte de formas fáceis e que funcionam pra você botar os programas pra rodar sem complicação.

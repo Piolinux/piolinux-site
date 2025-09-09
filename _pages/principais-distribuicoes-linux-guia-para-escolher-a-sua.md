@@ -1,13 +1,21 @@
 ---
 layout: default
-title: "Principais Distribuições Linux: Guia para Escolher a Sua"
-description: "Compare as principais distribuições Linux: Ubuntu, Debian, Fedora, Arch, Mint, Pop!_OS e mais. Descubra qual combina com seu hardware e estilo de uso."
+title: "Escolha Sua Distro Linux: Ubuntu, Debian, Fedora, Arch e Mais"
+description: "Escolha sua distro Linux ideal: Ubuntu, Debian, Fedora, Arch, Mint, Pop!_OS. Qual combina com SEU hardware e estilo de uso?"
 date: 2025-09-19
 author: "PioLinux"
 categories: [linux, distros, escolha]
-tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop_os, kali]
+tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop-os, kali]
 permalink: /principais-distros-linux/
 ---
+
+
+
+
+{% include toc.html %}
+
+
+
 
 <section class="post-content">
     <p>

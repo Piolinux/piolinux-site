@@ -1,13 +1,19 @@
 ---
 layout: default
-title: "Software para Linux e Windows: Guia com Dicas Essenciais"
-description: "Descubra os melhores programas para Linux e Windows: editores, ferramentas de produtividade, navegadores e ferramentas modernas como Oh My Zsh, iTerm2."
+title: "Escolha Software para Linux e Windows: Dicas Essenciais"
+description: "Escolha os melhores programas para Linux e Windows: editores, produtividade, navegadores, Oh My Zsh, iTerm2 e Windows Terminal. Dicas essenciais!"
 date: 2025-09-08
 author: "PioLinux"
 categories: [software, dicas, linux, windows]
 tags: [software, dicas, linux, windows, terminal, ohmyzsh, iterm2, windows-terminal]
 permalink: /software-linux-windows-dicas/
 ---
+
+
+
+{% include toc.html %}
+
+
 
 <section class="post-content">
   

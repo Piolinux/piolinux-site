@@ -9,6 +9,10 @@ tags: [menu, html, css, navegação, frontend, código]
 permalink: /exemplos-menus-html/
 ---
 
+
+{% include toc.html %}
+
+
 <section>
     <h2>
      1️⃣ Menu Horizontal Simples

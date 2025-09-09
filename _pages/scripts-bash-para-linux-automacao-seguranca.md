@@ -1,13 +1,20 @@
 ---
 layout: default
-title: "Scripts Bash para Linux: Automação, Segurança"
+title: "Automatize e Proteja com Scripts Bash no Linux"
 description: "Aprenda a criar scripts Bash para automação, administração, segurança e desenvolvimento. Exemplos práticos para quem usa terminal."
 date: 2025-09-06
 author: "PioLinux"
 categories: [linux, bash, automação]
-tags: [bash, shell script, automação, terminal, linux, script, produtividade]
+tags: [bash, shell-script, automação, terminal, linux, script, produtividade]
 permalink: /scripts-bash-linux/
 ---
+
+
+{% include toc.html %}
+
+
+
+
 
 <section class="post-content">
     <p>

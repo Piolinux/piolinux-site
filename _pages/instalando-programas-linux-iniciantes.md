@@ -10,6 +10,9 @@ permalink: /instalar-programas-linux-iniciantes/
 ---
 
 
+{% include toc.html %}
+
+
 
    <section class="post-content">
     <p>

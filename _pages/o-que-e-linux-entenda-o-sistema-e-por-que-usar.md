@@ -1,13 +1,20 @@
 ---
 layout: default
-title: "O Que é Linux? Entenda o Sistema e Por Que Usar"
-description: "Descubra o que é Linux, como ele funciona e por que é um dos sistemas operacionais mais populares. Ideal para iniciantes que querem sair do Windows."
+title: "🐧 O Que é Linux? Entenda o Sistema e Por Que Usar"
+description: "Entenda o que é Linux, como funciona e por que é tão popular — ideal para iniciantes que querem sair do Windows e dominar um sistema livre!"
 date: 2025-09-21
 author: "PioLinux"
 categories: [linux, iniciante, conceitos]
-tags: [linux, kernel, open source, sistema operacional, tutorial]
+tags: [linux, kernel, open-source, sistema-operacional, tutorial]
 permalink: /o-que-e-linux/
 ---
+
+
+{% include toc.html %}
+
+
+
+
 
 <section class="post-content">
    <p>

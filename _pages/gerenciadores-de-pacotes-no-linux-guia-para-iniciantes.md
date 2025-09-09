@@ -1,13 +1,18 @@
 ---
 layout: default
-title: "Gerenciadores de Pacotes no Linux: Guia para Iniciantes"
-description: "Aprenda os principais gerenciadores de pacotes no Linux: apt (Debian/Ubuntu), dnf (Fedora), pacman (Arch) e zypper (openSUSE)." 
+title: "Domine Gerenciadores de Pacotes no Linux (Guia Iniciante)"
+description: "Aprenda os principais gerenciadores de pacotes no Linux: apt (Debian/Ubuntu), dnf (Fedora), pacman (Arch) e zypper (openSUSE)."
 date: 2025-09-20
 author: "PioLinux"
 categories: [linux, pacotes, comandos]
-tags: [pacotes, linux, apt, dnf, pacman, zypper, instalação]
+tags: [pacotes, linux, apt, dnf, pacman, zypper, instalacao]
 permalink: /gerenciadores-pacotes-linux/
 ---
+
+{% include toc.html %}
+
+
+
 
 <section>
     <p>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Como Remover Programas no Linux: Guia Completo iniciantes"
+title: "Remova Programas no Linux: Guia Completo para Iniciantes"
 description: "Aprenda a remover programas no Linux com segurança: apt, snap, flatpak e interfaces gráficas. Evite lixo no sistema e mantenha seu terminal limpo."
 date: 2025-09-18
 author: "PioLinux"
@@ -8,6 +8,10 @@ categories: [linux, desinstalação, iniciante]
 tags: [desinstalação, linux, apt, snap, flatpak, software, tutorial]
 permalink: /remover-programas-linux/
 ---
+
+
+{% include toc.html %}
+
 
 
 <section class="post-content">

@@ -1,9 +1,17 @@
 ---
 layout: default
-title: "Galeria de Wallpapers: Temas para Devs e Sysadmins"
+title: "Baixe Wallpapers para Devs e Sysadmins: Dark, Espaço, Minimalista"
 description: "Baixe wallpapers gratuitos para desktop e mobile. Temas: programação, natureza, dark mode, espaço, minimalismo e muito mais."
+date: 2025-09-25
+author: "PioLinux"
+categories: [wallpapers, design, produtividade]
+tags: [wallpaper, dev, sysadmin, dark-mode, espaço, minimalismo, natureza, programação, desktop, mobile]
 permalink: /wallpapers/
 ---
+
+
+
+
 
 <div class="gallery-container">
   {% for wallpaper in site.data.wallpapers %}

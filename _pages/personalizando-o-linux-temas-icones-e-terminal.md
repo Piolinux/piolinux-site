@@ -1,13 +1,18 @@
 ---
 layout: default
-title: "Personalizando o Linux: Temas, Ícones e Terminal"
+title: "Personalize Seu Linux: Temas, Ícones e Terminal (Guia 2025)"
 description: "Aprenda a personalizar seu Linux com temas, ícones, extensões e atalhos. Deixe seu sistema com a sua cara — como um terminal com Oh My Zsh."
 date: 2025-09-26
 author: "PioLinux"
-categories: [linux, personalização, iniciante]
-tags: [personalização, linux, temas, ícones, atalhos, ohmyzsh, iterm2]
+categories: [linux, personalizacao, iniciante]
+tags: [personalizacao, linux, temas, icones, atalhos, ohmyzsh, iterm2]
 permalink: /personalizar-linux-iniciantes/
 ---
+
+
+{% include toc.html %}
+
+
 
 <section class="post-content">
 

@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "Mais Códigos: Linux, HTML, Python e Terminal (2025)"
+title: "Copie e Use: Códigos Linux, Python, HTML + Terminal (2025)"
 description: "Coleção prática de códigos úteis: scripts Bash, snippets HTML, exemplos em Python, configurações de Oh My Zsh, iTerm2 e Windows Terminal."
 date: 2025-09-24
 author: "PioLinux"
-categories: [códigos, scripts, desenvolvimento]
-tags: [códigos, linux, python, html, bash, ohmyzsh, iterm2, windows-terminal]
+categories: [codigo, script, desenvolvimento]
+tags: [codigos, linux, python, html, bash, ohmyzsh, iterm2, windows-terminal]
 permalink: /mais-codigos-linux-html-python/
 ---
 
-
+{% include toc.html %}
 
 
 

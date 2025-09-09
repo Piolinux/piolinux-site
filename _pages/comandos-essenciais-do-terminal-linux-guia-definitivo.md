@@ -9,6 +9,15 @@ tags: [terminal, comandos, linux, bash, sysadmin, produtividade]
 permalink: /comandos-essenciais-terminal-linux/
 ---
 
+
+
+
+{% include toc.html %}
+
+
+
+
+
 <section>
     <h2>
      ⌨️ Dominando o Terminal: Comandos Essenciais do Linux
