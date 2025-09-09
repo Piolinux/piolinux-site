@@ -235,14 +235,13 @@ permalink: /atalhos-de-teclado/
 <h3>✅ Escolha seu modo de trabalho: Windows, macOS ou Linux</h3>
 
 
-<p>Cada sistema tem seu estilo:  
-No <strong>Windows</strong>, <code>Ctrl + C</code> e <code>Win + D</code> são reflexo.  
-No <strong>macOS</strong>, <code>Cmd + Tab</code> e <code>Cmd + Space</code> definem o fluxo.  
-No <strong>Linux</strong>, <code>Ctrl + Alt + T</code> e <code>Super + L</code> são parte da rotina do terminal.</p>
+<p>Cada sistema possuem seus estilos de teclas de atalhos:  
+No <strong>Windows ao utilizar as teclas de atalhos</strong>, <code>Ctrl + c</code> e <code>Win + d</code> são reflexos.  
+No <strong>macOS, ao utilizar as teclas de atalhos</strong>, <code>Cmd + Tab</code> e <code>Cmd + Space</code> definem o fluxo.  
+No <strong>Linux </strong>, <code>Ctrl + Alt + t</code> e <code>Super + L</code> são parte da rotina do terminal.</p>
 
-<p>Mesmo com filosofias diferentes, o objetivo é o mesmo: fazer mais com menos.  
-E se você vive no terminal, como um verdadeiro sysadmin, saber os atalhos certos é como ter um atalho no shell — poupa tempo, evita erros e mostra domínio do sistema.</p>
-
+<p>Mesmo com filosofias diferentes, o objetivo é o mesmo: fazendo mais com menos.  
+Você vive no terminal, como um verdadeiro sysadmin, saber os atalhos certos é como ter um atalho no shell — poupa tempo, evitará erros e mostra domínio do sistema.</p>
 
 
 
