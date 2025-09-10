@@ -41,7 +41,7 @@ layout: default
       <td><strong>Google Chrome lançado em 2 de setembro de 2008.</strong></td>
       <td>Google</td>
       <td>Blink (Chromium)</td>
-      <td>✅ Sim</td>
+      <td> Sim</td>
       <td>Windows, macOS, Linux, Android, iOS</td>
       <td>Mais usado no mundo. Suporte a extensões, sincronização, DevTools avançadas, para desevolvimento de páginas web ou projetos diferenciandos .</td>
     </tr>
@@ -49,7 +49,7 @@ layout: default
       <td><strong>Mozilla Firefox lançado em 9 de novembro de 2004.</strong></td>
       <td>Mozilla Foundation</td>
       <td>Gecko</td>
-      <td>✅ Sim</td>
+      <td> Sim</td>
       <td>Windows, macOS, Linux, Android</td>
       <td>Open source, foco em privacidade, customizável. Versão ESR para empresas, suporte de longo prazo,  baseado na versão estável.</td>
     </tr>
