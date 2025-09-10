@@ -82,9 +82,8 @@ permalink: /cores-terminal-conforto-visual/
     width: 100%;
   ">
 
-    <h1 style="text-align: center; color: #FFFFFF;">🎨 Tabela de Cores ANSI do Terminal Linux</h1>
-    <p style="text-align: center; font-size: 1.1em; color: #FFFFFF;">
-      Cores usadas em <code>echo</code>, <code>PS1</code>, scripts Bash e saída colorida.<br>
+    <h2> Tabela de Cores ANSI do Terminal Linux</h2>
+    <p> Cores usadas em <code>echo</code>, <code>PS1</code>, scripts Bash e saída colorida.<br>
       Com versões <strong>normais</strong> e <strong>brilhantes (bright)</strong>.
     </p>
 
