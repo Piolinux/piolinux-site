@@ -300,11 +300,12 @@ permalink: /comparador-distros/
   });
 </script>
 
-
-<table>
+<table class="evergreen-table">
   <thead>
     <tr>
-      <th>Distro</th>
+      <th>
+    
+      Distro</th>
       <th>Sistema</th>
       <th>Indicada para</th>
       <th>Nível</th>
@@ -312,22 +313,28 @@ permalink: /comparador-distros/
   </thead>
   <tbody>
     <tr>
-      <td>Ubuntu</td>
-      <td>Linux</td>
-      <td>Iniciantes, desktop</td>
-      <td>Fácil</td>
+      <td data-label="
+    
+      Distro">Ubuntu</td>
+      <td data-label="Sistema">Linux</td>
+      <td data-label="Indicada para">Iniciantes, desktop</td>
+      <td data-label="Nível">Fácil</td>
     </tr>
     <tr>
-      <td>Debian</td>
-      <td>Linux</td>
-      <td>Servidores, estável</td>
-      <td>Médio</td>
+      <td data-label="
+    
+      Distro">Debian</td>
+      <td data-label="Sistema">Linux</td>
+      <td data-label="Indicada para">Servidores, estável</td>
+      <td data-label="Nível">Médio</td>
     </tr>
     <tr>
-      <td>FreeBSD</td>
-      <td>BSD</td>
-      <td>Redes, segurança</td>
-      <td>Avançado</td>
+      <td data-label="
+    
+      Distro">FreeBSD</td>
+      <td data-label="Sistema">BSD</td>
+      <td data-label="Indicada para">Redes, segurança</td>
+      <td data-label="Nível">Avançado</td>
     </tr>
   </tbody>
 </table>
