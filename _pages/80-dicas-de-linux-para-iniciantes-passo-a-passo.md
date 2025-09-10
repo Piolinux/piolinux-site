@@ -843,6 +843,6 @@ permalink: /80-dicas-linux-iniciantes/
    <p>
     No final das contas, o mais importante é não ter medo. Começa por brincar um pouco, tenta as coisas, comete erros (e usa o Google para os corrigires!). O terminal é uma ferramenta incrível, e a tua aventura com ele está apenas a começar.
    </p>
-   </section>
+   
   </div>
-  
+  </section>
