@@ -104,10 +104,12 @@ sudo zypper remove nome-do-pacote</code></pre>
   
   
 <h3>📦 Comparativo de Gerenciadores de Pacotes</h3>
-<table>
+<table class="evergreen-table">
   <thead>
     <tr>
-      <th>Ferramenta</th>
+      <th>
+    
+      Ferramenta</th>
       <th>Distro</th>
       <th>Instalar</th>
       <th>Atualizar</th>
@@ -115,28 +117,36 @@ sudo zypper remove nome-do-pacote</code></pre>
   </thead>
   <tbody>
     <tr>
-      <td><code>apt</code></td>
-      <td>Debian, Ubuntu</td>
-      <td><code>sudo apt install nome</code></td>
-      <td><code>sudo apt update &amp;&amp; upgrade</code></td>
+      <td data-label="
+    
+      Ferramenta"><code>apt</code></td>
+      <td data-label="Distro">Debian, Ubuntu</td>
+      <td data-label="Instalar"><code>sudo apt install nome</code></td>
+      <td data-label="Atualizar"><code>sudo apt update &amp;&amp; upgrade</code></td>
     </tr>
     <tr>
-      <td><code>dnf</code></td>
-      <td>Fedora, RHEL</td>
-      <td><code>sudo dnf install nome</code></td>
-      <td><code>sudo dnf update</code></td>
+      <td data-label="
+    
+      Ferramenta"><code>dnf</code></td>
+      <td data-label="Distro">Fedora, RHEL</td>
+      <td data-label="Instalar"><code>sudo dnf install nome</code></td>
+      <td data-label="Atualizar"><code>sudo dnf update</code></td>
     </tr>
     <tr>
-      <td><code>pacman</code></td>
-      <td>Arch, Manjaro</td>
-      <td><code>sudo pacman -S nome</code></td>
-      <td><code>sudo pacman -Syu</code></td>
+      <td data-label="
+    
+      Ferramenta"><code>pacman</code></td>
+      <td data-label="Distro">Arch, Manjaro</td>
+      <td data-label="Instalar"><code>sudo pacman -S nome</code></td>
+      <td data-label="Atualizar"><code>sudo pacman -Syu</code></td>
     </tr>
     <tr>
-      <td><code>zypper</code></td>
-      <td>openSUSE</td>
-      <td><code>sudo zypper install nome</code></td>
-      <td><code>sudo zypper update</code></td>
+      <td data-label="
+    
+      Ferramenta"><code>zypper</code></td>
+      <td data-label="Distro">openSUSE</td>
+      <td data-label="Instalar"><code>sudo zypper install nome</code></td>
+      <td data-label="Atualizar"><code>sudo zypper update</code></td>
     </tr>
   </tbody>
 </table>
