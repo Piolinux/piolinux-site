@@ -18,7 +18,7 @@ permalink: /ferramentas-dupeguru-shutter-linux/
         </p>
 
         <!-- DupeGuru -->
-        <section>
+       
             <h2>DupeGuru: Chega de Arquivos Duplicados! 😱</h2>
             <p>
                 A excluir manualmente arquivos duplicados, principalmente de músicas não tem volta, Exclusão errada causará graves problemas no Sistema e levar dias para serem resolvidos. Por isso, a melhor solução é usar um programa como o <strong>DupeGuru</strong>. Ele é um software desenvolvido para encontrar arquivos duplicados em diversas pastas, mas lembre-se: ele não realiza a exclusão sozinho. O controle está em suas mãos! Para evitar qualquer problema, a dica é sempre fazer um backup dos arquivos antes de realizar qualquer exclusão. O programa está disponível no repositório AUR do Arch Linux, mas também pode ser encontrado para outras Distros.
@@ -30,10 +30,10 @@ permalink: /ferramentas-dupeguru-shutter-linux/
                 <li><strong>Modo Music:</strong> Localizará arquivos de música por nome, pasta e metadados.</li>
                 <li><strong>Modo Picture:</strong> Encontra arquivos de fotos idênticos, mesmo que tenham pequenas diferenças.</li>
             </ul>
-        </section>
+        
 
         <!-- Shutter -->
-        <section>
+       
             <h2>Edição de Imagens que o Shutter possui: Crie e Exponha suas Ideias ao mundo.</h2>
             <p>
                 Se você precisa fazer edições rápidas em imagens, o <strong>Shutter</strong> é a ferramenta ideal. Ele permite adicionar balões de diálogo, ícones e outros efeitos, perfeito para criar tutoriais e ilustrações. Para ediçoes de imagens complexas, você pode usar o GIMP, mas para o básico, o Shutter cumpre o prometido com perfeição.
