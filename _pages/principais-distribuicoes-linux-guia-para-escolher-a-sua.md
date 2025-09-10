@@ -131,10 +131,12 @@ permalink: /principais-distros-linux/
 
  
 <h2>🐧 Comparativo de Distribuições Linux</h2>
-<table>
+<table class="evergreen-table">
   <thead>
     <tr>
-      <th>Distro</th>
+      <th>
+    
+      Distro</th>
       <th>Indicada para</th>
       <th>Nível</th>
       <th>Site Oficial</th>
@@ -142,34 +144,44 @@ permalink: /principais-distros-linux/
   </thead>
   <tbody>
     <tr>
-      <td><strong>Ubuntu</strong></td>
-      <td>Iniciantes, desktop</td>
-      <td>Fácil</td>
-      <td><a href="https://ubuntu.com">ubuntu.com</a></td>
+      <td data-label="
+    
+      Distro"><strong>Ubuntu</strong></td>
+      <td data-label="Indicada para">Iniciantes, desktop</td>
+      <td data-label="Nível">Fácil</td>
+      <td data-label="Site Oficial"><a href="https://ubuntu.com">ubuntu.com</a></td>
     </tr>
     <tr>
-      <td><strong>Debian</strong></td>
-      <td>Estabilidade, servidores</td>
-      <td>Médio</td>
-      <td><a href="https://debian.org">debian.org</a></td>
+      <td data-label="
+    
+      Distro"><strong>Debian</strong></td>
+      <td data-label="Indicada para">Estabilidade, servidores</td>
+      <td data-label="Nível">Médio</td>
+      <td data-label="Site Oficial"><a href="https://debian.org">debian.org</a></td>
     </tr>
     <tr>
-      <td><strong>Fedora</strong></td>
-      <td>Desenvolvedores, novidades</td>
-      <td>Médio</td>
-      <td><a href="https://fedoraproject.org">fedoraproject.org</a></td>
+      <td data-label="
+    
+      Distro"><strong>Fedora</strong></td>
+      <td data-label="Indicada para">Desenvolvedores, novidades</td>
+      <td data-label="Nível">Médio</td>
+      <td data-label="Site Oficial"><a href="https://fedoraproject.org">fedoraproject.org</a></td>
     </tr>
     <tr>
-      <td><strong>Arch Linux</strong></td>
-      <td>Avançados, controle total</td>
-      <td>Avançado</td>
-      <td><a href="https://archlinux.org">archlinux.org</a></td>
+      <td data-label="
+    
+      Distro"><strong>Arch Linux</strong></td>
+      <td data-label="Indicada para">Avançados, controle total</td>
+      <td data-label="Nível">Avançado</td>
+      <td data-label="Site Oficial"><a href="https://archlinux.org">archlinux.org</a></td>
     </tr>
     <tr>
-      <td><strong>Linux Mint</strong></td>
-      <td>Quem vem do Windows</td>
-      <td>Fácil</td>
-      <td><a href="https://linuxmint.com">linuxmint.com</a></td>
+      <td data-label="
+    
+      Distro"><strong>Linux Mint</strong></td>
+      <td data-label="Indicada para">Quem vem do Windows</td>
+      <td data-label="Nível">Fácil</td>
+      <td data-label="Site Oficial"><a href="https://linuxmint.com">linuxmint.com</a></td>
     </tr>
   </tbody>
 </table>
