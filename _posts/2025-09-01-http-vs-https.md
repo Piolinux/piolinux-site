@@ -54,34 +54,44 @@ Assim:</p>
 
 
 
-<table style="width:100%; border-collapse: collapse; margin:1.5em 0; font-size: 0.95em;">
+<table class="evergreen-table">
   <thead>
-    <tr style="background: #008000; color: white; text-align: left;">
-      <th style="padding: 0.8em; border: 1px solid #a5d6a7; border-radius: 6px 0 0 0;">Item</th>
-      <th style="padding: 0.8em; border: 1px solid #a5d6a7; border-radius: 0 6px 0 0;">HTTP</th>
-      <th style="padding: 0.8em; border: 1px solid #a5d6a7; border-radius: 0 6px 0 0;">HTTPS</th>
+    <tr>
+      <th>
+    
+      Item</th>
+      <th>HTTP</th>
+      <th>HTTPS</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7; "><strong>Segurança</strong></td>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7;">❌ Dados em texto puro</td>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7;">✅ Dados criptografados</td>
+      <td data-label="
+    
+      Item"><strong>Segurança</strong></td>
+      <td data-label="HTTP">❌ Dados em texto puro</td>
+      <td data-label="HTTPS">✅ Dados criptografados</td>
     </tr>
     <tr>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7; "><strong>Porta</strong></td>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7;">80</td>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7;">443</td>
+      <td data-label="
+    
+      Item"><strong>Porta</strong></td>
+      <td data-label="HTTP">80</td>
+      <td data-label="HTTPS">443</td>
     </tr>
     <tr>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7; "><strong>Certificado</strong></td>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7;">Não precisa</td>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7;">Necessário (SSL/TLS)</td>
+      <td data-label="
+    
+      Item"><strong>Certificado</strong></td>
+      <td data-label="HTTP">Não precisa</td>
+      <td data-label="HTTPS">Necessário (SSL/TLS)</td>
     </tr>
     <tr>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7; "><strong>Google</strong></td>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7;">Desencoraja</td>
-      <td style="padding: 0.8em; border: 1px solid #a5d6a7;">Prefere</td>
+      <td data-label="
+    
+      Item"><strong>Google</strong></td>
+      <td data-label="HTTP">Desencoraja</td>
+      <td data-label="HTTPS">Prefere</td>
     </tr>
   </tbody>
 </table>
@@ -89,49 +99,65 @@ Assim:</p>
 
 
 <h2>📊 Tabela: HTTP e HTTPS</h2>
-<table>
+<table class="evergreen-table">
   <thead>
     <tr>
-      <th>Característica</th>
+      <th>
+    
+      Característica</th>
       <th>HTTP</th>
       <th>HTTPS</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Nome completo</td>
-      <td>HyperText Transfer Protocol</td>
-      <td>HyperText Transfer Protocol Seguro</td>
+      <td data-label="
+    
+      Característica">Nome completo</td>
+      <td data-label="HTTP">HyperText Transfer Protocol</td>
+      <td data-label="HTTPS">HyperText Transfer Protocol Seguro</td>
     </tr>
     <tr>
-      <td>Porta</td>
-      <td>80</td>
-      <td>443</td>
+      <td data-label="
+    
+      Característica">Porta</td>
+      <td data-label="HTTP">80</td>
+      <td data-label="HTTPS">443</td>
     </tr>
     <tr>
-      <td>Usa segredo?</td>
-      <td>Não</td>
-      <td>Sim</td>
+      <td data-label="
+    
+      Característica">Usa segredo?</td>
+      <td data-label="HTTP">Não</td>
+      <td data-label="HTTPS">Sim</td>
     </tr>
     <tr>
-      <td>Dados escondidos?</td>
-      <td>Não</td>
-      <td>Sim</td>
+      <td data-label="
+    
+      Característica">Dados escondidos?</td>
+      <td data-label="HTTP">Não</td>
+      <td data-label="HTTPS">Sim</td>
     </tr>
     <tr>
-      <td>Esconde de quem espia?</td>
-      <td>Não</td>
-      <td>Sim</td>
+      <td data-label="
+    
+      Característica">Esconde de quem espia?</td>
+      <td data-label="HTTP">Não</td>
+      <td data-label="HTTPS">Sim</td>
     </tr>
     <tr>
-      <td>Esconde de sites falsos?</td>
-      <td>Não</td>
-      <td>Sim</td>
+      <td data-label="
+    
+      Característica">Esconde de sites falsos?</td>
+      <td data-label="HTTP">Não</td>
+      <td data-label="HTTPS">Sim</td>
     </tr>
     <tr>
-      <td>Mostra cadeado?</td>
-      <td>Não</td>
-      <td>Sim (🔒)</td>
+      <td data-label="
+    
+      Característica">Mostra cadeado?</td>
+      <td data-label="HTTP">Não</td>
+      <td data-label="HTTPS">Sim (🔒)</td>
     </tr>
   </tbody>
 </table>
