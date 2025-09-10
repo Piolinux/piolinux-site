@@ -22,11 +22,6 @@ layout: default
 
 
 
-<blockquote>
-   Evite de utilizar: Internet Explorer...
-   Dica utéis sempre: Instale 2 navegadores...
-   Confira também: ...
-</blockquote>
 
 
 
