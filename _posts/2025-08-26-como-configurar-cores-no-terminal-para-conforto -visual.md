@@ -88,8 +88,7 @@ permalink: /cores-terminal-conforto-visual/
       Com versões <strong>normais</strong> e <strong>brilhantes (bright)</strong>.
     </p>
 
-    <!-- Tabela de Cores -->
-    <h2 style="border-bottom: 2px solid #FFFFFF; padding-bottom: 8px; margin-top: 40px;">🔢 Legenda de Códigos ANSI</h2>
+<h2 style="border-bottom: 2px solid #FFFFFF; padding-bottom: 8px; margin-top: 40px;">🔢 Legenda de Códigos ANSI</h2>
     <ul>
       <li><strong>Texto:</strong> <code>\\033[3Xm</code> → X = 0 a 7</li>
       <li><strong>Fundo:</strong> <code>\\033[4Xm</code> → X = 0 a 7</li>
@@ -99,134 +98,125 @@ permalink: /cores-terminal-conforto-visual/
 
     <h2 style="border-bottom: 2px solid #FFFFFF; padding-bottom: 8px; margin-top: 40px;">🎨 Paleta de Cores</h2>
 
-    <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-family: 'Courier New', monospace;">
-      <tr>
-        <th style="width: 15%; padding: 10px; text-align: left;">Cor</th>
-        <th style="width: 15%; padding: 10px; text-align: left;">Código</th>
-        <th style="width: 35%; padding: 10px; text-align: left;">Texto (normal)</th>
-        <th style="width: 35%; padding: 10px; text-align: left;">Fundo (normal)</th>
-      </tr>
-
-      <!-- Preto -->
-      <tr>
-        <td style="padding: 8px;">Preto</td>
-        <td><code>30</code></td>
-        <td style="padding: 8px;"><span style="color: #000000;">Texto em preto</span></td>
-        <td style="padding: 8px; background: #000000; color: #fff;">Fundo preto</td>
-      </tr>
-
-      <!-- Vermelho -->
-      <tr>
-        <td style="padding: 8px;">Vermelho</td>
-        <td><code>31</code></td>
-        <td style="padding: 8px;"><span style="color: #AA0000;">Texto em vermelho</span></td>
-        <td style="padding: 8px; background: #AA0000; color: #fff;">Fundo vermelho</td>
-      </tr>
-
-      <!-- Verde -->
-      <tr>
-        <td style="padding: 8px;">Verde</td>
-        <td><code>32</code></td>
-        <td style="padding: 8px;"><span style="color: #00AA00;">Texto em verde</span></td>
-        <td style="padding: 8px; background: #00AA00; color: #fff;">Fundo verde</td>
-      </tr>
-
-      <!-- Amarelo -->
-      <tr>
-        <td style="padding: 8px;">Amarelo</td>
-        <td><code>33</code></td>
-        <td style="padding: 8px;"><span style="color: #AA5500;">Texto em amarelo</span></td>
-        <td style="padding: 8px; background: #AA5500; color: #fff;">Fundo amarelo</td>
-      </tr>
-
-      <!-- Azul -->
-      <tr>
-        <td style="padding: 8px;">Azul</td>
-        <td><code>34</code></td>
-        <td style="padding: 8px;"><span style="color: #0000AA;">Texto em azul</span></td>
-        <td style="padding: 8px; background: #0000AA; color: #fff;">Fundo azul</td>
-      </tr>
-
-      <!-- Magenta -->
-      <tr>
-        <td style="padding: 8px;">Magenta</td>
-        <td><code>35</code></td>
-        <td style="padding: 8px;"><span style="color: #AA00AA;">Texto em magenta</span></td>
-        <td style="padding: 8px; background: #AA00AA; color: #fff;">Fundo magenta</td>
-      </tr>
-
-      <!-- Ciano -->
-      <tr>
-        <td style="padding: 8px;">Ciano</td>
-        <td><code>36</code></td>
-        <td style="padding: 8px;"><span style="color: #00AAAA;">Texto em ciano</span></td>
-        <td style="padding: 8px; background: #00AAAA; color: #fff;">Fundo ciano</td>
-      </tr>
-
-      <!-- Branco -->
-      <tr>
-        <td style="padding: 8px;">Branco</td>
-        <td><code>37</code></td>
-        <td style="padding: 8px;"><span style="color: #CCCCCC;">Texto em branco</span></td>
-        <td style="padding: 8px; background: #CCCCCC; color: #000;">Fundo branco</td>
-      </tr>
-    </table>
+    <table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Cor</th>
+      <th>Código</th>
+      <th>Texto (normal)</th>
+      <th>Fundo (normal)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Cor">Preto</td>
+      <td data-label="Código"><code>30</code></td>
+      <td data-label="Texto (normal)"><span >Texto em preto</span></td>
+      <td data-label="Fundo (normal)">Fundo preto</td>
+    </tr>
+    <tr>
+      <td data-label="Cor">Vermelho</td>
+      <td data-label="Código"><code>31</code></td>
+      <td data-label="Texto (normal)"><span >Texto em vermelho</span></td>
+      <td data-label="Fundo (normal)">Fundo vermelho</td>
+    </tr>
+    <tr>
+      <td data-label="Cor">Verde</td>
+      <td data-label="Código"><code>32</code></td>
+      <td data-label="Texto (normal)"><span >Texto em verde</span></td>
+      <td data-label="Fundo (normal)">Fundo verde</td>
+    </tr>
+    <tr>
+      <td data-label="Cor">Amarelo</td>
+      <td data-label="Código"><code>33</code></td>
+      <td data-label="Texto (normal)"><span >Texto em amarelo</span></td>
+      <td data-label="Fundo (normal)">Fundo amarelo</td>
+    </tr>
+    <tr>
+      <td data-label="Cor">Azul</td>
+      <td data-label="Código"><code>34</code></td>
+      <td data-label="Texto (normal)"><span >Texto em azul</span></td>
+      <td data-label="Fundo (normal)">Fundo azul</td>
+    </tr>
+    <tr>
+      <td data-label="Cor">Magenta</td>
+      <td data-label="Código"><code>35</code></td>
+      <td data-label="Texto (normal)"><span >Texto em magenta</span></td>
+      <td data-label="Fundo (normal)">Fundo magenta</td>
+    </tr>
+    <tr>
+      <td data-label="Cor">Ciano</td>
+      <td data-label="Código"><code>36</code></td>
+      <td data-label="Texto (normal)"><span >Texto em ciano</span></td>
+      <td data-label="Fundo (normal)">Fundo ciano</td>
+    </tr>
+    <tr>
+      <td data-label="Cor">Branco</td>
+      <td data-label="Código"><code>37</code></td>
+      <td data-label="Texto (normal)"><span >Texto em branco</span></td>
+      <td data-label="Fundo (normal)">Fundo branco</td>
+    </tr>
+  </tbody>
+</table>
 
     <!-- Cores Brilhantes (Bright) -->
     <h2 style="border-bottom: 2px solid #FFFFFF; padding-bottom: 8px; margin-top: 40px;">✨ Cores Brilhantes (Bright)</h2>
     <p>Use <code>\\033[9Xm</code> para texto brilhante (ex: <code>\\033[91m</code> = vermelho brilhante).</p>
 
-    <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-family: 'Courier New', monospace;">
-      <tr>
-        <th style="width: 15%; padding: 10px; text-align: left;">Cor</th>
-        <th style="width: 15%; padding: 10px; text-align: left;">Código</th>
-        <th style="width: 35%; padding: 10px; text-align: left;">Texto (brilhante)</th>
-        <th style="width: 35%; padding: 10px; text-align: left;">Fundo (brilhante)</th>
-      </tr>
-
-      <tr>
-        <td>Verde</td>
-        <td><code>92</code></td>
-        <td style="padding: 8px;"><span style="color: #00FF00;">Texto verde brilhante</span></td>
-        <td style="padding: 8px; background: #00FF00; color: #000;">Fundo verde brilhante</td>
-      </tr>
-      <tr>
-        <td>Vermelho</td>
-        <td><code>91</code></td>
-        <td style="padding: 8px;"><span style="color: #FF0000;">Texto vermelho brilhante</span></td>
-        <td style="padding: 8px; background: #FF0000; color: #fff;">Fundo vermelho brilhante</td>
-      </tr>
-      <tr>
-        <td>Azul</td>
-        <td><code>94</code></td>
-        <td style="padding: 8px;"><span style="color: #0000FF;">Texto azul brilhante</span></td>
-        <td style="padding: 8px; background: #0000FF; color: #fff;">Fundo azul brilhante</td>
-      </tr>
-      <tr>
-        <td>Amarelo</td>
-        <td><code>93</code></td>
-        <td style="padding: 8px;"><span style="color: #FFFF00;">Texto amarelo brilhante</span></td>
-        <td style="padding: 8px; background: #FFFF00; color: #000;">Fundo amarelo brilhante</td>
-      </tr>
-      <tr>
-        <td>Magenta</td>
-        <td><code>95</code></td>
-        <td style="padding: 8px;"><span style="color: #FF00FF;">Texto magenta brilhante</span></td>
-        <td style="padding: 8px; background: #FF00FF; color: #000;">Fundo magenta brilhante</td>
-      </tr>
-      <tr>
-        <td>Ciano</td>
-        <td><code>96</code></td>
-        <td style="padding: 8px;"><span style="color: #00FFFF;">Texto ciano brilhante</span></td>
-        <td style="padding: 8px; background: #00FFFF; color: #000;">Fundo ciano brilhante</td>
-      </tr>
-      <tr>
-        <td>Branco</td>
-        <td><code>97</code></td>
-        <td style="padding: 8px;"><span style="color: #FFFFFF;">Texto branco brilhante</span></td>
-        <td style="padding: 8px; background: #FFFFFF; color: #000;">Fundo branco brilhante</td>
-      </tr>
-    </table>
+    <table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Cor</th>
+      <th>Código</th>
+      <th>Texto (brilhante)</th>
+      <th>Fundo (brilhante)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Cor">Verde</td>
+      <td data-label="Código"><code>92</code></td>
+      <td data-label="Texto (brilhante)"><span >Texto verde brilhante</span></td>
+      <td data-label="Fundo (brilhante)">Fundo verde brilhante</td>
+    </tr>
+    <tr>
+      <td data-label="Cor">Vermelho</td>
+      <td data-label="Código"><code>91</code></td>
+      <td data-label="Texto (brilhante)"><span >Texto vermelho brilhante</span></td>
+      <td data-label="Fundo (brilhante)">Fundo vermelho brilhante</td>
+    </tr>
+    <tr>
+      <td data-label="Cor">Azul</td>
+      <td data-label="Código"><code>94</code></td>
+      <td data-label="Texto (brilhante)"><span >Texto azul brilhante</span></td>
+      <td data-label="Fundo (brilhante)">Fundo azul brilhante</td>
+    </tr>
+    <tr>
+      <td data-label="Cor">Amarelo</td>
+      <td data-label="Código"><code>93</code></td>
+      <td data-label="Texto (brilhante)"><span >Texto amarelo brilhante</span></td>
+      <td data-label="Fundo (brilhante)">Fundo amarelo brilhante</td>
+    </tr>
+    <tr>
+      <td data-label="Cor">Magenta</td>
+      <td data-label="Código"><code>95</code></td>
+      <td data-label="Texto (brilhante)"><span >Texto magenta brilhante</span></td>
+      <td data-label="Fundo (brilhante)">Fundo magenta brilhante</td>
+    </tr>
+    <tr>
+      <td data-label="Cor">Ciano</td>
+      <td data-label="Código"><code>96</code></td>
+      <td data-label="Texto (brilhante)"><span >Texto ciano brilhante</span></td>
+      <td data-label="Fundo (brilhante)">Fundo ciano brilhante</td>
+    </tr>
+    <tr>
+      <td data-label="Cor">Branco</td>
+      <td data-label="Código"><code>97</code></td>
+      <td data-label="Texto (brilhante)"><span >Texto branco brilhante</span></td>
+      <td data-label="Fundo (brilhante)">Fundo branco brilhante</td>
+    </tr>
+  </tbody>
+</table>
 
     <!-- Exemplos de uso -->
     <h2 style="border-bottom: 2px solid #FFFFFF; padding-bottom: 8px; margin-top: 40px;">📌 Exemplos de Uso</h2>
