@@ -71,16 +71,8 @@ permalink: /cores-terminal-conforto-visual/
 
 
 
-<main style="margin: 0; padding: 0;">
-  <div style="
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 30px 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.7;
-    color: #7CFC00;
-    width: 100%;
-  ">
+<main> 
+  <div>
 
     <h2> Tabela de Cores ANSI do Terminal Linux</h2>
     <p> Cores usadas em <code>echo</code>, <code>PS1</code>, scripts Bash e saída colorida.<br>
