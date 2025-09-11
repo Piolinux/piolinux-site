@@ -14,7 +14,7 @@ permalink: /jogo-forca/
 
 
 
-
+<section>
 
 <div class="game-container">
     <h2>3. Jogo da Forca</h2>
@@ -92,7 +92,6 @@ permalink: /jogo-forca/
   >🔁 JOGAR NOVAMENTE</button>
 
 </div>
-
 <!-- Instruções -->
 <p style="font-size: 0.9em; color: #a8ffa8; text-align: center;">
   Dicas: as palavras são sobre Linux, comandos, redes, segurança e programação.
@@ -183,6 +182,10 @@ permalink: /jogo-forca/
 |
 +--------+`
   ];
+
+</section>
+
+
 
   // Escolhe palavra aleatória
   function escolherPalavra() {
@@ -276,6 +279,10 @@ permalink: /jogo-forca/
   escolherPalavra();
 </script>
 {% endraw %}
+
+
+
+
 
 
 
