@@ -23,9 +23,9 @@ permalink: /gerador-txt-offline-anotacoes-lembretes/
 
 <ul>
   <li>✍️ Anotar um setup de terminal rápido para não esquecer.</li>
-  <li>🧠 Salvar um lembrete antes de esquecer — isso acontece muito.</li>
-  <li>🖥️ Registrar uma configuração de sistema</li>
-  <li>📝 Guardar uma ideia ou lista de tarefas</li>
+  <li>🧠 Salvar um lembrete, antes de esquecer — acontece em muitas ocasiões.</li>
+  <li>🖥️ Registrando  configurações do sistema.</li>
+  <li>📝 Guardando  uma ideia ou listas de tarefas.</li>
   <li>🚫 <strong>Sem cadastro, sem login, sem internet, sem rastreamento</strong></li>
   <li>Não esqueça mais</li>
 </ul>
@@ -103,7 +103,7 @@ permalink: /gerador-txt-offline-anotacoes-lembretes/
 
 <ul>
   <li>✏️ Mude os campos (adicione “email”, “prioridade”, etc.) — faça o que quiser.</li>
-  <li>🎨 Altere cores e estilo do seu estilo.</li>
+  <li>🎨 Altere as cores e estilo ao seu gosto.</li>
   <li>💾 Adicione mais opções para salvar em Markdown ou JSON.</li>
 </ul>
 
