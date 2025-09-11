@@ -1139,11 +1139,14 @@ sudo dnf update</code></pre>
 sudo pacman -S neofetch</code></pre>
      </li>
     </ul>
-   </section>
-   
-    <p>
+ <p>
      Este guia é um ponto de partida. O terminal Linux é um universo a ser explorado, e a melhor forma de aprender é praticando. Use a tecla **Tab** para autocompletar, **Ctrl+R** para buscar no histórico de comandos e, sempre que tiver dúvidas, consulte o manual com **man &lt;comando&gt;**. Boa jornada na linha de comando!
     </p>
+   
+
+       
+   </section>
+   
    
   <section>
 <h3>🔧 Comandos Essenciais do Terminal</h3>
