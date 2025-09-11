@@ -160,7 +160,7 @@ permalink: /comparativo-terminais/
   <li>Personalize temas JSON no Windows Terminal para um visual único.</li>
 </ul>
 
-<h3>✅ Quais são os terminais é ideal para você?</h3>
+<h3>Quais são os terminais ideais para você?</h3>
 
 <p>Você está no <strong>Windows</strong>, utilizando o <strong>Windows Terminal</strong> é moderno, rápido e integrado ao WSL.  
 No <strong>Macintosh</strong>, o <strong>iTerm2</strong> é o padrão ouro: com abas, temas e automação.  
