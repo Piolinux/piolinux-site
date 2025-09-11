@@ -183,7 +183,7 @@ permalink: /jogo-forca/
 +--------+`
   ];
 
-</section>
+
 
 
 
