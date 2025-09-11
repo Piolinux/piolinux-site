@@ -1150,40 +1150,68 @@ sudo pacman -S neofetch</code></pre>
    
   <section>
 <h3>🔧 Comandos Essenciais do Terminal</h3>
-<table>
+<table class="evergreen-table">
   <thead>
     <tr>
-      <th>Comando</th>
+      <th>
+    
+      Comando</th>
       <th>O que faz</th>
       <th>Exemplo</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>ls</code></td>
-      <td>Listar arquivos</td>
-      <td><code>ls -la</code></td>
+      <td data-label="
+    
+     <table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>
+    
+      Comando</th>
+      <th>O que faz</th>
+      <th>Exemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="
+    
+      Comando"><code>ls</code></td>
+      <td data-label="O que faz">Listar arquivos</td>
+      <td data-label="Exemplo"><code>ls -la</code></td>
     </tr>
     <tr>
-      <td><code>cd</code></td>
-      <td>Navegar entre pastas</td>
-      <td><code>cd /home</code></td>
+      <td data-label="
+    
+      Comando"><code>cd</code></td>
+      <td data-label="O que faz">Navegar entre pastas</td>
+      <td data-label="Exemplo"><code>cd /home</code></td>
     </tr>
     <tr>
-      <td><code>grep</code></td>
-      <td>Buscar texto em arquivos</td>
-      <td><code>grep "erro" /var/log/syslog</code></td>
+      <td data-label="
+    
+      Comando"><code>grep</code></td>
+      <td data-label="O que faz">Buscar texto em arquivos</td>
+      <td data-label="Exemplo"><code>grep "erro" /var/log/syslog</code></td>
     </tr>
     <tr>
-      <td><code>find</code></td>
-      <td>Procurar arquivos</td>
-      <td><code>find / -name "*.txt"</code></td>
+      <td data-label="
+    
+      Comando"><code>find</code></td>
+      <td data-label="O que faz">Procurar arquivos</td>
+      <td data-label="Exemplo"><code>find / -name "*.txt"</code></td>
     </tr>
     <tr>
-      <td><code>sed</code></td>
-      <td>Editar texto em linha</td>
-      <td><code>sed 's/velho/novo/g' arquivo.txt</code></td>
+      <td data-label="
+    
+      Comando"><code>sed</code></td>
+      <td data-label="O que faz">Editar texto em linha</td>
+      <td data-label="Exemplo"><code>sed 's/velho/novo/g' arquivo.txt</code></td>
     </tr>
   </tbody>
 </table>
+
+
 </section>
