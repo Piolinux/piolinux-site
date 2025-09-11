@@ -9,7 +9,7 @@ tags: [forca, jogo, javascript, adivinhar, html]
 permalink: /jogo-forca/
 ---
 
-<section>
+
 
 
 
@@ -280,4 +280,3 @@ permalink: /jogo-forca/
 
 
 
-</section>
