@@ -73,6 +73,7 @@ permalink: /jogo-forca/
     >▶ CHUTAR</button>
   </div>
 
+
   <!-- Mensagem -->
   <p id="mensagem" style="color: #a8ffa8; min-height: 20px;"></p>
 
@@ -186,7 +187,6 @@ permalink: /jogo-forca/
 
 
 
-
   // Escolhe palavra aleatória
   function escolherPalavra() {
     const index = Math.floor(Math.random() * palavras.length);
@@ -279,10 +279,6 @@ permalink: /jogo-forca/
   escolherPalavra();
 </script>
 {% endraw %}
-
-
-
-
 
 
 
