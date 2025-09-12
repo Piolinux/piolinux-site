@@ -219,7 +219,7 @@ permalink: /icones-neon-tudo-em-um/
 
 <script>
   // ✅ DADOS DOS 50 ÍCONES — TUDO INLINE
-  const icones = [ 
+  const icones = [
     { nome: "linux-penguin", emoji: "🐧", categoria: "linux" },
     { nome: "terminal", emoji: "💻", categoria: "linux" },
     { nome: "bash", emoji: "🐚", categoria: "linux" },
@@ -269,7 +269,7 @@ permalink: /icones-neon-tudo-em-um/
     { nome: "shield", emoji: "🛡️", categoria: "security" },
     { nome: "hack", emoji: "👾", categoria: "security" },
     { nome: "virus", emoji: "☣️", categoria: "security" },
-    { 
+    { nome: "antivirus", emoji: "💉", categoria: "security" },
   ];
 
   function generateSVG(emoji, size) {
