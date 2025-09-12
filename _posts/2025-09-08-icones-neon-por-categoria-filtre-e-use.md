@@ -224,7 +224,7 @@ permalink: /icones-neon-tudo-em-um/
     { nome: "terminal", emoji: "💻", categoria: "linux" },
     { nome: "bash", emoji: "🐚", categoria: "linux" },
     { nome: "kernel", emoji: "⚙️", categoria: "linux" },
-    { nome: "tux", emoji: "🕹️", categoria: "linux" },
+    { nome: "joystick", emoji: "🕹️", categoria: "linux" },
     { nome: "root", emoji: "🔐", categoria: "linux" },
     { nome: "cli", emoji: "⌨️", categoria: "linux" },
     { nome: "distro", emoji: "📊", categoria: "linux" },
