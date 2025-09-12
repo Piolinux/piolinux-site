@@ -188,34 +188,44 @@ sudo apt --fix-broken install</code></pre>
    
   
  <h3>📦 Métodos de Instalação no Linux</h3>
-<table>
+<table class="evergreen-table">
   <thead>
     <tr>
-      <th>Método</th>
+      <th>
+    
+      Método</th>
       <th>Uso</th>
       <th>Comando</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>.deb</code></td>
-      <td>Debian, Ubuntu</td>
-      <td><code>sudo dpkg -i app.deb</code></td>
+      <td data-label="
+    
+      Método"><code>.deb</code></td>
+      <td data-label="Uso">Debian, Ubuntu</td>
+      <td data-label="Comando"><code>sudo dpkg -i app.deb</code></td>
     </tr>
     <tr>
-      <td><code>apt</code></td>
-      <td>Pacotes oficiais</td>
-      <td><code>sudo apt install nome</code></td>
+      <td data-label="
+    
+      Método"><code>apt</code></td>
+      <td data-label="Uso">Pacotes oficiais</td>
+      <td data-label="Comando"><code>sudo apt install nome</code></td>
     </tr>
     <tr>
-      <td><code>Flatpak</code></td>
-      <td>Universal (GNOME)</td>
-      <td><code>flatpak install flathub org.gimp.GIMP</code></td>
+      <td data-label="
+    
+      Método"><code>Flatpak</code></td>
+      <td data-label="Uso">Universal (GNOME)</td>
+      <td data-label="Comando"><code>flatpak install flathub org.gimp.GIMP</code></td>
     </tr>
     <tr>
-      <td><code>Snap</code></td>
-      <td>Universal (Ubuntu)</td>
-      <td><code>snap install code --classic</code></td>
+      <td data-label="
+    
+      Método"><code>Snap</code></td>
+      <td data-label="Uso">Universal (Ubuntu)</td>
+      <td data-label="Comando"><code>snap install code --classic</code></td>
     </tr>
   </tbody>
 </table>
