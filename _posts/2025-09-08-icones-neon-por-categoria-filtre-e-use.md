@@ -219,7 +219,7 @@ permalink: /icones-neon-tudo-em-um/
 
 <script>
   // ✅ DADOS DOS 50 ÍCONES — TUDO INLINE
-  const icones = [
+  const icones = [ 
     { nome: "linux-penguin", emoji: "🐧", categoria: "linux" },
     { nome: "terminal", emoji: "💻", categoria: "linux" },
     { nome: "bash", emoji: "🐚", categoria: "linux" },
@@ -232,7 +232,7 @@ permalink: /icones-neon-tudo-em-um/
     { nome: "kubernetes", emoji: "☸️", categoria: "devops" },
     { nome: "ansible", emoji: "🤖", categoria: "devops" },
     { nome: "terraform", emoji: "🏗️", categoria: "devops" },
-    { nome: "jenkins", emoji: "🧰", categoria: "devops" },
+    { nome: "jenkins", emoji: "🔧", categoria: "devops" },
     { nome: "gitlab", emoji: "🦊", categoria: "devops" },
     { nome: "ci-cd", emoji: "🔄", categoria: "devops" },
     { nome: "vault", emoji: "🗄️", categoria: "devops" },
@@ -244,11 +244,11 @@ permalink: /icones-neon-tudo-em-um/
     { nome: "server", emoji: "🖥️", categoria: "cloud" },
     { nome: "cluster", emoji: "🔢", categoria: "cloud" },
     { nome: "region", emoji: "🌍", categoria: "cloud" },
-    { nome: "javascript", emoji: "🟨", categoria: "code" },
+    { nome: "javascript", emoji: "📜", categoria: "code" },
     { nome: "python", emoji: "🐍", categoria: "code" },
     { nome: "brackets", emoji: "()", categoria: "code" },
     { nome: "function", emoji: "ƒ", categoria: "code" },
-    { nome: "class", emoji: "CppClass", categoria: "code" },
+   { nome: "class", emoji: "🏛️", categoria: "code" },
     { nome: "variable", emoji: "var", categoria: "code" },
     { nome: "debug", emoji: "🐞", categoria: "code" },
     { nome: "deploy", emoji: "🚀", categoria: "code" },
@@ -260,16 +260,16 @@ permalink: /icones-neon-tudo-em-um/
     { nome: "reload", emoji: "🔄", categoria: "tools" },
     { nome: "config", emoji: "📝", categoria: "tools" },
     { nome: "wifi", emoji: "📶", categoria: "network" },
-    { nome: "router", emoji: "🛜", categoria: "network" },
-    { nome: "firewall", emoji: "🧱", categoria: "network" },
+    { nome: "router", emoji: "🖧", categoria: "network" },   
+    { nome: "firewall", emoji: "🛡️", categoria: "network" },  
     { nome: "dns", emoji: "🔤", categoria: "network" },
     { nome: "bandwidth", emoji: "📈", categoria: "network" },
     { nome: "lock", emoji: "🔒", categoria: "security" },
     { nome: "key", emoji: "🔑", categoria: "security" },
     { nome: "shield", emoji: "🛡️", categoria: "security" },
     { nome: "hack", emoji: "👾", categoria: "security" },
-    { nome: "virus", emoji: "🦠", categoria: "security" },
-    { nome: "antivirus", emoji: "💉", categoria: "security" }
+    { nome: "virus", emoji: "☣️", categoria: "security" },
+    { 
   ];
 
   function generateSVG(emoji, size) {
