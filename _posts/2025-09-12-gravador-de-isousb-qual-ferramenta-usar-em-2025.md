@@ -18,7 +18,7 @@ permalink: /gravador-iso-usb-comparativo/
 
 
 
-<h2>️ Gravador de ISO/USB: Qual Ferramenta Usar, faça sua escolha?</h2>
+<h2>️Gravador de ISO/USB: Qual ferramenta usar?</h2>
 
 <blockquote>
    <strong>Níveis</strong>: Iniciante a Avançado.<br>
@@ -100,10 +100,10 @@ permalink: /gravador-iso-usb-comparativo/
    <strong>Evite</strong>: Gravadores genéricos de terceiros — muitos têm malware ou quebram a ISO.
 </blockquote>
 
-<h2>⚠️ Atenção com <code>dd</code> (Linux/macOS)</h2>
+<h2>Atenção com <code>dd</code> (Linux/macOS)</h2>
 
 <pre style="background:#1e1e1e; color:#ddd; padding:15px; border-radius:6px; overflow-x:auto;">
- SEMPRE confirme o dispositivo com:
+SEMPRE confirme o dispositivo com os comandos no terminal :
 lsblk          # Linux
 diskutil list  # macOS
 
