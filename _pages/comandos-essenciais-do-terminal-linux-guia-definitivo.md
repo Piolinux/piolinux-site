@@ -1148,7 +1148,7 @@ sudo pacman -S neofetch</code></pre>
    </section>
    
    
-  <section>
+  
 <h3>🔧 Comandos Essenciais do Terminal</h3>
 <table class="evergreen-table">
   <thead>
