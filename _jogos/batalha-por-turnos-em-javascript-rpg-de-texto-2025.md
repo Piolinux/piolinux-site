@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Batalha por Turnos em JavaScript: RPG de Texto (2025)"
-description: "Comande seu Sysadmin em uma batalha por turnos contra o Kernel Panic! Jogo leve feito com HTML, CSS e JavaScript puro — sem frameworks, 100%" offline. 
+description: "Comande seu Sysadmin em uma batalha por turnos contra o Kernel Panic! Jogo leve feito com HTML, CSS e JavaScript puro — sem frameworks, 100% offline." 
 author: "PioLinux"
 categories: [jogos, javascript]
 tags: [batalha, rpg, jogo, javascript, html]
