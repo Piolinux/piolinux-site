@@ -109,7 +109,7 @@ permalink: /gerador-txt-offline-anotacoes-lembretes/
 
 <hr>
 
-<h2>✅ Conclusão: Simples para resolver seus problemas de memória.</h2>
+<h2>Conclusão: Simples para resolver seus problemas de memória.</h2>
 
 <p>Em um mundo inundado de apps complicados, logins obrigatórios, 
 nuvens caras — às vezes, um simples arquivo <code>.txt</code> salvo 
