@@ -155,34 +155,45 @@ permalink: /software-linux-windows-dicas/
  
   
 <h3>💻 Editores e Terminais Recomendados</h3>
-<table>
+
+    <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Plataforma</th>
+      <th>
+    
+      Plataforma</th>
       <th>Ferramenta</th>
       <th>O que faz</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Linux</strong></td>
-      <td><a href="https://geany.org">Geany</a></td>
-      <td>Editor leve e rápido</td>
+      <td data-label="
+    
+      Plataforma"><strong>Linux</strong></td>
+      <td data-label="Ferramenta"><a href="https://geany.org">Geany</a></td>
+      <td data-label="O que faz">Editor leve e rápido</td>
     </tr>
     <tr>
-      <td><strong>macOS</strong></td>
-      <td><a href="https://iterm2.com">iTerm2</a></td>
-      <td>Terminal moderno com splits e temas</td>
+      <td data-label="
+    
+      Plataforma"><strong>macOS</strong></td>
+      <td data-label="Ferramenta"><a href="https://iterm2.com">iTerm2</a></td>
+      <td data-label="O que faz">Terminal moderno com splits e temas</td>
     </tr>
     <tr>
-      <td><strong>Windows</strong></td>
-      <td><a href="https://aka.ms/terminal">Windows Terminal</a></td>
-      <td>Terminal moderno, rápido e personalizável</td>
+      <td data-label="
+    
+      Plataforma"><strong>Windows</strong></td>
+      <td data-label="Ferramenta"><a href="https://aka.ms/terminal">Windows Terminal</a></td>
+      <td data-label="O que faz">Terminal moderno, rápido e personalizável</td>
     </tr>
     <tr>
-      <td><strong>Linux/macOS</strong></td>
-      <td><a href="https://ohmyz.sh">Oh My Zsh</a></td>
-      <td>Zsh com plugins e temas poderosos</td>
+      <td data-label="
+    
+      Plataforma"><strong>Linux/macOS</strong></td>
+      <td data-label="Ferramenta"><a href="https://ohmyz.sh">Oh My Zsh</a></td>
+      <td data-label="O que faz">Zsh com plugins e temas poderosos</td>
     </tr>
   </tbody>
 </table>
