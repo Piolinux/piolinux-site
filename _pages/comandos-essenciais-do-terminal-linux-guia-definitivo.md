@@ -1149,22 +1149,8 @@ sudo pacman -S neofetch</code></pre>
    
    
   
-<h3>🔧 Comandos Essenciais do Terminal</h3>
+ <section>
 <table class="evergreen-table">
-  <thead>
-    <tr>
-      <th>
-    
-      Comando</th>
-      <th>O que faz</th>
-      <th>Exemplo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-label="
-    
-     <table class="evergreen-table">
   <thead>
     <tr>
       <th>
