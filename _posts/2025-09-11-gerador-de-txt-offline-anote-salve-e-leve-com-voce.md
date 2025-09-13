@@ -55,7 +55,7 @@ permalink: /gerador-txt-offline-anotacoes-lembretes/
 </ol>
 
 <blockquote>
-   <strong>Dica</strong>: Salve o HTML na sua pasta “Ferramentas” ou “Utilidades” — você vai usá-lo de novo, facilitando seu trabalho.
+   <strong>Dica</strong>: Salve o HTML na sua pasta “Ferramentas” ou “Utilidades” — você o usará novamente, facilitando seu trabalho.
 </blockquote>
 
 <hr>
@@ -92,7 +92,7 @@ permalink: /gerador-txt-offline-anotacoes-lembretes/
   <li> 100% offline — nada é enviado para a internet.</li>
   <li> Zero rastreamento — sem analytics, sem cookies.</li>
   <li> Código aberto e livre — você pode ver todo o HTML/JS como funciona.</li>
-  <li> Leve e portátil — funciona em qualquer sistema, até em pendrive, aquela aula no dia, não confie na memória.</li>
+  <li>Leve e portátil: funciona em qualquer sistema, até mesmo em um pendrive. Aquela aula do dia? Não confie apenas na memória.</li>
 </ul>
 
 <hr>
@@ -113,4 +113,4 @@ permalink: /gerador-txt-offline-anotacoes-lembretes/
 
 <p>Em um mundo inundado de apps complicados, logins obrigatórios, 
 nuvens caras — às vezes, um simples arquivo <code>.txt</code> salvo 
-localmente é tudo o que você precisa. Vai te ajudar muito em várias ocasiões: para fazer compras, estudar, configurar lembretes — não confie só na memória, salve.</p>
+localmente é tudo o que você precisa. Isso o ajudará muito em várias ocasiões: para fazer compras, estudar, configurar lembretes. Não confie apenas na memória, salve.</p>
