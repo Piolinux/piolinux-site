@@ -1,0 +1,26 @@
+---
+layout: default
+title: Aprenda Linux — Guia Completo para Iniciantes 
+description: 'Tudo o que você precisa para dominar o Linux: artigos, dicas, scripts, biblioteca e mais — organizado por nível.'
+permalink: /aprenda/
+---
+
+
+<section class="post-content">
+
+<main>
+  
+  <p>{{ page.description }}</p>
+
+  <div class="category-index">
+    {% assign pages = site.pages | where_exp: "page", "page.url contains '/indice-artigos-linux/' or page.url contains '/dicas-tecnicas-linux/' or page.url contains '/scripts-bash-linux/' or page.url contains '/biblioteca-linux/'" %}
+    {% for page in pages %}
+      <article class="index-card">
+        <h2><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h2>
+        <p>{{ page.description }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</main>
+
+</section>
