@@ -1,0 +1,91 @@
+---
+layout: default
+title: Gerador de Personas Fictícias Online — Para UI/UX e Testes
+description: 'Crie perfis realistas com nome, email, cargo, bio e avatar. Ideal para protótipos, testes de UI/UX e documentação.'
+permalink: /ferramentas/fake-persona-generator/
+tags: [persona, ui, ux, protótipo, teste, dados-fake, design]
+---
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+ 
+  <div>
+    <button class="tool-button" onclick="generatePersona()">Gerar Persona</button>
+    <button class="tool-button" onclick="copyPersona()">Copiar Dados</button>
+    <div style="margin-top: 1rem; display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
+      <div>
+        <img id="personaAvatar" src="" alt="Avatar" style="width: 120px; height: 120px; border-radius: 50%; background: #313244; padding: 0.5rem;">
+      </div>
+      <div style="flex: 1; min-width: 200px;">
+        <div id="personaName" style="font-size: 1.5rem; font-weight: bold; color: #a6e3a1;"></div>
+        <div id="personaJob" style="color: #89b4fa; margin: 0.5rem 0;"></div>
+        <div id="personaEmail" style="color: #cdd6f4; font-family: monospace; margin: 0.5rem 0;"></div>
+        <div id="personaBio" style="color: #bac2de; font-size: 0.95rem; line-height: 1.5; margin: 0.5rem 0;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seo-content">
+    <h2>Para que serve o perfil de uma persona fictícia?</h2>
+    <p>É um perfil semi-fictício que representa um usuário típico de um produto ou serviço. Usado em UI/UX, testes e documentação.</p>
+    <h2>Como utilizar esta ferramenta?</h2>
+    <p>Clique em "Gerar Persona" para criar um perfil aleatório com avatar, nome, cargo, email e bio. Utilize em wireframes, mockups ou testes.</p>
+    
+  </div>
+</section>
+
+<style>
+  /* ESTILO PADRÃO */
+  .tool-button { background: #89b4fa; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; margin: 0.5rem 0.5rem 1rem 0; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Gerador de Personas Fictícias Online",
+  "description": "Ferramenta online para gerar perfis fictícios com nome, email, cargo, bio e avatar para uso em protótipos e testes.",
+  "applicationCategory": "Ferramenta para UI/UX e Devs",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "BRL"
+  }
+}
+</script>
+
+<script>
+const firstNames = ['Ana', 'Carlos', 'Beatriz', 'Diego', 'Elena', 'Felipe', 'Gabriela', 'Henrique', 'Isabela', 'João', 'Karina', 'Lucas', 'Mariana', 'Nicolas', 'Olivia', 'Pedro', 'Quésia', 'Rafael', 'Sofia', 'Thiago'];
+const lastNames = ['Silva', 'Santos', 'Oliveira', 'Souza', 'Lima', 'Pereira', 'Almeida', 'Ferreira', 'Costa', 'Rodrigues', 'Gomes', 'Martins', 'Ribeiro', 'Carvalho', 'Alves'];
+const jobs = ['Desenvolvedor Front-end', 'Designer UX/UI', 'Product Manager', 'SysAdmin', 'Analista de Dados', 'DevOps Engineer', 'QA Tester', 'Scrum Master', 'Tech Lead', 'CEO'];
+const bios = ['Adora café e código limpo.', 'Especialista em resolver problemas complexos.', 'Apaixonado por automação e eficiência.', 'Focado em entregar valor ao usuário final.', 'Sempre aprendendo algo novo.', 'Contribuidor open source nas horas vagas.', 'Defensor da acessibilidade digital.', 'Entusiasta de Linux e software livre.'];
+
+function generatePersona() {
+  const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+  const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+  const job = jobs[Math.floor(Math.random() * jobs.length)];
+  const bio = bios[Math.floor(Math.random() * bios.length)];
+  const email = `${firstName.toLowerCase()}.${lastName.toLowerCase()}@example.com`;
+  const avatarUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(firstName + ' ' + lastName)}&background=89b4fa&color=1e1e2e&size=256`;
+
+  document.getElementById('personaAvatar').src = avatarUrl;
+  document.getElementById('personaName').innerText = `${firstName} ${lastName}`;
+  document.getElementById('personaJob').innerText = job;
+  document.getElementById('personaEmail').innerText = email;
+  document.getElementById('personaBio').innerText = bio;
+}
+
+function copyPersona() {
+  const name = document.getElementById('personaName').innerText;
+  const job = document.getElementById('personaJob').innerText;
+  const email = document.getElementById('personaEmail').innerText;
+  const bio = document.getElementById('personaBio').innerText;
+  
+  const text = `Nome: ${name}\nCargo: ${job}\nEmail: ${email}\nBio: ${bio}`;
+  navigator.clipboard.writeText(text).then(() => alert('✅ Dados copiados!'));
+}
+
+// Gera uma persona ao carregar
+generatePersona();
+</script>
