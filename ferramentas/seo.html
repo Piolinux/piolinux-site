@@ -1,0 +1,24 @@
+---
+layout: default
+title: Ferramentas SEO — Slug, Assinatura de Email
+description: Gere URLs amigáveis (slugs) e assinaturas de email profissionais em HTML e texto — otimize seu conteúdo e comunicação.
+permalink: /ferramentas/seo/
+---
+
+
+<section>
+<main>
+  
+  <p>{{ page.description }}</p>
+
+  <div class="tools-grid">
+    {% assign tools = site.pages | where_exp: "page", "page.url contains '/ferramentas/'" | where_exp: "page", "page.url != '/ferramentas/'" %}
+    {% for tool in tools %}
+      {% if tool.tags contains "seo" %}
+        {% assign category = "seo" %}
+        {% include tool-card.html url=tool.url title=tool.title category=category %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</main>
+</section>

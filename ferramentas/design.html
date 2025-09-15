@@ -1,0 +1,24 @@
+---
+layout: default
+title: Ferramentas Design — Cores, Gradient, Gráficos ASCII
+description: Crie paletas de cores, gradientes CSS e gráficos de barras em ASCII — ideal para designers, frontend e entusiastas de UI.
+permalink: /ferramentas/design/
+---
+
+
+<section>
+<main>
+ 
+  <p>{{ page.description }}</p>
+
+  <div class="tools-grid">
+    {% assign tools = site.pages | where_exp: "page", "page.url contains '/ferramentas/'" | where_exp: "page", "page.url != '/ferramentas/'" %}
+    {% for tool in tools %}
+      {% if tool.tags contains "design" %}
+        {% assign category = "design" %}
+        {% include tool-card.html url=tool.url title=tool.title category=category %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</main>
+</section>

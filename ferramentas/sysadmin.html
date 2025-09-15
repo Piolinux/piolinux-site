@@ -1,0 +1,24 @@
+---
+layout: default
+title: Ferramentas SysAdmin — IP, chmod, cron, backup, SSH
+description: 'Ferramentas online para sysadmins: calcule IP, gere cron, converta chmod, crie backups, simule chaves SSH — tudo grátis e sem cadastro.'
+permalink: /ferramentas/sysadmin/
+---
+
+
+<section>
+<main>
+  
+  <p>{{ page.description }}</p>
+
+  <div class="tools-grid">
+    {% assign tools = site.pages | where_exp: "page", "page.url contains '/ferramentas/'" | where_exp: "page", "page.url != '/ferramentas/'" %}
+    {% for tool in tools %}
+      {% if tool.tags contains "sysadmin" %}
+        {% assign category = "sysadmin" %}
+        {% include tool-card.html url=tool.url title=tool.title category=category %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</main>
+</section>

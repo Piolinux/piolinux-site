@@ -1,0 +1,22 @@
+---
+layout: default
+title: Ferramentas Dev — Docker, .env, tree, gitignore, regex
+description: 'Ferramentas online para desenvolvedores: gere comandos Docker, arquivos .env, estrutura de pastas, .gitignore, regex e mais — tudo grátis.'
+permalink: /ferramentas/dev/
+---
+<section>
+<main>
+  
+  <p>{{ page.description }}</p>
+
+  <div class="tools-grid">
+    {% assign tools = site.pages | where_exp: "page", "page.url contains '/ferramentas/'" | where_exp: "page", "page.url != '/ferramentas/'" %}
+    {% for tool in tools %}
+      {% if tool.tags contains "dev" %}
+        {% assign category = "dev" %}
+        {% include tool-card.html url=tool.url title=tool.title category=category %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</main>
+</section>

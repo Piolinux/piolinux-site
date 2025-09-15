@@ -1,0 +1,24 @@
+---
+layout: default
+title: Ferramentas Data — JSON, CSV, GPS, Números, Emails Temporários
+description: Gere dados fictícios, coordenadas GPS, números aleatórios, e-mails temporários e mais — ideal para testes, protótipos e QA.
+permalink: /ferramentas/data/
+---
+
+
+<section>
+<main>
+ 
+  <p>{{ page.description }}</p>
+
+  <div class="tools-grid">
+    {% assign tools = site.pages | where_exp: "page", "page.url contains '/ferramentas/'" | where_exp: "page", "page.url != '/ferramentas/'" %}
+    {% for tool in tools %}
+      {% if tool.tags contains "data" %}
+        {% assign category = "data" %}
+        {% include tool-card.html url=tool.url title=tool.title category=category %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</main>
+</section>
