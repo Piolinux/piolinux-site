@@ -1,0 +1,40 @@
+<!-- ============= 🔢 CALCULADORA DE PERMISSÕES CHMOD ============= -->
+<div class="tool-container" id="chmod-calculator">
+  <h2 class="tool-title">🔢 Calculadora de Permissões chmod</h2>
+  <div>
+    <strong>Dono:</strong>
+    <label><input type="checkbox" id="ownerRead" checked /> r (4)</label>
+    <label><input type="checkbox" id="ownerWrite" checked /> w (2)</label>
+    <label><input type="checkbox" id="ownerExecute" checked /> x (1)</label>
+  </div>
+  <div>
+    <strong>Grupo:</strong>
+    <label><input type="checkbox" id="groupRead" checked /> r (4)</label>
+    <label><input type="checkbox" id="groupWrite" /> w (2)</label>
+    <label><input type="checkbox" id="groupExecute" checked /> x (1)</label>
+  </div>
+  <div>
+    <strong>Outros:</strong>
+    <label><input type="checkbox" id="otherRead" /> r (4)</label>
+    <label><input type="checkbox" id="otherWrite" /> w (2)</label>
+    <label><input type="checkbox" id="otherExecute" /> x (1)</label>
+  </div>
+  <button class="tool-button" onclick="calculateChmod()">Calcular chmod</button>
+  <div id="chmodResult" class="tool-output">chmod 754 arquivo</div>
+</div>
+
+<script>
+function calculateChmod() {
+  const owner = (document.getElementById('ownerRead').checked ? 4 : 0) +
+                (document.getElementById('ownerWrite').checked ? 2 : 0) +
+                (document.getElementById('ownerExecute').checked ? 1 : 0);
+  const group = (document.getElementById('groupRead').checked ? 4 : 0) +
+                (document.getElementById('groupWrite').checked ? 2 : 0) +
+                (document.getElementById('groupExecute').checked ? 1 : 0);
+  const other = (document.getElementById('otherRead').checked ? 4 : 0) +
+                (document.getElementById('otherWrite').checked ? 2 : 0) +
+                (document.getElementById('otherExecute').checked ? 1 : 0);
+  const chmod = `${owner}${group}${other}`;
+  document.getElementById('chmodResult').innerText = `chmod ${chmod} arquivo`;
+}
+</script>

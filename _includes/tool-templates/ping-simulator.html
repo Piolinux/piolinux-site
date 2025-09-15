@@ -1,0 +1,29 @@
+<!-- ============= 📡 PING VISUAL (SIMULADO) ============= -->
+<div class="tool-container" id="ping-simulator">
+  <h2 class="tool-title">📡 Ping Visual (Simulado)</h2>
+  <input type="text" id="pingHost" class="tool-input" placeholder="Ex: google.com ou 8.8.8.8" value="google.com" />
+  <button class="tool-button" onclick="simulatePing()">Ping!</button>
+  <div id="pingResult" class="tool-output" style="height: 200px; overflow-y: auto; font-size: 0.9rem;">Clique em "Ping!" para começar...</div>
+</div>
+
+<script>
+function simulatePing() {
+  const host = document.getElementById('pingHost').value.trim() || 'google.com';
+  const resultDiv = document.getElementById('pingResult');
+  resultDiv.innerHTML = `<div class="tag">PING ${host} (simulado)</div>`;
+
+  const intervals = [12, 34, 28, 41, 19];
+  for (let i = 0; i < 5; i++) {
+    setTimeout(() => {
+      const time = intervals[i];
+      const line = `64 bytes from ${host}: icmp_seq=${i+1} ttl=54 time=${time} ms`;
+      resultDiv.innerHTML += `\n${line}`;
+      if (i === 4) {
+        const avg = intervals.reduce((a,b) => a+b, 0) / 5;
+        resultDiv.innerHTML += `\n\n--- ${host} ping statistics ---\n5 packets transmitted, 5 received, 0% packet loss, time ${Math.round(avg * 5)}ms\nrtt min/avg/max/mdev = ${Math.min(...intervals)}/${avg.toFixed(2)}/${Math.max(...intervals)}/${(Math.max(...intervals)-Math.min(...intervals))/2} ms`;
+      }
+      resultDiv.scrollTop = resultDiv.scrollHeight;
+    }, 500 + i * 800);
+  }
+}
+</script>

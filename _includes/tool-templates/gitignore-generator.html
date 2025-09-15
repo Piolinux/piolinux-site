@@ -1,0 +1,54 @@
+<!-- ============= 📄 GERADOR DE .GITIGNORE ============= -->
+<div class="tool-container" id="gitignore-generator">
+  <h2 class="tool-title">📄 Gerador de .gitignore</h2>
+  <div>
+    <label><input type="checkbox" id="langNode" checked /> Node.js (node_modules, .env)</label><br>
+    <label><input type="checkbox" id="langPython" /> Python (__pycache__, .pyc)</label><br>
+    <label><input type="checkbox" id="langJava" /> Java (.class, target/)</label><br>
+    <label><input type="checkbox" id="osMac" checked /> macOS (.DS_Store)</label><br>
+    <label><input type="checkbox" id="osWindows" /> Windows (Thumbs.db)</label><br>
+    <label><input type="checkbox" id="editorVscode" checked /> VS Code (.vscode/)</label><br>
+    <label><input type="checkbox" id="editorVim" /> Vim (.swp)</label><br>
+  </div>
+  <button class="tool-button" onclick="generateGitignore()">Gerar .gitignore</button>
+  <button class="tool-button" onclick="copyGitignore()">Copiar para Clipboard</button>
+  <div id="gitignoreResult" class="tool-output" style="height: 150px; overflow-y: auto;">.gitignore aparecerá aqui...</div>
+</div>
+
+<script>
+function generateGitignore() {
+  let content = '';
+  if (document.getElementById('langNode').checked) {
+    content += '# Node.js\nnode_modules/\n.env\n.nyc_output/\ncoverage/\n';
+  }
+  if (document.getElementById('langPython').checked) {
+    content += '\n# Python\n__pycache__/\n*.py[cod]\n*$py.class\n';
+  }
+  if (document.getElementById('langJava').checked) {
+    content += '\n# Java\n*.class\n*.jar\ntarget/\n';
+  }
+  if (document.getElementById('osMac').checked) {
+    content += '\n# macOS\n.DS_Store\n';
+  }
+  if (document.getElementById('osWindows').checked) {
+    content += '\n# Windows\nThumbs.db\nDesktop.ini\n';
+  }
+  if (document.getElementById('editorVscode').checked) {
+    content += '\n# VS Code\n.vscode/\n';
+  }
+  if (document.getElementById('editorVim').checked) {
+    content += '\n# Vim\n*.swp\n*.swo\n';
+  }
+  document.getElementById('gitignoreResult').innerText = content.trim() || '# Selecione opções acima';
+}
+
+function copyGitignore() {
+  const content = document.getElementById('gitignoreResult').innerText;
+  if (content.includes('# Selecione')) return;
+  navigator.clipboard.writeText(content).then(() => {
+    alert('✅ .gitignore copiado para a área de transferência!');
+  }).catch(() => {
+    alert('❌ Falha ao copiar. Tente manualmente.');
+  });
+}
+</script>

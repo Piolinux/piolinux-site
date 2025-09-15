@@ -1,0 +1,91 @@
+<!-- ============= 🌐 CALCULADORA DE IP / SUBNET ============= -->
+<div class="tool-container" id="ip-calculator">
+  <h2 class="tool-title">🌐 Calculadora de IP / Subnet</h2>
+  <input type="text" id="ipInput" class="tool-input" placeholder="Ex: 192.168.1.100/24 ou 10.0.0.1 255.255.255.0" />
+  <button class="tool-button" onclick="calculateIP()">Calcular</button>
+  <button class="tool-button" onclick="document.getElementById('ipInput').value=''; document.getElementById('ipResult').innerText=''">Limpar</button>
+  <div id="ipResult" class="tool-output">Resultado aparecerá aqui...</div>
+</div>
+
+<script>
+function calculateIP() {
+  const input = document.getElementById('ipInput').value.trim();
+  let result = '';
+  try {
+    let ip, mask, cidr, network, broadcast, totalHosts;
+
+    if (input.includes('/')) {
+      const parts = input.split('/');
+      ip = parts[0];
+      cidr = parseInt(parts[1]);
+      if (isNaN(cidr) || cidr < 0 || cidr > 32) throw new Error('CIDR inválido');
+      mask = cidrToMask(cidr);
+    } else if (input.includes(' ')) {
+      const parts = input.split(' ');
+      ip = parts[0];
+      mask = parts[1];
+      cidr = maskToCidr(mask);
+    } else {
+      throw new Error('Formato inválido');
+    }
+
+    if (!isValidIP(ip)) throw new Error('IP inválido');
+    if (!isValidMask(mask)) throw new Error('Máscara inválida');
+
+    network = calculateNetwork(ip, mask);
+    broadcast = calculateBroadcast(ip, mask);
+    totalHosts = Math.pow(2, 32 - cidr) - 2;
+
+    result = `IP: ${ip}\nMáscara: ${mask} (${cidr})\nRede: ${network}\nBroadcast: ${broadcast}\nHosts: ${totalHosts}`;
+  } catch (e) {
+    result = `Erro: ${e.message}\n\nFormatos válidos:\n- IP/CIDR → 192.168.1.100/24\n- IP MÁSCARA → 10.0.0.1 255.255.255.0`;
+  }
+  document.getElementById('ipResult').innerText = result;
+}
+
+// Funções auxiliares (mantidas aqui por simplicidade)
+function cidrToMask(cidr) {
+  const mask = [0, 0, 0, 0];
+  for (let i = 0; i < cidr; i++) {
+    mask[Math.floor(i / 8)] += 1 << (7 - i % 8);
+  }
+  return mask.join('.');
+}
+
+function maskToCidr(mask) {
+  return mask.split('.').reduce((cidr, octet) => {
+    const bits = parseInt(octet).toString(2).replace(/0/g, '').length;
+    return cidr + bits;
+  }, 0);
+}
+
+function calculateNetwork(ip, mask) {
+  return ip.split('.').map((octet, i) => {
+    return parseInt(octet) & parseInt(mask.split('.')[i]);
+  }).join('.');
+}
+
+function calculateBroadcast(ip, mask) {
+  return ip.split('.').map((octet, i) => {
+    return parseInt(octet) | (255 - parseInt(mask.split('.')[i]));
+  }).join('.');
+}
+
+function isValidIP(ip) {
+  const parts = ip.split('.');
+  if (parts.length !== 4) return false;
+  return parts.every(part => {
+    const num = parseInt(part);
+    return !isNaN(num) && num >= 0 && num <= 255;
+  });
+}
+
+function isValidMask(mask) {
+  const parts = mask.split('.');
+  if (parts.length !== 4) return false;
+  const binary = parts.map(p => parseInt(p).toString(2).padStart(8, '0')).join('');
+  const firstZero = binary.indexOf('0');
+  if (firstZero === -1) return true;
+  return binary.slice(firstZero).indexOf('1') === -1;
+}
+</script>
