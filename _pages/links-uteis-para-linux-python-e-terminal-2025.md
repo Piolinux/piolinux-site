@@ -10,6 +10,7 @@ permalink: /links-uteis-linux-python/
 ---
 
 
+{% include toc.html %}
 
 
 
@@ -18,7 +19,10 @@ permalink: /links-uteis-linux-python/
 <section>
   <h2>Acesse conteúdos essenciais:</h2>
   <ul>
+    
     <li><a href="{{ '/' | relative_url }}">🌐 Página inicial</a></li>
+    <li><a href="{{ '/ferramentas/' | relative_url }}">🔧 Ferramentas Admin</a></li>
+    <li><a href="{{ '/caixa-ferramentas-javascript/' | relative_url }}">Caixa de Ferramentas</a></li> 
     <li><a href="{{ '/80-dicas-linux-iniciantes/' | relative_url }}">📌 80 Dicas Rápidas de Linux</a></li>
     <li><a href="{{ '/comandos-essenciais-terminal-linux/' | relative_url }}">🖥️ Comandos do Terminal</a></li>
     <li><a href="{{ '/o-que-e-linux/' | relative_url }}">📖 Guia: O que é Linux</a></li>
