@@ -18,14 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Piolinux - Piadas Linux + Guia Técnico em Tabelas"
+title: "Piadas Linux + Guia Técnico em Tabelas"
 description: "200 piadas e trocadilhos de Linux, terminal e devs — + guias técnicos em tabelas práticas. Ria, aprenda e compartilhe. O lado divertido (e útil) do open source."
-baseurl: ""
+baseurl: "" # sem barra no final
 url: "https://piolinux.com"
 lang: "pt-BR"
 locale: "pt_BR"
 markdown: kramdown
-
+#theme: minima
 
 # Configurações suportadas pelo GitHub Pages
 lsi: false
@@ -67,25 +67,47 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag 
-  - jekyll-paginate 
+  
+exclude:
+  - galeria-page*.html
 
-# REMOVA O BLOCO "collections: pages" — mantenha só o necessário:
+# Permalink padrão
+permalink: pretty
+
+# Coleções
 collections:
+  pages:
+    output: true
+    permalink: /:title/
+
   jogos:
     output: true
     permalink: /jogo/:title/
 
   wallpapers:
     output: true
-    permalink: /wallpaper/:title/
+    permalink: /wallpapers/:name/
 
-# Include
+# Incluir pastas no build
 include:
   - _pages
   - _jogos
   - galeria
   - _wallpapers
+  
+defaults:
+  - scope:
+      path: ""
+      type: "wallpapers"
+    values:
+      layout: "wallpaper"
 
+
+
+
+sass:
+  silence_deprecations:
+    - import
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -95,7 +117,6 @@ include:
 # their entries' file path in the `include:` list.
 #
 # exclude:
-#  
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
@@ -107,3 +128,4 @@ include:
 #   - vendor/gems/
 #   - vendor/ruby/
 #   - README.md
+
