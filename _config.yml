@@ -25,7 +25,7 @@ url: "https://piolinux.com"
 lang: "pt-BR"
 locale: "pt_BR"
 markdown: kramdown
-theme: minima
+theme: null
 
 # Configurações suportadas pelo GitHub Pages
 lsi: false
