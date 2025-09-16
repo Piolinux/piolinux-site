@@ -113,7 +113,6 @@ tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, t
   "@type": "TechArticle",
   "headline": "Tipos de Kernel Linux — Monolítico, Microkernel, Híbrido, Unikernel",
   "description": "Comparação técnica evergreen: entenda diferenças entre monolítico, microkernel, híbrido, unikernel e nanokernel — sem depender de versões ou modas.",
-  "articleBody": "Tabela comparativa de arquiteturas de kernel: monolítico (Linux), microkernel (Minix, Hurd), híbrido (Windows NT, macOS XNU), unikernel (MirageOS), nanokernel (seL4).",
   "inLanguage": "pt-BR",
   "url": "{{ page.url | absolute_url }}",
   "mainEntityOfPage": {
@@ -122,20 +121,24 @@ tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, t
   },
   "author": {
     "@type": "Person",
-    "name": "Piolinux"
+    "name": "Equipe Piolinux"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Piolinux",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://piolinux.com/"
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
     }
   },
-  "datePublished": "{{ page.date | date_to_rfc3339 }}",
-  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+  "datePublished": "2025-09-16T15:19:44-03:00",
+  "dateModified": "2025-09-16T15:19:44-03:00",
+  "mainEntity": {
+    "@type": "Table",
+    "name": "Comparação de Arquiteturas de Kernel",
+    "description": "Tabela comparando kernel monolítico (Linux), microkernel (Minix, Hurd), híbrido (Windows NT, XNU) e unikernel (MirageOS)."
+  }
 }
 </script>
-
-
-
