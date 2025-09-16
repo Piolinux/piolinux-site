@@ -18,14 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Piadas Linux + Guia Técnico em Tabelas"
+title: "Piolinux - Piadas Linux + Guia Técnico em Tabelas"
 description: "200 piadas e trocadilhos de Linux, terminal e devs — + guias técnicos em tabelas práticas. Ria, aprenda e compartilhe. O lado divertido (e útil) do open source."
 baseurl: "" # sem barra no final
 url: "https://piolinux.com"
 lang: "pt-BR"
 locale: "pt_BR"
 markdown: kramdown
-#theme: minima
+theme: minima
 
 # Configurações suportadas pelo GitHub Pages
 lsi: false
@@ -67,12 +67,11 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag 
-  
-exclude:
-  - galeria-page*.html
+  - jekyll-paginate 
+
 
 # Permalink padrão
-permalink: pretty
+permalink: /:title/
 
 # Coleções
 collections:
@@ -86,7 +85,7 @@ collections:
 
   wallpapers:
     output: true
-    permalink: /wallpapers/:name/
+    permalink: /wallpaper/:title/
 
 # Incluir pastas no build
 include:
@@ -94,20 +93,7 @@ include:
   - _jogos
   - galeria
   - _wallpapers
-  
-defaults:
-  - scope:
-      path: ""
-      type: "wallpapers"
-    values:
-      layout: "wallpaper"
 
-
-
-
-sass:
-  silence_deprecations:
-    - import
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -128,4 +114,5 @@ sass:
 #   - vendor/gems/
 #   - vendor/ruby/
 #   - README.md
+
 
