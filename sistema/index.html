@@ -1,9 +1,13 @@
 ---
 layout: default
-title: Sistema Linux — Kernel, Boot, Compilação, Init
-description: 'Tudo sobre o coração do Linux: tipos de kernel, como compilar, reparar boot, gerenciadores de init (systemd, OpenRC, runit) e mais — em páginas evergreen.'
+title: Sistema Linux — Kernel, Boot, Init, Compilação Evergreen
+description: 'Tudo sobre o coração do Linux: tipos de kernel, compilação, reparo de boot, init systems (systemd, OpenRC, runit) — guias técnicos, atemporais e sem modas.'
 permalink: /sistema/
+tags: [sistema, linux, kernel, boot, init, systemd, openrc, runit, compilacao, evergreen, sysadmin]
 ---
+
+
+
 
 
 
@@ -40,4 +44,37 @@ permalink: /sistema/
 </main>
 
 </section>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Sistema Linux — Kernel, Boot, Init, Compilação Evergreen",
+  "description": "Tudo sobre o coração do Linux: tipos de kernel, compilação, reparo de boot, init systems (systemd, OpenRC, runit) — guias técnicos, atemporais e sem modas.",
+  "url": "{{ page.url | absolute_url }}",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "TechArticle",
+        "name": "Tipos de Kernel Linux",
+        "url": "/kernel/"
+      },
+      {
+        "@type": "TechArticle",
+        "name": "Como Compilar o Kernel Linux",
+        "url": "/compilar-kernel/"
+      },
+      {
+        "@type": "TechArticle",
+        "name": "Como Reparar o Boot Linux",
+        "url": "/reparar-boot-linux/"
+      }
+    ]
+  }
+}
+</script>
+
 
