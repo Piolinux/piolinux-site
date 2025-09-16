@@ -14,7 +14,7 @@ tags: [linux, aprender, iniciante, intermediario, avancado, terminal, bash, scri
   <p>{{ page.description }}</p>
 
   <div class="category-index">
-    {% assign pages = site.pages | where_exp: "page", "page.url contains '/indice-artigos-linux/' or page.url contains '/dicas-tecnicas-linux/' or page.url contains '/scripts-bash-linux/' or page.url contains '/biblioteca-linux/'" %}
+    {% assign pages = site.pages | where_exp: "page", "page.url contains '/indice-artigos-linux/' or page.url contains '/dicas-tecnicas-linux/' or page.url contains '/scripts-bash-linux/' or page.url contains '/biblioteca-linux/' or page.url contains '/links-uteis-linux-python/'" %}
     {% for page in pages %}
       <article class="index-card">
         <h2><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h2>
