@@ -25,6 +25,7 @@ url: "https://piolinux.com"
 lang: "pt-BR"
 locale: "pt_BR"
 markdown: kramdown
+theme: minima
 
 
 # Configurações suportadas pelo GitHub Pages
@@ -103,7 +104,7 @@ include:
 # their entries' file path in the `include:` list.
 #
 # exclude:
-#   - theme: minima
+#  
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
