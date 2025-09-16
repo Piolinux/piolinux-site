@@ -33,23 +33,47 @@ tags: [linux, aprender, iniciante, intermediario, avancado, terminal, bash, scri
   "@type": "CollectionPage",
   "name": "Aprenda Linux — Do Zero ao Avançado (Guia Completo)",
   "description": "Domine o Linux do absoluto zero: comandos, scripts, dicas de terminal, biblioteca técnica e guias passo a passo — organizado por nível de dificuldade.",
+  "inLanguage": "pt-BR",
   "url": "{{ page.url | absolute_url }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-04-05T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}",
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [
       {
         "@type": "TechArticle",
         "name": "Guia para Iniciantes no Linux",
+        "description": "Primeiros passos no terminal, comandos básicos, navegação e gerenciamento de arquivos.",
         "url": "/indice-artigos-linux/"
       },
       {
         "@type": "TechArticle",
         "name": "Dicas Técnicas de Terminal",
+        "description": "Atalhos, aliases, redirecionamentos, pipes e técnicas avançadas para produtividade.",
         "url": "/dicas-tecnicas-linux/"
       },
       {
         "@type": "TechArticle",
         "name": "Scripts Bash Essenciais",
+        "description": "Automatize tarefas com scripts: estruturas de controle, funções, argumentos e boas práticas.",
         "url": "/scripts-bash-linux/"
       }
     ]
