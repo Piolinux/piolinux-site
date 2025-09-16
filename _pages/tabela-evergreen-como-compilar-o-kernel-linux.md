@@ -126,14 +126,13 @@ tags: [kernel, linux, compilar, compilacao, make, config, sysadmin, desenvolvedo
 
 </section>
 
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "headline": "Como Compilar o Kernel Linux — Guia Evergreen Passo a Passo",
   "description": "Aprenda a compilar qualquer versão do kernel Linux em qualquer distro. Guia universal, independente de versão, com dicas de otimização e segurança.",
-  "articleBody": "Passo a passo para compilar o kernel Linux: instalar dependências, baixar código-fonte, configurar com make menuconfig, compilar com make -j$(nproc), instalar módulos e kernel, atualizar bootloader.",
+  "articleBody": "Este guia ensina como compilar o kernel Linux do zero: desde a instalação das dependências necessárias, download do código-fonte no kernel.org, configuração via 'make menuconfig' ou 'make defconfig', compilação paralela com 'make -j$(nproc)', instalação dos módulos e do kernel com 'make modules_install install', até a atualização do bootloader (GRUB ou systemd-boot). Inclui dicas de otimização para seu hardware, segurança (como desativar módulos desnecessários) e rollback em caso de falha.",
   "inLanguage": "pt-BR",
   "url": "{{ page.url | absolute_url }}",
   "mainEntityOfPage": {
@@ -141,11 +140,25 @@ tags: [kernel, linux, compilar, compilacao, make, config, sysadmin, desenvolvedo
     "@id": "{{ page.url | absolute_url }}"
   },
   "author": {
+    "@type": "Person",
+    "name": "Equipe piolinux",
+    "url": "https://piolinux.com/author/equipe/"
+  },
+  "publisher": {
     "@type": "Organization",
-    "name": "PiO Linux"
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "{{ page.date | date_to_rfc3339 }}",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}",
   }
-}
 </script>
+
 
 
 
