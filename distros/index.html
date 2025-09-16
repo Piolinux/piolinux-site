@@ -1,0 +1,74 @@
+---
+layout: default
+title: Distros Linux — Guia Completo para Iniciantes e Avançados
+description: 'Escolha sua distro: compare underground, desktop, servidor, iniciante e nicho. Tabelas evergreen, sem modas — só o essencial técnico.'
+permalink: /distros/
+tags: [distros, linux, iniciante, avancado, servidor, desktop, underground, comparacao, evergreen, escolha]
+---
+
+
+
+
+<section class="post-content">
+  <main>
+    <p>{{ page.description }}</p>
+
+    {% assign pages = site.pages | where_exp: "page", "page.url contains '/distros/underground/' and page.url != '/distros/'" %}
+
+    {% if pages.size == 0 %}
+      <p>⚠️ Nenhuma página encontrada. Verifique se as páginas existem em <code>/distros/underground/</code> e têm front matter válido.</p>
+      <!-- DEBUG: liste todas as URLs que contêm '/distros/' -->
+      <details>
+        <summary>🔍 Debug: Páginas com '/distros/' na URL</summary>
+        <ul>
+          {% for p in site.pages %}
+            {% if p.url contains '/distros/' %}
+              <li>{{ p.url }} → {{ p.title }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </details>
+    {% else %}
+      <div class="category-index">
+        {% for page in pages %}
+          <article class="index-card">
+            <h2><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h2>
+            <p>{{ page.description }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </main>
+</section>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Distros Linux — Guia Completo para Iniciantes e Avançados",
+  "description": "Escolha sua distro: compare underground, desktop, servidor, iniciante e nicho. Tabelas evergreen, sem modas — só o essencial técnico.",
+  "url": "{{ page.url | absolute_url }}",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "TechArticle",
+        "name": "Distros Linux Underground",
+        "url": "/distros/underground/"
+      },
+      {
+        "@type": "TechArticle",
+        "name": "Distros Linux para Iniciantes",
+        "url": "/distros/para-iniciantes/"
+      },
+      {
+        "@type": "TechArticle",
+        "name": "Comparação de Distros Linux",
+        "url": "/distros/comparacao/"
+      }
+    ]
+  }
+}
+</script>
