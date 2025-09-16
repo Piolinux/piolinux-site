@@ -119,8 +119,23 @@ tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, t
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ page.url | absolute_url }}"
-  }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/"
+    }
+  },
+  "datePublished": "{{ page.date | date_to_rfc3339 }}",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
 }
 </script>
+
 
 
