@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Distros Linux Underground — As Rebeldes do Pinguim
+title: Distros Linux Underground — Alternativas Rebeldes ao Mainstream
+description: 'Descubra distros Linux radicais, minimalistas e independentes: Alpine, Void, CRUX, Guix, Chimera e mais — fora do mainstream, cheias de atitude.'
 permalink: /distros/underground/
-description: 'Conheça distros Linux alternativas, experimentais, minimalistas e radicais — fora do mainstream.'
+tags: [distros, linux, underground, alpine, void, crux, guix, chimera, alternativas, rebeldes]
 ---
-
 
 
 
@@ -150,4 +150,36 @@ description: 'Conheça distros Linux alternativas, experimentais, minimalistas e
   Se você cansou do mainstream, essa é sua tribo.
 </blockquote>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Distros Linux Underground — Alternativas Rebeldes ao Mainstream",
+  "description": "Guia de distros Linux radicais, minimalistas e independentes — como Alpine, Void, CRUX, Guix, Chimera — fora do mainstream, para quem quer liberdade e controle.",
+  "url": "{{ page.url | absolute_url }}",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Alpine Linux",
+        "applicationCategory": "Linux Distribution"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Void Linux",
+        "applicationCategory": "Linux Distribution"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "CRUX",
+        "applicationCategory": "Linux Distribution"
+      }
+      // ... adicione mais conforme necessário
+    ]
+  }
+}
+</script>
+
 

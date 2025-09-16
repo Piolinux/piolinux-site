@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Tabela Evergreen-Como Compilar o Kernel Linux
+title: Como Compilar o Kernel Linux — Guia Evergreen Passo a Passo
+description: 'Aprenda a compilar qualquer versão do kernel Linux em qualquer distro. Guia universal, independente de versão, com dicas de otimização e segurança.'
 permalink: /compilar-kernel/
-description: Guia passo a passo universal para compilar qualquer versão do kernel Linux. Funciona em qualquer distro.
+tags: [kernel, linux, compilar, compilacao, make, config, sysadmin, desenvolvedor, evergreen]
 ---
-
 
 
 
@@ -125,4 +125,30 @@ description: Guia passo a passo universal para compilar qualquer versão do kern
 </blockquote>
 
 </section>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Como Compilar o Kernel Linux — Guia Evergreen Passo a Passo",
+  "description": "Aprenda a compilar qualquer versão do kernel Linux em qualquer distro. Guia universal, independente de versão, com dicas de otimização e segurança.",
+  "articleBody": "Passo a passo para compilar o kernel Linux: instalar dependências, baixar código-fonte, configurar com make menuconfig, compilar com make -j$(nproc), instalar módulos e kernel, atualizar bootloader.",
+  "inLanguage": "pt-BR",
+  "url": "{{ page.url | absolute_url }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "PiO Linux"
+  }
+}
+</script>
+
+
+
+
+
 

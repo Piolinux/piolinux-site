@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Tabela Evergreen de Tipos de Kernel
+title: Tipos de Kernel Linux — Monolítico, Microkernel, Híbrido, Unikernel
+description: 'Comparação técnica evergreen: entenda diferenças entre monolítico, microkernel, híbrido, unikernel e nanokernel — sem depender de versões ou modas.'
 permalink: /kernel/
-description: 'Comparação entre monolítico, microkernel, híbrido, unikernel e mais — sem envelhecer.'
+tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, tipos, arquitetura]
 ---
-
 
 
 
@@ -103,3 +103,24 @@ description: 'Comparação entre monolítico, microkernel, híbrido, unikernel e
 </p>
 
 </section>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Tipos de Kernel Linux — Monolítico, Microkernel, Híbrido, Unikernel",
+  "description": "Comparação técnica evergreen: entenda diferenças entre monolítico, microkernel, híbrido, unikernel e nanokernel — sem depender de versões ou modas.",
+  "articleBody": "Tabela comparativa de arquiteturas de kernel: monolítico (Linux), microkernel (Minix, Hurd), híbrido (Windows NT, macOS XNU), unikernel (MirageOS), nanokernel (seL4).",
+  "inLanguage": "pt-BR",
+  "url": "{{ page.url | absolute_url }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  }
+}
+</script>
+
+
