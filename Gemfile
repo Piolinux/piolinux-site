@@ -1,14 +1,15 @@
 # Gemfile
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"  # ou a versão que você usa
+gem "jekyll", "~> 4.3"
 
-# Plugins que você usa (todos são permitidos agora!)
 gem "jekyll-feed"
 gem "jekyll-sitemap"
 gem "jekyll-seo-tag"
 gem "jekyll-paginate"
 
-# Adicione qualquer outro plugin que você precisar
+# Opcional: se usar tema remoto
 # gem "jekyll-remote-theme"
-# gem "jekyll-include-cache"
+
+# Elimina o aviso do Faraday
+gem "faraday-retry"
