@@ -155,13 +155,6 @@ tags: [kernel, linux, compilar, compilacao, make, config, sysadmin, desenvolvedo
     }
   },
   "datePublished": "{{ page.date | date_to_rfc3339 }}",
-  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}",
-  }
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
 </script>
-
-
-
-
-
-
-
