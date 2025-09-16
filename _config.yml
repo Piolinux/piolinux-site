@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Piolinux - Piadas Linux + Guia Técnico em Tabelas"
+title: "Piadas Linux + Guia Técnico em Tabelas"
 description: "200 piadas e trocadilhos de Linux, terminal e devs — + guias técnicos em tabelas práticas. Ria, aprenda e compartilhe. O lado divertido (e útil) do open source."
 baseurl: "" # sem barra no final
 url: "https://piolinux.com"
