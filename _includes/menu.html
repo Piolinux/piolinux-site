@@ -11,34 +11,22 @@
   </p>
 
 <div class="menu-container">
-  <button aria-label="Abrir menu" class="menu-toggle" onclick="document.body.classList.toggle('menu-open')">
-    ☰
-  </button>
+  <button type="button" aria-label="Abrir menu" class="menu-toggle" onclick="document.body.classList.toggle('menu-open')">
+  ☰
+</button>
   <nav class="dropdown-menu-container">
     <ul class="dropdown-menu">
-      <li>
-        <a href="{{ '/' | relative_url }}">Início</a>
-      </li>
-      <li>
-        <a href="#">Aprenda Linux</a>
-        <ul class="dropdown-content">
-          <li><a href="{{ '/piadas-linux-terminal/' | relative_url }}">Piadas</a></li>
-          <li><a href="{{ '/biblioteca-linux/' | relative_url }}">Biblioteca Linux</a></li>
-          <li><a href="{{ '/indice-artigos-linux/' | relative_url }}">Iniciante</a></li>
-          <li><a href="{{ '/dicas-tecnicas-linux/' | relative_url }}">Dicas Técnicas</a></li>
-          <li><a href="{{ '/scripts-bash-linux/' | relative_url }}">Bash</a></li>
-          <li><a href="{{ '/links-uteis-linux-python/' | relative_url }}">Links uteis</a></li>
-          <li><a href="{{ '/caixa-ferramentas-javascript/' | relative_url }}">Ferramentas</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="{{ '/biblioteca-de-jogos/' | relative_url }}">Jogos</a>
-      </li>
-      <li>
-        <a href="{{ '/reparar-boot-linux/' | relative_url }}">Boot</a>
-      </li>
-    </ul>
+    <li><a href="{{ '/' | relative_url }}">Início</a></li>
+    <li><a href="{{ '/aprenda/' | relative_url }}">Aprenda</a></li>
+    <li><a href="{{ '/ferramentas/' | relative_url }}">Ferramentas</a></li>
+    <li><a href="{{ '/distros/' | relative_url }}">Distros</a></li>
+    <li><a href="{{ '/sistema/' | relative_url }}">Sistema</a></li>
+    <li><a href="{{ '/diversao/' | relative_url }}">Diversão</a></li>
+  </ul>
+    
   </nav>
 </div>
 </header>
+
+
 
