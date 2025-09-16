@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Ferramentas Data — JSON, CSV, GPS, Números, Emails Temporários
-description: "Gere dados fictícios, coordenadas GPS, números aleatórios, e-mails temporários e mais — ideal para testes, protótipos e QA."
+title: Ferramentas Data — JSON, CSV, GPS, Números, Emails Fake
+description: 'Gere dados fictícios em JSON/CSV, coordenadas GPS, números aleatórios e emails temporários — tudo online, sem cadastro. Ideal para testes, protótipos e QA.'
 permalink: /ferramentas/data/
+tags: [data, json, csv, gps, numeros, email, temporario, teste, qa, prototipo, mock]
 ---
 
 
@@ -24,3 +25,34 @@ permalink: /ferramentas/data/
   </div>
 </main>
 </section>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Ferramentas Data — JSON, CSV, GPS, Números, Emails Fake",
+  "description": "Gere dados fictícios em JSON/CSV, coordenadas GPS, números aleatórios e emails temporários — tudo online, sem cadastro. Ideal para testes, protótipos e QA.",
+  "url": "{{ page.url | absolute_url }}",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Gerador de Dados de Teste (JSON/CSV)",
+        "applicationCategory": "Ferramenta para QA"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Gerador de Coordenadas GPS Aleatórias",
+        "applicationCategory": "Ferramenta para Testes Geográficos"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Gerador de E-mails Temporários",
+        "applicationCategory": "Ferramenta para Testes de Cadastro"
+      }
+    ]
+  }
+}
+</script>
