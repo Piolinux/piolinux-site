@@ -175,11 +175,18 @@ tags: [distros, linux, underground, alpine, void, crux, guix, chimera, alternati
         "@type": "SoftwareApplication",
         "name": "CRUX",
         "applicationCategory": "Linux Distribution"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Guix System",
+        "applicationCategory": "Linux Distribution"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Chimera Linux",
+        "applicationCategory": "Linux Distribution"
       }
-      // ... adicione mais conforme necessário
     ]
   }
 }
 </script>
-
-
