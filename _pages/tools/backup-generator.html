@@ -1,0 +1,51 @@
+---
+layout: default
+title: Gerador de Comandos de Backup — tar, rsync, dd, mysqldump
+description: 'Crie comandos prontos para backup de arquivos e bancos de dados. Suporte a tar.gz, rsync, dd (imagem de disco) e mysqldump. Ideal para sysadmins.'
+permalink: /ferramentas/backup-generator/
+tags: [backup, sysadmin, devops, linux, tar, rsync, dd, mysqldump]
+---
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+ 
+  {% include tool-templates/backup-generator.html %}
+
+  <div class="seo-content">
+    <h2>Por que automatizar comandos de backup?</h2>
+    <p>Backups são essenciais para qualquer sistema. Esta ferramenta gera comandos prontos para:</p>
+    <ul>
+      <li><strong>tar.gz</strong> — compactação e backup de diretórios</li>
+      <li><strong>rsync</strong> — sincronização incremental e eficiente</li>
+      <li><strong>dd</strong> — imagem bit-a-bit de discos ou partições</li>
+      <li><strong>mysqldump</strong> — backup de bancos de dados MySQL/MariaDB</li>
+    </ul>
+
+    <h2>Exemplos de uso:</h2>
+    <ul>
+      <li><code>tar -czvf backup.tar.gz /home/user/docs</code></li>
+      <li><code>rsync -avz --progress /origem/ /destino/</code></li>
+      <li><code>dd if=/dev/sda of=imagem.img bs=4M status=progress</code></li>
+      <li><code>mysqldump -u usuario -p banco > backup.sql</code></li>
+    </ul>
+
+  </div>
+</section>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Gerador de Comandos de Backup Online",
+  "description": "Ferramenta online para gerar comandos de backup com tar, rsync, dd e mysqldump.",
+  "applicationCategory": "Ferramenta para SysAdmin e DevOps",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "BRL"
+  }
+}
+</script>

@@ -1,0 +1,99 @@
+---
+layout: default
+title: Calculadora de Permissões chmod Online — Linux/Unix
+description: 'Converta entre formato numérico (755) e simbólico (rwxr-xr-x). Ideal para sysadmins e estudantes de Linux — rápido, visual e sem erros.'
+permalink: /ferramentas/chmod-calculator/
+tags: [chmod, linux, unix, permissao, sysadmin, terminal, arquivo, estudante]
+---
+
+
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+  
+  {% include tool-templates/chmod-calculator.html %}
+
+  <div class="seo-content">
+  <h2>O que é chmod?</h2>
+  <p><code>chmod</code> (change mode) é um comando do Linux/Unix usado para alterar as permissões de acesso de arquivos e diretórios.O uso incorreto desses comandos pode causar problemas, tornando o sistema inoperante. As permissões são definidas para:</p>
+  <ul>
+    <li><strong>Dono (usu&aacute;rio)</strong> — Qual indivíduo é responsável pela criação dos referidos arquivos?</li>
+    <li><strong>Grupo (grupo)</strong> — grupo associado ao arquivo</li>
+    <li><strong>Outros (outros)</strong> — todos os demais usuários</li>
+  </ul>
+  
+  
+  <p>Em caso de dúvidas, digite "man chmod" no terminal para maiores 
+  esclarecimentos.</p>
+  
+  
+  <h2>Cuidado: Permissões perigosas</h2>
+  <p>N&acirc;o utilize use <code>chmod 777</code> (permissão total para todos) em arquivos ou diretórios sensíveis. Isso permitirá que qualquer usuário leia, escreva e execute, abrindo brechas de segurança e causando problemas graves.</p>
+
+  <h2>Boas práticas de usabilidade para permissões:</h2>
+  <table class="evergreen-table permissions-table">
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Permissão Numérica</th>
+        <th>Permissão Simbólica</th>
+        <th>Quando usar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Arquivo comum</td>
+        <td>644</td>
+        <td>-rw-r--r--</td>
+        <td>Arquivos de configuração, textos, scripts que não precisam ser executados</td>
+      </tr>
+      <tr>
+        <td>Script executável</td>
+        <td>755</td>
+        <td>-rwxr-xr-x</td>
+        <td>Scripts que você (dono) executa, e outros só leem/executam</td>
+      </tr>
+      <tr>
+        <td>Diretório</td>
+        <td>755</td>
+        <td>drwxr-xr-x</td>
+        <td>Diretórios que todos precisam listar e acessar, mas só dono modifica</td>
+      </tr>
+      <tr>
+        <td>Arquivo sensível</td>
+        <td>600</td>
+        <td>-rw-------</td>
+        <td>Chaves SSH, arquivos de senha, configurações privadas — só o dono acessa</td>
+      </tr>
+      <tr>
+        <td>Diretório privado</td>
+        <td>700</td>
+        <td>drwx------</td>
+        <td>Diretórios com dados sensíveis — só o dono entra</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Como usar esta calculadora?</h2>
+  <p>Indique as permissões desejadas para cada categoria, assinalando as opções correspondentes (leitura, escrita, execução). O sistema exibirá o valor numérico equivalente (por exemplo, 755).</p>
+  <p><strong>Exemplos seguros da utilização:</strong> <code>chmod 644 arquivo.conf</code> → dono: leitura+escrita, grupo/outros: só leitura.</p>
+
+</div>
+
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Calculadora de Permissões chmod Online",
+  "description": "Ferramenta para converter permissões de arquivos Linux/Unix entre formato numérico (ex: 755) e simbólico (ex: rwxr-xr-x) — ideal para sysadmins e estudantes.",
+  "applicationCategory": "Ferramenta para SysAdmin e Educação Linux",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "BRL"
+  }
+}
+</script>
