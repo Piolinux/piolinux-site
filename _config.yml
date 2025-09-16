@@ -20,12 +20,11 @@
 
 title: "Piolinux - Piadas Linux + Guia Técnico em Tabelas"
 description: "200 piadas e trocadilhos de Linux, terminal e devs — + guias técnicos em tabelas práticas. Ria, aprenda e compartilhe. O lado divertido (e útil) do open source."
-baseurl: "" # sem barra no final
+baseurl: ""
 url: "https://piolinux.com"
 lang: "pt-BR"
 locale: "pt_BR"
 markdown: kramdown
-theme: minima
 
 
 # Configurações suportadas pelo GitHub Pages
@@ -70,16 +69,8 @@ plugins:
   - jekyll-seo-tag 
   - jekyll-paginate 
 
-
-# Permalink padrão
-permalink: /:title/
-
-# Coleções
+# REMOVA O BLOCO "collections: pages" — mantenha só o necessário:
 collections:
-  pages:
-    output: true
-    permalink: /:title/
-
   jogos:
     output: true
     permalink: /jogo/:title/
@@ -88,7 +79,7 @@ collections:
     output: true
     permalink: /wallpaper/:title/
 
-# Incluir pastas no build
+# Include
 include:
   - _pages
   - _jogos
