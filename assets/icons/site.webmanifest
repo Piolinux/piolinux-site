@@ -1,11 +1,6 @@
 {
   "name": "Piolinux",
   "short_name": "Pio",
-  "description": "Ferramentas, wallpapers e guias Linux — 100% em código, sem frescura.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0a0a0a",
-  "theme_color": "#00ff9d",
   "icons": [
     {
       "src": "/assets/icons/favicon-192x192.png",
