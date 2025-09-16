@@ -93,6 +93,7 @@ include:
   - _jogos
   - galeria
   - _wallpapers
+  - assets
 
 # Exclude from processing.
 # The following items will not be processed, by default.
