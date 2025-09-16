@@ -28,8 +28,14 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: true
 
+      - name: Remove Gemfile.lock (avoid platform conflicts)
+        run: rm Gemfile.lock
+
+      - name: Set bundle platform to linux
+        run: bundle lock --add-platform x86_64-linux
+
       - name: Install dependencies
-        run: bundle install
+        run: bundle install --verbose
 
       - name: Build with Jekyll
         run: JEKYLL_ENV=production bundle exec jekyll build --trace
