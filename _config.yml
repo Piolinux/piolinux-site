@@ -87,6 +87,13 @@ exclude:
   - README.md
   - LICENSE
 
+# Minificação de CSS (funciona no GitHub Pages)
+sass:
+  style: compressed
+  quiet_deps: true
+
+# Para JS, use um plugin ou minifique manualmente
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
