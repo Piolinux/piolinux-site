@@ -12,9 +12,7 @@ tags: [sistema, linux, kernel, boot, init, systemd, openrc, runit, compilacao, e
 
 
 
-<section class="post-content">
-
-
+<section>
 <main>
   <p>{{ page.description }}</p>
 
@@ -22,28 +20,50 @@ tags: [sistema, linux, kernel, boot, init, systemd, openrc, runit, compilacao, e
 
   {% if pages.size == 0 %}
     <p>⚠️ Nenhuma página encontrada. Verifique se as páginas existem e têm front matter válido.</p>
-    <!-- DEBUG OPCIONAL -->
-    <details>
-      <summary>Ver todas as URLs (debug)</summary>
-      <ul>
-        {% for p in site.pages %}
-          <li>{{ p.url }} → {{ p.title }}</li>
-        {% endfor %}
-      </ul>
-    </details>
   {% else %}
-    <div class="category-index">
+    <ul class="standard-list">
       {% for page in pages %}
-        <article class="index-card">
-          <h2><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h2>
+        <li>
+          <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
           <p>{{ page.description }}</p>
-        </article>
+        </li>
       {% endfor %}
-    </div>
+    </ul>
   {% endif %}
 </main>
-
 </section>
+
+
+
+<style>
+.page-list li {
+  background: #1a1a2e;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+}
+
+.page-list a {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.3rem;
+  color: #50fa7b;
+  text-decoration: none;
+}
+
+.page-list p {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  color: #a6adc8;
+  margin: 0.5rem 0 0;
+}
+</style>
+
+
+
+
+
+
+
 
 
 
@@ -51,8 +71,8 @@ tags: [sistema, linux, kernel, boot, init, systemd, openrc, runit, compilacao, e
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Sistema Linux — Kernel, Boot, Compilação Evergreen",
-  "description": "Tudo sobre o coração do Linux: tipos de kernel, compilação, reparo de boot, init systems (systemd, OpenRC, runit) — guias técnicos, atemporais e sem modas.",
+  "headline": "{{ page.title }}",
+  "description": "{{ page.description }}",
   "inLanguage": "pt-BR",
   "url": "{{ page.url | absolute_url }}",
   "mainEntityOfPage": {
@@ -61,11 +81,11 @@ tags: [sistema, linux, kernel, boot, init, systemd, openrc, runit, compilacao, e
   },
   "author": {
     "@type": "Person",
-    "name": "Equipe Piolinux"
+    "name": "Equipe PiO Linux"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Piolinux",
+    "name": "PiO Linux",
     "logo": {
       "@type": "ImageObject",
       "url": "https://piolinux.com/logo-512.png",
@@ -75,17 +95,19 @@ tags: [sistema, linux, kernel, boot, init, systemd, openrc, runit, compilacao, e
   },
   "datePublished": "2025-04-05T10:00:00+00:00",
   "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}",
-  "hasPart": [
+  "mainEntity": [
     {
-      "@type": "TechArticle",
+      "@type": "Table",
       "name": "Tipos de Kernel Linux",
-      "url": "/kernel/"
+      "description": "Tabela comparativa de arquiteturas de kernel: monolítico (Linux), microkernel (Minix, Hurd), híbrido (Windows NT, XNU), unikernel (MirageOS)."
     },
     {
-      "@type": "TechArticle",
+      "@type": "Table",
       "name": "Como Compilar o Kernel Linux",
-      "url": "/compilar-kernel/"
-    },
+      "description": "Tabela de passos essenciais, flags de configuração, comandos de compilação e instalação do kernel Linux."
+    }
+  ],
+  "hasPart": [
     {
       "@type": "TechArticle",
       "name": "Como Reparar o Boot Linux",
