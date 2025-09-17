@@ -10,18 +10,17 @@ tags: [linux, aprender, iniciante, intermediario, avancado, terminal, bash, scri
 <section class="post-content">
 
 <main>
-  
   <p>{{ page.description }}</p>
 
-  <div class="category-index">
+  <ul class="standard-list">
     {% assign pages = site.pages | where_exp: "page", "page.url contains '/indice-artigos-linux/' or page.url contains '/dicas-tecnicas-linux/' or page.url contains '/scripts-bash-linux/' or page.url contains '/biblioteca-linux/' or page.url contains '/links-uteis-linux-python/'" %}
     {% for page in pages %}
-      <article class="index-card">
-        <h2><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h2>
+      <li>
+        <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
         <p>{{ page.description }}</p>
-      </article>
+      </li>
     {% endfor %}
-  </div>
+  </ul>
 </main>
 
 </section>
@@ -53,7 +52,7 @@ tags: [linux, aprender, iniciante, intermediario, avancado, terminal, bash, scri
       "height": 512
     }
   },
-  "datePublished": "2025-04-05T10:00:00+00:00",
+  "datePublished": "2025-09-17T10:00:00+00:00",
   "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}",
   "mainEntity": {
     "@type": "ItemList",
@@ -80,5 +79,3 @@ tags: [linux, aprender, iniciante, intermediario, avancado, terminal, bash, scri
   }
 }
 </script>
-
-
