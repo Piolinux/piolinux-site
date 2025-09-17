@@ -20,14 +20,13 @@
 
 title: "Piolinux - Piadas Linux + Guia Técnico em Tabelas"
 description: "200 piadas e trocadilhos de Linux, terminal e devs — + guias técnicos em tabelas práticas. Ria, aprenda e compartilhe. O lado divertido (e útil) do open source."
-baseurl: "" # sem barra no final
+baseurl: ""
 url: "https://piolinux.com"
 lang: "pt-BR"
 locale: "pt_BR"
 markdown: kramdown
 theme: null
 
-# Configurações suportadas pelo GitHub Pages
 lsi: false
 safe: false
 incremental: false
@@ -40,60 +39,50 @@ kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
 
+future: false
+timezone: America/Sao_Paulo
 
-
-future: true
-
-# _config.yml
 sass:
   quiet_deps: true
 
 sitemap:
-    changefreq: daily
-    priority: 0.5
-
-
+  changefreq: daily
+  priority: 0.5
 
 seo_tag:
-  # Desabilita a detecção automática do 'og_locale'
   og_locale_detection: false
 
-# Defina o fuso horário
-timezone: America/Sao_Paulo
-
-# Build settings
-#theme: minima
-plugins: 
+plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-seo-tag 
-  - jekyll-paginate 
+  - jekyll-seo-tag
+  - jekyll-paginate
 
-
-# Permalink padrão
 permalink: /:title/
 
-# Coleções
 collections:
   pages:
     output: true
     permalink: /:title/
-
   jogos:
     output: true
     permalink: /jogo/:title/
-
   wallpapers:
     output: true
     permalink: /wallpaper/:title/
 
-# Incluir pastas no build
 include:
   - _pages
   - _jogos
   - galeria
   - _wallpapers
   - assets
+
+exclude:
+  - node_modules
+  - vendor
+  - README.md
+  - LICENSE
 
 # Exclude from processing.
 # The following items will not be processed, by default.
