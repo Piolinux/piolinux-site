@@ -57,34 +57,39 @@ else:
         <button onclick="copyCode('code2')">Copiar</button>
     </section>
 
-    <section class="code-block">
-        <h3>🧪 HTML: Meta Tags</h3>
-        <pre id="code3"><meta name="description" content="Seu site incrível">
-<meta name="keywords" content="linux, tecnologia, terminal">
-<meta name="author" content="PioLinux"></pre>
-        <button onclick="copyCode('code3')">Copiar</button>
-    </section>
+   
 
     <h2>💻 Códigos Úteis para Copiar e Usar</h2>
 
     <h3>🐧 Linux & Terminal</h3>
+
+     <section class="code-block">
+    
     <p><strong>Instalar Oh My Zsh (oficial)</strong></p>
     <pre><code>sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</code></pre>
+</section>
+
+ <section class="code-block">
 
     <p><strong>Atualizar sistema (Debian/Ubuntu)</strong></p>
     <pre><code>sudo apt update &amp;&amp; sudo apt upgrade -y</code></pre>
+</section>
+
 
     <h3>🌐 HTML</h3>
-    <p><strong>Meta tags para SEO</strong></p>
-    <pre><code><meta name="description" content="Seu blog sobre Linux e produtividade">
-<meta name="keywords" content="linux, terminal, python"></code></pre>
+   
 
     <h3>🐍 Python</h3>
+
+ <section class="code-block">
+    
     <p><strong>Renomear arquivos em massa</strong></p>
     <pre><code>import os
 for i, arquivo in enumerate(os.listdir(".")):
     novo = f"arquivo_{i}.txt"
     os.rename(arquivo, novo)</code></pre>
+
+    </section>
 
     <h3>🔧 iTerm2 / Windows Terminal</h3>
     <p><strong>Dica pro:</strong> Assim como o <a href="https://iterm2.com">iTerm2</a> moderniza o terminal no macOS, ou o <a href="https://aka.ms/terminal">Windows Terminal</a> traz novidade ao CMD, esses códigos vão acelerar seu fluxo de trabalho. Use, modifique e compartilhe.</p>
