@@ -106,13 +106,13 @@ tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, t
 
 
 
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Tipos de Kernel Linux — Monolítico, Microkernel, Híbrido, Unikernel",
-  "description": "Comparação técnica evergreen: entenda diferenças entre monolítico, microkernel, híbrido, unikernel e nanokernel — sem depender de versões ou modas.",
+  "headline": "Como Compilar o Kernel Linux — Guia Evergreen Passo a Passo",
+  "description": "Aprenda a compilar qualquer versão do kernel Linux em qualquer distro. Guia universal, independente de versão, com dicas de otimização e segurança.",
+  "articleBody": "Este guia ensina como compilar o kernel Linux do zero: desde a instalação das dependências necessárias, download do código-fonte no kernel.org, configuração via 'make menuconfig' ou 'make defconfig', compilação paralela com 'make -j$(nproc)', instalação dos módulos e do kernel com 'make modules_install install', até a atualização do bootloader (GRUB ou systemd-boot). Inclui dicas de otimização para seu hardware, segurança (como desativar módulos desnecessários) e rollback em caso de falha.",
   "inLanguage": "pt-BR",
   "url": "{{ page.url | absolute_url }}",
   "mainEntityOfPage": {
@@ -121,7 +121,8 @@ tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, t
   },
   "author": {
     "@type": "Person",
-    "name": "Equipe Piolinux"
+    "name": "Equipe piolinux",
+    "url": "https://piolinux.com/author/equipe/"
   },
   "publisher": {
     "@type": "Organization",
@@ -133,12 +134,7 @@ tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, t
       "height": 512
     }
   },
-  "datePublished": "2025-09-16T15:19:44-03:00",
-  "dateModified": "2025-09-16T15:19:44-03:00",
-  "mainEntity": {
-    "@type": "Table",
-    "name": "Comparação de Arquiteturas de Kernel",
-    "description": "Tabela comparando kernel monolítico (Linux), microkernel (Minix, Hurd), híbrido (Windows NT, XNU) e unikernel (MirageOS)."
-  }
+  "datePublished": "{{ page.date | date_to_rfc3339 }}",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
 }
 </script>
