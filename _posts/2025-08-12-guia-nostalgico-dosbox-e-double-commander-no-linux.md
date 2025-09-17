@@ -77,7 +77,7 @@ permalink: /guia-nostalgico-dosbox-double-commander/
 <p>Gerenciador de arquivos com duas colunas, atalhos poderosos e suporte a plugins. Perfeito para quem ama produtividade no estilo DOS.</p>
 <pre><code>sudo apt install doublecmd-qt</code></pre>
 
-h3>✅ Conclusão</h3>
+<h3>✅ Conclusão</h3>
 <p>Os anos 90 não acabaram — só mudaram de terminal. Com <strong>DOSBox</strong> e <strong>Double Commander</strong>, você revive a nostalgia com performance moderna. E o melhor: tudo no <strong>Linux</strong>.</p>
 
             <p class="text-lg leading-relaxed">
