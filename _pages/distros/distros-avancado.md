@@ -109,7 +109,7 @@ permalink: /distros/avancado/
   },
   "datePublished": "2025-09-17T10:00:00+00:00",
   "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}",
-  
+  }
 </script>
 
 
