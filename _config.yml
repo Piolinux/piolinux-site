@@ -56,7 +56,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
--   jekyll-paginate
+  - jekyll-paginate
 
 paginate: 10           # Número de posts por página
 paginate_path: "/page:num/"  # Padrão de URL para páginas
