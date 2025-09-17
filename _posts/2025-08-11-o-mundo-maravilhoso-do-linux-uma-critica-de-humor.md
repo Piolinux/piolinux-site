@@ -17,16 +17,16 @@ permalink: /mundo-maravilhoso-linux-critica-de-humor/
 
  <section class="post-content">
 
-    <p>Mergulhei de cabeça no universo Linux, uma aventura com muitos tutoriais meio confusos e gente super dedicada, mas que acreditava em tudo sem pensar muito. Tudo parecia depender de um **“mestre”** que resolvia os problemas de um jeito meio esquisito. Os textos dele, que pareciam traduzidos, nunca citavam as fontes e ele se apresentava como o cara que sabia de tudo. 😅</p>
+    <p>Mergulhei de cabeça no universo Linux, uma aventura com muitos tutoriais meio confusos e gente super dedicada, mas que acreditava em tudo sem pensar muito. Tudo parecia depender de um **“mestre”** que resolvia os problemas de um jeito meio esquisito. Os textos dele, que pareciam traduzidos, nunca citavam as fontes e ele se apresentava como o cara que sabia de tudo.😅</p>
     <p>Os textos eram longos demais, cheios de enrolação pra resolver até as coisas mais simples. A falta de referências deixava um buraco enorme pra quem queria entender de verdade o que estava acontecendo, e a galera seguia ele na fé. 🤷‍♂️</p>
 
     <h2>As Táticas de um Guru de Fantasia</h2>
     <p>No começo, ele fazia umas paradas pra afastar os fãs, convencendo todo mundo que ele era o mestre da verdade. Com o tempo, eles viraram uns fanáticos pelo "mundo mágico do Linux".</p>
-    <p>Ele enrolava tanto que ninguém percebia que o coelho da Páscoa não põe ovos, e que seria um esforço gigante pra ele fazer isso. </p>
+    <p>Ele enrolava tanto que ninguém percebia que o coelho da Páscoa não põe ovos, e que seria um esforço gigante pra ele fazer isso.</p>
     <p>Ele usava o humor pra manter a galera tranquila, fazendo-os acreditar que o mundo mágico do Linux tem soluções incríveis pra tudo – até pra cadeira onde você senta. Mas cadeira e Linux, o que tem a ver? Tipo tentar ajustar a altura da cadeira, mesmo sabendo que ela não roda Linux, né?</p>
 
     <h2>O Que o Guru Não te Conta</h2>
-    <p>E aí, tem também o teclado que te dá dor de cabeça com esses erros de acentuação, não no celular, mas no notebook! E, ó, seu celular, mesmo que você não saiba, é Linux, viu? Não importa se você não manja do que o Android faz nos bastidores. 😉.</p>
+    <p>E aí, tem também o teclado que te dá dor de cabeça com esses erros de acentuação, não no celular, mas no notebook! E, ó, seu celular, mesmo que você não saiba, é Linux, viu? Não importa se você não manja do que o Android faz nos bastidores.😉</p>
     <p>ó pra te adiantar, seu guru não falou que existem outros sistemas além desse "paraíso" que é o Linux, tipo esses aqui:</p>
     <ul>
         <li>Void</li>
