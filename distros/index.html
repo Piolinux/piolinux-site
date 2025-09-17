@@ -11,16 +11,16 @@ tags: [distros, linux, iniciante, avancado, servidor, desktop, underground, comp
 
 <section class="post-content">
   <main>
-  
   <p>Guia completo para iniciantes e avançados.</p>
 
-  <div class="category-index">
+  
+  <div class="standard-list">
     {% assign distro_pages = site.pages | where_exp: "page", "page.url contains '/distros/' and page.url != '/distros/'" %}
     {% for page in distro_pages %}
-      <article class="index-card">
-        <h2><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h2>
+      <li>
+        <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
         <p>{{ page.description }}</p>
-      </article>
+      </li>
     {% endfor %}
   </div>
 </main>
@@ -31,8 +31,8 @@ tags: [distros, linux, iniciante, avancado, servidor, desktop, underground, comp
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "Distros Linux — Guia Completo para Iniciantes e Avançados",
+  "@type": "CollectionPage",
+  "name": "Distros Linux — Guia Completo para Iniciantes e Avançados",
   "description": "Escolha sua distro: compare underground, desktop, servidor, iniciante e nicho. Tabelas evergreen, sem modas — só o essencial técnico.",
   "inLanguage": "pt-BR",
   "url": "{{ page.url | absolute_url }}",
@@ -42,7 +42,7 @@ tags: [distros, linux, iniciante, avancado, servidor, desktop, underground, comp
   },
   "author": {
     "@type": "Person",
-    "name": "Pioinux"
+    "name": "Piolinux"
   },
   "publisher": {
     "@type": "Organization",
@@ -54,29 +54,32 @@ tags: [distros, linux, iniciante, avancado, servidor, desktop, underground, comp
       "height": 512
     }
   },
-  "datePublished": "2025-04-05T10:00:00+00:00",
+  "datePublished": "2025-09-17T10:00:00+00:00",
   "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}",
-  "mainEntity": [
-    {
-      "@type": "Table",
-      "name": "Distros Linux Underground",
-      "description": "Tabela de distros radicais, minimalistas e fora do mainstream: Alpine, Void, CRUX, Guix, Chimera."
-    },
-    {
-      "@type": "Table",
-      "name": "Distros Linux para Iniciantes",
-      "description": "Tabela das melhores opções para quem está começando: Ubuntu, Linux Mint, Zorin OS, elementary OS, Pop!_OS."
-    },
-    {
-      "@type": "Table",
-      "name": "Distros Linux para Nível Intermediário",
-      "description": "Tabela para usuários que já conhecem o terminal: Fedora, Debian, openSUSE, MX Linux, Manjaro."
-    },
-    {
-      "@type": "Table",
-      "name": "Distros Linux Avançadas / DIY",
-      "description": "Tabela de projetos para quem quer controle total: LFS, Arch, Gentoo, Slackware, Buildroot, Yocto."
-    }
-  ]
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "Table",
+        "name": "Distros Linux Underground",
+        "description": "Tabela de distros radicais, minimalistas e fora do mainstream: Alpine, Void, CRUX, Guix, Chimera."
+      },
+      {
+        "@type": "Table",
+        "name": "Distros Linux para Iniciantes",
+        "description": "Tabela das melhores opções para quem está começando: Ubuntu, Linux Mint, Zorin OS, elementary OS, Pop!_OS."
+      },
+      {
+        "@type": "Table",
+        "name": "Distros Linux para Nível Intermediário",
+        "description": "Tabela para usuários que já conhecem o terminal: Fedora, Debian, openSUSE, MX Linux, Manjaro."
+      },
+      {
+        "@type": "Table",
+        "name": "Distros Linux Avançadas / DIY",
+        "description": "Tabela de projetos para quem quer controle total: LFS, Arch, Gentoo, Slackware, Buildroot, Yocto."
+      }
+    ]
+  }
 }
 </script>
