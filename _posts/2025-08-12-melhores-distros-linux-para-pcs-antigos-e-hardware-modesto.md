@@ -42,8 +42,8 @@ permalink: /distros-linux-pc-antigo/
             <h3>3. Lxle: Simplicidade e Praticidade Modesta 😝 (Descontinuada)</h3>
             <p>Pois é, esse projeto já era, foi descontinuado, como diz o DistroWatch. Aquela ótima opção pra quem queria facilidade, foi-se. O jeito é procurar outras, tantas distribuições baseadas no Debian aí, quem sabe alguma serve.</p>
             
-            <h3>4. Arch Bang: Velocidade Bruta com OpenBox 😨</h3>
-            <p>Arch Bang, distro pras almas destemidas! Ela usa o Arch Linux e vem com o OpenBox, que é super levinho. Nos testes, rodando em máquinas virtuais, voou, bem rápido e responsivo. Boa pra quem curte pouco enfeite e topa aprender do Arch pra ter um sistema que decola!</p>
+            <h3>4. GReen Bang: Velocidade Bruta com OpenBox 😨</h3>
+            <p>Green Bang, distro pras almas destemidas! Ela usa o Arch Linux e vem com o OpenBox, que é super levinho. Nos testes, rodando em máquinas virtuais, voou, bem rápido e responsivo. Boa pra quem curte pouco enfeite e topa aprender do Arch pra ter um sistema que decola!</p>
             
             <h3>5. 4MLinux: O Minimalismo Extremo Gosta de Ambiente Grafico leve 😆</h3>
             <p>4MLinux, radicaliza na leveza! Com JWM, uma experiência simplificada, no talo. Distro enxuta, perfeita pra certas coisas, tipo usar um pendrive pra dar uns reparos, ou se o negócio é gastar pouco do PC. Minimalismo, ele pode libertar, mas o utilizador precisa estar ligado nas suas limitações.</p>
