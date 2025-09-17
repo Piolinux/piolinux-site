@@ -98,8 +98,7 @@ permalink: /distros/intermediario/
   },
   "datePublished": "2025-04-05T10:00:00+00:00",
   "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}",
-  "keywords": "linux, intermediário, distros, fedora, debian, opensuse, mx linux, manjaro"
-}
+ 
 </script>
 
 
