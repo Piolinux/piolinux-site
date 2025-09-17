@@ -47,21 +47,6 @@ tags: [aleatorio, sorteio, matematica, dev, rng, ferramenta, numerico]
   input[type="checkbox"] { margin-left: 0.5rem; }
 </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Gerador de Números Aleatórios Online",
-  "description": "Ferramenta online para gerar números aleatórios inteiros ou decimais dentro de um range, com opção de evitar repetições.",
-  "applicationCategory": "Ferramenta para Matemática e Sorteios",
-  "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "BRL"
-  }
-}
-</script>
 
 <script>
 function generateRandom() {
@@ -102,3 +87,33 @@ function generateRandom() {
   document.getElementById('randomResult').innerText = results.join('\n');
 }
 </script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Números Aleatórios Online",
+  "description": "Ferramenta online para gerar números aleatórios inteiros ou decimais dentro de um range, com opção de evitar repetições.",
+  "applicationCategory": "Ferramenta para Matemática e Sorteios",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+

@@ -40,21 +40,7 @@ tags: [email, temporario, teste, qa, desenvolvedor, cadastro, fake, placeholder]
   input[type="text"] { width: 100%; max-width: 300px; padding: 0.5rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 4px; margin-top: 0.5rem; }
 </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Gerador de E-mails Temporários",
-  "description": "Ferramenta para criar e-mails falsos no formato user+tag@seudominio.com — ideal para testes de cadastro, QA e desenvolvimento. Sem envio real.",
-  "applicationCategory": "Ferramenta para Desenvolvedores e QA",
-  "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "BRL"
-  }
-}
-</script>
+
 
 <script>
 function generateTempEmail() {
@@ -73,5 +59,37 @@ function copyTempEmail() {
   if (email) {
     navigator.clipboard.writeText(email).then(() => alert('✅ Copiado: ' + email));
   }
+}
+</script>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de E-mails Temporários",
+  "description": "Ferramenta para criar e-mails falsos no formato user+tag@seudominio.com — ideal para testes de cadastro, QA e desenvolvimento. Sem envio real.",
+  "applicationCategory": "Ferramenta para Desenvolvedores e QA",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
 }
 </script>

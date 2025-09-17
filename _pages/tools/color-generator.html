@@ -47,21 +47,10 @@ tags: [css, cores, hex, rgb, hsl, acessibilidade, contraste, designer, frontend]
   }
 </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Gerador de Cores CSS Online",
-  "description": "Ferramenta para criar paletas, converter entre HEX, RGB, HSL e verificar contraste de acessibilidade WCAG — ideal para designers e desenvolvedores front-end.",
-  "applicationCategory": "Ferramenta para Designers e Frontend",
-  "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "BRL"
-  }
-}
-</script>
+
+
+
+
 
 <script>
 function updateColor() {
@@ -99,3 +88,36 @@ function copyColor() {
 document.getElementById('colorPicker').addEventListener('input', updateColor);
 updateColor();
 </script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Cores CSS Online",
+  "description": "Ferramenta para criar paletas, converter entre HEX, RGB, HSL e verificar contraste de acessibilidade WCAG — ideal para designers e desenvolvedores front-end.",
+  "applicationCategory": "Ferramenta para Designers e Frontend",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+
+

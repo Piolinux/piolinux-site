@@ -6,9 +6,6 @@ permalink: /ferramentas/bytes-converter/
 tags: [bytes, bits, conversao, sysadmin, redes, armazenamento, kb, mb, gb]
 ---
 
-{% include toc.html %}
-
-
 <section class="tool-single-page">
   <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
   
@@ -38,15 +35,27 @@ tags: [bytes, bits, conversao, sysadmin, redes, armazenamento, kb, mb, gb]
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
+  "@type": "WebApplication",
   "name": "Conversor de Bytes e Bits Online",
   "description": "Ferramenta para converter entre bytes, bits e unidades (KB, MB, GB, TB, PB) usando base 1000 (decimal) — padrão de redes e armazenamento.",
   "applicationCategory": "Ferramenta para SysAdmin",
   "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "BRL"
-  }
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
 }
 </script>

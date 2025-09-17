@@ -69,21 +69,6 @@ tags: [lorem-ipsum, placeholder, design, dev, prototipo, texto, frontend]
   }
 </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Gerador de Lorem Ipsum Online",
-  "description": "Ferramenta online para gerar texto Lorem Ipsum personalizado em parágrafos, frases ou palavras.",
-  "applicationCategory": "Ferramenta para Designers e Devs",
-  "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "BRL"
-  }
-}
-</script>
 
 <script>
 const loremText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
@@ -111,5 +96,36 @@ function generateLorem() {
 function copyLorem() {
   const text = document.getElementById('loremOutput').value;
   navigator.clipboard.writeText(text).then(() => alert('✅ Copiado para a área de transferência!'));
+}
+</script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Lorem Ipsum Online",
+  "description": "Ferramenta online para gerar texto Lorem Ipsum personalizado em parágrafos, frases ou palavras.",
+  "applicationCategory": "Ferramenta para Designers e Devs",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-017T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
 }
 </script>

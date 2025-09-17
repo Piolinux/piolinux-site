@@ -48,21 +48,7 @@ tags: [estrutura-de-pastas, tree, nodejs, python, react, organização, document
   pre { white-space: pre; overflow-x: auto; }
 </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Gerador de Estrutura de Pastas Online",
-  "description": "Ferramenta online para visualizar estruturas de pastas comuns para projetos Node.js, Python, React, etc. em formato de árvore.",
-  "applicationCategory": "Ferramenta para Desenvolvedores",
-  "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "BRL"
-  }
-}
-</script>
+
 
 <script>
 const structures = {
@@ -169,3 +155,36 @@ function copyFolderStructure() {
 // Gera ao carregar
 generateFolderStructure();
 </script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Estrutura de Pastas Online — Simule comando tree",
+  "description": "Visualize estruturas de pastas para projetos Node.js, Python, React e mais. Ideal para documentação, tutoriais e organização de código.",
+  "applicationCategory": "Ferramenta para Desenvolvedores",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Pioliinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+
+

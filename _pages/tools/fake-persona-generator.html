@@ -45,21 +45,11 @@ tags: [persona, ui, ux, protótipo, teste, dados-fake, design]
   .tool-button { background: #89b4fa; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; margin: 0.5rem 0.5rem 1rem 0; }
 </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Gerador de Personas Fictícias Online",
-  "description": "Ferramenta online para gerar perfis fictícios com nome, email, cargo, bio e avatar para uso em protótipos e testes.",
-  "applicationCategory": "Ferramenta para UI/UX e Devs",
-  "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "BRL"
-  }
-}
-</script>
+
+
+
+
+
 
 <script>
 const firstNames = ['Ana', 'Carlos', 'Beatriz', 'Diego', 'Elena', 'Felipe', 'Gabriela', 'Henrique', 'Isabela', 'João', 'Karina', 'Lucas', 'Mariana', 'Nicolas', 'Olivia', 'Pedro', 'Quésia', 'Rafael', 'Sofia', 'Thiago'];
@@ -95,3 +85,35 @@ function copyPersona() {
 // Gera uma persona ao carregar
 generatePersona();
 </script>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Personas Fictícias Online",
+  "description": "Ferramenta online para gerar perfis fictícios com nome, email, cargo, bio e avatar para uso em protótipos e testes.",
+  "applicationCategory": "Ferramenta para UI/UX e Devs",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+
+

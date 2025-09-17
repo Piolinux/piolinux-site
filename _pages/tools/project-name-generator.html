@@ -35,21 +35,37 @@ tags: [startup, projeto, nome, branding, empreendedor, dev, criativo, moderno]
   .tool-button { background: #89b4fa; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; margin: 0.5rem 0.5rem 1rem 0; }
 </style>
 
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
+  "@type": "WebApplication",
   "name": "Gerador de Nomes para Startups e Projetos",
   "description": "Ferramenta criativa para gerar nomes únicos combinando prefixos e sufixos modernos — ideal para startups, produtos, apps e repositórios.",
   "applicationCategory": "Ferramenta de Produtividade Criativa",
   "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "BRL"
-  }
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
 }
 </script>
+
+
+
 
 <script>
 const prefixes = ['Tech', 'Cloud', 'Data', 'Neo', 'Hyper', 'Quantum', 'Alpha', 'Zen', 'Nova', 'Apex', 'Vertex', 'Nexus', 'Orbit', 'Pulse', 'Spark', 'Flux', 'Echo', 'Vanta', 'Aero', 'Lumen'];

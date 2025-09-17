@@ -49,21 +49,9 @@ tags: [licenca, open-source, mit, gpl, apache, github, software-livre, projeto]
   textarea { width: 100%; height: 400px; background: #2a2a3c; color: #cdd6f4; padding: 1rem; border: 1px solid #454565; border-radius: 6px; font-family: monospace; white-space: pre; }
 </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Gerador de Licenças Open Source Online",
-  "description": "Ferramenta online para gerar arquivos LICENSE (MIT, GPL, Apache) com placeholders personalizáveis para projetos open source.",
-  "applicationCategory": "Ferramenta para Desenvolvedores Open Source",
-  "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "BRL"
-  }
-}
-</script>
+
+
+
 
 <script>
 const licenses = {
@@ -165,3 +153,37 @@ function copyLicense() {
 // Gera ao carregar
 generateLicense();
 </script>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Licenças Open Source Online",
+  "description": "Ferramenta online para gerar arquivos LICENSE (MIT, GPL, Apache) com placeholders personalizáveis para projetos open source.",
+  "applicationCategory": "Ferramenta para Desenvolvedores Open Source",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+
+
+
+

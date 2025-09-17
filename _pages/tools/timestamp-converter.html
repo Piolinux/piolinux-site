@@ -43,21 +43,6 @@ tags: [timestamp, unix, data, iso8601, timezone, dev, sysadmin, conversao]
   input[type="text"] { width: 100%; padding: 0.75rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 6px; }
 </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Conversor de Timestamp Online",
-  "description": "Ferramenta para converter entre timestamp Unix, data legível e ISO 8601, com suporte a fusos horários — ideal para desenvolvedores e sysadmins.",
-  "applicationCategory": "Ferramenta para Devs e SysAdmin",
-  "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "BRL"
-  }
-}
-</script>
 
 <script>
 function convertTimestamp() {
@@ -89,3 +74,35 @@ function convertTimestamp() {
   }
 }
 </script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Conversor de Timestamp Online",
+  "description": "Ferramenta para converter entre timestamp Unix, data legível e ISO 8601, com suporte a fusos horários — ideal para desenvolvedores e sysadmins.",
+  "applicationCategory": "Ferramenta para Devs e SysAdmin",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+

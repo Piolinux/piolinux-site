@@ -37,21 +37,6 @@ tags: [ascii, terminal, sysadmin, monitoramento, cli, logs, grafico]
   pre { white-space: pre; overflow-x: auto; }
 </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Gerador de Gráficos ASCII Online",
-  "description": "Ferramenta online para converter valores numéricos em gráficos de barras usando caracteres ASCII para uso em terminal e logs.",
-  "applicationCategory": "Ferramenta para SysAdmin e Terminal",
-  "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "BRL"
-  }
-}
-</script>
 
 <script>
 function generateASCIIChart() {
@@ -76,3 +61,35 @@ function generateASCIIChart() {
   document.getElementById('chartOutput').innerText = output;
 }
 </script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Gráficos ASCII Online",
+  "description": "Ferramenta online para converter valores numéricos em gráficos de barras usando caracteres ASCII para uso em terminal e logs.",
+  "applicationCategory": "Ferramenta para SysAdmin e Terminal",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+

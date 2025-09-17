@@ -46,22 +46,6 @@ tags: [ssh, segurança, sysadmin, linux, rsa, ed25519, tutorial, demonstração]
   code { background: #313244; padding: 0.2rem 0.5rem; border-radius: 4px; font-family: monospace; }
 </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Simulador de Chaves SSH (Apenas Demonstração)",
-  "description": "Ferramenta educacional que mostra o formato real de chaves SSH públicas (RSA, Ed25519). NÃO gera chaves reais — ideal para aprendizado e sysadmins.",
-  "applicationCategory": "Ferramenta Educacional",
-  "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "BRL"
-  },
-  "disambiguatingDescription": "Esta ferramenta é apenas para fins educacionais. Não gera chaves criptográficas reais."
-}
-</script>
 
 <script>
 function generateSSHKey() {
@@ -83,5 +67,37 @@ function copySSHKey() {
   if (key) {
     navigator.clipboard.writeText(key).then(() => alert('✅ Chave pública copiada!'));
   }
+}
+</script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Simulador de Chaves SSH (Apenas Demonstração)",
+  "description": "Ferramenta educacional que mostra o formato real de chaves SSH públicas (RSA, Ed25519). NÃO gera chaves reais — ideal para aprendizado e sysadmins.",
+  "disambiguatingDescription": "Esta ferramenta é apenas para fins educacionais. Não gera chaves criptográficas reais.",
+  "applicationCategory": "Ferramenta Educacional",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-04-05T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
 }
 </script>
