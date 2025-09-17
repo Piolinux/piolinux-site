@@ -50,8 +50,8 @@ tags: [sistema, linux, kernel, boot, init, systemd, openrc, runit, compilacao, e
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Sistema Linux — Kernel, Boot, Init, Compilação Evergreen",
+  "@type": "TechArticle",
+  "headline": "Sistema Linux — Kernel, Boot, Compilação Evergreen",
   "description": "Tudo sobre o coração do Linux: tipos de kernel, compilação, reparo de boot, init systems (systemd, OpenRC, runit) — guias técnicos, atemporais e sem modas.",
   "inLanguage": "pt-BR",
   "url": "{{ page.url | absolute_url }}",
@@ -61,11 +61,11 @@ tags: [sistema, linux, kernel, boot, init, systemd, openrc, runit, compilacao, e
   },
   "author": {
     "@type": "Person",
-    "name": "Equipe PiO Linux"
+    "name": "Equipe Piolinux"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "PiO Linux",
+    "name": "Piolinux",
     "logo": {
       "@type": "ImageObject",
       "url": "https://piolinux.com/logo-512.png",
@@ -75,30 +75,22 @@ tags: [sistema, linux, kernel, boot, init, systemd, openrc, runit, compilacao, e
   },
   "datePublished": "2025-04-05T10:00:00+00:00",
   "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}",
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "TechArticle",
-        "name": "Tipos de Kernel Linux",
-        "description": "Comparação entre monolítico, microkernel, híbrido e unikernel.",
-        "url": "/kernel/"
-      },
-      {
-        "@type": "TechArticle",
-        "name": "Como Compilar o Kernel Linux",
-        "description": "Guia passo a passo para compilar qualquer versão do kernel em qualquer distro.",
-        "url": "/compilar-kernel/"
-      },
-      {
-        "@type": "TechArticle",
-        "name": "Como Reparar o Boot Linux",
-        "description": "Soluções para GRUB, systemd-boot, initramfs e kernel panic.",
-        "url": "/reparar-boot-linux/"
-      }
-    ]
-  }
+  "hasPart": [
+    {
+      "@type": "TechArticle",
+      "name": "Tipos de Kernel Linux",
+      "url": "/kernel/"
+    },
+    {
+      "@type": "TechArticle",
+      "name": "Como Compilar o Kernel Linux",
+      "url": "/compilar-kernel/"
+    },
+    {
+      "@type": "TechArticle",
+      "name": "Como Reparar o Boot Linux",
+      "url": "/reparar-boot-linux/"
+    }
+  ]
 }
 </script>
-
-
