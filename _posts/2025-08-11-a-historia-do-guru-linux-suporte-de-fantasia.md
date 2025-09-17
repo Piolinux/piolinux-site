@@ -17,26 +17,26 @@ permalink: /historia-do-guru-linux/
 <section class="post-content">
 
             <h2>O Guru Idealizado e a Falsa Comodidade</h2>
-            <p>Se você gosta de um Guru Linux aqui no mundo da fantasia, saiba que ele existe para te ajudar, mas apenas enquanto você se recusa a usar a razão e acreditar que tudo o que ele diz está correto.</p>
+            <p>Se você curte um Guru Linux, relaxa, ele tá aí pra ajudar... mas só se você não for do tipo que acredita em tudo que ele fala, né?</p>
             
-            <p>Num mundinho de fantasias Linux, surge um problema: seu guru mandou instalar o Ubuntu como se fosse o melhor sistema do mundo. Depois de um tempo, ele começou a apresentar erros de configuração. Aí vem a questão: você pergunta ao seu guru, que foge do assunto, desviando da resposta que deveria lhe dar.</p>
+            <p>Imagina só: no mundo Linux, o guru te mandou instalar o Ubuntu como se fosse a solução pra tudo. Uns tempos depois, começou a dar pane. E aí, você pergunta pro guru, que faz umas artimanhas pra não responder direito. Que situação!</p>
             
             <h3>A dependência de Terceiros</h3>
-            <p>O mesmo guru incentivou você a procurá-lo para responder suas dúvidas, pois, segundo ele, a incompetência te impediria de encontrar as respostas por conta própria. Você se cercou dessas “facilidades” e, quando te aconselharam a estudar a documentação do Ubuntu, você resistiu, pois gostava demais da comodidade de ter alguém pensando por você. Por isso, você se esqueceu de que existem outros sistemas Linux.</p>
+            <p>Aquele cara te botou pra procurar ele mesmo quando surgissem dúvidas, alegando que você não seria capaz de achar as respostas sozinho. Você se deixou levar dessa "praticidade" e, quando te disseram pra estudar a documentação do Ubuntu, você não quis, porque adorava a mão na roda de ter alguém resolvendo tudo. Por isso, esqueceu que tem vários outros sistemas Linux por aí.</p>
 
             <h2>A Dura Realidade do Suporte Pessoal</h2>
             <h4>O Mundo do Ubuntu não é o Fim</h4>
-            <p>Seu mundo ainda está nas fantasias de um Linux Ubuntu, para onde você migrou achando que, como o Windows, ele não travaria sua máquina, e que seu computador era o problema. Você não pesquisou alternativas para resolver seus problemas, já que seu guru amado tinha todas as respostas.</p>
+            <p>Sério que você ainda acha que o Ubuntu é a solução mágica? Migrou achando que ia ser como o Windows, sem travamentos, e culpou o PC todo! Nunca tentou procurar outras soluções, né? Seu guru sabia tudo, né? 🙄</p>
             
-            <p>Quando alguém lhe disse a verdade, você ficou “revoltadinho”. Agora, com o PC com a tela escura, você se esqueceu de que existem comandos com o teclado, como Ctrl + Alt + Del, porque não se deu ao trabalho de buscar informações.</p>
+            <p>Quando a real bateu, ficou chateado! Agora, o PC tá na mão e esqueceu que Ctrl+Alt+Del existe? Que preguiça de procurar uma solução, né? 😂</p>
             
             <h3>O Abandono do Guru</h3>
-            <p>Até que um belo dia, você tenta entrar em contato com seu guru, e ele não responde. Afinal, o problema é seu, ele não é seu suporte, e não dá garantias para resolver problemas causados pela sua pressa e “burrice”.</p>
+            <p>E aí, de repente, você tenta falar com o seu guru e... nada! Ele não responde. A real é que o problema é contigo, ele não é seu técnico pessoal, né? Ninguém garante que ele vai resolver seus erros de pressa e de “amadorismo”.</p>
             
-            <p>Sua frustração foi por causa de um simples bug, mas imagine outros problemas como rede, download ou login. Era tudo fácil até o dia em que você não teve respostas, e perdeu tudo no seu HD. Seu guru Linux mandou formatar o HD sem usar programas de backup, ou uma Live ISO do Ubuntu para fazer backup com um HD externo ou até mesmo uma Live ISO como o MX Linux.</p>
+            <p>Sua frustração foi por causa de um bug bobo, mas pensa em outros perrengues: internet caindo, download travando, login não funcionando. Tudo tranquilo até aquele dia que você ficou no escuro, e perdeu tudo no seu HD. Seu guru Linux mandou formatar o HD sem fazer backup, ou usar uma Live ISO do Ubuntu pra salvar os arquivos em um HD externo, ou até uma Live ISO como o MX Linux.</p>
             
             <h3>A Lição Final</h3>
-            <p>Afinal, a culpa foi do seu guru, que mandou fazer isso, já que você gosta de ficar com raiva nesse mundo encantado do Linux. Não se preocupe se falta senso de humor para rir dessa história fantasiosa de um guru que encanta, mas no fim, só faz “lambança”.</p>
+            <p>Afinal, a parada foi com o seu guru, que deu a ideia, né? Sabe como é, você vive revoltado nesse universo Linux. Relaxa se você não curte rir dessa história de guru mágico, porque no fim das contas, ele só bagunça, né?</p>
         </section>
    
 
