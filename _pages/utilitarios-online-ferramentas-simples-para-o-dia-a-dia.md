@@ -20,20 +20,7 @@ permalink: /utilitarios-online/
 <section>
 <h2>🔧 Utilitários Online Úteis</h2>
 
-<h3>📱 Gerador de QR Code</h3>
-<p>Crie QR Codes para links, textos ou comandos. Útil para compartilhar configurações ou comandos entre dispositivos.</p>
 
-<h3>⏱️ Temporizador Pomodoro</h3>
-<p>25 minutos de foco, 5 de descanso. Perfeito para quem trabalha com terminal e quer evitar distrações — como o modo escuro do <a href="https://iterm2.com">iTerm2</a>.</p>
-
-<h3>📋 Lista de Tarefas Simples</h3>
-<p>Uma lista limpa, sem login, sem sincronização. Apenas tarefas. Como um <code>todo.txt</code> no navegador.</p>
-
-<h3>⏰ Relógio Digital</h3>
-<p>Relógio minimalista, ideal para deixar aberto em uma segunda tela — como o <code>neofetch</code> no terminal.</p>
-
-<h3>📧 Formulário de Contato</h3>
-<p>Formulário leve, sem spam, que envia para seu e-mail. Como os scripts do <a href="https://ohmyz.sh">Oh My Zsh</a>, simples e funcionais.</p>
 
 </section>
  
