@@ -1,4 +1,5 @@
 ---
+seo: false
 layout: default
 title: Descubra Distros Linux Underground — Fora do Mainstream
 description: "Descubra distros Linux radicais, minimalistas e independentes: Alpine, Void, CRUX, Guix, Chimera e mais — fora do mainstream, cheias de atitude."
