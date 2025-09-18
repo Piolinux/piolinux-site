@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Compare Kernel Linux: Monolítico vs Híbrido vs Unikernel
-description: 'Comparação técnica evergreen: entenda diferenças entre monolítico, microkernel, híbrido, unikernel e nanokernel — sem depender de versões ou modas.'
+title: "Kernel Linux: Monolítico, Híbrido, Unikernel — Guia 2025"
+description: "Comparação técnica evergreen: entenda diferenças entre monolítico, microkernel, híbrido, unikernel e nanokernel — sem depender de versões ou modas."
 permalink: /kernel/
 tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, tipos, arquitetura]
 ---
