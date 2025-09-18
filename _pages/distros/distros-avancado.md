@@ -1,4 +1,5 @@
 ---
+seo: false
 layout: default
 title: "Domine o Linux: Monte Sua Distro do Zero!"
 description: "Construa seu Linux do zero: LFS, Arch, Gentoo. Controle total, performance máxima e aprendizado profundo!"
