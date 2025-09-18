@@ -1,4 +1,5 @@
 ---
+seo: false
 layout: default
 title: "Comece no Linux: Escolha Sua Distro Ideal!"
 description: "Instale fácil: Ubuntu, Mint, Zorin. Suporte, simplicidade e segurança garantidos. Ideal para quem vem do Windows!"
