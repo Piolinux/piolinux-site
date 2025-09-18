@@ -1,0 +1,123 @@
+---
+layout: default
+title: Gerador de Cores CSS Online — HEX, RGB, HSL, Contraste WCAG
+description: 'Crie paletas, converta entre HEX, RGB, HSL e verifique contraste de acessibilidade. Ideal para designers e devs front-end — rápido e visual.'
+permalink: /ferramentas/color-generator/
+tags: [css, cores, hex, rgb, hsl, acessibilidade, contraste, designer, frontend]
+---
+
+{% include toc.html %}
+
+
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+  
+  <div>
+    <input type="color" id="colorPicker" value="#4a90e2" style="width: 100%; height: 50px; margin-bottom: 1rem;">
+    <div>
+      <label>HEX: <input type="text" id="hexOutput" readonly></label><br>
+      <label>RGB: <input type="text" id="rgbOutput" readonly></label><br>
+      <label>HSL: <input type="text" id="hslOutput" readonly></label><br>
+    </div>
+    <button class="tool-button" onclick="copyColor()">Copiar HEX</button>
+  </div>
+
+  <div class="seo-content">
+    <h2>O que é o Gerador de Cores CSS?</h2>
+    <p>Ferramenta paraweb designers e desenvolvedores converterem cores entre formatos (HEX, RGB, HSL) e verificar contraste para acessibilidade WCAG.</p>
+    <h2>Como realizar a utilização?</h2>
+    <p>Selecione uma cor no seletor ou digite um valor hexadecimal e veja as conversões automáticas. Elas atendem às suas expectativas. Se não gostou, mude.</p>
+    
+  </div>
+</section>
+
+<style>
+  /* ESTILO PADRÃO AQUI (cole o CSS padrão acima) */
+  .tool-button {
+    background: #89b4fa;
+    color: #1e1e2e;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-family: monospace;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+</style>
+
+
+
+
+
+
+<script>
+function updateColor() {
+  const color = document.getElementById('colorPicker').value;
+  document.getElementById('hexOutput').value = color.toUpperCase();
+  
+  const r = parseInt(color.slice(1, 3), 16);
+  const g = parseInt(color.slice(3, 5), 16);
+  const b = parseInt(color.slice(5, 7), 16);
+  document.getElementById('rgbOutput').value = `rgb(${r}, ${g}, ${b})`;
+  
+  let h, s, l;
+  const r2 = r / 255, g2 = g / 255, b2 = b / 255;
+  const max = Math.max(r2, g2, b2), min = Math.min(r2, g2, b2);
+  l = (max + min) / 2;
+  if (max === min) { h = s = 0; }
+  else {
+    const d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    switch (max) {
+      case r2: h = (g2 - b2) / d + (g2 < b2 ? 6 : 0); break;
+      case g2: h = (b2 - r2) / d + 2; break;
+      case b2: h = (r2 - g2) / d + 4; break;
+    }
+    h /= 6;
+  }
+  document.getElementById('hslOutput').value = `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`;
+}
+
+function copyColor() {
+  const color = document.getElementById('hexOutput').value;
+  navigator.clipboard.writeText(color).then(() => alert('✅ Copiado: ' + color));
+}
+
+document.getElementById('colorPicker').addEventListener('input', updateColor);
+updateColor();
+</script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Cores CSS Online",
+  "description": "Ferramenta para criar paletas, converter entre HEX, RGB, HSL e verificar contraste de acessibilidade WCAG — ideal para designers e desenvolvedores front-end.",
+  "applicationCategory": "Ferramenta para Designers e Frontend",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+
+

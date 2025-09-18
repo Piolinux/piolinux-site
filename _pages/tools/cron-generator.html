@@ -1,0 +1,283 @@
+---
+layout: default
+title: Gerador de Expressões Cron Online — Agende Tarefas no Linux
+description: 'Monte expressões cron visualmente para Linux e servidores. Com explicação em linguagem humana e alertas sobre erros comuns.'
+permalink: /ferramentas/cron-generator/
+tags: [cron, linux, sysadmin, automação, devops, servidores]
+---
+
+
+
+
+{% include toc.html %}
+
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+  
+  <div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+      <div>
+        <label>Minuto: <input type="text" id="cronMinute" placeholder="*" value="0"></label>
+        <small>0-59 ou *</small>
+      </div>
+      <div>
+        <label>Hora: <input type="text" id="cronHour" placeholder="*" value="12"></label>
+        <small>0-23 ou *</small>
+      </div>
+      <div>
+        <label>Dia do Mês: <input type="text" id="cronDay" placeholder="*" value="1"></label>
+        <small>1-31 ou *</small>
+      </div>
+      <div>
+        <label>Mês: <input type="text" id="cronMonth" placeholder="*" value="*"></label>
+        <small>1-12 ou *</small>
+      </div>
+      <div>
+        <label>Dia da Semana: <input type="text" id="cronWeekday" placeholder="*" value="*"></label>
+        <small>0-7 (0=domingo) ou *</small>
+      </div>
+    </div>
+    <button class="tool-button" onclick="generateCron()">Gerar Expressão Cron</button>
+    <button class="tool-button" onclick="copyCron()">Copiar Cron</button>
+    <div style="margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div>
+        <h4>Expressão Cron:</h4>
+        <div id="cronOutput" style="padding: 1rem; background: #2a2a3c; border: 1px solid #454565; border-radius: 6px; color: #a6e3a1; font-family: monospace; font-size: 1.2rem; font-weight: bold; text-align: center;"></div>
+      </div>
+      <div>
+        <h4>Explicação em Português:</h4>
+        <div id="cronExplanation" style="padding: 1rem; background: #313244; border: 1px solid #5a5a72; border-radius: 6px; color: #bac2de; font-family: monospace; font-size: 0.95rem; line-height: 1.5;"></div>
+        <div id="cronWarning" style="margin-top: 1rem; padding: 0.75rem; background: #f38ba8; color: #1e1e2e; border-radius: 6px; font-family: monospace; font-size: 0.9rem; display: none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seo-content">
+  <h2>Para que serve o  Cron?</h2>
+  <p>É um utilitário de linha de comando para automatizar scripts, 
+  backups e atualizações , facilitando a automatização de 
+  tarefas.Aprender a utilizá-lo é essencial para o agendamento de 
+  tarefas em sistemas Linux e Unix, leia a documentação acessando o 
+  terminal digite os comandos man cron.</p>
+
+  <h2>Cuidado: Comportamento "OU" entre dia do mês e dia da semana.</h2>
+  <p>Se você especificar ambos <code>dia do mês</code> e <code>dia da 
+  semana</code>, a tarefa executa quando <strong>qualquer uma</strong> 
+  das condições for verdadeira — não as duas juntas,há uma tabela 
+  completa e exemplos abaixo.</p>
+  <p><strong>Exemplo perigoso:</strong> <code>0 2 15 * 6</code> → roda todo dia 15 E todo sábado? ❌ NÃO! Rola todo dia 15 <strong>OU</strong> todo sábado.</p>
+
+  <h2>Boas práticas para cron seguro</h2>
+  <table class="evergreen-table cron-table">
+    <thead>
+      <tr>
+        <th>Objetivo</th>
+        <th>Expressão Cron</th>
+        <th>Explicação</th>
+        <th>Seguro?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Backup diário às 2h</td>
+        <td><code>0 2 * * *</code></td>
+        <td>Roda diariamente às 2h da manhã.</td>
+        <td> Sim</td>
+      </tr>
+      <tr>
+        <td>Backup semanal (sábado às 3h)</td>
+        <td><code>0 3 * * 6</code></td>
+        <td>Roda todo sábado às 3h</td>
+        <td> Sim</td>
+      </tr>
+      <tr>
+        <td>Backup no 1º de cada mês</td>
+        <td><code>0 4 1 * *</code></td>
+        <td>Roda no dia 1º, às 4h</td>
+        <td>Sim</td>
+      </tr>
+      <tr>
+        <td>Backup no 1º que for sábado</td>
+        <td><code>0 5 1 * * [ $(date +\%w) -eq 6 ] && /backup.sh</code></td>
+        <td>Usa verificação no script — só executa se for sábado</td>
+        <td>Melhor prática</td>
+      </tr>
+      <tr>
+        <td>Limpar /tmp a cada hora</td>
+        <td><code>0 * * * * rm -rf /tmp/*</code></td>
+        <td>Perigoso! Pode apagar arquivos em uso</td>
+        <td> n&atilde;o — use <code>tmpwatch</code> ou verifique antes.</td>
+      </tr>
+    </tbody>
+  </table>
+  
+ 
+  
+<section class="cron-examples">
+  <h2>Exemplos utilizados na documentação do Arch Linux sobre Cron:</h2>
+  <p>Veja como agendar tarefas comuns no Linux usando o crontab.</p>
+
+  <div class="example">
+    <div class="cron-code">30 4 * * * <span class="command">echo "São 4h30 da manhã."</span></div>
+    <div class="explanation">Executa todos os dias às 4h30 da manhã.</div>
+  </div>
+
+  <div class="example">
+    <div class="cron-code">0 22 * * * <span class="command">echo "Agora são 22h."</span></div>
+    <div class="explanation">Executa todos os dias às 22h (10 PM).</div>
+  </div>
+
+  <div class="example">
+    <div class="cron-code">30 15 25 12 * <span class="command">echo "São 15h30 do dia de Natal."</span></div>
+    <div class="explanation">Executa todo dia 25 de dezembro às 15h30.</div>
+  </div>
+
+  <div class="example">
+    <div class="cron-code">30 3 * * * <span class="command">echo "Lembre-me que são 3h30 da manhã todos os dias."</span></div>
+    <div class="explanation">Executa diariamente às 3h30 da manhã.</div>
+  </div>
+
+  <div class="example">
+    <div class="cron-code">0 * * * * <span class="command">echo "É o início de uma nova hora."</span></div>
+    <div class="explanation">Executa no minuto 0 de cada hora (a cada 60 minutos).</div>
+  </div>
+
+  <div class="example">
+    <div class="cron-code">0 6 1,15 * * <span class="command">echo "Às 6h da manhã do dia 1º e 15 de cada mês."</span></div>
+    <div class="explanation">Executa no 1º e 15º dia de cada mês, às 6h da manhã.</div>
+  </div>
+
+  <div class="example">
+    <div class="cron-code">0 6 * * 2,3,5 <span class="command">echo "Às 6h da manhã de terça, quarta e quinta."</span></div>
+    <div class="explanation">Executa às 6h da manhã nas terças (2), quartas (3) e quintas (5).</div>
+  </div>
+
+  <div class="example">
+    <div class="cron-code">59 23 * * 1-5 <span class="command">echo "Pouco antes da meia-noite nos dias de semana."</span></div>
+    <div class="explanation"> Executa às 23h59 de segunda (1) a sexta (5).</div>
+  </div>
+
+  
+  <div class="example">
+    <div class="cron-code">0 20 * * 4 <span class="command">echo "20h de uma quinta-feira."</span></div>
+    <div class="explanation">Executa toda quinta-feira (4) às 20h.</div>
+  </div>
+
+  <div class="example">
+    <div class="cron-code">0 20 * * Qui <span class="command">echo "20h de uma quinta-feira."</span></div>
+    <div class="explanation"><strong>Atenção:</strong> Alguns sistemas aceitam nomes (Qui), mas a maioria exige números (4). Prefira números para compatibilidade.</div>
+  </div>
+
+  
+  <div class="example">
+    <div class="cron-code">@yearly <span class="command">echo "Feliz Ano Novo!"</span></div>
+    <div class="explanation">Executa uma vez por ano, no dia 1º de janeiro, à 0h (equivalente a <code>0 0 1 1 *</code>).</div>
+  </div>
+</section>
+    
+    
+    <h2>Atenção importante sobre "dia do mês" e "dia da semana"</h2>
+    <p>Se você especificar ambos, a tarefa executa quando <strong>QUALQUER UMA</strong> das condições for verdadeira — não as duas juntas. Para executar só quando ambas forem verdadeiras, use um script com verificação interna.</p>
+    
+  </div>
+</section>
+
+<style>
+  /* ESTILO PADRÃO */
+  .tool-button { background: #89b4fa; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; margin: 1rem 0; }
+  label { display: block; margin: 0.25rem 0; color: #cdd6f4; font-size: 0.9rem; }
+  input[type="text"] { width: 100%; padding: 0.5rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 4px; }
+  small { display: block; color: #a6e3a1; font-size: 0.8rem; margin-top: 0.25rem; }
+  #cronWarning { display: none; }
+</style>
+
+
+<script>
+function generateCron() {
+  const minute = document.getElementById('cronMinute').value || '*';
+  const hour = document.getElementById('cronHour').value || '*';
+  const day = document.getElementById('cronDay').value || '*';
+  const month = document.getElementById('cronMonth').value || '*';
+  const weekday = document.getElementById('cronWeekday').value || '*';
+  
+  const cron = `${minute} ${hour} ${day} ${month} ${weekday}`;
+  document.getElementById('cronOutput').innerText = cron;
+  
+  // Explicação simples
+  let explanation = `Executa `;
+  let showWarning = false;
+
+  if (minute === '*' && hour === '*' && day === '*' && month === '*' && weekday === '*') {
+    explanation += `a cada minuto.`;
+  } else if (minute !== '*' && hour !== '*' && day === '*' && month === '*' && weekday === '*') {
+    explanation += `diariamente às ${hour}:${minute}.`;
+  } else if (minute !== '*' && hour !== '*' && day !== '*' && month === '*' && weekday === '*') {
+    explanation += `no dia ${day} de cada mês às ${hour}:${minute}.`;
+  } else if (minute !== '*' && hour !== '*' && day === '*' && month === '*' && weekday !== '*') {
+    explanation += `todo dia da semana ${weekday} às ${hour}:${minute}.`;
+  } else if (day !== '*' && weekday !== '*') {
+    explanation += `quando: minuto=${minute}, hora=${hour}, dia=${day} OU dia da semana=${weekday}.`;
+    showWarning = true;
+  } else {
+    explanation += `quando: minuto=${minute}, hora=${hour}, dia=${day}, mês=${month}, dia da semana=${weekday}.`;
+  }
+  
+  document.getElementById('cronExplanation').innerText = explanation;
+  
+  const warningDiv = document.getElementById('cronWarning');
+  if (showWarning) {
+    warningDiv.innerText = '⚠️ ATENÇÃO: Se "dia do mês" e "dia da semana" estão definidos, a tarefa executa quando QUALQUER UMA das condições for verdadeira — não as duas juntas. Para executar só quando ambas forem verdadeiras, adicione uma verificação no seu script.';
+    warningDiv.style.display = 'block';
+  } else {
+    warningDiv.style.display = 'none';
+  }
+}
+
+function copyCron() {
+  const text = document.getElementById('cronOutput').innerText;
+  if (text) {
+    navigator.clipboard.writeText(text).then(() => alert('✅ Expressão Cron copiada!'));
+  }
+}
+
+// Gera ao carregar
+generateCron();
+</script>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Expressões Cron Online",
+  "description": "Ferramenta online para montar expressões cron visualmente para agendar tarefas no Linux, servidores ou sistemas, com alertas sobre comportamentos comuns.",
+  "applicationCategory": "Ferramenta para SysAdmin e DevOps",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+
+
+
+
+
+
+

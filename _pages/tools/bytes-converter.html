@@ -1,0 +1,61 @@
+---
+layout: default
+title: Conversor de Bytes e Bits Online — KB, MB, GB, TB, PB
+description: 'Converta entre bytes, bits e unidades (KB, MB, GB, TB, PB). Usa base 1000 (decimal) — padrão de redes e armazenamento. Ideal para sysadmins.'
+permalink: /ferramentas/bytes-converter/
+tags: [bytes, bits, conversao, sysadmin, redes, armazenamento, kb, mb, gb]
+---
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+  
+  {% include tool-templates/bytes-converter.html %}
+
+  <div class="seo-content">
+    <h2>Qual a diferença entre Bytes e Bits?</h2>
+    <p>1 Byte = 8 Bits. Enquanto <strong>Bytes (B)</strong> medem armazenamento (discos, arquivos), <strong>Bits (b)</strong> medem velocidade (redes, banda).</p>
+    <p>Esta ferramenta converte entre:</p>
+    <ul>
+      <li><strong>Bytes:</strong> B, KB, MB, GB, TB, PB</li>
+      <li><strong>Bits:</strong> b, Kb, Mb, Gb, Tb, Pb</li>
+    </ul>
+    <p>Usa base 1000 (decimal) — padrão da indústria.</p>
+
+    <h2>Exemplos comuns:</h2>
+    <ul>
+      <li>1 MB = 8 Mb</li>
+      <li>100 Mbps = 12.5 MB/s</li>
+      <li>1 TB = 1000 GB</li>
+    </ul>
+
+    </div>
+</section>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Conversor de Bytes e Bits Online",
+  "description": "Ferramenta para converter entre bytes, bits e unidades (KB, MB, GB, TB, PB) usando base 1000 (decimal) — padrão de redes e armazenamento.",
+  "applicationCategory": "Ferramenta para SysAdmin",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>

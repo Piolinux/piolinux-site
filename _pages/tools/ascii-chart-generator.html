@@ -1,0 +1,95 @@
+---
+layout: default
+title: Gerador de Gráficos ASCII Online — Barras para Terminal
+description: 'Converta números em gráficos de barras com caracteres ASCII (ex: █████░░░░). Perfeito para terminal, logs e monitoramento em tempo real.'
+permalink: /ferramentas/ascii-chart-generator/
+tags: [ascii, terminal, sysadmin, monitoramento, cli, logs, grafico]
+---
+
+{% include toc.html %}
+
+
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+  
+  <div>
+    <label>Valores (separados por vírgula): <input type="text" id="chartValues" placeholder="10, 25, 40, 75, 90" value="20, 45, 60, 85, 30"></label>
+    <label>Largura máxima (em caracteres): <input type="number" id="chartWidth" min="10" max="100" value="50"></label>
+    <button class="tool-button" onclick="generateASCIIChart()">Gerar Gráfico</button>
+    <pre id="chartOutput" style="margin-top: 1rem; padding: 1rem; background: #2a2a3c; border: 1px solid #454565; border-radius: 6px; color: #cdd6f4; font-family: monospace; overflow-x: auto; white-space: pre;"></pre>
+  </div>
+
+  <div class="seo-content">
+    <h2>O que é um Gráfico ASCII?</h2>
+    <p>É uma representação visual de dados usando caracteres de texto (como █ e ░) — perfeito para terminal, logs ou ambientes sem interface gráfica.</p>
+    <h2>Instruções de uso da ferramenta?</h2>
+    <p>Digite valores numéricos separados por vírgula e defina a largura máxima. Clique em "Gerar". Copie e cole em seus scripts ou logs,facilmente.</p>
+    
+  </div>
+</section>
+
+<style>
+  /* ESTILO PADRÃO */
+  .tool-button { background: #89b4fa; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; margin: 1rem 0; }
+  label { display: block; margin: 0.5rem 0; color: #cdd6f4; }
+  input[type="text"], input[type="number"] { width: 100%; max-width: 400px; padding: 0.5rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 4px; margin-top: 0.5rem; }
+  pre { white-space: pre; overflow-x: auto; }
+</style>
+
+
+<script>
+function generateASCIIChart() {
+  const valuesStr = document.getElementById('chartValues').value;
+  const width = parseInt(document.getElementById('chartWidth').value);
+  const values = valuesStr.split(',').map(v => parseFloat(v.trim())).filter(v => !isNaN(v));
+  
+  if (values.length === 0) {
+    document.getElementById('chartOutput').innerText = 'Erro: Nenhum valor válido encontrado.';
+    return;
+  }
+
+  const max = Math.max(...values);
+  let output = '';
+
+  values.forEach((val, i) => {
+    const barLength = Math.floor((val / max) * width);
+    const bar = '█'.repeat(barLength) + '░'.repeat(width - barLength);
+    output += `${(i+1).toString().padStart(2, '0')} | ${bar} ${Math.round(val)}\n`;
+  });
+
+  document.getElementById('chartOutput').innerText = output;
+}
+</script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Gráficos ASCII Online",
+  "description": "Ferramenta online para converter valores numéricos em gráficos de barras usando caracteres ASCII para uso em terminal e logs.",
+  "applicationCategory": "Ferramenta para SysAdmin e Terminal",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+
