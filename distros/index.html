@@ -29,11 +29,12 @@ tags: [distros, linux, iniciante, avancado, servidor, desktop, underground, comp
 
 
 
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Distros Linux — Guia Completo para Iniciantes e Avançados",
+  "@type": "Article",
+  "headline": "Distros Linux — Guia Completo para Iniciantes e Avançados",
   "description": "Escolha sua distro: compare underground, desktop, servidor, iniciante e nicho. Tabelas evergreen, sem modas — só o essencial técnico.",
   "inLanguage": "pt-BR",
   "url": "{{ page.url | absolute_url }}",
@@ -42,7 +43,7 @@ tags: [distros, linux, iniciante, avancado, servidor, desktop, underground, comp
     "@id": "{{ page.url | absolute_url }}"
   },
   "author": {
-    "@type": "Person",
+    "@type": "Organization",
     "name": "Piolinux"
   },
   "publisher": {
@@ -57,30 +58,28 @@ tags: [distros, linux, iniciante, avancado, servidor, desktop, underground, comp
   },
   "datePublished": "2025-09-17T10:00:00+00:00",
   "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}",
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "Table",
-        "name": "Distros Linux Underground",
-        "description": "Tabela de distros radicais, minimalistas e fora do mainstream: Alpine, Void, CRUX, Guix, Chimera."
-      },
-      {
-        "@type": "Table",
-        "name": "Distros Linux para Iniciantes",
-        "description": "Tabela das melhores opções para quem está começando: Ubuntu, Linux Mint, Zorin OS, elementary OS, Pop!_OS."
-      },
-      {
-        "@type": "Table",
-        "name": "Distros Linux para Nível Intermediário",
-        "description": "Tabela para usuários que já conhecem o terminal: Fedora, Debian, openSUSE, MX Linux, Manjaro."
-      },
-      {
-        "@type": "Table",
-        "name": "Distros Linux Avançadas / DIY",
-        "description": "Tabela de projetos para quem quer controle total: LFS, Arch, Gentoo, Slackware, Buildroot, Yocto."
-      }
-    ]
-  }
+  "articleBody": "Guia técnico com tabelas comparativas de distribuições Linux por categoria: Underground, Iniciantes, Intermediário e Avançado. Inclui análise de filosofia, uso real e estabilidade.",
+  "hasPart": [
+    {
+      "@type": "Dataset",
+      "name": "Distros Linux Underground",
+      "description": "Tabela de distros radicais, minimalistas e fora do mainstream: Alpine, Void, CRUX, Guix, Chimera."
+    },
+    {
+      "@type": "Dataset",
+      "name": "Distros Linux para Iniciantes",
+      "description": "Tabela das melhores opções para quem está começando: Ubuntu, Linux Mint, Zorin OS, elementary OS, Pop!_OS."
+    },
+    {
+      "@type": "Dataset",
+      "name": "Distros Linux Avançadas / DIY",
+      "description": "Tabela de projetos para quem quer controle total: LFS, Arch, Gentoo, Slackware, Buildroot, Yocto."
+    }
+  ]
 }
 </script>
+
+
+
+
+
