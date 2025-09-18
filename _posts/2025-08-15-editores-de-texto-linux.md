@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Escolha Seu Editor de Texto no Linux: Nano, Vim, VS Code e Mais"
+title: "Editores de Texto no Linux: Nano, Vim, VS Code"
 description: "Escolha seu editor Linux ideal: Nano (simples), Vim (poderoso), VS Code (moderno). Qual combina com SEU fluxo de trabalho?"
 date: 2025-08-15
 author: "PioLinux"
