@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Piolinux"
+title: "Piolinux - Piadas Linux + Guia Técnico em Tabelas"
 description: "200 piadas e trocadilhos de Linux, terminal e devs — + guias técnicos em tabelas práticas. Ria, aprenda e compartilhe. O lado divertido (e útil) do open source."
 baseurl: ""
 url: "https://piolinux.com"
@@ -58,7 +58,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
 
-
+paginate: 10           # Número de posts por página
+paginate_path: "/page:num/"  # Padrão de URL para páginas
   
 permalink: /:title/
 
@@ -85,9 +86,6 @@ exclude:
   - vendor
   - README.md
   - LICENSE
-
-paginate: 10
-paginate_path: "/blog/page/:num/"
 
 # Minificação de CSS (funciona no GitHub Pages)
 sass:
