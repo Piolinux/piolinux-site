@@ -1,0 +1,180 @@
+---
+seo: false
+layout: default
+title: Gerador de Comandos Docker Online — run, build, compose
+description: 'Gere comandos docker run, build e compose com portas, volumes e variáveis de ambiente. Ideal para DevOps e devs — sem decorar sintaxe.'
+permalink: /ferramentas/docker-command-generator/
+tags: [docker, devops, containers, cli, linux]
+---
+
+{% include toc.html %}
+
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+  
+  <div>
+    <label>Tipo de Comando: 
+      <select id="dockerCommandType">
+        <option value="run">docker run</option>
+        <option value="build">docker build</option>
+        <option value="compose">docker-compose.yml</option>
+      </select>
+    </label>
+    
+    <div id="dockerRunOptions" style="margin: 1rem 0; padding: 1rem; background: #313244; border: 1px solid #5a5a72; border-radius: 6px;">
+      <h4>Opções para docker run:</h4>
+      <label>Nome do Container: <input type="text" id="containerName" placeholder="meu-app"></label>
+      <label>Imagem: <input type="text" id="imageName" placeholder="nginx:latest" value="nginx:latest"></label>
+      <label><input type="checkbox" id="detachMode"> Modo Detach (-d)</label>
+      <label>Portas (-p): <input type="text" id="portMapping" placeholder="8080:80" value="8080:80"></label>
+      <label>Volumes (-v): <input type="text" id="volumeMapping" placeholder="/host/path:/container/path"></label>
+      <label>Variáveis de Ambiente (-e): <input type="text" id="envVars" placeholder="VAR1=valor1,VAR2=valor2"></label>
+      <label>Comando (opcional): <input type="text" id="runCommand" placeholder="bash, node server.js, etc"></label>
+    </div>
+    
+    <div id="dockerBuildOptions" style="margin: 1rem 0; padding: 1rem; background: #313244; border: 1px solid #5a5a72; border-radius: 6px; display: none;">
+      <h4>Opções para docker build:</h4>
+      <label>Tag: <input type="text" id="buildTag" placeholder="meu-app:latest" value="meu-app:latest"></label>
+      <label>Arquivo Dockerfile: <input type="text" id="dockerfile" placeholder="Dockerfile" value="Dockerfile"></label>
+      <label>Diretório de Build: <input type="text" id="buildContext" placeholder="." value="."></label>
+    </div>
+    
+    <div id="dockerComposeOptions" style="margin: 1rem 0; padding: 1rem; background: #313244; border: 1px solid #5a5a72; border-radius: 6px; display: none;">
+      <h4>Opções para docker-compose.yml:</h4>
+      <label>Nome do Serviço: <input type="text" id="serviceName" placeholder="web" value="web"></label>
+      <label>Imagem: <input type="text" id="composeImage" placeholder="nginx:latest" value="nginx:latest"></label>
+      <label>Portas: <input type="text" id="composePorts" placeholder="8080:80" value="8080:80"></label>
+      <label>Volumes: <input type="text" id="composeVolumes" placeholder="./app:/usr/share/nginx/html"></label>
+      <label>Variáveis de Ambiente: <input type="text" id="composeEnv" placeholder="VAR1=valor1,VAR2=valor2"></label>
+    </div>
+    
+    <button class="tool-button" onclick="generateDockerCommand()">Gerar Comando</button>
+    <button class="tool-button" onclick="copyDockerCommand()">Copiar</button>
+    <textarea id="dockerOutput" readonly style="width: 100%; height: 200px; margin-top: 1rem; background: #2a2a3c; color: #cdd6f4; padding: 1rem; border: 1px solid #454565; border-radius: 6px; font-family: monospace; white-space: pre;"></textarea>
+  </div>
+
+  <div class="seo-content">
+    <h2>Por que usar um Gerador de Comandos Docker?</h2>
+    <p>Docker tem muitas opções e flags — esta ferramenta ajuda a montar comandos complexos sem decorar sintaxe, evitando erros comuns, fa&ccedila com calma.</p>
+    <h2>Como usar esta ferramenta?</h2>
+    <p>Escolha o tipo de comando (run, build, compose), preencha as opções desejadas e clique em "Gerar". Copie e cole no seu terminal ou arquivo.</p>
+     </div>
+</section>
+
+<style>
+  /* ESTILO PADRÃO */
+  .tool-button { background: #89b4fa; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; margin: 1rem 0; }
+  label { display: block; margin: 0.5rem 0; color: #cdd6f4; }
+  input[type="text"] { width: 100%; max-width: 400px; padding: 0.5rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 4px; margin-top: 0.5rem; }
+  input[type="checkbox"] { margin-right: 0.5rem; }
+  textarea { width: 100%; height: 200px; background: #2a2a3c; color: #cdd6f4; padding: 1rem; border: 1px solid #454565; border-radius: 6px; font-family: monospace; white-space: pre; }
+  h4 { margin: 0 0 0.5rem 0; color: #a6e3a1; }
+</style>
+
+<script>
+function toggleOptions() {
+  const type = document.getElementById('dockerCommandType').value;
+  document.getElementById('dockerRunOptions').style.display = type === 'run' ? 'block' : 'none';
+  document.getElementById('dockerBuildOptions').style.display = type === 'build' ? 'block' : 'none';
+  document.getElementById('dockerComposeOptions').style.display = type === 'compose' ? 'block' : 'none';
+}
+
+function generateDockerCommand() {
+  const type = document.getElementById('dockerCommandType').value;
+  let command = '';
+
+  if (type === 'run') {
+    command = 'docker run ';
+    if (document.getElementById('detachMode').checked) command += '-d ';
+    const name = document.getElementById('containerName').value.trim();
+    if (name) command += `--name ${name} `;
+    const ports = document.getElementById('portMapping').value.trim();
+    if (ports) command += `-p ${ports} `;
+    const volumes = document.getElementById('volumeMapping').value.trim();
+    if (volumes) command += `-v ${volumes} `;
+    const envs = document.getElementById('envVars').value.trim();
+    if (envs) {
+      envs.split(',').forEach(env => {
+        env = env.trim();
+        if (env) command += `-e "${env}" `;
+      });
+    }
+    command += document.getElementById('imageName').value.trim();
+    const cmd = document.getElementById('runCommand').value.trim();
+    if (cmd) command += ` ${cmd}`;
+  } else if (type === 'build') {
+    command = 'docker build ';
+    const tag = document.getElementById('buildTag').value.trim();
+    if (tag) command += `-t ${tag} `;
+    const file = document.getElementById('dockerfile').value.trim();
+    if (file !== 'Dockerfile') command += `-f ${file} `;
+    command += document.getElementById('buildContext').value.trim();
+  } else if (type === 'compose') {
+    const serviceName = document.getElementById('serviceName').value.trim() || 'web';
+    const image = document.getElementById('composeImage').value.trim();
+    const ports = document.getElementById('composePorts').value.trim();
+    const volumes = document.getElementById('composeVolumes').value.trim();
+    const envs = document.getElementById('composeEnv').value.trim();
+    
+    command = `version: '3.8'\nservices:\n  ${serviceName}:\n    image: ${image}\n`;
+    if (ports) command += `    ports:\n      - "${ports}"\n`;
+    if (volumes) command += `    volumes:\n      - ${volumes}\n`;
+    if (envs) {
+      command += `    environment:\n`;
+      envs.split(',').forEach(env => {
+        env = env.trim();
+        if (env) command += `      - ${env}\n`;
+      });
+    }
+  }
+
+  document.getElementById('dockerOutput').value = command.trim();
+}
+
+function copyDockerCommand() {
+  const text = document.getElementById('dockerOutput').value;
+  if (text) {
+    navigator.clipboard.writeText(text).then(() => alert('✅ Comando Docker copiado!'));
+  }
+}
+
+document.getElementById('dockerCommandType').addEventListener('change', toggleOptions);
+
+// Inicializa
+toggleOptions();
+generateDockerCommand();
+</script>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Comandos Docker Online",
+  "description": "Ferramenta online para montar comandos docker run, build e docker-compose com opções de portas, volumes, variáveis de ambiente e mais.",
+  "applicationCategory": "Ferramenta para DevOps e Desenvolvedores",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pioinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+

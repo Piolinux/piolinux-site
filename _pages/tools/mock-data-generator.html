@@ -1,0 +1,126 @@
+---
+seo: false
+layout: default
+title: Gerador de Dados de Teste Online — JSON e CSV
+description: 'Crie dados fictícios em JSON ou CSV com nomes, emails, idades. Personalize campos e quantidade. Ideal para APIs, bancos de dados e testes UI/QA.'
+permalink: /ferramentas/mock-data-generator/
+tags: [dados, teste, json, csv, api, banco-de-dados, qa, dev, mock]
+---
+
+{% include toc.html %}
+
+
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+  
+  <div>
+    <label>Formato: 
+      <select id="dataType">
+        <option value="json">JSON</option>
+        <option value="csv">CSV</option>
+      </select>
+    </label>
+    <label>Quantidade de registros: <input type="number" id="dataCount" min="1" max="1000" value="5"></label>
+    <button class="tool-button" onclick="generateMockData()">Gerar Dados</button>
+    <button class="tool-button" onclick="copyMockData()">Copiar</button>
+    <textarea id="dataOutput" readonly style="width: 100%; height: 400px; margin-top: 1rem; background: #2a2a3c; color: #cdd6f4; padding: 1rem; border: 1px solid #454565; border-radius: 6px; font-family: monospace; white-space: pre;"></textarea>
+  </div>
+
+  <div class="seo-content">
+    <h2>Para que servem Dados de Teste?</h2>
+    <p>São essenciais para testar APIs, bancos de dados, interfaces de usuário e fluxos de aplicação sem usar dados reais.</p>
+    <h2>Como usar esta ferramenta?</h2>
+    <p>Escolha se você quer os arquivos em JSON ou CSV, diga quantos registros você precisa e aperte o botão 'Gerar'.</p>
+    </div>
+</section>
+
+<style>
+  /* ESTILO PADRÃO */
+  .tool-button { background: #89b4fa; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; margin: 0.5rem 0.5rem 1rem 0; }
+  label { display: block; margin: 0.5rem 0; color: #cdd6f4; }
+  input[type="number"] { width: 80px; padding: 0.5rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 4px; margin-left: 0.5rem; }
+  select { padding: 0.5rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 4px; }
+  textarea { width: 100%; height: 400px; background: #2a2a3c; color: #cdd6f4; padding: 1rem; border: 1px solid #454565; border-radius: 6px; font-family: monospace; white-space: pre; }
+</style>
+
+
+<script>
+const firstNames = ['Ana', 'Carlos', 'Beatriz', 'Diego', 'Elena', 'Felipe', 'Gabriela', 'Henrique', 'Isabela', 'João'];
+const lastNames = ['Silva', 'Santos', 'Oliveira', 'Souza', 'Lima', 'Pereira', 'Almeida', 'Ferreira', 'Costa', 'Rodrigues'];
+const cities = ['São Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Porto Alegre', 'Curitiba', 'Salvador', 'Fortaleza', 'Brasília', 'Recife', 'Manaus'];
+
+function generateMockData() {
+  const format = document.getElementById('dataType').value;
+  const count = parseInt(document.getElementById('dataCount').value);
+  let data = [];
+
+  for (let i = 0; i < count; i++) {
+    const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+    const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+    const city = cities[Math.floor(Math.random() * cities.length)];
+    const age = Math.floor(Math.random() * 50) + 18;
+    const email = `${firstName.toLowerCase()}.${lastName.toLowerCase()}${i+1}@example.com`;
+
+    data.push({
+      id: i + 1,
+      name: `${firstName} ${lastName}`,
+      email: email,
+      age: age,
+      city: city
+    });
+  }
+
+  let output;
+  if (format === 'json') {
+    output = JSON.stringify(data, null, 2);
+  } else {
+    const headers = 'id,name,email,age,city';
+    const rows = data.map(item => `${item.id},"${item.name}",${item.email},${item.age},"${item.city}"`);
+    output = [headers, ...rows].join('\n');
+  }
+
+  document.getElementById('dataOutput').value = output;
+}
+
+function copyMockData() {
+  const text = document.getElementById('dataOutput').value;
+  if (text) {
+    navigator.clipboard.writeText(text).then(() => alert('✅ Dados copiados!'));
+  }
+}
+
+// Gera ao carregar
+generateMockData();
+</script>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Dados de Teste Online",
+  "description": "Ferramenta para criar dados fictícios em JSON ou CSV com nomes, emails, idades — personalizável por campos e quantidade. Ideal para testes de API, UI e bancos de dados.",
+  "applicationCategory": "Ferramenta para Desenvolvedores e QA",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+

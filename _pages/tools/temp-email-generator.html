@@ -1,0 +1,96 @@
+---
+seo: false
+layout: default
+title: Gerador de E-mails Temporários — Fake para Testes e QA
+description: 'Crie e-mails falsos no formato user+tag@seudominio.com para testes de cadastro, QA e desenvolvimento. Sem envio ou armazenamento real.'
+permalink: /ferramentas/temp-email-generator/
+tags: [email, temporario, teste, qa, desenvolvedor, cadastro, fake, placeholder]
+---
+
+
+{% include toc.html %}
+
+
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+  
+  <div>
+    <label>Nome base: <input type="text" id="emailBase" placeholder="usuario" value="teste"></label>
+    <label>Domínio: <input type="text" id="emailDomain" placeholder="exemplo.com" value="piolinux.test"></label>
+    <label>Tag (opcional): <input type="text" id="emailTag" placeholder="promo, dev, etc"></label>
+    <button class="tool-button" onclick="generateTempEmail()">Gerar E-mail</button>
+    <button class="tool-button" onclick="copyTempEmail()">Copiar</button>
+    <div id="tempEmailResult" style="margin-top: 1rem; padding: 1rem; background: #2a2a3c; border: 1px solid #454565; border-radius: 6px; color: #a6e3a1; font-family: monospace; text-align: center; font-size: 1.2rem; font-weight: bold;"></div>
+    <p style="font-size: 0.9rem; color: #f9e2af; margin-top: 0.5rem;">Só pra avisar: esse aqui é um gerador de e-mails fake, tá? É só pra você testar as coisas, nada de e-mail de verdade sendo enviado ou recebido, beleza? É tudo mentira.</p>
+  </div>
+
+  <div class="seo-content">
+    <h2>Qual a serventia de  e-mail temporário fake?</h2>
+    <p>Utilidade para testar formulários de cadastro, recuperação de senhas e fluxos de ativação, sem a necessidade de usar e-mails reais ou criar contas verdadeiras.</p>
+    <h2>Como usar esta ferramenta?</h2>
+    <p>Defina um nome base, domínio e tag opcional. Clique em "Gerar". Utilize um e-mail gerado em seus testes de QA ou desenvolvimento.</p>
+   
+  </div>
+</section>
+
+<style>
+  /* ESTILO PADRÃO */
+  .tool-button { background: #89b4fa; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; margin: 0.5rem 0.5rem 1rem 0; }
+  label { display: block; margin: 0.5rem 0; color: #cdd6f4; }
+  input[type="text"] { width: 100%; max-width: 300px; padding: 0.5rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 4px; margin-top: 0.5rem; }
+</style>
+
+
+
+<script>
+function generateTempEmail() {
+  const base = document.getElementById('emailBase').value.trim() || 'usuario';
+  const domain = document.getElementById('emailDomain').value.trim() || 'test.com';
+  const tag = document.getElementById('emailTag').value.trim();
+  
+  let email = base + '@' + domain;
+  if (tag) email = base + '+' + tag + '@' + domain;
+  
+  document.getElementById('tempEmailResult').innerText = email;
+}
+
+function copyTempEmail() {
+  const email = document.getElementById('tempEmailResult').innerText;
+  if (email) {
+    navigator.clipboard.writeText(email).then(() => alert('✅ Copiado: ' + email));
+  }
+}
+</script>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de E-mails Temporários",
+  "description": "Ferramenta para criar e-mails falsos no formato user+tag@seudominio.com — ideal para testes de cadastro, QA e desenvolvimento. Sem envio real.",
+  "applicationCategory": "Ferramenta para Desenvolvedores e QA",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>

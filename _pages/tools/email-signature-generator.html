@@ -1,0 +1,188 @@
+---
+seo: false
+layout: default
+title: Gerador de Assinatura de Email Profissional — HTML + Texto
+description: 'Crie assinaturas elegantes com nome, cargo, telefone e redes sociais. Gera código HTML pronto e versão em texto puro.'
+permalink: /ferramentas/email-signature-generator/
+tags: [email, assinatura, html, marketing, vendas, suporte, profissional]
+---
+
+
+
+{% include toc.html %}
+
+
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+  
+  <div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin: 1rem 0;">
+      <div>
+        <label>Nome: <input type="text" id="sigName" placeholder="Seu Nome" value="Maria Silva"></label>
+      </div>
+      <div>
+        <label>Cargo: <input type="text" id="sigTitle" placeholder="Seu Cargo" value="Gerente de Projetos"></label>
+      </div>
+      <div>
+        <label>Empresa: <input type="text" id="sigCompany" placeholder="Sua Empresa" value="Tech Solutions Ltda"></label>
+      </div>
+      <div>
+        <label>Telefone: <input type="text" id="sigPhone" placeholder="(11) 99999-9999" value="(11) 98765-4321"></label>
+      </div>
+      <div>
+        <label>Email: <input type="email" id="sigEmail" placeholder="email@empresa.com" value="maria.silva@techsolutions.com"></label>
+      </div>
+      <div>
+        <label>Site: <input type="text" id="sigWebsite" placeholder="www.empresa.com" value="www.techsolutions.com"></label>
+      </div>
+    </div>
+    
+    <h4 style="margin: 1rem 0 0.5rem 0; color: #a6e3a1;">Redes Sociais (opcional):</h4>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+      <div>
+        <label>LinkedIn: <input type="text" id="sigLinkedIn" placeholder="linkedin.com/in/seu-perfil"></label>
+      </div>
+      <div>
+        <label>Twitter: <input type="text" id="sigTwitter" placeholder="twitter.com/seu-user"></label>
+      </div>
+      <div>
+        <label>GitHub: <input type="text" id="sigGitHub" placeholder="github.com/seu-user"></label>
+      </div>
+    </div>
+    
+    <button class="tool-button" onclick="generateSignature()">Gerar Assinatura</button>
+    <div style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div>
+        <h4>Preview HTML:</h4>
+        <div id="signaturePreview" style="padding: 1rem; background: #ffffff; color: #333; font-family: Arial, sans-serif; border: 1px solid #ddd; border-radius: 6px; font-size: 0.9rem; line-height: 1.5;"></div>
+      </div>
+      <div>
+        <h4>Código HTML:</h4>
+        <textarea id="signatureHTML" readonly style="width: 100%; height: 250px; background: #2a2a3c; color: #cdd6f4; padding: 1rem; border: 1px solid #454565; border-radius: 6px; font-family: monospace; white-space: pre;"></textarea>
+        <button class="tool-button" style="margin-top: 0.5rem;" onclick="copySignature('HTML')">Copiar HTML</button>
+        
+        <h4 style="margin-top: 1rem;">Versão Texto:</h4>
+        <textarea id="signatureText" readonly style="width: 100%; height: 150px; background: #2a2a3c; color: #cdd6f4; padding: 1rem; border: 1px solid #454565; border-radius: 6px; font-family: monospace; white-space: pre;"></textarea>
+        <button class="tool-button" style="margin-top: 0.5rem;" onclick="copySignature('Text')">Copiar Texto</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="seo-content">
+    <h2>Por que uma Assinatura de Email Profissional?</h2>
+    <p>Adiciona credibilidade, facilita o contato e reforça sua marca pessoal ou corporativa em todas as comunicações.</p>
+    <h2>Como usar esta ferramenta?</h2>
+    <p>Preencha seus dados, adicione links de redes sociais e clique em "Gerar". Copie o código HTML para seu cliente de email, use a versão texto como alternativa.</p>
+   
+  </div>
+</section>
+
+<style>
+  /* ESTILO PADRÃO */
+  .tool-button { background: #89b4fa; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; margin: 0.5rem 0.5rem 1rem 0; }
+  label { display: block; margin: 0.5rem 0; color: #cdd6f4; font-size: 0.9rem; }
+  input[type="text"], input[type="email"] { width: 100%; padding: 0.5rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 4px; }
+  textarea { width: 100%; background: #2a2a3c; color: #cdd6f4; padding: 1rem; border: 1px solid #454565; border-radius: 6px; font-family: monospace; white-space: pre; }
+  h4 { margin: 0 0 0.5rem 0; color: #a6e3a1; }
+</style>
+
+
+
+
+
+<script>
+function generateSignature() {
+  const name = document.getElementById('sigName').value.trim() || 'Seu Nome';
+  const title = document.getElementById('sigTitle').value.trim() || 'Seu Cargo';
+  const company = document.getElementById('sigCompany').value.trim() || 'Sua Empresa';
+  const phone = document.getElementById('sigPhone').value.trim();
+  const email = document.getElementById('sigEmail').value.trim();
+  const website = document.getElementById('sigWebsite').value.trim();
+  const linkedin = document.getElementById('sigLinkedIn').value.trim();
+  const twitter = document.getElementById('sigTwitter').value.trim();
+  const github = document.getElementById('sigGitHub').value.trim();
+  
+  // HTML Version
+  let html = `<div style="font-family: Arial, sans-serif; font-size: 12px; color: #333; line-height: 1.4;">
+    <strong style="font-size: 14px; color: #2c5aa0;">${name}</strong><br>
+    <span style="color: #555;">${title}</span><br>
+    <span style="color: #555;">${company}</span><br><br>
+  `;
+  
+  if (phone) html += `<span>📞 ${phone}</span><br>`;
+  if (email) html += `<span>✉️ <a href="mailto:${email}" style="color: #2c5aa0; text-decoration: none;">${email}</a></span><br>`;
+  if (website) html += `<span>🌐 <a href="https://${website}" style="color: #2c5aa0; text-decoration: none;">${website}</a></span><br>`;
+  
+  let social = '';
+  if (linkedin) social += `<a href="https://${linkedin}" style="text-decoration: none; margin-right: 8px;"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="16" height="16" style="vertical-align: middle; border: none;"></a>`;
+  if (twitter) social += `<a href="https://${twitter}" style="text-decoration: none; margin-right: 8px;"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="16" height="16" style="vertical-align: middle; border: none;"></a>`;
+  if (github) social += `<a href="https://${github}" style="text-decoration: none;"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="16" height="16" style="vertical-align: middle; border: none;"></a>`;
+  
+  if (social) html += `<div style="margin-top: 8px;">${social}</div>`;
+  
+  html += `</div>`;
+  
+  // Text Version
+  let text = `${name}\n${title}\n${company}\n`;
+  if (phone) text += `📞 ${phone}\n`;
+  if (email) text += `✉️ ${email}\n`;
+  if (website) text += `🌐 ${website}\n`;
+  if (linkedin || twitter || github) {
+    text += `\n`;
+    if (linkedin) text += `LinkedIn: ${linkedin}\n`;
+    if (twitter) text += `Twitter: ${twitter}\n`;
+    if (github) text += `GitHub: ${github}\n`;
+  }
+  
+  document.getElementById('signaturePreview').innerHTML = html;
+  document.getElementById('signatureHTML').value = html;
+  document.getElementById('signatureText').value = text;
+}
+
+function copySignature(type) {
+  const text = type === 'HTML' ? 
+    document.getElementById('signatureHTML').value : 
+    document.getElementById('signatureText').value;
+  if (text) {
+    navigator.clipboard.writeText(text).then(() => alert(`✅ Assinatura ${type} copiada!`));
+  }
+}
+
+// Gera ao carregar
+generateSignature();
+</script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Assinatura de Email Profissional Online",
+  "description": "Ferramenta online para criar assinaturas profissionais para email com nome, cargo, telefone, redes sociais e logo. Gera código HTML e versão texto.",
+  "applicationCategory": "Ferramenta para Marketing e Vendas",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+
+
+
