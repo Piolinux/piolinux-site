@@ -1,4 +1,5 @@
 ---
+seo: false
 layout: default
 title: "Escolha Sua Distro Linux Intermediária"
 description: "Descubra as melhores distros para quem domina o terminal: Fedora, Debian, openSUSE. Mais controle e desempenho!"
