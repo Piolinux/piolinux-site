@@ -1,4 +1,5 @@
 ---
+seo: false
 layout: default
 title: Como Compilar o Kernel Linux — Guia Evergreen Passo a Passo
 description: 'Aprenda a compilar qualquer versão do kernel Linux em qualquer distro. Guia universal, independente de versão, com dicas de otimização e segurança.'
