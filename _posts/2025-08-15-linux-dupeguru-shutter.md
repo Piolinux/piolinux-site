@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Instale DupeGuru e Shutter: Ferramentas Essenciais para Linux"
+title: "DupeGuru + Shutter: Ferramentas Essenciais para Linux"
 description: "Use DupeGuru para remover duplicatas e Shutter para capturas avançadas — duas ferramentas essenciais para seu dia a dia no Linux!"
 date: 2025-08-15
 author: "PioLinux"
