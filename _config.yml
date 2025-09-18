@@ -87,6 +87,9 @@ exclude:
   - README.md
   - LICENSE
 
+paginate: 10
+paginate_path: "/blog/page/:num/"
+
 # Minificação de CSS (funciona no GitHub Pages)
 sass:
   style: compressed
