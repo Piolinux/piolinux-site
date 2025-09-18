@@ -1,4 +1,5 @@
 ---
+seo: false
 layout: default
 title: Ferramentas SysAdmin — IP, chmod, cron, backup, SSH
 description: Calcule subnets, gere expressões cron, converta permissões chmod, crie scripts de backup e simule chaves SSH — tudo online, sem cadastro, 100% grátis.
@@ -24,7 +25,6 @@ tags: [sysadmin, linux, ip, subnet, chmod, cron, backup, ssh, rede, segurança, 
 </main>
 </section>
 
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -33,52 +33,44 @@ tags: [sysadmin, linux, ip, subnet, chmod, cron, backup, ssh, rede, segurança, 
   "description": "Calcule subnets, gere expressões cron, converta permissões chmod, crie scripts de backup e simule chaves SSH — tudo online, sem cadastro, 100% grátis.",
   "inLanguage": "pt-BR",
   "url": "{{ page.url | absolute_url }}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ page.url | absolute_url }}"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Equipe Piolinux"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Piolinux",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://piolinux.com/logo-512.png",
-      "width": 512,
-      "height": 512
-    }
-  },
-  "datePublished": "2025-04-05T10:00:00+00:00",
-  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}",
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [
       {
-        "@type": "WebApplication",
-        "name": "Calculadora de IP e Subnet",
-        "description": "Calcule rede, broadcast, máscara e hosts disponíveis a partir de um IP e CIDR.",
-        "applicationCategory": "Ferramenta para SysAdmin",
-        "operatingSystem": "Web",
-        "url": "{{ page.url | absolute_url }}#ip-calculator"
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "WebApplication",
+          "name": "Calculadora de IP e Subnet",
+          "description": "Calcule rede, broadcast, máscara e hosts disponíveis a partir de um IP e CIDR.",
+          "applicationCategory": "Ferramenta para SysAdmin",
+          "operatingSystem": "Web",
+          "url": "https://piolinux.com/calculadora-ip-subnet/"
+        }
       },
       {
-        "@type": "WebApplication",
-        "name": "Gerador de Expressões Cron",
-        "description": "Crie e valide expressões cron para agendar tarefas no Linux.",
-        "applicationCategory": "Ferramenta para SysAdmin",
-        "operatingSystem": "Web",
-        "url": "{{ page.url | absolute_url }}#cron-generator"
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "WebApplication",
+          "name": "Gerador de Expressões Cron",
+          "description": "Crie e valide expressões cron para agendar tarefas no Linux.",
+          "applicationCategory": "Ferramenta para SysAdmin",
+          "operatingSystem": "Web",
+          "url": "https://piolinux.com/gerador-expressoes-cron/"
+        }
       },
       {
-        "@type": "WebApplication",
-        "name": "Calculadora de Permissões chmod",
-        "description": "Converta entre notação numérica (755) e simbólica (rwxr-xr-x) de permissões Linux.",
-        "applicationCategory": "Ferramenta para Linux",
-        "operatingSystem": "Web",
-        "url": "{{ page.url | absolute_url }}#chmod-calculator"
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "WebApplication",
+          "name": "Calculadora de Permissões chmod",
+          "description": "Converta entre notação numérica (755) e simbólica (rwxr-xr-x) de permissões Linux.",
+          "applicationCategory": "Ferramenta para Linux",
+          "operatingSystem": "Web",
+          "url": "https://piolinux.com/calculadora-chmod/"
+        }
       }
     ]
   }
