@@ -1,5 +1,5 @@
 ---
-title: "Escolha seu navegador evergreen em 2025 (tabela comparativa)"
+title: "Navegadores Evergreen 2025: Firefox vs Chrome vs Edge"
 date: 2025-09-10
 description: "Lista dos principais navegadores evergreen: Chrome, Firefox, Edge, Safari, Opera, Brave e Vivaldi — sempre atualizados, seguros e compatíveis."
 tags: ["navegadores", "evergreen", "tabela", "web"]
