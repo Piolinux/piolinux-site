@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tipos de Kernel Linux — Monolítico, Microkernel, Híbrido, Unikernel
+title: Compare Kernel Linux: Monolítico vs Híbrido vs Unikernel
 description: 'Comparação técnica evergreen: entenda diferenças entre monolítico, microkernel, híbrido, unikernel e nanokernel — sem depender de versões ou modas.'
 permalink: /kernel/
 tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, tipos, arquitetura]
