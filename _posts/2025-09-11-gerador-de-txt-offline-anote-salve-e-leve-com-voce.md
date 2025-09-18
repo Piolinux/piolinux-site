@@ -1,13 +1,14 @@
 ---
 layout: default
-title: "Baixe Agora: Gerador de TXT Offline (Sem Internet, Sem Cadastro)"
-description: "Ferramenta 100% offline para criar anotações, lembretes, setups ou configurações e baixar como arquivo .txt. Nada de cadastro, nuvem ou internet — só HTML + JavaScript."
+title: "Gerador de Arquivos .txt Offline — HTML + JS Puro""
+description: "Crie e baixe arquivos .txt offline — sem cadastro, sem nuvem, só HTML+JS. Ideal para anotações, lembretes e configurações."
 date: 2025-09-12
 author: "PioLinux"
 categories: [ferramentas, produtividade, offline, utilidades]
 tags: [txt, anotações, lembretes, offline, html, javascript, download, ferramenta-evergreen]
 permalink: /gerador-txt-offline-anotacoes-lembretes/
 ---
+
 
 
 {% include toc.html %}
