@@ -1,4 +1,5 @@
 ---
+seo: false
 layout: default
 title: "Kernel Linux: Monolítico, Híbrido, Unikernel — Guia 2025"
 description: "Comparação técnica evergreen: entenda diferenças entre monolítico, microkernel, híbrido, unikernel e nanokernel — sem depender de versões ou modas."
