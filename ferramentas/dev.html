@@ -1,4 +1,5 @@
 ---
+seo: false
 layout: default
 title: Ferramentas Dev — Docker, .env, tree, gitignore, regex
 description: Gere comandos Docker, arquivos .env, estrutura de pastas (tree), .gitignore e regex — tudo online, sem cadastro. Ideal para devs, DevOps e automação.
@@ -33,27 +34,63 @@ tags: [dev, docker, env, tree, gitignore, regex, desenvolvedor, devops, automaca
   "@type": "CollectionPage",
   "name": "Ferramentas Dev — Docker, .env, tree, gitignore, regex",
   "description": "Gere comandos Docker, arquivos .env, estrutura de pastas (tree), .gitignore e regex — tudo online, sem cadastro. Ideal para devs, DevOps e automação.",
+  "inLanguage": "pt-BR",
   "url": "{{ page.url | absolute_url }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}",
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [
       {
-        "@type": "SoftwareApplication",
-        "name": "Gerador de Comandos Docker",
-        "applicationCategory": "Ferramenta para DevOps",
-        "operatingSystem": "Web"
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "WebApplication",
+          "name": "Gerador de Comandos Docker",
+          "applicationCategory": "Ferramenta para DevOps",
+          "operatingSystem": "Web",
+          "url": "https://piolinux.com/gerador-docker/"
+        }
       },
       {
-        "@type": "SoftwareApplication",
-        "name": "Gerador de Arquivos .env",
-        "applicationCategory": "Ferramenta para Desenvolvedores",
-        "operatingSystem": "Web"
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "WebApplication",
+          "name": "Gerador de Arquivos .env",
+          "applicationCategory": "Ferramenta para Desenvolvedores",
+          "operatingSystem": "Web",
+          "url": "https://piolinux.com/gerador-env/"
+        }
       },
       {
-        "@type": "SoftwareApplication",
-        "name": "Gerador de Estrutura de Pastas (tree)",
-        "applicationCategory": "Ferramenta para Organização de Projetos",
-        "operatingSystem": "Web"
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "WebApplication",
+          "name": "Gerador de Estrutura de Pastas (tree)",
+          "applicationCategory": "Ferramenta para Organização de Projetos",
+          "operatingSystem": "Web",
+          "url": "https://piolinux.com/gerador-tree/"
+        }
       }
     ]
   }
