@@ -1,4 +1,5 @@
 ---
+seo: false
 layout: default
 title: Ferramentas SEO — Slug, Assinatura de Email, Otimização
 description: 'Gere URLs amigáveis (slugs) e assinaturas de email profissionais em HTML/texto — tudo online, sem cadastro. Ideal para blogs, marketing e comunicação técnica.'
@@ -33,52 +34,44 @@ tags: [seo, slug, email, assinatura, url, otimizacao, marketing, blog, comunica�
   "description": "Gere URLs amigáveis (slugs) e assinaturas de email profissionais em HTML/texto — tudo online, sem cadastro. Ideal para blogs, marketing e comunicação técnica.",
   "inLanguage": "pt-BR",
   "url": "{{ page.url | absolute_url }}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ page.url | absolute_url }}"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Equipe Piolinux"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Piolinux",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://piolinux.com/logo-512.png",
-      "width": 512,
-      "height": 512
-    }
-  },
-  "datePublished": "2025-04-05T10:00:00+00:00",
-  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}",
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [
       {
-        "@type": "WebApplication",
-        "name": "Gerador de Slugs SEO",
-        "description": "Transforme títulos em URLs amigáveis, otimizadas para SEO e compatíveis com sistemas de blog.",
-        "applicationCategory": "Ferramenta de SEO",
-        "operatingSystem": "Web",
-        "url": "{{ page.url | absolute_url }}#slug"
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "WebApplication",
+          "name": "Gerador de Slugs SEO",
+          "description": "Transforme títulos em URLs amigáveis, otimizadas para SEO e compatíveis com sistemas de blog.",
+          "applicationCategory": "Ferramenta de SEO",
+          "operatingSystem": "Web",
+          "url": "https://piolinux.com/gerador-slug-seo/"
+        }
       },
       {
-        "@type": "WebApplication",
-        "name": "Gerador de Assinatura de Email Profissional",
-        "description": "Crie assinaturas de email em HTML ou texto puro, com logo, redes sociais e dados de contato.",
-        "applicationCategory": "Ferramenta de Marketing",
-        "operatingSystem": "Web",
-        "url": "{{ page.url | absolute_url }}#assinatura"
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "WebApplication",
+          "name": "Gerador de Assinatura de Email Profissional",
+          "description": "Crie assinaturas de email em HTML ou texto puro, com logo, redes sociais e dados de contato.",
+          "applicationCategory": "Ferramenta de Marketing",
+          "operatingSystem": "Web",
+          "url": "https://piolinux.com/gerador-assinatura-email/"
+        }
       },
       {
-        "@type": "WebApplication",
-        "name": "Otimizador de Meta Tags",
-        "description": "Gere meta tags otimizadas para SEO (title, description, Open Graph, Twitter) com preview em tempo real.",
-        "applicationCategory": "Ferramenta de SEO",
-        "operatingSystem": "Web",
-        "url": "{{ page.url | absolute_url }}#meta-tags"
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "WebApplication",
+          "name": "Otimizador de Meta Tags",
+          "description": "Gere meta tags otimizadas para SEO (title, description, Open Graph, Twitter) com preview em tempo real.",
+          "applicationCategory": "Ferramenta de SEO",
+          "operatingSystem": "Web",
+          "url": "https://piolinux.com/otimizador-meta-tags/"
+        }
       }
     ]
   }
