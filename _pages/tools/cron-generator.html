@@ -61,19 +61,65 @@ tags: [cron, linux, sysadmin, automacao, devops, servidores]
   tarefas em sistemas Linux e Unix, leia a documentação acessando o 
   terminal digite os comandos man cron.</p>
 
-  <h2>Cuidado: Comportamento "OU" entre dia do mês e dia da semana.</h2>
-  <p>Se você especificar ambos <code>dia do mês</code> e <code>dia da 
-  semana</code>, a tarefa executa quando <strong>qualquer uma</strong> 
-  das condições for verdadeira — não as duas juntas,há uma tabela 
-  completa e exemplos abaixo.</p>
-  <strong><p>🐧 Cuidado com o cron: 0 2 15 * 6 NÃO é “E” — é “OU”<p><strong>
+ 
+<section>
+  <h2>🐧 Exemplo Prático — Tabela Didática (pra não confundir)</h2>
 
-<strong><p>⚠️ 0 2 15 * 6 → roda às 2h:<p><strong>
-<strong><p>Todo dia 15 do mês<p><strong>
-<strong><p>OU todo sábado<p><strong>
-<strong><p> NÃO roda só no sábado que cai dia 15!<p><strong>
-<strong><p>💡 Quer “E”? Use:</p><strong>
-<code>0 2 15 * 6 [ "$(date +\%d)" = "15" ] && /seu/script.sh</code>
+  <table style="border-collapse: collapse; width: 100%; max-width: 800px; margin: 1.5em 0; font-size: 0.95em; background: #121212; color: #e0e0e0; border: 1px solid #333;">
+    <thead>
+      <tr style="background-color: #2e7d32; color: #fff;">
+        <th style="padding: 12px 10px; text-align: left; border-bottom: 2px solid #4caf50;">Expressão Cron</th>
+        <th style="padding: 12px 10px; text-align: left; border-bottom: 2px solid #4caf50;">Quando roda?</th>
+        <th style="padding: 12px 10px; text-align: left; border-bottom: 2px solid #4caf50;">Problema?</th>
+        <th style="padding: 12px 10px; text-align: left; border-bottom: 2px solid #4caf50;">Solução Inteligente</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #333;">
+        <td style="padding: 12px 10px; vertical-align: top; font-family: monospace;"><code>0 2 15 * 6</code></td>
+        <td style="padding: 12px 10px; vertical-align: top;">
+          Todo dia 15 <strong>OU</strong> todo sábado
+        </td>
+        <td style="padding: 12px 10px; vertical-align: top; color: #ff5252;">❌ Perigoso</td>
+        <td style="padding: 12px 10px; vertical-align: top;">
+          Use <code>0 2 * * 6</code> + verificação no script
+        </td>
+      </tr>
+      <tr style="border-bottom: 1px solid #333; background: #1a2a1a;">
+        <td style="padding: 12px 10px; vertical-align: top; font-family: monospace;"><code>0 2 * * 6</code></td>
+        <td style="padding: 12px 10px; vertical-align: top;">
+          Todo sábado
+        </td>
+        <td style="padding: 12px 10px; vertical-align: top; color: #8bc34a;">✅ Seguro</td>
+        <td style="padding: 12px 10px; vertical-align: top;">
+          Valide dia do mês dentro do script:<br>
+          <code>[[ $(date +\%d) == "15" ]] && /seu/script.sh</code>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 12px 10px; vertical-align: top; font-family: monospace;"><code>0 2 15 * *</code></td>
+        <td style="padding: 12px 10px; vertical-align: top;">
+          Todo dia 15
+        </td>
+        <td style="padding: 12px 10px; vertical-align: top; color: #8bc34a;">✅ Seguro</td>
+        <td style="padding: 12px 10px; vertical-align: top;">
+          Valide dia da semana dentro do script:<br>
+          <code>[[ $(date +\%u) == "6" ]] && /seu/script.sh</code><br>
+          <small>(6 = sábado, %u = 1=segunda...7=domingo)</small>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size: 0.9em; color: #8bc34a; margin-top: 1em; font-style: italic;">
+    💡 Dica de SysAdmin: Nunca confie só no cron para lógica complexa. Use scripts com validações — salva servidores e noites de sono.
+  </p>
+</section>
+
+
+
+
+    
   <h2>Boas práticas para cron seguro</h2>
   <table class="evergreen-table cron-table">
     <thead>
