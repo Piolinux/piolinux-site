@@ -12,7 +12,7 @@ tags: [distros, linux, underground, alpine, void, crux, guix, chimera, alternati
 
 <section class="post-content">
 
-<h2>🐧 Linux Underground: Sistemas para Rebeldes, Nerds e Puristas</h2>
+<h2> Linux Underground: Sistemas para Rebeldes, Nerds e Puristas</h2>
 
   <div>
     <strong>Bora sair da zona de conforto e dar uma olhada no lado mais irado do Linux, saca?</strong><br>
