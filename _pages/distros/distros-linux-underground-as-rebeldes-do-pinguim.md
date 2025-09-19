@@ -14,7 +14,14 @@ tags: [distros, linux, underground, alpine, void, crux, guix, chimera, alternati
 
 <section class="post-content">
 
+<h2>
+    🐧 Descubra Distros Linux Underground — Fora do Mainstream
+  </h2>
 
+  <div>
+    <strong>📌 Para quem quer sair da bolha e explorar o lado alternativo do Linux</strong><br>
+    Distros experimentais, minimalistas, filosóficas ou com propostas radicais — ideais para quem gosta de pensar fora da caixa.
+  </div>
 
 
 
