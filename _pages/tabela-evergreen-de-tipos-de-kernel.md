@@ -19,7 +19,7 @@ tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, t
 
   <div>
     <strong>Entenda as arquiteturas de kernel do tradicional ao experimental</strong><br>
-    Comparação técnica entre modelos de Kernel: Como funcionam, vantagens, desvantagens e onde são utilizados em 2025.
+   Comparação técnica entre modelos de kernel: funcionamento, vantagens, desvantagens e aplicações em 2025.
   </div>
 
 
