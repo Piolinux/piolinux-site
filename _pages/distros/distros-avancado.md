@@ -25,7 +25,7 @@ permalink: /distros/avancado/
 
 <h2>
     🐧 Monte Sua Própria Distro Linux — Do Zero 
-  </h2
+</h2>
 
 <div>
   <strong>📌 Tabela de Tipos de Distribuições Linux (referência mínima).</strong><br>
