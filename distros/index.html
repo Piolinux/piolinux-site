@@ -16,7 +16,7 @@ tags: [distros, linux, iniciante, avancado, servidor, desktop, underground, comp
 
   
   <div class="standard-list">
-    {% assign distro_pages = site.pages | where_exp: "page", "page.url contains '/distros/' and page.url != '/distros/iniciante/'" %}
+    {% assign distro_pages = site.pages | where_exp: "page", "page.url contains '/distros/' and page.url != '/distros/iniciantes/'" %}
     {% for page in distro_pages %}
       <li>
         <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
