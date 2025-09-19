@@ -94,7 +94,7 @@ permalink: /distros/avancado/
 <h2>Conclusão</h2>
 
 <p>
-  ⚙️ Quando você monta do zero, o sistema vira extensão da sua mente.
+  Quando você monta do zero, o sistema vira extensão da sua mente.
 </p>
 
 </section>
