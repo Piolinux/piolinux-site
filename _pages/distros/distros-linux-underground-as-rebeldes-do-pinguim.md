@@ -1,13 +1,11 @@
 ---
-seo: false
-layout: default
-title: Descubra Distros Linux Underground — Fora do Mainstream
-description: "Descubra distros Linux radicais, minimalistas e independentes: Alpine, Void, CRUX, Guix, Chimera e mais — fora do mainstream, cheias de atitude."
+layout: manual-seo
+title_custom: "Descubra Distros Linux Underground — Fora do Mainstream | Piolinux"
+description_custom: "Descubra distros Linux radicais, minimalistas e independentes: Alpine, Void, CRUX, Guix, Chimera e mais — fora do mainstream, cheias de atitude."
+title: "Descubra Distros Linux Underground — Fora do Mainstream"
 permalink: /distros/underground/
 tags: [distros, linux, underground, alpine, void, crux, guix, chimera, alternativas, rebeldes]
 ---
-
-
 
 
 
