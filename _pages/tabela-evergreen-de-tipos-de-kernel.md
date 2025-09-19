@@ -15,11 +15,11 @@ tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, t
 
 
 <section>
-  <h2>Arquiteturas de Kernel: Monolítico vs Híbrido vs Unikernel</h2>
+  <h2>Arquiteturas de Kernel: Monolítico, Híbrido e Unikernel.</h2>
 
   <div>
     <strong>Entenda as arquiteturas de kernel do tradicional ao experimental</strong><br>
-    Comparação técnica entre modelos: como funcionam, vantagens, desvantagens e onde são usados em 2025.
+    Comparação técnica entre modelos de Kernel: Como funcionam, vantagens, desvantagens e onde são utilizados em 2025.
   </div>
 
 
