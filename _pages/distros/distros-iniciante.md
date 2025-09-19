@@ -9,6 +9,14 @@ permalink: /distros/iniciante/
 
 
 
+<h2>🐧 Comece no Linux: Escolha Sua Distro Ideal!</h2>
+
+<div>
+  <strong>📌 Guia Rápido para Iniciantes</strong><br>
+  Use esta tabela para comparar e escolher a melhor distribuição Linux para seu primeiro contato.
+</div>
+
+
 <section>
 
 
