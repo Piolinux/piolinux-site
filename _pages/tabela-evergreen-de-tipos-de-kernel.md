@@ -95,6 +95,14 @@ tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, t
     </tr>
   </tbody>
 </table>
+
+
+<h2>Conclusão</h2>
+
+<p>
+  🧠 Entender o kernel não te torna melhor que ninguém — só menos refém.
+</p>
+
 </div>
 
 
