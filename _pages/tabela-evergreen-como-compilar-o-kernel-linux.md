@@ -1,12 +1,11 @@
 ---
-seo: false
-layout: default
-title: Como Compilar o Kernel Linux — Guia Evergreen Passo a Passo
-description: 'Aprenda a compilar qualquer versão do kernel Linux em qualquer distro. Guia universal, independente de versão, com dicas de otimização e segurança.'
+layout: manual-seo
+title_custom: "Como Compilar o Kernel Linux — Guia Evergreen Passo a Passo | Piolinux"
+description_custom: "Aprenda a compilar qualquer versão do kernel Linux em qualquer distro. Guia universal, independente de versão, com dicas de otimização e segurança."
+title: "Como Compilar o Kernel Linux — Guia Evergreen Passo a Passo"
 permalink: /compilar-kernel/
 tags: [kernel, linux, compilar, compilacao, make, config, sysadmin, desenvolvedor, evergreen]
 ---
-
 
 
 
