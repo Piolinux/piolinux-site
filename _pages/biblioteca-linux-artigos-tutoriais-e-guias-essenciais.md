@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Biblioteca Linux: Artigos, Tutoriais e Guias Essenciais"
-description: "Coleção organizada de artigos sobre Linux: comandos, distribuições, segurança e ferramentas como Oh My Zsh, iTerm2 e Windows Terminal. Aprenda com clareza e prática."
+title: "Comandos Linux por Categoria — Guia Técnico Completo"
+description: "Domine o terminal com comandos organizados em 18 categorias: pacotes, rede, Docker, Git, segurança, processos, logs e muito mais. Ideal para consulta rápida."
 date: 2025-10-03
 author: "PioLinux"
-categories: [linux, tutoriais, biblioteca]
-tags: [biblioteca, linux, tutoriais, comandos, segurança, ohmyzsh, iterm2, windows-terminal]
+categories: [linux, comandos, terminal, referência]
+tags: [comandos, linux, terminal, sysadmin, docker, git, rede, segurança, bash, guia]
 permalink: /biblioteca-linux/
 ---
 
