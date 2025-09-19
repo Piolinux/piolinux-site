@@ -1,8 +1,8 @@
 ---
-seo: false
-layout: default
+layout: manual-seo
+title_custom: "Escolha Sua Distro Linux Intermediária | Piolinux"
+description_custom: "Descubra as melhores distros para quem domina o terminal: Fedora, Debian, openSUSE. Mais controle e desempenho!"
 title: "Escolha Sua Distro Linux Intermediária"
-description: "Descubra as melhores distros para quem domina o terminal: Fedora, Debian, openSUSE. Mais controle e desempenho!"
 tags:
   - linux
   - intermediário
