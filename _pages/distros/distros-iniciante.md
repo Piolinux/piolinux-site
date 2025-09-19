@@ -3,7 +3,7 @@ layout: manual-seo
 title_custom: "Linux para Iniciantes: Guia de Escolha de Distro | Piolinux"
 description_custom: "Descubra qual distro Linux combina com seu nível e objetivos. Tabela comparativa rápida para decisão inteligente."
 title: "Linux para Iniciantes: Guia de Escolha de Distro"
-permalink: /distro-iniciante/
+permalink: /distros/iniciante/
 tags: [ubuntu, linux-mint, fedora, escolha-distro, desktop-linux]
 ---
 
