@@ -20,7 +20,7 @@ permalink: /comparativo-terminais/
 <h2>🖥️ Comparativo Completo: Terminais por Sistema.</h2>
 
 
-<p>Comparação dos principais terminais e comandos disponíveis de sistemas operacionais: Linux, macOS e Windows! Vamos ver as diferenças em termos de facilidade de uso, personalização e compatibilidade com os vários shells disponíveis.</p>
+<p>Comparativo dos principais terminais e comandos disponíveis de sistemas operacionais: Linux, macOS e Windows! Vamos ver as diferenças em termos de facilidade de uso, personalização e compatibilidade com os vários shells disponíveis.</p>
 
 
 
@@ -146,7 +146,7 @@ permalink: /comparativo-terminais/
 </h2>
 
 <p>
-    Se você tá no Windows, o Windows Terminal é uma mão na roda: moderno, veloz e junto com o WSL. No Mac, o iTerm2 é o queridinho: abas, temas e um monte de coisa pra automatizar. No Linux, o terminal que já vem é bom demais, mas com o Oh My Zsh e plugins tipo z, git e cores, vira uma ferramenta incrível pra trabalhar. 
+   Se você utiliza o Windows Terminal é uma maravilha: moderno, rápido e ainda roda com o WSL. No Mac, o iTerm2 é o mais usado: tem abas, temas e várias opções pra facilitar o seu dia a dia. No Linux, o terminal que já vem é ótimo, mas com o Oh My Zsh e plugins como z, git e cores, ele vira uma ferramenta superpoderosa pra trabalhar.
 
 
 </p>
