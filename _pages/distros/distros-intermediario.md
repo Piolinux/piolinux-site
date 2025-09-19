@@ -17,6 +17,18 @@ permalink: /distros/intermediario/
 <section>
 
 
+
+<h2>
+  🐧 Escolha Sua Distro Linux Intermediária
+</h2>
+
+<div>
+  <strong>📌 Para quem já domina o básico e quer mais controle</strong><br>
+  Compare distribuições equilibradas entre facilidade e customização — ideais para desenvolvedores, sysadmins iniciantes e entusiastas.
+</div>
+
+
+
   <table class="evergreen-table">
   <thead>
     <tr>
