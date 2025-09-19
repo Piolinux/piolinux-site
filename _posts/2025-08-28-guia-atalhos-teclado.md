@@ -15,10 +15,12 @@ permalink: /atalhos-de-teclado/
 
 <section class="post-content">
 
-<p>Dominando os  atalhos do teclado é essencial para ganhar produtividade em qualquer sistema operacional em vez de utilizar apenas mouse. Tabela comparativa, você encontrará os principais atalhos para utilizar no  Windows, macOS e Linux, organizados de forma prática para facilitar seu dia a dia.</p>
+
 
 <h2>🖥️ Tabela de Atalhos: Windows, macOS, Linux</h2>
 <p><em>Organizada por categoria. Sem excessos. Só o que você precisa.</em></p>
+
+<p>Dominando os  atalhos do teclado é essencial para ganhar produtividade em qualquer sistema operacional em vez de utilizar apenas mouse. Tabela comparativa, você encontrará os principais atalhos para utilizar no  Windows, macOS e Linux, organizados de forma prática para facilitar seu dia a dia.</p>
 
 <h3>🔧 Navegação e Sistema</h3>
 <table class="evergreen-table">
@@ -228,7 +230,7 @@ permalink: /atalhos-de-teclado/
   </tbody>
 </table>
 
-<h3>✅ Escolha seu modo de trabalho: Windows, macOS ou Linux</h3>
+<h3>Escolha seu modo de trabalho: Windows, macOS ou Linux</h3>
 
 
 <p>Cada sistema possuem configurações de teclas de atalhos diferentes:  
