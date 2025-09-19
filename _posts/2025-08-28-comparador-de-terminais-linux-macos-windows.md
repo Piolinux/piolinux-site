@@ -17,10 +17,13 @@ permalink: /comparativo-terminais/
 <section class="post-content">
 
 
-<p>Essa tabela comparativa apresentará os principais terminais e comandos disponíveis para Windows, macOS e Linux com total clareza . A tabela mostrará características, facilidades de utilização, personalização, compatibilidade com diferentes shells, ajudando você a escolher os terminais mais adequado para desenvolvimento, automação e administração de sistemas."</p>
-
-
 <h2>🖥️ Comparativo Completo: Terminais por Sistema</h2>
+
+
+<p>Comparando os principais terminais e comandos disponíveis de sistemas operacionais: Linux, macOS e Windows! Vamos ver as diferenças em termos de facilidade de uso, personalização e compatibilidade com os vários shells disponíveis.</p>
+
+
+
 
 <table class="evergreen-table">
   <thead>
@@ -137,34 +140,16 @@ permalink: /comparativo-terminais/
   </tbody>
 </table>
 
-<h3>🔧 Dicas Rápidas por Plataforma</h3>
 
-<h4>🐧 Linux</h4>
-<ul>
-  <li>Utilize <a href="https://ohmyz.sh">Oh My Zsh</a> para melhorar seu Zsh.</li>
-  <li>Experimente <code>fish</code> para um shell mais amigável.</li>
-  <li>Terminal recomendado: <strong>Alacritty</strong> (rápido) ou <strong>Terminator</strong> (para splits).</li>
-</ul>
+<h2>
+    Quais são os terminais ideais para você?
+</h2>
 
-<h4>🍏 macOS</h4>
-<ul>
-  <li>Instalando <a href="https://iterm2.com">iTerm2</a> — é melhor que o Terminal.app.</li>
-  <li>Use <code>brew install neofetch</code> e execute <code>neofetch</code> para um toque estiloso.</li>
-  <li>Ative o modo escuro no iTerm2 para produtividade noturna.</li>
-</ul>
+<p>
+    Se você tá no Windows, o Windows Terminal é uma mão na roda: moderno, veloz e junto com o WSL. No Mac, o iTerm2 é o queridinho: abas, temas e um monte de coisa pra automatizar. No Linux, o terminal que já vem é bom demais, mas com o Oh My Zsh e plugins tipo z, git e cores, vira uma ferramenta incrível pra trabalhar. 
 
-<h4>💾 Windows</h4>
-<ul>
-  <li>Instalando o <a href="https://aka.ms/terminal">Windows Terminal</a> da Microsoft Store.</li>
-  <li>Ative o WSL: abra PowerShell como Admin e rode <code>wsl --install</code>.</li>
-  <li>Personalize temas JSON no Windows Terminal para um visual único.</li>
-</ul>
 
-<h3>Quais são os terminais ideais para você?</h3>
+</p>
 
-<p>Você está no <strong>Windows</strong>, utilizando o <strong>Windows Terminal</strong> é moderno, rápido e integrado ao WSL.  
-No <strong>Macintosh</strong>, o <strong>iTerm2</strong> é o padrão ouro: com abas, temas e automação.  
-No <strong>Linux</strong>, o terminal nativo já é poderoso, funcionará muito bem, mas com <strong>Oh My Zsh</strong> e plugins como <code>z</code>, <code>git</code> e <code>syntax-highlighting</code>, ele vira uma máquina de produtividade com diversas opçoes.</p>
-
-<p>Não existirá o <strong>melhor terminal para o seu fluxo de trabalho</strong>.  
-Você que vive no terminal, domine as ferramentas do seu sistema é o primeiro passo para se tornar um verdadeiro sysadmin de linha de comando.</p>
+<p>Não tem terminal 'melhor', viu? Quem vive no terminal, precisa dominar as ferramentas do sistema pra virar um sysadmin de verdade na linha de comando.
+</p>
