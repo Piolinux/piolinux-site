@@ -1,0 +1,17 @@
+- name: Início
+  link: /
+
+- name: Aprenda
+  link: /aprenda/
+
+- name: Ferramentas
+  link: /ferramentas/
+
+- name: Distros
+  link: /distros/
+
+- name: Sistema
+  link: /sistema/
+
+- name: Diversão
+  link: /diversao/
