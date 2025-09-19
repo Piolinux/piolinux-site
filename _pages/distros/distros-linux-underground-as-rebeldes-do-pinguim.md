@@ -147,6 +147,13 @@ tags: [distros, linux, underground, alpine, void, crux, guix, chimera, alternati
     </tr>
   </tbody>
 </table>
+
+<h2>Conclusão</h2>
+
+<p>
+  🖤 Underground não é moda — é manifesto.
+</p>
+
 </div>
 
 
