@@ -17,16 +17,18 @@ permalink: /distros/avancado/
 ---
 
 
+
+
+
+
+<section>
+
 <h2>🐧 Domine o Linux: Monte Sua Distro do Zero!</h2>
 
 <div>
   <strong>📌 Tabela de Tipos de Distribuições Linux (referência mínima)</strong><br>
   Use esta tabela para escolher a base ideal antes de montar sua própria distro.
 </div>
-
-
-
-<section>
 
 
 
