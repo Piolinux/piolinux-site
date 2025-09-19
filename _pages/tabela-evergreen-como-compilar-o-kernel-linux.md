@@ -17,7 +17,7 @@ tags: [kernel, linux, compilar, compilacao, make, config, sysadmin, desenvolvedo
 <h2>🐧 Do Zero ao Boot: Guia Prático para Compilar Seu Kernel</h2>
 
   <div>
-    <strong>📌 Consulta rápida durante a compilação.</strong><br>
+    <strong> Consulta rápida durante a compilação.</strong><br>
     Siga os passos na ordem. Ideal para desktop, servidor ou aprendizado — atualizável para qualquer versão do kernel.
   </div>
 
