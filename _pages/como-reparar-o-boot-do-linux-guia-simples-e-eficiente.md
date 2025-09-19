@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Repare o Boot do Linux: Guia Simples + Eficiente (Passo a Passo)"
+title: "Como Reparar o Boot do Linux — Guia Prático"
 description: "Aprenda a reparar o boot do Linux passo a passo: recupere o GRUB, corrija sistema de arquivos e saia do GRUB Rescue. Tudo com terminal e live USB."
 date: 2025-09-30
 author: "PioLinux"
@@ -69,7 +69,7 @@ permalink: /reparar-boot-linux/
        Passo 1: Prepare o Terreno
       </h3>
       <p>
-       Antes de mais, você vai precisar de um pendrive de instalação do seu Linux ou mesmo de outro sistema Linux da sua preferência e um computador para criar este pendrive. Sistemas tipo Ubuntu, Linux Mint e até antiX são ótimas opções, afinal, já possuem ferramentas muito boas.
+       Antes de mais nada, você precisará de um pendrive de instalação do seu Linux ou de outro sistema Linux de sua preferência, além de um computador para criar este pendrive. Sistemas como Ubuntu, Linux Mint e até antiX são ótimas opções, pois já possuem ferramentas muito boas.
       </p>
      </li>
      <li>
