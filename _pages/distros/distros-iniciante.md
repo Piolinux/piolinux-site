@@ -13,7 +13,7 @@ permalink: /distros/iniciante/
 <section>
 
 
-<h2>🐧 Comece no Linux: Escolha Sua Distro Ideal!</h2>
+<h2>🐧 Linux para Iniciantes: Guia Definitivo de Escolha de Distro</h2>
 
 <div>
   <strong>📌 Guia Rápido para Iniciantes.</strong><br>
