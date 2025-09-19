@@ -256,27 +256,43 @@ function generateCron() {
   const cron = `${minute} ${hour} ${day} ${month} ${weekday}`;
   document.getElementById('cronOutput').innerText = cron;
   
-  // Explicação simples
+  // Explicação em linguagem humana
   let explanation = `Executa `;
   let showWarning = false;
 
+  // Caso: * * * * * → a cada minuto
   if (minute === '*' && hour === '*' && day === '*' && month === '*' && weekday === '*') {
     explanation += `a cada minuto.`;
-  } else if (minute !== '*' && hour !== '*' && day === '*' && month === '*' && weekday === '*') {
-    explanation += `diariamente às ${hour}:${minute}.`;
-  } else if (minute !== '*' && hour !== '*' && day !== '*' && month === '*' && weekday === '*') {
-    explanation += `no dia ${day} de cada mês às ${hour}:${minute}.`;
-  } else if (minute !== '*' && hour !== '*' && day === '*' && month === '*' && weekday !== '*') {
-    explanation += `todo dia da semana ${weekday} às ${hour}:${minute}.`;
-  } else if (day !== '*' && weekday !== '*') {
-    explanation += `quando: minuto=${minute}, hora=${hour}, dia=${day} OU dia da semana=${weekday}.`;
+  }
+  // Caso: min hora * * * → diariamente às HH:MM
+  else if (minute !== '*' && hour !== '*' && day === '*' && month === '*' && weekday === '*') {
+    explanation += `diariamente às ${hour}h${minute.padStart(2, '0')}.`;
+  }
+  // Caso: min hora dia * * → no dia X de cada mês
+  else if (minute !== '*' && hour !== '*' && day !== '*' && month === '*' && weekday === '*') {
+    explanation += `no dia ${day} de cada mês às ${hour}h${minute.padStart(2, '0')}.`;
+  }
+  // Caso: min hora * * dia-semana → todo dia da semana (traduzido!)
+  else if (minute !== '*' && hour !== '*' && day === '*' && month === '*' && weekday !== '*') {
+    const days = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
+    const dayName = days[weekday] || `dia ${weekday}`;
+    explanation += `todo ${dayName} às ${hour}h${minute.padStart(2, '0')}.`;
+  }
+  // Caso perigoso: dia do mês + dia da semana definidos
+  else if (day !== '*' && weekday !== '*') {
+    const days = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
+    const dayName = days[weekday] || `dia ${weekday}`;
+    explanation += `no dia ${day} de cada mês OU todo ${dayName} às ${hour}h${minute.padStart(2, '0')}.`;
     showWarning = true;
-  } else {
-    explanation += `quando: minuto=${minute}, hora=${hour}, dia=${day}, mês=${month}, dia da semana=${weekday}.`;
+  }
+  // Caso genérico (fallback)
+  else {
+    explanation += `nas condições: min=${minute}, hora=${hour}, dia=${day}, mês=${month}, dia da semana=${weekday}.`;
   }
   
   document.getElementById('cronExplanation').innerText = explanation;
   
+  // Mostra/oculta aviso
   const warningDiv = document.getElementById('cronWarning');
   if (showWarning) {
     warningDiv.innerText = '⚠️ ATENÇÃO: Se "dia do mês" e "dia da semana" estão definidos, a tarefa executa quando QUALQUER UMA das condições for verdadeira — não as duas juntas. Para executar só quando ambas forem verdadeiras, adicione uma verificação no seu script.';
@@ -289,13 +305,19 @@ function generateCron() {
 function copyCron() {
   const text = document.getElementById('cronOutput').innerText;
   if (text) {
-    navigator.clipboard.writeText(text).then(() => alert('✅ Expressão Cron copiada!'));
+    navigator.clipboard.writeText(text).then(() => {
+      alert('✅ Expressão Cron copiada!');
+    }).catch(err => {
+      console.error('Erro ao copiar: ', err);
+      alert('❌ Falha ao copiar. Tente manualmente.');
+    });
   }
 }
 
 // Gera ao carregar
 generateCron();
 </script>
+
 
 
 
