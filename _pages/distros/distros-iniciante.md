@@ -16,7 +16,7 @@ tags: [ubuntu, linux-mint, fedora, escolha-distro, desktop-linux]
 <h2>🐧 Melhores Distros Linux para Quem Está Começando</h2>
 
 <div>
-  <strong>📌 Guia Rápido para Iniciantes.</strong><br>
+  <strong> Guia Rápido para Iniciantes.</strong><br>
   Use esta tabela para comparar e escolher a melhor distribuição Linux para seu primeiro contato.
 </div>
 
@@ -73,7 +73,7 @@ tags: [ubuntu, linux-mint, fedora, escolha-distro, desktop-linux]
 <h2>Conclusão</h2>
 
 <p>
-  🐧 Sua primeira distro não precisa ser perfeita — só precisa te deixar querer a próxima.
+  Sua primeira distro não precisa ser perfeita — só precisa te deixar querer a próxima.
 </p>
 
 
