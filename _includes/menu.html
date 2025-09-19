@@ -15,14 +15,16 @@
   ☰
 </button>
   <nav class="dropdown-menu-container">
-    <ul class="dropdown-menu">
-    <li><a href="{{ '/' | relative_url }}">Início</a></li>
-    <li><a href="{{ '/aprenda/' | relative_url }}">Aprenda</a></li>
-    <li><a href="{{ '/ferramentas/' | relative_url }}">Ferramentas</a></li>
-    <li><a href="{{ '/distros/' | relative_url }}">Distros</a></li>
-    <li><a href="{{ '/sistema/' | relative_url }}">Sistema</a></li>
-    <li><a href="{{ '/diversao/' | relative_url }}">Diversão</a></li>
-  </ul>
+   <ul class="dropdown-menu">
+  {% for item in site.data.navigation %}
+    <li>
+      <a href="{{ item.link | relative_url }}"
+         {% if page.url == item.link %}class="active"{% endif %}>
+        {{ item.name }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
     
   </nav>
 </div>
