@@ -15,7 +15,14 @@ tags: [kernel, linux, compilar, compilacao, make, config, sysadmin, desenvolvedo
 
 <section class="post-content">
 
+<h2>
+    🐧 Compilar o Kernel Linux — Guia Evergreen Passo a Passo
+  </h2>
 
+  <div>
+    <strong>📌 Consulta rápida durante a compilação.</strong><br>
+    Siga os passos na ordem. Ideal para desktop, servidor ou aprendizado — atualizável para qualquer versão do kernel.
+  </div>
 
 
 <div style="overflow-x: auto; padding: 0 20px;">
