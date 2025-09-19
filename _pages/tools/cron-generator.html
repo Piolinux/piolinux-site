@@ -66,15 +66,14 @@ tags: [cron, linux, sysadmin, automacao, devops, servidores]
   semana</code>, a tarefa executa quando <strong>qualquer uma</strong> 
   das condições for verdadeira — não as duas juntas,há uma tabela 
   completa e exemplos abaixo.</p>
-  <p><strong>🐧 Cuidado com o cron: 0 2 15 * 6 NÃO é “E” — é “OU”<strong>
+  <strong><p>🐧 Cuidado com o cron: 0 2 15 * 6 NÃO é “E” — é “OU”<p><strong>
 
-<strong>⚠️ 0 2 15 * 6 → roda às 2h:<strong>
-
-<strong>Todo dia 15 do mês<strong>
-<strong>OU todo sábado<strong>
-<strong>→ NÃO roda só no sábado que cai dia 15!<strong>
-<strong>💡 Quer “E”? Use:</p><strong>
-<strong>0 2 15 * 6 [ "$(date +\%d)" = "15" ] && /seu/script.sh<strong>
+<strong><p>⚠️ 0 2 15 * 6 → roda às 2h:<p><strong>
+<strong><p>Todo dia 15 do mês<p><strong>
+<strong><p>OU todo sábado<p><strong>
+<strong><p> NÃO roda só no sábado que cai dia 15!<p><strong>
+<strong><p>💡 Quer “E”? Use:</p><strong>
+<strong><p>0 2 15 * 6 [ "$(date +\%d)" = "15" ] && /seu/script.sh<p><strong>
   <h2>Boas práticas para cron seguro</h2>
   <table class="evergreen-table cron-table">
     <thead>
