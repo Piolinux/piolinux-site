@@ -21,7 +21,8 @@ permalink: /distros/intermediario/
 
 <div>
   <strong>📌 Para quem já domina o básico e quer mais controle.</strong><br>
-  Compare distribuições equilibradas entre facilidade e customização — ideais para desenvolvedores, sysadmins iniciantes e entusiastas.
+ Se você busca um equilíbrio legal entre facilidade de uso e poder de personalização, essa é a escolha certa! Perfeito pra quem tá começando na área de desenvolvimento, pra sysadmins que estão dando os primeiros passos e pra galera que curte mexer nas coisas.
+
 </div>
 
 
