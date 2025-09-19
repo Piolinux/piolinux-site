@@ -145,10 +145,6 @@ permalink: /comparativo-terminais/
     Quais são os terminais ideais para você?
 </h2>
 
-<p>
-   Se você utiliza o Windows Terminal é uma maravilha: moderno, rápido e ainda roda com o WSL. No Mac, o iTerm2 é o mais usado: tem abas, temas e várias opções pra facilitar o seu dia a dia. No Linux, o terminal que já vem é ótimo, mas com o Oh My Zsh e plugins como z, git e cores, ele vira uma ferramenta superpoderosa pra trabalhar.
 
 
-</p>
-
-<p>Não existe um terminal 'melhor', viu? Quem trabalha com o terminal precisa dominar as ferramentas do sistema para se tornar um sysadmin de verdade na linha de comando.</p>
+<p>Não existe um terminal melhor? Quem trabalha com o terminal precisa dominar as ferramentas do sistema para se tornar um sysadmin de verdade na linha de comando.</p>
