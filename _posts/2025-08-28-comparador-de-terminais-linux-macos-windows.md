@@ -151,5 +151,4 @@ permalink: /comparativo-terminais/
 
 </p>
 
-<p>Não tem terminal 'melhor', viu? Quem vive no terminal, precisa dominar as ferramentas do sistema pra virar um sysadmin de verdade na linha de comando.
-</p>
+<p>Não existe um terminal 'melhor', viu? Quem trabalha com o terminal precisa dominar as ferramentas do sistema para se tornar um sysadmin de verdade na linha de comando.</p>
