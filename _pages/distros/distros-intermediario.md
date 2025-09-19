@@ -17,10 +17,7 @@ permalink: /distros/intermediario/
 <section>
 
 
-
-<h2>
-  🐧 Escolha Sua Distro Linux Intermediária
-</h2>
+<h2>🐧 Evoluindo no Linux: As Melhores Distros para o Próximo Nível</h2>
 
 <div>
   <strong>📌 Para quem já domina o básico e quer mais controle.</strong><br>
