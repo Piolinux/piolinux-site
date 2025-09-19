@@ -1,12 +1,11 @@
 ---
-seo: false
-layout: default
+layout: manual-seo
+title_custom: "Kernel Linux: Monolítico, Híbrido, Unikernel — Guia 2025 | Piolinux"
+description_custom: "Comparação técnica evergreen: entenda diferenças entre monolítico, microkernel, híbrido, unikernel e nanokernel — sem depender de versões ou modas."
 title: "Kernel Linux: Monolítico, Híbrido, Unikernel — Guia 2025"
-description: "Comparação técnica evergreen: entenda diferenças entre monolítico, microkernel, híbrido, unikernel e nanokernel — sem depender de versões ou modas."
 permalink: /kernel/
 tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, tipos, arquitetura]
 ---
-
 
 
 
