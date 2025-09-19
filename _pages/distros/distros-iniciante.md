@@ -70,6 +70,13 @@ permalink: /distros/iniciante/
   </tbody>
 </table>
 
+<h2>Conclusão</h2>
+
+<p>
+  🐧 Sua primeira distro não precisa ser perfeita — só precisa te deixar querer a próxima.
+</p>
+
+
 
 </section>
 
