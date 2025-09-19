@@ -15,7 +15,7 @@ tags: [distros, linux, underground, alpine, void, crux, guix, chimera, alternati
 <h2>🐧 Linux Underground: Sistemas para Rebeldes, Nerds e Puristas</h2>
 
   <div>
-    <strong>📌 Para quem quer sair da bolha e explorar o lado alternativo do Linux.</strong><br>
+    <strong>Bora sair da zona de conforto e dar uma olhada no lado mais irado do Linux, saca?</strong><br>
     Distros experimentais, minimalistas, filosóficas ou com propostas radicais — ideais para quem gosta de pensar fora da caixa.
   </div>
 
