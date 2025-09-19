@@ -23,7 +23,7 @@ permalink: /distros/intermediario/
 </h2>
 
 <div>
-  <strong>📌 Para quem já domina o básico e quer mais controle</strong><br>
+  <strong>📌 Para quem já domina o básico e quer mais controle.</strong><br>
   Compare distribuições equilibradas entre facilidade e customização — ideais para desenvolvedores, sysadmins iniciantes e entusiastas.
 </div>
 
