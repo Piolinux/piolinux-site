@@ -81,7 +81,7 @@ tags: [kernel, linux, compilar, compilacao, make, config, sysadmin, desenvolvedo
         Etapas">6. Instalar módulos</td>
       <td data-label="Comandos"><code>sudo make modules_install</code></td>
       <td data-label="Propósito">Copia os módulos compilados para <code>/lib/modules/</code>.</td>
-      <td data-label="Dicas Evergreen">NÃO pule esse passo — sem módulos, seu sistema pode não bootar.</td>
+      <td data-label="Dicas Evergreen">Não seja ansioso ao pular este passo.— sem módulos, seu sistema pode não bootar.</td>
     </tr>
     <tr>
       <td data-label="
