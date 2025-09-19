@@ -38,7 +38,7 @@ tags: [kernel, linux, compilar, compilacao, make, config, sysadmin, desenvolvedo
     <tr>
       <td data-label="
       
-        Etapas">1. Instalando as dependências</td>
+        Etapas">1.Instalando as dependências utilizando os comandos.</td>
       <td data-label="Comandos"><code>sudo apt build-dep linux</code><br><code>ou</code><br><code>sudo dnf groupinstall "Development Tools" && sudo dnf install ncurses-devel bison flex openssl-devel</code></td>
       <td data-label="Propósito">Garante que todas as libs e tools necessárias estão presentes.</td>
       <td data-label="Dicas Evergreen">Sempre comece por aqui. Adapte o comando à sua distro (apt, dnf, pacman, zypper).</td>
