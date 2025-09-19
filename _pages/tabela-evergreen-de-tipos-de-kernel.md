@@ -16,9 +16,7 @@ tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, t
 <section class="post-content">
 
 <section>
-  <h2>
-    🐧 Kernel Linux: Monolítico, Híbrido, Unikernel — Guia 2025
-  </h2>
+  <h2>Arquiteturas de Kernel: Monolítico, Híbrido e Unikernel (2025)</h2>
 
   <div>
     <strong>📌 Entenda as arquiteturas de kernel — do tradicional ao experimental</strong><br>
