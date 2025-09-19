@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Título manual via front matter -->
+  {% if page.title_custom %}
+    <title>{{ page.title_custom }}</title>
+  {% else %}
+    <title>{{ page.title }} | {{ site.title }}</title>
+  {% endif %}
+
+  <!-- Meta descrição manual via front matter -->
+  {% if page.description_custom %}
+    <meta name="description" content="{{ page.description_custom | strip | escape }}">
+  {% endif %}
+
+  <!-- Seus estilos globais -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <!-- Adicione aqui favicon, fontes, ícones, etc. -->
+</head>
+<body>
+  {{ content }}
+</body>
+</html>
