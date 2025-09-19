@@ -15,7 +15,7 @@ tags: [distros, linux, iniciante, avancado, servidor, desktop, underground, comp
     <p>Guia completo para iniciantes e avançados.</p>
 
     <div class="standard-list">
-      {% assign distro_pages = site.pages | where_exp: "page", "page.url contains '/distros/' and page.url != '/distros/' and page.url != '/distros/iniciante/'" %}
+      {% assign distro_pages = site.pages | where_exp: "page", "page.url contains 'distros/' and page.url != 'distros/' and page.url != 'distros/iniciante/'" %}
       {% for page in distro_pages %}
         <li>
           <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
@@ -25,7 +25,6 @@ tags: [distros, linux, iniciante, avancado, servidor, desktop, underground, comp
     </div>
   </main>
 </section>
-
 
 
 
