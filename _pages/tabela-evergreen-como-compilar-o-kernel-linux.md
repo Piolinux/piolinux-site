@@ -121,7 +121,7 @@ tags: [kernel, linux, compilar, compilacao, make, config, sysadmin, desenvolvedo
 <h2>Conclusão</h2>
 
 <p>
-  🧬 Compilar seu kernel não é vaidade — é liberdade com responsabilidade.
+  🧬 Compilar seu kernel não é vaidade é liberdade com responsabilidade.
 </p>
 
 
