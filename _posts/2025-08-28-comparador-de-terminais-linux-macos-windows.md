@@ -17,7 +17,7 @@ permalink: /comparativo-terminais/
 <section class="post-content">
 
 
-<h2>🖥️ Comparativo Completo: Terminais por Sistema</h2>
+<h2>🖥️ Comparativo Completo: Terminais por Sistema:</h2>
 
 
 <p>Comparando os principais terminais e comandos disponíveis de sistemas operacionais: Linux, macOS e Windows! Vamos ver as diferenças em termos de facilidade de uso, personalização e compatibilidade com os vários shells disponíveis.</p>
