@@ -70,7 +70,7 @@ permalink: /distros/intermediario/
       <td data-label="
       
         Distro"><strong>Manjaro:</strong></td>
-      <td data-label="Descrição">Baseada no Arch, mas fácil de instalar. Acesso ao AUR sem complicações.</td>
+      <td data-label="Descrição">Tudo muito fácil de gerenciar e utilizar, com o Arch Linux como base, mas de fácil instalação. Acesso ao AUR sem complicações.</td>
       <td data-label="Site"><a href="https://manjaro.org" target="_blank">manjaro.org</a></td>
     </tr>
   </tbody>
