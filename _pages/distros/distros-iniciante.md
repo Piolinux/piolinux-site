@@ -1,10 +1,10 @@
 ---
-seo: false
-layout: default
-title: "Comece no Linux: Escolha Sua Distro Ideal!"
-description: "Instale fácil: Ubuntu, Mint, Zorin. Suporte, simplicidade e segurança garantidos. Ideal para quem vem do Windows!"
-tags: [linux,iniciante, distros,consulta, desktop]
-permalink: /distros/iniciante/
+layout: manual-seo
+title_custom: "Linux para Iniciantes: Guia de Escolha de Distro | Piolinux"
+description_custom: "Descubra qual distro Linux combina com seu nível e objetivos. Tabela comparativa rápida para decisão inteligente."
+title: "Linux para Iniciantes: Guia de Escolha de Distro"
+permalink: /distro-iniciante/
+tags: [ubuntu, linux-mint, fedora, escolha-distro, desktop-linux]
 ---
 
 
