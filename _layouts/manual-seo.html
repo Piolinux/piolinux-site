@@ -1,26 +1,82 @@
+<!-- _layouts/manual-seo.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Título manual via front matter -->
-  {% if page.title_custom %}
-    <title>{{ page.title_custom }}</title>
-  {% else %}
-    <title>{{ page.title }} | {{ site.title }}</title>
-  {% endif %}
-
-  <!-- Meta descrição manual via front matter -->
-  {% if page.description_custom %}
-    <meta name="description" content="{{ page.description_custom | strip | escape }}">
-  {% endif %}
-
-  <!-- Seus estilos globais -->
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <!-- Adicione aqui favicon, fontes, ícones, etc. -->
+    {% include head-manual.html %}  <!-- 👈 ÚNICA MUDANÇA: usa head personalizado -->
 </head>
 <body>
-  {{ content }}
+    {% include menu.html %}
+
+    <main>
+        <h1>{{ page.title }}</h1>
+        {% if page.tags %}
+        <div class="tags-container">
+            {% for tag in page.tags %}
+            <a href="/tags#{{ tag | slugify }}" class="tag-item">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {{ content }}
+
+        <section class="post-content">
+          <div class="random-posts-container">
+            <h3>🎲 Leitura aleatória</h3>
+            <p>Não sabe o que ler agora? Deixe o acaso escolher por você:</p>
+            <ul>
+              {% assign posts_aleatorios = site.posts | where_exp:"p", "p.url != page.url" | sample:3 %}
+              {% for post in posts_aleatorios %}
+                <li>
+                  <a href="{{ post.url }}">{{ post.title }}</a>
+                  {% if post.description %}
+                    <p>{{ post.description }}</p>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+    </main>
+
+    <div id="share" style="text-align: center; margin: 15px 0;"></div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const u = encodeURIComponent(location.href);
+        const t = encodeURIComponent(document.title);
+
+        const platforms = [
+          ['Reddit', '#cc2400', `https://www.reddit.com/submit?url=${u}&title=${t}`],
+          ['Twitter', '#0077b9', `https://twitter.com/intent/tweet?url=${u}&text=${t}`],
+          ['WhatsApp', '#075e54', `https://api.whatsapp.com/send?text=${t}%20${u}`],
+          ['LinkedIn', '#005e8e', `https://www.linkedin.com/sharing/share-offsite/?url=${u}`]
+        ];
+
+        const container = document.getElementById('share');
+        platforms.forEach(([name, color, link]) => {
+          const a = document.createElement('a');
+          a.href = link;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          a.textContent = name;
+          a.title = `Compartilhar no ${name}`;
+          a.style = `
+            background: ${color};
+            color: white;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 4px;
+            font-size: 12px;
+            text-decoration: none;
+            user-select: none;
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          `;
+          container.appendChild(a);
+        });
+      });
+    </script>
+    
+    {% include footer.html %}
 </body>
 </html>
