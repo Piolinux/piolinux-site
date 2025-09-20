@@ -1,91 +1,194 @@
-<!-- ============= 🌐 CALCULADORA DE IP / SUBNET ============= -->
-<div class="tool-container" id="ip-calculator">
-  <h2 class="tool-title">🌐 Calculadora de IP / Subnet</h2>
-  <input type="text" id="ipInput" class="tool-input" placeholder="Ex: 192.168.1.100/24 ou 10.0.0.1 255.255.255.0" />
-  <button class="tool-button" onclick="calculateIP()">Calcular</button>
-  <button class="tool-button" onclick="document.getElementById('ipInput').value=''; document.getElementById('ipResult').innerText=''">Limpar</button>
-  <div id="ipResult" class="tool-output">Resultado aparecerá aqui...</div>
-</div>
-
 <script>
 function calculateIP() {
-  const input = document.getElementById('ipInput').value.trim();
-  let result = '';
-  try {
-    let ip, mask, cidr, network, broadcast, totalHosts;
+    const input = document.getElementById('ipInput').value.trim();
+    let resultHTML = '';
 
-    if (input.includes('/')) {
-      const parts = input.split('/');
-      ip = parts[0];
-      cidr = parseInt(parts[1]);
-      if (isNaN(cidr) || cidr < 0 || cidr > 32) throw new Error('CIDR inválido');
-      mask = cidrToMask(cidr);
-    } else if (input.includes(' ')) {
-      const parts = input.split(' ');
-      ip = parts[0];
-      mask = parts[1];
-      cidr = maskToCidr(mask);
-    } else {
-      throw new Error('Formato inválido');
+    try {
+        let ip, mask, cidr, network, broadcast, totalHosts, usableRange;
+
+        // Parse input
+        if (input.includes('/')) {
+            const parts = input.split('/');
+            ip = parts[0];
+            cidr = parseInt(parts[1]);
+            if (isNaN(cidr) || cidr < 0 || cidr > 32) throw new Error('CIDR deve ser entre 0 e 32');
+            mask = cidrToMask(cidr);
+        } else if (input.includes(' ')) {
+            const parts = input.split(' ');
+            ip = parts[0];
+            mask = parts[1];
+            cidr = maskToCidr(mask);
+            if (cidr === -1) throw new Error('Máscara inválida - deve ser contígua (ex: 255.255.255.0)');
+        } else {
+            throw new Error('Use formato IP/CIDR ou IP MÁSCARA');
+        }
+
+        // Validate
+        if (!isValidIP(ip)) throw new Error('IP inválido - use formato xxx.xxx.xxx.xxx (0-255)');
+        if (!isValidMask(mask)) throw new Error('Máscara inválida - use formato xxx.xxx.xxx.xxx');
+
+        // Calculate
+        network = calculateNetwork(ip, mask);
+        broadcast = calculateBroadcast(ip, mask);
+        totalHosts = Math.pow(2, 32 - cidr) - 2;
+        const firstHost = incrementIP(network);
+        const lastHost = decrementIP(broadcast);
+        usableRange = `${firstHost} - ${lastHost}`;
+
+        // Build result with explanations
+        resultHTML = `
+            <div style="background: #121212; padding: 15px; border-radius: 6px; border: 1px solid #333;">
+                <div style="color: #8bc34a; font-weight: bold; margin-bottom: 10px;">✅ Cálculo Completo</div>
+                
+                <div style="margin: 8px 0; padding: 8px; background: #1a2a1a; border-radius: 4px;">
+                    <span style="color: #8bc34a;">IP:</span> ${ip}
+                </div>
+                
+                <div style="margin: 8px 0; padding: 8px; background: #1a2a1a; border-radius: 4px;">
+                    <span style="color: #8bc34a;">Máscara:</span> ${mask} <span style="color: #aaa;">(${cidr})</span>
+                    <div style="font-size: 0.9em; color: #aaa; margin-top: 4px;"># ${getMaskExplanation(cidr)}</div>
+                </div>
+                
+                <div style="margin: 8px 0; padding: 8px; background: #1a2a1a; border-radius: 4px;">
+                    <span style="color: #8bc34a;">Rede:</span> ${network}
+                    <div style="font-size: 0.9em; color: #aaa; margin-top: 4px;"># Endereço da rede (não atribuível)</div>
+                </div>
+                
+                <div style="margin: 8px 0; padding: 8px; background: #1a2a1a; border-radius: 4px;">
+                    <span style="color: #8bc34a;">Broadcast:</span> ${broadcast}
+                    <div style="font-size: 0.9em; color: #aaa; margin-top: 4px;"># Endereço de broadcast (não atribuível)</div>
+                </div>
+                
+                <div style="margin: 8px 0; padding: 8px; background: #1a2a1a; border-radius: 4px;">
+                    <span style="color: #8bc34a;">Hosts utilizáveis:</span> ${totalHosts.toLocaleString()}
+                    <div style="font-size: 0.9em; color: #aaa; margin-top: 4px;"># Faixa: ${usableRange}</div>
+                </div>
+            </div>
+            
+            <div style="background: #330000; color: #ff5252; padding: 10px; border-radius: 6px; margin-top: 15px; border: 1px solid #ff5252;">
+                ⚠️ <strong>Atenção Sysadmin:</strong> Sempre reserve os primeiros IPs da rede para gateways e servidores!
+            </div>
+        `;
+    } catch (e) {
+        resultHTML = `
+            <div style="background: #330000; color: #ff5252; padding: 15px; border-radius: 6px; border: 1px solid #ff5252;">
+                ❌ ${e.message}
+            </div>
+            <div style="background: #1a2a1a; color: #aaa; padding: 15px; border-radius: 6px; margin-top: 10px;">
+                <strong>📌 Formatos válidos:</strong><br>
+                • <code>192.168.1.100/24</code> (CIDR)<br>
+                • <code>10.0.0.1 255.255.255.0</code> (máscara decimal)<br><br>
+                <strong>💡 Dica:</strong> Use /24 para redes pequenas (254 hosts), /16 para redes grandes (65.534 hosts)
+            </div>
+        `;
     }
 
-    if (!isValidIP(ip)) throw new Error('IP inválido');
-    if (!isValidMask(mask)) throw new Error('Máscara inválida');
-
-    network = calculateNetwork(ip, mask);
-    broadcast = calculateBroadcast(ip, mask);
-    totalHosts = Math.pow(2, 32 - cidr) - 2;
-
-    result = `IP: ${ip}\nMáscara: ${mask} (${cidr})\nRede: ${network}\nBroadcast: ${broadcast}\nHosts: ${totalHosts}`;
-  } catch (e) {
-    result = `Erro: ${e.message}\n\nFormatos válidos:\n- IP/CIDR → 192.168.1.100/24\n- IP MÁSCARA → 10.0.0.1 255.255.255.0`;
-  }
-  document.getElementById('ipResult').innerText = result;
+    document.getElementById('ipResult').innerHTML = resultHTML;
 }
 
-// Funções auxiliares (mantidas aqui por simplicidade)
+// Helper functions
 function cidrToMask(cidr) {
-  const mask = [0, 0, 0, 0];
-  for (let i = 0; i < cidr; i++) {
-    mask[Math.floor(i / 8)] += 1 << (7 - i % 8);
-  }
-  return mask.join('.');
+    const mask = [0, 0, 0, 0];
+    for (let i = 0; i < cidr; i++) {
+        mask[Math.floor(i / 8)] += 1 << (7 - i % 8);
+    }
+    return mask.join('.');
 }
 
 function maskToCidr(mask) {
-  return mask.split('.').reduce((cidr, octet) => {
-    const bits = parseInt(octet).toString(2).replace(/0/g, '').length;
-    return cidr + bits;
-  }, 0);
+    const parts = mask.split('.');
+    if (parts.length !== 4) return -1;
+    
+    let cidr = 0;
+    for (let part of parts) {
+        const num = parseInt(part);
+        if (isNaN(num) || num < 0 || num > 255) return -1;
+        const bin = num.toString(2).padStart(8, '0');
+        cidr += (bin.match(/1/g) || []).length;
+        
+        // Check for non-contiguous masks
+        const firstZero = bin.indexOf('0');
+        if (firstZero !== -1 && bin.slice(firstZero).includes('1')) {
+            return -1;
+        }
+    }
+    return cidr;
 }
 
 function calculateNetwork(ip, mask) {
-  return ip.split('.').map((octet, i) => {
-    return parseInt(octet) & parseInt(mask.split('.')[i]);
-  }).join('.');
+    return ip.split('.').map((octet, i) => {
+        return parseInt(octet) & parseInt(mask.split('.')[i]);
+    }).join('.');
 }
 
 function calculateBroadcast(ip, mask) {
-  return ip.split('.').map((octet, i) => {
-    return parseInt(octet) | (255 - parseInt(mask.split('.')[i]));
-  }).join('.');
+    return ip.split('.').map((octet, i) => {
+        return parseInt(octet) | (255 - parseInt(mask.split('.')[i]));
+    }).join('.');
 }
 
 function isValidIP(ip) {
-  const parts = ip.split('.');
-  if (parts.length !== 4) return false;
-  return parts.every(part => {
-    const num = parseInt(part);
-    return !isNaN(num) && num >= 0 && num <= 255;
-  });
+    const parts = ip.split('.');
+    if (parts.length !== 4) return false;
+    return parts.every(part => {
+        const num = parseInt(part);
+        return !isNaN(num) && num >= 0 && num <= 255;
+    });
 }
 
 function isValidMask(mask) {
-  const parts = mask.split('.');
-  if (parts.length !== 4) return false;
-  const binary = parts.map(p => parseInt(p).toString(2).padStart(8, '0')).join('');
-  const firstZero = binary.indexOf('0');
-  if (firstZero === -1) return true;
-  return binary.slice(firstZero).indexOf('1') === -1;
+    const parts = mask.split('.');
+    if (parts.length !== 4) return false;
+    const binary = parts.map(p => parseInt(p).toString(2).padStart(8, '0')).join('');
+    const firstZero = binary.indexOf('0');
+    if (firstZero === -1) return true;
+    return binary.slice(firstZero).indexOf('1') === -1;
+}
+
+function getMaskExplanation(cidr) {
+    const explanations = {
+        32: "Host único (máscara 255.255.255.255)",
+        30: "2 hosts (links ponto-a-ponto)",
+        29: "6 hosts (pequenas sub-redes)",
+        28: "14 hosts",
+        27: "30 hosts",
+        26: "62 hosts",
+        25: "126 hosts",
+        24: "254 hosts (rede classe C padrão)",
+        23: "510 hosts",
+        22: "1022 hosts",
+        21: "2046 hosts",
+        20: "4094 hosts",
+        19: "8190 hosts",
+        18: "16382 hosts",
+        17: "32766 hosts",
+        16: "65534 hosts (rede classe B padrão)",
+        8: "16.777.214 hosts (rede classe A padrão)"
+    };
+    return explanations[cidr] || `${Math.pow(2, 32 - cidr) - 2} hosts utilizáveis`;
+}
+
+function incrementIP(ip) {
+    const parts = ip.split('.').map(Number);
+    for (let i = 3; i >= 0; i--) {
+        if (parts[i] < 255) {
+            parts[i]++;
+            break;
+        }
+        parts[i] = 0;
+    }
+    return parts.join('.');
+}
+
+function decrementIP(ip) {
+    const parts = ip.split('.').map(Number);
+    for (let i = 3; i >= 0; i--) {
+        if (parts[i] > 0) {
+            parts[i]--;
+            break;
+        }
+        parts[i] = 255;
+    }
+    return parts.join('.');
 }
 </script>
