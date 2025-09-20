@@ -1,41 +1,69 @@
-<!-- ============= 💾 GERADOR DE COMANDOS DE BACKUP ============= -->
-<div class="tool-container" id="backup-generator">
-  <h2 class="tool-title">💾 Gerador de Comandos de Backup</h2>
-  <select id="backupType" class="tool-input" style="margin-bottom: 0.5rem;">
-    <option value="tar">Compactar com tar.gz</option>
-    <option value="rsync">Sincronizar com rsync</option>
-    <option value="dd">Imagem de disco com dd</option>
-    <option value="mysqldump">Backup MySQL</option>
-  </select>
-  <div id="backupOptions">
-    <input type="text" id="sourcePath" class="tool-input" placeholder="Caminho de origem (ex: /home/user/docs)" />
-    <input type="text" id="destPath" class="tool-input" placeholder="Caminho de destino (ex: /backup/docs.tar.gz)" />
-  </div>
-  <button class="tool-button" onclick="generateBackupCommand()">Gerar Comando</button>
-  <div id="backupResult" class="tool-output">Comando aparecerá aqui...</div>
-</div>
-
 <script>
 function generateBackupCommand() {
-  const type = document.getElementById('backupType').value;
-  const source = document.getElementById('sourcePath').value.trim();
-  const dest = document.getElementById('destPath').value.trim();
-  let command = '';
+    const type = document.getElementById('backupType').value;
+    const source = document.getElementById('sourcePath').value.trim();
+    const dest = document.getElementById('destPath').value.trim();
+    let command = '';
+    let explanation = '';
+    let warning = '';
 
-  switch (type) {
-    case 'tar':
-      command = source && dest ? `tar -czvf ${dest} ${source}` : 'Preencha origem e destino';
-      break;
-    case 'rsync':
-      command = source && dest ? `rsync -avz --progress ${source}/ ${dest}/` : 'Preencha origem e destino';
-      break;
-    case 'dd':
-      command = source && dest ? `dd if=${source} of=${dest} bs=4M status=progress` : 'Preencha origem e destino';
-      break;
-    case 'mysqldump':
-      command = dest ? `mysqldump -u [usuario] -p [banco] > ${dest}` : 'Preencha destino';
-      break;
-  }
-  document.getElementById('backupResult').innerText = command;
+    switch (type) {
+        case 'tar':
+            if (source && dest) {
+                command = `tar -czvf ${dest} ${source}`;
+                explanation = `# -c: criar arquivo | -z: gzip | -v: verbose | -f: nome do arquivo`;
+                warning = '💡 Dica: Adicione --exclude="*.log" para ignorar logs.';
+            } else {
+                command = '❌ Preencha origem e destino';
+            }
+            break;
+        case 'rsync':
+            if (source && dest) {
+                command = `rsync -avz --progress ${source}/ ${dest}/`;
+                explanation = `# -a: archive (preserva permissões) | -v: verbose | -z: compressão`;
+                warning = '⚠️ Teste com --dry-run primeiro!';
+            } else {
+                command = '❌ Preencha origem e destino';
+            }
+            break;
+        case 'dd':
+            if (source && dest) {
+                command = `dd if=${source} of=${dest} bs=4M status=progress`;
+                explanation = `# if: input file | of: output file | bs: block size | status: progresso`;
+                warning = '🚨 CUIDADO: dd apaga dados se usado incorretamente!';
+            } else {
+                command = '❌ Preencha origem e destino';
+            }
+            break;
+        case 'mysqldump':
+            if (dest) {
+                command = `mysqldump -u [usuario] -p [banco] > ${dest}`;
+                explanation = `# -u: usuário | -p: pede senha | >: redireciona saída`;
+                warning = '🔐 Nunca exponha senhas: use ~/.my.cnf para autenticação segura.';
+            } else {
+                command = '❌ Preencha destino';
+            }
+            break;
+    }
+
+    // Atualiza interface
+    document.getElementById('backupResult').innerHTML = `
+        <div style="font-family: monospace; font-size: 1.1em; color: #8bc34a; margin-bottom: 8px;">
+            ${command}
+        </div>
+        ${explanation ? `<div style="font-size: 0.9em; color: #aaa; margin-bottom: 8px;">${explanation}</div>` : ''}
+        ${warning ? `<div style="font-size: 0.9em; color: #ffcc00; font-weight: bold;">${warning}</div>` : ''}
+    `;
+}
+
+function copyBackupCommand() {
+    const text = document.getElementById('backupResult').innerText;
+    if (text && !text.includes('❌')) {
+        navigator.clipboard.writeText(text.split('\n')[0]).then(() => {
+            alert('✅ Comando copiado!');
+        }).catch(() => {
+            alert('❌ Falha ao copiar. Tente manualmente.');
+        });
+    }
 }
 </script>
