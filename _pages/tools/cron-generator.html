@@ -15,44 +15,106 @@ tags: [cron, linux, sysadmin, automacao, devops, servidores]
 <section class="tool-single-page">
   <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
   
-  <div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-      <div>
-        <label>Minuto: <input type="text" id="cronMinute" placeholder="*" value="0"></label>
-        <small>0-59 ou *</small>
-      </div>
-      <div>
-        <label>Hora: <input type="text" id="cronHour" placeholder="*" value="12"></label>
-        <small>0-23 ou *</small>
-      </div>
-      <div>
-        <label>Dia do Mês: <input type="text" id="cronDay" placeholder="*" value="1"></label>
-        <small>1-31 ou *</small>
-      </div>
-      <div>
-        <label>Mês: <input type="text" id="cronMonth" placeholder="*" value="*"></label>
-        <small>1-12 ou *</small>
-      </div>
-      <div>
-        <label>Dia da Semana: <input type="text" id="cronWeekday" placeholder="*" value="*"></label>
-        <small>0-7 (0=domingo) ou *</small>
+ <div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Gerador de Expressões Cron</h2>
+  
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid #333;">
+    <strong>💡 Dica de Sysadmin:</strong> Lembre-se — se "dia do mês" e "dia da semana" estão definidos, a tarefa executa quando <strong>QUALQUER UMA</strong> das condições for verdadeira — não ambas!
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px;">
+    <div style="background: #1a2a1a; padding: 15px; border-radius: 6px; border: 1px solid #333;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;">
+        Minuto: 
+        <input type="text" id="cronMinute" placeholder="*" value="0" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
+      </label>
+      <small style="color: #aaa; display: block;">0-59 ou * (qualquer minuto)</small>
+    </div>
+    
+    <div style="background: #1a2a1a; padding: 15px; border-radius: 6px; border: 1px solid #333;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;">
+        Hora: 
+        <input type="text" id="cronHour" placeholder="*" value="12" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
+      </label>
+      <small style="color: #aaa; display: block;">0-23 ou * (qualquer hora)</small>
+    </div>
+    
+    <div style="background: #1a2a1a; padding: 15px; border-radius: 6px; border: 1px solid #333;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;">
+        Dia do Mês: 
+        <input type="text" id="cronDay" placeholder="*" value="1" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
+      </label>
+      <small style="color: #aaa; display: block;">1-31 ou * (qualquer dia)</small>
+    </div>
+    
+    <div style="background: #1a2a1a; padding: 15px; border-radius: 6px; border: 1px solid #333;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;">
+        Mês: 
+        <input type="text" id="cronMonth" placeholder="*" value="*" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
+      </label>
+      <small style="color: #aaa; display: block;">1-12 ou * (qualquer mês)</small>
+    </div>
+    
+    <div style="background: #1a2a1a; padding: 15px; border-radius: 6px; border: 1px solid #333;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;">
+        Dia da Semana: 
+        <input type="text" id="cronWeekday" placeholder="*" value="*" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
+      </label>
+      <small style="color: #aaa; display: block;">0-7 (0=domingo, 7=domingo) ou * (qualquer dia)</small>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+    <button onclick="generateCron()" style="background: #4caf50; color: white; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1.1em; flex: 1;">
+      🔄 Gerar Expressão Cron
+    </button>
+    <button onclick="copyCron()" style="background: #2196F3; color: white; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1.1em; flex: 1;">
+      📋 Copiar Cron
+    </button>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 20px;">
+    <div>
+      <h3 style="color: #8bc34a; margin-bottom: 15px; font-size: 1.2em;">📋 Expressão Cron Gerada</h3>
+      <div id="cronOutput" style="padding: 20px; background: #121212; border: 1px solid #333; border-radius: 8px; color: #8bc34a; font-family: 'Courier New', monospace; font-size: 1.3em; font-weight: bold; text-align: center; min-height: 60px; display: flex; align-items: center; justify-content: center;">
+        0 12 1 * *
       </div>
     </div>
-    <button class="tool-button" onclick="generateCron()">Gerar Expressão Cron</button>
-    <button class="tool-button" onclick="copyCron()">Copiar Cron</button>
-    <div style="margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-      <div>
-        <h4>Expressão Cron:</h4>
-        <div id="cronOutput" style="padding: 1rem; background: #2a2a3c; border: 1px solid #454565; border-radius: 6px; color: #a6e3a1; font-family: monospace; font-size: 1.2rem; font-weight: bold; text-align: center;"></div>
+    
+    <div>
+      <h3 style="color: #8bc34a; margin-bottom: 15px; font-size: 1.2em;">📖 Explicação em Português</h3>
+      <div id="cronExplanation" style="padding: 20px; background: #1a1a1a; border: 1px solid #333; border-radius: 8px; color: #e0e0e0; font-family: 'Courier New', monospace; font-size: 1em; line-height: 1.6; min-height: 60px;">
+        Executa todo dia 1 de cada mês às 12h00.
       </div>
-      <div>
-        <h4>Explicação em Português:</h4>
-        <div id="cronExplanation" style="padding: 1rem; background: #313244; border: 1px solid #5a5a72; border-radius: 6px; color: #bac2de; font-family: monospace; font-size: 0.95rem; line-height: 1.5;"></div>
-        <div id="cronWarning" style="margin-top: 1rem; padding: 0.75rem; background: #f38ba8; color: #1e1e2e; border-radius: 6px; font-family: monospace; font-size: 0.9rem; display: none;"></div>
+      
+      <div id="cronWarning" style="margin-top: 20px; padding: 15px; background: #330000; color: #ff5252; border: 1px solid #ff5252; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.95em; display: none;">
+        ⚠️ <strong>ATENÇÃO:</strong> Se "dia do mês" e "dia da semana" estão definidos, a tarefa executa quando QUALQUER UMA das condições for verdadeira — não as duas juntas. Para executar só quando ambas forem verdadeiras, adicione uma verificação no seu script.
       </div>
     </div>
   </div>
 
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 20px; border-radius: 8px; margin-top: 30px; border: 1px solid #333;">
+    <h3 style="color: #8bc34a; margin-top: 0;">🎯 Exemplos Práticos:</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+      <div style="background: #121212; padding: 15px; border-radius: 6px; border: 1px solid #333;">
+        <strong>0 2 * * *</strong><br>
+        <small>Todo dia às 2h da manhã (backup diário)</small>
+      </div>
+      <div style="background: #121212; padding: 15px; border-radius: 6px; border: 1px solid #333;">
+        <strong>0 0 * * 0</strong><br>
+        <small>Todo domingo à meia-noite (limpeza de logs)</small>
+      </div>
+      <div style="background: #121212; padding: 15px; border-radius: 6px; border: 1px solid #333;">
+        <strong>*/5 * * * *</strong><br>
+        <small>A cada 5 minutos (monitoramento)</small>
+      </div>
+      <div style="background: #121212; padding: 15px; border-radius: 6px; border: 1px solid #333;">
+        <strong>0 3 15 * 6</strong><br>
+        <small>Todo dia 15 OU todo sábado às 3h (⚠️ CUIDADO!)</small>
+      </div>
+    </div>
+  </div>
+</div>
   <div class="seo-content">
   <h2>Para que serve o  Cron?</h2>
   <p>É um utilitário de linha de comando para automatizar scripts, 
