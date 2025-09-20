@@ -15,43 +15,75 @@ tags: [regex, dev, programacao, validacao, ferramentas]
 <section class="tool-single-page" style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
   <a href="/ferramentas/" class="back-link" style="color: #89b4fa; text-decoration: none; display: inline-block; margin-bottom: 2rem; font-family: monospace;">← Voltar para todas as ferramentas</a>
   
- 
+ <div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Gerador de Expressões Regulares</h2>
+  
+  <div style="margin-bottom: 20px;">
+    <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Selecione o tipo de Regex:</strong></label>
+    <select id="regexPattern" style="background: #2a2a2a; color: #e0e0e0; padding: 10px; border: 1px solid #444; border-radius: 4px; width: 100%; max-width: 400px; font-family: monospace;">
+      <option value="email">✉️ Email</option>
+      <option value="url">🌐 URL</option>
+      <option value="cep">📮 CEP Brasileiro</option>
+      <option value="phone">📱 Telefone Brasileiro</option>
+      <option value="ip">📡 IPv4</option>
+      <option value="hostname">💻 Hostname</option>
+    </select>
+  </div>
 
-  <div style="background: #1e1e2e; padding: 2rem; border-radius: 12px; border: 1px solid #313244;">
-    <label style="display: block; margin-bottom: 1rem; color: #cdd6f4; font-family: monospace;">
-      Padrão: 
-      <select id="regexPattern" style="padding: 0.75rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 6px; margin-left: 1rem;">
-        <option value="email">Email</option>
-        <option value="url">URL</option>
-        <option value="cep">CEP (Brasil)</option>
-        <option value="phone">Telefone (Brasil)</option>
-        <option value="number">Número Inteiro</option>
-        <option value="decimal">Número Decimal</option>
-        <option value="date">Data (DD/MM/AAAA)</option>
-      </select>
-    </label>
+  <div style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #333; margin-bottom: 20px;">
+    <h3 style="color: #8bc34a; margin-top: 0; font-size: 1.2em;">📋 Expressão Regular</h3>
+    <textarea 
+        id="regexOutput" 
+        readonly 
+        style="width: 100%; height: 60px; padding: 15px; background: #121212; color: #a6e3a1; border: 1px solid #333; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 1em; resize: vertical; margin-bottom: 15px;">
+^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+    </textarea>
+    <button onclick="copyRegex()" style="background: #2196F3; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold;">
+      📋 Copiar Regex
+    </button>
+  </div>
+
+  <div style="background: #1a2a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin-bottom: 20px;">
+    <h3 style="color: #8bc34a; margin-top: 0; font-size: 1.2em;">📖 Explicação Técnica</h3>
+    <pre id="regexExplanation" style="color: #e0e0e0; font-family: 'Courier New', monospace; font-size: 0.95em; line-height: 1.6; background: #121212; padding: 15px; border-radius: 6px; overflow-x: auto;">
+# Valida email técnico
+• ^ : início da string
+• [a-zA-Z0-9._%+-]+ : caracteres antes do @
+• @ : caractere literal
+• [a-zA-Z0-9.-]+ : domínio
+• \.[a-zA-Z]{2,} : TLD (.com, .org, etc)
+• $ : fim da string
+    </pre>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <h3 style="color: #8bc34a; margin-bottom: 15px; font-size: 1.2em;">🧪 Teste sua Regex</h3>
+    <input 
+        type="text" 
+        id="regexTest" 
+        placeholder="Digite um valor para testar..." 
+        style="width: 100%; max-width: 500px; padding: 10px; margin-bottom: 15px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
     
-    <div style="margin: 1.5rem 0;">
-      <button class="tool-button" onclick="generateRegex()" style="background: #89b4fa; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; margin-right: 1rem;">Gerar Regex</button>
-      <button class="tool-button" onclick="copyRegex()" style="background: #a6e3a1; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer;">Copiar Regex</button>
-    </div>
-
-    <div style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-      <div>
-        <h4 style="color: #cdd6f4; font-family: monospace; margin-bottom: 1rem;">Expressão Regular:</h4>
-        <textarea id="regexOutput" readonly style="width: 100%; height: 140px; background: #2a2a3c; color: #cdd6f4; padding: 1.25rem; border: 1px solid #454565; border-radius: 8px; font-family: monospace; white-space: pre; font-size: 14px;"></textarea>
-      </div>
-      <div>
-        <h4 style="color: #cdd6f4; font-family: monospace; margin-bottom: 1rem;">Explicação:</h4>
-        <div id="regexExplanation" style="padding: 1.25rem; background: #313244; border: 1px solid #5a5a72; border-radius: 8px; color: #bac2de; font-family: monospace; font-size: 13px; line-height: 1.6; min-height: 140px;"></div>
-        
-        <h4 style="margin-top: 1.5rem; color: #cdd6f4; font-family: monospace;">Teste sua regex:</h4>
-        <input type="text" id="regexTest" placeholder="Digite um valor para testar (ex: 01/01/2024)" style="width: 100%; padding: 0.875rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 8px; margin-top: 0.75rem; font-size: 14px;">
-        <div id="regexTestResult" style="margin-top: 0.75rem; padding: 0.75rem; border-radius: 6px; font-family: monospace; font-weight: bold; font-size: 14px; text-align: center; min-height: 28px;"></div>
-      </div>
+    <div id="regexTestResult" style="min-height: 60px; display: flex; align-items: center; justify-content: center;">
+        <!-- Resultado aparece aqui -->
     </div>
   </div>
 
+  <div style="margin-bottom: 20px;">
+    <h3 style="color: #8bc34a; margin-bottom: 15px; font-size: 1.2em;">🎯 Exemplos Práticos</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+      <!-- Exemplos serão gerados pelo JS -->
+      <button onclick="testExample('usuario@exemplo.com')" style="background: #2a2a2a; color: #a6e3a1; border: 1px solid #a6e3a1; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-family: monospace; font-size: 0.9em;">usuario@exemplo.com</button>
+      <button onclick="testExample('invalido@.com')" style="background: #2a2a2a; color: #f38ba8; border: 1px solid #f38ba8; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-family: monospace; font-size: 0.9em;">invalido@.com</button>
+      <button onclick="testExample('192.168.1.1')" style="background: #2a2a2a; color: #a6e3a1; border: 1px solid #a6e3a1; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-family: monospace; font-size: 0.9em;">192.168.1.1</button>
+      <button onclick="testExample('999.999.999.999')" style="background: #2a2a2a; color: #f38ba8; border: 1px solid #f38ba8; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-family: monospace; font-size: 0.9em;">999.999.999.999</button>
+    </div>
+  </div>
+
+  <div id="regexTip" style="background: #1a2a1a; color: #8bc34a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin-top: 20px;">
+    💡 Sysadmin: Use para validar emails em scripts de cadastro — mas lembre-se: a única forma de validar 100% é enviando um email de confirmação!
+  </div>
+</div>
   
     <h2>Pra que serve Regex, ou expressão regular?</h2>
     <p>É tipo um código que encontra um padrão em textos, utilizada na ciência da computação?A gente usa pra checar se algo tá certo, pegar informações específicas ou trocar um pedaço do texto por outro.
@@ -64,147 +96,112 @@ tags: [regex, dev, programacao, validacao, ferramentas]
   </div>
 </section>
 
-
 <script>
 {% raw %}
-// ============= OBJETO COM TODAS AS REGEXES (COMO LITERAIS) =============
+// ============= OBJETO COM REGEXES TÉCNICAS REAIS =============
 const regexes = {
   email: {
     regex: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-    explanation: `• ^ : início da string
-• [a-zA-Z0-9._%+-]+ : caracteres permitidos antes do @
-• @ : caractere literal
-• [a-zA-Z0-9.-]+ : domínio
-• \\.[a-zA-Z]{2,} : ponto seguido de 2+ letras
-• $ : fim da string`
+    explanation: `# Valida email técnico\n• ^ : início da string\n• [a-zA-Z0-9._%+-]+ : caracteres antes do @\n• @ : caractere literal\n• [a-zA-Z0-9.-]+ : domínio\n• \\.[a-zA-Z]{2,} : TLD (.com, .org, etc)\n• $ : fim da string`,
+    examples: ['usuario@exemplo.com', 'teste+tag@dominio.org', 'invalido@.com', 'sem-arroba.com'],
+    tip: '💡 Sysadmin: Use para validar emails em scripts de cadastro — mas lembre-se: a única forma de validar 100% é enviando um email de confirmação!'
   },
   url: {
     regex: /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/,
-    explanation: `• ^ : início
-• (https?:\/\/)? : http:// ou https:// (opcional)
-• ([\\da-z\\.-]+) : subdomínio ou domínio
-• \\.([a-z\\.]{2,6}) : .com, .org, etc.
-• ([\\/\\w \\.-]*)* : caminho (opcional)
-• \\/?$ : barra final (opcional)
-• $ : fim`
+    explanation: `# Valida URL técnica\n• ^ : início\n• (https?:\/\/)? : http:// ou https:// (opcional)\n• ([\\da-z\\.-]+) : subdomínio ou domínio\n• \\.([a-z\\.]{2,6}) : .com, .org, .io\n• ([\\/\\w \\.-]*)* : caminho (opcional)\n• \\/?$ : barra final (opcional)\n• $ : fim`,
+    examples: ['https://piolinux.com', 'http://localhost:3000', 'github.com', 'invalido sem protocolo'],
+    tip: '💡 Dev: Útil para validar URLs em formulários — mas sempre valide no backend também!'
   },
   cep: {
     regex: /^\d{5}-?\d{3}$/,
-    explanation: `• ^ : início
-• \\d{5} : 5 dígitos
-• -? : hífen opcional
-• \\d{3} : 3 dígitos
-• $ : fim`
+    explanation: `# Valida CEP brasileiro\n• ^ : início\n• \\d{5} : 5 dígitos (primeira parte)\n• -? : hífen opcional\n• \\d{3} : 3 dígitos (segunda parte)\n• $ : fim`,
+    examples: ['01001-000', '22041001', '12345-678', '1234-5678'],
+    tip: '💡 Frontend: Use para mascarar campos de CEP em tempo real — melhora UX e reduz erros!'
   },
   phone: {
     regex: /^\(?[0-9]{2}\)?[-.\s]?[0-9]{4,5}[-.\s]?[0-9]{4}$/,
-    explanation: `• ^ : início
-• \\(?[0-9]{2}\\)? : DDD com parênteses opcionais
-• [-.\\s]? : separador opcional (hífen, ponto ou espaço)
-• [0-9]{4,5} : 4 ou 5 dígitos
-• [-.\\s]? : separador opcional
-• [0-9]{4} : 4 dígitos
-• $ : fim`
+    explanation: `# Valida telefone brasileiro\n• ^ : início\n• \\(?[0-9]{2}\\)? : DDD com parênteses opcionais\n• [-.\\s]? : separador opcional\n• [0-9]{4,5} : 4 ou 5 dígitos (fixo/celular)\n• [-.\\s]? : separador opcional\n• [0-9]{4} : 4 dígitos\n• $ : fim`,
+    examples: ['(11) 99999-9999', '21987654321', '31 3333-3333', '11-9999-9999'],
+    tip: '💡 UX: Normalize para formato padrão (XX) XXXXX-XXXX antes de salvar no banco!'
   },
-  number: {
-    regex: /^-?\d+$/,
-    explanation: `• ^ : início
-• -? : sinal negativo opcional
-• \\d+ : um ou mais dígitos
-• $ : fim`
+  ip: {
+    regex: /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/,
+    explanation: `# Valida IPv4\n• ^ : início\n• (25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?) : 0-255\n• \\. : ponto literal (3x)\n• $ : fim`,
+    examples: ['192.168.1.1', '8.8.8.8', '255.255.255.255', '999.999.999.999'],
+    tip: '💡 Sysadmin: Essencial para scripts de rede, firewalls e configurações de servidor!'
   },
-  decimal: {
-    regex: /^-?\d+(,\d+)?(\.\d+)?$/,
-    explanation: `• ^ : início
-• -? : sinal negativo opcional
-• \\d+ : parte inteira
-• (,\\d+)? : vírgula decimal + dígitos (opcional - BR)
-• (\\.\\d+)? : ponto decimal + dígitos (opcional - US)
-• $ : fim`
-  },
-  date: {
-    regex: /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/,
-    explanation: `• ^ : início
-• (0[1-9]|[12][0-9]|3[01]) : dia 01-31
-• \\/ : barra literal
-• (0[1-9]|1[0-2]) : mês 01-12
-• \\/ : barra literal
-• \\d{4} : ano de 4 dígitos
-• $ : fim`
+  hostname: {
+    regex: /^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)*[a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?$/,
+    explanation: `# Valida hostname\n• ^ : início\n• ([a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.) : subdomínios\n• [a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])? : domínio raiz\n• $ : fim`,
+    examples: ['localhost', 'piolinux.com', 'sub.dominio.com.br', 'nome_invalido_'],
+    tip: '💡 DevOps: Use em inventários de servidores, arquivos de hosts e configurações de DNS!'
   }
 };
 
 // ============= FUNÇÕES =============
 function generateRegex() {
-  const pattern = document.getElementById('regexPattern').value;
-  const item = regexes[pattern];
-  
-  // Exibe a regex (remove as barras / inicial e final)
-  document.getElementById('regexOutput').value = item.regex.toString().slice(1, -1);
-  document.getElementById('regexExplanation').textContent = item.explanation;
-  document.getElementById('regexTest').value = '';
-  document.getElementById('regexTestResult').textContent = '';
-  document.getElementById('regexTestResult').className = '';
+    const pattern = document.getElementById('regexPattern').value;
+    const item = regexes[pattern];
+    
+    // Exibe a regex
+    const regexStr = item.regex.toString().slice(1, -1);
+    document.getElementById('regexOutput').value = regexStr;
+    document.getElementById('regexExplanation').textContent = item.explanation;
+    document.getElementById('regexTip').innerHTML = item.tip;
+    document.getElementById('regexTest').value = '';
+    document.getElementById('regexTestResult').innerHTML = '';
 }
 
 function copyRegex() {
-  const text = document.getElementById('regexOutput').value;
-  if (text) {
-    navigator.clipboard.writeText(text).then(() => {
-      alert('✅ Regex copiada para a área de transferência!');
-    }).catch(err => {
-      console.error('Erro ao copiar: ', err);
-    });
-  }
+    const text = document.getElementById('regexOutput').value;
+    if (text) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert('✅ Regex copiada para a área de transferência!');
+        }).catch(err => {
+            console.error('Erro ao copiar: ', err);
+            alert('❌ Falha ao copiar. Tente manualmente.');
+        });
+    }
 }
 
 function testRegex() {
-  const pattern = document.getElementById('regexPattern').value;
-  const regex = regexes[pattern].regex;
-  const testValue = document.getElementById('regexTest').value.trim();
-  const resultDiv = document.getElementById('regexTestResult');
-  
-  if (testValue === '') {
-    resultDiv.textContent = '';
-    resultDiv.className = '';
-    return;
-  }
+    const pattern = document.getElementById('regexPattern').value;
+    const regex = regexes[pattern].regex;
+    const testValue = document.getElementById('regexTest').value.trim();
+    const resultDiv = document.getElementById('regexTestResult');
+    
+    if (testValue === '') {
+        resultDiv.innerHTML = '';
+        return;
+    }
 
-  if (regex.test(testValue)) {
-    resultDiv.textContent = '✅ CORRESPONDE!';
-    resultDiv.className = 'match';
-    resultDiv.style.background = '#a6e3a1';
-    resultDiv.style.color = '#1e1e2e';
-  } else {
-    resultDiv.textContent = '❌ NÃO CORRESPONDE!';
-    resultDiv.className = 'nomatch';
-    resultDiv.style.background = '#f38ba8';
-    resultDiv.style.color = '#1e1e2e';
-  }
+    if (regex.test(testValue)) {
+        resultDiv.innerHTML = `<span style="color: #1e1e2e; font-weight: bold;">✅ CORRESPONDE!</span>`;
+        resultDiv.style.background = '#a6e3a1';
+    } else {
+        resultDiv.innerHTML = `<span style="color: #1e1e2e; font-weight: bold;">❌ NÃO CORRESPONDE!</span>`;
+        resultDiv.style.background = '#f38ba8';
+    }
+    resultDiv.style.padding = '15px';
+    resultDiv.style.borderRadius = '8px';
+    resultDiv.style.textAlign = 'center';
+    resultDiv.style.fontFamily = 'monospace';
+    resultDiv.style.marginTop = '15px';
+}
+
+function testExample(example) {
+    document.getElementById('regexTest').value = example;
+    testRegex();
 }
 
 // ============= INICIALIZAÇÃO =============
 document.addEventListener('DOMContentLoaded', function() {
-  // Vincula eventos
-  document.getElementById('regexPattern').addEventListener('change', generateRegex);
-  document.getElementById('regexTest').addEventListener('input', testRegex);
-  
-  // Gera a primeira regex (email por padrão)
-  generateRegex();
+    document.getElementById('regexPattern').addEventListener('change', generateRegex);
+    document.getElementById('regexTest').addEventListener('input', testRegex);
+    generateRegex();
 });
 {% endraw %}
 </script>
-
-<style>
-.match, .nomatch {
-  padding: 0.75rem;
-  border-radius: 6px;
-  font-family: monospace;
-  font-weight: bold;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-</style>
 
 
 
