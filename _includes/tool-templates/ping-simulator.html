@@ -1,29 +1,103 @@
-<!-- ============= 📡 PING VISUAL (SIMULADO) ============= -->
-<div class="tool-container" id="ping-simulator">
-  <h2 class="tool-title">📡 Ping Visual (Simulado)</h2>
-  <input type="text" id="pingHost" class="tool-input" placeholder="Ex: google.com ou 8.8.8.8" value="google.com" />
-  <button class="tool-button" onclick="simulatePing()">Ping!</button>
-  <div id="pingResult" class="tool-output" style="height: 200px; overflow-y: auto; font-size: 0.9rem;">Clique em "Ping!" para começar...</div>
-</div>
-
 <script>
 function simulatePing() {
-  const host = document.getElementById('pingHost').value.trim() || 'google.com';
-  const resultDiv = document.getElementById('pingResult');
-  resultDiv.innerHTML = `<div class="tag">PING ${host} (simulado)</div>`;
+    const host = document.getElementById('pingHost').value.trim() || 'google.com';
+    const resultDiv = document.getElementById('pingResult');
+    const statsDiv = document.getElementById('pingStats');
+    
+    // Limpa resultados anteriores
+    resultDiv.innerHTML = '';
+    statsDiv.innerHTML = '';
+    
+    // Mostra cabeçalho
+    resultDiv.innerHTML += `<div style="color: #8bc34a; font-weight: bold; margin-bottom: 10px;">PING ${host} (simulado)</div>`;
+    
+    const intervals = [];
+    const packetLoss = Math.random() < 0.2 ? 1 : 0; // 20% de chance de perda
+    
+    // Gera 5 pings simulados
+    for (let i = 0; i < 5; i++) {
+        setTimeout(() => {
+            // Simula perda de pacote
+            if (packetLoss && i === 2) {
+                const line = `<span style="color: #ff5252;">Request timeout for icmp_seq=${i+1}</span>`;
+                resultDiv.innerHTML += `${line}<br>`;
+                intervals.push(null);
+            } else {
+                // Gera latência realista
+                let time;
+                if (host.includes('local') || host === '127.0.0.1') {
+                    time = Math.floor(Math.random() * 5) + 1; // 1-5ms
+                } else if (host.includes('google') || host.includes('8.8.8.8')) {
+                    time = Math.floor(Math.random() * 30) + 10; // 10-40ms
+                } else {
+                    time = Math.floor(Math.random() * 100) + 50; // 50-150ms
+                }
+                intervals.push(time);
+                
+                // Cor por latência
+                let color = '#8bc34a'; // Verde (ótimo)
+                if (time > 100) color = '#ff9800'; // Laranja (lento)
+                if (time > 200) color = '#ff5252'; // Vermelho (muito lento)
+                
+                const line = `<span style="color: ${color};">64 bytes from ${host}: icmp_seq=${i+1} ttl=54 time=${time} ms</span>`;
+                resultDiv.innerHTML += `${line}<br>`;
+            }
+            
+            // Mostra estatísticas após último ping
+            if (i === 4) {
+                const received = intervals.filter(t => t !== null).length;
+                const loss = ((5 - received) / 5) * 100;
+                const validIntervals = intervals.filter(t => t !== null);
+                
+                if (validIntervals.length > 0) {
+                    const min = Math.min(...validIntervals);
+                    const max = Math.max(...validIntervals);
+                    const avg = validIntervals.reduce((a,b) => a+b, 0) / validIntervals.length;
+                    const mdev = validIntervals.length > 1 ? 
+                        Math.sqrt(validIntervals.map(x => (x-avg)**2).reduce((a,b) => a+b, 0) / validIntervals.length) : 0;
+                    
+                    statsDiv.innerHTML = `
+                        <div style="background: #1a2a1a; padding: 15px; border-radius: 6px; border: 1px solid #333; margin-top: 15px;">
+                            <div style="color: #8bc34a; font-weight: bold; margin-bottom: 10px;">--- ${host} ping statistics ---</div>
+                            <div>5 packets transmitted, ${received} received, ${loss}% packet loss</div>
+                            <div>rtt min/avg/max/mdev = ${min.toFixed(2)}/${avg.toFixed(2)}/${max.toFixed(2)}/${mdev.toFixed(2)} ms</div>
+                        </div>
+                    `;
+                    
+                    // Alerta de qualidade de rede
+                    const alertDiv = document.getElementById('pingAlert');
+                    if (loss > 0) {
+                        alertDiv.innerHTML = `<div style="background: #330000; color: #ff5252; padding: 10px; border-radius: 6px; border: 1px solid #ff5252; margin-top: 15px;">
+                            ⚠️ <strong>ALERTA DE REDE:</strong> Perda de pacotes detectada! Verifique sua conexão ou o servidor de destino.
+                        </div>`;
+                    } else if (avg > 100) {
+                        alertDiv.innerHTML = `<div style="background: #332200; color: #ff9800; padding: 10px; border-radius: 6px; border: 1px solid #ff9800; margin-top: 15px;">
+                            ⚠️ <strong>REDE LENTA:</strong> Latência alta (${avg.toFixed(2)}ms). Considere mudar de servidor ou provedor.
+                        </div>`;
+                    } else {
+                        alertDiv.innerHTML = `<div style="background: #1a2a1a; color: #8bc34a; padding: 10px; border-radius: 6px; border: 1px solid #333; margin-top: 15px;">
+                            ✅ <strong>REDE ESTÁVEL:</strong> Conexão saudável com latência aceitável.
+                        </div>`;
+                    }
+                }
+            }
+            
+            // Scroll automático
+            resultDiv.scrollTop = resultDiv.scrollHeight;
+        }, 500 + i * 800);
+    }
+}
 
-  const intervals = [12, 34, 28, 41, 19];
-  for (let i = 0; i < 5; i++) {
-    setTimeout(() => {
-      const time = intervals[i];
-      const line = `64 bytes from ${host}: icmp_seq=${i+1} ttl=54 time=${time} ms`;
-      resultDiv.innerHTML += `\n${line}`;
-      if (i === 4) {
-        const avg = intervals.reduce((a,b) => a+b, 0) / 5;
-        resultDiv.innerHTML += `\n\n--- ${host} ping statistics ---\n5 packets transmitted, 5 received, 0% packet loss, time ${Math.round(avg * 5)}ms\nrtt min/avg/max/mdev = ${Math.min(...intervals)}/${avg.toFixed(2)}/${Math.max(...intervals)}/${(Math.max(...intervals)-Math.min(...intervals))/2} ms`;
-      }
-      resultDiv.scrollTop = resultDiv.scrollHeight;
-    }, 500 + i * 800);
-  }
+function copyPingResults() {
+    const resultDiv = document.getElementById('pingResult');
+    const statsDiv = document.getElementById('pingStats');
+    const text = resultDiv.innerText + '\n\n' + statsDiv.innerText;
+    if (text) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert('✅ Resultados do ping copiados!');
+        }).catch(() => {
+            alert('❌ Falha ao copiar. Tente manualmente.');
+        });
+    }
 }
 </script>
