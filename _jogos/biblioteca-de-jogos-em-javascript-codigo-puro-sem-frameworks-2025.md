@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Biblioteca de Jogos em JavaScript: Código Puro, Sem Frameworks (2025)"
-description: "Jogos feitos com HTML, CSS e JavaScript puro — sem frameworks. Ideal para aprender, modificar e compartilhar. Inclui Pong, Jokenpô, Adivinhe o Número e mais."
+title: "Jogos em Vanilla JS — Canvas, Web APIs, Zero Frameworks"
+description: "Aprenda JavaScript puro criando jogos com Canvas e Web APIs. Sem frameworks, sem bibliotecas — só código limpo e funcional"
 date: 2025-10-26
 author: "PioLinux"
 categories: [jogos, javascript]
