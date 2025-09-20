@@ -1,112 +1,151 @@
-<!-- ============= 📊 CONVERSOR DE BYTES / BITS (BASE 1000) ============= -->
-<div class="tool-container" id="bytes-converter">
-  <h2 class="tool-title">📊 Conversor de Bytes & Bits (Base 1000)</h2>
-  
-  <div style="margin-bottom: 1rem;">
-    <label><strong>Tipo:</strong></label><br>
-    <label><input type="radio" name="unitType" value="bytes" checked onchange="updatePlaceholder()" /> Bytes (B, KB, MB...)</label>
-    <label><input type="radio" name="unitType" value="bits" onchange="updatePlaceholder()" /> Bits (b, Kb, Mb...)</label>
-  </div>
-
-  <input type="number" id="bytesInput" class="tool-input" placeholder="Digite o valor em Bytes" step="any" />
-  
-  <select id="unitSelect" class="tool-input" style="margin-bottom: 0.5rem;">
-    <option value="B">Bytes (B)</option>
-    <option value="KB">Kilobytes (KB)</option>
-    <option value="MB" selected>Megabytes (MB)</option>
-    <option value="GB">Gigabytes (GB)</option>
-    <option value="TB">Terabytes (TB)</option>
-    <option value="PB">Petabytes (PB)</option>
-  </select>
-
-  <button class="tool-button" onclick="convertBytes()">Converter</button>
-  <div id="bytesResult" class="tool-output">Resultados aparecerão aqui...</div>
-</div>
-
 <script>
 function updatePlaceholder() {
-  const isBits = document.querySelector('input[name="unitType"]:checked').value === 'bits';
-  const input = document.getElementById('bytesInput');
-  input.placeholder = `Digite o valor em ${isBits ? 'Bits' : 'Bytes'}`;
-  
-  const select = document.getElementById('unitSelect');
-  select.innerHTML = '';
-  
-  if (isBits) {
-    select.innerHTML = `
-      <option value="b">Bits (b)</option>
-      <option value="Kb">Kilobits (Kb)</option>
-      <option value="Mb" selected>Megabits (Mb)</option>
-      <option value="Gb">Gigabits (Gb)</option>
-      <option value="Tb">Terabits (Tb)</option>
-      <option value="Pb">Petabits (Pb)</option>
-    `;
-  } else {
-    select.innerHTML = `
-      <option value="B">Bytes (B)</option>
-      <option value="KB">Kilobytes (KB)</option>
-      <option value="MB" selected>Megabytes (MB)</option>
-      <option value="GB">Gigabytes (GB)</option>
-      <option value="TB">Terabytes (TB)</option>
-      <option value="PB">Petabytes (PB)</option>
-    `;
-  }
+    const isBits = document.querySelector('input[name="unitType"]:checked').value === 'bits';
+    const input = document.getElementById('bytesInput');
+    input.placeholder = `Digite o valor em ${isBits ? 'Bits' : 'Bytes'}`;
+    
+    const select = document.getElementById('unitSelect');
+    select.innerHTML = '';
+    
+    if (isBits) {
+        select.innerHTML = `
+            <option value="b">Bits (b)</option>
+            <option value="Kb">Kilobits (Kb)</option>
+            <option value="Mb" selected>Megabits (Mb)</option>
+            <option value="Gb">Gigabits (Gb)</option>
+            <option value="Tb">Terabits (Tb)</option>
+            <option value="Pb">Petabits (Pb)</option>
+        `;
+    } else {
+        select.innerHTML = `
+            <option value="B">Bytes (B)</option>
+            <option value="KB">Kilobytes (KB)</option>
+            <option value="MB" selected>Megabytes (MB)</option>
+            <option value="GB">Gigabytes (GB)</option>
+            <option value="TB">Terabytes (TB)</option>
+            <option value="PB">Petabytes (PB)</option>
+        `;
+    }
 }
 
 function convertBytes() {
-  const value = parseFloat(document.getElementById('bytesInput').value);
-  if (isNaN(value)) {
-    document.getElementById('bytesResult').innerText = 'Digite um número válido';
-    return;
-  }
-
-  const isBits = document.querySelector('input[name="unitType"]:checked').value === 'bits';
-  const unit = document.getElementById('unitSelect').value;
-  const base = 1000;
-  let baseValue = value; // valor em bits ou bytes (dependendo da escolha)
-
-  // Se estiver em bytes, mas usuário quer bits → converte pra bits primeiro
-  if (!isBits) {
-    // Converte unidade de bytes para bytes brutos
-    switch (unit) {
-      case 'KB': baseValue *= base; break;
-      case 'MB': baseValue *= Math.pow(base, 2); break;
-      case 'GB': baseValue *= Math.pow(base, 3); break;
-      case 'TB': baseValue *= Math.pow(base, 4); break;
-      case 'PB': baseValue *= Math.pow(base, 5); break;
+    const value = parseFloat(document.getElementById('bytesInput').value);
+    if (isNaN(value)) {
+        document.getElementById('bytesResult').innerHTML = `
+            <div style="background: #330000; color: #ff5252; padding: 15px; border-radius: 6px; border: 1px solid #ff5252;">
+                ❌ Por favor, digite um número válido
+            </div>
+        `;
+        return;
     }
-    // Converte bytes para bits (1 byte = 8 bits)
-    baseValue *= 8;
-  } else {
-    // Converte unidade de bits para bits brutos
-    switch (unit) {
-      case 'Kb': baseValue *= base; break;
-      case 'Mb': baseValue *= Math.pow(base, 2); break;
-      case 'Gb': baseValue *= Math.pow(base, 3); break;
-      case 'Tb': baseValue *= Math.pow(base, 4); break;
-      case 'Pb': baseValue *= Math.pow(base, 5); break;
-    }
-  }
 
-  let result = '';
-
-  if (isBits) {
-    // Exibe em todas as unidades de BITS
-    const units = ['b', 'Kb', 'Mb', 'Gb', 'Tb', 'Pb'];
-    for (let i = 0; i < units.length; i++) {
-      const converted = baseValue / Math.pow(base, i);
-      result += `${converted.toLocaleString('en-US', { maximumFractionDigits: 3, minimumFractionDigits: 0 })} ${units[i]}\n`;
+    const isBits = document.querySelector('input[name="unitType"]:checked').value === 'bits';
+    const unit = document.getElementById('unitSelect').value;
+    const base = 1000; // Base decimal (padrão de redes e armazenamento)
+    
+    // Converte para bits brutos (valor base)
+    let baseBits = value;
+    if (isBits) {
+        // Já está em bits - converte unidade
+        switch (unit) {
+            case 'Kb': baseBits *= base; break;
+            case 'Mb': baseBits *= Math.pow(base, 2); break;
+            case 'Gb': baseBits *= Math.pow(base, 3); break;
+            case 'Tb': baseBits *= Math.pow(base, 4); break;
+            case 'Pb': baseBits *= Math.pow(base, 5); break;
+        }
+    } else {
+        // Converte bytes para bits primeiro (1 byte = 8 bits)
+        switch (unit) {
+            case 'KB': baseBits *= base * 8; break;
+            case 'MB': baseBits *= Math.pow(base, 2) * 8; break;
+            case 'GB': baseBits *= Math.pow(base, 3) * 8; break;
+            case 'TB': baseBits *= Math.pow(base, 4) * 8; break;
+            case 'PB': baseBits *= Math.pow(base, 5) * 8; break;
+            default: baseBits *= 8; // B → bits
+        }
     }
-  } else {
-    // Exibe em todas as unidades de BYTES
-    const units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB'];
-    for (let i = 0; i < units.length; i++) {
-      const converted = baseValue / Math.pow(base, i) / 8; // bits → bytes
-      result += `${converted.toLocaleString('en-US', { maximumFractionDigits: 3, minimumFractionDigits: 0 })} ${units[i]}\n`;
-    }
-  }
 
-  document.getElementById('bytesResult').innerText = result.trim();
+    // Gera resultados formatados
+    let resultHTML = `
+        <div style="background: #121212; padding: 15px; border-radius: 6px; border: 1px solid #333;">
+            <div style="color: #8bc34a; font-weight: bold; margin-bottom: 10px;">✅ Conversão Completa (${isBits ? 'Bits' : 'Bytes'})</div>
+    `;
+
+    if (isBits) {
+        // Mostra em todas as unidades de BITS
+        const units = [
+            { unit: 'b', name: 'Bits', factor: 1 },
+            { unit: 'Kb', name: 'Kilobits', factor: base },
+            { unit: 'Mb', name: 'Megabits', factor: Math.pow(base, 2) },
+            { unit: 'Gb', name: 'Gigabits', factor: Math.pow(base, 3) },
+            { unit: 'Tb', name: 'Terabits', factor: Math.pow(base, 4) },
+            { unit: 'Pb', name: 'Petabits', factor: Math.pow(base, 5) }
+        ];
+
+        units.forEach(item => {
+            const converted = baseBits / item.factor;
+            resultHTML += `
+                <div style="margin: 8px 0; padding: 8px; background: #1a2a1a; border-radius: 4px;">
+                    <span style="color: #8bc34a;">${item.name}:</span> ${converted.toLocaleString('en-US', { maximumFractionDigits: 3, minimumFractionDigits: 0 })} ${item.unit}
+                    <div style="font-size: 0.9em; color: #aaa; margin-top: 4px;"># ${getBitExplanation(item.unit)}</div>
+                </div>
+            `;
+        });
+    } else {
+        // Mostra em todas as unidades de BYTES
+        const units = [
+            { unit: 'B', name: 'Bytes', factor: 8 },
+            { unit: 'KB', name: 'Kilobytes', factor: base * 8 },
+            { unit: 'MB', name: 'Megabytes', factor: Math.pow(base, 2) * 8 },
+            { unit: 'GB', name: 'Gigabytes', factor: Math.pow(base, 3) * 8 },
+            { unit: 'TB', name: 'Terabytes', factor: Math.pow(base, 4) * 8 },
+            { unit: 'PB', name: 'Petabytes', factor: Math.pow(base, 5) * 8 }
+        ];
+
+        units.forEach(item => {
+            const converted = baseBits / item.factor;
+            resultHTML += `
+                <div style="margin: 8px 0; padding: 8px; background: #1a2a1a; border-radius: 4px;">
+                    <span style="color: #8bc34a;">${item.name}:</span> ${converted.toLocaleString('en-US', { maximumFractionDigits: 3, minimumFractionDigits: 0 })} ${item.unit}
+                    <div style="font-size: 0.9em; color: #aaa; margin-top: 4px;"># ${getByteExplanation(item.unit)}</div>
+                </div>
+            `;
+        });
+    }
+
+    resultHTML += `
+        </div>
+        <div style="background: #1a2a1a; color: #8bc34a; padding: 10px; border-radius: 6px; margin-top: 15px; border: 1px solid #333;">
+            💡 <strong>Dica de Sysadmin:</strong> Redes usam bits (Mbps), armazenamento usa bytes (MB). 100 Mbps = 12.5 MB/s!
+        </div>
+    `;
+
+    document.getElementById('bytesResult').innerHTML = resultHTML;
+}
+
+function getBitExplanation(unit) {
+    const explanations = {
+        'b': 'Bit - unidade básica',
+        'Kb': 'Kilobit - 1.000 bits (padrão redes)',
+        'Mb': 'Megabit - 1.000.000 bits (velocidade internet)',
+        'Gb': 'Gigabit - 1.000.000.000 bits (redes 1Gbps)',
+        'Tb': 'Terabit - 1.000.000.000.000 bits (backbones)',
+        'Pb': 'Petabit - 1.000.000.000.000.000 bits (data centers)'
+    };
+    return explanations[unit] || '';
+}
+
+function getByteExplanation(unit) {
+    const explanations = {
+        'B': 'Byte - 8 bits',
+        'KB': 'Kilobyte - 1.000 bytes (arquivos pequenos)',
+        'MB': 'Megabyte - 1.000.000 bytes (músicas, fotos)',
+        'GB': 'Gigabyte - 1.000.000.000 bytes (filmes, jogos)',
+        'TB': 'Terabyte - 1.000.000.000.000 bytes (discos rígidos)',
+        'PB': 'Petabyte - 1.000.000.000.000.000 bytes (data centers)'
+    };
+    return explanations[unit] || '';
 }
 
 // Inicializa placeholder e select
