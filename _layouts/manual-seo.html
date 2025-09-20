@@ -3,6 +3,8 @@
 <html lang="pt-BR">
 <head>
     {% include head-manual.html %}  <!-- 👈 ÚNICA MUDANÇA: usa head personalizado -->
+    <!-- Canonical URL -->
+<link rel="canonical" href="{% if page.canonical_url %}{{ page.canonical_url | strip }}{% else %}{{ page.url | absolute_url }}{% endif %}" />
 </head>
 <body>
     {% include menu.html %}
