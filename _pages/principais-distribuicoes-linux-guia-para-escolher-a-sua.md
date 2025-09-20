@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Escolha Sua Distro Linux: Ubuntu, Debian, Fedora, Arch e Mais"
-description: "Escolha sua distro Linux ideal: Ubuntu, Debian, Fedora, Arch, Mint, Pop!_OS. Qual combina com SEU hardware e estilo de uso?"
+title: "Guia de Escolha de Distro Linux — Por Nível e Uso"
+description: "Escolha sua distro Linux ideal: Ubuntu, Debian, Fedora, Mint, Pop!_OS. Qual combina com SEU hardware e estilo de uso?"
 date: 2025-09-19
 author: "PioLinux"
 categories: [linux, distros, escolha]
