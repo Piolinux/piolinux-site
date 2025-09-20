@@ -18,6 +18,73 @@ tags: [ping, rede, latencia, sysadmin, icmp, simulador, network, tempo-resposta]
  
   {% include tool-templates/ping-simulator.html %}
 
+
+<!-- ============= 📡 PING VISUAL (SIMULADO) ============= -->
+<div class="tool-container" id="ping-simulator" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Simulador de Ping Visual</h2>
+  
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid #333;">
+    <strong>💡 Dica de Sysadmin:</strong> Ping mede latência e perda de pacotes — essencial para diagnosticar problemas de rede. TTL=54 indica roteamento pela internet, TTL=64 indica rede local.
+  </div>
+
+  <div style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+    <input 
+        type="text" 
+        id="pingHost" 
+        placeholder="Ex: google.com, 8.8.8.8, 127.0.0.1" 
+        value="google.com"
+        style="flex: 1; min-width: 200px; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
+    
+    <button onclick="simulatePing()" style="background: #4caf50; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold;">
+      📡 Ping!
+    </button>
+    
+    <button onclick="copyPingResults()" style="background: #2196F3; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold;">
+      📋 Copiar
+    </button>
+  </div>
+
+  <div style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #333; min-height: 200px; max-height: 400px; overflow-y: auto; font-family: 'Courier New', monospace; font-size: 0.95em; color: #e0e0e0; line-height: 1.5;">
+    <div id="pingResult" style="white-space: pre-wrap;">
+        Clique em "Ping!" para começar a simulação...
+    </div>
+    <div id="pingStats"></div>
+  </div>
+
+  <div id="pingAlert" style="margin-top: 20px;"></div>
+
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 20px; border-radius: 8px; margin-top: 30px; border: 1px solid #333;">
+    <h3 style="color: #8bc34a; margin-top: 0;">📚 O que esses números significam:</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+      <div>
+        <strong style="color: #8bc34a;">icmp_seq</strong><br>
+        <small>Número sequencial do pacote — ajuda a identificar perdas</small>
+      </div>
+      <div>
+        <strong style="color: #8bc34a;">ttl</strong><br>
+        <small>Time To Live — limita número de saltos (54=Internet, 64=Local)</small>
+      </div>
+      <div>
+        <strong style="color: #8bc34a;">time=X ms</strong><br>
+        <small>Latência em milissegundos — <span style="color: #8bc34a;"><50ms</span> = ótimo, <span style="color: #ff9800;">>100ms</span> = lento</small>
+      </div>
+      <div>
+        <strong style="color: #8bc34a;">mdev</strong><br>
+        <small>Desvio padrão — mostra consistência da conexão</small>
+      </div>
+    </div>
+    <div style="margin-top: 20px;">
+      <strong>🎯 Casos de uso:</strong><br>
+      • Diagnóstico de problemas de rede<br>
+      • Verificação de disponibilidade de servidores<br>
+      • Teste de qualidade de conexão<br>
+      • Monitoramento de latência em tempo real
+    </div>
+  </div>
+</div>
+
+	
+
   <div class="seo-content">
     <h2>O que consiste o Ping Visual Simulado?</h2>
     <p>Esta ferramenta simula o comportamento do comando <code>ping</code> do terminal, mostrando em tempo real:</p>
