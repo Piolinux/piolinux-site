@@ -14,29 +14,75 @@ tags: [ssh, seguranca, sysadmin, linux, rsa, ed25519, tutorial, demonstracao]
 <section class="tool-single-page">
   <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
   
-  <div>
-    <label>Tipo de Chave: 
-      <select id="keyType">
-        <option value="rsa">RSA (4096 bits)</option>
-        <option value="ed25519">Ed25519</option>
-      </select>
-    </label>
-    <label>Comentário (ex: seu-email@provedor.com): 
-      <input type="text" id="keyComment" placeholder="user@host" value="user@piolinux">
-    </label>
-    <button class="tool-button" onclick="generateSSHKey()">Gerar Chave Simulada</button>
-    <button class="tool-button" onclick="copySSHKey()">Copiar Chave Pública</button>
-    <textarea id="sshKeyOutput" readonly style="width: 100%; height: 120px; margin-top: 1rem; background: #2a2a3c; color: #cdd6f4; padding: 1rem; border: 1px solid #454565; border-radius: 6px; font-family: monospace;"></textarea>
-    <p style="font-size: 0.9rem; color: #f9e2af; margin-top: 0.5rem;">Aviso: Esta ferramenta n&atilde;o gera chaves reais. É apenas para aprendizado essa simulação. Use <code>ssh-keygen</code> no terminal para gerar chaves verdadeiras.</p>
-  </div>
 
-  <div class="seo-content">
-    <h2>O que é uma Chave SSH?</h2>
-    <p>É um par de chaves (pública e privada) usado para autenticação segura em servidores Linux, Git, e outros serviços, sem senhas,por exemplo use chaves de 2048 ou 4096 bits para RSA.</p>
-    <h2>Como gerar uma chave SSH REAL?</h2>
-    <p>No terminal: <code>ssh-keygen -t ed25519 -C "seu-email@exemplo.com"</code></p>
-    
+  <div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+    <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🔐 Gerador Educacional de Chave SSH Pública</h2>
+
+    <div style="margin-bottom: 20px; background: #161616; padding: 15px; border-radius: 6px; border-left: 4px solid #8bc34a;">
+      <strong style="color: #a6e3a1;">⚠️ AVISO:</strong> <span style="color: #d0d0d0;">Esta ferramenta NÃO gera chaves reais. É apenas uma simulação educacional. Para gerar chaves verdadeiras, use o terminal.</span>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Tipo de chave:</strong></label>
+      <select id="keyType" style="background: #2a2a2a; color: #e0e0e0; padding: 10px; border: 1px solid #444; border-radius: 4px; width: 100%; max-width: 400px; font-family: monospace;">
+        <option value="ed25519">🔐 ssh-ed25519 (Recomendado)</option>
+        <option value="rsa">🗝️ ssh-rsa (Legado, mínimo 2048 bits)</option>
+      </select>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Comentário (ex: seu_email@provedor.com):</strong></label>
+      <input 
+        type="text" 
+        id="keyComment" 
+        placeholder="user@host ou seu.email@dominio.com"
+        value="user@host"
+        style="width: 100%; padding: 12px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 6px; font-family: 'Courier New', monospace;" />
+    </div>
+
+    <div style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+      <button onclick="generateSSHKey()" style="background: #2a2a2a; color: #8bc34a; border: 1px solid #444; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: monospace; transition: background 0.2s;">
+        🔄 Gerar Simulação
+      </button>
+      <button onclick="copySSHKey()" style="background: #2a2a2a; color: #a6e3a1; border: 1px solid #444; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: monospace; transition: background 0.2s;">
+        📋 Copiar Chave
+      </button>
+    </div>
+
+    <div style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #333; margin-bottom: 20px;">
+      <h3 style="color: #8bc34a; margin-top: 0; font-size: 1.2em;">🔑 Chave Pública Simulada</h3>
+      <textarea 
+        id="sshKeyOutput" 
+        readonly 
+        style="width: 100%; height: 100px; padding: 15px; background: #0f0f0f; color: #a6e3a1; border: 1px solid #333; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 0.95em; resize: vertical; margin-bottom: 15px; word-break: break-all;"
+        placeholder="A chave simulada aparecerá aqui..."></textarea>
+    </div>
+
+    <div style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #333; margin-bottom: 20px;">
+      <h3 style="color: #8bc34a; margin-top: 0; font-size: 1.2em;">💻 Como Gerar de Verdade no Terminal</h3>
+      <pre style="background: #0a0a0a; padding: 15px; border-radius: 6px; color: #cdd6f4; font-family: 'Courier New', monospace; font-size: 0.9em; overflow-x: auto;">
+# Para Ed25519 (recomendado)
+ssh-keygen -t ed25519 -C "seu_email@exemplo.com"
+
+# Para RSA (mínimo 4096 bits)
+ssh-keygen -t rsa -b 4096 -C "seu_email@exemplo.com"
+
+# Chaves são salvas em ~/.ssh/id_ed25519.pub ou ~/.ssh/id_rsa.pub
+      </pre>
+    </div>
+
+    <div style="margin-top: 25px; padding: 15px; background: #161616; border-left: 4px solid #8bc34a; border-radius: 0 6px 6px 0;">
+      <h4 style="color: #8bc34a; margin-top: 0;">💡 Dicas Técnicas de Segurança</h4>
+      <ul style="color: #d0d0d0; font-size: 0.95em; line-height: 1.6; padding-left: 1.2rem;">
+        <li>✅ Prefira <code style="color: #a6e3a1;">ed25519</code> — mais rápido, seguro e moderno.</li>
+        <li>⛔ Evite RSA com menos de 4096 bits.</li>
+        <li>📌 O comentário (ex: email) ajuda a identificar a chave em servidores.</li>
+        <li>🔒 Nunca compartilhe sua chave PRIVADA (arquivo sem <code>.pub</code>).</li>
+        <li>🌐 Use chaves diferentes para ambientes diferentes (pessoal, trabalho, etc).</li>
+      </ul>
+    </div>
   </div>
+</section>
 </section>
 
 <style>
@@ -49,15 +95,28 @@ tags: [ssh, seguranca, sysadmin, linux, rsa, ed25519, tutorial, demonstracao]
 
 
 <script>
+function generateRealisticBase64(length) {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+  let result = '';
+  for (let i = 0; i < length; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return result;
+}
+
 function generateSSHKey() {
   const type = document.getElementById('keyType').value;
-  const comment = document.getElementById('keyComment').value || 'user@host';
+  const comment = document.getElementById('keyComment').value.trim() || 'user@host';
   let key;
 
   if (type === 'rsa') {
-    key = `ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDd4l0zJ1fXZqV1XqRjZ2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X...... ${comment}`;
+    // Simula chave RSA de 4096 bits (cerca de 544 caracteres em base64)
+    const base64Part = generateRealisticBase64(544);
+    key = `ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQD${base64Part} ${comment}`;
   } else {
-    key = `ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJX2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X2X...... ${comment}`;
+    // Simula chave Ed25519 (cerca de 88 caracteres em base64)
+    const base64Part = generateRealisticBase64(88);
+    key = `ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI${base64Part} ${comment}`;
   }
 
   document.getElementById('sshKeyOutput').value = key;
@@ -65,13 +124,20 @@ function generateSSHKey() {
 
 function copySSHKey() {
   const key = document.getElementById('sshKeyOutput').value;
-  if (key) {
-    navigator.clipboard.writeText(key).then(() => alert('✅ Chave pública copiada!'));
+  if (key && key.includes('AAA')) {
+    navigator.clipboard.writeText(key).then(() => {
+      alert('✅ Chave pública simulada copiada!\n⚠️ Lembre-se: esta é apenas uma simulação educacional.');
+    }).catch(() => {
+      alert('❌ Falha ao copiar. Tente manualmente.');
+    });
+  } else {
+    alert('⚠️ Gere uma chave primeiro.');
   }
 }
+
+// Gera ao carregar
+document.addEventListener('DOMContentLoaded', generateSSHKey);
 </script>
-
-
 
 
 <script type="application/ld+json">
