@@ -12,6 +12,13 @@
   <meta name="description" content="{{ page.description_custom | strip | escape }}">
 {% endif %}
 
+<!-- Canonical URL -->
+{% if page.canonical_url %}
+  <link rel="canonical" href="{{ page.canonical_url }}" />
+{% else %}
+  <link rel="canonical" href="{{ page.url | absolute_url }}" />
+{% endif %}
+
 <!-- Mantenha seus estilos, favicon, etc — copie do seu head.html atual -->
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
 
