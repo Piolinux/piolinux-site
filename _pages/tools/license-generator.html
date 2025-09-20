@@ -16,21 +16,72 @@ tags: [licenca, open-source, mit, gpl, apache, github, software-livre, projeto]
 <section class="tool-single-page">
   <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
   
-  <div>
-    <label>Tipo de Licença: 
-      <select id="licenseType">
+  <div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Gerador de Licenças Open Source</h2>
+  
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid #333;">
+    <strong>💡 Dica de Software Livre:</strong><br>
+    • <strong>MIT:</strong> Permissiva — ideal para bibliotecas e projetos sem restrições<br>
+    • <strong>GPLv3:</strong> Copyleft forte — garante que derivados também sejam livres<br>
+    • <strong>Apache 2.0:</strong> Permissiva com proteção de patentes — ideal para empresas
+  </div>
+
+  <div style="margin-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+    <div>
+      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Tipo de Licença:</strong></label>
+      <select id="licenseType" onchange="generateLicense()" style="background: #2a2a2a; color: #e0e0e0; padding: 10px; border: 1px solid #444; border-radius: 4px; width: 100%; font-family: monospace;">
         <option value="mit">MIT License</option>
-        <option value="gpl">GNU GPLv3</option>
+        <option value="gpl">GNU GPL v3</option>
         <option value="apache">Apache License 2.0</option>
       </select>
-    </label>
-    <label>Nome do Copyright: <input type="text" id="copyrightName" placeholder="Seu Nome ou Empresa" value="Seu Nome Aqui"></label>
-    <label>Ano: <input type="text" id="copyrightYear" placeholder="2025" value="2025"></label>
-    <label>Email (opcional): <input type="text" id="copyrightEmail" placeholder="email@exemplo.com"></label>
-    <button class="tool-button" onclick="generateLicense()">Gerar Licença</button>
-    <button class="tool-button" onclick="copyLicense()">Copiar Licença</button>
-    <textarea id="licenseOutput" readonly style="width: 100%; height: 400px; margin-top: 1rem; background: #2a2a3c; color: #cdd6f4; padding: 1rem; border: 1px solid #454565; border-radius: 6px; font-family: monospace; white-space: pre;"></textarea>
+    </div>
+    
+    <div>
+      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Ano:</strong></label>
+      <input type="text" id="copyrightYear" placeholder="ex: 2025" oninput="generateLicense()" style="width: 100%; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
+    </div>
+    
+    <div>
+      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Nome Completo:</strong></label>
+      <input type="text" id="copyrightName" placeholder="ex: João Silva" oninput="generateLicense()" style="width: 100%; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
+    </div>
+    
+    <div>
+      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Email (só para MIT):</strong></label>
+      <input type="email" id="copyrightEmail" placeholder="ex: joao@exemplo.com" oninput="generateLicense()" style="width: 100%; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
+    </div>
   </div>
+
+  <div style="margin-bottom: 20px; display: flex; justify-content: center;">
+    <button onclick="copyLicense()" style="background: #2196F3; color: white; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1.1em;">
+      📋 Copiar Licença
+    </button>
+  </div>
+
+  <div style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #333;">
+    <h3 style="color: #8bc34a; margin-top: 0; font-size: 1.2em;">📜 Licença Gerada</h3>
+    <textarea 
+        id="licenseOutput" 
+        readonly 
+        style="width: 100%; height: 400px; padding: 15px; background: #121212; color: #a6e3a1; border: 1px solid #333; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 1em; resize: vertical; line-height: 1.5;">
+MIT License
+
+Copyright (c) 2025 [fullname]
+
+Permission is hereby granted, free of charge...
+    </textarea>
+  </div>
+
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 20px; border-radius: 8px; margin-top: 30px; border: 1px solid #333;">
+    <h3 style="color: #8bc34a; margin-top: 0;">📚 Sobre Licenças Open Source:</h3>
+    <ul style="padding-left: 20px; margin: 15px 0; line-height: 1.6;">
+      <li><strong>MIT:</strong> A mais permissiva — quase sem restrições</li>
+      <li><strong>GPLv3:</strong> Garante liberdade — derivados devem ser livres</li>
+      <li><strong>Apache 2.0:</strong> Permissiva + proteção contra patentes</li>
+      <li><strong>Não sabe qual escolher?</strong> Comece com MIT para projetos pessoais</li>
+    </ul>
+  </div>
+</div>
 
   <div class="seo-content">
     <h2>Por que usar uma Licença Open Source?</h2>
@@ -41,13 +92,6 @@ tags: [licenca, open-source, mit, gpl, apache, github, software-livre, projeto]
   </div>
 </section>
 
-<style>
-  /* ESTILO PADRÃO */
-  .tool-button { background: #89b4fa; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; margin: 0.5rem 0.5rem 1rem 0; }
-  label { display: block; margin: 0.5rem 0; color: #cdd6f4; }
-  input[type="text"] { width: 100%; max-width: 400px; padding: 0.5rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 4px; margin-top: 0.5rem; }
-  textarea { width: 100%; height: 400px; background: #2a2a3c; color: #cdd6f4; padding: 1rem; border: 1px solid #454565; border-radius: 6px; font-family: monospace; white-space: pre; }
-</style>
 
 
 
@@ -57,7 +101,7 @@ tags: [licenca, open-source, mit, gpl, apache, github, software-livre, projeto]
 const licenses = {
   mit: `MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) [year] [fullname][email]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -95,7 +139,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/>.`,
 
-
   apache: `Apache License
 Version 2.0, January 2004
 http://www.apache.org/licenses/
@@ -104,15 +147,23 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 
 1. Definitions.
 
-"License" shall mean the terms and conditions for use, reproduction, and
-distribution as defined by Sections 1 through 9 of this document.
+"License" shall mean the terms and conditions for use, reproduction,
+and distribution as defined by Sections 1 through 9 of this document.
+
+"Legal Entity" shall mean the union of the acting entity and all
+other entities that control, are controlled by, or are under common
+control with that entity. For the purposes of this definition,
+"control" means (i) the power, direct or indirect, to cause the
+direction or management of such entity, whether by contract or
+otherwise, or (ii) ownership of fifty percent (50%) or more of the
+outstanding shares, or (iii) beneficial ownership of such entity.
 
 "Copyright" shall mean the copyright owner or entity authorized by
 the copyright owner that is granting the License.
 
 ...
 
-Copyright [yyyy] [name of copyright owner]
+Copyright [year] [fullname]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -128,29 +179,42 @@ limitations under the License.`
 };
 
 function generateLicense() {
-  const type = document.getElementById('licenseType').value;
-  let text = licenses[type];
-  
-  const name = document.getElementById('copyrightName').value || '[fullname]';
-  const year = document.getElementById('copyrightYear').value || '[year]';
-  const email = document.getElementById('copyrightEmail').value;
-  
-  text = text.replace(/\[year\]/g, year).replace(/\[fullname\]/g, name);
-  if (email && type === 'mit') {
-    text = text.replace(/Copyright \(c\) [^\n]*/g, `Copyright (c) ${year} ${name} <${email}>`);
-  }
-  
-  document.getElementById('licenseOutput').value = text;
+    const type = document.getElementById('licenseType').value;
+    let text = licenses[type];
+    
+    const name = document.getElementById('copyrightName').value || '[fullname]';
+    const year = document.getElementById('copyrightYear').value || new Date().getFullYear();
+    const email = document.getElementById('copyrightEmail').value;
+    
+    text = text.replace(/\[year\]/g, year).replace(/\[fullname\]/g, name);
+    
+    if (email && type === 'mit') {
+        text = text.replace(
+            /Copyright \(c\) [^\n]*/g, 
+            `Copyright (c) ${year} ${name} <${email}>`
+        );
+    }
+    
+    // Remove [email] placeholder if no email provided
+    if (!email && type === 'mit') {
+        text = text.replace(/\[email\]/g, '');
+    }
+    
+    document.getElementById('licenseOutput').value = text;
 }
 
 function copyLicense() {
-  const text = document.getElementById('licenseOutput').value;
-  if (text) {
-    navigator.clipboard.writeText(text).then(() => alert('✅ Licença copiada!'));
-  }
+    const text = document.getElementById('licenseOutput').value;
+    if (text) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert('✅ Licença copiada para a área de transferência!');
+        }).catch(() => {
+            alert('❌ Falha ao copiar. Tente manualmente.');
+        });
+    }
 }
 
-// Gera ao carregar
+// Inicializa
 generateLicense();
 </script>
 
