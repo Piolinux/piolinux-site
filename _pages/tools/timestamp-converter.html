@@ -14,18 +14,43 @@ tags: [timestamp, unix, data, iso8601, timezone, dev, sysadmin, conversao]
 <section class="tool-single-page">
   <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
   
-  <div>
-    <label>Entrada: 
-      <select id="inputType">
-        <option value="timestamp">Timestamp Unix</option>
-        <option value="datetime">Data/Hora (ex: 2025-04-05T14:30:00)</option>
-        <option value="human">Data Humana (ex: 05/04/2025 14:30)</option>
-      </select>
-    </label>
-    <input type="text" id="inputValue" placeholder="Digite o valor" style="width: 100%; padding: 0.75rem; margin: 0.5rem 0; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 6px;">
-    <button class="tool-button" onclick="convertTimestamp()">Converter</button>
-    <div id="timestampResult" style="margin-top: 1rem; padding: 1rem; background: #2a2a3c; border: 1px solid #454565; border-radius: 6px; color: #a6e3a1; font-family: monospace; white-space: pre-wrap;"></div>
+  <div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Conversor de Timestamp</h2>
+  
+  <div style="margin: 16px 0;">
+    <select id="inputType" style="background: #2a2a2a; color: #e0e0e0; padding: 8px; border: 1px solid #444; border-radius: 4px; width: 100%; max-width: 300px; margin-bottom: 16px;">
+      <option value="timestamp">🔢 Timestamp Unix</option>
+      <option value="datetime">📅 Data ISO 8601</option>
+      <option value="human">🕒 Data Humana (dd/mm/yyyy HH:MM)</option>
+    </select>
+
+    <input 
+        type="text" 
+        id="inputValue" 
+        placeholder="Ex: 1704067200 ou 2025-01-01 12:00:00 ou 01/01/2025 12:00" 
+        style="width: 100%; max-width: 500px; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace; margin-bottom: 16px;">
+
+    <div style="display: flex; gap: 10px; margin-bottom: 16px;">
+        <button onclick="convertTimestamp()" style="background: #4caf50; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; flex: 1;">
+            🔄 Converter
+        </button>
+        <button onclick="copyTimestamp()" style="background: #2196F3; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; flex: 1;">
+            📋 Copiar Timestamp
+        </button>
+    </div>
   </div>
+
+  <div id="timestampResult" style="min-height: 100px; margin: 20px 0;">
+    Insira um valor e selecione o tipo para conversão.
+  </div>
+
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 15px; border-radius: 6px; margin-top: 20px; border: 1px solid #333;">
+    <strong>📚 Aula Rápida de Timestamps:</strong><br>
+    • <strong>Unix Timestamp:</strong> Número de segundos desde 01/01/1970 00:00:00 UTC<br>
+    • <strong>ISO 8601:</strong> Padrão internacional (ex: 2025-01-01T12:00:00Z)<br>
+    • <strong>Sempre use UTC</strong> para armazenamento — converta para local só na exibição!
+  </div>
+</div>
 
   <div class="seo-content">
     <h2>E aí, qual é a parada do Timestamp Unix?</h2>
@@ -46,32 +71,110 @@ tags: [timestamp, unix, data, iso8601, timezone, dev, sysadmin, conversao]
 
 <script>
 function convertTimestamp() {
-  const type = document.getElementById('inputType').value;
-  const value = document.getElementById('inputValue').value.trim();
-  let date;
+    const type = document.getElementById('inputType').value;
+    const value = document.getElementById('inputValue').value.trim();
+    let date;
 
-  try {
-    if (type === 'timestamp') {
-      date = new Date(parseInt(value) * 1000);
-    } else if (type === 'datetime') {
-      date = new Date(value);
-    } else if (type === 'human') {
-      const [datePart, timePart] = value.split(' ');
-      const [day, month, year] = datePart.split('/');
-      const [hour, minute] = timePart.split(':');
-      date = new Date(year, month - 1, day, hour, minute);
+    try {
+        if (type === 'timestamp') {
+            const timestamp = parseInt(value);
+            if (isNaN(timestamp)) throw new Error('Timestamp deve ser um número');
+            date = new Date(timestamp * 1000);
+        } else if (type === 'datetime') {
+            date = new Date(value);
+            if (isNaN(date.getTime())) {
+                // Tenta formatos alternativos
+                const altFormats = [
+                    value.replace(' ', 'T'), // 2025-01-01 12:00:00 → 2025-01-01T12:00:00
+                    value + 'Z', // Adiciona UTC
+                ];
+                for (let fmt of altFormats) {
+                    date = new Date(fmt);
+                    if (!isNaN(date.getTime())) break;
+                }
+            }
+        } else if (type === 'human') {
+            // Aceita dd/mm/yyyy HH:MM ou dd-mm-yyyy HH:MM
+            const cleanValue = value.replace(/-/g, '/');
+            const [datePart, timePart] = cleanValue.split(' ');
+            if (!datePart || !timePart) throw new Error('Use formato: dd/mm/yyyy HH:MM');
+            
+            const [day, month, year] = datePart.split('/');
+            const [hour, minute] = timePart.split(':');
+            
+            if (!day || !month || !year || !hour || !minute) {
+                throw new Error('Formato inválido. Use: dd/mm/yyyy HH:MM');
+            }
+            
+            date = new Date(year, month - 1, day, hour, minute);
+        }
+
+        if (isNaN(date.getTime())) throw new Error('Data inválida');
+
+        const timestamp = Math.floor(date.getTime() / 1000);
+        const iso = date.toISOString();
+        const humanLocal = date.toLocaleString();
+        const humanUTC = date.toUTCString();
+
+        // Build result with explanations
+        document.getElementById('timestampResult').innerHTML = `
+            <div style="background: #121212; padding: 15px; border-radius: 6px; border: 1px solid #333;">
+                <div style="color: #8bc34a; font-weight: bold; margin-bottom: 10px;">✅ Conversão Completa</div>
+                
+                <div style="margin: 8px 0; padding: 8px; background: #1a2a1a; border-radius: 4px;">
+                    <span style="color: #8bc34a;">Unix Timestamp:</span> ${timestamp}
+                    <div style="font-size: 0.9em; color: #aaa; margin-top: 4px;"># Segundos desde 01/01/1970 00:00:00 UTC</div>
+                </div>
+                
+                <div style="margin: 8px 0; padding: 8px; background: #1a2a1a; border-radius: 4px;">
+                    <span style="color: #8bc34a;">ISO 8601 (UTC):</span> ${iso}
+                    <div style="font-size: 0.9em; color: #aaa; margin-top: 4px;"># Formato padrão internacional</div>
+                </div>
+                
+                <div style="margin: 8px 0; padding: 8px; background: #1a2a1a; border-radius: 4px;">
+                    <span style="color: #8bc34a;">Data Humana (Local):</span> ${humanLocal}
+                    <div style="font-size: 0.9em; color: #aaa; margin-top: 4px;"># Seu fuso horário (${Intl.DateTimeFormat().resolvedOptions().timeZone})</div>
+                </div>
+                
+                <div style="margin: 8px 0; padding: 8px; background: #1a2a1a; border-radius: 4px;">
+                    <span style="color: #8bc34a;">Data Humana (UTC):</span> ${humanUTC}
+                    <div style="font-size: 0.9em; color: #aaa; margin-top: 4px;"># Tempo universal coordenado</div>
+                </div>
+            </div>
+            
+            <div style="background: #1a2a1a; color: #8bc34a; padding: 10px; border-radius: 6px; margin-top: 15px; border: 1px solid #333;">
+                💡 <strong>Dica de Sysadmin:</strong> Sempre armazene timestamps em UTC — converta para local apenas na exibição!
+            </div>
+        `;
+    } catch (e) {
+        document.getElementById('timestampResult').innerHTML = `
+            <div style="background: #330000; color: #ff5252; padding: 15px; border-radius: 6px; border: 1px solid #ff5252;">
+                ❌ ${e.message}
+            </div>
+            <div style="background: #1a2a1a; color: #aaa; padding: 15px; border-radius: 6px; margin-top: 10px;">
+                <strong>📌 Formatos aceitos:</strong><br>
+                • <strong>Timestamp Unix:</strong> 1704067200<br>
+                • <strong>Data ISO:</strong> 2025-01-01T12:00:00 ou 2025-01-01 12:00:00<br>
+                • <strong>Data Humana:</strong> 01/01/2025 12:00 (dd/mm/yyyy HH:MM)<br><br>
+                <strong>💡 Dica:</strong> Timestamp Unix = segundos desde 01/01/1970 (Epoch Unix)
+            </div>
+        `;
     }
+}
 
-    if (isNaN(date.getTime())) throw new Error('Data inválida');
-
-    const timestamp = Math.floor(date.getTime() / 1000);
-    const iso = date.toISOString();
-    const human = date.toLocaleString();
-
-    document.getElementById('timestampResult').innerHTML = `Timestamp Unix: ${timestamp}\nISO 8601: ${iso}\nData Humana: ${human}`;
-  } catch (e) {
-    document.getElementById('timestampResult').innerHTML = `Erro: ${e.message}`;
-  }
+function copyTimestamp() {
+    const text = document.getElementById('timestampResult').innerText;
+    if (text && !text.includes('❌')) {
+        // Extrai só o timestamp Unix para copiar
+        const match = text.match(/Unix Timestamp:\s*(\d+)/);
+        if (match) {
+            navigator.clipboard.writeText(match[1]).then(() => {
+                alert('✅ Timestamp Unix copiado!');
+            }).catch(() => {
+                alert('❌ Falha ao copiar. Tente manualmente.');
+            });
+        }
+    }
 }
 </script>
 
