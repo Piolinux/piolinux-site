@@ -13,46 +13,90 @@ tags: [docker, devops, containers, cli, linux]
 <section class="tool-single-page">
   <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
   
-  <div>
-    <label>Tipo de Comando: 
-      <select id="dockerCommandType">
-        <option value="run">docker run</option>
-        <option value="build">docker build</option>
-        <option value="compose">docker-compose.yml</option>
-      </select>
-    </label>
-    
-    <div id="dockerRunOptions" style="margin: 1rem 0; padding: 1rem; background: #313244; border: 1px solid #5a5a72; border-radius: 6px;">
-      <h4>Opções para docker run:</h4>
-      <label>Nome do Container: <input type="text" id="containerName" placeholder="meu-app"></label>
-      <label>Imagem: <input type="text" id="imageName" placeholder="nginx:latest" value="nginx:latest"></label>
-      <label><input type="checkbox" id="detachMode"> Modo Detach (-d)</label>
-      <label>Portas (-p): <input type="text" id="portMapping" placeholder="8080:80" value="8080:80"></label>
-      <label>Volumes (-v): <input type="text" id="volumeMapping" placeholder="/host/path:/container/path"></label>
-      <label>Variáveis de Ambiente (-e): <input type="text" id="envVars" placeholder="VAR1=valor1,VAR2=valor2"></label>
-      <label>Comando (opcional): <input type="text" id="runCommand" placeholder="bash, node server.js, etc"></label>
-    </div>
-    
-    <div id="dockerBuildOptions" style="margin: 1rem 0; padding: 1rem; background: #313244; border: 1px solid #5a5a72; border-radius: 6px; display: none;">
-      <h4>Opções para docker build:</h4>
-      <label>Tag: <input type="text" id="buildTag" placeholder="meu-app:latest" value="meu-app:latest"></label>
-      <label>Arquivo Dockerfile: <input type="text" id="dockerfile" placeholder="Dockerfile" value="Dockerfile"></label>
-      <label>Diretório de Build: <input type="text" id="buildContext" placeholder="." value="."></label>
-    </div>
-    
-    <div id="dockerComposeOptions" style="margin: 1rem 0; padding: 1rem; background: #313244; border: 1px solid #5a5a72; border-radius: 6px; display: none;">
-      <h4>Opções para docker-compose.yml:</h4>
-      <label>Nome do Serviço: <input type="text" id="serviceName" placeholder="web" value="web"></label>
-      <label>Imagem: <input type="text" id="composeImage" placeholder="nginx:latest" value="nginx:latest"></label>
-      <label>Portas: <input type="text" id="composePorts" placeholder="8080:80" value="8080:80"></label>
-      <label>Volumes: <input type="text" id="composeVolumes" placeholder="./app:/usr/share/nginx/html"></label>
-      <label>Variáveis de Ambiente: <input type="text" id="composeEnv" placeholder="VAR1=valor1,VAR2=valor2"></label>
-    </div>
-    
-    <button class="tool-button" onclick="generateDockerCommand()">Gerar Comando</button>
-    <button class="tool-button" onclick="copyDockerCommand()">Copiar</button>
-    <textarea id="dockerOutput" readonly style="width: 100%; height: 200px; margin-top: 1rem; background: #2a2a3c; color: #cdd6f4; padding: 1rem; border: 1px solid #454565; border-radius: 6px; font-family: monospace; white-space: pre;"></textarea>
+<div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Gerador de Comandos Docker</h2>
+  
+  <div style="margin-bottom: 16px;">
+    <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Tipo de Comando:</strong></label>
+    <select id="dockerCommandType" style="background: #2a2a2a; color: #e0e0e0; padding: 8px; border: 1px solid #444; border-radius: 4px; width: 100%; max-width: 300px;">
+      <option value="run">🐳 docker run</option>
+      <option value="build">🏗️ docker build</option>
+      <option value="compose">📋 docker-compose.yml</option>
+    </select>
   </div>
+
+  <!-- Exemplos rápidos -->
+  <div style="margin-bottom: 16px; padding: 15px; background: #1a2a1a; border-radius: 6px; border: 1px solid #333;">
+    <strong style="color: #8bc34a;">🚀 Exemplos Rápidos:</strong><br>
+    <button onclick="loadExample('nginx')" style="background: #4caf50; color: white; border: none; padding: 6px 12px; margin: 4px; border-radius: 4px; cursor: pointer; font-size: 0.9em;">NGINX</button>
+    <button onclick="loadExample('node')" style="background: #2196F3; color: white; border: none; padding: 6px 12px; margin: 4px; border-radius: 4px; cursor: pointer; font-size: 0.9em;">Node.js</button>
+    <button onclick="loadExample('build')" style="background: #ff9800; color: white; border: none; padding: 6px 12px; margin: 4px; border-radius: 4px; cursor: pointer; font-size: 0.9em;">Build</button>
+    <button onclick="loadExample('compose')" style="background: #9c27b0; color: white; border: none; padding: 6px 12px; margin: 4px; border-radius: 4px; cursor: pointer; font-size: 0.9em;">Compose</button>
+  </div>
+
+  <!-- Opções docker run -->
+  <div id="dockerRunOptions" style="margin-bottom: 20px; padding: 15px; background: #1a2a1a; border-radius: 6px; border: 1px solid #333;">
+    <h3 style="color: #8bc34a; margin-top: 0;">🐳 docker run</h3>
+    <div style="margin-bottom: 12px;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Nome da Imagem:</label>
+      <input type="text" id="imageName" placeholder="ex: nginx:latest" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div style="margin-bottom: 12px;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">
+        <input type="checkbox" id="detachMode" style="margin-right: 8px; accent-color: #4caf50;" /> Modo Detached (-d)
+      </label>
+    </div>
+    <div style="margin-bottom: 12px;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Nome do Container (--name):</label>
+      <input type="text" id="containerName" placeholder="ex: meu-nginx" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div style="margin-bottom: 12px;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Mapeamento de Portas (-p):</label>
+      <input type="text" id="portMapping" placeholder="ex: 8080:80" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div style="margin-bottom: 12px;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Montagem de Volumes (-v):</label>
+      <input type="text" id="volumeMapping" placeholder="ex: ./html:/usr/share/nginx/html" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div style="margin-bottom: 12px;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Variáveis de Ambiente (-e):</label>
+      <input type="text" id="envVars" placeholder="ex: TZ=America/Sao_Paulo,NODE_ENV=development" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div>
+      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Comando a Executar:</label>
+      <input type="text" id="runCommand" placeholder="ex: npm start" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+  </div>
+
+  <!-- Opções docker build -->
+  <div id="dockerBuildOptions" style="display: none; margin-bottom: 20px; padding: 15px; background: #1a2a1a; border-radius: 6px; border: 1px solid #333;">
+    <h3 style="color: #8bc34a; margin-top: 0;">🏗️ docker build</h3>
+    <div style="margin-bottom: 12px;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Tag da Imagem (-t):</label>
+      <input type="text" id="buildTag" placeholder="ex: meu-app:latest" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div style="margin-bottom: 12px;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Arquivo Dockerfile (-f):</label>
+      <input type="text" id="dockerfile" value="Dockerfile" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div>
+      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Contexto de Build:</label>
+      <input type="text" id="buildContext" value="." placeholder="ex: ." style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+  </div>
+
+  <!-- Opções docker-compose -->
+  <div id="dockerComposeOptions" style="display: none; margin-bottom: 20px; padding: 15px; background: #1a2a1a; border-radius: 6px; border: 1px solid #333;">
+    <h3 style="color: #8bc34a; margin-top: 0;">📋 docker-compose.yml</h3>
+    <div style="margin-bottom: 12px;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Nome do Serviço:</label>
+      <input type="text" id="serviceName" value="web" placeholder="ex: web" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div style="margin-bottom: 12px;">
+      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Imagem:</label>
+      <input type="text" id="composeImage" placeholder="ex: nginx:latest" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+   
 
   <div class="seo-content">
     <h2>Por que usar um Gerador de Comandos Docker?</h2>
@@ -62,81 +106,184 @@ tags: [docker, devops, containers, cli, linux]
      </div>
 </section>
 
-<style>
-  /* ESTILO PADRÃO */
-  .tool-button { background: #89b4fa; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; margin: 1rem 0; }
-  label { display: block; margin: 0.5rem 0; color: #cdd6f4; }
-  input[type="text"] { width: 100%; max-width: 400px; padding: 0.5rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 4px; margin-top: 0.5rem; }
-  input[type="checkbox"] { margin-right: 0.5rem; }
-  textarea { width: 100%; height: 200px; background: #2a2a3c; color: #cdd6f4; padding: 1rem; border: 1px solid #454565; border-radius: 6px; font-family: monospace; white-space: pre; }
-  h4 { margin: 0 0 0.5rem 0; color: #a6e3a1; }
-</style>
-
 <script>
 function toggleOptions() {
-  const type = document.getElementById('dockerCommandType').value;
-  document.getElementById('dockerRunOptions').style.display = type === 'run' ? 'block' : 'none';
-  document.getElementById('dockerBuildOptions').style.display = type === 'build' ? 'block' : 'none';
-  document.getElementById('dockerComposeOptions').style.display = type === 'compose' ? 'block' : 'none';
+    const type = document.getElementById('dockerCommandType').value;
+    document.getElementById('dockerRunOptions').style.display = type === 'run' ? 'block' : 'none';
+    document.getElementById('dockerBuildOptions').style.display = type === 'build' ? 'block' : 'none';
+    document.getElementById('dockerComposeOptions').style.display = type === 'compose' ? 'block' : 'none';
+    generateDockerCommand();
 }
 
 function generateDockerCommand() {
-  const type = document.getElementById('dockerCommandType').value;
-  let command = '';
+    const type = document.getElementById('dockerCommandType').value;
+    let command = '';
+    let explanation = '';
 
-  if (type === 'run') {
-    command = 'docker run ';
-    if (document.getElementById('detachMode').checked) command += '-d ';
-    const name = document.getElementById('containerName').value.trim();
-    if (name) command += `--name ${name} `;
-    const ports = document.getElementById('portMapping').value.trim();
-    if (ports) command += `-p ${ports} `;
-    const volumes = document.getElementById('volumeMapping').value.trim();
-    if (volumes) command += `-v ${volumes} `;
-    const envs = document.getElementById('envVars').value.trim();
-    if (envs) {
-      envs.split(',').forEach(env => {
-        env = env.trim();
-        if (env) command += `-e "${env}" `;
-      });
+    if (type === 'run') {
+        command = 'docker run ';
+        explanation = '# Executa um container Docker\n';
+        
+        if (document.getElementById('detachMode').checked) {
+            command += '-d ';
+            explanation += '# -d: Modo detached (roda em background)\n';
+        }
+        
+        const name = document.getElementById('containerName').value.trim();
+        if (name) {
+            command += `--name ${name} `;
+            explanation += `# --name: Define nome do container (${name})\n`;
+        }
+        
+        const ports = document.getElementById('portMapping').value.trim();
+        if (ports) {
+            command += `-p ${ports} `;
+            explanation += `# -p: Mapeia portas (host:container → ${ports})\n`;
+        }
+        
+        const volumes = document.getElementById('volumeMapping').value.trim();
+        if (volumes) {
+            command += `-v ${volumes} `;
+            explanation += `# -v: Monta volumes (host:container → ${volumes})\n`;
+        }
+        
+        const envs = document.getElementById('envVars').value.trim();
+        if (envs) {
+            envs.split(',').forEach(env => {
+                env = env.trim();
+                if (env) {
+                    command += `-e "${env}" `;
+                    explanation += `# -e: Define variável de ambiente (${env})\n`;
+                }
+            });
+        }
+        
+        const imageName = document.getElementById('imageName').value.trim();
+        if (!imageName) {
+            document.getElementById('dockerOutput').value = '❌ Por favor, preencha o nome da imagem';
+            return;
+        }
+        command += imageName;
+        explanation += `# Imagem: ${imageName}\n`;
+        
+        const cmd = document.getElementById('runCommand').value.trim();
+        if (cmd) {
+            command += ` ${cmd}`;
+            explanation += `# Comando: ${cmd}\n`;
+        }
+        
+        command = explanation + '\n' + command;
+        
+    } else if (type === 'build') {
+        command = 'docker build ';
+        explanation = '# Constrói uma imagem Docker\n';
+        
+        const tag = document.getElementById('buildTag').value.trim();
+        if (tag) {
+            command += `-t ${tag} `;
+            explanation += `# -t: Tag da imagem (${tag})\n`;
+        }
+        
+        const file = document.getElementById('dockerfile').value.trim();
+        if (file && file !== 'Dockerfile') {
+            command += `-f ${file} `;
+            explanation += `# -f: Arquivo Dockerfile personalizado (${file})\n`;
+        }
+        
+        const context = document.getElementById('buildContext').value.trim() || '.';
+        command += context;
+        explanation += `# Contexto: ${context} (diretório com Dockerfile)\n`;
+        
+        command = explanation + '\n' + command;
+        
+    } else if (type === 'compose') {
+        const serviceName = document.getElementById('serviceName').value.trim() || 'web';
+        const image = document.getElementById('composeImage').value.trim();
+        if (!image) {
+            document.getElementById('dockerOutput').value = '❌ Por favor, preencha a imagem do serviço';
+            return;
+        }
+        
+        let command = `version: '3.8'\nservices:\n  ${serviceName}:\n    image: ${image}\n`;
+        explanation = `# Docker Compose para serviço: ${serviceName}\n`;
+        
+        const ports = document.getElementById('composePorts').value.trim();
+        if (ports) {
+            command += `    ports:\n      - "${ports}"\n`;
+            explanation += `# ports: Mapeia porta ${ports}\n`;
+        }
+        
+        const volumes = document.getElementById('composeVolumes').value.trim();
+        if (volumes) {
+            command += `    volumes:\n      - ${volumes}\n`;
+            explanation += `# volumes: Monta ${volumes}\n`;
+        }
+        
+        const envs = document.getElementById('composeEnv').value.trim();
+        if (envs) {
+            command += `    environment:\n`;
+            explanation += `# environment: Variáveis de ambiente\n`;
+            envs.split(',').forEach(env => {
+                env = env.trim();
+                if (env) {
+                    command += `      - ${env}\n`;
+                    explanation += `#   - ${env}\n`;
+                }
+            });
+        }
+        
+        command = explanation + '\n' + command;
     }
-    command += document.getElementById('imageName').value.trim();
-    const cmd = document.getElementById('runCommand').value.trim();
-    if (cmd) command += ` ${cmd}`;
-  } else if (type === 'build') {
-    command = 'docker build ';
-    const tag = document.getElementById('buildTag').value.trim();
-    if (tag) command += `-t ${tag} `;
-    const file = document.getElementById('dockerfile').value.trim();
-    if (file !== 'Dockerfile') command += `-f ${file} `;
-    command += document.getElementById('buildContext').value.trim();
-  } else if (type === 'compose') {
-    const serviceName = document.getElementById('serviceName').value.trim() || 'web';
-    const image = document.getElementById('composeImage').value.trim();
-    const ports = document.getElementById('composePorts').value.trim();
-    const volumes = document.getElementById('composeVolumes').value.trim();
-    const envs = document.getElementById('composeEnv').value.trim();
-    
-    command = `version: '3.8'\nservices:\n  ${serviceName}:\n    image: ${image}\n`;
-    if (ports) command += `    ports:\n      - "${ports}"\n`;
-    if (volumes) command += `    volumes:\n      - ${volumes}\n`;
-    if (envs) {
-      command += `    environment:\n`;
-      envs.split(',').forEach(env => {
-        env = env.trim();
-        if (env) command += `      - ${env}\n`;
-      });
-    }
-  }
 
-  document.getElementById('dockerOutput').value = command.trim();
+    document.getElementById('dockerOutput').value = command.trim();
 }
 
 function copyDockerCommand() {
-  const text = document.getElementById('dockerOutput').value;
-  if (text) {
-    navigator.clipboard.writeText(text).then(() => alert('✅ Comando Docker copiado!'));
-  }
+    const text = document.getElementById('dockerOutput').value;
+    if (text && !text.includes('❌')) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert('✅ Comando Docker copiado!');
+        }).catch(() => {
+            alert('❌ Falha ao copiar. Tente manualmente.');
+        });
+    }
+}
+
+function loadExample(type) {
+    if (type === 'nginx') {
+        document.getElementById('dockerCommandType').value = 'run';
+        document.getElementById('imageName').value = 'nginx:latest';
+        document.getElementById('containerName').value = 'meu-nginx';
+        document.getElementById('portMapping').value = '8080:80';
+        document.getElementById('volumeMapping').value = './html:/usr/share/nginx/html';
+        document.getElementById('envVars').value = 'TZ=America/Sao_Paulo';
+        document.getElementById('runCommand').value = '';
+        document.getElementById('detachMode').checked = true;
+    } else if (type === 'node') {
+        document.getElementById('dockerCommandType').value = 'run';
+        document.getElementById('imageName').value = 'node:18';
+        document.getElementById('containerName').value = 'meu-node';
+        document.getElementById('portMapping').value = '3000:3000';
+        document.getElementById('volumeMapping').value = '.:/app';
+        document.getElementById('envVars').value = 'NODE_ENV=development';
+        document.getElementById('runCommand').value = 'npm start';
+        document.getElementById('detachMode').checked = true;
+    } else if (type === 'build') {
+        document.getElementById('dockerCommandType').value = 'build';
+        document.getElementById('buildTag').value = 'meu-app:latest';
+        document.getElementById('dockerfile').value = 'Dockerfile';
+        document.getElementById('buildContext').value = '.';
+    } else if (type === 'compose') {
+        document.getElementById('dockerCommandType').value = 'compose';
+        document.getElementById('serviceName').value = 'web';
+        document.getElementById('composeImage').value = 'nginx:latest';
+        document.getElementById('composePorts').value = '80:80';
+        document.getElementById('composeVolumes').value = './html:/usr/share/nginx/html';
+        document.getElementById('composeEnv').value = 'TZ=America/Sao_Paulo';
+    }
+    
+    toggleOptions();
+    generateDockerCommand();
 }
 
 document.getElementById('dockerCommandType').addEventListener('change', toggleOptions);
