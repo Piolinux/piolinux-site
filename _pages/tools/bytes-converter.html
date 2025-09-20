@@ -17,6 +17,65 @@ tags: [bytes, bits, conversao, sysadmin, redes, armazenamento, kb, mb, gb]
   
   {% include tool-templates/bytes-converter.html %}
 
+
+<!-- ============= 📊 CONVERSOR DE BYTES / BITS (BASE 1000) ============= -->
+<div class="tool-container" id="bytes-converter" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Conversor de Bytes & Bits (Base 1000)</h2>
+  
+  <div style="margin-bottom: 16px; padding: 15px; background: #1a2a1a; border-radius: 6px; border: 1px solid #333;">
+    <strong>📌 Base 1000 (Decimal) - Padrão de Redes e Armazenamento</strong><br>
+    • <strong>Redes:</strong> Mbps, Gbps (bits)<br>
+    • <strong>Armazenamento:</strong> MB, GB (bytes)<br>
+    • <strong>1 byte = 8 bits</strong> → 100 Mbps = 12.5 MB/s
+  </div>
+
+  <div style="margin-bottom: 16px;">
+    <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Tipo:</strong></label><br>
+    <label style="color: #e0e0e0; margin-right: 20px;">
+        <input type="radio" name="unitType" value="bytes" checked onchange="updatePlaceholder()" style="margin-right: 6px; accent-color: #4caf50;" /> 
+        Bytes (B, KB, MB...)
+    </label>
+    <label style="color: #e0e0e0;">
+        <input type="radio" name="unitType" value="bits" onchange="updatePlaceholder()" style="margin-right: 6px; accent-color: #4caf50;" /> 
+        Bits (b, Kb, Mb...)
+    </label>
+  </div>
+
+  <input 
+      type="number" 
+      id="bytesInput" 
+      placeholder="Digite o valor em Bytes" 
+      step="any"
+      style="width: 100%; max-width: 400px; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; margin-bottom: 16px; font-family: monospace;">
+
+  <select id="unitSelect" style="background: #2a2a2a; color: #e0e0e0; padding: 10px; border: 1px solid #444; border-radius: 4px; width: 100%; max-width: 400px; margin-bottom: 16px; font-family: monospace;">
+    <option value="B">Bytes (B)</option>
+    <option value="KB">Kilobytes (KB)</option>
+    <option value="MB" selected>Megabytes (MB)</option>
+    <option value="GB">Gigabytes (GB)</option>
+    <option value="TB">Terabytes (TB)</option>
+    <option value="PB">Petabytes (PB)</option>
+  </select>
+
+  <button onclick="convertBytes()" style="background: #4caf50; color: white; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1.1em;">
+    🔄 Converter
+  </button>
+
+  <div id="bytesResult" style="min-height: 100px; margin: 20px 0;">
+    Insira um valor e selecione o tipo para conversão.
+  </div>
+
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 15px; border-radius: 6px; margin-top: 20px; border: 1px solid #333;">
+    <strong>📚 Aula Rápida:</strong><br>
+    • <strong>Base 1000:</strong> Padrão SI (1 KB = 1000 bytes) - usado em redes e discos<br>
+    • <strong>Base 1024:</strong> Padrão binário (1 KiB = 1024 bytes) - usado em RAM e sistemas<br>
+    • <strong>Sempre confirme a base!</strong> Um disco de "1TB" tem 1.000.000.000.000 bytes, não 1.099.511.627.776 bytes
+  </div>
+</div>
+
+
+  
+
   <div class="seo-content">
     <h2>Qual a diferença entre Bytes e Bits?</h2>
     <p>1 Byte = 8 Bits. Enquanto <strong>Bytes (B)</strong> medem armazenamento (discos, arquivos), <strong>Bits (b)</strong> medem velocidade (redes, banda).</p>
