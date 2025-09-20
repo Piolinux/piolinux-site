@@ -16,6 +16,44 @@ tags: [ip, subnet, cidr, rede, sysadmin, ipv4, redes-de-computadores, broadcast]
  
   {% include tool-templates/ip-calculator.html %}
 
+
+<!-- ============= 🌐 CALCULADORA DE IP / SUBNET ============= -->
+<div class="tool-container" id="ip-calculator" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Calculadora de IP / Subnet</h2>
+  
+  <div style="margin: 16px 0;">
+    <input 
+        type="text" 
+        id="ipInput" 
+        placeholder="Ex: 192.168.1.100/24 ou 10.0.0.1 255.255.255.0" 
+        style="width: 100%; max-width: 500px; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace; margin-bottom: 12px;">
+
+    <div style="display: flex; gap: 10px; margin-bottom: 16px;">
+        <button onclick="calculateIP()" style="background: #4caf50; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; flex: 1;">
+            🧮 Calcular Rede
+        </button>
+        <button onclick="document.getElementById('ipInput').value=''; document.getElementById('ipResult').innerHTML='';" style="background: #ff5252; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; flex: 1;">
+            🗑️ Limpar
+        </button>
+    </div>
+  </div>
+
+  <div id="ipResult" style="min-height: 100px; margin: 20px 0;">
+    Insira um IP com CIDR (ex: 192.168.1.100/24) ou IP e máscara (ex: 10.0.0.1 255.255.255.0)
+  </div>
+
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 15px; border-radius: 6px; margin-top: 20px; border: 1px solid #333;">
+    <strong>📚 Aula Rápida de Subnetting:</strong><br>
+    • <code>/24</code> = 254 hosts (máscara 255.255.255.0) → ideal para redes pequenas<br>
+    • <code>/16</code> = 65.534 hosts (máscara 255.255.0.0) → ideal para redes grandes<br>
+    • <code>/30</code> = 2 hosts → ideal para links ponto-a-ponto entre roteadores<br>
+    • Sempre subtraia 2 do total (rede + broadcast não são atribuíveis)
+  </div>
+</div>
+
+
+  
+
   <div class="seo-content">
     <h2>O que consiste uma Calculadora de IP e Sub-rede?</h2>
     <p>Uma calculadora de IP e Sub-rede configura-se como uma ferramenta indispensável para administradores de rede, estudantes da área de redes de computadores e profissionais de Tecnologia da Informação. Ela possibilita o cálculo automático de:</p>
