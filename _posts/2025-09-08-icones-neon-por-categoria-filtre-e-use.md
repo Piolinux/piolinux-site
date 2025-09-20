@@ -208,8 +208,7 @@ permalink: /icones-neon-tudo-em-um/
 <div>
     <h2>🎉 Use, Compartilhe e Brilhe!</h2>
     <p>
-      Esses ícones foram feitos para acelerar seus projetos com estilo e praticidade. Sinta-se à vontade para usá-los em sites, aplicativos, apresentações, documentações ou até mesmo em arte digital. Se gostou, compartilhe com seus colegas ou contribua sugerindo novos ícones.
-      <strong>Nenhum login, cadastro ou burocracia — só criatividade e código limpo.</strong> ✨
+      Esses ícones aqui? Ah, fiz eles pra acelerar tua vida, sabe? Com estilo... e praticidade. Pode usar onde quiser: sites, apps, apresentações, documentação... até arte digital, por que não? Curtiu? Manda pros amigos! Ou fala uns ícones novos que faltam, a gente vê. O melhor: sem cadastro, sem burocracia, nada. Só criatividade e código limpo, po. ✨</strong> ✨
     </p>
   </div>
 
