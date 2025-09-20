@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Jokenpô em JavaScript: Clássico de Pedra, Papel e Tesoura (2025)"
+title: "Jokenpô em JavaScript: Clássico de Pedra, Papel e Tesoura"
 description: "Jogue o clássico Jokenpô contra o computador. Feito com HTML, CSS e JavaScript puro — sem frameworks. Ideal para aprender lógica de jogo e eventos no navegador."
 date: 2025-10-17
 author: "PioLinux"
