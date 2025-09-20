@@ -20,6 +20,73 @@ tags: [chmod, linux, unix, permissao, sysadmin, terminal, arquivo, estudante]
   
   {% include tool-templates/chmod-calculator.html %}
 
+<!-- ============= 🔢 CALCULADORA DE PERMISSÕES CHMOD ============= -->
+<div class="tool-container" id="chmod-calculator" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Calculadora de Permissões chmod</h2>
+  
+  <div style="margin: 16px 0;">
+    <div style="margin-bottom: 16px;">
+      <strong style="color: #e0e0e0;">Dono:</strong><br>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="ownerRead" checked style="margin-right: 6px; accent-color: #4caf50;" /> r (4)
+      </label>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="ownerWrite" checked style="margin-right: 6px; accent-color: #4caf50;" /> w (2)
+      </label>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="ownerExecute" checked style="margin-right: 6px; accent-color: #4caf50;" /> x (1)
+      </label>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <strong style="color: #e0e0e0;">Grupo:</strong><br>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="groupRead" checked style="margin-right: 6px; accent-color: #4caf50;" /> r (4)
+      </label>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="groupWrite" style="margin-right: 6px; accent-color: #4caf50;" /> w (2)
+      </label>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="groupExecute" style="margin-right: 6px; accent-color: #4caf50;" /> x (1)
+      </label>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <strong style="color: #e0e0e0;">Outros:</strong><br>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="otherRead" style="margin-right: 6px; accent-color: #4caf50;" /> r (4)
+      </label>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="otherWrite" style="margin-right: 6px; accent-color: #4caf50;" /> w (2)
+      </label>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="otherExecute" style="margin-right: 6px; accent-color: #4caf50;" /> x (1)
+      </label>
+    </div>
+
+    <button onclick="calculateChmod()" style="background: #4caf50; color: white; border: none; padding: 10px 20px; margin: 10px 0; border-radius: 4px; cursor: pointer; font-weight: bold;">
+      🧮 Calcular chmod
+    </button>
+  </div>
+
+  <div id="chmodResult" style="background: #121212; padding: 15px; border-radius: 6px; margin: 15px 0; min-height: 60px; font-family: monospace;">
+    chmod 755 arquivo<br>
+    rwxr-xr-x<br>
+    Dono: leitura + escrita + execução | Grupo: leitura + execução | Outros: leitura
+  </div>
+
+  <div id="chmodWarning" style="display: none; background: #330000; color: #ff5252; padding: 10px; border-radius: 6px; margin: 15px 0; border: 1px solid #ff5252;">
+    ⚠️ <strong>Atenção:</strong> chmod 777 dá acesso total a todos os usuários — nunca use em produção!
+  </div>
+
+  <p style="font-size: 0.9em; color: #8bc34a; margin-top: 16px;">
+    💡 <strong>Dica de Sysadmin:</strong> Use a regra do mínimo privilégio — dê apenas as permissões necessárias. 755 para scripts, 644 para arquivos.
+  </p>
+</div>
+
+
+  
+
   <div class="seo-content">
   <h2>O que é chmod?</h2>
   <p><code>chmod</code> (change mode) é um comando do Linux/Unix usado para alterar as permissões de acesso de arquivos e diretórios.O uso incorreto desses comandos pode causar problemas, tornando o sistema inoperante. As permissões são definidas para:</p>
