@@ -16,21 +16,46 @@ tags: [estrutura-de-pastas, tree, nodejs, python, react, organizacao, documentac
 <section class="tool-single-page">
   <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
  
-  <div>
-    <label>Tipo de Projeto: 
-      <select id="projectType">
-        <option value="nodejs">Node.js Express</option>
-        <option value="react">React App</option>
-        <option value="python">Python Flask</option>
-        <option value="django">Django</option>
-        <option value="rails">Ruby on Rails</option>
-        <option value="jekyll">Jekyll</option>
-      </select>
-    </label>
-    <button class="tool-button" onclick="generateFolderStructure()">Gerar Estrutura</button>
-    <button class="tool-button" onclick="copyFolderStructure()">Copiar</button>
-    <pre id="folderOutput" style="margin-top: 1rem; padding: 1rem; background: #2a2a3c; border: 1px solid #454565; border-radius: 6px; color: #cdd6f4; font-family: monospace; overflow-x: auto; white-space: pre;"></pre>
+  <div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Gerador de Estrutura de Pastas</h2>
+  
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid #333;">
+    <strong>💡 Dica de Sysadmin/Dev:</strong> Conhecer a estrutura padrão de cada framework acelera seu onboarding e evita conflitos de organização!
   </div>
+
+  <div style="margin-bottom: 20px;">
+    <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Selecione o Tipo de Projeto:</strong></label>
+    <select id="projectType" onchange="generateFolderStructure()" style="background: #2a2a2a; color: #e0e0e0; padding: 10px; border: 1px solid #444; border-radius: 4px; width: 100%; max-width: 400px; font-family: monospace;">
+      <option value="nodejs">Node.js (Express)</option>
+      <option value="react">React (Create React App)</option>
+      <option value="python">Python (Flask)</option>
+      <option value="django">Django</option>
+      <option value="rails">Ruby on Rails</option>
+      <option value="jekyll">Jekyll (Static Site)</option>
+    </select>
+  </div>
+
+  <div style="margin-bottom: 20px; display: flex; justify-content: center;">
+    <button onclick="copyFolderStructure()" style="background: #2196F3; color: white; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1.1em;">
+      📋 Copiar Estrutura
+    </button>
+  </div>
+
+  <div style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #333; overflow-x: auto;">
+    <h3 style="color: #8bc34a; margin-top: 0; font-size: 1.2em;">📁 Estrutura de Pastas</h3>
+    <pre id="folderOutput" style="color: #e0e0e0; font-family: 'Courier New', monospace; font-size: 1em; line-height: 1.6; white-space: pre; margin: 0; padding: 0;"></pre>
+  </div>
+
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 20px; border-radius: 8px; margin-top: 30px; border: 1px solid #333;">
+    <h3 style="color: #8bc34a; margin-top: 0;">🎯 Por que isso importa:</h3>
+    <ul style="padding-left: 20px; margin: 15px 0; line-height: 1.6;">
+      <li><strong>Consistência:</strong> Todos no time sabem onde encontrar cada tipo de arquivo</li>
+      <li><strong>Onboarding rápido:</strong> Novos devs entram no projeto sem se perder</li>
+      <li><strong>Evita conflitos:</strong> Estrutura padronizada = menos discussões sobre organização</li>
+      <li><strong>Boas práticas:</strong> Segue convenções da comunidade de cada framework</li>
+    </ul>
+  </div>
+</div>
 
   <div class="seo-content">
     <h2>O que é o Comando tree?</h2>
@@ -41,13 +66,7 @@ tags: [estrutura-de-pastas, tree, nodejs, python, react, organizacao, documentac
   </div>
 </section>
 
-<style>
-  /* ESTILO PADRÃO */
-  .tool-button { background: #89b4fa; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; margin: 1rem 0; }
-  label { display: block; margin: 0.5rem 0; color: #cdd6f4; }
-  select { padding: 0.5rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 4px; }
-  pre { white-space: pre; overflow-x: auto; }
-</style>
+
 
 
 
@@ -55,108 +74,111 @@ tags: [estrutura-de-pastas, tree, nodejs, python, react, organizacao, documentac
 const structures = {
   nodejs: `
 my-app/
-├── node_modules/
+├── node_modules/          # Dependências (não versione!)
 ├── src/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   └── app.js
-├── .env
-├── package.json
-└── README.md
+│   ├── controllers/       # Lógica de roteamento
+│   ├── models/            # Modelos de dados
+│   ├── routes/            # Definição de rotas
+│   └── app.js             # Ponto de entrada
+├── .env                   # Variáveis de ambiente
+├── package.json           # Metadados e dependências
+└── README.md              # Documentação do projeto
 `,
   react: `
 my-react-app/
-├── node_modules/
+├── node_modules/          # Dependências (não versione!)
 ├── public/
-│   ├── index.html
-│   └── favicon.ico
+│   ├── index.html         # HTML base
+│   └── favicon.ico        # Ícone do site
 ├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── App.js
-│   └── index.js
-├── .gitignore
-├── package.json
-└── README.md
+│   ├── components/        # Componentes reutilizáveis
+│   ├── pages/             # Páginas da aplicação
+│   ├── App.js             # Componente raiz
+│   └── index.js           # Ponto de entrada
+├── .gitignore             # Arquivos ignorados pelo Git
+├── package.json           # Metadados e dependências
+└── README.md              # Documentação do projeto
 `,
   python: `
 my-flask-app/
-├── venv/
+├── venv/                  # Ambiente virtual (não versione!)
 ├── app/
-│   ├── __init__.py
-│   ├── routes.py
-│   └── models.py
-├── requirements.txt
-├── .env
-└── run.py
+│   ├── __init__.py        # Inicialização do app
+│   ├── routes.py          # Definição de rotas
+│   └── models.py          # Modelos de dados
+├── requirements.txt       # Dependências do projeto
+├── .env                   # Variáveis de ambiente
+└── run.py                 # Script para iniciar o servidor
 `,
   django: `
 myproject/
-├── manage.py
+├── manage.py              # Script de gerenciamento
 ├── myproject/
 │   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
+│   ├── settings.py        # Configurações do projeto
+│   ├── urls.py            # URLs raiz
+│   └── wsgi.py            # Ponto de entrada WSGI
 ├── myapp/
-│   ├── migrations/
+│   ├── migrations/        # Migrações de banco de dados
 │   ├── __init__.py
-│   ├── models.py
-│   ├── views.py
-│   └── apps.py
-└── requirements.txt
+│   ├── models.py          # Modelos de dados
+│   ├── views.py           # Lógica das views
+│   └── apps.py            # Configuração do app
+└── requirements.txt       # Dependências do projeto
 `,
   rails: `
 my-rails-app/
 ├── app/
-│   ├── assets/
-│   ├── controllers/
-│   ├── models/
-│   └── views/
+│   ├── assets/            # CSS, JS, imagens
+│   ├── controllers/       # Lógica das controllers
+│   ├── models/            # Modelos de dados
+│   └── views/             # Templates HTML
 ├── config/
-│   └── routes.rb
+│   └── routes.rb          # Definição de rotas
 ├── db/
-│   └── migrate/
-├── Gemfile
-└── README.md
+│   └── migrate/           # Migrações de banco de dados
+├── Gemfile                # Dependências do projeto
+└── README.md              # Documentação do projeto
 `,
   jekyll: `
 my-jekyll-site/
-├── _posts/
+├── _posts/                # Posts do blog (YYYY-MM-DD-title.md)
 │   └── 2025-04-05-welcome.md
-├── _pages/
+├── _pages/                # Páginas estáticas
 │   └── about.md
-├── _includes/
+├── _includes/             # Snippets reutilizáveis
 │   └── header.html
-├── _layouts/
+├── _layouts/              # Layouts de página
 │   └── default.html
-├── _data/
+├── _data/                 # Dados estruturados (YAML/JSON)
 │   └── config.yml
 ├── assets/
-│   ├── css/
-│   └── js/
-├── _config.yml
-└── index.html
+│   ├── css/               # Estilos
+│   └── js/                # Scripts
+├── _config.yml            # Configuração global
+└── index.html             # Página inicial
 `
 };
 
 function generateFolderStructure() {
-  const type = document.getElementById('projectType').value;
-  document.getElementById('folderOutput').innerText = structures[type].trim();
+    const type = document.getElementById('projectType').value;
+    document.getElementById('folderOutput').innerText = structures[type].trim();
 }
 
 function copyFolderStructure() {
-  const text = document.getElementById('folderOutput').innerText;
-  if (text) {
-    navigator.clipboard.writeText(text).then(() => alert('✅ Estrutura copiada!'));
-  }
+    const text = document.getElementById('folderOutput').innerText;
+    if (text) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert('✅ Estrutura de pastas copiada!');
+        }).catch(() => {
+            alert('❌ Falha ao copiar. Tente manualmente.');
+        });
+    }
 }
 
 // Gera ao carregar
 generateFolderStructure();
 </script>
-
 
 
 
