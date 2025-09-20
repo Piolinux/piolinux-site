@@ -14,12 +14,47 @@ tags: [ascii, terminal, sysadmin, monitoramento, cli, logs, design]
 <section class="tool-single-page">
   <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
   
-  <div>
-    <label>Valores (separados por vírgula): <input type="text" id="chartValues" placeholder="10, 25, 40, 75, 90" value="20, 45, 60, 85, 30"></label>
-    <label>Largura máxima (em caracteres): <input type="number" id="chartWidth" min="10" max="100" value="50"></label>
-    <button class="tool-button" onclick="generateASCIIChart()">Gerar Gráfico</button>
-    <pre id="chartOutput" style="margin-top: 1rem; padding: 1rem; background: #2a2a3c; border: 1px solid #454565; border-radius: 6px; color: #cdd6f4; font-family: monospace; overflow-x: auto; white-space: pre;"></pre>
+ <div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Gerador de Gráficos ASCII</h2>
+  
+  <div style="margin: 16px 0;">
+    <label style="color: #e0e0e0; display: block; margin-bottom: 8px;">
+      Valores (separados por vírgula):
+    </label>
+    <input 
+        id="chartValues" 
+        placeholder="Ex: 10,20,30,15,25" 
+        type="text" 
+        style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+
+    <label style="color: #e0e0e0; display: block; margin: 16px 0 8px 0;">
+      Largura do gráfico (em caracteres):
+    </label>
+    <input 
+        id="chartWidth" 
+        type="number" 
+        value="20" 
+        min="10" 
+        max="50" 
+        style="width: 100px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
   </div>
+
+  <button onclick="generateASCIIChart()" style="background: #4caf50; color: white; border: none; padding: 10px 20px; margin: 10px 0; border-radius: 4px; cursor: pointer; font-weight: bold;">
+    📊 Gerar Gráfico ASCII
+  </button>
+
+  <button onclick="copyChart()" style="background: #2196F3; color: white; border: none; padding: 10px 20px; margin: 10px 0; border-radius: 4px; cursor: pointer; font-weight: bold;">
+    📋 Copiar Gráfico
+  </button>
+
+  <pre id="chartOutput" style="background: #121212; padding: 15px; border-radius: 6px; margin: 15px 0; min-height: 100px; font-family: monospace; color: #e0e0e0; white-space: pre; overflow-x: auto;">
+Insira valores e clique em "Gerar Gráfico ASCII"
+  </pre>
+
+  <p style="font-size: 0.9em; color: #8bc34a; margin-top: 16px;">
+    💡 <strong>Dica de Sysadmin:</strong> Use gráficos ASCII para monitorar métricas em tempo real no terminal — sem GUI, sem dependências.
+  </p>
+</div>
 
   <div class="seo-content">
     <h2>O que é um Gráfico ASCII?</h2>
@@ -41,28 +76,47 @@ tags: [ascii, terminal, sysadmin, monitoramento, cli, logs, design]
 
 <script>
 function generateASCIIChart() {
-  const valuesStr = document.getElementById('chartValues').value;
-  const width = parseInt(document.getElementById('chartWidth').value);
-  const values = valuesStr.split(',').map(v => parseFloat(v.trim())).filter(v => !isNaN(v));
-  
-  if (values.length === 0) {
-    document.getElementById('chartOutput').innerText = 'Erro: Nenhum valor válido encontrado.';
-    return;
-  }
+    const valuesStr = document.getElementById('chartValues').value.trim();
+    const width = parseInt(document.getElementById('chartWidth').value) || 20;
 
-  const max = Math.max(...values);
-  let output = '';
+    // Valida entrada
+    if (!valuesStr) {
+        document.getElementById('chartOutput').innerText = '❌ Erro: Insira valores separados por vírgula (ex: 10,20,30)';
+        return;
+    }
 
-  values.forEach((val, i) => {
-    const barLength = Math.floor((val / max) * width);
-    const bar = '█'.repeat(barLength) + '░'.repeat(width - barLength);
-    output += `${(i+1).toString().padStart(2, '0')} | ${bar} ${Math.round(val)}\n`;
-  });
+    const values = valuesStr.split(',')
+        .map(v => parseFloat(v.trim()))
+        .filter(v => !isNaN(v) && v >= 0);
 
-  document.getElementById('chartOutput').innerText = output;
+    if (values.length === 0) {
+        document.getElementById('chartOutput').innerText = '❌ Erro: Nenhum valor numérico válido encontrado.';
+        return;
+    }
+
+    const max = Math.max(...values);
+    let output = '';
+
+    values.forEach((val, i) => {
+        const barLength = Math.max(1, Math.floor((val / max) * width)); // Mínimo 1 bloco
+        const bar = '█'.repeat(barLength) + '░'.repeat(width - barLength);
+        output += `${String(i+1).padStart(2, '0')} | ${bar} ${Math.round(val)}\n`;
+    });
+
+    document.getElementById('chartOutput').innerText = output;
+}
+
+function copyChart() {
+    const text = document.getElementById('chartOutput').innerText;
+    if (text && !text.includes('❌ Erro')) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert('✅ Gráfico ASCII copiado!');
+        }).catch(() => {
+            alert('❌ Falha ao copiar. Tente manualmente.');
+        });
+    }
 }
 </script>
-
 
 
 
