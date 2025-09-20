@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Baixe Wallpapers para Devs e Sysadmins: Dark, Espaço, Minimalista"
+title: "Baixe Wallpapers Dark & Espaciais — Feitos para Devs 🚀"
 description: "Baixe wallpapers gratuitos para desktop e mobile. Temas: programação, natureza, dark mode, espaço, minimalismo e muito mais."
 date: 2025-09-25
 author: "PioLinux"
