@@ -184,9 +184,7 @@ permalink: /icones-neon-tudo-em-um/
   <div class="intro-section">
     <h2>🌟 Bem-vindo à Coleção Neon de Ícones SVG</h2>
     <p>
-      Aqui você encontra <strong>50 ícones neon brilhantes</strong>, perfeitos para projetos modernos, interfaces, dashboards ou até apresentações criativas.
-      Escolha o tamanho (48px, 64px ou 96px), clique para baixar e use onde quiser — todos em <strong>SVG leve e escalável</strong>.
-      Nada de instalações, dependências ou complicações: <strong>tudo funciona offline, direto no seu navegador</strong>.
+    Aqui você acha uns... tipo, cinquenta ícones neon brilhantes, sabe? Perfeito pra projetos modernos, dashboards, essas coisas... ou até apresentações criativas, pô. Escolhe o tamanho ali—48, 64, 96, qual você quiser. Clica pra baixar e usa onde der na telha, tudo SVG leve, escalável... ah, e sem instalar nada, sem frescura de dependência. Funciona offline, direto no navegador, suave. É isso.
     </p>
   </div>
 
