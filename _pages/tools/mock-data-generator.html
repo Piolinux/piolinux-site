@@ -14,86 +14,155 @@ tags: [dados, teste, json, csv, api, banco-de-dados, qa, dev, data]
 <section class="tool-single-page">
   <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
   
-  <div>
-    <label>Formato: 
-      <select id="dataType">
-        <option value="json">JSON</option>
-        <option value="csv">CSV</option>
-      </select>
-    </label>
-    <label>Quantidade de registros: <input type="number" id="dataCount" min="1" max="1000" value="5"></label>
-    <button class="tool-button" onclick="generateMockData()">Gerar Dados</button>
-    <button class="tool-button" onclick="copyMockData()">Copiar</button>
-    <textarea id="dataOutput" readonly style="width: 100%; height: 400px; margin-top: 1rem; background: #2a2a3c; color: #cdd6f4; padding: 1rem; border: 1px solid #454565; border-radius: 6px; font-family: monospace; white-space: pre;"></textarea>
+  <div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Gerador de Dados Fictícios</h2>
+  
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid #333;">
+    <strong>💡 Dica de Sysadmin/Dev:</strong> Use dados fictícios para testar APIs, bancos de dados, interfaces de usuário — sem expor dados reais ou violar LGPD!
   </div>
 
-  <div class="seo-content">
-    <h2>Para que servem Dados de Teste?</h2>
-    <p>São essenciais para testar APIs, bancos de dados, interfaces de usuário e fluxos de aplicação sem usar dados reais.</p>
-    <h2>Como usar esta ferramenta?</h2>
-    <p>Escolha se você quer os arquivos em JSON ou CSV, diga quantos registros você precisa e aperte o botão 'Gerar'.</p>
+  <div style="margin-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+    <div>
+      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Formato:</strong></label>
+      <select id="dataType" onchange="generateMockData()" style="background: #2a2a2a; color: #e0e0e0; padding: 10px; border: 1px solid #444; border-radius: 4px; width: 100%; font-family: monospace;">
+        <option value="json">JSON (para APIs, JavaScript)</option>
+        <option value="csv">CSV (para Excel, bancos de dados)</option>
+      </select>
     </div>
+    
+    <div>
+      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Quantidade:</strong></label>
+      <input type="number" id="dataCount" min="1" max="1000" value="10" oninput="generateMockData()" style="width: 100%; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
+    </div>
+  </div>
+
+  <div style="margin-bottom: 20px; display: flex; justify-content: center;">
+    <button onclick="copyMockData()" style="background: #2196F3; color: white; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1.1em;">
+      📋 Copiar Dados Fictícios
+    </button>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <h3 style="color: #8bc34a; margin-bottom: 15px; font-size: 1.2em;">👁️ Preview (primeiros 5 registros)</h3>
+    <div id="dataPreview" style="background: #121212; padding: 15px; border-radius: 8px; border: 1px solid #333; overflow-x: auto;">
+      <!-- Preview gerado pelo JS -->
+    </div>
+  </div>
+
+  <div style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #333;">
+    <h3 style="color: #8bc34a; margin-top: 0; font-size: 1.2em;">💻 Dados Fictícios Gerados</h3>
+    <textarea 
+        id="dataOutput" 
+        readonly 
+        style="width: 100%; height: 300px; padding: 15px; background: #121212; color: #a6e3a1; border: 1px solid #333; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 1em; resize: vertical; line-height: 1.5;">
+[
+  {
+    "id": 1,
+    "name": "Ana Silva",
+    "email": "ana.silva1@example.com",
+    "age": 34,
+    "city": "São Paulo"
+  }
+]
+    </textarea>
+  </div>
+
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 20px; border-radius: 8px; margin-top: 30px; border: 1px solid #333;">
+    <h3 style="color: #8bc34a; margin-top: 0;">🎯 Casos de Uso Técnicos:</h3>
+    <ul style="padding-left: 20px; margin: 15px 0; line-height: 1.6;">
+      <li><strong>Testes de API:</strong> Popule endpoints com dados realistas</li>
+      <li><strong>Bancos de Dados:</strong> Gere massa de dados para testes de performance</li>
+      <li><strong>UI/UX:</strong> Preencha formulários e tabelas em protótipos</li>
+      <li><strong>Documentação:</strong> Crie exemplos realistas para manuais técnicos</li>
+    </ul>
+  </div>
+</div>
 </section>
 
-<style>
-  /* ESTILO PADRÃO */
-  .tool-button { background: #89b4fa; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; margin: 0.5rem 0.5rem 1rem 0; }
-  label { display: block; margin: 0.5rem 0; color: #cdd6f4; }
-  input[type="number"] { width: 80px; padding: 0.5rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 4px; margin-left: 0.5rem; }
-  select { padding: 0.5rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 4px; }
-  textarea { width: 100%; height: 400px; background: #2a2a3c; color: #cdd6f4; padding: 1rem; border: 1px solid #454565; border-radius: 6px; font-family: monospace; white-space: pre; }
-</style>
 
 
 <script>
-const firstNames = ['Ana', 'Carlos', 'Beatriz', 'Diego', 'Elena', 'Felipe', 'Gabriela', 'Henrique', 'Isabela', 'João'];
-const lastNames = ['Silva', 'Santos', 'Oliveira', 'Souza', 'Lima', 'Pereira', 'Almeida', 'Ferreira', 'Costa', 'Rodrigues'];
-const cities = ['São Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Porto Alegre', 'Curitiba', 'Salvador', 'Fortaleza', 'Brasília', 'Recife', 'Manaus'];
+const firstNames = ['Ana', 'Carlos', 'Beatriz', 'Diego', 'Elena', 'Felipe', 'Gabriela', 'Henrique', 'Isabela', 'João', 'Karina', 'Lucas', 'Mariana', 'Nicolas', 'Olivia'];
+const lastNames = ['Silva', 'Santos', 'Oliveira', 'Souza', 'Lima', 'Pereira', 'Almeida', 'Ferreira', 'Costa', 'Rodrigues', 'Gomes', 'Martins', 'Ribeiro', 'Carvalho', 'Alves'];
+const cities = ['São Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Porto Alegre', 'Curitiba', 'Salvador', 'Fortaleza', 'Brasília', 'Recife', 'Manaus', 'Goiânia', 'Belém', 'Campinas', 'São Luís', 'Natal'];
 
 function generateMockData() {
-  const format = document.getElementById('dataType').value;
-  const count = parseInt(document.getElementById('dataCount').value);
-  let data = [];
+    const format = document.getElementById('dataType').value;
+    const count = parseInt(document.getElementById('dataCount').value);
+    let data = [];
 
-  for (let i = 0; i < count; i++) {
-    const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
-    const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
-    const city = cities[Math.floor(Math.random() * cities.length)];
-    const age = Math.floor(Math.random() * 50) + 18;
-    const email = `${firstName.toLowerCase()}.${lastName.toLowerCase()}${i+1}@example.com`;
+    for (let i = 0; i < count; i++) {
+        const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+        const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+        const city = cities[Math.floor(Math.random() * cities.length)];
+        const age = Math.floor(Math.random() * 50) + 18;
+        const email = `${firstName.toLowerCase()}.${lastName.toLowerCase()}${i+1}@example.com`;
 
-    data.push({
-      id: i + 1,
-      name: `${firstName} ${lastName}`,
-      email: email,
-      age: age,
-      city: city
+        data.push({
+            id: i + 1,
+            name: `${firstName} ${lastName}`,
+            email: email,
+            age: age,
+            city: city
+        });
+    }
+
+    let output;
+    if (format === 'json') {
+        output = JSON.stringify(data, null, 2);
+    } else {
+        const headers = 'id,name,email,age,city';
+        const rows = data.map(item => `${item.id},"${item.name}",${item.email},${item.age},"${item.city}"`);
+        output = [headers, ...rows].join('\n');
+    }
+
+    document.getElementById('dataOutput').value = output;
+    
+    // Atualiza preview
+    updatePreview(data);
+}
+
+function updatePreview(data) {
+    const previewDiv = document.getElementById('dataPreview');
+    if (data.length === 0) return;
+    
+    let html = '<table style="width: 100%; border-collapse: collapse; font-family: monospace; font-size: 0.9em;">';
+    html += '<thead><tr style="background: #1a2a1a;">';
+    Object.keys(data[0]).forEach(key => {
+        html += `<th style="text-align: left; padding: 8px; border-bottom: 1px solid #333; color: #8bc34a;">${key}</th>`;
     });
-  }
-
-  let output;
-  if (format === 'json') {
-    output = JSON.stringify(data, null, 2);
-  } else {
-    const headers = 'id,name,email,age,city';
-    const rows = data.map(item => `${item.id},"${item.name}",${item.email},${item.age},"${item.city}"`);
-    output = [headers, ...rows].join('\n');
-  }
-
-  document.getElementById('dataOutput').value = output;
+    html += '</tr></thead><tbody>';
+    
+    data.slice(0, 5).forEach((row, index) => {
+        html += `<tr style="background: ${index % 2 === 0 ? '#121212' : '#1a1a1a'};">`;
+        Object.values(row).forEach(value => {
+            html += `<td style="padding: 8px; border-bottom: 1px solid #333; color: #e0e0e0;">${value}</td>`;
+        });
+        html += '</tr>';
+    });
+    
+    if (data.length > 5) {
+        html += `<tr><td colspan="5" style="padding: 8px; text-align: center; color: #aaa; font-style: italic;">... e mais ${data.length - 5} registros</td></tr>`;
+    }
+    
+    html += '</tbody></table>';
+    previewDiv.innerHTML = html;
 }
 
 function copyMockData() {
-  const text = document.getElementById('dataOutput').value;
-  if (text) {
-    navigator.clipboard.writeText(text).then(() => alert('✅ Dados copiados!'));
-  }
+    const text = document.getElementById('dataOutput').value;
+    if (text) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert('✅ Dados fictícios copiados para a área de transferência!');
+        }).catch(() => {
+            alert('❌ Falha ao copiar. Tente manualmente.');
+        });
+    }
 }
 
-// Gera ao carregar
+// Inicializa
 generateMockData();
 </script>
-
 
 
 <script type="application/ld+json">
