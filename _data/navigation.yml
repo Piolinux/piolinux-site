@@ -1,17 +1,24 @@
-- name: Início
-  link: /
+main:
+  - name: "Início"
+    link: "/"
+    icon: "🏠"
 
-- name: Aprenda
-  link: /aprenda/
+  - name: "Aprenda"
+    link: "/aprenda/"
+    icon: "📚"
 
-- name: Ferramentas
-  link: /ferramentas/
+  - name: "Ferramentas"
+    link: "/ferramentas/"
+    icon: "🛠️"
 
-- name: Distros
-  link: /distros/
+  - name: "Distros"
+    link: "/distros/"
+    icon: "🐧"
 
-- name: Sistema
-  link: /sistema/
+  - name: "Sistema"
+    link: "/sistema/"
+    icon: "⚙️"
 
-- name: Diversão
-  link: /diversao/
+  - name: "Diversão"
+    link: "/diversao/"
+    icon: "🎮"
