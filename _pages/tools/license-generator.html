@@ -28,7 +28,7 @@ tags: [licenca, open-source, mit, gpl, apache, github, software-livre, projeto]
 
   <div style="margin-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
     <div>
-      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Tipo de Licença:</strong></label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Tipo de Licença:</strong></div>
       <select id="licenseType" onchange="generateLicense()" style="background: #2a2a2a; color: #e0e0e0; padding: 10px; border: 1px solid #444; border-radius: 4px; width: 100%; font-family: monospace;">
         <option value="mit">MIT License</option>
         <option value="gpl">GNU GPL v3</option>
@@ -37,17 +37,17 @@ tags: [licenca, open-source, mit, gpl, apache, github, software-livre, projeto]
     </div>
     
     <div>
-      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Ano:</strong></label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Ano:</strong></div>
       <input type="text" id="copyrightYear" placeholder="ex: 2025" oninput="generateLicense()" style="width: 100%; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
     </div>
     
     <div>
-      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Nome Completo:</strong></label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Nome Completo:</strong></div>
       <input type="text" id="copyrightName" placeholder="ex: João Silva" oninput="generateLicense()" style="width: 100%; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
     </div>
     
     <div>
-      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Email (só para MIT):</strong></label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Email (só para MIT):</strong></div>
       <input type="email" id="copyrightEmail" placeholder="ex: joao@exemplo.com" oninput="generateLicense()" style="width: 100%; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
     </div>
   </div>
