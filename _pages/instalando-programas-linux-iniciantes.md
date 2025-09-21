@@ -126,7 +126,7 @@ sudo apt --fix-broken install</code></pre>
      O AppImage é como um programa que roda direto, sem precisar instalar nada.
     </p>
     <h3>
-     Permitir que rode
+     Permitir que o aplicativo rode:
     </h3>
     <p>
      Pra dar permissão pra ele rodar:
