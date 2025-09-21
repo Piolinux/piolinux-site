@@ -37,7 +37,8 @@ tags: [email, assinatura, html, marketing, vendas, suporte, seo]
       <input type="text" id="sigTitle" placeholder="Seu Cargo" oninput="generateSignature()" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
     <div>
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4: ">Empresa:</label>
+      <!-- ✅ Corrigido: "margin-bottom: 4: " → "margin-bottom: 4px;" -->
+      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Empresa:</label>
       <input type="text" id="sigCompany" placeholder="Sua Empresa" oninput="generateSignature()" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
     <div>
@@ -69,6 +70,10 @@ tags: [email, assinatura, html, marketing, vendas, suporte, seo]
   <h3 style="color: #8bc34a; margin: 20px 0 10px 0;">👁️ Preview da Assinatura</h3>
   <div id="signaturePreview" style="min-height: 100px; margin-bottom: 20px; padding: 15px; background: #121212; border-radius: 6px; border: 1px solid #333;"></div>
 
+  <!-- ✅ Campos ocultos necessários para a função de cópia -->
+  <textarea id="signatureHTML" style="display: none;" readonly></textarea>
+  <textarea id="signatureText" style="display: none;" readonly></textarea>
+
   <div style="display: flex; gap: 10px; margin-bottom: 16px;">
     <button onclick="copySignature('HTML')" style="background: #4caf50; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; flex: 1;">
       📋 Copiar HTML
@@ -77,6 +82,7 @@ tags: [email, assinatura, html, marketing, vendas, suporte, seo]
       📋 Copiar Texto
     </button>
   </div>
+</div>
 
   <div style="background: #1a2a1a; color: #8bc34a; padding: 15px; border-radius: 6px; margin-top: 20px; border: 1px solid #333;">
     <strong>  Dicas de Sysadmin e Design:</strong><br>
@@ -95,7 +101,6 @@ tags: [email, assinatura, html, marketing, vendas, suporte, seo]
    
   </div>
 </section>
-
 
 
 
@@ -160,34 +165,34 @@ function generateSignature() {
         html = `<pre style="font-family: 'Courier New', monospace; font-size: 13px; color: #e0e0e0; background: #121212; padding: 15px; border-radius: 4px; white-space: pre-wrap;">${text}</pre>`;
     }
 
-    // ✅ SEGURANÇA: Verifica se os elementos existem antes de definir valor
+    // ✅ Atualiza preview e campos de cópia
     const previewElem = document.getElementById('signaturePreview');
     const htmlElem = document.getElementById('signatureHTML');
     const textElem = document.getElementById('signatureText');
 
     if (previewElem) previewElem.innerHTML = html;
-    if (htmlElem) htmlElem.value = html;
-    if (textElem) textElem.value = text;
+    if (htmlElem) htmlElem.value = html;  // ← Agora salva o HTML aqui
+    if (textElem) textElem.value = text;  // ← Agora salva o texto aqui
 }
 
 function copySignature(type) {
-    // Ajusta para compatibilidade com seu botão "Copiar Texto"
+    // ✅ Aceita 'HTML' ou 'Texto' (compatível com seu botão)
     const elemId = type === 'HTML' ? 'signatureHTML' : 'signatureText';
     const elem = document.getElementById(elemId);
     
-    if (!elem || !elem.value) {
-        alert('❌ Nada para copiar.');
+    if (!elem || !elem.value.trim()) {
+        alert('❌ Nada para copiar. Preencha os campos primeiro.');
         return;
     }
 
     navigator.clipboard.writeText(elem.value).then(() => {
-        alert(`✅ Assinatura ${type} copiada!`);
+        alert(`✅ Assinatura ${type} copiada com sucesso!`);
     }).catch(() => {
-        alert(`❌ Falha ao copiar. Tente manualmente.`);
+        alert(`❌ Falha ao copiar. Tente manualmente (Ctrl+C).`);
     });
 }
 
-// ✅ INICIALIZA AO CARREGAR
+// ✅ Inicializa ao carregar
 document.addEventListener('DOMContentLoaded', function() {
     generateSignature();
 });
