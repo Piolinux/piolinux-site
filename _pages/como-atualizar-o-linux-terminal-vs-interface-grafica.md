@@ -184,7 +184,8 @@ permalink: /atualizar-linux-terminal-grafico/
      E aquelas permissões de arquivos, como funcionam?
     </h3>
     <p>
-     Atualizar o Linux é fácil: dá para fazer tanto por comandos de texto quanto pela interface gráfica. O importante é verificar sempre se há atualizações e não deixar as importantes para depois.Agora que você já sabe como fazer, que tal atualizar seu sistema?
+    E aí, beleza? Fica ligado pra sempre dar uma olhada se tem novidade e não deixar pra depois, hein? Já sabe como é, bora atualizar o sistema? 
+
     </p>
   
    
