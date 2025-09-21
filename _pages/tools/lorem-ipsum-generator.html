@@ -27,7 +27,7 @@ tags: [texto-tecnico, linux, docker, devops, placeholder, design, dev, prototipo
 
   <div style="margin-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
     <div>
-      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Tipo de Conteúdo:</strong></label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Tipo de Conteúdo:</strong></div>
       <select id="loremType" onchange="generateLorem()" style="background: #2a2a2a; color: #e0e0e0; padding: 10px; border: 1px solid #444; border-radius: 4px; width: 100%; font-family: monospace;">
         <option value="linux">🐧 Linux/Shell</option>
         <option value="docker">🐳 Docker</option>
@@ -38,7 +38,7 @@ tags: [texto-tecnico, linux, docker, devops, placeholder, design, dev, prototipo
     </div>
     
     <div>
-      <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Quantidade:</strong></label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Quantidade:</strong></div>
       <input type="number" id="loremCount" min="1" max="50" value="5" oninput="generateLorem()" style="width: 100%; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
     </div>
   </div>
