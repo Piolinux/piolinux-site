@@ -50,114 +50,45 @@ permalink: /wallpapers-abstratos-png/
 
 
 
-<style>
-
-        /* Estilos CSS da ferramenta, completamente independentes de qualquer documento externo. */
+<script src="https://cdn.tailwindcss.com"></script>
+    <style>
         .tool-container {
-            font-family: 'Inter', sans-serif;
-            background-color: #1e293b;
-            color: #e2e8f0;
-            padding: 2rem;
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            max-width: 672px;
-            margin: auto;
+            @apply bg-slate-800 p-6 rounded-xl shadow-2xl border border-slate-700 max-w-2xl w-full;
         }
-
         .tool-title {
-            font-size: 2.25rem;
-            line-height: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            background-image: linear-gradient(to right, #60a5fa, #a855f7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            @apply text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500 mb-2;
         }
-
         .tool-subtitle {
-            font-size: 1.125rem;
-            margin-bottom: 2rem;
-            color: #94a3b8;
+            @apply text-slate-300 mb-6;
         }
-
         .tool-panel {
-            background-color: #334155;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
+            @apply space-y-4 mb-6;
         }
-        
         .tool-input-field {
-            width: 100%;
-            padding: 1rem;
-            font-size: 1rem;
-            background-color: #475569;
-            color: #e2e8f0;
-            border-radius: 0.5rem;
-            border: 1px solid #64748b;
-            outline: none;
-            transition: all 0.3s;
-            resize: none;
+            @apply w-full p-3 bg-slate-700 border border-slate-600 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all;
         }
-
         .tool-button {
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            color: white;
-            border-radius: 0.75rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s;
-            cursor: pointer;
-            margin-top: 1rem;
-            background-color: #a855f7;
-            transition: background-color 0.3s;
+            @apply w-full py-3 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-300;
         }
-        
-        .tool-button:hover {
-            background-color: #7e22ce;
-        }
-
-        .image-container {
-            width: 100%;
-            max-width: 1024px;
-            margin: 1.5rem auto 0 auto; /* Centraliza o contêiner da imagem */
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            position: relative;
-        }
-        
-        canvas {
-            background-color: #334155;
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
         .download-link {
-            position: absolute;
-            bottom: 1rem;
-            right: 1rem;
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s;
-            transform: scale(0);
-            opacity: 0;
-            text-decoration: none;
-            cursor: pointer;
+            @apply inline-block mt-4 py-2 px-6 bg-slate-700 hover:bg-slate-600 text-white font-medium rounded-lg transition-colors;
         }
-        
-        .image-container:hover .download-link {
-            transform: scale(1);
-            opacity: 1;
+        #wallpaper-canvas {
+            @apply rounded-lg shadow-xl border border-slate-700;
         }
-
-</style>
+        .controls-grid {
+            @apply grid grid-cols-1 md:grid-cols-2 gap-4 mb-6;
+        }
+        .control-group {
+            @apply flex flex-col;
+        }
+        .control-label {
+            @apply text-sm font-medium text-slate-300 mb-1;
+        }
+        .control-slider {
+            @apply w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-teal-500;
+        }
+    </style>
 <body class="bg-slate-900 text-slate-100 p-4 md:p-8 flex flex-col items-center justify-center min-h-screen">
 
     <div class="tool-container">
