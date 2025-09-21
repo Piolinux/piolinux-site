@@ -15,59 +15,49 @@ tags: [gps, coordenadas, latitude, longitude, mapa, geolocalizacao, teste, proto
 <section class="tool-single-page">
   <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
   
-  <div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
-  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Gerador de GPS Aleatório</h2>
-  
-  <div style="margin: 16px 0;">
-    <div style="color: #e0e0e0; display: block; margin-bottom: 8px;">Selecione a região:</div>
-    <select id="regionSelect" style="background: #2a2a2a; color: #e0e0e0; padding: 8px; border: 1px solid #444; border-radius: 4px; width: 100%; max-width: 300px;">
-      <option value="global">🌍 Mundo Inteiro</option>
-      <option value="brazil">🇧🇷 Brasil</option>
-      <option value="usa">🇺🇸 EUA</option>
-      <option value="europe">🇪🇺 Europa</option>
-    </select>
-  </div>
-
-  <div style="margin-top: 30px; background: #121212; padding: 25px; border-radius: 12px; border: 1px solid #333;">
-    <h3 style="color: #8bc34a; margin: 0 0 20px 0; font-size: 1.3em;">📍 Coordenadas Geradas</h3>
+  <div style="background: #1a1a1a; padding: 30px; border-radius: 16px; border: 1px solid #333; max-width: 800px; margin: 0 auto;">
+    <h2 style="color: #8bc34a; text-align: center; margin: 0 0 20px 0;">🌍 Gerador de Coordenadas GPS Aleatórias</h2>
     
     <div style="margin-bottom: 20px;">
-        <strong style="color: #a6e3a1;">Formato Decimal (Padrão):</strong>
-        <p id="gpsDecimal" style="color: #e0e0e0; font-family: 'Courier New', monospace; margin: 10px 0;">
+        <label for="regionSelect" style="color: #a6e3a1; display: block; margin-bottom: 8px;">Selecione a Região:</label>
+        <select id="regionSelect" onchange="generateGPS()" style="width: 100%; padding: 12px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 8px; font-family: 'Courier New', monospace;">
+            <option value="brazil">🇧🇷 Brasil</option>
+            <option value="usa">🇺🇸 Estados Unidos</option>
+            <option value="europe">🇪🇺 Europa</option>
+            <option value="global">🌐 Global</option>
+        </select>
+    </div>
+
+    <button onclick="generateGPS()" style="background: linear-gradient(90deg, #4caf50, #8bc34a); color: white; padding: 16px 32px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 1.1em; width: 100%; margin-bottom: 30px;">
+        🎯 Gerar Nova Coordenada GPS
+    </button>
+
+    <div style="background: #121212; padding: 25px; border-radius: 12px; border: 1px solid #333; margin-bottom: 20px;">
+        <h3 style="color: #a6e3a1; margin: 0 0 15px 0;">📍 Formato Decimal (Padrão)</h3>
+        <p id="gpsDecimal" style="color: #e0e0e0; font-family: 'Courier New', monospace; font-size: 1.2em; margin: 0;">
             Latitude: 0.000000° | Longitude: 0.000000°
         </p>
     </div>
 
-    <div style="margin-bottom: 20px;">
-        <strong style="color: #a6e3a1;">Formato DMS (Graus, Minutos, Segundos):</strong>
-        <p id="gpsDMS" style="color: #e0e0e0; font-family: 'Courier New', monospace; margin: 10px 0;">
+    <div style="background: #121212; padding: 25px; border-radius: 12px; border: 1px solid #333; margin-bottom: 20px;">
+        <h3 style="color: #a6e3a1; margin: 0 0 15px 0;">🧭 Formato DMS (Graus, Minutos, Segundos)</h3>
+        <p id="gpsDMS" style="color: #e0e0e0; font-family: 'Courier New', monospace; font-size: 1.2em; margin: 0;">
             0°0'0.00"N, 0°0'0.00"E
         </p>
     </div>
 
-    <button onclick="copyGPS('decimal')" style="background: #2196F3; color: white; padding: 10px 20px; border: none; border-radius: 6px; margin-right: 10px; cursor: pointer; font-weight: bold;">
-        📋 Copiar Decimal
-    </button>
-    <button onclick="copyGPS('dms')" style="background: #9c27b0; color: white; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">
-        📋 Copiar DMS
-    </button>
+    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+        <button onclick="copyGPS('decimal')" style="flex: 1; min-width: 200px; background: #2196F3; color: white; padding: 12px 20px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">
+            📋 Copiar Decimal
+        </button>
+        <button onclick="copyGPS('dms')" style="flex: 1; min-width: 200px; background: #9c27b0; color: white; padding: 12px 20px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">
+            📋 Copiar DMS
+        </button>
+    </div>
 
     <!-- Campo oculto para copiar formato padrão -->
     <div id="gpsResult" style="display: none;"></div>
 </div>
-
-  <p style="font-size: 0.9em; color: #8bc34a; margin-top: 16px;">
-    💡 <strong>Dica de Sysadmin:</strong> Use coordenadas aleatórias para testar APIs de mapas, geofencing ou simulações de IoT — sem expor dados reais.
-  </p>
-</div>
-</section>
-
-<style>
-  /* ESTILO PADRÃO */
-  .tool-button { background: #89b4fa; color: #1e1e2e; padding: 0.75rem 1.5rem; font-family: monospace; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; margin: 0.5rem 0.5rem 1rem 0; }
-  label { display: block; margin: 0.5rem 0; color: #cdd6f4; }
-  select { padding: 0.5rem; background: #303045; border: 1px solid #5a5a72; color: #cdd6f4; font-family: monospace; border-radius: 4px; }
-</style>
 
 
 
@@ -77,7 +67,13 @@ tags: [gps, coordenadas, latitude, longitude, mapa, geolocalizacao, teste, proto
 
 <script>
 function generateGPS() {
-    const region = document.getElementById('regionSelect').value;
+    const regionSelect = document.getElementById('regionSelect');
+    if (!regionSelect) {
+        console.error('Elemento #regionSelect não encontrado!');
+        return;
+    }
+
+    const region = regionSelect.value;
     let lat, lng;
 
     // Limites geográficos REAIS (fonte: dados oficiais)
@@ -89,19 +85,24 @@ function generateGPS() {
     };
 
     const limits = regions[region];
+    if (!limits) {
+        console.error('Região inválida:', region);
+        return;
+    }
+
     lat = limits.lat[0] + (Math.random() * (limits.lat[1] - limits.lat[0]));
     lng = limits.lng[0] + (Math.random() * (limits.lng[1] - limits.lng[0]));
 
     const latFixed = lat.toFixed(6);
     const lngFixed = lng.toFixed(6);
 
-    // ✅ Verifica se os elementos existem antes de definir .innerText
+    // ✅ Verifica se os elementos existem antes de usar
     const gpsDecimal = document.getElementById('gpsDecimal');
     const gpsDMS = document.getElementById('gpsDMS');
     const gpsResult = document.getElementById('gpsResult');
 
     if (!gpsDecimal || !gpsDMS || !gpsResult) {
-        console.error('Elementos de GPS não encontrados!');
+        console.error('Elementos de GPS não encontrados! Verifique os IDs no HTML.');
         return;
     }
 
@@ -116,6 +117,7 @@ function generateGPS() {
     // Copiar formato decimal por padrão
     gpsResult.innerText = `${latFixed}, ${lngFixed}`;
 }
+
 function decimalToDMS(decimal, type) {
     const absolute = Math.abs(decimal);
     const degrees = Math.floor(absolute);
@@ -131,20 +133,41 @@ function decimalToDMS(decimal, type) {
 
 function copyGPS(format = 'decimal') {
     let text = '';
+    const gpsResult = document.getElementById('gpsResult');
+    const gpsDMS = document.getElementById('gpsDMS');
+
     if (format === 'decimal') {
-        text = document.getElementById('gpsResult').innerText;
+        if (!gpsResult) {
+            alert('❌ Elemento #gpsResult não encontrado!');
+            return;
+        }
+        text = gpsResult.innerText;
     } else {
-        text = document.getElementById('gpsDMS').innerText;
+        if (!gpsDMS) {
+            alert('❌ Elemento #gpsDMS não encontrado!');
+            return;
+        }
+        text = gpsDMS.innerText;
     }
 
-    if (text && !text.includes('undefined')) {
+    if (text && !text.includes('undefined') && text.trim() !== '') {
         navigator.clipboard.writeText(text).then(() => {
             alert(`✅ Copiado: ${text}`);
         }).catch(() => {
             alert('❌ Falha ao copiar. Tente manualmente.');
         });
+    } else {
+        alert('⚠️ Nenhuma coordenada gerada. Clique em "Gerar GPS" primeiro.');
     }
 }
+
+// ✅ Inicializa ao carregar (opcional)
+document.addEventListener('DOMContentLoaded', function() {
+    // Gera coordenadas iniciais
+    if (document.getElementById('regionSelect')) {
+        generateGPS();
+    }
+});
 </script>
 
 
