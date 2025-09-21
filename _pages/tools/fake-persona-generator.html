@@ -97,6 +97,7 @@ function generatePersona() {
     const job = jobs[Math.floor(Math.random() * jobs.length)];
     const bio = bios[Math.floor(Math.random() * bios.length)];
     const email = `${firstName.toLowerCase()}.${lastName.toLowerCase()}@example.com`;
+    // ✅ CORRIGIDO: removidos espaços antes da URL
     const avatarUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(firstName + ' ' + lastName)}&background=4caf50&color=1e1e2e&size=256`;
 
     document.getElementById('personaAvatar').src = avatarUrl;
@@ -113,11 +114,30 @@ function copyPersona() {
     const bio = document.getElementById('personaBio').innerText;
     
     const text = `Nome: ${name}\nCargo: ${job}\nEmail: ${email}\nBio: ${bio}`;
-    navigator.clipboard.writeText(text).then(() => {
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert('✅ Dados da persona copiados!');
+        }).catch(() => {
+            fallbackCopy(text);
+        });
+    } else {
+        fallbackCopy(text);
+    }
+}
+
+function fallbackCopy(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    try {
+        document.execCommand('copy');
         alert('✅ Dados da persona copiados!');
-    }).catch(() => {
-        alert('❌ Falha ao copiar. Tente manualmente.');
-    });
+    } catch (err) {
+        alert('❌ Falha ao copiar. Copie manualmente:\n\n' + text);
+    }
+    document.body.removeChild(textarea);
 }
 
 // Gera uma persona ao carregar
