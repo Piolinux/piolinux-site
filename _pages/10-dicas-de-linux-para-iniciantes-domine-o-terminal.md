@@ -183,7 +183,7 @@ permalink: /artigos-linux-iniciantes/
      </li>
      <li>
       <h3>
-       Gerenciador de Pastas e Arquivos
+       Gerenciador de Pastas e Arquivos:
       </h3>
       <p>
        Entender como funciona o sistema de arquivos no Linux é essencial. O diretório raiz é representado por
