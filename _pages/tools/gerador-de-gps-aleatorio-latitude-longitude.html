@@ -28,29 +28,33 @@ tags: [gps, coordenadas, latitude, longitude, mapa, geolocalizacao, teste, proto
     </select>
   </div>
 
-  <button onclick="generateGPS()" style="background: #4caf50; color: white; border: none; padding: 10px 20px; margin: 10px 0; border-radius: 4px; cursor: pointer; font-weight: bold;">
-    🎯 Gerar Coordenadas
-  </button>
+  <div style="margin-top: 30px; background: #121212; padding: 25px; border-radius: 12px; border: 1px solid #333;">
+    <h3 style="color: #8bc34a; margin: 0 0 20px 0; font-size: 1.3em;">📍 Coordenadas Geradas</h3>
+    
+    <div style="margin-bottom: 20px;">
+        <strong style="color: #a6e3a1;">Formato Decimal (Padrão):</strong>
+        <p id="gpsDecimal" style="color: #e0e0e0; font-family: 'Courier New', monospace; margin: 10px 0;">
+            Latitude: 0.000000° | Longitude: 0.000000°
+        </p>
+    </div>
 
-  <div style="margin: 20px 0; padding: 15px; background: #121212; border-radius: 6px; border: 1px solid #333;">
-    <h3 style="color: #8bc34a; margin-top: 0;">📌 Formato Decimal (Padrão)</h3>
-    <p id="gpsDecimal" style="font-family: monospace; font-size: 1.1em; color: #e0e0e0; margin: 0;">
-      Latitude: 0.000000° | Longitude: 0.000000°
-    </p>
-    <button onclick="copyGPS('decimal')" style="background: #2196F3; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; margin-top: 8px;">
-      📋 Copiar Decimal
-    </button>
-  </div>
+    <div style="margin-bottom: 20px;">
+        <strong style="color: #a6e3a1;">Formato DMS (Graus, Minutos, Segundos):</strong>
+        <p id="gpsDMS" style="color: #e0e0e0; font-family: 'Courier New', monospace; margin: 10px 0;">
+            0°0'0.00"N, 0°0'0.00"E
+        </p>
+    </div>
 
-  <div style="margin: 20px 0; padding: 15px; background: #121212; border-radius: 6px; border: 1px solid #333;">
-    <h3 style="color: #8bc34a; margin-top: 0;">🧭 Formato DMS (Graus, Minutos, Segundos)</h3>
-    <p id="gpsDMS" style="font-family: monospace; font-size: 1.1em; color: #e0e0e0; margin: 0;">
-      0°0'0.00"N, 0°0'0.00"E
-    </p>
-    <button onclick="copyGPS('dms')" style="background: #9c27b0; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; margin-top: 8px;">
-      📋 Copiar DMS
+    <button onclick="copyGPS('decimal')" style="background: #2196F3; color: white; padding: 10px 20px; border: none; border-radius: 6px; margin-right: 10px; cursor: pointer; font-weight: bold;">
+        📋 Copiar Decimal
     </button>
-  </div>
+    <button onclick="copyGPS('dms')" style="background: #9c27b0; color: white; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">
+        📋 Copiar DMS
+    </button>
+
+    <!-- Campo oculto para copiar formato padrão -->
+    <div id="gpsResult" style="display: none;"></div>
+</div>
 
   <p style="font-size: 0.9em; color: #8bc34a; margin-top: 16px;">
     💡 <strong>Dica de Sysadmin:</strong> Use coordenadas aleatórias para testar APIs de mapas, geofencing ou simulações de IoT — sem expor dados reais.
@@ -91,18 +95,27 @@ function generateGPS() {
     const latFixed = lat.toFixed(6);
     const lngFixed = lng.toFixed(6);
 
+    // ✅ Verifica se os elementos existem antes de definir .innerText
+    const gpsDecimal = document.getElementById('gpsDecimal');
+    const gpsDMS = document.getElementById('gpsDMS');
+    const gpsResult = document.getElementById('gpsResult');
+
+    if (!gpsDecimal || !gpsDMS || !gpsResult) {
+        console.error('Elementos de GPS não encontrados!');
+        return;
+    }
+
     // Formato Decimal (padrão)
-    document.getElementById('gpsDecimal').innerText = `Latitude: ${latFixed}° | Longitude: ${lngFixed}°`;
+    gpsDecimal.innerText = `Latitude: ${latFixed}° | Longitude: ${lngFixed}°`;
 
     // Formato DMS (Graus, Minutos, Segundos) — útil para GPS real
     const dmsLat = decimalToDMS(lat, 'lat');
     const dmsLng = decimalToDMS(lng, 'lng');
-    document.getElementById('gpsDMS').innerText = `${dmsLat}, ${dmsLng}`;
+    gpsDMS.innerText = `${dmsLat}, ${dmsLng}`;
 
     // Copiar formato decimal por padrão
-    document.getElementById('gpsResult').innerText = `${latFixed}, ${lngFixed}`;
+    gpsResult.innerText = `${latFixed}, ${lngFixed}`;
 }
-
 function decimalToDMS(decimal, type) {
     const absolute = Math.abs(decimal);
     const degrees = Math.floor(absolute);
