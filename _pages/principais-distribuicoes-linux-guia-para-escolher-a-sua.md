@@ -122,7 +122,7 @@ permalink: /principais-distros-linux/
     <dd>Geralmente, o pessoal acha que o Linux Mint é a melhor pra quem tá começando.</dd>
 
     <dt>As distros são de graça?</dt>
-    <dd>Sim, quase todas são gratuitas. Algumas, como o Zorin Pro, têm versões pagas com recursos extras.</dd>
+    <dd>Sim, quase todas são gratuitas. Algumas, como a Distro Zorin Pro, têm versões pagas com recursos extras.</dd>
 
     <dt>Dá pra testar antes de instalar?</dt>
     <dd>Com certeza! Dá para usar um pendrive bootável para rodar a distribuição Linux direto nele, tipo um live CD. Se preferir, dá para usar um programa tipo o VirtualBox e testar tudo numa máquina virtual.</dd>
