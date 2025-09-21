@@ -118,18 +118,18 @@ permalink: /o-que-e-linux/
   
   
  
-<h3>🐧 O Que é Linux?</h3>
+<h3>O Que é Linux?</h3>
 <p>O Linux é um <strong>sistema operacional de código aberto</strong>, baseado no kernel Linux. Ele é usado em servidores, desktops, dispositivos embarcados e até no Android.</p>
 
-<h3>🔧 Por Que Usar?</h3>
+<h3>Por que usar?</h3>
 <ul>
-  <li><strong>Gratuito e livre</strong> — você pode usar, modificar e distribuir</li>
-  <li><strong>Estável e seguro</strong> — roda por meses sem reiniciar</li>
+  <li><strong>Gratuito e livre</strong> — você pode usar, modificar e distribuir.</li>
+  <li><strong>Estável e seguro</strong> — roda por meses sem reiniciar.</li>
   <li><strong>Comunidade ativa</strong> — como a do <a href="https://ohmyz.sh">Oh My Zsh</a> ou <a href="https://iterm2.com">iTerm2</a></li>
-  <li><strong>Controle total</strong> — você manda no sistema, não o contrário</li>
+  <li><strong>Controle total</strong> — você manda no sistema, não o contrário.</li>
 </ul>
 
 
-<h3>✅ Conclusão</h3>
+<h3>Conclusão</h3>
 <p>Assim como o <a href="https://iterm2.com">iTerm2</a> moderniza o terminal no macOS, ou o <a href="https://ohmyz.sh">Oh My Zsh</a> transforma seu Zsh, o Linux moderniza sua relação com o computador. Não é só um sistema — é <strong>autonomia</strong>. Comece com Ubuntu ou Debian, e descubra por que tantos estão saindo do Windows.</p>
 </section>
