@@ -158,7 +158,7 @@ permalink: /wallpapers-abstratos-png/
         }
 
 </style>
-<body class="bg-slate-900 text-slate-100 p-8 flex flex-col items-center justify-center min-h-screen">
+<body class="bg-slate-900 text-slate-100 p-4 md:p-8 flex flex-col items-center justify-center min-h-screen">
 
     <div class="tool-container">
         <h2 class="tool-title text-center">
@@ -168,91 +168,136 @@ permalink: /wallpapers-abstratos-png/
             Crie imagens únicas e elegantes para o seu computador ou celular.
         </p>
 
-        <!-- Controles da ferramenta -->
-        <div class="tool-panel">
-            <input type="text" id="text-input" class="tool-input-field" placeholder="Texto para incluir no wallpaper (opcional)">
-            <button id="generate-btn" class="tool-button w-full">
-                Gerar Novo Wallpaper
+        <!-- Controles avançados -->
+        <div class="controls-grid">
+            <div class="control-group">
+                <label class="control-label">Texto (opcional)</label>
+                <input type="text" id="text-input" class="tool-input-field" placeholder="Ex: Meu Wallpaper">
+            </div>
+            <div class="control-group">
+                <label class="control-label">Opacidade das formas: <span id="opacity-value">50%</span></label>
+                <input type="range" id="opacity-slider" class="control-slider" min="10" max="100" value="50">
+            </div>
+            <div class="control-group">
+                <label class="control-label">Número de formas: <span id="shapes-value">75</span></label>
+                <input type="range" id="shapes-slider" class="control-slider" min="20" max="200" value="75">
+            </div>
+            <div class="control-group">
+                <label class="control-label">Tamanho máximo: <span id="size-value">100px</span></label>
+                <input type="range" id="size-slider" class="control-slider" min="30" max="300" value="100">
+            </div>
+        </div>
+
+        <!-- Botões -->
+        <div class="flex gap-3">
+            <button id="generate-btn" class="tool-button flex-1">
+                🎲 Gerar Novo Wallpaper
+            </button>
+            <button id="download-btn" class="download-link flex-1 text-center">
+                📥 Baixar PNG
             </button>
         </div>
     </div>
 
-    <!-- Contêiner do Canvas e link de download -->
-    <div class="image-container" id="image-container">
-        <canvas id="wallpaper-canvas"></canvas>
-        <a id="download-link" href="#" download="wallpaper.png" class="download-link">Baixar</a>
+    <!-- Preview -->
+    <div class="mt-8 w-full max-w-4xl">
+        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
+            <canvas id="wallpaper-canvas" class="w-full max-w-full h-auto"></canvas>
+        </div>
     </div>
 
     <script>
-        // Seleciona os elementos do DOM
+        // Elementos do DOM
         const canvas = document.getElementById('wallpaper-canvas');
         const ctx = canvas.getContext('2d');
         const generateBtn = document.getElementById('generate-btn');
-        const downloadLink = document.getElementById('download-link');
+        const downloadBtn = document.getElementById('download-btn');
         const textInput = document.getElementById('text-input');
+        const opacitySlider = document.getElementById('opacity-slider');
+        const shapesSlider = document.getElementById('shapes-slider');
+        const sizeSlider = document.getElementById('size-slider');
         
-        // Define a resolução do canvas para uma imagem de alta qualidade
+        // Labels de valor
+        const opacityValue = document.getElementById('opacity-value');
+        const shapesValue = document.getElementById('shapes-value');
+        const sizeValue = document.getElementById('size-value');
+
+        // Resolução HD
         const width = 1920;
         const height = 1080;
-        
-        // Ajusta a resolução real do canvas para corresponder aos pixels do dispositivo
-        function resizeCanvas() {
-            const ratio = window.devicePixelRatio || 1;
-            canvas.width = width * ratio;
-            canvas.height = height * ratio;
-            ctx.scale(ratio, ratio);
-        }
-        
-        // Paleta de cores para a geração
+
+        // Paletas de cores
         const colorPalettes = [
             ['#FF6B6B', '#FFD166', '#06D6A0', '#118AB2', '#073B4C'],
             ['#F08080', '#F4A460', '#A2CD5A', '#6B8E23', '#2F4F4F'],
             ['#93A5CF', '#E4EfE9', '#A3D2CA', '#68BBE3', '#5E8B7E'],
             ['#283618', '#606C38', '#FEFAE0', '#DDA15E', '#BC6C25'],
             ['#14213d', '#fca311', '#e5e5e5', '#808080', '#4a4e4d'],
+            ['#8B5CF6', '#EC4899', '#F59E0B', '#10B981', '#3B82F6'],
+            ['#EF4444', '#F97316', '#EAB308', '#22C55E', '#06B6D4'],
         ];
 
-        // Função principal para desenhar o wallpaper
+        // Atualiza labels dos sliders
+        opacitySlider.addEventListener('input', () => {
+            opacityValue.textContent = `${opacitySlider.value}%`;
+        });
+        shapesSlider.addEventListener('input', () => {
+            shapesValue.textContent = opacitySlider.value;
+        });
+        sizeSlider.addEventListener('input', () => {
+            sizeValue.textContent = `${sizeSlider.value}px`;
+        });
+
+        // Configura canvas
+        function resizeCanvas() {
+            const ratio = window.devicePixelRatio || 1;
+            canvas.width = width * ratio;
+            canvas.height = height * ratio;
+            canvas.style.width = `${width}px`;
+            canvas.style.height = `${height}px`;
+            ctx.scale(ratio, ratio);
+        }
+
+        // Gera wallpaper
         function drawWallpaper() {
-            // Limpa o canvas
             ctx.clearRect(0, 0, width, height);
 
-            // Escolhe uma paleta de cores aleatória
             const palette = colorPalettes[Math.floor(Math.random() * colorPalettes.length)];
+            const opacity = opacitySlider.value / 100;
+            const numShapes = parseInt(shapesSlider.value);
+            const maxSize = parseInt(sizeSlider.value);
 
-            // Preenche o fundo
+            // Fundo
             ctx.fillStyle = palette[0];
             ctx.fillRect(0, 0, width, height);
 
-            // Desenha formas aleatórias
-            const numShapes = 50 + Math.random() * 50;
+            // Formas
             for (let i = 0; i < numShapes; i++) {
-                // Escolhe uma forma e cor aleatória da paleta
                 const shapeType = Math.random();
                 const color = palette[Math.floor(Math.random() * palette.length)];
 
                 ctx.beginPath();
                 ctx.fillStyle = color;
-                ctx.globalAlpha = 0.5; // Adiciona transparência para um efeito de camada
+                ctx.globalAlpha = opacity;
 
                 const x = Math.random() * width;
                 const y = Math.random() * height;
 
                 if (shapeType < 0.33) {
-                    // Desenha círculos
-                    const radius = 20 + Math.random() * 80;
+                    // Círculos
+                    const radius = 20 + Math.random() * maxSize;
                     ctx.arc(x, y, radius, 0, 2 * Math.PI);
                 } else if (shapeType < 0.66) {
-                    // Desenha retângulos rotacionados
-                    const size = 50 + Math.random() * 100;
+                    // Retângulos
+                    const size = 30 + Math.random() * maxSize;
                     ctx.save();
                     ctx.translate(x, y);
                     ctx.rotate(Math.random() * Math.PI);
                     ctx.fillRect(-size / 2, -size / 2, size, size);
                     ctx.restore();
                 } else {
-                    // Desenha triângulos
-                    const size = 60 + Math.random() * 100;
+                    // Triângulos
+                    const size = 40 + Math.random() * maxSize;
                     ctx.moveTo(x, y);
                     ctx.lineTo(x + size, y);
                     ctx.lineTo(x + size / 2, y + size * Math.sqrt(3) / 2);
@@ -261,7 +306,7 @@ permalink: /wallpapers-abstratos-png/
                 ctx.fill();
             }
 
-            // Adiciona o texto do usuário
+            // Texto
             const text = textInput.value.trim();
             if (text) {
                 ctx.globalAlpha = 1.0;
@@ -272,26 +317,36 @@ permalink: /wallpapers-abstratos-png/
                 ctx.fillText(text, width / 2, height - 100);
             }
 
-            // Atualiza o link de download
-            updateDownloadLink();
+            // Atualiza download
+            downloadBtn.href = canvas.toDataURL('image/png');
+            downloadBtn.download = `wallpaper-${Date.now()}.png`;
         }
 
-        // Função para atualizar o link de download com a imagem gerada
-        function updateDownloadLink() {
-            const dataUrl = canvas.toDataURL('image/png');
-            downloadLink.href = dataUrl;
-        }
+        // Eventos
+        generateBtn.addEventListener('click', () => {
+            generateBtn.innerHTML = '🔄 Gerando...';
+            generateBtn.disabled = true;
+            
+            setTimeout(() => {
+                drawWallpaper();
+                generateBtn.innerHTML = '🎲 Gerar Novo Wallpaper';
+                generateBtn.disabled = false;
+            }, 100);
+        });
 
-        // Adiciona o listener para o botão de geração
-        generateBtn.addEventListener('click', drawWallpaper);
-        
-        // Desenha o wallpaper inicial quando a página carregar
-        window.onload = function() {
+        downloadBtn.addEventListener('click', (e) => {
+            if (!canvas.toDataURL().startsWith('data:image')) {
+                e.preventDefault();
+                alert('⚠️ Gere um wallpaper primeiro!');
+            }
+        });
+
+        // Inicializa
+        window.onload = () => {
             resizeCanvas();
             drawWallpaper();
         };
 
-        // Redesenha o canvas quando o tamanho da janela mudar
         window.addEventListener('resize', () => {
             resizeCanvas();
             drawWallpaper();
