@@ -12,8 +12,7 @@ tags: [fdisk, mkfs, ext4, ntfs, fstab, uuid]
 
 {% include toc.html %}
 
-<section class="post-content">
-   
+
 <section>
  <div class="intro-section" style="background: #1a1a1a; padding: 25px; border-radius: 12px; border-left: 4px solid #8bc34a; margin-bottom: 30px;">
     <h2 style="color: #8bc34a; margin: 0 0 15px 0; font-size: 1.5em;">🐧 Formatação de HD no Linux — Comandos Essenciais</h2>
