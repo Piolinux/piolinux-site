@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "10 Artigos de Linux para Iniciantes: Domine o Terminal"
+title: "10 Dicas de Linux para Iniciantes: Domine o Terminal"
 description: "Coleção prática de artigos para quem está começando no Linux: comandos, segurança, automação e ferramentas como Oh My Zsh, iTerm2 e Windows Terminal."
 date: 2025-09-10
 author: "PioLinux"
@@ -19,10 +19,10 @@ permalink: /artigos-linux-iniciantes/
      Você sabia que o Linux está presente em mais de 90% dos servidores do mundo, um dos maiores mistérios para quem é iniciante? Se você chegou até aqui no site, é para entender como esse sistema funciona, como usá-lo no dia a dia e por onde começar sem se perder em jargões técnicos. O problema é que a internet está cheia de conteúdos dispersos, o que confunde ainda mais quem está dando os primeiros passos.
     </p>
     <p>
-     Este guia com 10 artigos sobre Linux para iniciantes vai te ajudar, desde os comandos básicos até a escolha da distribuição.
+     Este guia com 10 dicas sobre Linux para iniciantes vai te ajudar, desde os comandos básicos até a escolha da distribuição.
     </p>
     <h2>
-     📚 Os 10 Artigos Mais Úteis para Iniciantes
+     📚 As 10 Dicas Mais Úteis para Iniciantes
     </h2>
     <ol>
      <li>
