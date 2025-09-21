@@ -28,7 +28,7 @@ permalink: /utilitarios-online/
 
 <section>
   <h2> Gerador de QR Code — Para Chaves SSH, Comandos, URLs</h2>
-  <p>Útil para compartilhar comandos, chaves públicas ou URLs de repositórios. Cole no terminal com <code>Ctrl+Shift+V</code>.</p>
+  <p>Pra facilitar, você pode colar comandos, chaves públicas ou links de repositórios aqui. Só usar <code>Ctrl+Shift+V </code> no terminal, rapidinho!</p>
   <input id="qrtext" placeholder="Ex: ssh-ed25519 AAA... user@host" type="text" style="width: 100%; max-width: 500px; padding: 8px; background: #1a1a1a; color: #e0e0e0; border: 1px solid #333; border-radius: 4px; margin: 8px 0;">
   <button onclick="gerarQRCode()" style="background: #4caf50; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin: 8px 0;">Gerar QR Code</button>
   <div style="text-align: center; margin: 16px 0;">
@@ -67,7 +67,7 @@ permalink: /utilitarios-online/
 
 <section>
   <h2>Calculadora de Sysadmin — Permissões, Subnets, Math</h2>
-  <p>Calcule permissões octal, subnets, ou expressões matemáticas. Use <code>^</code> para potência.</p>
+  <p>Calculos de permissões octal, subnets, ou expressões matemáticas. Use <code>^</code> para potência.</p>
   <input id="expr" placeholder="Ex: 644, 2^10, 255-32" type="text" style="width: 100%; max-width: 500px; padding: 8px; background: #1a1a1a; color: #e0e0e0; border: 1px solid #333; border-radius: 4px; margin: 8px 0;">
   <button onclick="calcular()" style="background: #9c27b0; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin: 8px 0;">Calcular</button>
   <p id="resultado" style="font-size: 1.2em; font-family: monospace; margin: 16px 0;"></p>
