@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Crie Ícones no Linux em Segundos: Personalização"
 date: 2025-08-20
 author: "PioLinux"
@@ -8,7 +8,6 @@ tags: [ícones, linux, personalização, svg, geany, debian]
 description: "Aprenda a criar e personalizar ícones no Linux em segundos. Ferramentas, atalhos e dicas para deixar seu desktop moderno, rápido e com sua cara."
 permalink: /criar-ícones-linux/
 ---
-
 
 {% include toc.html %}
 
@@ -327,3 +326,35 @@ StartupNotify=true`.trim();
 </script>
 
 </main>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Ícones Linux (.desktop)",
+  "description": "Crie e personalize atalhos .desktop com ícones SVG para seu ambiente Linux — em segundos.",
+  "applicationCategory": "Ferramenta para Desenvolvedores Linux",
+  "operatingSystem": "Linux",
+  "url": "https://www.piolinux.com/criar-%C3%ADcones-linux/",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+
+
+
+
