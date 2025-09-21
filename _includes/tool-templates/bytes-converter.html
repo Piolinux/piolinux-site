@@ -2,10 +2,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     function updatePlaceholder() {
-        // Busca o rádio selecionado
         const unitTypeRadio = document.querySelector('input[name="unitType"]:checked');
         
-        // Se nenhum estiver selecionado, força o padrão (bytes)
         if (!unitTypeRadio) {
             console.warn('Nenhum radio "unitType" selecionado. Forçando "bytes".');
             const fallback = document.querySelector('input[name="unitType"][value="bytes"]');
@@ -15,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
             var isBits = unitTypeRadio.value === 'bits';
         }
 
-        // Verifica se os elementos existem antes de manipular
         const input = document.getElementById('bytesInput');
         const select = document.getElementById('unitSelect');
 
@@ -24,10 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Atualiza placeholder
         input.placeholder = `Digite o valor em ${isBits ? 'Bits' : 'Bytes'}`;
 
-        // Limpa e atualiza o select
         select.innerHTML = '';
 
         if (isBits) {
@@ -90,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Converte para bits brutos (valor base)
         let baseBits = value;
         if (isBits) {
-            // Já está em bits - converte unidade
             switch (unit) {
                 case 'Kb': baseBits *= base; break;
                 case 'Mb': baseBits *= Math.pow(base, 2); break;
@@ -99,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 case 'Pb': baseBits *= Math.pow(base, 5); break;
             }
         } else {
-            // Converte bytes para bits primeiro (1 byte = 8 bits)
             switch (unit) {
                 case 'KB': baseBits *= base * 8; break;
                 case 'MB': baseBits *= Math.pow(base, 2) * 8; break;
@@ -110,14 +103,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        // Gera resultados formatados
         let resultHTML = `
             <div style="background: #121212; padding: 15px; border-radius: 6px; border: 1px solid #333;">
                 <div style="color: #8bc34a; font-weight: bold; margin-bottom: 10px;">✅ Conversão Completa (${isBits ? 'Bits' : 'Bytes'})</div>
         `;
 
         if (isBits) {
-            // Mostra em todas as unidades de BITS
             const units = [
                 { unit: 'b', name: 'Bits', factor: 1 },
                 { unit: 'Kb', name: 'Kilobits', factor: base },
@@ -137,7 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
             });
         } else {
-            // Mostra em todas as unidades de BYTES
             const units = [
                 { unit: 'B', name: 'Bytes', factor: 8 },
                 { unit: 'KB', name: 'Kilobytes', factor: base * 8 },
@@ -197,29 +187,13 @@ document.addEventListener('DOMContentLoaded', function() {
         return explanations[unit] || '';
     }
 
-    // Inicializa interface
+    // INICIALIZA
     updatePlaceholder();
 
-    // Atualiza placeholder ao mudar tipo
+    // ADICIONA LISTENERS NOS RADIOS (opcional, já tem onchange no HTML, mas garante compatibilidade)
     document.querySelectorAll('input[name="unitType"]').forEach(radio => {
         radio.addEventListener('change', updatePlaceholder);
     });
-
-    // Se houver botão de conversão, adicione listener (opcional)
-    const convertButton = document.getElementById('convertButton');
-    if (convertButton) {
-        convertButton.addEventListener('click', convertBytes);
-    }
-
-    // Opcional: converte ao pressionar Enter no input
-    const inputElem = document.getElementById('bytesInput');
-    if (inputElem) {
-        inputElem.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                convertBytes();
-            }
-        });
-    }
 
 });
 </script>
