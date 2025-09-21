@@ -99,7 +99,7 @@ permalink: /como-instalar-programas-linux-iniciantes/
        .
       </li>
 <li>
-       Flatpak: Precisa configurar antes, e depois usa
+       Flatpak: Necessário configurar antes, e depois usa
        <code>
         flatpak install nome-do-programa
        </code>
