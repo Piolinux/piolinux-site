@@ -101,107 +101,95 @@ tags: [email, assinatura, html, marketing, vendas, suporte, seo]
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-
-    function generateSignature() {
-        const name = document.getElementById('sigName')?.value?.trim() || 'Seu Nome';
-        const title = document.getElementById('sigTitle')?.value?.trim() || 'Seu Cargo';
-        const company = document.getElementById('sigCompany')?.value?.trim() || 'Sua Empresa';
-        const phone = document.getElementById('sigPhone')?.value?.trim() || '';
-        const email = document.getElementById('sigEmail')?.value?.trim() || '';
-        const website = document.getElementById('sigWebsite')?.value?.trim() || '';
-        const linkedin = document.getElementById('sigLinkedIn')?.value?.trim() || '';
-        const twitter = document.getElementById('sigTwitter')?.value?.trim() || '';
-        const github = document.getElementById('sigGitHub')?.value?.trim() || '';
-        const style = document.getElementById('sigStyle')?.value || 'tech';
-        
-        let html = '';
-        let text = '';
-
-        if (style === 'tech') {
-            html = `<div style="font-family: 'Courier New', monospace; font-size: 13px; color: #e0e0e0; line-height: 1.6; background: #121212; padding: 15px; border-left: 4px solid #4caf50; border-radius: 4px;">
-                <strong style="font-size: 15px; color: #8bc34a;">${name}</strong><br>
-                <span style="color: #aaa;">${title}</span><br>
-                <span style="color: #aaa;">${company}</span><br><br>
-            `;
-            
-            if (phone) html += `<span>📞 ${phone}</span><br>`;
-            if (email) html += `<span>✉️ <a href="mailto:${email}" style="color: #8bc34a; text-decoration: none;">${email}</a></span><br>`;
-            if (website) html += `<span>🌐 <a href="${website.startsWith('http') ? website : 'https://' + website}" style="color: #8bc34a; text-decoration: none;">${website}</a></span><br>`;
-            
-            let social = '';
-            if (linkedin) social += `<a href="${linkedin.startsWith('http') ? linkedin : 'https://' + linkedin}" style="text-decoration: none; margin-right: 10px; color: #8bc34a;">in/</a>`;
-            if (twitter) social += `<a href="${twitter.startsWith('http') ? twitter : 'https://' + twitter}" style="text-decoration: none; margin-right: 10px; color: #8bc34a;">@</a>`;
-            if (github) social += `<a href="${github.startsWith('http') ? github : 'https://' + github}" style="text-decoration: none; color: #8bc34a;">gh/</a>`;
-            
-            if (social) html += `<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #333;">${social}</div>`;
-            
-            html += `</div>`;
-            
-            text = `-- \n${name}\n${title} @ ${company}\n`;
-            if (phone) text += `📞 ${phone}\n`;
-            if (email) text += `✉️ ${email}\n`;
-            if (website) text += `🌐 ${website}\n`;
-            if (linkedin || twitter || github) {
-                text += `\n`;
-                if (linkedin) text += `LinkedIn: ${linkedin}\n`;
-                if (twitter) text += `Twitter: ${twitter}\n`;
-                if (github) text += `GitHub: ${github}\n`;
-            }
-            
-        } else {
-            text = `${name}\n${title}\n${company}\n`;
-            if (phone) text += `📞 ${phone}\n`;
-            if (email) text += `✉️ ${email}\n`;
-            if (website) text += `🌐 ${website}\n`;
-            if (linkedin) text += `🔗 LinkedIn: ${linkedin}\n`;
-            if (twitter) text += `🐦 Twitter: ${twitter}\n`;
-            if (github) text += `🐙 GitHub: ${github}\n`;
-            
-            html = `<pre style="font-family: 'Courier New', monospace; font-size: 13px; color: #e0e0e0; background: #121212; padding: 15px; border-radius: 4px; white-space: pre-wrap;">${text}</pre>`;
-        }
-
-        // ✅ SEGURANÇA: Verifica se os elementos existem antes de definir valor
-        const previewElem = document.getElementById('signaturePreview');
-        const htmlElem = document.getElementById('signatureHTML');
-        const textElem = document.getElementById('signatureText');
-
-        if (previewElem) previewElem.innerHTML = html;
-        if (htmlElem) htmlElem.value = html;
-        if (textElem) textElem.value = text;
-    }
-
-    function copySignature(type) {
-        const elemId = type === 'HTML' ? 'signatureHTML' : 'signatureText';
-        const elem = document.getElementById(elemId);
-        if (!elem || !elem.value) {
-            alert('❌ Nada para copiar.');
-            return;
-        }
-
-        navigator.clipboard.writeText(elem.value).then(() => {
-            alert(`✅ Assinatura ${type} copiada!`);
-        }).catch(() => {
-            alert(`❌ Falha ao copiar. Tente manualmente.`);
-        });
-    }
-
-    // ✅ INICIALIZA
-    generateSignature();
-
-    // ✅ ADICIONA EVENTOS PARA ATUALIZAR DINAMICAMENTE
-    const inputs = document.querySelectorAll('#sigName, #sigTitle, #sigCompany, #sigPhone, #sigEmail, #sigWebsite, #sigLinkedIn, #sigTwitter, #sigGitHub, #sigStyle');
-    inputs.forEach(input => {
-        input.addEventListener('input', generateSignature);
-    });
-
-    // ✅ ADICIONA EVENTOS DE CÓPIA (se os botões existirem)
-    const copyHtmlBtn = document.getElementById('copyHtmlBtn');
-    const copyTextBtn = document.getElementById('copyTextBtn');
+// 👇 Define as funções no escopo GLOBAL para funcionar com onclick/oninput
+function generateSignature() {
+    const name = document.getElementById('sigName')?.value?.trim() || 'Seu Nome';
+    const title = document.getElementById('sigTitle')?.value?.trim() || 'Seu Cargo';
+    const company = document.getElementById('sigCompany')?.value?.trim() || 'Sua Empresa';
+    const phone = document.getElementById('sigPhone')?.value?.trim() || '';
+    const email = document.getElementById('sigEmail')?.value?.trim() || '';
+    const website = document.getElementById('sigWebsite')?.value?.trim() || '';
+    const linkedin = document.getElementById('sigLinkedIn')?.value?.trim() || '';
+    const twitter = document.getElementById('sigTwitter')?.value?.trim() || '';
+    const github = document.getElementById('sigGitHub')?.value?.trim() || '';
+    const style = document.getElementById('sigStyle')?.value || 'tech';
     
-    if (copyHtmlBtn) copyHtmlBtn.addEventListener('click', () => copySignature('HTML'));
-    if (copyTextBtn) copyTextBtn.addEventListener('click', () => copySignature('TEXT'));
+    let html = '';
+    let text = '';
 
+    if (style === 'tech') {
+        html = `<div style="font-family: 'Courier New', monospace; font-size: 13px; color: #e0e0e0; line-height: 1.6; background: #121212; padding: 15px; border-left: 4px solid #4caf50; border-radius: 4px;">
+            <strong style="font-size: 15px; color: #8bc34a;">${name}</strong><br>
+            <span style="color: #aaa;">${title}</span><br>
+            <span style="color: #aaa;">${company}</span><br><br>
+        `;
+        
+        if (phone) html += `<span>📞 ${phone}</span><br>`;
+        if (email) html += `<span>✉️ <a href="mailto:${email}" style="color: #8bc34a; text-decoration: none;">${email}</a></span><br>`;
+        if (website) html += `<span>🌐 <a href="${website.startsWith('http') ? website : 'https://' + website}" style="color: #8bc34a; text-decoration: none;">${website}</a></span><br>`;
+        
+        let social = '';
+        if (linkedin) social += `<a href="${linkedin.startsWith('http') ? linkedin : 'https://' + linkedin}" style="text-decoration: none; margin-right: 10px; color: #8bc34a;">in/</a>`;
+        if (twitter) social += `<a href="${twitter.startsWith('http') ? twitter : 'https://' + twitter}" style="text-decoration: none; margin-right: 10px; color: #8bc34a;">@</a>`;
+        if (github) social += `<a href="${github.startsWith('http') ? github : 'https://' + github}" style="text-decoration: none; color: #8bc34a;">gh/</a>`;
+        
+        if (social) html += `<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #333;">${social}</div>`;
+        
+        html += `</div>`;
+        
+        text = `-- \n${name}\n${title} @ ${company}\n`;
+        if (phone) text += `📞 ${phone}\n`;
+        if (email) text += `✉️ ${email}\n`;
+        if (website) text += `🌐 ${website}\n`;
+        if (linkedin || twitter || github) {
+            text += `\n`;
+            if (linkedin) text += `LinkedIn: ${linkedin}\n`;
+            if (twitter) text += `Twitter: ${twitter}\n`;
+            if (github) text += `GitHub: ${github}\n`;
+        }
+        
+    } else {
+        text = `${name}\n${title}\n${company}\n`;
+        if (phone) text += `📞 ${phone}\n`;
+        if (email) text += `✉️ ${email}\n`;
+        if (website) text += `🌐 ${website}\n`;
+        if (linkedin) text += `🔗 LinkedIn: ${linkedin}\n`;
+        if (twitter) text += `🐦 Twitter: ${twitter}\n`;
+        if (github) text += `🐙 GitHub: ${github}\n`;
+        
+        html = `<pre style="font-family: 'Courier New', monospace; font-size: 13px; color: #e0e0e0; background: #121212; padding: 15px; border-radius: 4px; white-space: pre-wrap;">${text}</pre>`;
+    }
+
+    // ✅ SEGURANÇA: Verifica se os elementos existem antes de definir valor
+    const previewElem = document.getElementById('signaturePreview');
+    const htmlElem = document.getElementById('signatureHTML');
+    const textElem = document.getElementById('signatureText');
+
+    if (previewElem) previewElem.innerHTML = html;
+    if (htmlElem) htmlElem.value = html;
+    if (textElem) textElem.value = text;
+}
+
+function copySignature(type) {
+    // Ajusta para compatibilidade com seu botão "Copiar Texto"
+    const elemId = type === 'HTML' ? 'signatureHTML' : 'signatureText';
+    const elem = document.getElementById(elemId);
+    
+    if (!elem || !elem.value) {
+        alert('❌ Nada para copiar.');
+        return;
+    }
+
+    navigator.clipboard.writeText(elem.value).then(() => {
+        alert(`✅ Assinatura ${type} copiada!`);
+    }).catch(() => {
+        alert(`❌ Falha ao copiar. Tente manualmente.`);
+    });
+}
+
+// ✅ INICIALIZA AO CARREGAR
+document.addEventListener('DOMContentLoaded', function() {
+    generateSignature();
 });
 </script>
 
