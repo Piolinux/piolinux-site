@@ -14,7 +14,7 @@ permalink: /indice-artigos-linux/
 <section>
   <h2>🧠 Artigos Disponíveis</h2>
   <ul>
-    <li><a href="{{ '/artigos-linux-iniciantes/' | relative_url }}">10 Artigos de Linux para Iniciantes que Todo Usuário Deveria Ler</a></li>
+    <li><a href="{{ '/artigos-linux-iniciantes/' | relative_url }}">10 Dicas de Linux para Iniciantes que Todo Usuário Deveria Ler</a></li>
     <li><a href="{{ '/principais-distros-linux/' | relative_url }}">Como Escolher Sua Primeira Distro Linux: Guia para Iniciantes</a></li>
     <li><a href="{{ '/instalar-programas-linux-iniciantes/' | relative_url }}">Instalando Programas no Linux: Guia Completo para Iniciantes</a></li>
     <li><a href="{{ '/gerenciadores-pacotes-linux/#seguranca-monitoramento' | relative_url }}">Gerenciadores de Pacotes no Linux: Guia para Iniciantes</a></li>
