@@ -190,10 +190,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // INICIALIZA
     updatePlaceholder();
 
-    // ADICIONA LISTENERS NOS RADIOS (opcional, já tem onchange no HTML, mas garante compatibilidade)
+    // ADICIONA LISTENERS NOS RADIOS
     document.querySelectorAll('input[name="unitType"]').forEach(radio => {
         radio.addEventListener('change', updatePlaceholder);
     });
+
+    // ✅ CORREÇÃO PRINCIPAL: Listener no botão
+    const convertButton = document.getElementById('convertButton');
+    if (convertButton) {
+        convertButton.addEventListener('click', convertBytes);
+    }
+
+    // Opcional: Converter com Enter
+    const inputElem = document.getElementById('bytesInput');
+    if (inputElem) {
+        inputElem.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                convertBytes();
+            }
+        });
+    }
 
 });
 </script>
