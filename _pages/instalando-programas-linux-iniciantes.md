@@ -140,7 +140,7 @@ sudo apt --fix-broken install</code></pre>
      É bom pra quem quer usar rapidinho, sem complicação.
     </p>
     <h2>
-     🔧 Perguntas Frequentes
+     Perguntas Frequentes
     </h2>
     <ul>
      <li>
@@ -183,11 +183,11 @@ sudo apt --fix-broken install</code></pre>
      Instalar programas no Linux pode parecer é chato no começo, mas relaxa que tem vários jeitos de fazer isso. Experimente os comandos do APT, .deb, Flatpak, Snap e AppImage? Que tal experimentar cada um e ver qual você curte mais?!
     </p>
     <p>
-     👉 Uma dica: Instale seus apps pelo Flatpak, usando o Flathub.
+     Uma dica: Instale seus apps pelo Flatpak, usando o Flathub.
     </p>
    
   
- <h3>📦 Métodos de Instalação no Linux</h3>
+ <h3>Métodos de Instalação no Linux</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
