@@ -17,7 +17,7 @@ permalink: /personalizar-linux-iniciantes/
 <section class="post-content">
 
   <p>
-   O Linux é um sistema operacional flexível, personalizável e realmente prático. Ao contrário dos Sistemas de código fechado, como Windows ou macOS. Apesar da segurança existente ao usuário realizar customizações sem conhecimento, as mudanças repentinas podem causar danos irreparavéis.
+   Sistema Operacional Linux  é flexível, personalizável e realmente prático. Ao contrário dos Sistemas de código fechado, como Windows ou macOS.
   </p>
   <p>
     Quem tá começando, não precisa se assustar. As dicas deste guia ajudam a configurar o sistema, do seu jeito.
