@@ -17,7 +17,7 @@ tags: [docker, devops, containers, cli, linux]
   <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Gerador de Comandos Docker</h2>
   
   <div style="margin-bottom: 16px;">
-    <label style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Tipo de Comando:</strong></label>
+    <div style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Tipo de Comando:</strong></div>
     <select id="dockerCommandType" style="background: #2a2a2a; color: #e0e0e0; padding: 8px; border: 1px solid #444; border-radius: 4px; width: 100%; max-width: 300px;">
       <option value="run">🐳 docker run</option>
       <option value="build">🏗️ docker build</option>
@@ -38,32 +38,32 @@ tags: [docker, devops, containers, cli, linux]
   <div id="dockerRunOptions" style="margin-bottom: 20px; padding: 15px; background: #1a2a1a; border-radius: 6px; border: 1px solid #333;">
     <h3 style="color: #8bc34a; margin-top: 0;">🐳 docker run</h3>
     <div style="margin-bottom: 12px;">
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Nome da Imagem:</label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Nome da Imagem:</div>
       <input type="text" id="imageName" placeholder="ex: nginx:latest" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
     <div style="margin-bottom: 12px;">
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">
         <input type="checkbox" id="detachMode" style="margin-right: 8px; accent-color: #4caf50;" /> Modo Detached (-d)
-      </label>
+      </div>
     </div>
     <div style="margin-bottom: 12px;">
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Nome do Container (--name):</label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Nome do Container (--name):</div>
       <input type="text" id="containerName" placeholder="ex: meu-nginx" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
     <div style="margin-bottom: 12px;">
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Mapeamento de Portas (-p):</label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Mapeamento de Portas (-p):</div>
       <input type="text" id="portMapping" placeholder="ex: 8080:80" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
     <div style="margin-bottom: 12px;">
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Montagem de Volumes (-v):</label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Montagem de Volumes (-v):</div>
       <input type="text" id="volumeMapping" placeholder="ex: ./html:/usr/share/nginx/html" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
     <div style="margin-bottom: 12px;">
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Variáveis de Ambiente (-e):</label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Variáveis de Ambiente (-e):</div>
       <input type="text" id="envVars" placeholder="ex: TZ=America/Sao_Paulo,NODE_ENV=development" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
     <div>
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Comando a Executar:</label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Comando a Executar:</div>
       <input type="text" id="runCommand" placeholder="ex: npm start" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
   </div>
@@ -72,15 +72,15 @@ tags: [docker, devops, containers, cli, linux]
   <div id="dockerBuildOptions" style="display: none; margin-bottom: 20px; padding: 15px; background: #1a2a1a; border-radius: 6px; border: 1px solid #333;">
     <h3 style="color: #8bc34a; margin-top: 0;">🏗️ docker build</h3>
     <div style="margin-bottom: 12px;">
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Tag da Imagem (-t):</label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Tag da Imagem (-t):</div>
       <input type="text" id="buildTag" placeholder="ex: meu-app:latest" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
     <div style="margin-bottom: 12px;">
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Arquivo Dockerfile (-f):</label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Arquivo Dockerfile (-f):</div>
       <input type="text" id="dockerfile" value="Dockerfile" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
     <div>
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Contexto de Build:</label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Contexto de Build:</div>
       <input type="text" id="buildContext" value="." placeholder="ex: ." style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
   </div>
@@ -89,23 +89,23 @@ tags: [docker, devops, containers, cli, linux]
   <div id="dockerComposeOptions" style="display: none; margin-bottom: 20px; padding: 15px; background: #1a2a1a; border-radius: 6px; border: 1px solid #333;">
     <h3 style="color: #8bc34a; margin-top: 0;">📋 docker-compose.yml</h3>
     <div style="margin-bottom: 12px;">
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Nome do Serviço:</label>
+      <divl style="color: #e0e0e0; display: block; margin-bottom: 4px;">Nome do Serviço:</div>
       <input type="text" id="serviceName" value="web" placeholder="ex: web" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
     <div style="margin-bottom: 12px;">
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Imagem:</label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Imagem:</div>
       <input type="text" id="composeImage" placeholder="ex: nginx:latest" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
     <div style="margin-bottom: 12px;">
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Portas (ports):</label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Portas (ports):</div>
       <input type="text" id="composePorts" placeholder="ex: 80:80" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
     <div style="margin-bottom: 12px;">
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Volumes:</label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Volumes:</div>
       <input type="text" id="composeVolumes" placeholder="ex: ./html:/usr/share/nginx/html" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
     <div>
-      <label style="color: #e0e0e0; display: block; margin-bottom: 4px;">Variáveis de Ambiente:</label>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Variáveis de Ambiente:</div>
       <input type="text" id="composeEnv" placeholder="ex: TZ=America/Sao_Paulo,NODE_ENV=development" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
     </div>
   </div>
