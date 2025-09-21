@@ -110,7 +110,7 @@ permalink: /como-instalar-programas-linux-iniciantes/
       Esses pacotes são ótimos porque garantem que o programa vai funcionar, não importa qual Linux você está usando.
      </p>
 <h2>
-      Dicas Pra Quem Tá Começando Agora
+      Dicas pra quem tá começando agora:
      </h2>
 <ul>
 <li>
@@ -124,13 +124,13 @@ permalink: /como-instalar-programas-linux-iniciantes/
       </li>
 </ul>
 <h2>
-      Pra Resumir a Ópera
+      Pra resumir a ópera:
      </h2>
 <p>
       Instalar programa no Linux é mais fácil do que parece. Tem o terminal, a Central de Aplicativos, os pacotes universais… Experimenta cada um e vê qual você gosta mais. Praticando os comandos constantemente será dificil esquecer.
      </p>
 <h2>
-      FAQ – As Pergunta que Não Querem Calar
+      FAQ – As Pergunta que não querem calar
      </h2>
 <p>
 <strong>
