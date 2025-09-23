@@ -13,115 +13,74 @@ tags: [docker, devops, containers, cli, linux]
 <section class="tool-single-page">
   <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
   
-<div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
-  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Gerador de Comandos Docker</h2>
-  
-  <div style="margin-bottom: 16px;">
-    <div style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Tipo de Comando:</strong></div>
-    <select id="dockerCommandType" style="background: #2a2a2a; color: #e0e0e0; padding: 8px; border: 1px solid #444; border-radius: 4px; width: 100%; max-width: 300px;">
-      <option value="run">🐳 docker run</option>
-      <option value="build">🏗️ docker build</option>
-      <option value="compose">📋 docker-compose.yml</option>
+<div style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+    <h2 style="color: #8bc34a; margin-top: 0;">🐳 Gerador de Comandos Docker</h2>
+
+    <label for="dockerCommandType" style="color: #a6e3a1;">Tipo de Comando:</label>
+    <select id="dockerCommandType" style="background: #0d1117; color: #c9d1d9; border: 1px solid #333; padding: 8px; border-radius: 4px; width: 100%; margin-bottom: 15px;">
+        <option value="run">docker run</option>
+        <option value="build">docker build</option>
+        <option value="compose">docker-compose.yml</option>
     </select>
-  </div>
 
-  <!-- Exemplos rápidos -->
-  <div style="margin-bottom: 16px; padding: 15px; background: #1a2a1a; border-radius: 6px; border: 1px solid #333;">
-    <strong style="color: #8bc34a;">🚀 Exemplos Rápidos:</strong><br>
-    <button onclick="loadExample('nginx')" style="background: #4caf50; color: white; border: none; padding: 6px 12px; margin: 4px; border-radius: 4px; cursor: pointer; font-size: 0.9em;">NGINX</button>
-    <button onclick="loadExample('node')" style="background: #2196F3; color: white; border: none; padding: 6px 12px; margin: 4px; border-radius: 4px; cursor: pointer; font-size: 0.9em;">Node.js</button>
-    <button onclick="loadExample('build')" style="background: #ff9800; color: white; border: none; padding: 6px 12px; margin: 4px; border-radius: 4px; cursor: pointer; font-size: 0.9em;">Build</button>
-    <button onclick="loadExample('compose')" style="background: #9c27b0; color: white; border: none; padding: 6px 12px; margin: 4px; border-radius: 4px; cursor: pointer; font-size: 0.9em;">Compose</button>
-  </div>
+    <!-- Opções para docker run -->
+    <div id="dockerRunOptions">
+        <input type="checkbox" id="detachMode"> <label for="detachMode" style="color: #c9d1d9;">Modo Detached (-d)</label><br><br>
+        <label for="containerName" style="color: #a6e3a1;">Nome do Container (--name):</label>
+        <input type="text" id="containerName" placeholder="meu-container" style="width: 100%; padding: 8px; margin: 5px 0; background: #0d1117; color: #c9d1d9; border: 1px solid #333; border-radius: 4px;"><br>
+        <label for="portMapping" style="color: #a6e3a1;">Mapeamento de Portas (-p):</label>
+        <input type="text" id="portMapping" placeholder="8080:80" style="width: 100%; padding: 8px; margin: 5px 0; background: #0d1117; color: #c9d1d9; border: 1px solid #333; border-radius: 4px;"><br>
+        <label for="volumeMapping" style="color: #a6e3a1;">Mapeamento de Volumes (-v):</label>
+        <input type="text" id="volumeMapping" placeholder="./app:/app" style="width: 100%; padding: 8px; margin: 5px 0; background: #0d1117; color: #c9d1d9; border: 1px solid #333; border-radius: 4px;"><br>
+        <label for="envVars" style="color: #a6e3a1;">Variáveis de Ambiente (-e):</label>
+        <input type="text" id="envVars" placeholder="VAR1=valor1,VAR2=valor2" style="width: 100%; padding: 8px; margin: 5px 0; background: #0d1117; color: #c9d1d9; border: 1px solid #333; border-radius: 4px;"><br>
+        <label for="imageName" style="color: #a6e3a1;">Nome da Imagem:</label>
+        <input type="text" id="imageName" placeholder="nginx:latest" style="width: 100%; padding: 8px; margin: 5px 0; background: #0d1117; color: #c9d1d9; border: 1px solid #333; border-radius: 4px;"><br>
+        <label for="runCommand" style="color: #a6e3a1;">Comando (opcional):</label>
+        <input type="text" id="runCommand" placeholder="npm start" style="width: 100%; padding: 8px; margin: 5px 0; background: #0d1117; color: #c9d1d9; border: 1px solid #333; border-radius: 4px;">
+    </div>
 
-  <!-- Opções docker run -->
-  <div id="dockerRunOptions" style="margin-bottom: 20px; padding: 15px; background: #1a2a1a; border-radius: 6px; border: 1px solid #333;">
-    <h3 style="color: #8bc34a; margin-top: 0;">🐳 docker run</h3>
-    <div style="margin-bottom: 12px;">
-      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Nome da Imagem:</div>
-      <input type="text" id="imageName" placeholder="ex: nginx:latest" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    <!-- Opções para docker build -->
+    <div id="dockerBuildOptions" style="display: none;">
+        <label for="buildTag" style="color: #a6e3a1;">Tag da Imagem (-t):</label>
+        <input type="text" id="buildTag" placeholder="meu-app:latest" style="width: 100%; padding: 8px; margin: 5px 0; background: #0d1117; color: #c9d1d9; border: 1px solid #333; border-radius: 4px;"><br>
+        <label for="dockerfile" style="color: #a6e3a1;">Arquivo Dockerfile (-f):</label>
+        <input type="text" id="dockerfile" placeholder="Dockerfile" style="width: 100%; padding: 8px; margin: 5px 0; background: #0d1117; color: #c9d1d9; border: 1px solid #333; border-radius: 4px;"><br>
+        <label for="buildContext" style="color: #a6e3a1;">Contexto (diretório):</label>
+        <input type="text" id="buildContext" placeholder="." style="width: 100%; padding: 8px; margin: 5px 0; background: #0d1117; color: #c9d1d9; border: 1px solid #333; border-radius: 4px;">
     </div>
-    <div style="margin-bottom: 12px;">
-      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">
-        <input type="checkbox" id="detachMode" style="margin-right: 8px; accent-color: #4caf50;" /> Modo Detached (-d)
-      </div>
-    </div>
-    <div style="margin-bottom: 12px;">
-      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Nome do Container (--name):</div>
-      <input type="text" id="containerName" placeholder="ex: meu-nginx" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
-    </div>
-    <div style="margin-bottom: 12px;">
-      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Mapeamento de Portas (-p):</div>
-      <input type="text" id="portMapping" placeholder="ex: 8080:80" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
-    </div>
-    <div style="margin-bottom: 12px;">
-      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Montagem de Volumes (-v):</div>
-      <input type="text" id="volumeMapping" placeholder="ex: ./html:/usr/share/nginx/html" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
-    </div>
-    <div style="margin-bottom: 12px;">
-      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Variáveis de Ambiente (-e):</div>
-      <input type="text" id="envVars" placeholder="ex: TZ=America/Sao_Paulo,NODE_ENV=development" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
-    </div>
-    <div>
-      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Comando a Executar:</div>
-      <input type="text" id="runCommand" placeholder="ex: npm start" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
-    </div>
-  </div>
 
-  <!-- Opções docker build -->
-  <div id="dockerBuildOptions" style="display: none; margin-bottom: 20px; padding: 15px; background: #1a2a1a; border-radius: 6px; border: 1px solid #333;">
-    <h3 style="color: #8bc34a; margin-top: 0;">🏗️ docker build</h3>
-    <div style="margin-bottom: 12px;">
-      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Tag da Imagem (-t):</div>
-      <input type="text" id="buildTag" placeholder="ex: meu-app:latest" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    <!-- Opções para docker-compose.yml -->
+    <div id="dockerComposeOptions" style="display: none;">
+        <label for="serviceName" style="color: #a6e3a1;">Nome do Serviço:</label>
+        <input type="text" id="serviceName" placeholder="web" style="width: 100%; padding: 8px; margin: 5px 0; background: #0d1117; color: #c9d1d9; border: 1px solid #333; border-radius: 4px;"><br>
+        <label for="composeImage" style="color: #a6e3a1;">Imagem do Serviço:</label>
+        <input type="text" id="composeImage" placeholder="nginx:latest" style="width: 100%; padding: 8px; margin: 5px 0; background: #0d1117; color: #c9d1d9; border: 1px solid #333; border-radius: 4px;"><br>
+        <label for="composePorts" style="color: #a6e3a1;">Portas (ex: "80:80"):</label>
+        <input type="text" id="composePorts" placeholder="80:80" style="width: 100%; padding: 8px; margin: 5px 0; background: #0d1117; color: #c9d1d9; border: 1px solid #333; border-radius: 4px;"><br>
+        <label for="composeVolumes" style="color: #a6e3a1;">Volumes (ex: "./app:/app"):</label>
+        <input type="text" id="composeVolumes" placeholder="./app:/app" style="width: 100%; padding: 8px; margin: 5px 0; background: #0d1117; color: #c9d1d9; border: 1px solid #333; border-radius: 4px;"><br>
+        <label for="composeEnv" style="color: #a6e3a1;">Variáveis de Ambiente (ex: "VAR1=valor1,VAR2=valor2"):</label>
+        <input type="text" id="composeEnv" placeholder="TZ=America/Sao_Paulo" style="width: 100%; padding: 8px; margin: 5px 0; background: #0d1117; color: #c9d1d9; border: 1px solid #333; border-radius: 4px;">
     </div>
-    <div style="margin-bottom: 12px;">
-      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Arquivo Dockerfile (-f):</div>
-      <input type="text" id="dockerfile" value="Dockerfile" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
-    </div>
-    <div>
-      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Contexto de Build:</div>
-      <input type="text" id="buildContext" value="." placeholder="ex: ." style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
-    </div>
-  </div>
 
-  <!-- Opções docker-compose -->
-  <div id="dockerComposeOptions" style="display: none; margin-bottom: 20px; padding: 15px; background: #1a2a1a; border-radius: 6px; border: 1px solid #333;">
-    <h3 style="color: #8bc34a; margin-top: 0;">📋 docker-compose.yml</h3>
-    <div style="margin-bottom: 12px;">
-      <divl style="color: #e0e0e0; display: block; margin-bottom: 4px;">Nome do Serviço:</div>
-      <input type="text" id="serviceName" value="web" placeholder="ex: web" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    <div style="margin: 20px 0;">
+        <button onclick="generateDockerCommand()" style="background: #4caf50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-right: 10px;">🔄 Gerar Comando</button>
+        <button onclick="copyDockerCommand()" style="background: #2196F3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">📋 Copiar</button>
     </div>
-    <div style="margin-bottom: 12px;">
-      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Imagem:</div>
-      <input type="text" id="composeImage" placeholder="ex: nginx:latest" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
-    </div>
-    <div style="margin-bottom: 12px;">
-      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Portas (ports):</div>
-      <input type="text" id="composePorts" placeholder="ex: 80:80" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
-    </div>
-    <div style="margin-bottom: 12px;">
-      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Volumes:</div>
-      <input type="text" id="composeVolumes" placeholder="ex: ./html:/usr/share/nginx/html" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
-    </div>
-    <div>
-      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Variáveis de Ambiente:</div>
-      <input type="text" id="composeEnv" placeholder="ex: TZ=America/Sao_Paulo,NODE_ENV=development" style="width: 100%; max-width: 400px; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
-    </div>
-  </div>
 
-  <button onclick="generateDockerCommand()" style="background: #4caf50; color: white; border: none; padding: 12px 24px; margin: 10px 0; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1.1em;">
-    🛠️ Gerar Comando
-  </button>
+    <div style="margin: 20px 0;">
+        <h3 style="color: #a6e3a1;">Exemplos Rápidos:</h3>
+        <button onclick="loadExample('nginx')" style="background: #8bc34a; color: black; padding: 8px 12px; border: none; border-radius: 4px; margin-right: 5px;">NGINX</button>
+        <button onclick="loadExample('node')" style="background: #8bc34a; color: black; padding: 8px 12px; border: none; border-radius: 4px; margin-right: 5px;">Node.js</button>
+        <button onclick="loadExample('build')" style="background: #8bc34a; color: black; padding: 8px 12px; border: none; border-radius: 4px; margin-right: 5px;">Build</button>
+        <button onclick="loadExample('compose')" style="background: #8bc34a; color: black; padding: 8px 12px; border: none; border-radius: 4px;">Compose</button>
+    </div>
 
-  <button onclick="copyDockerCommand()" style="background: #2196F3; color: white; border: none; padding: 12px 24px; margin: 10px 0; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1.1em;">
-    📋 Copiar Comando
-  </button>
+    <label for="dockerOutput" style="color: #a6e3a1; display: block; margin-top: 20px;">Resultado:</label>
+    <textarea id="dockerOutput" readonly style="width: 100%; height: 200px; padding: 12px; background: #0d1117; color: #c9d1d9; border: 1px solid #333; border-radius: 6px; font-family: 'JetBrains Mono', monospace; font-size: 14px; resize: vertical;"></textarea>
+</div>
 
-  <textarea 
-      id="dockerOutput" 
-      style="width: 100%; height: 200px; margin: 20px 0; padding: 15px; background: #121212; color: #e0e0e0; border: 1px solid #333; border-radius: 6px; font-family: monospace; font-size: 1em; resize: vertical;"
-      placeholder="O comando Docker aparecerá aqui..."></textarea>
 
   <div style="background: #1a2a1a; color: #8bc34a; padding: 15px; border-radius: 6px; margin-top: 20px; border: 1px solid #333;">
     <strong> Dicas de Sysadmin Docker:</strong><br>
@@ -240,35 +199,36 @@ function generateDockerCommand() {
             return;
         }
         
-        let command = `version: '3.8'\nservices:\n  ${serviceName}:\n    image: ${image}\n`;
-        explanation = `# Docker Compose para serviço: ${serviceName}\n`;
+        let yaml = `version: '3.8'\nservices:\n  ${serviceName}:\n    image: ${image}\n`;
+        explanation = `# docker-compose.yml para serviço: ${serviceName}\n`;
         
         const ports = document.getElementById('composePorts').value.trim();
         if (ports) {
-            command += `    ports:\n      - "${ports}"\n`;
+            yaml += `    ports:\n      - "${ports}"\n`;
             explanation += `# ports: Mapeia porta ${ports}\n`;
         }
         
         const volumes = document.getElementById('composeVolumes').value.trim();
         if (volumes) {
-            command += `    volumes:\n      - ${volumes}\n`;
+            yaml += `    volumes:\n      - ${volumes}\n`;
             explanation += `# volumes: Monta ${volumes}\n`;
         }
         
         const envs = document.getElementById('composeEnv').value.trim();
         if (envs) {
-            command += `    environment:\n`;
+            yaml += `    environment:\n`;
             explanation += `# environment: Variáveis de ambiente\n`;
             envs.split(',').forEach(env => {
                 env = env.trim();
                 if (env) {
-                    command += `      - ${env}\n`;
+                    yaml += `      - ${env}\n`;
                     explanation += `#   - ${env}\n`;
                 }
             });
         }
         
-        command = explanation + '\n' + command;
+        // 👇 Aqui está a correção: exibe como YAML, não como "comando"
+        command = explanation + '\n' + yaml;
     }
 
     document.getElementById('dockerOutput').value = command.trim();
@@ -278,7 +238,7 @@ function copyDockerCommand() {
     const text = document.getElementById('dockerOutput').value;
     if (text && !text.includes('❌')) {
         navigator.clipboard.writeText(text).then(() => {
-            alert('✅ Comando Docker copiado!');
+            alert('✅ Copiado para a área de transferência!');
         }).catch(() => {
             alert('❌ Falha ao copiar. Tente manualmente.');
         });
@@ -322,13 +282,13 @@ function loadExample(type) {
     generateDockerCommand();
 }
 
-document.getElementById('dockerCommandType').addEventListener('change', toggleOptions);
-
 // Inicializa
-toggleOptions();
-generateDockerCommand();
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('dockerCommandType').addEventListener('change', toggleOptions);
+    toggleOptions();
+    generateDockerCommand();
+});
 </script>
-
 
 
 
