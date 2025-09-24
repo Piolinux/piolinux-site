@@ -1,13 +1,49 @@
 ---
 layout: null
+# Exclui o próprio sitemap de ser listado dentro dele mesmo
+sitemap: exclude: true 
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for page in site.pages %}
+
+{% comment %}
+    Loop pelos posts do blog
+{% endcomment %}
+{% for post in site.posts %}
+  {% unless post.sitemap.exclude %}
     <url>
-        <loc>https://example.com{{ page.url | remove: 'index.html' }}</loc>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      {% if post.last_modified_at %}
+        <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+      {% elsif post.date %}
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
     </url>
-    {% endfor %}
+  {% endunless %}
+{% endfor %}
+
+{% comment %}
+    Loop pelas páginas (contato, sobre, etc.)
+{% endcomment %}
+{% for page in site.pages %}
+  {% comment %} 
+      Exclui arquivos que terminam com .xml, páginas com 'sitemap: exclude: true' 
+      e páginas com layout nulo (como feeds)
+  {% endcomment %}
+  {% unless page.sitemap.exclude or page.url contains '.xml' or page.layout == null %}
+    <url>
+      <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
+      {% if page.last_modified_at %}
+        <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+      {% elsif page.date %}
+        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+  {% endunless %}
+{% endfor %}
+
 </urlset>
-
-
