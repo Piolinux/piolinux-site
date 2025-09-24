@@ -14,7 +14,8 @@ sitemap: exclude: true
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
       {% if post.last_modified_at %}
-        <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+      <lastmod>{{ item.last_modified_at | default: site.time | date_to_xmlschema }}</lastmod>
+<changefreq>monthly</changefreq>
       {% elsif post.date %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
       {% endif %}
@@ -54,6 +55,7 @@ sitemap: exclude: true
 {% endfor %}
 
 </urlset>
+
 
 
 
