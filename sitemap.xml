@@ -2,7 +2,11 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
   <!-- Página principal -->
   <url>
     <loc>{{ "/" | absolute_url }}</loc>
@@ -11,80 +15,81 @@ layout: null
     <priority>1.0</priority>
   </url>
 
-  <!-- Páginas estáticas (ex: /aprenda/, /ferramentas/, etc) -->
+  <!-- Páginas estáticas (.html na raiz ou subpastas) -->
   {% for page in site.html_pages %}
-    {% unless page.name == "404.html" or page.name == "sitemap.xml" %}
-    <url>
-      <loc>{{ page.url | absolute_url }}</loc>
-      <lastmod>{{ page.date | date_to_xmlschema | default: site.time | date_to_xmlschema }}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
+    {% assign skip = false %}
+    {% if page.name == "404.html" or page.name == "sitemap.xml" or page.name == "feed.xml" or page.name == "robots.txt" %}
+      {% assign skip = true %}
+    {% endif %}
+    {% unless skip %}
+      {% assign url = page.url | remove: "index.html" | append: "/" | replace: "//", "/" %}
+      {% if url == "//" %}{% assign url = "/" %}{% endif %}
+      <url>
+        <loc>{{ url | absolute_url }}</loc>
+        <lastmod>
+          {% if page.date %}
+            {{ page.date | date_to_xmlschema }}
+          {% else %}
+            {{ site.time | date_to_xmlschema }}
+          {% endif %}
+        </lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+      </url>
     {% endunless %}
   {% endfor %}
 
-  <!-- Posts (se tiver) -->
+  <!-- Posts (artigos do blog) -->
   {% for post in site.posts %}
-  <url>
-    <loc>{{ post.url | absolute_url }}</loc>
-    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+    <url>
+      <loc>{{ post.url | absolute_url }}</loc>
+      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
   {% endfor %}
 
   <!-- Coleção: wallpapers -->
   {% for wallpaper in site.wallpapers %}
-  <url>
-    <loc>{{ wallpaper.url | absolute_url }}</loc>
-    <lastmod>{{ wallpaper.date | date_to_xmlschema | default: site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+    <url>
+      <loc>{{ wallpaper.url | absolute_url }}</loc>
+      <lastmod>
+        {% if wallpaper.date %}
+          {{ wallpaper.date | date_to_xmlschema }}
+        {% else %}
+          {{ site.time | date_to_xmlschema }}
+        {% endif %}
+      </lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+    </url>
   {% endfor %}
 
-  <!-- Páginas paginadas de wallpapers -->
-  {% assign total_wallpapers = site.wallpapers.size %}
-  {% assign per_page = 10 %}
-  {% assign total_pages = total_wallpapers | divided_by: per_page %}
-  {% if total_wallpapers > per_page %}
-    {% if total_wallpapers > total_pages | times: per_page %}
-      {% assign total_pages = total_pages | plus: 1 %}
-    {% endif %}
-    {% for i in (2..total_pages) %}
-    <url>
-      <loc>{{ "/wallpapers/" | append: i | append: "/" | absolute_url }}</loc>
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.7</priority>
-    </url>
-    {% endfor %}
-  {% endif %}
-
-  <!-- Coleção: docs (comandos) -->
+  <!-- Coleção: docs (comandos, tutoriais, etc.) -->
   {% for doc in site.docs %}
-  <url>
-    <loc>{{ doc.url | absolute_url }}</loc>
-    <lastmod>{{ doc.date | date_to_xmlschema | default: site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+    <url>
+      <loc>{{ doc.url | absolute_url }}</loc>
+      <lastmod>
+        {% if doc.date %}
+          {{ doc.date | date_to_xmlschema }}
+        {% else %}
+          {{ site.time | date_to_xmlschema }}
+        {% endif %}
+      </lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+    </url>
   {% endfor %}
 
-  <!-- Páginas paginadas de comandos -->
-  {% assign total_docs = site.docs.size %}
-  {% assign total_cmd_pages = total_docs | divided_by: 10 %}
-  {% if total_docs > 10 %}
-    {% if total_docs > total_cmd_pages | times: 10 %}
-      {% assign total_cmd_pages = total_cmd_pages | plus: 1 %}
-    {% endif %}
-    {% for i in (2..total_cmd_pages) %}
-    <url>
-      <loc>{{ "/docs/comandos/" | append: i | append: "/" | absolute_url }}</loc>
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.7</priority>
-    </url>
-    {% endfor %}
-  {% endif %}
-</urlset>
+  <!-- ❌ NÃO incluímos páginas paginadas do blog principal (ex: /page2/) -->
+  <!-- ✅ Mas mantemos paginação de coleções específicas (wallpapers, docs) se forem páginas reais -->
+
+  <!-- Páginas paginadas de wallpapers (se forem páginas reais geradas por plugin) -->
+  {% if site.wallpapers.size > 10 %}
+    {% assign total = site.wallpapers.size | divided_by: 10.0 | ceil %}
+    {% for i in (2..total) %}
+      <url>
+        <loc>{{ "/wallpapers/page/" | append: i | append: "/" | absolute_url }}</loc>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>weekly</changefreq
+
