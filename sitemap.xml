@@ -1,60 +1,56 @@
 ---
 layout: null
-permalink: /sitemap.xml
+# Exclui o próprio sitemap de ser listado dentro dele mesmo
+sitemap: exclude: true 
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  {% comment %}
-    1. Combina posts e páginas em um único array
-    2. Exclui arquivos .xml, páginas de paginação e páginas com front matter 'sitemap: exclude: true'
-  {% endcomment %}
-  {% assign pages = site.pages | concat: site.posts %}
-  {% for item in pages %}
+{% comment %}
+    Loop pelos posts do blog
+{% endcomment %}
+{% for post in site.posts %}
+  {% unless post.sitemap.exclude %}
+    <url>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      {% if post.last_modified_at %}
+        <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+      {% elsif post.date %}
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  {% endunless %}
+{% endfor %}
 
-    {% assign is_xml = item.url | downcase | slice: -4, 4 %}
-    {% assign is_pagination = item.url contains '/page' %}
-    {% assign is_excluded = item.sitemap.exclude or item.layout == null %}
-    
-    {% unless is_xml == '.xml' or is_pagination or is_excluded %}
+{% comment %}
+  Combina posts e páginas em um único array
+{% endcomment %}
+{% assign pages = site.pages | concat: site.posts %}
+
+{% for item in pages %}
+
+  {% comment %}
+    Variáveis para simplificar o filtro
+  {% endcomment %}
+  {% assign current_url = item.url | remove: "index.html" %}
+  {% assign is_excluded = item.sitemap.exclude %}
+  
+  {% comment %}
+    EXCLUI: Arquivos que terminam em .xml, pastas de paginação (/pageN), e páginas marcadas com sitemap: exclude: true
+  {% endcomment %}
+  {% unless current_url contains '.xml' or current_url contains '/page' or is_excluded %}
 
     <url>
-      {% assign current_url = item.url | remove: "index.html" %}
-
       <loc>{{ site.url }}{{ current_url }}</loc>
       
-      {% comment %} 
-        Usar o date_to_xmlschema garante o formato correto da data (AAAA-MM-DDTHH:MM:SS-ZZ:ZZ)
-      {% endcomment %}
-      <lastmod>{{ item.date | default: site.time | date_to_xmlschema }}</lastmod>
-      
-      {% comment %} 
-        Define a frequência de mudança para informar o Google
-      {% endcomment %}
-      <changefreq>
-      {% if item.layout == "post" %}
-        weekly
-      {% else %}
-        monthly
-      {% endif %}
-      </changefreq>
-
-      <priority>
-      {% if current_url == "/" %}
-        1.0
-      {% elsif current_url contains '/ferramentas/' or current_url contains '/artigos-linux-iniciantes/' or current_url contains '/guias-avancados/' %}
-        0.9  {% elsif current_url contains '/wallpapers/' and current_url != '/wallpapers/' %}
-        0.3  {% elsif current_url contains '/jogo-' or current_url contains '/jogo/' %}
-        0.3  {% elsif current_url == '/wallpapers/' or current_url contains '/distros/' or current_url contains '/indice-artigos-linux/' %}
-        0.7  {% else %}
-        0.5  {% endif %}
-      </priority>
+      ... [ O restante do seu código de lastmod, changefreq e priority ] ...
       
     </url>
 
-    {% endunless %}
+  {% endunless %}
 
-  {% endfor %}
+{% endfor %}
 
 </urlset>
-
