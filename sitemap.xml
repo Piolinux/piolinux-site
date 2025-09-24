@@ -19,7 +19,19 @@ sitemap: exclude: true
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
       {% endif %}
       <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+     <priority>
+      {% if current_url == "/" %}
+        1.0
+      {% elsif current_url contains '/ferramentas/' or current_url contains '/artigos-linux-iniciantes/' or current_url contains '/guias-avancados/' %}
+        0.9
+      {% elsif current_url contains '/wallpaper/' and current_url != '/wallpapers/' %}
+        0.3  {% elsif current_url contains '/jogo-' or current_url contains '/jogo/' %}
+        0.3  {% elsif current_url == '/wallpapers/' or current_url contains '/distros/' or current_url contains '/indice-artigos-linux/' %}
+        0.7
+      {% else %}
+        0.5
+      {% endif %}
+      </priority>
     </url>
   {% endunless %}
 {% endfor %}
@@ -54,3 +66,4 @@ sitemap: exclude: true
 {% endfor %}
 
 </urlset>
+
