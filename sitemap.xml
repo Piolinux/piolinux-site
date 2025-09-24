@@ -15,17 +15,11 @@ layout: null
     <priority>1.0</priority>
   </url>
 
-  <!-- Páginas estáticas (.html na raiz ou subpastas) -->
+  <!-- Páginas estáticas (.html) -->
   {% for page in site.html_pages %}
-    {% assign skip = false %}
-    {% if page.name == "404.html" or page.name == "sitemap.xml" or page.name == "feed.xml" or page.name == "robots.txt" %}
-      {% assign skip = true %}
-    {% endif %}
-    {% unless skip %}
-      {% assign url = page.url | remove: "index.html" | append: "/" | replace: "//", "/" %}
-      {% if url == "//" %}{% assign url = "/" %}{% endif %}
+    {% unless page.name == "404.html" or page.name == "sitemap.xml" or page.name == "feed.xml" or page.name == "robots.txt" %}
       <url>
-        <loc>{{ url | absolute_url }}</loc>
+        <loc>{{ page.url | remove: "index.html" | append: "/" | replace: "//", "/" | absolute_url }}</loc>
         <lastmod>
           {% if page.date %}
             {{ page.date | date_to_xmlschema }}
@@ -49,13 +43,13 @@ layout: null
     </url>
   {% endfor %}
 
-  <!-- Coleção: wallpapers -->
-  {% for wallpaper in site.wallpapers %}
+  <!-- Coleção: wallpapers (se existir e for intencional) -->
+  {% for item in site.wallpapers %}
     <url>
-      <loc>{{ wallpaper.url | absolute_url }}</loc>
+      <loc>{{ item.url | absolute_url }}</loc>
       <lastmod>
-        {% if wallpaper.date %}
-          {{ wallpaper.date | date_to_xmlschema }}
+        {% if item.date %}
+          {{ item.date | date_to_xmlschema }}
         {% else %}
           {{ site.time | date_to_xmlschema }}
         {% endif %}
@@ -66,12 +60,12 @@ layout: null
   {% endfor %}
 
   <!-- Coleção: docs (comandos, tutoriais, etc.) -->
-  {% for doc in site.docs %}
+  {% for item in site.docs %}
     <url>
-      <loc>{{ doc.url | absolute_url }}</loc>
+      <loc>{{ item.url | absolute_url }}</loc>
       <lastmod>
-        {% if doc.date %}
-          {{ doc.date | date_to_xmlschema }}
+        {% if item.date %}
+          {{ item.date | date_to_xmlschema }}
         {% else %}
           {{ site.time | date_to_xmlschema }}
         {% endif %}
@@ -81,34 +75,9 @@ layout: null
     </url>
   {% endfor %}
 
-  <!-- ❌ NÃO incluímos páginas paginadas do blog principal (ex: /page2/) -->
-  <!-- ✅ Mas mantemos paginação de coleções específicas (wallpapers, docs) se forem páginas reais -->
-
-  <!-- Páginas paginadas de wallpapers (se forem páginas reais geradas por plugin) -->
-  {% if site.wallpapers.size > 10 %}
-    {% assign total = site.wallpapers.size | divided_by: 10.0 | ceil %}
-    {% for i in (2..total) %}
-      <url>
-        <loc>{{ "/wallpapers/page/" | append: i | append: "/" | absolute_url }}</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-      </url>
-    {% endfor %}
-  {% endif %}
-
-  <!-- Páginas paginadas de docs (comandos) -->
-  {% if site.docs.size > 10 %}
-    {% assign total = site.docs.size | divided_by: 10.0 | ceil %}
-    {% for i in (2..total) %}
-      <url>
-        <loc>{{ "/docs/page/" | append: i | append: "/" | absolute_url }}</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-      </url>
-    {% endfor %}
-  {% endif %}
+  <!-- ⚠️ NÃO incluímos /page2/, /page3/ etc. do blog principal -->
+  <!-- Essas páginas são geradas pelo paginator e devem ter "noindex, follow", mas NÃO estar no sitemap -->
 
 </urlset>
+
 
