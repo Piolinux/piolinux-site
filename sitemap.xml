@@ -15,25 +15,26 @@ layout: null
     <priority>1.0</priority>
   </url>
 
-  <!-- Páginas estáticas (.html) — exclui 404, sitemap, feed, robots e páginas paginadas -->
+  <!-- Páginas estáticas (.html) -->
   {% for page in site.html_pages %}
     {% assign skip = false %}
 
-    <!-- Ignora páginas técnicas -->
+    <!-- Exclui páginas técnicas -->
     {% if page.name == "404.html" or page.name == "sitemap.xml" or page.name == "feed.xml" or page.name == "robots.txt" %}
       {% assign skip = true %}
     {% endif %}
 
-    <!-- Ignora páginas paginadas do blog (ex: /page2/, /page3/) -->
+    <!-- Exclui páginas paginadas do blog (ex: /page2/, /page3/) -->
     {% if page.url contains "/page/" %}
       {% assign skip = true %}
     {% endif %}
 
-    <!-- Ignora URLs que terminam com números (ex: /page2) — fallback extra -->
+    <!-- Exclui URLs que terminam com número puro (ex: /page2) -->
     {% assign url_parts = page.url | split: '/' %}
     {% assign last_part = url_parts | last %}
     {% if last_part != "" and last_part != "index.html" %}
-      {% if last_part | integer % 0 != 0 %}
+      {% assign is_number = last_part | integer %}
+      {% if is_number != 0 or last_part == "0" %}
         {% assign skip = true %}
       {% endif %}
     {% endif %}
@@ -41,6 +42,7 @@ layout: null
     {% unless skip %}
       {% assign clean_url = page.url | remove: "index.html" | append: "/" | replace: "//", "/" %}
       {% if clean_url == "//" %}{% assign clean_url = "/" %}{% endif %}
+
       <url>
         <loc>{{ clean_url | absolute_url }}</loc>
         <lastmod>
@@ -50,11 +52,17 @@ layout: null
             {{ site.time | date_to_xmlschema }}
           {% endif %}
         </lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>
+          {% if clean_url == "/politica-de-privacidade/" or clean_url == "/termos-de-uso/" %}
+            yearly
+          {% else %}
+            weekly
+          {% endif %}
+        </changefreq>
         <priority>
-          {% if page.url == "/politica-de-privacidade/" or page.url == "/termos-de-uso/" or page.path contains "_pages/" %}
+          {% if clean_url == "/politica-de-privacidade/" or clean_url == "/termos-de-uso/" %}
             0.3
-          {% elsif page.url contains "/wallpaper/" or page.url contains "/docs/" %}
+          {% elsif clean_url contains "/wallpaper/" or clean_url contains "/docs/" %}
             0.6
           {% else %}
             0.8
@@ -64,7 +72,7 @@ layout: null
     {% endunless %}
   {% endfor %}
 
-  <!-- Posts (artigos do blog) -->
+  <!-- Posts do blog -->
   {% for post in site.posts %}
     <url>
       <loc>{{ post.url | absolute_url }}</loc>
@@ -74,7 +82,7 @@ layout: null
     </url>
   {% endfor %}
 
-  <!-- Coleção: wallpapers (se você usar) -->
+  <!-- Coleção: wallpapers (se existir) -->
   {% for item in site.wallpapers %}
     <url>
       <loc>{{ item.url | absolute_url }}</loc>
@@ -90,7 +98,7 @@ layout: null
     </url>
   {% endfor %}
 
-  <!-- Coleção: docs (se você usar) -->
+  <!-- Coleção: docs (se existir) -->
   {% for item in site.docs %}
     <url>
       <loc>{{ item.url | absolute_url }}</loc>
@@ -107,4 +115,3 @@ layout: null
   {% endfor %}
 
 </urlset>
-
