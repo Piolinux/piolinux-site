@@ -15,11 +15,34 @@ layout: null
     <priority>1.0</priority>
   </url>
 
-  <!-- Páginas estáticas (.html) -->
+  <!-- Páginas estáticas (.html) — exclui 404, sitemap, feed, robots e páginas paginadas -->
   {% for page in site.html_pages %}
-    {% unless page.name == "404.html" or page.name == "sitemap.xml" or page.name == "feed.xml" or page.name == "robots.txt" %}
+    {% assign skip = false %}
+
+    <!-- Ignora páginas técnicas -->
+    {% if page.name == "404.html" or page.name == "sitemap.xml" or page.name == "feed.xml" or page.name == "robots.txt" %}
+      {% assign skip = true %}
+    {% endif %}
+
+    <!-- Ignora páginas paginadas do blog (ex: /page2/, /page3/) -->
+    {% if page.url contains "/page/" %}
+      {% assign skip = true %}
+    {% endif %}
+
+    <!-- Ignora URLs que terminam com números (ex: /page2) — fallback extra -->
+    {% assign url_parts = page.url | split: '/' %}
+    {% assign last_part = url_parts | last %}
+    {% if last_part != "" and last_part != "index.html" %}
+      {% if last_part | integer % 0 != 0 %}
+        {% assign skip = true %}
+      {% endif %}
+    {% endif %}
+
+    {% unless skip %}
+      {% assign clean_url = page.url | remove: "index.html" | append: "/" | replace: "//", "/" %}
+      {% if clean_url == "//" %}{% assign clean_url = "/" %}{% endif %}
       <url>
-        <loc>{{ page.url | remove: "index.html" | append: "/" | replace: "//", "/" | absolute_url }}</loc>
+        <loc>{{ clean_url | absolute_url }}</loc>
         <lastmod>
           {% if page.date %}
             {{ page.date | date_to_xmlschema }}
@@ -28,7 +51,15 @@ layout: null
           {% endif %}
         </lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>
+          {% if page.url == "/politica-de-privacidade/" or page.url == "/termos-de-uso/" or page.path contains "_pages/" %}
+            0.3
+          {% elsif page.url contains "/wallpaper/" or page.url contains "/docs/" %}
+            0.6
+          {% else %}
+            0.8
+          {% endif %}
+        </priority>
       </url>
     {% endunless %}
   {% endfor %}
@@ -43,7 +74,7 @@ layout: null
     </url>
   {% endfor %}
 
-  <!-- Coleção: wallpapers (se existir e for intencional) -->
+  <!-- Coleção: wallpapers (se você usar) -->
   {% for item in site.wallpapers %}
     <url>
       <loc>{{ item.url | absolute_url }}</loc>
@@ -59,7 +90,7 @@ layout: null
     </url>
   {% endfor %}
 
-  <!-- Coleção: docs (comandos, tutoriais, etc.) -->
+  <!-- Coleção: docs (se você usar) -->
   {% for item in site.docs %}
     <url>
       <loc>{{ item.url | absolute_url }}</loc>
@@ -75,9 +106,5 @@ layout: null
     </url>
   {% endfor %}
 
-  <!-- ⚠️ NÃO incluímos /page2/, /page3/ etc. do blog principal -->
-  <!-- Essas páginas são geradas pelo paginator e devem ter "noindex, follow", mas NÃO estar no sitemap -->
-
 </urlset>
-
 
