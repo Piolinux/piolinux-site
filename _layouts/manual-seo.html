@@ -1,20 +1,20 @@
+!-- _layouts/manual-seo.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    {% include head-manual.html %}  
-   
+    {% include head-manual.html %}  <!-- 👈 ÚNICA MUDANÇA: usa head personalizado -->
+    
     {% if paginator.page and paginator.page != 1 %}
-      <meta name="robots" content="noindex, follow">
-    {% endif %}
+  <meta name="robots" content="noindex, follow">
+{% endif %}
+    
 </head>
 <body>
     {% include menu.html %}
 
     <main>
         <h1>{{ page.title }}</h1>
-        
-        <!-- Só mostra tags se existirem e forem um array -->
-        {% if page.tags and page.tags.size > 0 %}
+        {% if page.tags %}
         <div class="tags-container">
             {% for tag in page.tags %}
             <a href="/tags#{{ tag | slugify }}" class="tag-item">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
@@ -24,34 +24,24 @@
 
         {{ content }}
 
-        <!-- Leitura aleatória: só se houver posts disponíveis -->
-        {% if site.posts.size > 0 %}
         <section class="post-content">
           <div class="random-posts-container">
             <h3>🎲 Leitura aleatória</h3>
             <p>Não sabe o que ler agora? Deixe o acaso escolher por você:</p>
             <ul>
-              {% assign candidates = site.posts | where_exp: "p", "p.url != page.url" %}
-              {% if candidates.size > 0 %}
-                {% assign posts_aleatorios = candidates | sample:3 %}
-                {% for post in posts_aleatorios %}
-                  <li>
-                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                    {% if post.description %}
-                      <p>{{ post.description }}</p>
-                    {% endif %}
-                  </li>
-                {% endfor %}
-              {% else %}
-                <li><a href="/">Veja a página inicial</a></li>
-              {% endif %}
+              {% assign posts_aleatorios = site.posts | where_exp:"p", "p.url != page.url" | sample:3 %}
+              {% for post in posts_aleatorios %}
+                <li>
+                  <a href="{{ post.url }}">{{ post.title }}</a>
+                  {% if post.description %}
+                    <p>{{ post.description }}</p>
+                  {% endif %}
+                </li>
+              {% endfor %}
             </ul>
           </div>
         </section>
-        {% endif %}
     </main>
-</body>
-</html>
 
     <div id="share" style="text-align: center; margin: 15px 0;"></div>
 
