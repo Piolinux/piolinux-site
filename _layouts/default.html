@@ -89,6 +89,30 @@
 </script>
     
     {% include footer.html %}
+    
+    
+    <script>
+document.addEventListener('click', function(e) {
+  // Verifica se o clique foi em um botão com a classe "copy-btn"
+  if (e.target.matches('.copy-btn')) {
+    const cmd = e.target.getAttribute('data-cmd');
+    if (cmd) {
+      navigator.clipboard.writeText(cmd).then(() => {
+        // Feedback visual: muda o ícone por 1.2s
+        const original = e.target.innerHTML;
+        e.target.innerHTML = '✓';
+        setTimeout(() => {
+          e.target.innerHTML = original;
+        }, 1200);
+      }).catch(err => {
+        console.warn('Não foi possível copiar:', err);
+      });
+    }
+  }
+});
+</script>
+    
+    
 </body>
 </html>
 
