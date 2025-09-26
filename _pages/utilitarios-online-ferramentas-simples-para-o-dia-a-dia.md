@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "Ferramentas Técnicas Online — 100% no Navegador, 0% Setup "
-description: "Gere comandos Docker, cron, chmod, IPs, senhas e mais — tudo online, sem cadastro, 100% grátis. Ideal para terminal, automação e sysadmin."
-date: 2025-10-01
+title: Ferramentas Técnicas Online — 100% no Navegador, 0% Setup                                
+description: 'Gere comandos Docker, cron, chmod, IPs, senhas e mais — tudo online, sem cadastro, 100% grátis. Ideal para terminal, automação e sysadmin.'
 author: "PioLinux"
 categories: [ferramentas, produtividade, online]
 tags: [utilitarios, qrcode, pomodoro, tarefas, relogio, ferramentas]
 permalink: /utilitarios-online/
 ---
+
 
 
 
