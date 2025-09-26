@@ -1,8 +1,7 @@
 ---
 layout: default
-title: "Comandos Linux por Categoria — Guia Técnico Completo"
+title: Comandos Linux por Categoria — Guia Técnico Completo
 description: "Domine o terminal com comandos organizados em 18 categorias: pacotes, rede, Docker, Git, segurança, processos, logs e muito mais. Ideal para consulta rápida."
-date: 2025-10-03
 author: "PioLinux"
 categories: [linux, comandos, terminal, referência]
 tags: [comandos, linux, terminal, sysadmin, docker, git, rede, segurança, bash, guia]
