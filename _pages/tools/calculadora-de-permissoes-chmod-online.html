@@ -23,57 +23,66 @@ tags: [chmod, linux, unix, permissao, sysadmin, terminal, arquivo, estudante]
 <!-- ============= 🔢 CALCULADORA DE PERMISSÕES CHMOD ============= -->
 
   <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Calculadora de Permissões chmod</h2>
-  
-  <div style="margin: 16px 0;">
-    <div style="margin-bottom: 16px;">
-      <strong style="color: #e0e0e0;">Dono:</strong><br>
-      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
-        <input type="checkbox" id="ownerRead" checked style="margin-right: 6px; accent-color: #4caf50;" /> r (4)
+
+<div style="display: flex; flex-direction: column; gap: 16px; margin: 16px 0;">
+  <!-- Dono -->
+  <div>
+    <strong style="color: #e0e0e0; display: block; margin-bottom: 6px;">Dono:</strong>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+      <label style="color: #e0e0e0; display: flex; align-items: center; gap: 4px;">
+        <input type="checkbox" id="ownerRead" checked style="accent-color: #4caf50;" /> r (4)
       </label>
-      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
-        <input type="checkbox" id="ownerWrite" checked style="margin-right: 6px; accent-color: #4caf50;" /> w (2)
+      <label style="color: #e0e0e0; display: flex; align-items: center; gap: 4px;">
+        <input type="checkbox" id="ownerWrite" checked style="accent-color: #4caf50;" /> w (2)
       </label>
-      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
-        <input type="checkbox" id="ownerExecute" checked style="margin-right: 6px; accent-color: #4caf50;" /> x (1)
+      <label style="color: #e0e0e0; display: flex; align-items: center; gap: 4px;">
+        <input type="checkbox" id="ownerExecute" checked style="accent-color: #4caf50;" /> x (1)
       </label>
     </div>
-
-    <div style="margin-bottom: 16px;">
-      <strong style="color: #e0e0e0;">Grupo:</strong><br>
-      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
-        <input type="checkbox" id="groupRead" checked style="margin-right: 6px; accent-color: #4caf50;" /> r (4)
-      </label>
-      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
-        <input type="checkbox" id="groupWrite" style="margin-right: 6px; accent-color: #4caf50;" /> w (2)
-      </label>
-      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
-        <input type="checkbox" id="groupExecute" style="margin-right: 6px; accent-color: #4caf50;" /> x (1)
-      </label>
-    </div>
-
-    <div style="margin-bottom: 16px;">
-      <strong style="color: #e0e0e0;">Outros:</strong><br>
-      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
-        <input type="checkbox" id="otherRead" style="margin-right: 6px; accent-color: #4caf50;" /> r (4)
-      </label>
-      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
-        <input type="checkbox" id="otherWrite" style="margin-right: 6px; accent-color: #4caf50;" /> w (2)
-      </label>
-      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
-        <input type="checkbox" id="otherExecute" style="margin-right: 6px; accent-color: #4caf50;" /> x (1)
-      </label>
-    </div>
-
-    <button onclick="calculateChmod()" style="background: #4caf50; color: white; border: none; padding: 10px 20px; margin: 10px 0; border-radius: 4px; cursor: pointer; font-weight: bold;">
-      🧮 Calcular chmod
-    </button>
   </div>
 
-  <div id="chmodResult" style="background: #121212; padding: 15px; border-radius: 6px; margin: 15px 0; min-height: 60px; font-family: monospace;">
-    chmod 755 arquivo<br>
-    rwxr-xr-x<br>
-    Dono: leitura + escrita + execução | Grupo: leitura + execução | Outros: leitura
+  <!-- Grupo -->
+  <div>
+    <strong style="color: #e0e0e0; display: block; margin-bottom: 6px;">Grupo:</strong>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+      <label style="color: #e0e0e0; display: flex; align-items: center; gap: 4px;">
+        <input type="checkbox" id="groupRead" checked style="accent-color: #4caf50;" /> r (4)
+      </label>
+      <label style="color: #e0e0e0; display: flex; align-items: center; gap: 4px;">
+        <input type="checkbox" id="groupWrite" style="accent-color: #4caf50;" /> w (2)
+      </label>
+      <label style="color: #e0e0e0; display: flex; align-items: center; gap: 4px;">
+        <input type="checkbox" id="groupExecute" style="accent-color: #4caf50;" /> x (1)
+      </label>
+    </div>
   </div>
+
+  <!-- Outros -->
+  <div>
+    <strong style="color: #e0e0e0; display: block; margin-bottom: 6px;">Outros:</strong>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+      <label style="color: #e0e0e0; display: flex; align-items: center; gap: 4px;">
+        <input type="checkbox" id="otherRead" style="accent-color: #4caf50;" /> r (4)
+      </label>
+      <label style="color: #e0e0e0; display: flex; align-items: center; gap: 4px;">
+        <input type="checkbox" id="otherWrite" style="accent-color: #4caf50;" /> w (2)
+      </label>
+      <label style="color: #e0e0e0; display: flex; align-items: center; gap: 4px;">
+        <input type="checkbox" id="otherExecute" style="accent-color: #4caf50;" /> x (1)
+      </label>
+    </div>
+  </div>
+
+  <button onclick="calculateChmod()" style="background: #4caf50; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; align-self: flex-start;">
+    🧮 Calcular chmod
+  </button>
+</div>
+
+<div id="chmodResult" style="background: #121212; padding: 15px; border-radius: 6px; margin: 15px 0; min-height: 60px; font-family: monospace;">
+  chmod 755 arquivo<br>
+  rwxr-xr-x<br>
+  Dono: leitura + escrita + execução | Grupo: leitura + execução | Outros: leitura
+</div>
 
   <div id="chmodWarning" style="display: none; background: #330000; color: #ff5252; padding: 10px; border-radius: 6px; margin: 15px 0; border: 1px solid #ff5252;">
     ⚠️ <strong>Atenção:</strong> chmod 777 dá acesso total a todos os usuários — nunca use em produção!
