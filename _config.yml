@@ -21,45 +21,28 @@
 title: "Piolinux"
 description: "200 piadas e trocadilhos de Linux, terminal e devs — + guias técnicos em tabelas práticas. Ria, aprenda e compartilhe. O lado divertido (e útil) do open source."
 baseurl: ""
-url: "https://piolinux.com"
+url: "https://piolinux.com"  # ← sem espaços!
 lang: "pt-BR"
 locale: "pt_BR"
-markdown: kramdown
-theme: null
-lsi: false
-safe: false
-incremental: false
-highlighter: rouge
-
-gist:
-  noscript: false
-
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
-
-future: false
-timezone: America/Sao_Paulo
-
-sass:
-  quiet_deps: true
-
-sitemap:
-  changefreq: daily
-  priority: 0.5
-
-seo_tag:
-  og_locale_detection: false
 
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-seo-tag 
 
-paginate: 10           # Número de posts por página
-paginate_path: "/page:num/"  # Padrão de URL para páginas
-  
+paginate: 10
+paginate_path: "/page:num/"
 permalink: /:title/
+
+exclude:
+  - _site/
+  - vendor/
+  - tags/
+  - categorias/
+  - node_modules
+  - README.md
+  - LICENSE
 
 collections:
   pages:
@@ -71,25 +54,9 @@ collections:
   wallpapers:
     output: true
     permalink: /wallpaper/:title/
-
-include:
-  - _pages
-  - _jogos
-  - galeria
-  - _wallpapers
-  - assets
-
-exclude:
-  - node_modules
-  - vendor
-  - README.md
-  - LICENSE
-
-# Minificação de CSS (funciona no GitHub Pages)
-sass:
-  style: compressed
-  quiet_deps: true
-
+  comandos:
+    output: true
+    permalink: /:path/
 # Para JS, use um plugin ou minifique manualmente
 
 # Exclude from processing.
