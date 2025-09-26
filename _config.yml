@@ -27,7 +27,6 @@ locale: "pt_BR"
 
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag 
 
