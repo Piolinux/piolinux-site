@@ -2,7 +2,6 @@
 layout: default
 title: Dicas Técnicas de Linux Terminal e Produtividade
 description: "Coleção de dicas técnicas de Linux: comandos, automação, Oh My Zsh, iTerm2 e Windows Terminal. Ideal para devs e sysadmins!"
-date: 2025-10-02
 author: "PioLinux"
 categories: [linux, dicas, terminal]
 tags: [dicas, linux, terminal, bash, zsh, ohmyzsh, iterm2, produtividade]
