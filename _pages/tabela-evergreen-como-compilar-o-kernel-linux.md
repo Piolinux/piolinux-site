@@ -89,7 +89,7 @@ tags: [kernel, linux, compilar, compilacao, make, config, sysadmin, desenvolvedo
         Etapas">7. Instalar o kernel</td>
       <td data-label="Comandos"><code>sudo make install</code></td>
       <td data-label="Propósito">Instala o kernel, System.map e config no <code>/boot/</code>.</td>
-      <td data-label="Dicas Evergreen">Não ocorrerá atualização automática do GRUB, certifique-se de utilizar os comandos no terminal para atualizar.</td>
+      <td data-label="Dicas Evergreen">A atualização automática do GRUB não ocorrerá; certifique-se de utilizar os comandos no terminal para atualizá-lo.</td>
     </tr>
     <tr>
       <td data-label="
