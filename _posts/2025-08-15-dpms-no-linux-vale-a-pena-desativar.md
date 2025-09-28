@@ -15,6 +15,10 @@ tags: [dpms, linux, economia-de-energia, tela-preta, monitor]
 
 
 <section class="post-content">
+
+
+<p>Dpms controlador de modo de economia de energia dos monitores (standby, suspend, off). Utilize xset no X11 para ativar, desativar ou ajustar tempos. Não funciona no Wayland.</p>
+
                 
         <table class="evergreen-table">
   <thead>
@@ -80,11 +84,12 @@ tags: [dpms, linux, economia-de-energia, tela-preta, monitor]
   <tbody>
     <tr>
       <td data-label="Fato">DPMS é parte do padrão VESA.</td>
-      <td data-label="Explicação">Controlando os modos de economia de energia do monitor (Standby, Suspend, Off). Não é específico do Linux.</td>
+      <td data-label="Explicação">Controlando os modos de economia de energia do monitor (Standby, Suspend, Off). Não é exclusivo do Linux.</td>
     </tr>
     <tr>
-      <td data-label="Fato">Não funciona no Wayland.</td>
-      <td data-label="Explicação"><code>xset</code> é uma ferramenta do X11. Em Wayland, use configurações do compositor (ex: GNOME Settings, swayidle).</td>
+      <td data-label="Fato">Não funciona no Ambiente gráfico Wayland.</td>
+      <td data-label="Explicação">(<code>xset</code> é uma ferramenta 
+      do X11.) Em Wayland, utilize configurações do compositor, como gnome-settings ou swayidle.</td>
     </tr>
     <tr>
       <td data-label="Fato">Desativar DPMS não economiza energia.</td>
