@@ -9,22 +9,18 @@ permalink: /scripts-bash-linux/
 
 
 
+
 <section class="post-content">
 
 
 
 
-<h2>🐧 Scripts Bash Básicos — Organizados por Categoria</h2>
+<h2>🐧 Scripts Bash Básicos - Organizados por Categoria.</h2>
 
-<p>Scripts essenciais para automação, administração e produtividade.  
+<p>Scripts essenciais para automatizar, administração e produtividade.  
 <strong>Copie, cole e use</strong> — testados em Devuan, Debian e sistemas sem systemd.  
 Cada script está formatado <strong>exatamente como deve ser salvo</strong> — sem colar em uma linha só.</p>
 
-<p>Saca só, o Bash é tipo o idioma oficial nos terminais Linux. Com 
-ele, dá pra deixar tudo automático, sabe? Tipo, organizar arquivos, dar 
-um tapa no sistema, fazer cópia de segurança e um monte de outras 
-paradas. aprender bash não exige ser um expert — basta curiosidade e 
-prática. abaixo, veja exemplos úteis de scripts para o dia a dia.</p> 
 
 
 
@@ -72,13 +68,13 @@ prática. abaixo, veja exemplos úteis de scripts para o dia a dia.</p>
 </style>
 
 <!-- Categoria: Fundamentos -->
-<h3>🧱 Fundamentos de Script Bash</h3>
+<h3>🧱 Fundamentos de Script Bash.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
       <th>Objetivo</th>
-      <th>Script</th>
-      <th>Copiar</th>
+      <th>script</th>
+      <th>copiar</th>
     </tr>
   </thead>
   <tbody>
@@ -93,13 +89,13 @@ echo &quot;Olá, piolinux! Este é meu primeiro script Bash.&quot;">📋</button
 </table>
 
 <!-- Categoria: Automação -->
-<h3>🤖 Automação de Tarefas</h3>
+<h3>🤖 Automação de Tarefas.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
       <th>Objetivo</th>
-      <th>Script</th>
-      <th>Copiar</th>
+      <th>script</th>
+      <th>copiar</th>
     </tr>
   </thead>
   <tbody>
@@ -149,13 +145,13 @@ echo &quot;Backup salvo em: $dir_backup/$arquivo&quot;">📋</button></td>
 </table>
 
 <!-- Categoria: Administração -->
-<h3>⚙️ Administração de Sistema</h3>
+<h3>⚙️ Administração de Sistema.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
       <th>Objetivo</th>
-      <th>Script</th>
-      <th>Copiar</th>
+      <th>script</th>
+      <th>copiar</th>
     </tr>
   </thead>
   <tbody>
@@ -173,7 +169,7 @@ if [ $uso -gt 80 ]; then
 fi">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Objetivo">Criar usuários em lote</td>
+      <td data-label="Objetivo">Criar usuários em lote.</td>
       <td data-label="Script"><code>#!/bin/bash
 while read user; do
   [ -n "$user" ] && sudo useradd -m "$user"
@@ -194,8 +190,8 @@ echo &quot;Usuários criados.&quot;">📋</button></td>
   <thead>
     <tr>
       <th>Objetivo</th>
-      <th>Script</th>
-      <th>Copiar</th>
+      <th>script</th>
+      <th>copiar</th>
     </tr>
   </thead>
   <tbody>
@@ -221,13 +217,13 @@ grep &quot;Failed password&quot; /var/log/auth.log | tail -5 | awk '{print $11}'
 </table>
 
 <!-- Categoria: Desenvolvimento -->
-<h3>💻 Desenvolvimento Web para facilitar acesso atráves do navegador</h3>
+<h3>💻 Desenvolvimento Web para facilitar acesso atráves do navegador.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
       <th>Objetivo</th>
-      <th>Script</th>
-      <th>Copiar</th>
+      <th>script</th>
+      <th>copiar</th>
     </tr>
   </thead>
   <tbody>
@@ -251,18 +247,18 @@ echo &quot;Deploy concluído.&quot;">📋</button></td>
 </table>
 
 <!-- Categoria: Utilitários -->
-<h3>🧰 Ferramentas Mágicas e Segredos Escondidos</h3>
+<h3>🧰 Calculadora para facilitar a vida.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
       <th>Objetivo</th>
-      <th>Script</th>
-      <th>Copiar</th>
+      <th>script</th>
+      <th>copiar</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td data-label="Objetivo">Calculadora no terminal</td>
+      <td data-label="Objetivo">Calculadora no terminal.</td>
       <td data-label="Script"><code>#!/bin/bash
 if [ -z "$1" ]; then
   echo "Uso: ./calc.sh '2 + 3 * 4'"
@@ -306,8 +302,6 @@ document.addEventListener('click', function(e) {
   }
 });
 </script>
-
-</section>
 
 
 
