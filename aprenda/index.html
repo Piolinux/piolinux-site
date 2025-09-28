@@ -14,7 +14,7 @@ tags: [linux, terminal, bash, iniciante, comandos-basicos, tutorial, primeiro-pa
   <p>{{ page.description }}</p>
 
   <ul class="standard-list">
-    {% assign pages = site.pages | where_exp: "page", "page.url contains '/indice-artigos-linux/' or page.url contains '/terminal-linux-referencia-completa/' or page.url contains '/scripts-bash-linux/' or page.url contains '/comandos/' or page.url contains '/links-uteis-linux-python/'" %}
+    {% assign pages = site.pages | where_exp: "page", "page.url contains '/indice-artigos-linux/' or page.url contains '/terminal-linux-referencia-completa/' or page.url contains '/scripts-bash-linux/' or page.url contains '/biblioteca-linux/' or page.url contains '/links-uteis-linux-python/'" %}
     {% for page in pages %}
       <li>
         <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
