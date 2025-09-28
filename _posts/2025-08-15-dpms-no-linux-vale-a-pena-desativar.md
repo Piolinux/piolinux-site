@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "DPMS no Linux: Vale a Pena Desativar? Minha Experiência"
-description: "Vale a pena desativar o DPMS no Linux? Minha experiência com economia de energia, tela preta e manutenção de monitores em uso contínuo."
+title: "DPMS no Linux – Controle Técnico com xset"
+description: "Tabela objetiva com comandos para ativar, desativar e configurar DPMS via terminal — sem opiniões, só referência técnica."
+permalink: /dpms-linux-xset/
 date: 2025-08-15
 author: "PioLinux"
 categories: [linux, energia, monitor, dpms]
 tags: [dpms, linux, economia-de-energia, tela-preta, monitor]
-permalink: /dpms-no-linux-vale-a-pena-desativar/
 ---
 
 
@@ -16,56 +16,104 @@ permalink: /dpms-no-linux-vale-a-pena-desativar/
 
 <section class="post-content">
                 
-        <!-- Cabeçalho com título e ícone -->
-        
-            <h2>Minha Experiência</h2>
-     
-        
-        <!-- Parágrafo de introdução -->
-        <p class="text-gray-700 mb-6 text-lg leading-relaxed">
-            O DPMS é um tema importante, pois se trata de uma função para poupar energia do monitor. Embora muitos monitores novos já possuam opções de economia, a dúvida sobre se é melhor desativar o DPMS no sistema ainda causa uma divisão de opiniões na comunidade Linux. Alguns usuários são a favor, e outros, contra.
-        </p>
+        <table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Ações</th>
+      <th>Comandos</th>
+      <th>Quando utilizar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Ação">Desativar DPMS. (modo de economia)</td>
+      <td data-label="Comando">
+        <code>xset -dpms</code>
+        <button class="copy-btn" data-command="xset -dpms">📋 Copiar</button>
+      </td>
+      <td data-label="Quando usar">Em servidores com monitor sempre ligado, kiosks, ou quando o DPMS causa flickering em monitores antigos.</td>
+    </tr>
+    <tr>
+      <td data-label="Ação">Ativar DPMS</td>
+      <td data-label="Comando">
+        <code>xset +dpms</code>
+        <button class="copy-btn" data-command="xset +dpms">📋 Copiar</button>
+      </td>
+      <td data-label="Quando usar">Padrão em desktops — economiza energia em monitores ociosos.</td>
+    </tr>
+    <tr>
+      <td data-label="Ação">Definir tempos (standby, suspend, off)</td>
+      <td data-label="Comando">
+        <code>xset dpms 600 1200 1800</code>
+        <button class="copy-btn" data-command="xset dpms 600 1200 1800">📋 Copiar</button>
+      </td>
+      <td data-label="Quando usar">Personalizar tempo até o monitor desligar (em segundos: 10min, 20min, 30min).</td>
+    </tr>
+    <tr>
+      <td data-label="Ação">Verificar status do DPMS.</td>
+      <td data-label="Comando">
+        <code>xset -q | grep -A1 DPMS</code>
+        <button class="copy-btn" data-command="xset -q | grep -A1 DPMS">📋 Copiar</button>
+      </td>
+      <td data-label="Quando usar">Diagnosticar se o DPMS está ativo ou não.</td>
+    </tr>
+    <tr>
+      <td data-label="Ação">Tornar configuração persistente.</td>
+      <td data-label="Comando">
+        Adicione o comando ao arquivo de inicialização do seu ambiente gráfico:<br>
+        <code>echo "xset -dpms" >> ~/.xprofile</code>
+        <button class="copy-btn" data-command="echo &quot;xset -dpms&quot; >> ~/.xprofile">📋 Copiar</button>
+      </td>
+      <td data-label="Quando usar">Para que a configuração sobreviva a reinicializações. (funciona no X11; Wayland não usa `xset`).</td>
+    </tr>
+  </tbody>
+</table>
 
-        <!-- Seção 1: Pesquisa e o Dilema -->
-        <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 border-b-2 border-red-300 pb-2 mb-4">A Pesquisa e o Dilema: Desativar ou Não?</h2>
-        <p class="text-gray-700 mb-6 leading-relaxed">
-            Depois de algumas pesquisas, tentei desativar o DPMS por conta própria. Cheguei à conclusão de que a decisão fica a critério de cada usuário. Em vez de simplesmente odiar a função, pesquisei para entendê-la, mas percebi que muitos dos procedimentos que encontrei na internet eram arriscados, podendo dar certo ou não. Afinal, se a função foi desenvolvida para poupar energia, por que removê-la? Testei outras formas de desativar o DPMS, como adicionar comandos no "autostart", mas percebi que era uma perda de tempo. Decidi então aprender a mexer nos comandos do terminal.
-        </p>
-        
-        <!-- Seção 2: Comando xset -->
-        <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 border-b-2 border-red-300 pb-2 mb-4">Comando xset: A Solução mais Prática</h2>
-        <p class="text-gray-700 mb-4 leading-relaxed">
-            Não utilizando o modo gráfico, comecei aos poucos a entender a funcionalidade dos comandos no terminal. Com muito cuidado desative  DPMS em segurança, utilizando o comando <code>xset</code> no terminal. Para quem tem curiosidade, esses são alguns dos comandos que você pode usar:
-        </p>
-        
-        <!-- Bloco de código para os comandos -->
-        <div class="bg-gray-800 text-red-500 p-4 rounded-lg shadow-inner mb-6 overflow-x-auto">
-            <h3 class="text-lg text-white font-mono mb-2">Para controlar as funções Energy Star (DPMS):</h3>
-            <pre class="whitespace-pre-wrap"><code class="font-mono">-dpms</code> Desativa as funções Energy Star
-<code class="font-mono">+dpms</code> Ativa as funções Energy Star</pre>
-            
-            <h3 class="text-lg text-white font-mono mt-4 mb-2">Para controlar o temporizador de economia de tela:</h3>
-            <pre class="whitespace-pre-wrap"><code class="font-mono">xset dpms 300 600 900</code> (Este comando aumenta o tempo de espera para o monitor entrar em modo standby, suspender e desligar.)</pre>
-            
-            <h3 class="text-lg text-white font-mono mt-4 mb-2">Para verificar o status do DPMS:</h3>
-            <pre class="whitespace-pre-wrap"><code class="font-mono">xset -q</code> (Se o DPMS estiver desativado, o resultado será "DPMS is Disabled".)</pre>
-        </div>
-
-        <!-- Seção 3: Conclusão -->
-        <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 border-b-2 border-red-300 pb-2 mb-4">Conclusão e Fontes de Referência</h2>
-        <p class="text-gray-700 mb-4 leading-relaxed">
-            A solução prática está no terminal e exige apenas um pouco de paciência para evitar erros desnecessários. Aconselho que você realize a leitura das referências abaixo antes de realizar qualquer procedimento no seu sistema. São nessas fontes que você encontra a informação correta para solucionar determinados problemas.
-        </p>
-        
-        <!-- Lista de fontes de referência -->
-        <div class="mt-6">
-            <h3 class="text-xl font-bold text-gray-700 mb-2">Fontes de Referência:</h3>
-            <ul class="list-disc list-inside text-red-600">
-                <li><a href="#" class="hover:underline">Linux Desktop</a></li>
-                <li><a href="https://www.raspberrypi.com/" class="hover:underline">Raspberry Pi</a></li>
-            </ul>
-        </div>
+<h3 id="observacoes">Observações Técnicas</h3>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Fatos.</th>
+      <th>Explicações.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Fato">DPMS é parte do padrão VESA.</td>
+      <td data-label="Explicação">Controlando os modos de economia de energia do monitor (Standby, Suspend, Off). Não é específico do Linux.</td>
+    </tr>
+    <tr>
+      <td data-label="Fato">Não funciona no Wayland.</td>
+      <td data-label="Explicação"><code>xset</code> é uma ferramenta do X11. Em Wayland, use configurações do compositor (ex: GNOME Settings, swayidle).</td>
+    </tr>
+    <tr>
+      <td data-label="Fato">Desativar DPMS não economiza energia.</td>
+      <td data-label="Explicação">Ao contrário: o monitor permanece ligado 100% do tempo. Só desative se houver problema de compatibilidade.</td>
+    </tr>
+  </tbody>
+</table>
    
    </section>
   
+  
+  <script>
+document.addEventListener('click', function(e) {
+  if (e.target.matches('.copy-btn')) {
+    const cmd = e.target.dataset.command; // ← aqui estava "cmd", agora é "command"
+    if (cmd) {
+      navigator.clipboard.writeText(cmd).then(() => {
+        const original = e.target.textContent;
+        e.target.textContent = '✓ Copiado!';
+        setTimeout(() => e.target.textContent = original, 1500);
+      }).catch(err => {
+        console.warn('Falha ao copiar:', err);
+      });
+    }
+  }
+});
+</script>
+
+
+
+
 
