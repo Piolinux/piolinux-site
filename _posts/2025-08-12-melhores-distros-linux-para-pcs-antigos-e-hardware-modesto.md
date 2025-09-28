@@ -1,7 +1,8 @@
 ---
 layout: default
-title: "Distros Linux para PCs Antigos: Leves e Rápidas"
-description: "Escolha a distro Linux ideal para PCs antigos: Lubuntu, Debian, MX Linux, antiX — leves, rápidas e com pouca RAM!"
+title: "Distros Leves para PCs Antigos – Requisitos e Recomendações"
+description: "Tabela técnica com AntiX, Lubuntu, Puppy Linux, Debian LXDE e 4MLinux — requisitos reais, estado do projeto e casos de uso práticos."
+permalink: /distros-leves-pc-antigo/
 date: 2025-08-12
 author: "PioLinux"
 categories: [linux, distros, performance]
@@ -18,38 +19,99 @@ permalink: /distros-linux-pc-antigo/
 
 <section class="post-content">
            
+           <p>Distros leves para hardware com menos de 2 GB de RAM. Inclui apenas opções ativas, com requisitos mínimos verificados e ambientes gráficos realmente leves (LXDE, LXQt, IceWM, JWM).</p>
+           
+           
             
-            <p>Se tens um computador velho, pensando em descartá-lo, saiba que existem sistemas operacionais Linux que mandam muito bem, sim. Em vez de jogar fora, dê uma nova vida ao bicho! Neste guia, apresento uma pequena lista para te ajudar a escolher qual distro colocar no seu PC velho. 😀</p>
+         <table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Distribuição</th>
+      <th>Base</th>
+      <th>Ambiente Gráfico</th>
+      <th>Requisitos Mínimos</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Distribuição">AntiX</td>
+      <td data-label="Base">Debian Stable</td>
+      <td data-label="Ambiente Gráfico">IceWM, JWM, Fluxbox</td>
+      <td data-label="Requisitos Mínimos">256 MB RAM, 3 GB disco, CPU i686</td>
+      <td data-label="Estado">✅ Ativa (2024)</td>
+    </tr>
+    <tr>
+      <td data-label="Distribuição">Lubuntu</td>
+      <td data-label="Base">Ubuntu LTS</td>
+      <td data-label="Ambiente Gráfico">LXQt</td>
+      <td data-label="Requisitos Mínimos">1 GB RAM, 10 GB disco, CPU x86_64</td>
+      <td data-label="Estado">✅ Ativa (2024)</td>
+    </tr>
+    <tr>
+      <td data-label="Distribuição">Puppy Linux</td>
+      <td data-label="Base">Ubuntu / Debian (varia por versão)</td>
+      <td data-label="Ambiente Gráfico">JWM, Openbox</td>
+      <td data-label="Requisitos Mínimos">512 MB RAM, roda em RAM</td>
+      <td data-label="Estado">✅ Ativa (FossaPup, BionicPup)</td>
+    </tr>
+    <tr>
+      <td data-label="Distribuição">Debian + LXDE</td>
+      <td data-label="Base">Debian Stable</td>
+      <td data-label="Ambiente Gráfico">LXDE</td>
+      <td data-label="Requisitos Mínimos">512 MB RAM, 5 GB disco</td>
+      <td data-label="Estado">✅ Ativa (instalação manual)</td>
+    </tr>
+    <tr>
+      <td data-label="Distribuição">4MLinux</td>
+      <td data-label="Base">Própria (Slackware-like)</td>
+      <td data-label="Ambiente Gráfico">JWM</td>
+      <td data-label="Requisitos Mínimos">256 MB RAM, 1.5 GB disco</td>
+      <td data-label="Estado">✅ Ativa (24.1 em 2024)</td>
+    </tr>
+    <tr>
+      <td data-label="Distribuição">LXLE</td>
+      <td data-label="Base">Ubuntu LTS</td>
+      <td data-label="Ambiente Gráfico">LXDE</td>
+      <td data-label="Requisitos Mínimos">512 MB RAM</td>
+      <td data-label="Estado">❌ Descontinuada (última: 2018)</td>
+    </tr>
+    <tr>
+      <td data-label="Distribuição">ArchBang</td>
+      <td data-label="Base">Arch Linux</td>
+      <td data-label="Ambiente Gráfico">Openbox</td>
+      <td data-label="Requisitos Mínimos">512 MB RAM, conhecimento técnico exigido</td>
+      <td data-label="Estado">⚠️ Projeto inativo (última ISO: 2019)</td>
+    </tr>
+  </tbody>
+</table>
 
-            <h2>Critérios Para Escolher uma Distro Leve</h2>
-            <p>A escolha da melhor distro para o PC depende das suas necessidades. Considerando alguns critérios técnicos para rodar tudo liso:
-:</p>
-            <ul>
-                <li><strong>Ambientes Gráficos:</strong> Prefira JWM, IceWM, OpenBox ou LXDE, porque comem pouquinhos recursos.</li>
-                <li><strong>Base:</strong> Distros Debian ou Arch Linux tendem a ser as mais estáveis e eficientes.</li>
-                <li><strong>Comunidade e Suporte:</strong> Mesmo sendo distros menos populares, o apoio da comunidade ajuda muito.</li>
-            </ul>
+<h3 id="recomendacoes">Recomendações Técnicas</h3>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Cenário</th>
+      <th>Distro Recomendada</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Cenário">PC antigo (pré-2010), sem internet rápida</td>
+      <td data-label="Distro Recomendada">AntiX ou 4MLinux (tudo offline, ISO pequena)</td>
+    </tr>
+    <tr>
+      <td data-label="Cenário">PC com 1–2 GB RAM, uso diário (navegação, escritório)</td>
+      <td data-label="Distro Recomendada">Lubuntu ou Debian + LXDE</td>
+    </tr>
+    <tr>
+      <td data-label="Cenário">Resgate de sistema, pendrive live</td>
+      <td data-label="Distro Recomendada">Puppy Linux (roda inteiro na RAM)</td>
+    </tr>
+    <tr>
+      <td data-label="Cenário">Hardware muito limitado (<512 MB RAM)</td>
+      <td data-label="Distro Recomendada">AntiX (modo texto) ou 4MLinux (modo básico)</td>
+    </tr>
+  </tbody>
+</table>
 
-            <h2>Distros Linux Recomendadas Para PCs Razoáveis</h2>
-            <p>Não há distros melhores, somente a que te serve melhor. Nos meus testes em máquinas virtuais, examinei algumas alternativas que se destacam pela velocidade e eficiência. Lembre-se, o que funciona para um pode não dar certo pra outro. A família dos pinguins é unida, mas também diversa!</p>
-            
-            <h3>1. Manjaro: Qualidade e Facilidade de Uso para iniciantes😱</h3>
-            <p>Manjaro é uma distro de ótima qualidade, perfeita para quem busca a potência do Arch Linux sem a chatice de instalação. Fácil de usar e configurar, já vem com tudo pronto. O gerenciador Pacman e o AUR tornam fácil baixar qualquer aplicativo. Manjaro disponibiliza muitos ambientes gráficos, mas as versões leves, tipo XFCE, são ótimas pra computadores medianos.</p>
-            
-            <h3>2. Antix: A Solução para Computadores Velhos 😣</h3>
-            <p>O Antix é rápido e a solução para revitalizar aquele computador véio. Baseado no Debian estavel e instavel que é o ramo de teste, ele usa ambientes gráficos ultraleves tipo JWM e IceWM, o que garante rapidez e estabilidade. Se tiver um hardware antigo e precisa de muita leveza, Antix é perfeito para seu computador não virar uma tartaruga.</p>
-            
-            <h3>3. Lxle: Simplicidade e Praticidade Modesta 😝 (Descontinuada)</h3>
-            <p>Pois é, esse projeto já era, foi descontinuado, como diz o DistroWatch. Aquela ótima opção pra quem queria facilidade, foi-se. O jeito é procurar outras, tantas distribuições baseadas no Debian aí, quem sabe alguma serve.</p>
-            
-            <h3>4. Green Bang: Velocidade Bruta com OpenBox 😨</h3>
-            <p>Green Bang, distro pras almas destemidas! Ela usa o Arch Linux e vem com o OpenBox, que é super levinho. Nos testes, rodando em máquinas virtuais, voou, bem rápido e responsivo. Boa pra quem curte pouco enfeite e topa aprender do Arch pra ter um sistema que decola!</p>
-            
-            <h3>5. 4MLinux: O Minimalismo Extremo Gosta de Ambiente Grafico leve 😆</h3>
-            <p>4MLinux, radicaliza na leveza! Com JWM, uma experiência simplificada, no talo. Distro enxuta, perfeita pra certas coisas, tipo usar um pendrive pra dar uns reparos, ou se o negócio é gastar pouco do PC. Minimalismo, ele pode libertar, mas o utilizador precisa estar ligado nas suas limitações.</p>
-            
-            <h2>Conclusão: Qual Pinguim Leva pra Casa?</h2>
-            <p>A escolha da distro perfeita, essa sim é pessoal, e depende do que você procura. Se a parada é facilidade e uma experiência completinha, Manjaro é show de bola pra começar. Pra reviver um hardware véio, Antix e Lxle não tem pra ninguém. E se a sua onda é desafio e o máximo desempenho, Arch Bang ou 4MLinux talvez sejam ideais. O Pinguim tá de olho, e o principal é que todas essas distros ajudam em necessidades, mostrando que no universo Linux, a resposta está sempre por perto, saca?</p>
-        </section>
-  
-
+</section>
