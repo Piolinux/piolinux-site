@@ -14,17 +14,18 @@ permalink: /indice-artigos-linux/
 <section>
   <h2>🧠 Artigos Disponíveis</h2>
   <ul>
-    <li><a href="{{ '/artigos-linux-iniciantes/' | relative_url }}">10 Dicas de Linux para Iniciantes que Todo Usuário Deveria Ler</a></li>
-    <li><a href="{{ '/principais-distros-linux/' | relative_url }}">Como Escolher Sua Primeira Distro Linux: Guia para Iniciantes</a></li>
-    <li><a href="{{ '/instalar-programas-linux-iniciantes/' | relative_url }}">Instalando Programas no Linux: Guia Completo para Iniciantes</a></li>
-    <li><a href="{{ '/gerenciadores-pacotes-linux/#seguranca-monitoramento' | relative_url }}">Gerenciadores de Pacotes no Linux: Guia para Iniciantes</a></li>
-    <li><a href="{{ '/comandos-basicos-linux-iniciantes/' | relative_url }}">Comandos básicos do Linux para iniciantes</a></li>
-    <li><a href="{{ '/comandos-avançados-linux/' | relative_url }}">Comandos avançados Linux</a></li>
-    <li><a href="{{ '/como-instalar-programas-linux-iniciantes/' | relative_url }}">Como instalar programas no Linux: Guia para iniciantes</a></li>
-    <li><a href="{{ '/personalizar-linux-iniciantes/' | relative_url }}">Personalizando o Linux: Dicas Visuais e Funcionais para Iniciantes</a></li>
-    <li><a href="{{ '/seguranca-linux-iniciantes/' | relative_url }}">Segurança no Linux: Cuidados Essenciais para Iniciantes</a></li>
-    <li><a href="{{ '/remover-programas-linux/' | relative_url }}">Como remover programas no Linux: Passo a passo para iniciantes</a></li>
-    <li><a href="{{ '/atualizar-linux-terminal-grafico/' | relative_url }}">Como atualizar o Linux: Terminal e modo gráfico</a></li>
-  </ul>
+   
+  <li><a href="{{ '/linux-para-iniciantes/' | relative_url }}">Linux para Iniciantes: Referência Técnica</a></li>
+  <li><a href="{{ '/distros-linux-iniciantes/' | relative_url }}">Comparativo de Distribuições Linux</a></li>
+  <li><a href="{{ '/metodos-instalacao-linux/' | relative_url }}">Métodos de Instalação no Linux</a></li>
+  <li><a href="{{ '/gerenciadores-pacotes-linux/' | relative_url }}">Gerenciadores de Pacotes no Linux</a></li>
+  <li><a href="{{ '/comandos-essenciais-terminal-linux/' | relative_url }}">Comandos Básicos do Terminal</a></li>
+  <li><a href="{{ '/comandos-avancados-terminal/' | relative_url }}">Comandos Avançados no Terminal</a></li>
+  <li><a href="{{ '/metodos-instalacao/' | relative_url }}">Instalação de Programas: APT, Flatpak, Snap, AppImage</a></li>
+  <li><a href="{{ '/personalizar-linux-iniciantes/' | relative_url }}">Personalização do GNOME e Ambientes Gráficos</a></li>
+  <li><a href="{{ '/seguranca-linux/' | relative_url }}">Segurança Básica no Linux</a></li>
+  <li><a href="{{ '/remover-programas-linux/' | relative_url }}">Desinstalação de Programas no Linux</a></li>
+  <li><a href="{{ '/comandos-basicos-terminal/' | relative_url }}">Comandos basicos terminal</a></li>
+</ul>
 </section>
 

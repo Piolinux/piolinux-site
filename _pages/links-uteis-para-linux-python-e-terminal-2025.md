@@ -23,14 +23,13 @@ permalink: /links-uteis-linux-python/
     <li><a href="{{ '/' | relative_url }}">🌐 Página inicial</a></li>
     <li><a href="{{ '/ferramentas/' | relative_url }}">🔧 Ferramentas Admin</a></li>
     <li><a href="{{ '/caixa-ferramentas-javascript/' | relative_url }}">Caixa de Ferramentas</a></li> 
-    <li><a href="{{ '/80-dicas-linux-iniciantes/' | relative_url }}">📌 80 Dicas Rápidas de Linux</a></li>
-    <li><a href="{{ '/comandos-essenciais-terminal-linux/' | relative_url }}">🖥️ Comandos do Terminal</a></li>
-    <li><a href="{{ '/o-que-e-linux/' | relative_url }}">📖 Guia: O que é Linux</a></li>
-    <li><a href="{{ '/software-linux-windows-dicas/' | relative_url }}">💻 Software Linux x Windows</a></li>
-    <li><a href="{{ '/para-que-serve-python/' | relative_url }}">🐍 Introdução ao Python</a></li>
-    <li><a href="{{ '/principais-distros-linux/' | relative_url }}">📦 Distribuições Linux</a></li>
-    <li><a href="{{ '/exemplos-menus-html/' | relative_url }}">📋 Exemplos de menus HTML</a></li>
-    <li><a href="{{ '/mais-codigos-linux-html-python/' | relative_url }}">💻 Códigos úteis</a></li>
+    <li><a href="{{ '/terminal-linux-referencia/' | relative_url }}">📌Terminal linuxreferencia</a></li>
+    <li><a href="{{ '/comandos-essenciais-terminal-linux/' | relative_url }}">🖥️ Comandos essenciais terminal linux</a></li>
+    <li><a href="{{ '/linux-essencial-tecnico/' | relative_url }}">📖 Linux essencial tecnico</a></li>
+    <li><a href="{{ '/mudar-para-linux-software-essencial/' | relative_url }}">💻 Mudar para linux software essencial</a></li>
+    <li><a href="{{ '/python-casos-uso/' | relative_url }}">🐍 python casos uso</a></li>
+    <li><a href="{{ '/menu-html-referencia/' | relative_url }}">📋 Exemplos de menus HTML</a></li>
+    <li><a href="{{ '/codigos-tecnicos-reais/' | relative_url }}">💻 Códigos úteis</a></li>
     <li><a href="{{ '/utilitarios-online/' | relative_url }}">🔧 Ferramentas úteis</a></li>
     <li><a href="{{ '/scripts-seguranca-linux/' | relative_url }}">🔐 Scripts de segurança</a></li>
   </ul>

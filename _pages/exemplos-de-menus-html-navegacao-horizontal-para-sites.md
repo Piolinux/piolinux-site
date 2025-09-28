@@ -1,12 +1,10 @@
 ---
 layout: default
-title: "Exemplos de Menus HTML: Navegação Horizontal para Sites"
-description: "Coleção prática de menus HTML horizontais com CSS puro. Copie, cole e use em seus projetos web — sem frameworks, só código limpo."
-date: 2025-09-25
-author: "PioLinux"
+title: "Menu HTML – Referência Técnica Acessível"
+description: "Exemplos reais de menus com HTML semântico, CSS limpo e boas práticas de acessibilidade — sem ícones como texto ou divs sem sentido."
+permalink: /menu-html-referencia/
 categories: [html, frontend, css]
 tags: [menu, html, css, navegação, frontend, código]
-permalink: /exemplos-menus-html/
 ---
 
 
@@ -14,143 +12,91 @@ permalink: /exemplos-menus-html/
 
 
 <section>
-    <h2>
-     1️⃣ Menu Horizontal Simples
-    </h2>
-    <div class="menu1">
-     <a href="#">
-      1
-     </a>
-     <a href="#">
-      2
-     </a>
-     <a href="#">
-      3
-     </a>
-     <a href="#">
-      4
-     </a>
-    </div>
-    <h3>
-     🧾 Código:
-    </h3>
-    <pre><code>&lt;div class="menu1"&gt;
-    &lt;a href="#"&gt;1&lt;/a&gt;
-    &lt;a href="#"&gt;2&lt;/a&gt;
-    &lt;a href="#"&gt;3&lt;/a&gt;
-    &lt;a href="#"&gt;4&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-   </section>
-   <section>
-    <h2>
-     2️⃣ Menu com Hover Animado
-    </h2>
-    <div class="menu2">
-     <a href="#">
-      Casa
-     </a>
-     <a href="#">
-      Artigos
-     </a>
-     <a href="#">
-      Contato
-     </a>
-    </div>
-    <pre><code>&lt;div class="menu2"&gt;
-    &lt;a href="#"&gt;Casa&lt;/a&gt;
-    &lt;a href="#"&gt;Artigos&lt;/a&gt;
-    &lt;a href="#"&gt;Contato&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-   </section>
-   <section>
-    <h2>
-     3️⃣ Menu com Dropdown (Submenu)
-    </h2>
-    <div class="menu3">
-     <a href="#">
-      Início
-     </a>
-     <div class="dropdown">
-      <a href="#">
-       Serviços
-      </a>
-      <div class="dropdown-content">
-       <a href="#">
-        Web
-       </a>
-       <a href="#">
-        Mobile
-       </a>
-       <a href="#">
-        Infra
-       </a>
-      </div>
-     </div>
-    </div>
-    <pre><code>&lt;div class="menu3"&gt;
-    &lt;a href="#"&gt;Início&lt;/a&gt;
-    &lt;div class="dropdown"&gt;
-        &lt;a href="#"&gt;Serviços&lt;/a&gt;
-        &lt;div class="dropdown-content"&gt;
-            &lt;a href="#"&gt;Web&lt;/a&gt;
-            &lt;a href="#"&gt;Mobile&lt;/a&gt;
-            &lt;a href="#"&gt;Infra&lt;/a&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;a href="#"&gt;Contato&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-   </section>
-   <section>
-    <h2>
-     4️⃣ Menu com Ícones (sem dependências externas)
-    </h2>
-    <div class="menu4">
-     <a href="#">
-      🏠 Início
-     </a>
-     <a href="#">
-      📄 Artigos
-     </a>
-     <a href="#">
-      📧 Contato
-     </a>
-    </div>
-    <pre><code>&lt;div class="menu4"&gt;
-    &lt;a href="#"&gt;🏠 Início&lt;/a&gt;
-    &lt;a href="#"&gt;📄 Artigos&lt;/a&gt;
-    &lt;a href="#"&gt;📧 Contato&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-   </section>
- <section>
- <h2>📋 Menu HTML Horizontal Simples</h2>
-<p>Perfeito para quem quer navegação limpa e funcional.</p>
+    
+    <h3 id="menu-simples">1. Menu Simples (Semântico)</h3>
+<p>Use <code><nav></code> + <code><ul></code> para navegação. Funciona com leitores de tela e SEO.</p>
 
-<h3>HTML</h3>
-<pre><code><nav class="menu">
-  <a href="/">Início</a>
-  <a href="/sobre">Sobre</a>
-  <a href="/blog">Blog</a>
-  <a href="/contato">Contato</a>
+<pre><code><nav class="menu-simple">
+  <ul>
+    <li><a href="/">Início</a></li>
+    <li><a href="/sobre">Sobre</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/contato">Contato</a></li>
+  </ul>
 </nav></code></pre>
 
-<h3>CSS</h3>
-<pre><code>.menu {
+<h3 id="css-simples">CSS para Menu Simples</h3>
+<pre><code>/* Menu horizontal acessível */
+.menu-simple ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
   background: #2e7d32;
-  padding: 1em;
-  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
 }
 
-.menu a {
+.menu-simple a {
   color: white;
   text-decoration: none;
-  margin: 0 1em;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
 }
 
-.menu a:hover {
-  text-decoration: underline;
+.menu-simple a:hover,
+.menu-simple a:focus {
+  background: #1b5e20;
+  outline: 2px solid #66bb6a;
 }</code></pre>
 
+<h3 id="dropdown">2. Dropdown Acessível (sem JavaScript)</h3>
+<p>Funciona com teclado e leitores de tela. Evite ícones como texto.</p>
 
-<h2>✅ Conclusão</h2>
-<p>Assim como o <a href="https://iterm2.com">iTerm2</a> moderniza o terminal no macOS, ou o <a href="https://ohmyz.sh">Oh My Zsh</a> transforma seu Zsh, um bom menu HTML moderniza seu site. Use este exemplo como base — e mantenha o código limpo, sem firulas. Tudo aqui é feito para quem quer aprender de verdade.</p>
-</section>
+<pre><code><nav class="menu-dropdown">
+  <ul>
+    <li><a href="/">Início</a></li>
+    <li class="dropdown">
+      <a href="#" aria-haspopup="true" aria-expanded="false">Serviços</a>
+      <ul class="submenu" role="menu">
+        <li><a href="/web">Web</a></li>
+        <li><a href="/mobile">Mobile</a></li>
+        <li><a href="/infra">Infra</a></li>
+      </ul>
+    </li>
+    <li><a href="/contato">Contato</a></li>
+  </ul>
+</nav></code></pre>
+
+<p><strong>Nota:</strong> Para dropdown funcional com teclado, é necessário JavaScript mínimo. Evite dropdowns se não for essencial.</p>
+
+<h3 id="boas-praticas">Boas Práticas Técnicas</h3>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Regra</th>
+      <th>Por quê?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Regra">Use <code><nav></code> + <code><ul></code></td>
+      <td data-label="Por quê?">Semântica correta para SEO e acessibilidade. (leitores de tela entendem como navegação).</td>
+    </tr>
+    <tr>
+      <td data-label="Regra">Nunca use ícones como texto. (ex: 🏠)</td>
+      <td data-label="Por quê?">Quebra em navegadores antigos, não é traduzível, falha em acessibilidade.</td>
+    </tr>
+    <tr>
+      <td data-label="Regra">Evite dropdowns complexos.</td>
+      <td data-label="Por quê?">Difíceis de usar em mobile e com teclado. Prefira páginas separadas.</td>
+    </tr>
+    <tr>
+      <td data-label="Regra">Sempre teste com teclado. (<kbd>Tab</kbd>)</td>
+      <td data-label="Por quê?">Muitos usuários não usam mouse. Navegação deve funcionar com teclado.</td>
+    </tr>
+  </tbody>
+</table>
+    
+    </section>

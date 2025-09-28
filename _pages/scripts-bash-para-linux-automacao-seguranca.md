@@ -1,13 +1,11 @@
 ---
 layout: default
-title: Scripts Bash Básicos por Categoria — Copie, Cole e Use
+title: Scripts Bash Básicos por Categoria - Copie, Cole e Use.
 description: "Coleção de scripts Bash reais, testados e formatados corretamente: automação, backup, segurança, administração. 100% offline, sem erros de cópia."
-permalink: /scripts-bash-linux/
+permalink: /scripts-bash/
+categories: [linux, segurança, scripts]
+tags: [segurança, bash, firewall, fail2ban, ssh, nmap, rootkit, monitoramento]
 ---
-
-{% include toc.html %}
-
-
 
 
 <section class="post-content">
@@ -286,28 +284,20 @@ echo &quot;scale=2; $1&quot; | bc -l">📋</button></td>
 
 
 
+
 <script>
 document.addEventListener('click', function(e) {
   if (e.target.matches('.copy-btn')) {
-    const cmd = e.target.dataset.cmd;
+    const cmd = e.target.dataset.command; // ← aqui estava "cmd", agora é "command"
     if (cmd) {
-      // NÃO use replace(/%0A/g, '\n') — o data-cmd já tem quebras reais
       navigator.clipboard.writeText(cmd).then(() => {
         const original = e.target.textContent;
-        e.target.textContent = '✓';
-        setTimeout(() => e.target.textContent = original, 1200);
+        e.target.textContent = '✓ Copiado!';
+        setTimeout(() => e.target.textContent = original, 1500);
+      }).catch(err => {
+        console.warn('Falha ao copiar:', err);
       });
     }
   }
 });
 </script>
-
-
-
-
-
-
-
-
-
- 

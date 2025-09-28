@@ -19,1176 +19,367 @@ permalink: /comandos-essenciais-terminal-linux/
 
 
 <section>
-    <h2>
-    Esqueça as interfaces gráficas complexas e lentas!
-    </h2>
-    <p>
-     O terminal é leve como uma pena, rápido como um raio e oferece a liberdade de criar automações incríveis com scripts. É por isso que os mestres do sistema, os desenvolvedores mais habilidosos e os usuários mais experientes ousam usar o terminal: ele oferece precisão, agilidade e um nível de controle que você nunca imaginou.
-Um Segredo Rápido: Para abrir o terminal na maioria das versões do Linux, pressione as teclas **Ctrl+Alt+T**. Se não funcionar, procure por "Terminal" no menu de aplicativos.
-    </p>
-   </section>
-  
-   <section id="basicos">
-    <h3>
-     Comandos Básicos para Iniciantes
-    </h3>
-    <p>
-     Comece por aqui! Estes comandos são a base da navegação e interação no terminal.
-    </p>
-    <ul>
-     <li>
-      <h4>
-       <code>
-        pwd
-       </code>
-       (Print Working Directory)
-      </h4>
-      <p>
-       Mostra o caminho completo do diretório atual em que você está.
-      </p>
-      <pre></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        ls
-       </code>
-       (List)
-      </h4>
-      <p>
-       Lista o conteúdo do diretório atual. Use opções para mais detalhes:
-      </p>
-      <ul>
-       <li>
-        <code>
-         ls -l
-        </code>
-        : Lista em formato longo (permissões, proprietário, tamanho, data).
-       </li>
-       <li>
-        <code>
-         ls -a
-        </code>
-        : Mostra arquivos e diretórios ocultos (que começam com '.').
-       </li>
-       <li>
-        <code>
-         ls -lh
-        </code>
-        : Formato longo e tamanho legível (KB, MB, GB).
-       </li>
-      </ul>
-      <pre><code>ls
-ls -l
-ls -laH</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        cd
-       </code>
-       (Change Directory)
-      </h4>
-      <p>
-       Navega entre os diretórios do sistema.
-      </p>
-      <ul>
-       <li>
-        <code>
-         cd &lt;nome_da_pasta&gt;
-        </code>
-        : Entra em uma subpasta.
-       </li>
-       <li>
-        <code>
-         cd ..
-        </code>
-        : Volta um nível no diretório.
-       </li>
-       <li>
-        <code>
-         cd ~
-        </code>
-        ou
-        : Vai para o seu diretório pessoal (home).
-       </li>
-       <li>
-        <code>
-         cd /
-        </code>
-        : Vai para o diretório raiz.
-       </li>
-       <li>
-        <code>
-         cd -
-        </code>
-        : Volta para o diretório visitado anteriormente.
-       </li>
-      </ul>
-      <pre><code>cd Documentos
-cd ../..
-cd ~</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        man
-       </code>
-       (Manual)
-      </h4>
-      <p>
-       Exibe o manual de qualquer comando. Pressione
-       <code>
-        q
-       </code>
-       para sair.
-      </p>
-      <pre><code>man ls
-man cd</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        clear
-       </code>
-       (Clear Screen)
-      </h4>
-      <p>
-       Limpa a tela do terminal. O atalho
-       <code>
-        Ctrl+L
-       </code>
-       faz o mesmo.
-      </p>
-      <pre></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        history
-       </code>
-      </h4>
-      <p>
-       Mostra uma lista dos comandos executados anteriormente.
-      </p>
-      <pre><code>history
-history | grep apt</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        echo
-       </code>
-      </h4>
-      <p>
-       Exibe texto ou variáveis no terminal.
-      </p>
-      <pre><code>echo "Olá, PioLinux!"
-echo $HOME</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        sudo
-       </code>
-       (Superuser Do)
-      </h4>
-      <p>
-       Executa um comando com privilégios de superusuário (root). Use com cautela.
-      </p>
-      <pre><code>sudo apt update
-sudo reboot</code></pre>
-     </li>
-    </ul>
-   </section>
-   <section id="arquivos-diretorios">
-    <h3>
-     Gerenciamento de Arquivos e Diretórios
-    </h3>
-    <p>
-     Comandos essenciais para criar, copiar, mover e remover arquivos e pastas.
-    </p>
-    <ul>
-     <li>
-      <h4>
-       <code>
-        mkdir
-       </code>
-       (Make Directory)
-      </h4>
-      <p>
-       Cria um novo diretório (pasta).
-      </p>
-      <ul>
-       <li>
-        <code>
-         mkdir &lt;nome_da_pasta&gt;
-        </code>
-       </li>
-       <li>
-        <code>
-         mkdir -p pasta/subpasta/subsubpasta
-        </code>
-        : Cria diretórios aninhados.
-       </li>
-      </ul>
-      <pre><code>mkdir Projetos
-mkdir -p Backup/2025/julho</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        rmdir
-       </code>
-       (Remove Directory)
-      </h4>
-      <p>
-       Remove um diretório vazio.
-      </p>
-      <pre><code>rmdir MinhaPastaVazia</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        touch
-       </code>
-      </h4>
-      <p>
-       Cria um novo arquivo vazio ou atualiza a data de modificação de um arquivo existente.
-      </p>
-      <pre><code>touch novo_arquivo.txt</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        cp
-       </code>
-       (Copy)
-      </h4>
-      <p>
-       Copia arquivos e diretórios.
-      </p>
-      <ul>
-       <li>
-        <code>
-         cp &lt;origem&gt; &lt;destino&gt;
-        </code>
-        : Copia um arquivo.
-       </li>
-       <li>
-        <code>
-         cp -r &lt;origem_dir&gt; &lt;destino_dir&gt;
-        </code>
-        : Copia um diretório e seu conteúdo recursivamente.
-       </li>
-      </ul>
-      <pre><code>cp documento.txt documento_copia.txt
-cp -r MinhaPasta NovaPasta</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        mv
-       </code>
-       (Move)
-      </h4>
-      <p>
-       Move ou renomeia arquivos e diretórios.
-      </p>
-      <ul>
-       <li>
-        <code>
-         mv &lt;origem&gt; &lt;destino&gt;
-        </code>
-        : Move um arquivo/diretório.
-       </li>
-       <li>
-        <code>
-         mv &lt;nome_antigo&gt; &lt;nome_novo&gt;
-        </code>
-        : Renomeia um arquivo/diretório.
-       </li>
-      </ul>
-      <pre><code>mv arquivo.txt Documentos/
-mv oldname.txt newname.txt</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        rm
-       </code>
-       (Remove)
-      </h4>
-      <p>
-       Remove arquivos e diretórios. **Atenção: A remoção é permanente, e o item não vai para a lixeira.**
-      </p>
-      <ul>
-       <li>
-        <code>
-         rm &lt;arquivo&gt;
-        </code>
-        : Remove um arquivo.
-       </li>
-       <li>
-        <code>
-         rm -r &lt;diretorio&gt;
-        </code>
-        : Remove um diretório e seu conteúdo recursivamente.
-       </li>
-       <li>
-        <code>
-         rm -f &lt;arquivo&gt;
-        </code>
-        : Força a remoção sem pedir confirmação.
-       </li>
-       <li>
-        <code>
-         rm -rf &lt;diretorio&gt;
-        </code>
-        : Força a remoção recursiva. **Extremamente perigoso! Use com máxima cautela.**
-       </li>
-      </ul>
-      <pre><code>rm lixo.txt
-rm -r PastaVazia</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        cat
-       </code>
-       (Concatenate)
-      </h4>
-      <p>
-       Exibe o conteúdo de arquivos e pode concatenar múltiplos arquivos.
-      </p>
-      <pre><code>cat meu_documento.txt</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        less
-       </code>
-      </h4>
-      <p>
-       Visualiza o conteúdo de arquivos grandes, permitindo rolagem. Pressione
-       para sair.
-      </p>
-      <pre><code>less /var/log/syslog</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        head
-       </code>
-       e
-       <code>
-        tail
-       </code>
-      </h4>
-      <p>
-       mostra as primeiras linhas de um arquivo, e
-       mostra as últimas. Use
-       <code>
-        -n &lt;numero&gt;
-       </code>
-       para especificar a quantidade de linhas.
-      </p>
-      <ul>
-       <li>
-        <code>
-         tail -f &lt;arquivo&gt;
-        </code>
-        : Monitora um arquivo em tempo real (ótimo para logs).
-       </li>
-      </ul>
-      <pre><code>head -n 5 arquivo.log
-tail -f /var/log/auth.log</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        ln
-       </code>
-       (Link)
-      </h4>
-      <p>
-       Cria links (atalhos) para arquivos. Use
-       <code>
-        -s
-       </code>
-       para criar um link simbólico (o tipo mais comum).
-      </p>
-      <pre><code>ln -s /caminho/do/arquivo_original /caminho/do/link</code></pre>
-     </li>
-    </ul>
-   </section>
-   <section id="processos-sistema">
-    <h3>
-     Gerenciamento de Processos e Sistema
-    </h3>
-    <p>
-     Comandos para ver o que está rodando, monitorar recursos e controlar o sistema.
-    </p>
-    <ul>
-     <li>
-      <h4>
-       <code>
-        ps
-       </code>
-       (Process Status)
-      </h4>
-      <p>
-       Lista os processos em execução no sistema.
-      </p>
-      <ul>
-       <li>
-        <code>
-         ps aux
-        </code>
-        : Mostra todos os processos de todos os usuários.
-       </li>
-      </ul>
-      <pre><code>ps aux | grep firefox</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        top
-       </code>
-      </h4>
-      <p>
-       Monitora processos em tempo real, mostrando o uso de CPU, memória, etc. Pressione
-       para sair.
-      </p>
-      <pre></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        htop
-       </code>
-      </h4>
-      <p>
-       Uma versão mais interativa e colorida do
-       . (Pode precisar ser instalado:
-       <code>
-        sudo apt install htop
-       </code>
-       ).
-      </p>
-      <pre></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        kill
-       </code>
-      </h4>
-      <p>
-       Encerra um processo usando seu ID (PID).
-      </p>
-      <pre><code>kill 12345</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        pkill
-       </code>
-      </h4>
-      <p>
-       Encerra processos usando seu nome.
-      </p>
-      <pre><code>pkill firefox</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        df
-       </code>
-       (Disk Free)
-      </h4>
-      <p>
-       Exibe informações sobre o espaço em disco de sistemas de arquivos montados.
-      </p>
-      <ul>
-       <li>
-        <code>
-         df -h
-        </code>
-        : Mostra o espaço em formato legível (GB, MB).
-       </li>
-      </ul>
-      <pre></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        du
-       </code>
-       (Disk Usage)
-      </h4>
-      <p>
-       Estima o espaço em disco usado por arquivos e diretórios.
-      </p>
-      <ul>
-       <li>
-        <code>
-         du -sh &lt;diretorio&gt;
-        </code>
-        : Mostra o tamanho total de um diretório em formato legível.
-       </li>
-      </ul>
-      <pre><code>du -sh *</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        free
-       </code>
-      </h4>
-      <p>
-       Exibe a quantidade de memória livre e usada no sistema.
-      </p>
-      <ul>
-       <li>
-        <code>
-         free -h
-        </code>
-        : Mostra a memória em formato legível.
-       </li>
-      </ul>
-      <pre></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        uname
-       </code>
-       (Unix Name)
-      </h4>
-      <p>
-       Exibe informações sobre o sistema e o kernel.
-      </p>
-      <ul>
-       <li>
-        <code>
-         uname -a
-        </code>
-        : Mostra todas as informações.
-       </li>
-      </ul>
-      <pre></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        uptime
-       </code>
-      </h4>
-      <p>
-       Mostra há quanto tempo o sistema está ligado e a média de carga.
-      </p>
-      <pre></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        reboot
-       </code>
-       e
-       <code>
-        shutdown
-       </code>
-      </h4>
-      <p>
-       Reinicia ou desliga o sistema.
-      </p>
-      <ul>
-       <li>
-        <code>
-         sudo reboot
-        </code>
-        : Reinicia imediatamente.
-       </li>
-       <li>
-        <code>
-         sudo shutdown -h now
-        </code>
-        : Desliga imediatamente.
-       </li>
-       <li>
-        <code>
-         sudo shutdown -r +5
-        </code>
-        : Reinicia em 5 minutos.
-       </li>
-      </ul>
-      <pre></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        systemctl
-       </code>
-       (System Control)
-      </h4>
-      <p>
-       Comando para controlar o **systemd**, o gerenciador de sistema e serviços. (Moderno, substitui `service` e `chkconfig`).
-      </p>
-      <ul>
-       <li>
-        <code>
-         systemctl status &lt;serviço&gt;
-        </code>
-        : Verifica o status de um serviço (ex: `apache2`, `nginx`).
-       </li>
-       <li>
-        <code>
-         systemctl start &lt;serviço&gt;
-        </code>
-        : Inicia um serviço.
-       </li>
-       <li>
-        <code>
-         systemctl stop &lt;serviço&gt;
-        </code>
-        : Para um serviço.
-       </li>
-       <li>
-        <code>
-         systemctl enable &lt;serviço&gt;
-        </code>
-        : Habilita um serviço para iniciar com o sistema.
-       </li>
-       <li>
-        <code>
-         systemctl disable &lt;serviço&gt;
-        </code>
-        : Desabilita um serviço para não iniciar com o sistema.
-       </li>
-      </ul>
-      <pre><code>systemctl status apache2
-sudo systemctl restart ssh</code></pre>
-     </li>
-    </ul>
-   </section>
-   <section id="rede-seguranca">
-    <h3>
-     Comandos de Rede e Segurança
-    </h3>
-    <p>
-     Ferramentas para diagnosticar problemas de rede, verificar conexões e gerenciar o firewall.
-    </p>
-    <ul>
-     <li>
-      <h4>
-       <code>
-        ping
-       </code>
-      </h4>
-      <p>
-       Testa a conectividade com um host na rede ou internet.
-      </p>
-      <pre><code>ping google.com</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        ip
-       </code>
-       (IP Address)
-      </h4>
-      <p>
-       Ferramenta moderna para gerenciar interfaces de rede e rotas (substitui `ifconfig`).
-      </p>
-      <ul>
-       <li>
-        <code>
-         ip a
-        </code>
-        ou
-        <code>
-         ip addr
-        </code>
-        : Mostra endereços IP de todas as interfaces.
-       </li>
-       <li>
-        <code>
-         ip r
-        </code>
-        ou
-        <code>
-         ip route
-        </code>
-        : Mostra a tabela de roteamento.
-       </li>
-      </ul>
-      <pre><code>ip a
-ip r</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        ss
-       </code>
-       (Socket Statistics)
-      </h4>
-      <p>
-       Exibe estatísticas de socket, similar ao `netstat`, mas mais rápido e moderno.
-      </p>
-      <ul>
-       <li>
-        <code>
-         ss -tulpn
-        </code>
-        : Lista todas as portas TCP/UDP abertas e os programas que as utilizam (necessita de privilégios de root).
-       </li>
-      </ul>
-      <pre><code>sudo ss -tulpn</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        curl
-       </code>
-      </h4>
-      <p>
-       Ferramenta para transferir dados de ou para um servidor, usada frequentemente para testar APIs ou baixar conteúdo da web.
-      </p>
-      <pre><code>curl ifconfig.me # Descobre seu IP público
-curl -O https://example.com/file.zip # Baixa um arquivo</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        wget
-       </code>
-       (Web Get)
-      </h4>
-      <p>
-       Baixa arquivos da web, suporta downloads recursivos.
-      </p>
-      <pre><code>wget https://example.com/image.jpg</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        ssh
-       </code>
-       (Secure Shell)
-      </h4>
-      <p>
-       Permite conectar-se a servidores remotos de forma segura.
-      </p>
-      <pre><code>ssh usuario@endereco_ip_do_servidor</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        scp
-       </code>
-       (Secure Copy)
-      </h4>
-      <p>
-       Copia arquivos de ou para servidores remotos de forma segura via SSH.
-      </p>
-      <pre><code>scp local_file.txt usuario@servidor_remoto:/caminho/destino/</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        dig
-       </code>
-       (Domain Information Groper)
-      </h4>
-      <p>
-       Realiza consultas DNS, útil para diagnosticar problemas de resolução de nomes.
-      </p>
-      <pre><code>dig example.com</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        traceroute
-       </code>
-      </h4>
-      <p>
-       Exibe o caminho que os pacotes percorrem para chegar a um destino, mostrando cada "salto" (hop).
-      </p>
-      <pre><code>traceroute google.com</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        ufw
-       </code>
-       (Uncomplicated Firewall)
-      </h4>
-      <p>
-       Interface simplificada para gerenciar o firewall `iptables` no Linux (comum em Debian/Ubuntu).
-      </p>
-      <ul>
-       <li>
-        <code>
-         sudo ufw enable
-        </code>
-        : Ativa o firewall.
-       </li>
-       <li>
-        <code>
-         sudo ufw status
-        </code>
-        : Verifica o status.
-       </li>
-       <li>
-        <code>
-         sudo ufw allow ssh
-        </code>
-        : Permite conexões SSH.
-       </li>
-      </ul>
-      <pre><code>sudo ufw enable
-sudo ufw status verbose</code></pre>
-     </li>
-    </ul>
-   </section>
-   <section id="utilidades-avancadas">
-    <h3>
-     Utilidades e Manipulação de Texto
-    </h3>
-    <p>
-     Comandos poderosos para buscar, filtrar e manipular dados em arquivos de texto.
-    </p>
-    <ul>
-     <li>
-      <h4>
-       <code>
-        grep
-       </code>
-       (Global Regular Expression Print)
-      </h4>
-      <p>
-       Procura padrões de texto em arquivos. Uma das ferramentas mais usadas no terminal.
-      </p>
-      <ul>
-       <li>
-        <code>
-         grep "erro" log.txt
-        </code>
-        : Procura a palavra "erro" em `log.txt`.
-       </li>
-       <li>
-        <code>
-         grep -i "alerta" log.txt
-        </code>
-        : Ignora maiúsculas/minúsculas.
-       </li>
-       <li>
-        <code>
-         grep -r "termo" /var/log/
-        </code>
-        : Busca recursivamente em todos os arquivos de um diretório.
-       </li>
-      </ul>
-      <pre><code>grep "Failed password" /var/log/auth.log
-grep -r "ERROR" .</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        find
-       </code>
-      </h4>
-      <p>
-       Procura arquivos e diretórios com base em vários critérios (nome, tipo, tamanho, data).
-      </p>
-      <ul>
-       <li>
-        <code>
-         find . -name "*.log"
-        </code>
-        : Procura todos os arquivos `.log` no diretório atual e subdiretórios.
-       </li>
-       <li>
-        <code>
-         find /home -type d -name "Projetos"
-        </code>
-        : Procura diretórios chamados "Projetos" dentro de `/home`.
-       </li>
-      </ul>
-      <pre><code>find / -type f -name "config.conf"
-find . -size +1G</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        awk
-       </code>
-      </h4>
-      <p>
-       Linguagem de processamento de texto poderosa, ideal para extrair e formatar dados de arquivos ou saídas de comandos.
-      </p>
-      <pre><code>cat /etc/passwd | awk -F':' '{print $1}' # Lista nomes de usuários
-df -h | awk 'NR&gt;1 {print $1, $5}' # Mostra a partição e % de uso</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        sed
-       </code>
-       (Stream Editor)
-      </h4>
-      <p>
-       Editor de texto de fluxo, usado para transformar texto em pipelines ou arquivos. Ótimo para substituições.
-      </p>
-      <pre><code>echo "Este é um texto de exemplo" | sed 's/exemplo/teste/' # Substitui "exemplo" por "teste"
-sed -i 's/old_text/new_text/g' my_file.txt # Substitui globalmente em um arquivo</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        xargs
-       </code>
-      </h4>
-      <p>
-       Recebe a saída padrão de um comando e a usa como argumento para outro comando.
-      </p>
-      <pre><code>find . -name "*.bak" | xargs rm # Remove todos os arquivos .bak encontrados</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        cut
-       </code>
-      </h4>
-      <p>
-       Extrai seções de cada linha de arquivos (colunas).
-      </p>
-      <pre><code>cat /etc/passwd | cut -d':' -f1,5 # Mostra o usuário e o nome completo (colunas 1 e 5, delimitador ':')</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        sort
-       </code>
-      </h4>
-      <p>
-       Ordena as linhas de um arquivo de texto.
-      </p>
-      <pre><code>cat nomes.txt | sort
-cat numeros.txt | sort -n # Ordena numericamente</code></pre>
-     </li>
-     <li>
-      <h4>
-       <code>
-        uniq
-       </code>
-       (Unique)
-      </h4>
-      <p>
-       Remove linhas duplicadas (funciona melhor com a saída já ordenada).
-      </p>
-      <pre><code>cat log.txt | sort | uniq -c # Conta as ocorrências de cada linha única</code></pre>
-     </li>
-    </ul>
-   </section>
-   <section id="gerenciamento-pacotes">
-    <h3>
-     Gerenciamento de Pacotes (Exemplos)
-    </h3>
-    <p>
-     Os comandos de gerenciamento de pacotes variam por distribuição. Aqui estão os mais comuns.
-    </p>
-    <ul>
-     <li>
-      <h4>
-       Debian/Ubuntu (
-       <code>
-        apt
-       </code>
-       )
-      </h4>
-      <ul>
-       <li>
-        <code>
-         sudo apt update
-        </code>
-        : Atualiza a lista de pacotes.
-       </li>
-       <li>
-        <code>
-         sudo apt upgrade
-        </code>
-        : Atualiza os pacotes instalados.
-       </li>
-       <li>
-        <code>
-         sudo apt install &lt;pacote&gt;
-        </code>
-        : Instala um pacote.
-       </li>
-       <li>
-        <code>
-         sudo apt remove &lt;pacote&gt;
-        </code>
-        : Remove um pacote.
-       </li>
-       <li>
-        <code>
-         apt search &lt;termo&gt;
-        </code>
-        : Busca por pacotes.
-       </li>
-       <li>
-        <code>
-         sudo apt autoremove
-        </code>
-        : Remove dependências não utilizadas.
-       </li>
-      </ul>
-      <pre><code>sudo apt update &amp;&amp; sudo apt upgrade -y
-sudo apt install vlc</code></pre>
-     </li>
-     <li>
-      <h4>
-       Fedora/RHEL (
-       <code>
-        dnf
-       </code>
-       )
-      </h4>
-      <ul>
-       <li>
-        <code>
-         sudo dnf update
-        </code>
-        : Atualiza o sistema.
-       </li>
-       <li>
-        <code>
-         sudo dnf install &lt;pacote&gt;
-        </code>
-        : Instala um pacote.
-       </li>
-       <li>
-        <code>
-         sudo dnf remove &lt;pacote&gt;
-        </code>
-        : Remove um pacote.
-       </li>
-       <li>
-        <code>
-         dnf search &lt;termo&gt;
-        </code>
-        : Busca por pacotes.
-       </li>
-      </ul>
-      <pre><code>sudo dnf install git
-sudo dnf update</code></pre>
-     </li>
-     <li>
-      <h4>
-       Arch Linux (
-       <code>
-        pacman
-       </code>
-       )
-      </h4>
-      <ul>
-       <li>
-        <code>
-         sudo pacman -Syu
-        </code>
-        : Sincroniza e atualiza o sistema.
-       </li>
-       <li>
-        <code>
-         sudo pacman -S &lt;pacote&gt;
-        </code>
-        : Instala um pacote.
-       </li>
-       <li>
-        <code>
-         sudo pacman -R &lt;pacote&gt;
-        </code>
-        : Remove um pacote.
-       </li>
-       <li>
-        <code>
-         pacman -Ss &lt;termo&gt;
-        </code>
-        : Busca por pacotes.
-       </li>
-      </ul>
-      <pre><code>sudo pacman -Syu
-sudo pacman -S neofetch</code></pre>
-     </li>
-    </ul>
- 
-   
 
-       
-   </section>
 
- <section>
+<p>Comandos essenciais do terminal Linux: navegação, arquivos, permissões e ajuda — todos testados, prontos para copiar e compatíveis com sistemas POSIX.</p>
 
-     <h2> Conclusão Final</h2>
-     
-     <p>
-     Este guia é um ponto de partida. O terminal Linux é um universo a ser explorado, e a melhor forma de aprender é praticando. Use a tecla **Tab** para autocompletar, **Ctrl+R** para buscar no histórico de comandos e, sempre que tiver dúvidas, consulte o manual com **man &lt;comando&gt;**. Boa jornada na linha de comando!
-    </p>
-   </section> 
-   
-  
- <section>
+  <h3 id="navegacao">Navegação e Diretórios</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>
-    
-      Comando</th>
-      <th>O que faz</th>
+      <th>Comando</th>
       <th>Exemplo</th>
+      <th>O que faz</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td data-label="
-    
-      Comando"><code>ls</code></td>
-      <td data-label="O que faz">Listar arquivos</td>
-      <td data-label="Exemplo"><code>ls -la</code></td>
+      <td data-label="Comando"><code>pwd</code></td>
+      <td data-label="Exemplo"><code>pwd</code></td>
+      <td data-label="O que faz">Mostra o diretório atual</td>
     </tr>
     <tr>
-      <td data-label="
-    
-      Comando"><code>cd</code></td>
-      <td data-label="O que faz">Navegar entre pastas</td>
-      <td data-label="Exemplo"><code>cd /home</code></td>
+      <td data-label="Comando"><code>ls</code></td>
+      <td data-label="Exemplo">
+        <code>ls -lh</code>
+        <button class="copy-btn" data-command="ls -lh">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Lista arquivos com permissões e tamanhos legíveis</td>
     </tr>
     <tr>
-      <td data-label="
-    
-      Comando"><code>grep</code></td>
-      <td data-label="O que faz">Buscar texto em arquivos</td>
-      <td data-label="Exemplo"><code>grep "erro" /var/log/syslog</code></td>
+      <td data-label="Comando"><code>cd</code></td>
+      <td data-label="Exemplo">
+        <code>cd ~/Documentos</code>
+        <button class="copy-btn" data-command="cd ~/Documentos">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Entra no diretório Documentos do usuário</td>
     </tr>
     <tr>
-      <td data-label="
-    
-      Comando"><code>find</code></td>
-      <td data-label="O que faz">Procurar arquivos</td>
-      <td data-label="Exemplo"><code>find / -name "*.txt"</code></td>
+      <td data-label="Comando"><code>cd ..</code></td>
+      <td data-label="Exemplo">
+        <code>cd ..</code>
+        <button class="copy-btn" data-command="cd ..">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Volta um nível no diretório</td>
     </tr>
     <tr>
-      <td data-label="
-    
-      Comando"><code>sed</code></td>
-      <td data-label="O que faz">Editar texto em linha</td>
-      <td data-label="Exemplo"><code>sed 's/velho/novo/g' arquivo.txt</code></td>
+      <td data-label="Comando"><code>cd -</code></td>
+      <td data-label="Exemplo">
+        <code>cd -</code>
+        <button class="copy-btn" data-command="cd -">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Volta ao diretório anterior</td>
     </tr>
   </tbody>
 </table>
 
+<h3 id="arquivos">Arquivos e Diretórios</h3>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Comando</th>
+      <th>Exemplo</th>
+      <th>O que faz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Comando"><code>mkdir</code></td>
+      <td data-label="Exemplo">
+        <code>mkdir -p Projetos/2025</code>
+        <button class="copy-btn" data-command="mkdir -p Projetos/2025">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Cria diretórios aninhados</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>touch</code></td>
+      <td data-label="Exemplo">
+        <code>touch script.sh</code>
+        <button class="copy-btn" data-command="touch script.sh">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Cria arquivo vazio</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>cp</code></td>
+      <td data-label="Exemplo">
+        <code>cp -r Pasta/ Backup/</code>
+        <button class="copy-btn" data-command="cp -r Pasta/ Backup/">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Copia diretório recursivamente</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>mv</code></td>
+      <td data-label="Exemplo">
+        <code>mv antigo.txt novo.txt</code>
+        <button class="copy-btn" data-command="mv antigo.txt novo.txt">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Renomeia ou move arquivo</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>rm</code></td>
+      <td data-label="Exemplo">
+        <code>rm -i arquivo.txt</code>
+        <button class="copy-btn" data-command="rm -i arquivo.txt">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Remove com confirmação (seguro)</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>rm -rf</code></td>
+      <td data-label="Exemplo">—</td>
+      <td data-label="O que faz">⚠️ Perigoso! Só use se souber exatamente o que faz.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="visualizacao">Visualização de Arquivos</h3>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Comando</th>
+      <th>Exemplo</th>
+      <th>O que faz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Comando"><code>cat</code></td>
+      <td data-label="Exemplo">
+        <code>cat /etc/os-release</code>
+        <button class="copy-btn" data-command="cat /etc/os-release">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Mostra conteúdo de arquivos pequenos</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>less</code></td>
+      <td data-label="Exemplo">
+        <code>less /var/log/syslog</code>
+        <button class="copy-btn" data-command="less /var/log/syslog">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Visualiza arquivos grandes (pressione <kbd>q</kbd> para sair)</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>head</code></td>
+      <td data-label="Exemplo">
+        <code>head -n 10 log.txt</code>
+        <button class="copy-btn" data-command="head -n 10 log.txt">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Mostra as 10 primeiras linhas</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>tail -f</code></td>
+      <td data-label="Exemplo">
+        <code>tail -f /var/log/auth.log</code>
+        <button class="copy-btn" data-command="tail -f /var/log/auth.log">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Monitora logs em tempo real</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="processos">Processos e Sistema</h3>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Comando</th>
+      <th>Exemplo</th>
+      <th>O que faz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Comando"><code>ps aux</code></td>
+      <td data-label="Exemplo">
+        <code>ps aux | grep nginx</code>
+        <button class="copy-btn" data-command="ps aux | grep nginx">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Lista processos com filtro</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>htop</code></td>
+      <td data-label="Exemplo">
+        <code>htop</code>
+        <button class="copy-btn" data-command="htop">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Monitora CPU, memória e processos (instale com <code>sudo apt install htop</code>)</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>df -h</code></td>
+      <td data-label="Exemplo">
+        <code>df -h</code>
+        <button class="copy-btn" data-command="df -h">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Mostra uso de disco em GB/MB</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>free -h</code></td>
+      <td data-label="Exemplo">
+        <code>free -h</code>
+        <button class="copy-btn" data-command="free -h">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Mostra uso de memória RAM</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>uname -a</code></td>
+      <td data-label="Exemplo">
+        <code>uname -a</code>
+        <button class="copy-btn" data-command="uname -a">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Mostra versão do kernel e sistema</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="rede">Rede</h3>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Comando</th>
+      <th>Exemplo</th>
+      <th>O que faz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Comando"><code>ip a</code></td>
+      <td data-label="Exemplo">
+        <code>ip a</code>
+        <button class="copy-btn" data-command="ip a">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Mostra IPs das interfaces de rede</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>ping</code></td>
+      <td data-label="Exemplo">
+        <code>ping -c 4 google.com</code>
+        <button class="copy-btn" data-command="ping -c 4 google.com">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Testa conectividade (4 pacotes)</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>ss -tulpn</code></td>
+      <td data-label="Exemplo">
+        <code>sudo ss -tulpn</code>
+        <button class="copy-btn" data-command="sudo ss -tulpn">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Mostra portas abertas e serviços</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>curl</code></td>
+      <td data-label="Exemplo">
+        <code>curl ifconfig.me</code>
+        <button class="copy-btn" data-command="curl ifconfig.me">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Mostra seu IP público</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>ssh</code></td>
+      <td data-label="Exemplo">
+        <code>ssh usuario@192.168.1.10</code>
+        <button class="copy-btn" data-command="ssh usuario@192.168.1.10">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Conecta a servidor remoto</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="texto">Manipulação de Texto</h3>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Comando</th>
+      <th>Exemplo</th>
+      <th>O que faz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Comando"><code>grep</code></td>
+      <td data-label="Exemplo">
+        <code>grep "erro" /var/log/syslog</code>
+        <button class="copy-btn" data-command="grep &quot;erro&quot; /var/log/syslog">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Procura palavra em arquivo</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>find</code></td>
+      <td data-label="Exemplo">
+        <code>find . -name "*.log"</code>
+        <button class="copy-btn" data-command="find . -name &quot;*.log&quot;">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Procura arquivos .log no diretório atual</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>awk</code></td>
+      <td data-label="Exemplo">
+        <code>df -h | awk 'NR>1 {print $1, $5}'</code>
+        <button class="copy-btn" data-command="df -h | awk 'NR>1 {print $1, $5}'">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Mostra partição e uso (%)</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>sed</code></td>
+      <td data-label="Exemplo">
+        <code>sed -i 's/antigo/novo/g' arquivo.txt</code>
+        <button class="copy-btn" data-command="sed -i 's/antigo/novo/g' arquivo.txt">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Substitui texto em arquivo</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="pacotes">Gerenciamento de Pacotes</h3>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Distro</th>
+      <th>Comando</th>
+      <th>O que faz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Distro">Debian/Ubuntu</td>
+      <td data-label="Comando">
+        <code>sudo apt install vlc</code>
+        <button class="copy-btn" data-command="sudo apt install vlc">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Instala o VLC</td>
+    </tr>
+    <tr>
+      <td data-label="Distro">Fedora/RHEL</td>
+      <td data-label="Comando">
+        <code>sudo dnf install git</code>
+        <button class="copy-btn" data-command="sudo dnf install git">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Instala o Git</td>
+    </tr>
+    <tr>
+      <td data-label="Distro">Arch Linux</td>
+      <td data-label="Comando">
+        <code>sudo pacman -Syu</code>
+        <button class="copy-btn" data-command="sudo pacman -Syu">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Atualiza todo o sistema</td>
+    </tr>
+  </tbody>
+</table>
 
 </section>
+
+
+<script>
+document.addEventListener('click', function(e) {
+  if (e.target.matches('.copy-btn')) {
+    const cmd = e.target.dataset.command; // ← aqui estava "cmd", agora é "command"
+    if (cmd) {
+      navigator.clipboard.writeText(cmd).then(() => {
+        const original = e.target.textContent;
+        e.target.textContent = '✓ Copiado!';
+        setTimeout(() => e.target.textContent = original, 1500);
+      }).catch(err => {
+        console.warn('Falha ao copiar:', err);
+      });
+    }
+  }
+});
+</script>

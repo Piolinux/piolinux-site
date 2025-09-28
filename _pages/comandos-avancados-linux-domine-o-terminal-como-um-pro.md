@@ -1,12 +1,10 @@
 ---
 layout: default
-title: "Comandos Avançados Linux: Domine o Terminal como um Pro"
-description: "Aprenda comandos avançados do Linux para aumentar sua produtividade: awk, sed, find, xargs, grep recursivo, monitoramento e automação."
-date: 2025-09-13
-author: "PioLinux"
+title: Comandos Avançados no Terminal Linux – Referência Técnica
+description: 'Tabelas com find, grep, rsync, chmod, htop, lsof, scripts Bash e automação — sem linguagem informal, só comandos reais.'
+permalink: /comandos-avancados-terminal/
 categories: [linux, terminal, produtividade]
 tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
-permalink: /comandos-avançados-linux/
 ---
 
 
@@ -16,147 +14,179 @@ permalink: /comandos-avançados-linux/
 
 
 <section class="post-content">
-    <p>
-     Desvendando dicas avançadas pra você ser o mestre no terminal Linux.
-    </p>
-    <h2>
-     Manipular os arquivos com comandos que botam pra quebrar
-    </h2>
-    <p>
-     Além dos comandos simples, há aqueles que funcionam mesmo pra manipular arquivos:
-    </p>
-    <ul>
-     <li>
-      <strong>
-       <code>
-        find
-       </code>
-      </strong>
-      : Achar arquivos e pastas utilizando critérios tipo nome, tamanho ou data.
-     </li>
-     <li>
-      <strong>
-       <code>
-        grep
-       </code>
-      </strong>
-      : Encontra padrões de texto dentro dos arquivos.
-     </li>
-     <li>
-      <strong>
-       <code>
-        rsync
-       </code>
-      </strong>
-      : Sincroniza arquivos entre pastas locais ou até mesmo remotas.
-     </li>
-    </ul>
-    <p>
-     <strong>
-      Exemplo:
-     </strong>
-     <code>
-      find /home -name "*.txt"
-     </code>
-     encontra todos os arquivos .txt na pasta
-     <code>
-      /home
-     </code>
-     .
-    </p>
-    <h2>
-     Controle as permissões
-    </h2>
-    <p>
-     Não faça alterações usando o chmod erroneamente em pastas salvas como root, sem verificar as permissões.Veja só os comandos principais:
-    </p>
-    <ul>
-     <li>
-      <strong>
-       <code>
-        chmod
-       </code>
-      </strong>
-      : Muda as permissões dos arquivos e diretórios.
-     </li>
-     <li>
-      <strong>
-       <code>
-        chown
-       </code>
-      </strong>
-      : Modifica o dono e grupo dos arquivos e pastas.
-     </li>
-     <li>
-      <strong>
-       <code>
-        sudo
-       </code>
-      </strong>
-      : Roda comandos com poderes de administrador.
-     </li>
-    </ul>
-    <p>
-     Use esses comandos com cuidado pra não bagunçar tudo.
-    </p>
-    <h2>
-     Monitorando e gerenciando processos, tem mais que top!
-    </h2>
-    <p>
-     Fora o
-     <code>
-      top
-     </code>
-     , tem ferramentas ainda melhores:
-    </p>
-    <ul>
-     <li>
-      <strong>
-       <code>
-        htop
-       </code>
-      </strong>
-      : Uma versão mais bonitinha do top, instale pra ver.
-     </li>
-     <li>
-      <strong>
-       <code>
-        ps aux
-       </code>
-      </strong>
-      : Mostra os processos, com todos os detalhes ali na sua frente.
-     </li>
-    </ul>
-    <p>
-     Recomenda-se o htop, que monitora visualmente e interativamente os processos.
-    </p>
-    <h2>
-     Automatizar tarefas através de scripts também é muito útil
-    </h2>
-    <p>
-     Criar scripts Bash simplifica e agiliza a automação de tarefas.
-    </p>
-    <pre><code>#!/bin/bash
-echo "Backup iniciado, éh!"
-rsync -av --delete /home/usuario/documentos/ /backup/documentos/
-echo "Backup concluído, finalizo por aqui."</code></pre>
-    <p>
-     Salve com a extensão .sh, dê permissão com
-     <code>
-      chmod +x script.sh
-     </code>
-     e use
-     <code>
-      ./script.sh
-     </code>
-     para rodar.
-    </p>
-    <h2>
-     Conclusão meus amigos!
-    </h2>
-    <p>
-     Comandos avançados abrem portas no terminal Linux pra você usar. Pratique comandos, faça uns testes, crie os seus scripts, assim facilita..
-    </p>
+
+<p>Comandos avançados para manipulação de arquivos, processos, automação e rede — com exemplos reais e flags úteis em produção.</p>
+    <table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Comando</th>
+      <th>Exemplo Avançado</th>
+      <th>O que faz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Comando"><code>find</code></td>
+      <td data-label="Exemplo Avançado">
+        <code>find /var/log -name "*.log" -mtime +30 -exec gzip {} \;</code>
+        <button class="copy-btn" data-command="find /var/log -name &quot;*.log&quot; -mtime +30 -exec gzip {} \;">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Compacta logs mais antigos que 30 dias</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>grep</code></td>
+      <td data-label="Exemplo Avançado">
+        <code>grep -E 'error|fail' /var/log/syslog | tail -n 20</code>
+        <button class="copy-btn" data-command="grep -E 'error|fail' /var/log/syslog | tail -n 20">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Mostra últimas 20 linhas com "error" ou "fail"</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>rsync</code></td>
+      <td data-label="Exemplo Avançado">
+        <code>rsync -avz -e ssh /home/user/ user@backup:/backup/</code>
+        <button class="copy-btn" data-command="rsync -avz -e ssh /home/user/ user@backup:/backup/">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Sincroniza com servidor remoto via SSH</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>awk</code></td>
+      <td data-label="Exemplo Avançado">
+        <code>df -h | awk '$5+0 > 80 {print $1, $5}'</code>
+        <button class="copy-btn" data-command="df -h | awk '$5+0 > 80 {print $1, $5}'">📋 Copiar</button>
+      </td>
+      <td data-label="O que faz">Lista partições com uso > 80%</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Comando</th>
+      <th>Exemplo</th>
+      <th>Observação Técnica</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Comando"><code>chmod</code></td>
+      <td data-label="Exemplo">
+        <code>chmod 600 ~/.ssh/id_rsa</code>
+        <button class="copy-btn" data-command="chmod 600 ~/.ssh/id_rsa">📋 Copiar</button>
+      </td>
+      <td data-label="Observação Técnica">Permissões seguras para chave SSH</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>chmod</code> (recursivo)</td>
+      <td data-label="Exemplo">
+        <code>chmod -R 755 /var/www/html</code>
+        <button class="copy-btn" data-command="chmod -R 755 /var/www/html">📋 Copiar</button>
+      </td>
+      <td data-label="Observação Técnica">Define permissões para site web (755 pastas, 644 arquivos)</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>chown</code></td>
+      <td data-label="Exemplo">
+        <code>sudo chown -R www-data:www-data /var/www</code>
+        <button class="copy-btn" data-command="sudo chown -R www-data:www-data /var/www">📋 Copiar</button>
+      </td>
+      <td data-label="Observação Técnica">Define dono para servidor web</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>umask</code></td>
+      <td data-label="Exemplo">
+        <code>umask 022</code> (padrão) ou <code>umask 077</code> (privado)
+      </td>
+      <td data-label="Observação Técnica">Define permissões padrão para novos arquivos</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Comando</th>
+      <th>Exemplo</th>
+      <th>Função</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Comando"><code>htop</code></td>
+      <td data-label="Exemplo">
+        <code>htop</code>
+        <button class="copy-btn" data-command="htop">📋 Copiar</button>
+      </td>
+      <td data-label="Função">Monitoramento interativo com árvore de processos</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>ps</code></td>
+      <td data-label="Exemplo">
+        <code>ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head</code>
+        <button class="copy-btn" data-command="ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head">📋 Copiar</button>
+      </td>
+      <td data-label="Função">Lista processos por uso de memória</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>lsof</code></td>
+      <td data-label="Exemplo">
+        <code>lsof -i :80</code>
+        <button class="copy-btn" data-command="lsof -i :80">📋 Copiar</button>
+      </td>
+      <td data-label="Função">Mostra processo usando a porta 80</td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>iotop</code></td>
+      <td data-label="Exemplo">
+        <code>sudo iotop</code>
+        <button class="copy-btn" data-command="sudo iotop">📋 Copiar</button>
+      </td>
+      <td data-label="Função">Monitora uso de disco em tempo real</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3 id="script-backup">Exemplo: Script de Backup com Logs</h3>
+<pre><code>#!/bin/bash
+# backup.sh
+set -e
+LOG="/var/log/backup.log"
+echo "[$(date)] Iniciando backup..." >> "$LOG"
+rsync -av --delete "$HOME/Documents/" /backup/Documents/ >> "$LOG" 2>&1
+echo "[$(date)] Backup concluído." >> "$LOG"</code></pre>
+
+<p>Agendar com cron (diariamente às 2h):</p>
+<table class="evergreen-table">
+  <tbody>
+    <tr>
+      <td>
+        <code>crontab -e</code> → adicionar: <code>0 2 * * * /caminho/backup.sh</code>
+        <button class="copy-btn" data-command="0 2 * * * /caminho/backup.sh">📋 Copiar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
    </section>
  
- 
+ <script>
+document.addEventListener('click', function(e) {
+  if (e.target.matches('.copy-btn')) {
+    const cmd = e.target.dataset.command; // ← aqui estava "cmd", agora é "command"
+    if (cmd) {
+      navigator.clipboard.writeText(cmd).then(() => {
+        const original = e.target.textContent;
+        e.target.textContent = '✓ Copiado!';
+        setTimeout(() => e.target.textContent = original, 1500);
+      }).catch(err => {
+        console.warn('Falha ao copiar:', err);
+      });
+    }
+  }
+});
+</script>
+
