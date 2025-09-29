@@ -80,7 +80,7 @@ Cada script está formatado <strong>exatamente como deve ser salvo</strong> — 
       <td data-label="Objetivo">Olá Mundo (primeiro script)</td>
       <td data-label="Script"><code>#!/bin/bash
 echo "Olá, piolinux! Este é meu primeiro script Bash."</code></td>
-      <td data-label="Copiar"><button class="copy-btn" data-cmd="#!/bin/bash
+      <td data-label="Copiar"><button class="copy-btn" data-command="#!/bin/bash
 echo &quot;Olá, piolinux! Este é meu primeiro script Bash.&quot;">📋</button></td>
     </tr>
   </tbody>
@@ -108,7 +108,7 @@ echo "Limpando sistema..."
 sudo apt autoremove -y
 sudo apt clean
 echo "Sistema atualizado!"</code></td>
-      <td data-label="Copiar"><button class="copy-btn" data-cmd="#!/bin/bash
+      <td data-label="Copiar"><button class="copy-btn" data-command="#!/bin/bash
 echo &quot;Atualizando listas de pacotes...&quot;
 sudo apt update
 echo &quot;Realizando upgrade...&quot;
@@ -129,7 +129,7 @@ arquivo="backup_$data.tar.gz"
 mkdir -p "$dir_backup"
 tar -czf "$dir_backup/$arquivo" "${pastas[@]}"
 echo "Backup salvo em: $dir_backup/$arquivo"</code></td>
-      <td data-label="Copiar"><button class="copy-btn" data-cmd="#!/bin/bash
+      <td data-label="Copiar"><button class="copy-btn" data-command="#!/bin/bash
 data=$(date +%Y-%m-%d_%H-%M-%S)
 dir_backup=&quot;$HOME/backups&quot;
 pastas=(&quot;$HOME/Documentos&quot; &quot;$HOME/Imagens&quot;)
@@ -160,7 +160,7 @@ uso=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
 if [ $uso -gt 80 ]; then
   echo "⚠️ Disco acima de 80% ($uso%)"
 fi</code></td>
-      <td data-label="Copiar"><button class="copy-btn" data-cmd="#!/bin/bash
+      <td data-label="Copiar"><button class="copy-btn" data-command="#!/bin/bash
 uso=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
 if [ $uso -gt 80 ]; then
   echo &quot;⚠️ Disco acima de 80% ($uso%)&quot;
@@ -173,7 +173,7 @@ while read user; do
   [ -n "$user" ] && sudo useradd -m "$user"
 done < lista_usuarios.txt
 echo "Usuários criados."</code></td>
-      <td data-label="Copiar"><button class="copy-btn" data-cmd="#!/bin/bash
+      <td data-label="Copiar"><button class="copy-btn" data-command="#!/bin/bash
 while read user; do
   [ -n &quot;$user&quot; ] && sudo useradd -m &quot;$user&quot;
 done < lista_usuarios.txt
@@ -198,7 +198,7 @@ echo &quot;Usuários criados.&quot;">📋</button></td>
       <td data-label="Script"><code>#!/bin/bash
 echo "Portas abertas:"
 ss -tuln</code></td>
-      <td data-label="Copiar"><button class="copy-btn" data-cmd="#!/bin/bash
+      <td data-label="Copiar"><button class="copy-btn" data-command="#!/bin/bash
 echo &quot;Portas abertas:&quot;
 ss -tuln">📋</button></td>
     </tr>
@@ -207,7 +207,7 @@ ss -tuln">📋</button></td>
       <td data-label="Script"><code>#!/bin/bash
 echo "Últimas tentativas falhas:"
 grep "Failed password" /var/log/auth.log | tail -5 | awk '{print $11}' | sort | uniq -c</code></td>
-      <td data-label="Copiar"><button class="copy-btn" data-cmd="#!/bin/bash
+      <td data-label="Copiar"><button class="copy-btn" data-command="#!/bin/bash
 echo &quot;Últimas tentativas falhas:&quot;
 grep &quot;Failed password&quot; /var/log/auth.log | tail -5 | awk '{print $11}' | sort | uniq -c">📋</button></td>
     </tr>
@@ -229,7 +229,7 @@ grep &quot;Failed password&quot; /var/log/auth.log | tail -5 | awk '{print $11}'
       <td data-label="Objetivo">Servidor HTTP local</td>
       <td data-label="Script"><code>#!/bin/bash
 python3 -m http.server 8000</code></td>
-      <td data-label="Copiar"><button class="copy-btn" data-cmd="#!/bin/bash
+      <td data-label="Copiar"><button class="copy-btn" data-command="#!/bin/bash
 python3 -m http.server 8000">📋</button></td>
     </tr>
     <tr>
@@ -237,7 +237,7 @@ python3 -m http.server 8000">📋</button></td>
       <td data-label="Script"><code>#!/bin/bash
 rsync -avz --delete ./public/ user@host:/var/www/html/
 echo "Deploy concluído."</code></td>
-      <td data-label="Copiar"><button class="copy-btn" data-cmd="#!/bin/bash
+      <td data-label="Copiar"><button class="copy-btn" data-command="#!/bin/bash
 rsync -avz --delete ./public/ user@host:/var/www/html/
 echo &quot;Deploy concluído.&quot;">📋</button></td>
     </tr>
@@ -263,7 +263,7 @@ if [ -z "$1" ]; then
   exit 1
 fi
 echo "scale=2; $1" | bc -l</code></td>
-      <td data-label="Copiar"><button class="copy-btn" data-cmd="#!/bin/bash
+      <td data-label="Copiar"><button class="copy-btn" data-command="#!/bin/bash
 if [ -z &quot;$1&quot; ]; then
   echo &quot;Uso: ./calc.sh '2 + 3 * 4'&quot;
   exit 1
