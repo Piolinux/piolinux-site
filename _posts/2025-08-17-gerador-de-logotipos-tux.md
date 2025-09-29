@@ -54,7 +54,7 @@ permalink: /gerador-logotipo-tux/
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>FatoS</th>
+      <th>Fatos.</th>
       <th>Explicações.</th>
     </tr>
   </thead>
