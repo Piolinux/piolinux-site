@@ -39,7 +39,7 @@ permalink: /instalar-slackware-guia-completo/
         <button class="copy-btn" data-command="sudo dd if=slackware-15.0-install-dvd.iso of=/dev/sdX bs=4M status=progress && sync">📋 Copiar</button>
         
       </td>
-      <td data-label="Observação">Slackware não tem “Live mode” — o USB é só para instalação.</td>
+      <td data-label="Observação">Slackware tem “Live mode” — o USB é só para instalação.</td>
     </tr>
     <tr>
       <td data-label="Etapa">Instalação (modo texto)</td>
@@ -71,22 +71,6 @@ permalink: /instalar-slackware-guia-completo/
 </section>
 
 
-<script>
-document.addEventListener('click', function(e) {
-  if (e.target.matches('.copy-btn')) {
-    const cmd = e.target.dataset.command; // ← aqui estava "cmd", agora é "command"
-    if (cmd) {
-      navigator.clipboard.writeText(cmd).then(() => {
-        const original = e.target.textContent;
-        e.target.textContent = '✓ Copiado!';
-        setTimeout(() => e.target.textContent = original, 1500);
-      }).catch(err => {
-        console.warn('Falha ao copiar:', err);
-      });
-    }
-  }
-});
-</script>
 
 
 
