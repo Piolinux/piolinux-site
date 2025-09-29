@@ -25,7 +25,7 @@ tags: [produtividade, ferramentas, linux, terminal, geany, automação]
       <th>Ferramentas.</th>
       <th>Propósito Real.</th>
       <th>Instalações. (Debian/Ubuntu)</th>
-      <th>Observações. Técnica</th>
+      <th>Observações Técnica.</th>
     </tr>
   </thead>
   <tbody>
