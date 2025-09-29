@@ -19,7 +19,7 @@ permalink: /scripts-seguranca-linux/
 <h2>🐧 Segurança no Linux: Comandos que Salvam a Sua Vida.</h2>
 
 
-.
+
 
 <table class="evergreen-table">
   <thead>
@@ -91,7 +91,7 @@ sudo iftop -i eth0</code></td>
 
 <!-- Dica final (opcional, mas recomendada) -->
 <div class="dica-final">
-  💡 <strong>Dica do PioLinux:</strong> Teste comandos de segurança em ambientes isolados antes de usar em produção. Um erro com <code>ufw</code> ou <code>dd</code> pode te deixar sem acesso. 
+  💡 <strong>Dicas do Piolinux:</strong>  Faça os teste dos comandos de segurança em ambientes isolados, antes de usar em produção.Um erro com <code>ufw</code> ou <code>dd</code> pode te deixar sem acesso. 
 </div>
 
 
