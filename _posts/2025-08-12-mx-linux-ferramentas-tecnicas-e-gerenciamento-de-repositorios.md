@@ -87,8 +87,8 @@ tags: [mx-linux, repositórios, atualização, apt, debian, segurança]
       <td data-label="Explicação">É uma distro **séria**, com ferramentas próprias, mas base sólida no Debian Stable. Ideal para desktop estável.</td>
     </tr>
     <tr>
-      <td data-label="Fato">Não existe “MX-16”</td>
-      <td data-label="Explicação">Versão atual: **MX-23** (2023), baseada no **Debian 12 Bookworm**. MX-21 foi a última da série 21.</td>
+      <td data-label="Fato">Atualizações mais recentes.</td>
+      <td data-label="Explicação">Versão atual: **MX-25** (2025),Versão Beta, baseada no **Debian 13 Trixie**. MX-23.6 foi a última da série 23 versão estável.</td>
     </tr>
     <tr>
       <td data-label="Fato">Automatização ≠ ignorância</td>
