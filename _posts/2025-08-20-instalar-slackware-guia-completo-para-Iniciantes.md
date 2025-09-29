@@ -36,6 +36,9 @@ permalink: /instalar-slackware-guia-completo/
       <td data-label="Ação Técnica">
         <code>sudo dd if=slackware-15.0-install-dvd.iso of=/dev/sdX bs=1M</code>
         <button class="copy-btn" data-command="sudo dd if=slackware-15.0-install-dvd.iso of=/dev/sdX bs=1M">📋 Copiar</button>
+        <code>sudo dd if=sudo dd if=slackware-live-*.iso of=/dev/sdX bs=4M status=progress && sync</code>
+        <button class="copy-btn" data-command="sudo dd if=slackware-live-*.iso of=/dev/sdX bs=4M status=progress && sync>📋 Copiar</button>
+        
       </td>
       <td data-label="Observação">Slackware não tem “Live mode” — o USB é só para instalação.</td>
     </tr>
