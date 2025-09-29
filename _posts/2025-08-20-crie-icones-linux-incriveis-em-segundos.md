@@ -17,77 +17,98 @@ permalink: /criar-ícones-linux/
 <section class="post-content">
     
 
-<h2>Olá, pessoal!</h2>
+<p>Esta aplicação permite a criação de arquivos .desktop e ícones SVG customizados. Use os comandos abaixo para instalar o atalho no seu sistema.</p>
 
-<p>
-    Se há algo que eu adoro no Linux é a liberdade de personalização. 
-    Mas, convenhamos, criar um atalho e um ícone para uma aplicação 
-    nova poderá dar  trabalho. É por isso que decidi criar uma ferramenta que torna tudo fácil.
-</p>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Componente</th>
+      <th>Onde salvar</th>
+      <th>Permissões</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Componente">Ícone SVG</td>
+      <td data-label="Onde salvar">
+        <code>~/.local/share/icons/nome-app.svg</code>
+      </td>
+      <td data-label="Permissões">
+        <code>chmod 644 ~/.local/share/icons/nome-app.svg</code>
+        <button class="copy-btn" data-command="chmod 644 ~/.local/share/icons/nome-app.svg">📋 Copiar</button>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Componente">Atalho .desktop</td>
+      <td data-label="Onde salvar">
+        <code>~/.local/share/applications/nome-app.desktop</code>
+      </td>
+      <td data-label="Permissões">
+        <code>chmod +x ~/.local/share/applications/nome-app.desktop</code>
+        <button class="copy-btn" data-command="chmod +x ~/.local/share/applications/nome-app.desktop">📋 Copiar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-<p>
-    Apresento o nosso <strong>Gerador de Ícones para Linux</strong>, uma forma simples e rápida de criar atalhos .desktop com um visual incrível, tudo à sua medida! Dê um toque único ao seu ambiente de trabalho sem decifrar códigos complicados.
-</p>
+<h3 id="exemplo">Exemplo de arquivo <code>.desktop</code></h3>
+<pre><code>[Desktop Entry]
+Name=Meu App
+Exec=/usr/bin/meu-app
+Icon=nome-app
+Terminal=false
+Type=Application
+Categories=Utility;</code></pre>
 
-<h2>Mas afinal, o que é um atalho .desktop?</h2>
-<p>
-    Não se preocupe, não é nada de complicado! O ficheiro .desktop é só um pequeno arquivo de texto que contém todas as informações necessárias para o seu sistema Linux criar um atalho. Ele diz ao seu sistema qual é o nome da aplicação, qual é o comando para a iniciar e, claro, qual o ícone que deve usar.
-</p>
+<h3 id="atualizar">Atualizar cache do sistema</h3>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Ação</th>
+      <th>Comando</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Ação">Atualizar ícones</td>
+      <td data-label="Comando">
+        <code>gtk-update-icon-cache ~/.local/share/icons/hicolor</code>
+        <button class="copy-btn" data-command="gtk-update-icon-cache ~/.local/share/icons/hicolor">📋 Copiar</button>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Ação">Atualizar aplicações</td>
+      <td data-label="Comando">
+        <code>update-desktop-database ~/.local/share/applications</code>
+        <button class="copy-btn" data-command="update-desktop-database ~/.local/share/applications">📋 Copiar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-<p>
-    A nossa ferramenta faz este trabalho por si, para que não perca tempo a decifrar a sintaxe.
-</p>
-
-<h2>Perguntas e Respostas Rápidas (FAQ)</h2>
-<h3>1. Pronto, e agora? Como se usa isto?</h3>
-
-<p>É mais fácil do que parece!</p>
-<ul>
-    <li><strong>Dê um Nome à Aplicação:</strong> Escreva o nome que quer que apareça no seu menu.</li>
-    <li><strong>Digite o Comando:</strong> Qual é o comando que você usa no terminal para abrir a aplicação? Por exemplo, firefox, code ou google-chrome.</li>
-    <li><strong>Escolha o Visual:</strong> Selecione o formato e a cor que mais gostar.</li>
-    <li><strong>Clique em Gerar:</strong> E já está! O código aparece em baixo, pronto para ser copiado e personalizar seu Desktop. Vai ficar descolado!</li>
-</ul>
-
-<h3>2. O que faço com o código que o gerador me deu?</h3>
-<p>
-    O gerador dá-lhe duas coisas, e ambas são importantes.
-</p>
-<ul>
-    <li><strong>O Código do Ícone:</strong> Copie este texto e salve-o num ficheiro. Chame-o de <code>o-nome-da-sua-app.svg</code> (por exemplo, <code>meu-app.svg</code>).</li>
-    <li><strong>O Código do Atalho:</strong> Copie o segundo texto e salve-o num ficheiro diferente. Chame-o de <code>o-nome-da-sua-app.desktop</code> (por exemplo, <code>meu-app.desktop</code>).</li>
-</ul>
-
-<h3>3. Onde devo guardar estes ficheiros no meu computador?</h3>
-<p>
-    Tem de os guardar no sítio certo para que o seu sistema os encontre:
-</p>
-<p>
-    <strong>Para o Ícone (.svg):</strong> Guarde-o aqui:<br>
-    <code>~/.local/share/icons/</code>
-</p>
-<p>
-    <strong>Para o Atalho (.desktop):</strong> Guarde-o aqui:<br>
-    <code>~/.local/share/applications/</code>
-</p>
-<p>
-    Ah, e não se esqueça: o nome que você deu ao ícone no ficheiro .desktop tem de ser igual ao nome que usou para salvar o seu ficheiro .svg!
-</p>
-
-<h3>4. Criei o atalho, mas não aparece. Porquê?</h3>
-<p>
-    Tranquilo é normal. O seu Sistema Linux, por vezes, precisa de um empurrãozinho para notar os ficheiros novos. A solução é fazer logout e login de novo em casos extremos. Se mesmo assim não aparecer, um reinício completo costuma resolver. Em alguns casos, use os comandos:
-</p>
-<p>
-    <code>sudo update-icon-caches /usr/share/icons/*</code>
-</p>
-
-<h3>5. Por que utilizamos ícones SVG?</h3>
-<p>
-    Os ícones SVG são desenvolvidos a partir de linhas e formas, e não de pixeis. Isso significa que eles permanecem sempre nítidos e perfeitos, independentemente de tamanhos pequenos na barra de tarefas ou em tamanho grande na área de trabalho. Perfeito.
-</p>
-
-
+<h3 id="notas">Notas Técnicas</h3>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Fato</th>
+      <th>Explicação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Fato">Formato SVG</td>
+      <td data-label="Explicação">Ícones vetoriais escalam sem perda de qualidade. Suportados por GNOME, KDE, XFCE.</td>
+    </tr>
+    <tr>
+      <td data-label="Fato">Nome do ícone</td>
+      <td data-label="Explicação">O valor de <code>Icon=</code> no <code>.desktop</code> deve corresponder ao nome do arquivo SVG **sem extensão**.</td>
+    </tr>
+    <tr>
+      <td data-label="Fato">Permissões</td>
+      <td data-label="Explicação">O arquivo <code>.desktop</code> deve ser executável para aparecer no menu de aplicações.</td>
+    </tr>
+  </tbody>
+</table>
 
 <main>
    <div class="tool-container" style="background: #1a1a1a; padding: 30px; border-radius: 16px; border: 1px solid #333; max-width: 800px; margin: 0 auto;">
@@ -355,6 +376,11 @@ StartupNotify=true`.trim();
   }
 }
 </script>
+
+
+
+
+
 
 
 
