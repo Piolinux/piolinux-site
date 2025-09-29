@@ -14,29 +14,66 @@ permalink: /gerador-logotipo-tux/
 
 
 <section class="post-content">
-<p>Olá, pessoal tudo bem!</p>
-<p>Lembram-se de quando estivemos a criar o nosso logótipo, com o pinguim, o boné e a cria? Enquanto estava a mexer no código, tive uma ideia: e se toda a gente pudesse criar o seu próprio Tux?</p>
-<p>O Tux, o nosso pinguim amado, é a mascote perfeita, mas a personalização é o que faz com que um projeto seja realmente nosso. Sabia que seria incrível se todos tivessem uma ferramenta simples para criar o seu próprio logópio sem precisar de ser designers ou programadores.</p>
-<p>Então, com muito carinho e dedicação, criei esta pequena ferramenta online para a nossa comunidade! É a nossa forma de partilhar a magia do código aberto.</p>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">Uma Ferramenta Para Todos</h2>
-    <p>Esta ferramenta foi feita para ser super simples. Não precisam de ser designers nem de perceber de código. Basta "brincar" com os botões e os menus para ver a magia a acontecer em tempo real no vosso ecrã.</p>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">As Opções de Personalização</h2>
-    <p>Querem um Tux mais escuro ou mais claro? A escolha é vossa! As opções são intuitivas e permitem personalizar a sua mascote de forma única.</p>
+<p>Ferramenta para criar e exportar logótipos personalizados do Tux (mascote do Linux). Toda a renderização ocorre no navegador — sem envio de dados, sem dependências externas.</p>
 
-    <h3 class="text-xl font-bold mt-4 mb-2">Cores</h3>
-    <p>Podem mudar a cor do corpo, barriga, bico e pés. Façam um Tux com as vossas cores favoritas!</p>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Componentes.</th>
+      <th>Opções.</th>
+      <th>Formato de saída.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Componente">Cores.</td>
+      <td data-label="Opções">Corpo, barriga, bico/pés, boné, cachecol.</td>
+      <td data-label="Formato de saída">PNG (256x256px).</td>
+    </tr>
+    <tr>
+      <td data-label="Componente">Acessórios.</td>
+      <td data-label="Opções">Boné, cartola, cowboy, festa, bruxa, formatura, headset, viseira.</td>
+      <td data-label="Formato de saída">Incorporado no PNG</td>
+    </tr>
+    <tr>
+      <td data-label="Componente">Estilo.</td>
+      <td data-label="Opções">Cabelo (espetado, moicano, afro), olhos (feliz, surpreso, cansado), pés (pontiagudos, nadadeiras)</td>
+      <td data-label="Formato de saída">Vetor SVG renderizado em canvas</td>
+    </tr>
+    <tr>
+      <td data-label="Componente">Exportação</td>
+      <td data-label="Opções">Clique em "Descarregar PNG"</td>
+      <td data-label="Formato de saída"><code>tux-logo.png</code></td>
+    </tr>
+  </tbody>
+</table>
 
-    <h3 class="text-xl font-bold mt-4 mb-2">Acessórios</h3>
-    <p>Aqui é que a diversão começa! Podem dar-lhe um boné clássico, uma cartola elegante, ou um chapéu de chef. É só escolher!</p>
+<h3 id="tecnico">Notas Técnicas</h3>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>FatoS</th>
+      <th>Explicações.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Fato">Renderização local</td>
+      <td data-label="Explicação">Todo o código SVG é gerado e convertido em PNG no navegador. Nenhum dado deixa seu dispositivo.</td>
+    </tr>
+    <tr>
+      <td data-label="Fato">Sem dependências</td>
+      <td data-label="Explicação">Funciona com HTML5 + Canvas + JavaScript puro. Não requer bibliotecas externas.</td>
+    </tr>
+    <tr>
+      <td data-label="Fato">Uso permitido</td>
+      <td data-label="Explicação">O Tux é uma marca registrada da Linux Foundation. Use para fins pessoais, educacionais ou comunitários — não comerciais.</td>
+    </tr>
+  </tbody>
+</table>
 
-    <h3 class="text-xl font-bold mt-4 mb-2">Expressões</h3>
-    <p>Dêem personalidade ao vosso Tux! Escolham entre um olhar padrão, um feliz ou um surpreso. E, claro, podem adicionar um cachecol para os dias frios!</p>
-    <p>Quando o vosso Tux estiver perfeito, é só clicar no botão "Descarregar PNG" para ter o logópio pronto para usar em qualquer lugar!</p>
-
-    <h2 class="text-2xl font-bold mt-8 mb-4">A Magia por Trás da Ferramenta</h2>
-    <p>Tudo o que veem é gerado em tempo real no vosso navegador. O código é super leve e não precisa de nada para funcionar. Se tiverem curiosidade, podem ver o código completo mesmo aqui em baixo.</p>
 
 
 <!-- O código HTML da ferramenta começa aqui -->
@@ -420,3 +457,4 @@ permalink: /gerador-logotipo-tux/
     }
     
     </script>
+
