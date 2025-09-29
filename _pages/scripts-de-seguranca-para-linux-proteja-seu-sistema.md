@@ -98,23 +98,5 @@ sudo iftop -i eth0</code></td>
 </section>
 
 
-<script>
-document.addEventListener('click', function(e) {
-  if (e.target.matches('.copy-btn')) {
-    const cmd = e.target.dataset.cmd;
-    if (cmd) {
-      const formatted = cmd
-        .replace(/%0A/g, '\n')
-        .replace(/%22/g, '"')
-        .replace(/%3E/g, '>')
-        .replace(/%26/g, '&');
-      navigator.clipboard.writeText(formatted).then(() => {
-        const original = e.target.textContent;
-        e.target.textContent = '✓';
-        setTimeout(() => e.target.textContent = original, 1200);
-      });
-    }
-  }
-});
-</script>
+
 
