@@ -285,19 +285,3 @@ echo &quot;scale=2; $1&quot; | bc -l">📋</button></td>
 
 
 
-<script>
-document.addEventListener('click', function(e) {
-  if (e.target.matches('.copy-btn')) {
-    const cmd = e.target.dataset.command; // ← aqui estava "cmd", agora é "command"
-    if (cmd) {
-      navigator.clipboard.writeText(cmd).then(() => {
-        const original = e.target.textContent;
-        e.target.textContent = '✓ Copiado!';
-        setTimeout(() => e.target.textContent = original, 1500);
-      }).catch(err => {
-        console.warn('Falha ao copiar:', err);
-      });
-    }
-  }
-});
-</script>
