@@ -15,7 +15,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
 
 <section class="post-content">
     
-    <p>Comandos essenciais do terminal: navegação, arquivos, permissões e ajuda — prontos para copiar e usar em qualquer sistema POSIX.</p>
+    
     <table class="evergreen-table">
   <thead>
     <tr>
@@ -27,19 +27,19 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
   </thead>
   <tbody>
     <tr>
-      <td data-label="Categoria">Navegação</td>
+      <td data-label="Categoria">Navegação.</td>
       <td data-label="Comando"><code>pwd</code></td>
       <td data-label="Exemplo Útil"><code>pwd</code></td>
-      <td data-label="O que faz">Mostra o diretório atual</td>
+      <td data-label="O que faz">Mostra o diretório atual.</td>
     </tr>
     <tr>
-      <td data-label="Categoria">Navegação</td>
+      <td data-label="Categoria">Navegação.</td>
       <td data-label="Comando"><code>cd</code></td>
       <td data-label="Exemplo Útil">
         <code>cd ~/Documentos</code>
         <button class="copy-btn" data-command="cd ~/Documentos">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Entra na pasta Documentos do usuário</td>
+      <td data-label="O que faz">Entra na pasta Documentos do usuário.</td>
     </tr>
     <tr>
       <td data-label="Categoria">Navegação</td>
@@ -48,10 +48,10 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <code>cd ..</code>
         <button class="copy-btn" data-command="cd ..">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Volta um nível no diretório</td>
+      <td data-label="O que faz">Volta um nível no diretório.</td>
     </tr>
     <tr>
-      <td data-label="Categoria">Listagem</td>
+      <td data-label="Categoria">Listagem.</td>
       <td data-label="Comando"><code>ls -lh</code></td>
       <td data-label="Exemplo Útil">
         <code>ls -lh /etc</code>
@@ -60,7 +60,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
       <td data-label="O que faz">Lista arquivos com permissões, tamanho legível (KB/MB)</td>
     </tr>
     <tr>
-      <td data-label="Categoria">Listagem</td>
+      <td data-label="Categoria">Listagem.</td>
       <td data-label="Comando"><code>ls -la</code></td>
       <td data-label="Exemplo Útil">
         <code>ls -la ~/.config</code>
@@ -69,43 +69,43 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
       <td data-label="O que faz">Mostra arquivos ocultos (começam com <code>.</code>)</td>
     </tr>
     <tr>
-      <td data-label="Categoria">Arquivos</td>
+      <td data-label="Categoria">Arquivos.</td>
       <td data-label="Comando"><code>touch</code></td>
       <td data-label="Exemplo Útil">
         <code>touch script.sh</code>
         <button class="copy-btn" data-command="touch script.sh">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Cria arquivo vazio ou atualiza timestamp</td>
+      <td data-label="O que faz">Cria arquivo vazio ou atualiza timestamp.</td>
     </tr>
     <tr>
-      <td data-label="Categoria">Arquivos</td>
+      <td data-label="Categoria">Arquivos.</td>
       <td data-label="Comando"><code>mkdir -p</code></td>
       <td data-label="Exemplo Útil">
         <code>mkdir -p Projetos/2025/web</code>
         <button class="copy-btn" data-command="mkdir -p Projetos/2025/web">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Cria diretórios aninhados</td>
+      <td data-label="O que faz">Cria diretórios aninhados.</td>
     </tr>
     <tr>
-      <td data-label="Categoria">Arquivos</td>
+      <td data-label="Categoria">Arquivos.</td>
       <td data-label="Comando"><code>cp -r</code></td>
       <td data-label="Exemplo Útil">
         <code>cp -r Pasta/ Backup/</code>
         <button class="copy-btn" data-command="cp -r Pasta/ Backup/">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Copia diretório recursivamente</td>
+      <td data-label="O que faz">Copia diretório recursivamente.</td>
     </tr>
     <tr>
-      <td data-label="Categoria">Arquivos</td>
+      <td data-label="Categoria">Arquivos.</td>
       <td data-label="Comando"><code>mv</code></td>
       <td data-label="Exemplo Útil">
         <code>mv antigo.txt novo.txt</code>
         <button class="copy-btn" data-command="mv antigo.txt novo.txt">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Renomeia ou move arquivo</td>
+      <td data-label="O que faz">Renomeia ou move arquivo.</td>
     </tr>
     <tr>
-      <td data-label="Categoria">Arquivos</td>
+      <td data-label="Categoria">Arquivos.</td>
       <td data-label="Comando"><code>rm -i</code></td>
       <td data-label="Exemplo Útil">
         <code>rm -i arquivo.txt</code>
@@ -114,7 +114,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
       <td data-label="O que faz">Remove com confirmação (seguro)</td>
     </tr>
     <tr>
-      <td data-label="Categoria">Ajuda</td>
+      <td data-label="Categoria">Ajuda.</td>
       <td data-label="Comando"><code>man</code></td>
       <td data-label="Exemplo Útil">
         <code>man grep</code>
@@ -123,13 +123,13 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
       <td data-label="O que faz">Mostra manual completo (pressione <kbd>q</kbd> para sair)</td>
     </tr>
     <tr>
-      <td data-label="Categoria">Ajuda</td>
+      <td data-label="Categoria">Ajuda.</td>
       <td data-label="Comando"><code>--help</code></td>
       <td data-label="Exemplo Útil">
         <code>ls --help</code>
         <button class="copy-btn" data-command="ls --help">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Mostra opções rápidas do comando</td>
+      <td data-label="O que faz">Mostra opções rápidas do comando.</td>
     </tr>
     <tr>
       <td data-label="Categoria">Sistema</td>
@@ -138,16 +138,16 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <code>uname -a</code>
         <button class="copy-btn" data-command="uname -a">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Mostra versão do kernel e arquitetura</td>
+      <td data-label="O que faz">Mostra versão do kernel e arquitetura.</td>
     </tr>
     <tr>
-      <td data-label="Categoria">Sistema</td>
+      <td data-label="Categoria">Sistema.</td>
       <td data-label="Comando"><code>htop</code></td>
       <td data-label="Exemplo Útil">
         <code>htop</code>
         <button class="copy-btn" data-command="htop">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Monitora processos em tempo real (instale com <code>sudo apt install htop</code>)</td>
+      <td data-label="O que faz">Monitora processos em tempo real. (instale com <code>sudo apt install htop</code>)</td>
     </tr>
   </tbody>
 </table>

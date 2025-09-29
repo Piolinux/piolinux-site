@@ -12,16 +12,15 @@ tags: [instalação, linux, deb, flatpak, snap, pacotes, tutorial]
 
 <section class="post-content">
 
-<p>Instalação de programas no Linux: comparação técnica entre APT, Flatpak, Snap e AppImage — com segurança, desempenho e manutenção.</p>
 
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Métodos</th>
-      <th>Comandos de Instalação</th>
-      <th>Vantagens</th>
-      <th>Desvantagens</th>
-      <th>Quando usar</th>
+      <th>Métodos.</th>
+      <th>Comandos de Instalação.</th>
+      <th>Vantagens.</th>
+      <th>Desvantagens.</th>
+      <th>Quando utilizad.</th>
     </tr>
   </thead>
   <tbody>
@@ -66,7 +65,7 @@ tags: [instalação, linux, deb, flatpak, snap, pacotes, tutorial]
       <td data-label="Quando usar">Evite, exceto se não houver alternativa (ex: alguns apps da Canonical).</td>
     </tr>
     <tr>
-      <td data-label="Método">AppImage</td>
+      <td data-label="Método">AppImage.</td>
       <td data-label="Comando de Instalação">
         <code>chmod +x app.AppImage && ./app.AppImage</code>
         <button class="copy-btn" data-command="chmod +x app.AppImage && ./app.AppImage">📋 Copiar</button>
@@ -78,38 +77,38 @@ tags: [instalação, linux, deb, flatpak, snap, pacotes, tutorial]
   </tbody>
 </table>
 
-<h3 id="desinstalar">Como desinstalar</h3>
+<h3 id="desinstalar">Como desinstalar.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Método</th>
-      <th>Comando</th>
+      <th>Métodos</th>
+      <th>Comandos</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td data-label="Método">APT</td>
+      <td data-label="Método">APT.</td>
       <td data-label="Comando">
         <code>sudo apt remove gimp</code>
         <button class="copy-btn" data-command="sudo apt remove gimp">📋 Copiar</button>
       </td>
     </tr>
     <tr>
-      <td data-label="Método">Flatpak</td>
+      <td data-label="Método">Flatpak.</td>
       <td data-label="Comando">
         <code>flatpak uninstall org.mozilla.firefox</code>
         <button class="copy-btn" data-command="flatpak uninstall org.mozilla.firefox">📋 Copiar</button>
       </td>
     </tr>
     <tr>
-      <td data-label="Método">Snap</td>
+      <td data-label="Método">Snap.</td>
       <td data-label="Comando">
         <code>sudo snap remove spotify</code>
         <button class="copy-btn" data-command="sudo snap remove spotify">📋 Copiar</button>
       </td>
     </tr>
     <tr>
-      <td data-label="Método">AppImage</td>
+      <td data-label="Método">AppImage.</td>
       <td data-label="Comando">Apague o arquivo</td>
     </tr>
   </tbody>

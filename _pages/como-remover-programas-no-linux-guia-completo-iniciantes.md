@@ -16,7 +16,7 @@ permalink: /remover-programas-linux/
 
 <section class="post-content">
 
-<p>Como remover programas corretamente no Linux: comandos por gerenciador, limpeza de dependências órfãs e prevenção de erros comuns.</p>
+
 
 <table class="evergreen-table">
   <thead>
@@ -160,15 +160,15 @@ permalink: /remover-programas-linux/
   </thead>
   <tbody>
     <tr>
-      <td data-label="Risco"><code>autoremove</code> pode remover pacotes essenciais</td>
-      <td data-label="Prevenção">Sempre revise a lista antes de confirmar</td>
+      <td data-label="Risco"><code>autoremove</code> pode remover pacotes essenciais.</td>
+      <td data-label="Prevenção">Sempre revise a lista antes de confirmar.</td>
     </tr>
     <tr>
       <td data-label="Risco">Remover meta-pacotes (ex: <code>ubuntu-desktop</code>)</td>
       <td data-label="Prevenção">Pode desinstalar todo o ambiente gráfico. Evite.</td>
     </tr>
     <tr>
-      <td data-label="Risco">Configurações antigas causam conflitos</td>
+      <td data-label="Risco">Configurações antigas causam conflitos.</td>
       <td data-label="Prevenção">Use <code>purge</code> ou <code>--delete-data</code> ao reinstalar</td>
     </tr>
   </tbody>

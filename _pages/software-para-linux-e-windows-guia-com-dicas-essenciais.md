@@ -13,9 +13,9 @@ tags: [software, dicas, linux, windows, terminal, ohmyzsh, iterm2, windows-termi
 <p>Mas respira: <strong>quase tudo o que você usa no Windows ou macOS já tem uma alternativa sólida, gratuita e muitas vezes superior no Linux</strong>.</p>
 <p>Em vez de listar “irmãos” ou “primos” com descrições vagas, aqui está o que realmente importa:</p>
 <ul>
-  <li>✅ <strong>O nome do software</strong></li>
-  <li>✅ <strong>Se é livre ou não</strong></li>
-  <li>✅ <strong>O comando exato para instalar</strong> (basta copiar e colar)</li>
+  <li>✅ <strong>O nome do software.</strong></li>
+  <li>✅ <strong>Se é livre ou não.</strong></li>
+  <li>✅ <strong>O comando exato para instalar.</strong> (basta copiar e colar)</li>
 </ul>
 
 <table class="evergreen-table">

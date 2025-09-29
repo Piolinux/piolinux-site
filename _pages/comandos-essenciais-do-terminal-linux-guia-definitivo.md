@@ -21,22 +21,21 @@ permalink: /comandos-essenciais-terminal-linux/
 <section>
 
 
-<p>Comandos essenciais do terminal Linux: navegação, arquivos, permissões e ajuda — todos testados, prontos para copiar e compatíveis com sistemas POSIX.</p>
 
-  <h3 id="navegacao">Navegação e Diretórios</h3>
+  <h3 id="navegacao">Navegação e Diretórios.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Comando</th>
-      <th>Exemplo</th>
-      <th>O que faz</th>
+      <th>Comandos</th>
+      <th>Exemplos</th>
+      <th>O que fazer</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td data-label="Comando"><code>pwd</code></td>
       <td data-label="Exemplo"><code>pwd</code></td>
-      <td data-label="O que faz">Mostra o diretório atual</td>
+      <td data-label="O que faz">Mostra o diretório atual.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>ls</code></td>
@@ -44,7 +43,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>ls -lh</code>
         <button class="copy-btn" data-command="ls -lh">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Lista arquivos com permissões e tamanhos legíveis</td>
+      <td data-label="O que faz">Lista arquivos com permissões e tamanhos legíveis.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>cd</code></td>
@@ -52,7 +51,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>cd ~/Documentos</code>
         <button class="copy-btn" data-command="cd ~/Documentos">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Entra no diretório Documentos do usuário</td>
+      <td data-label="O que faz">Entra no diretório Documentos do usuário.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>cd ..</code></td>
@@ -60,7 +59,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>cd ..</code>
         <button class="copy-btn" data-command="cd ..">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Volta um nível no diretório</td>
+      <td data-label="O que faz">Volta um nível no diretório.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>cd -</code></td>
@@ -68,18 +67,18 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>cd -</code>
         <button class="copy-btn" data-command="cd -">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Volta ao diretório anterior</td>
+      <td data-label="O que faz">Volta ao diretório anterior.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="arquivos">Arquivos e Diretórios</h3>
+<h3 id="arquivos">Arquivos e Diretórios.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Comando</th>
-      <th>Exemplo</th>
-      <th>O que faz</th>
+      <th>Comandos</th>
+      <th>Exemplos</th>
+      <th>O que fazer</th>
     </tr>
   </thead>
   <tbody>
@@ -89,7 +88,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>mkdir -p Projetos/2025</code>
         <button class="copy-btn" data-command="mkdir -p Projetos/2025">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Cria diretórios aninhados</td>
+      <td data-label="O que faz">Cria diretórios aninhados.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>touch</code></td>
@@ -97,7 +96,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>touch script.sh</code>
         <button class="copy-btn" data-command="touch script.sh">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Cria arquivo vazio</td>
+      <td data-label="O que faz">Cria arquivo vazio.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>cp</code></td>
@@ -105,7 +104,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>cp -r Pasta/ Backup/</code>
         <button class="copy-btn" data-command="cp -r Pasta/ Backup/">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Copia diretório recursivamente</td>
+      <td data-label="O que faz">Copia diretório recursivamente.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>mv</code></td>
@@ -113,7 +112,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>mv antigo.txt novo.txt</code>
         <button class="copy-btn" data-command="mv antigo.txt novo.txt">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Renomeia ou move arquivo</td>
+      <td data-label="O que faz">Renomeia ou move arquivo.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>rm</code></td>
@@ -135,9 +134,9 @@ permalink: /comandos-essenciais-terminal-linux/
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Comando</th>
-      <th>Exemplo</th>
-      <th>O que faz</th>
+      <th>Comandos</th>
+      <th>Exemplos</th>
+      <th>O que fazer</th>
     </tr>
   </thead>
   <tbody>
@@ -147,7 +146,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>cat /etc/os-release</code>
         <button class="copy-btn" data-command="cat /etc/os-release">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Mostra conteúdo de arquivos pequenos</td>
+      <td data-label="O que faz">Mostra conteúdo de arquivos pequenos.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>less</code></td>
@@ -155,7 +154,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>less /var/log/syslog</code>
         <button class="copy-btn" data-command="less /var/log/syslog">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Visualiza arquivos grandes (pressione <kbd>q</kbd> para sair)</td>
+      <td data-label="O que faz">Visualiza arquivos grandes. (pressione <kbd>q</kbd> para sair)</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>head</code></td>
@@ -163,7 +162,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>head -n 10 log.txt</code>
         <button class="copy-btn" data-command="head -n 10 log.txt">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Mostra as 10 primeiras linhas</td>
+      <td data-label="O que faz">Mostra as 10 primeiras linhas.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>tail -f</code></td>
@@ -171,7 +170,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>tail -f /var/log/auth.log</code>
         <button class="copy-btn" data-command="tail -f /var/log/auth.log">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Monitora logs em tempo real</td>
+      <td data-label="O que faz">Monitora logs em tempo real.</td>
     </tr>
   </tbody>
 </table>
@@ -180,9 +179,9 @@ permalink: /comandos-essenciais-terminal-linux/
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Comando</th>
-      <th>Exemplo</th>
-      <th>O que faz</th>
+      <th>Comandos</th>
+      <th>Exemplos</th>
+      <th>O que fazer</th>
     </tr>
   </thead>
   <tbody>
@@ -192,7 +191,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>ps aux | grep nginx</code>
         <button class="copy-btn" data-command="ps aux | grep nginx">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Lista processos com filtro</td>
+      <td data-label="O que faz">Lista processos com filtro.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>htop</code></td>
@@ -200,7 +199,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>htop</code>
         <button class="copy-btn" data-command="htop">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Monitora CPU, memória e processos (instale com <code>sudo apt install htop</code>)</td>
+      <td data-label="O que faz">Monitora CPU, memória e processos. (instale com <code>sudo apt install htop</code>)</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>df -h</code></td>
@@ -208,7 +207,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>df -h</code>
         <button class="copy-btn" data-command="df -h">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Mostra uso de disco em GB/MB</td>
+      <td data-label="O que faz">Mostra uso de disco em GB/MB.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>free -h</code></td>
@@ -216,7 +215,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>free -h</code>
         <button class="copy-btn" data-command="free -h">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Mostra uso de memória RAM</td>
+      <td data-label="O que faz">Mostra uso de memória RAM.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>uname -a</code></td>
@@ -224,7 +223,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>uname -a</code>
         <button class="copy-btn" data-command="uname -a">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Mostra versão do kernel e sistema</td>
+      <td data-label="O que faz">Mostra versão do kernel e sistema.</td>
     </tr>
   </tbody>
 </table>
@@ -233,9 +232,9 @@ permalink: /comandos-essenciais-terminal-linux/
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Comando</th>
-      <th>Exemplo</th>
-      <th>O que faz</th>
+      <th>Comandos</th>
+      <th>Exemplos</th>
+      <th>O que fazer</th>
     </tr>
   </thead>
   <tbody>
@@ -245,7 +244,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>ip a</code>
         <button class="copy-btn" data-command="ip a">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Mostra IPs das interfaces de rede</td>
+      <td data-label="O que faz">Mostra IPs das interfaces de rede.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>ping</code></td>
@@ -253,7 +252,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>ping -c 4 google.com</code>
         <button class="copy-btn" data-command="ping -c 4 google.com">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Testa conectividade (4 pacotes)</td>
+      <td data-label="O que faz">Testa conectividade. (4 pacotes)</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>ss -tulpn</code></td>
@@ -261,7 +260,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>sudo ss -tulpn</code>
         <button class="copy-btn" data-command="sudo ss -tulpn">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Mostra portas abertas e serviços</td>
+      <td data-label="O que faz">Mostra portas abertas e serviços.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>curl</code></td>
@@ -277,7 +276,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>ssh usuario@192.168.1.10</code>
         <button class="copy-btn" data-command="ssh usuario@192.168.1.10">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Conecta a servidor remoto</td>
+      <td data-label="O que faz">Conecta a servidor remoto.</td>
     </tr>
   </tbody>
 </table>
@@ -286,9 +285,9 @@ permalink: /comandos-essenciais-terminal-linux/
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Comando</th>
-      <th>Exemplo</th>
-      <th>O que faz</th>
+      <th>Comandos</th>
+      <th>Exemplos</th>
+      <th>O que fazer</th>
     </tr>
   </thead>
   <tbody>
@@ -298,7 +297,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>grep "erro" /var/log/syslog</code>
         <button class="copy-btn" data-command="grep &quot;erro&quot; /var/log/syslog">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Procura palavra em arquivo</td>
+      <td data-label="O que faz">Procura palavra em arquivo.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>find</code></td>
@@ -306,7 +305,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>find . -name "*.log"</code>
         <button class="copy-btn" data-command="find . -name &quot;*.log&quot;">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Procura arquivos .log no diretório atual</td>
+      <td data-label="O que faz">Procura arquivos .log no diretório atual.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>awk</code></td>
@@ -322,7 +321,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>sed -i 's/antigo/novo/g' arquivo.txt</code>
         <button class="copy-btn" data-command="sed -i 's/antigo/novo/g' arquivo.txt">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Substitui texto em arquivo</td>
+      <td data-label="O que faz">Substitui texto em arquivo.</td>
     </tr>
   </tbody>
 </table>
@@ -331,9 +330,9 @@ permalink: /comandos-essenciais-terminal-linux/
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Distro</th>
-      <th>Comando</th>
-      <th>O que faz</th>
+      <th>Distros</th>
+      <th>Comandos</th>
+      <th>O que fazer</th>
     </tr>
   </thead>
   <tbody>
@@ -343,7 +342,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>sudo apt install vlc</code>
         <button class="copy-btn" data-command="sudo apt install vlc">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Instala o VLC</td>
+      <td data-label="O que faz">Instala o VLC.</td>
     </tr>
     <tr>
       <td data-label="Distro">Fedora/RHEL</td>
@@ -351,7 +350,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>sudo dnf install git</code>
         <button class="copy-btn" data-command="sudo dnf install git">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Instala o Git</td>
+      <td data-label="O que faz">Instala o Git.</td>
     </tr>
     <tr>
       <td data-label="Distro">Arch Linux</td>
@@ -359,7 +358,7 @@ permalink: /comandos-essenciais-terminal-linux/
         <code>sudo pacman -Syu</code>
         <button class="copy-btn" data-command="sudo pacman -Syu">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Atualiza todo o sistema</td>
+      <td data-label="O que faz">Atualiza todo o sistema.</td>
     </tr>
   </tbody>
 </table>

@@ -16,7 +16,6 @@ permalink: /personalizar-linux-iniciantes/
 
 <section class="post-content">
 
-<p>Personalização técnica de ambientes gráficos: temas, ícones, extensões e configurações — sem efeitos visuais desnecessários.</p>
 
   <h3 id="temas-icone">Temas e Ícones</h3>
 <table class="evergreen-table">
@@ -29,7 +28,7 @@ permalink: /personalizar-linux-iniciantes/
   </thead>
   <tbody>
     <tr>
-      <td data-label="Ação">Instalar GNOME Tweaks</td>
+      <td data-label="Ação">Instalar GNOME Tweaks.</td>
       <td data-label="Comando / Caminho">
         <code>sudo apt install gnome-tweaks</code>
         <button class="copy-btn" data-command="sudo apt install gnome-tweaks">📋 Copiar</button>
@@ -37,7 +36,7 @@ permalink: /personalizar-linux-iniciantes/
       <td data-label="Fontes Confiáveis">—</td>
     </tr>
     <tr>
-      <td data-label="Ação">Aplicar tema de usuário</td>
+      <td data-label="Ação">Aplicar tema de usuário.</td>
       <td data-label="Comando / Caminho">
         <code>~/.themes/</code> (temas)<br>
         <code>~/.icons/</code> (ícones)
@@ -48,7 +47,7 @@ permalink: /personalizar-linux-iniciantes/
       </td>
     </tr>
     <tr>
-      <td data-label="Ação">Habilitar temas personalizados</td>
+      <td data-label="Ação">Habilitar temas personalizados.</td>
       <td data-label="Comando / Caminho">
         Instale a extensão <strong>User Themes</strong> via <code>extensions.gnome.org</code>
       </td>
@@ -59,7 +58,7 @@ permalink: /personalizar-linux-iniciantes/
   </tbody>
 </table>
 
-<h3 id="extensoes">Extensões Úteis do GNOME Shell</h3>
+<h3 id="extensoes">Extensões Úteis do GNOME Shell.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
@@ -71,28 +70,28 @@ permalink: /personalizar-linux-iniciantes/
   <tbody>
     <tr>
       <td data-label="Extensão">Dash to Dock</td>
-      <td data-label="Função">Dock personalizável (posição, transparência, comportamento)</td>
+      <td data-label="Função">Dock personalizável. (posição, transparência, comportamento)</td>
       <td data-label="Instalação">
         <a href="https://extensions.gnome.org/extension/307/dash-to-dock/" target="_blank">extensions.gnome.org</a>
       </td>
     </tr>
     <tr>
       <td data-label="Extensão">User Themes</td>
-      <td data-label="Função">Permite aplicar temas baixados</td>
+      <td data-label="Função">Permite aplicar temas baixados.</td>
       <td data-label="Instalação">
         <a href="https://extensions.gnome.org/extension/19/user-themes/" target="_blank">extensions.gnome.org</a>
       </td>
     </tr>
     <tr>
       <td data-label="Extensão">Vitals</td>
-      <td data-label="Função">Mostra CPU, RAM, disco e rede na barra superior</td>
+      <td data-label="Função">Mostra CPU, RAM, disco e rede na barra superior.</td>
       <td data-label="Instalação">
         <a href="https://extensions.gnome.org/extension/1460/vitals/" target="_blank">extensions.gnome.org</a>
       </td>
     </tr>
     <tr>
       <td data-label="Extensão">Blur My Shell</td>
-      <td data-label="Função">Adiciona efeito de desfoque (use com moderação)</td>
+      <td data-label="Função">Adiciona efeito de desfoque. (use com moderação)</td>
       <td data-label="Instalação">
         <a href="https://extensions.gnome.org/extension/3193/blur-my-shell/" target="_blank">extensions.gnome.org</a>
       </td>
@@ -111,23 +110,23 @@ permalink: /personalizar-linux-iniciantes/
   <tbody>
     <tr>
       <td data-label="Atalho"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd></td>
-      <td data-label="Ação">Abrir terminal</td>
+      <td data-label="Ação">Abrir terminal.</td>
     </tr>
     <tr>
       <td data-label="Atalho"><kbd>Print</kbd></td>
-      <td data-label="Ação">Capturar tela inteira</td>
+      <td data-label="Ação">Capturar tela inteira.</td>
     </tr>
     <tr>
       <td data-label="Atalho"><kbd>Alt</kbd> + <kbd>Tab</kbd></td>
-      <td data-label="Ação">Alternar entre janelas</td>
+      <td data-label="Ação">Alternar entre janelas.</td>
     </tr>
     <tr>
       <td data-label="Atalho"><kbd>Super</kbd> + <kbd>D</kbd></td>
-      <td data-label="Ação">Mostrar área de trabalho</td>
+      <td data-label="Ação">Mostrar área de trabalho.</td>
     </tr>
     <tr>
       <td data-label="Atalho"><kbd>Super</kbd> + <kbd>A</kbd></td>
-      <td data-label="Ação">Abrir visão de aplicativos</td>
+      <td data-label="Ação">Abrir visão de aplicativos.</td>
     </tr>
   </tbody>
 </table>
@@ -143,11 +142,11 @@ permalink: /personalizar-linux-iniciantes/
   <tbody>
     <tr>
       <td data-label="Site"><a href="https://unsplash.com/" target="_blank">unsplash.com</a></td>
-      <td data-label="Tipo">Fotos de alta resolução, livres para uso</td>
+      <td data-label="Tipo">Fotos de alta resolução, livres para uso.</td>
     </tr>
     <tr>
       <td data-label="Site"><a href="https://wallhaven.cc/" target="_blank">wallhaven.cc</a></td>
-      <td data-label="Tipo">Wallpapers técnicos, artísticos e minimalistas</td>
+      <td data-label="Tipo">Wallpapers técnicos, artísticos e minimalistas.</td>
     </tr>
   </tbody>
 </table>
@@ -193,7 +192,7 @@ permalink: /personalizar-linux-iniciantes/
         <code>dconf dump / > ~/.config/gnome-backup.dconf</code>
         <button class="copy-btn" data-command="dconf dump / > ~/.config/gnome-backup.dconf">📋 Copiar</button>
       </td>
-      <td data-label="Observação">Backup das configurações do GNOME</td>
+      <td data-label="Observação">Backup das configurações do GNOME.</td>
     </tr>
     <tr>
       <td data-label="Ferramenta">Restaurar</td>
@@ -201,7 +200,7 @@ permalink: /personalizar-linux-iniciantes/
         <code>dconf load / < ~/.config/gnome-backup.dconf</code>
         <button class="copy-btn" data-command="dconf load / < ~/.config/gnome-backup.dconf">📋 Copiar</button>
       </td>
-      <td data-label="Observação">Restaura configurações após falha</td>
+      <td data-label="Observação">Restaura configurações após falha.</td>
     </tr>
   </tbody>
 </table>
@@ -223,13 +222,13 @@ permalink: /personalizar-linux-iniciantes/
       </td>
     </tr>
     <tr>
-      <td data-label="Risco">Extensões que quebram o GNOME Shell</td>
+      <td data-label="Risco">Extensões que quebram o GNOME Shell.</td>
       <td data-label="Solução">
         Reinicie o shell com <kbd>Alt</kbd> + <kbd>F2</kbd>, digite <code>r</code> e pressione <kbd>Enter</kbd>
       </td>
     </tr>
     <tr>
-      <td data-label="Risco">Temas incompatíveis com versão do GNOME</td>
+      <td data-label="Risco">Temas incompatíveis com versão do GNOME.</td>
       <td data-label="Solução">
         Volte ao tema padrão via GNOME Tweaks ou remova a pasta em <code>~/.themes/</code>
       </td>

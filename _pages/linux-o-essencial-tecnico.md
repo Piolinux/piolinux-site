@@ -16,7 +16,7 @@ tags: [linux, kernel, open-source, sistema-operacional, tutorial]
 
 <section class="post-content">
 
-<p>Referência técnica para quem começa no Linux: comandos reais, estrutura de arquivos e boas práticas — sem tutoriais genéricos.</p>
+
 
    
    <h3>Qual significado de Linux?</h3>
@@ -56,38 +56,38 @@ tags: [linux, kernel, open-source, sistema-operacional, tutorial]
   <tbody>
     <tr>
       <td data-label="Distribuição">Ubuntu.</td>
-      <td data-label="Base">Debian</td>
-      <td data-label="Para quem é">Iniciantes, uso diário</td>
-      <td data-label="Requisitos">2 GHz, 4 GB RAM, 25 GB disco</td>
+      <td data-label="Base">Debian.</td>
+      <td data-label="Para quem é">Iniciantes, uso diário.</td>
+      <td data-label="Requisitos">2 GHz, 4 GB RAM, 25 GB disco.</td>
     </tr>
     <tr>
       <td data-label="Distribuição">Linux Mint.</td>
-      <td data-label="Base">Ubuntu</td>
-      <td data-label="Para quem é">Quem vem do Windows</td>
-      <td data-label="Requisitos">1 GHz, 2 GB RAM, 20 GB disco</td>
+      <td data-label="Base">Ubuntu.</td>
+      <td data-label="Para quem é">Quem vem do Windows.</td>
+      <td data-label="Requisitos">1 GHz, 2 GB RAM, 20 GB disco.</td>
     </tr>
     <tr>
       <td data-label="Distribuição">Debian Stable.</td>
       <td data-label="Base">Própria</td>
-      <td data-label="Para quem é">Servidores, estabilidade extrema</td>
-      <td data-label="Requisitos">1 GHz, 512 MB RAM, 10 GB disco</td>
+      <td data-label="Para quem é">Servidores, estabilidade extrema.</td>
+      <td data-label="Requisitos">1 GHz, 512 MB RAM, 10 GB disco.</td>
     </tr>
     <tr>
       <td data-label="Distribuição">Arch Linux.</td>
       <td data-label="Base">Própria</td>
-      <td data-label="Para quem é">Usuários avançados, rolling release</td>
-      <td data-label="Requisitos">Mínimos, mas exige conhecimento técnico</td>
+      <td data-label="Para quem é">Usuários avançados, rolling release.</td>
+      <td data-label="Requisitos">Mínimos, mas exige conhecimento técnico.</td>
     </tr>
     <tr>
       <td data-label="Distribuição">Fedora Workstation.</td>
       <td data-label="Base">RHEL</td>
-      <td data-label="Para quem é">Desenvolvedores, tecnologias recentes</td>
-      <td data-label="Requisitos">2 GHz, 4 GB RAM, 20 GB disco</td>
+      <td data-label="Para quem é">Desenvolvedores, tecnologias recentes.</td>
+      <td data-label="Requisitos">2 GHz, 4 GB RAM, 20 GB disco.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="vantagens">Vantagens Técnicas Reais</h3>
+<h3 id="vantagens">Vantagens Técnicas Reais.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
@@ -125,20 +125,20 @@ tags: [linux, kernel, open-source, sistema-operacional, tutorial]
   </thead>
   <tbody>
     <tr>
-      <td data-label="Plataforma">Servidores web</td>
-      <td data-label="Uso do Linux">~90% dos servidores (Netcraft, 2024)</td>
+      <td data-label="Plataforma">Servidores web.</td>
+      <td data-label="Uso do Linux">~90% dos servidores (Netcraft, 2024).</td>
     </tr>
     <tr>
       <td data-label="Plataforma">Android</td>
-      <td data-label="Uso do Linux">Kernel Linux modificado + userspace próprio</td>
+      <td data-label="Uso do Linux">Kernel Linux modificado + userspace próprio.</td>
     </tr>
     <tr>
-      <td data-label="Plataforma">Supercomputadores</td>
+      <td data-label="Plataforma">Supercomputadores.</td>
       <td data-label="Uso do Linux">100% dos Top 500 (top500.org)</td>
     </tr>
     <tr>
       <td data-label="Plataforma">Cloud</td>
-      <td data-label="Uso do Linux">AWS, Google Cloud, Azure usam kernels Linux otimizados</td>
+      <td data-label="Uso do Linux">AWS, Google Cloud, Azure usam kernels Linux otimizados.</td>
     </tr>
   </tbody>
 </table>
@@ -153,18 +153,18 @@ tags: [linux, kernel, open-source, sistema-operacional, tutorial]
   </thead>
   <tbody>
     <tr>
-      <td data-label="Método">Testar sem instalar</td>
+      <td data-label="Método">Testar sem instalar.</td>
       <td data-label="Ação">Use um <strong>Live USB</strong> (com Rufus ou Balena Etcher)</td>
     </tr>
     <tr>
-      <td data-label="Método">Testar em máquina virtual</td>
+      <td data-label="Método">Testar em máquina virtual.</td>
       <td data-label="Ação">
         <code>sudo apt install virtualbox</code>
         <button class="copy-btn" data-command="sudo apt install virtualbox">📋 Copiar</button>
       </td>
     </tr>
     <tr>
-      <td data-label="Método">Primeira distro recomendada</td>
+      <td data-label="Método">Primeira distro recomendada.</td>
       <td data-label="Ação">Ubuntu ou Linux Mint (para desktop), Debian (para servidores)</td>
     </tr>
   </tbody>

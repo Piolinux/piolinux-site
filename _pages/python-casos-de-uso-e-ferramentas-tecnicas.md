@@ -30,7 +30,7 @@ tags: [python, automacao, web, dados, machine-learning, iniciantes]
   <tbody>
     <tr>
       <td data-label="Domínio">Web (backend)</td>
-      <td data-label="Ferramenta / Biblioteca">Django</td>
+      <td data-label="Ferramenta / Biblioteca">Django.</td>
       <td data-label="Propósito Técnico">Framework full-stack com ORM, admin e autenticação</td>
       <td data-label="Exemplo de Uso">
         <code>django-admin startproject mysite</code>
@@ -40,7 +40,7 @@ tags: [python, automacao, web, dados, machine-learning, iniciantes]
     <tr>
       <td data-label="Domínio">Web (backend)</td>
       <td data-label="Ferramenta / Biblioteca">Flask</td>
-      <td data-label="Propósito Técnico">Microframework leve para APIs e apps pequenas</td>
+      <td data-label="Propósito Técnico">Microframework leve para APIs e apps pequenas.</td>
       <td data-label="Exemplo de Uso">
         <code>pip install Flask && python -c "from flask import Flask; app=Flask(__name__); app.run()"</code>
         <button class="copy-btn" data-command="pip install Flask && python -c &quot;from flask import Flask; app=Flask(__name__); app.run()&quot;">📋 Copiar</button>
@@ -49,7 +49,7 @@ tags: [python, automacao, web, dados, machine-learning, iniciantes]
     <tr>
       <td data-label="Domínio">Web (APIs modernas)</td>
       <td data-label="Ferramenta / Biblioteca">FastAPI</td>
-      <td data-label="Propósito Técnico">APIs rápidas com validação automática e OpenAPI</td>
+      <td data-label="Propósito Técnico">APIs rápidas com validação automática e OpenAPI.</td>
       <td data-label="Exemplo de Uso">
         <code>pip install fastapi uvicorn</code>
         <button class="copy-btn" data-command="pip install fastapi uvicorn">📋 Copiar</button>
@@ -66,7 +66,7 @@ tags: [python, automacao, web, dados, machine-learning, iniciantes]
     <tr>
       <td data-label="Domínio">Ciência de Dados</td>
       <td data-label="Ferramenta / Biblioteca">NumPy</td>
-      <td data-label="Propósito Técnico">Cálculos numéricos com arrays multidimensionais</td>
+      <td data-label="Propósito Técnico">Cálculos numéricos com arrays multidimensionais.</td>
       <td data-label="Exemplo de Uso">
         <code>arr = np.array([1, 2, 3])</code>
       </td>
@@ -74,7 +74,7 @@ tags: [python, automacao, web, dados, machine-learning, iniciantes]
     <tr>
       <td data-label="Domínio">Visualização</td>
       <td data-label="Ferramenta / Biblioteca">Matplotlib / Seaborn</td>
-      <td data-label="Propósito Técnico">Gráficos estáticos e estatísticos</td>
+      <td data-label="Propósito Técnico">Gráficos estáticos e estatísticos.</td>
       <td data-label="Exemplo de Uso">
         <code>plt.plot(x, y); plt.show()</code>
       </td>
@@ -90,7 +90,7 @@ tags: [python, automacao, web, dados, machine-learning, iniciantes]
     <tr>
       <td data-label="Domínio">IA / Deep Learning</td>
       <td data-label="Ferramenta / Biblioteca">TensorFlow / PyTorch</td>
-      <td data-label="Propósito Técnico">Redes neurais, modelos de linguagem, visão computacional</td>
+      <td data-label="Propósito Técnico">Redes neurais, modelos de linguagem, visão computacional.</td>
       <td data-label="Exemplo de Uso">
         <code>pip install torch torchvision</code>
         <button class="copy-btn" data-command="pip install torch torchvision">📋 Copiar</button>
@@ -99,7 +99,7 @@ tags: [python, automacao, web, dados, machine-learning, iniciantes]
     <tr>
       <td data-label="Domínio">Automação</td>
       <td data-label="Ferramenta / Biblioteca">os, shutil, pathlib</td>
-      <td data-label="Propósito Técnico">Manipulação de arquivos, diretórios e caminhos</td>
+      <td data-label="Propósito Técnico">Manipulação de arquivos, diretórios e caminhos.</td>
       <td data-label="Exemplo de Uso">
         <code>shutil.copy('origem.txt', 'destino.txt')</code>
       </td>
@@ -115,7 +115,7 @@ tags: [python, automacao, web, dados, machine-learning, iniciantes]
     <tr>
       <td data-label="Domínio">Jogos (2D)</td>
       <td data-label="Ferramenta / Biblioteca">Pygame</td>
-      <td data-label="Propósito Técnico">Desenvolvimento de jogos 2D simples</td>
+      <td data-label="Propósito Técnico">Desenvolvimento de jogos 2D simples.</td>
       <td data-label="Exemplo de Uso">
         <code>pip install pygame</code>
         <button class="copy-btn" data-command="pip install pygame">📋 Copiar</button>
@@ -132,7 +132,7 @@ tags: [python, automacao, web, dados, machine-learning, iniciantes]
     <tr>
       <td data-label="Domínio">Interface Gráfica (GUI)</td>
       <td data-label="Ferramenta / Biblioteca">PyQt</td>
-      <td data-label="Propósito Técnico">Aplicações desktop profissionais</td>
+      <td data-label="Propósito Técnico">Aplicações desktop profissionais.</td>
       <td data-label="Exemplo de Uso">
         <code>pip install PyQt5</code>
         <button class="copy-btn" data-command="pip install PyQt5">📋 Copiar</button>
@@ -161,11 +161,11 @@ tags: [python, automacao, web, dados, machine-learning, iniciantes]
   <tbody>
     <tr>
       <td data-label="Característica">Interpretado</td>
-      <td data-label="Implicação Prática">Execução imediata sem compilação; ideal para prototipagem</td>
+      <td data-label="Implicação Prática">Execução imediata sem compilação; ideal para prototipagem.</td>
     </tr>
     <tr>
       <td data-label="Característica">Multiplataforma</td>
-      <td data-label="Implicação Prática">Mesmo código roda em Linux, Windows, macOS</td>
+      <td data-label="Implicação Prática">Mesmo código roda em Linux, Windows, macOS.</td>
     </tr>
     <tr>
       <td data-label="Característica">Gerenciamento de memória automático</td>
@@ -173,7 +173,7 @@ tags: [python, automacao, web, dados, machine-learning, iniciantes]
     </tr>
     <tr>
       <td data-label="Característica">PIP + PyPI</td>
-      <td data-label="Implicação Prática">Mais de 500.000 pacotes prontos para instalar com <code>pip install</code></td>
+      <td data-label="Implicação Prática">Mais de 500.000 pacotes prontos para instalar com <code>pip install.</code></td>
     </tr>
   </tbody>
 </table>

@@ -13,8 +13,6 @@ tags: [segurança, linux, firewall, senhas, permissões, sudo]
 
 <section>
 
-<p>Práticas reais de segurança no Linux: atualizações, firewall, senhas, backups e permissões — sem alarmismo ou antivírus desnecessários.</p>
-
 <table class="evergreen-table">
   <thead>
     <tr>

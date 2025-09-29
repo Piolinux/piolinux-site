@@ -15,13 +15,12 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
 
 <section class="post-content">
 
-<p>Comandos avançados para manipulação de arquivos, processos, automação e rede — com exemplos reais e flags úteis em produção.</p>
-    <table class="evergreen-table">
+   <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Comando</th>
-      <th>Exemplo Avançado</th>
-      <th>O que faz</th>
+      <th>Comandos.</th>
+      <th>Exemplos Avançados.</th>
+      <th>O que fazer.</th>
     </tr>
   </thead>
   <tbody>
@@ -31,7 +30,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <code>find /var/log -name "*.log" -mtime +30 -exec gzip {} \;</code>
         <button class="copy-btn" data-command="find /var/log -name &quot;*.log&quot; -mtime +30 -exec gzip {} \;">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Compacta logs mais antigos que 30 dias</td>
+      <td data-label="O que faz">Compacta logs mais antigos que 30 dias.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>grep</code></td>
@@ -47,7 +46,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <code>rsync -avz -e ssh /home/user/ user@backup:/backup/</code>
         <button class="copy-btn" data-command="rsync -avz -e ssh /home/user/ user@backup:/backup/">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Sincroniza com servidor remoto via SSH</td>
+      <td data-label="O que faz">Sincroniza com servidor remoto via SSH.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>awk</code></td>
@@ -55,7 +54,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <code>df -h | awk '$5+0 > 80 {print $1, $5}'</code>
         <button class="copy-btn" data-command="df -h | awk '$5+0 > 80 {print $1, $5}'">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Lista partições com uso > 80%</td>
+      <td data-label="O que faz">Lista partições com uso > 80%.</td>
     </tr>
   </tbody>
 </table>
@@ -63,9 +62,9 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Comando</th>
-      <th>Exemplo</th>
-      <th>Observação Técnica</th>
+      <th>Comandos.</th>
+      <th>Exemplos.</th>
+      <th>Observações Técnicas.</th>
     </tr>
   </thead>
   <tbody>
@@ -75,7 +74,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <code>chmod 600 ~/.ssh/id_rsa</code>
         <button class="copy-btn" data-command="chmod 600 ~/.ssh/id_rsa">📋 Copiar</button>
       </td>
-      <td data-label="Observação Técnica">Permissões seguras para chave SSH</td>
+      <td data-label="Observação Técnica">Permissões seguras para chave SSH.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>chmod</code> (recursivo)</td>
@@ -83,7 +82,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <code>chmod -R 755 /var/www/html</code>
         <button class="copy-btn" data-command="chmod -R 755 /var/www/html">📋 Copiar</button>
       </td>
-      <td data-label="Observação Técnica">Define permissões para site web (755 pastas, 644 arquivos)</td>
+      <td data-label="Observação Técnica">Define permissões para site web.(755 pastas, 644 arquivos)</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>chown</code></td>
@@ -91,14 +90,14 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <code>sudo chown -R www-data:www-data /var/www</code>
         <button class="copy-btn" data-command="sudo chown -R www-data:www-data /var/www">📋 Copiar</button>
       </td>
-      <td data-label="Observação Técnica">Define dono para servidor web</td>
+      <td data-label="Observação Técnica">Define dono para servidor web.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>umask</code></td>
       <td data-label="Exemplo">
         <code>umask 022</code> (padrão) ou <code>umask 077</code> (privado)
       </td>
-      <td data-label="Observação Técnica">Define permissões padrão para novos arquivos</td>
+      <td data-label="Observação Técnica">Define permissões padrão para novos arquivos.</td>
     </tr>
   </tbody>
 </table>
@@ -107,9 +106,9 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Comando</th>
-      <th>Exemplo</th>
-      <th>Função</th>
+      <th>Comandos.</th>
+      <th>Exemplos.</th>
+      <th>Funções.</th>
     </tr>
   </thead>
   <tbody>
@@ -119,7 +118,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <code>htop</code>
         <button class="copy-btn" data-command="htop">📋 Copiar</button>
       </td>
-      <td data-label="Função">Monitoramento interativo com árvore de processos</td>
+      <td data-label="Função">Monitoramento interativo com árvore de processos.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>ps</code></td>
@@ -127,7 +126,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <code>ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head</code>
         <button class="copy-btn" data-command="ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head">📋 Copiar</button>
       </td>
-      <td data-label="Função">Lista processos por uso de memória</td>
+      <td data-label="Função">Lista processos por uso de memória.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>lsof</code></td>
@@ -135,7 +134,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <code>lsof -i :80</code>
         <button class="copy-btn" data-command="lsof -i :80">📋 Copiar</button>
       </td>
-      <td data-label="Função">Mostra processo usando a porta 80</td>
+      <td data-label="Função">Mostra processo usando a porta 80.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>iotop</code></td>
@@ -143,7 +142,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <code>sudo iotop</code>
         <button class="copy-btn" data-command="sudo iotop">📋 Copiar</button>
       </td>
-      <td data-label="Função">Monitora uso de disco em tempo real</td>
+      <td data-label="Função">Monitora uso de disco em tempo real.</td>
     </tr>
   </tbody>
 </table>

@@ -16,7 +16,7 @@ tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop-os, kali]
 
 <section class="post-content">
 
-<p>Comparação objetiva de distribuições Linux: base, desktop, requisitos e comandos de atualização — para escolher com critério técnico.</p>
+
 
     <table class="evergreen-table">
   <thead>
@@ -34,7 +34,7 @@ tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop-os, kali]
       <td data-label="Distribuição">Ubuntu</td>
       <td data-label="Base">Debian</td>
       <td data-label="Desktop">GNOME</td>
-      <td data-label="Requisitos Mínimos">2 GHz, 4 GB RAM, 25 GB disco</td>
+      <td data-label="Requisitos Mínimos">2 GHz, 4 GB RAM, 25 GB disco.</td>
       <td data-label="Comando de Atualização">
         <code>sudo apt update && sudo apt upgrade -y</code>
         <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>
@@ -45,7 +45,7 @@ tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop-os, kali]
       <td data-label="Distribuição">Linux Mint</td>
       <td data-label="Base">Ubuntu</td>
       <td data-label="Desktop">Cinnamon / MATE / Xfce</td>
-      <td data-label="Requisitos Mínimos">1 GHz, 2 GB RAM, 20 GB disco</td>
+      <td data-label="Requisitos Mínimos">1 GHz, 2 GB RAM, 20 GB disco.</td>
       <td data-label="Comando de Atualização">
         <code>sudo apt update && sudo apt upgrade -y</code>
         <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>
@@ -56,7 +56,7 @@ tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop-os, kali]
       <td data-label="Distribuição">Zorin OS (Core)</td>
       <td data-label="Base">Ubuntu</td>
       <td data-label="Desktop">GNOME modificado</td>
-      <td data-label="Requisitos Mínimos">2 GHz, 4 GB RAM, 20 GB disco</td>
+      <td data-label="Requisitos Mínimos">2 GHz, 4 GB RAM, 20 GB disco.</td>
       <td data-label="Comando de Atualização">
         <code>sudo apt update && sudo apt upgrade -y</code>
         <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>
@@ -67,7 +67,7 @@ tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop-os, kali]
       <td data-label="Distribuição">Elementary OS</td>
       <td data-label="Base">Ubuntu</td>
       <td data-label="Desktop">Pantheon</td>
-      <td data-label="Requisitos Mínimos">2 GHz, 4 GB RAM, 25 GB disco</td>
+      <td data-label="Requisitos Mínimos">2 GHz, 4 GB RAM, 25 GB disco.</td>
       <td data-label="Comando de Atualização">
         <code>sudo apt update && sudo apt upgrade -y</code>
         <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>
@@ -78,7 +78,7 @@ tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop-os, kali]
       <td data-label="Distribuição">Pop!_OS</td>
       <td data-label="Base">Ubuntu</td>
       <td data-label="Desktop">GNOME modificado</td>
-      <td data-label="Requisitos Mínimos">2 GHz, 4 GB RAM, 20 GB disco</td>
+      <td data-label="Requisitos Mínimos">2 GHz, 4 GB RAM, 20 GB disco.</td>
       <td data-label="Comando de Atualização">
         <code>sudo apt update && sudo apt upgrade -y</code>
         <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>
@@ -89,7 +89,7 @@ tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop-os, kali]
       <td data-label="Distribuição">Lubuntu</td>
       <td data-label="Base">Ubuntu</td>
       <td data-label="Desktop">LXQt</td>
-      <td data-label="Requisitos Mínimos">1 GHz, 1 GB RAM, 10 GB disco</td>
+      <td data-label="Requisitos Mínimos">1 GHz, 1 GB RAM, 10 GB disco.</td>
       <td data-label="Comando de Atualização">
         <code>sudo apt update && sudo apt upgrade -y</code>
         <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>

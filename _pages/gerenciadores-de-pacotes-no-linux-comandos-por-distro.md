@@ -14,8 +14,7 @@ tags: [pacotes, linux, apt, dnf, pacman, zypper, instalacao]
 
 <section>
     <table class="evergreen-table">
-    <p>Gerenciadores de pacotes por distro: APT, DNF, Pacman, Zypper — comandos de instalação, remoção e atualização sem mitos.</p>
-    
+   
     
   <thead>
     <tr>
@@ -30,7 +29,7 @@ tags: [pacotes, linux, apt, dnf, pacman, zypper, instalacao]
   <tbody>
     <tr>
       <td data-label="Gerenciador">APT</td>
-      <td data-label="Distribuições">Debian, Ubuntu, Mint, Pop!_OS</td>
+      <td data-label="Distribuições">Debian, Ubuntu, Mint, Pop!_OS.</td>
       <td data-label="Comando: Atualizar">
         <code>sudo apt update && sudo apt upgrade -y</code>
         <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>
@@ -64,7 +63,7 @@ tags: [pacotes, linux, apt, dnf, pacman, zypper, instalacao]
     </tr>
     <tr>
       <td data-label="Gerenciador">Pacman</td>
-      <td data-label="Distribuições">Arch Linux, Manjaro, EndeavourOS</td>
+      <td data-label="Distribuições">Arch Linux, Manjaro, EndeavourOS.</td>
       <td data-label="Comando: Atualizar">
         <code>sudo pacman -Syu</code>
         <button class="copy-btn" data-command="sudo pacman -Syu">📋 Copiar</button>
@@ -81,7 +80,7 @@ tags: [pacotes, linux, apt, dnf, pacman, zypper, instalacao]
     </tr>
     <tr>
       <td data-label="Gerenciador">Zypper</td>
-      <td data-label="Distribuições">openSUSE Tumbleweed / Leap</td>
+      <td data-label="Distribuições">openSUSE Tumbleweed / Leap.</td>
       <td data-label="Comando: Atualizar">
         <code>sudo zypper update</code>
         <button class="copy-btn" data-command="sudo zypper update">📋 Copiar</button>

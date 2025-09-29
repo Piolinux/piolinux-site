@@ -11,7 +11,7 @@ tags: [codigos, linux, python, html, bash, ohmyzsh, iterm2, windows-terminal]
 
 <section>
 
-<h3>Backup com verificação de diretório</h3>
+<h3>Backup com verificação de diretório.</h3>
 <pre><code>#!/bin/bash
 DATA=$(date +%Y-%m-%d)
 BACKUP_DIR="$HOME/backup"  # Usa diretório do usuário
@@ -44,7 +44,7 @@ else:
     print("Digite um número maior que 1")</code></pre>
     
     
-    <h3>Instalar Oh My Zsh (sem erro)</h3>
+    <h3>Instalar Oh My Zsh (sem erro).</h3>
 <pre><code>sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</code></pre>
 
 <h3>Atualizar sistema (Debian/Ubuntu)</h3>

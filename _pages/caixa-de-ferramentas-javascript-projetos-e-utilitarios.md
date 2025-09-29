@@ -16,9 +16,6 @@ permalink: /caixa-ferramentas-javascript/
 <section>
  
   
-   <p>
-    Aqui você encontra uma vasta coleção de scripts úteis. Sinta-se à vontade para testá-los e reutilizá-los em seus projetos!
-   </p>
 
 <h2>🧰 Minha Caixa de Ferramentas JavaScript</h2>
 <p>Os scripts que eu criei, testei e uso no dia a dia. Livre para copiar, modificar e levar com você.</p>
