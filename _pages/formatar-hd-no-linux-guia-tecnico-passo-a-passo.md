@@ -67,12 +67,6 @@ tags: [fdisk, mkfs, ext4, ntfs, fstab, uuid]
   <p class="frase-reforco"> Formatar não é destruir — é preparar. Faça backup antes. Sempre.</p>
 
 
-<div class="conclusion-section" style="background: #1a2a1a; padding: 25px; border-radius: 12px; border-left: 4px solid #8bc34a; margin-top: 30px;">
-    <h3 style="color: #8bc34a; margin: 0 0 15px 0; font-size: 1.4em;">✅ Pronto — seu disco está formatado!</h3>
-    <p style="color: #d0d0d0; line-height: 1.7; margin: 0;">
-        Monte-o com <code style="background: #2a2a2a; padding: 2px 6px; border-radius: 4px;">sudo mount /dev/sdX1 /ponto/de/montagem</code> e adicione ao <code style="background: #2a2a2a; padding: 2px 6px; border-radius: 4px;">/etc/fstab</code> se quiser montagem automática na inicialização. Esta tabela serve como referência rápida — salve-a, imprima-a ou use como cheat sheet no seu terminal.
-    </p>
-</div>
 
 
   
