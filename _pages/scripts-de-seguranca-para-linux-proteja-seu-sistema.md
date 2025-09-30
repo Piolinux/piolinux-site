@@ -24,8 +24,8 @@ permalink: /scripts-seguranca-linux/
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Objetivo</th>
-      <th>Comando</th>
+      <th>Objetivos</th>
+      <th>Comandos</th>
       <th>Copiar</th>
     </tr>
   </thead>
@@ -96,6 +96,11 @@ sudo iftop -i eth0</code></td>
 
 
 </section>
+
+
+
+
+
 
 
 
