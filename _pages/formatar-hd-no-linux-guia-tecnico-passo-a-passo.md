@@ -38,7 +38,7 @@ tags: [fdisk, mkfs, ext4, ntfs, fstab, uuid]
         <td data-label="Dicas Evergreen">Nunca formate /dev/sda (geralmente é o disco do sistema!)</td>
       </tr>
       <tr>
-        <td data-label="Etapas"><strong>2. Criando sua partição.</strong></td>
+        <td data-label="Etapas"><strong>2. Crie sua partição.</strong></td>
         <td data-label="Comandos"><code>sudo fdisk /dev/sdX</code><br>comandos: n (nova), p (primária), w (gravar)</td>
         <td data-label="Propósito">Criando tabela de partição (mbr ou gpt)</td>
         <td data-label="Dicas Evergreen"> Use <code>gdisk</code> para gpt (discos >2TB)</td>
