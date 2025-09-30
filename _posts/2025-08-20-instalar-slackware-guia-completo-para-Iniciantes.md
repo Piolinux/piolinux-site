@@ -13,8 +13,7 @@ permalink: /instalar-slackware-guia-completo/
 
   <section class="post-content">
   
- <p>Instalação técnica do Ubuntu (22.04/24.04 LTS). Foco em decisões reais: particionamento, pós-instalação e remoção de componentes indesejados (ex: Snap). Todos os comandos testados em hardware real.</p> 
-  
+ 
 <table class="evergreen-table">
   <thead>
     <tr>
