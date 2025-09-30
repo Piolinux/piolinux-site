@@ -24,9 +24,9 @@ tags: [fdisk, mkfs, ext4, ntfs, fstab, uuid]
   <table class="evergreen-table">
     <thead>
       <tr>
-        <th>Etapas</th>
-        <th>Comandos</th>
-        <th>Propósito</th>
+        <th>Etapas.</th>
+        <th>Comandos.</th>
+        <th>Propósito.</th>
         <th>Dicas Evergreen</th>
       </tr>
     </thead>
