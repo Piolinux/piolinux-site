@@ -40,8 +40,8 @@ tags: [fdisk, mkfs, ext4, ntfs, fstab, uuid]
       <tr>
         <td data-label="Etapas"><strong>2. Criando sua partição.</strong></td>
         <td data-label="Comandos"><code>sudo fdisk /dev/sdX</code><br>comandos: n (nova), p (primária), w (gravar)</td>
-        <td data-label="Propósito">Criando tabela de partição (MBR ou GPT)</td>
-        <td data-label="Dicas Evergreen"> Use <code>gdisk</code> para GPT (discos >2TB)</td>
+        <td data-label="Propósito">Criando tabela de partição (mbr ou gpt)</td>
+        <td data-label="Dicas Evergreen"> Use <code>gdisk</code> para gpt (discos >2TB)</td>
       </tr>
       <tr>
         <td data-label="Etapas"><strong>3. Formatando a partição.</strong></td>
@@ -50,7 +50,7 @@ tags: [fdisk, mkfs, ext4, ntfs, fstab, uuid]
         <td data-label="Dicas Evergreen"> ext4 é o padrão Linux — estável e rápido</td>
       </tr>
       <tr>
-        <td data-label="Etapas"><strong>4. Montando temporariamente digite os comandos.</strong></td>
+        <td data-label="Etapas"><strong>4. Monte temporariamente: digite os comandos no terminal.</strong></td>
         <td data-label="Comandos"><code>sudo mkdir /mnt/disco</code><br><code>sudo mount /dev/sdX1 /mnt/disco</code></td>
         <td data-label="Propósito">Testar se a formatação funcionou</td>
         <td data-label="Dicas Evergreen"> Verifique com <code>df -h</code> ou <code>ls /mnt/disco</code></td>
