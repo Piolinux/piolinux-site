@@ -1,0 +1,225 @@
+---
+layout: manual-seo
+title_custom: "Crie .env Online — Node, Python, Django, Rails | Piolinux"
+description_custom: "Crie seu .env com variáveis como DATABASE_URL, API_KEY, PORT. Ideal para devs configurarem projetos rapidamente — sem erros de sintaxe."
+title: "Crie .env Online — Node, Python, Django, Rails"
+permalink: /ferramentas/env-file-generator/
+tags: [env, variaveis, nodejs, python, django, rails, config, desenvolvedor]
+---
+
+
+{% include toc.html %}
+
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+  
+ 
+<div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+    <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">⚙️ Gerador de Arquivo .env — Dark Tech</h2>
+
+    <div class="tip-box" style="margin-bottom: 25px; background: #161616; padding: 15px; border-radius: 6px; border-left: 4px solid #8bc34a; color: #d0d0d0;">
+      <strong style="color: #a6e3a1;">💡 Dica técnica:</strong> O arquivo <code>.env</code> armazena variáveis de ambiente sensíveis ou configuráveis (ex: chaves API, URLs, portas). Nunca o commite no Git — adicione ao <code>.gitignore</code>.
+    </div>
+
+    <div style="margin-bottom: 25px;">
+      <h3 style="color: #8bc34a; margin-bottom: 15px; font-size: 1.2em;">✅ Selecione as variáveis que deseja incluir:</h3>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; margin-bottom: 25px;">
+        <!-- Node.js / Express -->
+        <label class="env-checkbox" style="color: #e0e0e0; display: flex; align-items: center; gap: 8px; background: #2a2a2a; padding: 12px; border-radius: 6px; cursor: pointer; transition: background 0.2s;">
+          <input type="checkbox" class="env-var" data-key="NODE_ENV" data-value="development" checked style="cursor: pointer;">
+          <span>NODE_ENV=development</span>
+        </label>
+        <label class="env-checkbox" style="color: #e0e0e0; display: flex; align-items: center; gap: 8px; background: #2a2a2a; padding: 12px; border-radius: 6px; cursor: pointer; transition: background 0.2s;">
+          <input type="checkbox" class="env-var" data-key="PORT" data-value="3000" checked style="cursor: pointer;">
+          <span>PORT=3000</span>
+        </label>
+        <label class="env-checkbox" style="color: #e0e0e0; display: flex; align-items: center; gap: 8px; background: #2a2a2a; padding: 12px; border-radius: 6px; cursor: pointer; transition: background 0.2s;">
+          <input type="checkbox" class="env-var" data-key="HOST" data-value="localhost" style="cursor: pointer;">
+          <span>HOST=localhost</span>
+        </label>
+
+        <!-- Database -->
+        <label class="env-checkbox" style="color: #e0e0e0; display: flex; align-items: center; gap: 8px; background: #2a2a2a; padding: 12px; border-radius: 6px; cursor: pointer; transition: background 0.2s;">
+          <input type="checkbox" class="env-var" data-key="DATABASE_URL" data-value="postgresql://user:pass@localhost:5432/mydb" style="cursor: pointer;">
+          <span>DATABASE_URL=postgresql://...</span>
+        </label>
+        <label class="env-checkbox" style="color: #e0e0e0; display: flex; align-items: center; gap: 8px; background: #2a2a2a; padding: 12px; border-radius: 6px; cursor: pointer; transition: background 0.2s;">
+          <input type="checkbox" class="env-var" data-key="MONGODB_URI" data-value="mongodb://localhost:27017/myapp" style="cursor: pointer;">
+          <span>MONGODB_URI=mongodb://...</span>
+        </label>
+        <label class="env-checkbox" style="color: #e0e0e0; display: flex; align-items: center; gap: 8px; background: #2a2a2a; padding: 12px; border-radius: 6px; cursor: pointer; transition: background 0.2s;">
+          <input type="checkbox" class="env-var" data-key="REDIS_URL" data-value="redis://localhost:6379" style="cursor: pointer;">
+          <span>REDIS_URL=redis://...</span>
+        </label>
+
+        <!-- Frontend / React / Vite -->
+        <label class="env-checkbox" style="color: #e0e0e0; display: flex; align-items: center; gap: 8px; background: #2a2a2a; padding: 12px; border-radius: 6px; cursor: pointer; transition: background 0.2s;">
+          <input type="checkbox" class="env-var" data-key="VITE_API_BASE_URL" data-value="http://localhost:3000/api" style="cursor: pointer;">
+          <span>VITE_API_BASE_URL=...</span>
+        </label>
+        <label class="env-checkbox" style="color: #e0e0e0; display: flex; align-items: center; gap: 8px; background: #2a2a2a; padding: 12px; border-radius: 6px; cursor: pointer; transition: background 0.2s;">
+          <input type="checkbox" class="env-var" data-key="REACT_APP_API_URL" data-value="http://localhost:3000" style="cursor: pointer;">
+          <span>REACT_APP_API_URL=...</span>
+        </label>
+
+        <!-- Auth / API Keys -->
+        <label class="env-checkbox" style="color: #e0e0e0; display: flex; align-items: center; gap: 8px; background: #2a2a2a; padding: 12px; border-radius: 6px; cursor: pointer; transition: background 0.2s;">
+          <input type="checkbox" class="env-var" data-key="JWT_SECRET" data-value="supersecretkey123!@#" style="cursor: pointer;">
+          <span>JWT_SECRET=supersecretkey...</span>
+        </label>
+        <label class="env-checkbox" style="color: #e0e0e0; display: flex; align-items: center; gap: 8px; background: #2a2a2a; padding: 12px; border-radius: 6px; cursor: pointer; transition: background 0.2s;">
+          <input type="checkbox" class="env-var" data-key="API_KEY" data-value="sk_test_abc123xyz456" style="cursor: pointer;">
+          <span>API_KEY=sk_test_...</span>
+        </label>
+        <label class="env-checkbox" style="color: #e0e0e0; display: flex; align-items: center; gap: 8px; background: #2a2a2a; padding: 12px; border-radius: 6px; cursor: pointer; transition: background 0.2s;">
+          <input type="checkbox" class="env-var" data-key="STRIPE_SECRET_KEY" data-value="sk_live_xxx" style="cursor: pointer;">
+          <span>STRIPE_SECRET_KEY=sk_live_...</span>
+        </label>
+
+        <!-- Python / Django -->
+        <label class="env-checkbox" style="color: #e0e0e0; display: flex; align-items: center; gap: 8px; background: #2a2a2a; padding: 12px; border-radius: 6px; cursor: pointer; transition: background 0.2s;">
+          <input type="checkbox" class="env-var" data-key="SECRET_KEY" data-value="django-insecure-abc123" style="cursor: pointer;">
+          <span>SECRET_KEY=django-insecure-...</span>
+        </label>
+        <label class="env-checkbox" style="color: #e0e0e0; display: flex; align-items: center; gap: 8px; background: #2a2a2a; padding: 12px; border-radius: 6px; cursor: pointer; transition: background 0.2s;">
+          <input type="checkbox" class="env-var" data-key="DEBUG" data-value="True" style="cursor: pointer;">
+          <span>DEBUG=True</span>
+        </label>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+      <button onclick="generateEnvFile()" style="background: #2a2a2a; color: #8bc34a; border: 1px solid #444; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: monospace; transition: background 0.2s;">
+        🔄 Gerar .env
+      </button>
+      <button onclick="copyEnvFile()" style="background: #2a2a2a; color: #a6e3a1; border: 1px solid #444; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: monospace; transition: background 0.2s;">
+        📋 Copiar .env
+      </button>
+      <button onclick="selectAll(true)" style="background: #2a2a2a; color: #cdd6f4; border: 1px solid #444; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: monospace; transition: background 0.2s;">
+        ✅ Selecionar Todos
+      </button>
+      <button onclick="selectAll(false)" style="background: #2a2a2a; color: #f38ba8; border: 1px solid #444; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: monospace; transition: background 0.2s;">
+        ❌ Limpar Seleção
+      </button>
+    </div>
+
+    <!-- ✅ ELEMENTO ADICIONADO — RESOLVE O ERRO -->
+    <h3 style="color: #8bc34a; margin: 25px 0 15px 0; font-size: 1.2em;">📄 Arquivo .env Gerado</h3>
+    <textarea 
+        id="envOutput" 
+        readonly 
+        rows="10" 
+        style="width: 100%; padding: 15px; background: #121212; color: #a6e3a1; border: 1px solid #333; border-radius: 6px; font-family: 'Courier New', monospace; resize: vertical; line-height: 1.5;"
+        placeholder="Selecione variáveis acima e clique em 'Gerar .env'"></textarea>
+</div>
+
+    
+
+    <div class="seo-box" style="margin-top: 30px; padding: 20px; background: #161616; border: 1px solid #333; border-radius: 8px; border-left: 4px solid #8bc34a;">
+      <h3 style="color: #8bc34a; margin-top: 0; font-size: 1.3em;">O que é um arquivo .env e qual sua finalidade?</h3>
+      <p style="color: #d0d0d0; line-height: 1.6; margin-bottom: 1.5rem;">É um arquivo de configuração que armazena variáveis de ambiente (como senhas, URLs, chaves API) fora do código-fonte, essencial para segurança e portabilidade,principalmente para utilizar o GitHub.
+        </p>
+
+      <h3 style="color: #8bc34a; font-size: 1.3em; margin-top: 1.5rem;">Como usar esta ferramenta?</h3>
+      <p style="color: #d0d0d0; line-height: 1.6; margin-bottom: 1rem;">
+       Marque as variáveis que deseja incluir, ajuste os valores se necessário, e clique em "Gerar .env". Cole o resultado na raiz do seu projeto, adicione .env ao seu arquivo .gitignore.
+      </p>
+      <div style="background: #0a0a0a; padding: 12px; border-radius: 6px; border: 1px solid #2a2a2a; margin-top: 1rem; font-family: 'Courier New', monospace; color: #a6e3a1; font-size: 0.95em;">
+        # Exemplo em Node.js
+        require('dotenv').config();
+        const port = process.env.PORT;
+      </div>
+
+      <div style="margin-top: 1.5rem; padding: 12px; background: #0a0a0a; border-radius: 6px; border-left: 3px solid #a6e3a1; color: #cdd6f4;">
+        <strong style="color: #a6e3a1;">🔐 Dica de segurança:</strong> Nunca commite seu <code>.env</code> no repositório. Crie um <code>.env.example</code> com valores fictícios para orientar outros devs.
+      </div>
+    </div>
+  </div>
+
+
+
+
+  
+</section>
+  
+
+
+<script>
+  function generateEnvFile() {
+    let content = '';
+    document.querySelectorAll('.env-var:checked').forEach(checkbox => {
+      const key = checkbox.dataset.key;
+      const value = checkbox.dataset.value;
+      content += `${key}=${value}\n`;
+    });
+
+    const outputElem = document.getElementById('envOutput');
+    if (outputElem) {
+        outputElem.value = content.trim();
+    } else {
+        console.error('Elemento #envOutput não encontrado!');
+    }
+  }
+
+  function copyEnvFile() {
+    const content = document.getElementById('envOutput')?.value;
+    if (!content) {
+      alert('⚠️ Nenhuma variável selecionada.');
+      return;
+    }
+
+    navigator.clipboard.writeText(content).then(() => {
+      alert('✅ .env copiado para a área de transferência!');
+    }).catch(() => {
+      alert('❌ Falha ao copiar. Tente manualmente.');
+    });
+  }
+
+  function selectAll(checked) {
+    document.querySelectorAll('.env-var').forEach(cb => cb.checked = checked);
+    generateEnvFile();
+  }
+
+  // Atualiza ao clicar em qualquer checkbox
+  document.addEventListener('DOMContentLoaded', () => {
+    generateEnvFile(); // Gera inicial
+    document.querySelectorAll('.env-var').forEach(cb => {
+      cb.addEventListener('change', generateEnvFile);
+    });
+  });
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Arquivos .env Online",
+  "description": "Ferramenta para criar arquivos .env com variáveis comuns como DATABASE_URL, API_KEY, PORT — ideal para desenvolvedores configurarem projetos rapidamente e sem erros.",
+  "applicationCategory": "Ferramenta para Desenvolvedores",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+
+
+
+

@@ -1,0 +1,185 @@
+---
+layout: manual-seo
+title_custom: "Calculadora de Permissões chmod Online — Linux/Unix | Piolinux"
+description_custom: "Converta entre formato numérico (755) e simbólico (rwxr-xr-x). Ideal para sysadmins e estudantes de Linux — rápido, visual e sem erros."
+title: "Calculadora de Permissões chmod Online — Linux/Unix"
+permalink: /ferramentas/chmod-calculator/
+tags: [chmod, linux, unix, permissao, sysadmin, terminal, arquivo, estudante]
+---
+
+
+
+
+
+
+{% include toc.html %}
+
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+  
+  {% include tool-templates/chmod-calculator.html %}
+
+<!-- ============= 🔢 CALCULADORA DE PERMISSÕES CHMOD ============= -->
+<div class="tool-container" id="chmod-calculator" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Calculadora de Permissões chmod</h2>
+  
+  <div style="margin: 16px 0;">
+    <div style="margin-bottom: 16px;">
+      <strong style="color: #e0e0e0;">Dono:</strong><br>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="ownerRead" checked style="margin-right: 6px; accent-color: #4caf50;" /> r (4)
+      </label>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="ownerWrite" checked style="margin-right: 6px; accent-color: #4caf50;" /> w (2)
+      </label>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="ownerExecute" checked style="margin-right: 6px; accent-color: #4caf50;" /> x (1)
+      </label>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <strong style="color: #e0e0e0;">Grupo:</strong><br>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="groupRead" checked style="margin-right: 6px; accent-color: #4caf50;" /> r (4)
+      </label>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="groupWrite" style="margin-right: 6px; accent-color: #4caf50;" /> w (2)
+      </label>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="groupExecute" style="margin-right: 6px; accent-color: #4caf50;" /> x (1)
+      </label>
+    </div>
+
+    <div style="margin-bottom: 16px;">
+      <strong style="color: #e0e0e0;">Outros:</strong><br>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="otherRead" style="margin-right: 6px; accent-color: #4caf50;" /> r (4)
+      </label>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="otherWrite" style="margin-right: 6px; accent-color: #4caf50;" /> w (2)
+      </label>
+      <label style="display: inline-block; margin: 8px; color: #e0e0e0;">
+        <input type="checkbox" id="otherExecute" style="margin-right: 6px; accent-color: #4caf50;" /> x (1)
+      </label>
+    </div>
+
+    <button onclick="calculateChmod()" style="background: #4caf50; color: white; border: none; padding: 10px 20px; margin: 10px 0; border-radius: 4px; cursor: pointer; font-weight: bold;">
+      🧮 Calcular chmod
+    </button>
+  </div>
+
+  <div id="chmodResult" style="background: #121212; padding: 15px; border-radius: 6px; margin: 15px 0; min-height: 60px; font-family: monospace;">
+    chmod 755 arquivo<br>
+    rwxr-xr-x<br>
+    Dono: leitura + escrita + execução | Grupo: leitura + execução | Outros: leitura
+  </div>
+
+  <div id="chmodWarning" style="display: none; background: #330000; color: #ff5252; padding: 10px; border-radius: 6px; margin: 15px 0; border: 1px solid #ff5252;">
+    ⚠️ <strong>Atenção:</strong> chmod 777 dá acesso total a todos os usuários — nunca use em produção!
+  </div>
+
+  <p style="font-size: 0.9em; color: #8bc34a; margin-top: 16px;">
+    💡 <strong>Dica de Sysadmin:</strong> Use a regra do mínimo privilégio — dê apenas as permissões necessárias. 755 para scripts, 644 para arquivos.
+  </p>
+</div>
+
+
+  
+
+  <div class="seo-content">
+  <h2>O que é chmod?</h2>
+  <p><code>chmod</code> (change mode) é um comando do Linux/Unix usado para alterar as permissões de acesso de arquivos e diretórios.O uso incorreto desses comandos pode causar problemas, tornando o sistema inoperante. As permissões são definidas para:</p>
+  <ul>
+    <li><strong>Dono (usu&aacute;rio)</strong> — Qual indivíduo é responsável pela criação dos referidos arquivos?</li>
+    <li><strong>Grupo (grupo)</strong> — grupo associado ao arquivo</li>
+    <li><strong>Outros (outros)</strong> — todos os demais usuários</li>
+  </ul>
+  
+  
+  <p>Em caso de dúvidas, digite "man chmod" no terminal para maiores 
+  esclarecimentos.</p>
+  
+  
+  <h2>Cuidado: Permissões perigosas</h2>
+  <p>N&acirc;o utilize use <code>chmod 777</code> (permissão total para todos) em arquivos ou diretórios sensíveis. Isso permitirá que qualquer usuário leia, escreva e execute, abrindo brechas de segurança e causando problemas graves.</p>
+
+  <h2>Boas práticas de usabilidade para permissões:</h2>
+  <table class="evergreen-table permissions-table">
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Permissão Numérica</th>
+        <th>Permissão Simbólica</th>
+        <th>Quando usar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Arquivo comum</td>
+        <td>644</td>
+        <td>-rw-r--r--</td>
+        <td>Arquivos de configuração, textos, scripts que não precisam ser executados</td>
+      </tr>
+      <tr>
+        <td>Script executável</td>
+        <td>755</td>
+        <td>-rwxr-xr-x</td>
+        <td>Scripts que você (dono) executa, e outros só leem/executam</td>
+      </tr>
+      <tr>
+        <td>Diretório</td>
+        <td>755</td>
+        <td>drwxr-xr-x</td>
+        <td>Diretórios que todos precisam listar e acessar, mas só dono modifica</td>
+      </tr>
+      <tr>
+        <td>Arquivo sensível</td>
+        <td>600</td>
+        <td>-rw-------</td>
+        <td>Chaves SSH, arquivos de senha, configurações privadas — só o dono acessa</td>
+      </tr>
+      <tr>
+        <td>Diretório privado</td>
+        <td>700</td>
+        <td>drwx------</td>
+        <td>Diretórios com dados sensíveis — só o dono entra</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Como usar esta calculadora?</h2>
+  <p>Indique as permissões desejadas para cada categoria, assinalando as opções correspondentes (leitura, escrita, execução). O sistema exibirá o valor numérico equivalente (por exemplo, 755).</p>
+  <p><strong>Exemplos seguros da utilização:</strong> <code>chmod 644 arquivo.conf</code> → dono: leitura+escrita, grupo/outros: só leitura.</p>
+
+</div>
+
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Permissões chmod Online",
+  "description": "Ferramenta para converter permissões de arquivos Linux/Unix entre formato numérico (ex: 755) e simbólico (ex: rwxr-xr-x) — ideal para sysadmins e estudantes.",
+  "applicationCategory": "Ferramenta para SysAdmin e Educação Linux",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>

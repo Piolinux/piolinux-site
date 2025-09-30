@@ -1,0 +1,174 @@
+---
+layout: manual-seo
+title_custom: "🐧 Gerador de Nomes — Startups & Projetos | Piolinux"
+description_custom: "Crie nomes únicos combinando prefixos e sufixos modernos. Ideal para startups, produtos, apps e repositórios — sem bloqueio criativo."
+title: "🐧 Gerador de Nomes — Startups & Projetos"
+permalink: /ferramentas/project-name-generator/
+tags: [startup, projeto, nome, branding, empreendedor, dev, criativo, moderno]
+---
+
+
+
+{% include toc.html %}
+
+
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+  
+
+
+
+<div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Gerador de Nomes para Startups e Projetos</h2>
+  
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid #333;">
+    <strong>💡 Dica de Branding Técnico:</strong> Escolha nomes curtos, memoráveis e com extensão .com disponível. Evite nomes genéricos — seja específico ao seu nicho!
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <div style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Categoria de Projeto:</strong></div>
+    <select id="nameCategory" onchange="generateProjectName()" style="background: #2a2a2a; color: #e0e0e0; padding: 10px; border: 1px solid #444; border-radius: 4px; width: 100%; max-width: 400px; font-family: monospace;">
+      <option value="tech">💻 Tecnologia & SaaS</option>
+      <option value="design">🎨 Design & Criativo</option>
+      <option value="data">📊 Dados & Analytics</option>
+      <option value="dev">⌨️ Desenvolvimento & Ferramentas</option>
+    </select>
+    <div id="nameDescription" style="color: #aaa; font-size: 0.9em; margin-top: 8px;">Nomes para startups de tecnologia, SaaS, ferramentas dev</div>
+  </div>
+
+  <div style="margin-bottom: 20px; text-align: center; padding: 30px; background: #121212; border-radius: 8px; border: 1px solid #333;">
+    <div id="projectNameResult" style="font-family: 'Courier New', monospace; font-size: 2em; color: #8bc34a; font-weight: bold; margin: 20px 0; transition: transform 0.3s ease;">
+      TechLabs
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 20px;">
+    <button onclick="generateProjectName()" style="background: #4caf50; color: white; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1.1em; flex: 1;">
+      🎲 Gerar Novo Nome
+    </button>
+    <button onclick="copyProjectName()" style="background: #2196F3; color: white; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1.1em; flex: 1;">
+      📋 Copiar Nome
+    </button>
+  </div>
+
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 20px; border-radius: 8px; margin-top: 30px; border: 1px solid #333;">
+    <h3 style="color: #8bc34a; margin-top: 0;">Dicas para Escolher o Nome Perfeito:</h3>
+    <ul style="padding-left: 20px; margin: 15px 0; line-height: 1.6;">
+      <li><strong>No Hostinger, você encontra uma lista de domínios disponíveis para registro sem problemas.</li>
+      <li><strong>Fica de olho no tamanho – nomes curtos são melhores, tipo 2 ou 3 sílabas, pra ser fácil de falar e lembrar.</li>
+      <li><strong>Precisa ser específico, saca? "DataLabs" bate "TechSolutions" porque diz mais o que você faz.</li>
+      <li><strong>Pensa lá na frente também: será que o nome ainda vai fazer sentido se seu produto mudar? </li>
+      <li><strong>Por último, testa com a galera! Pergunta pra amigos, colegas ou até clientes em potencial o que acham. Vale cada feedback.</li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="seo-content">
+    <h2>Por que usar um Gerador de Nomes de Projetos?</h2>
+    <p>Encontrar um nome único, memorável e com domínio disponível é desafiador. Esta ferramenta ajudará a superar bloqueios criativos.</p>
+    <h2>Instruções da ferramenta?</h2>
+    <p>Clicando em "Gerar Nome", você combina aleatoriamente prefixos e sufixos modernos. Ideal para startups, apps, produtos ou repositórios.</p>
+    
+  </div>
+  
+  
+</section>
+
+<script>
+const nameCategories = {
+  tech: {
+    prefixes: ['Tech', 'Cloud', 'Data', 'Neo', 'Hyper', 'Quantum', 'Alpha', 'Zen', 'Nova', 'Apex'],
+    suffixes: ['Labs', 'Soft', 'Works', 'Hub', 'Systems', 'Solutions', 'Studio', 'Tech', 'Dynamics', 'Group'],
+    color: '#4caf50',
+    description: 'Nomes para startups de tecnologia, SaaS, ferramentas dev'
+  },
+  design: {
+    prefixes: ['Pixel', 'Vector', 'Design', 'UI', 'UX', 'Creative', 'Art', 'Visual', 'Graphic', 'Layout'],
+    suffixes: ['Studio', 'Design', 'Agency', 'Labs', 'Creative', 'Works', 'Studio', 'Arts', 'Visual', 'Makers'],
+    color: '#ff9800',
+    description: 'Nomes para agências de design, UI/UX, criativos'
+  },
+  data: {
+    prefixes: ['Data', 'Analytics', 'Insight', 'Metric', 'Dash', 'Report', 'Query', 'Table', 'Chart', 'Graph'],
+    suffixes: ['Labs', 'Analytics', 'Insights', 'Metrics', 'Dash', 'Reports', 'Queries', 'Tables', 'Charts', 'Graphs'],
+    color: '#2196F3',
+    description: 'Nomes para projetos de dados, BI, análise'
+  },
+  dev: {
+    prefixes: ['Code', 'Dev', 'Script', 'Byte', 'Bit', 'Stack', 'Hack', 'Build', 'Deploy', 'Commit'],
+    suffixes: ['Labs', 'Dev', 'Code', 'Scripts', 'Bytes', 'Bits', 'Stack', 'Hacks', 'Builds', 'Commits'],
+    color: '#9c27b0',
+    description: 'Nomes para ferramentas de desenvolvimento, scripts, utilitários'
+  }
+};
+
+function generateProjectName() {
+    const category = document.getElementById('nameCategory').value;
+    const config = nameCategories[category];
+    const prefix = config.prefixes[Math.floor(Math.random() * config.prefixes.length)];
+    const suffix = config.suffixes[Math.floor(Math.random() * config.suffixes.length)];
+    const name = prefix + suffix;
+    
+    const resultDiv = document.getElementById('projectNameResult');
+    resultDiv.innerHTML = `<span style="color: ${config.color}; font-weight: bold; font-size: 1.5em;">${name}</span>`;
+    document.getElementById('nameDescription').innerText = config.description;
+    
+    // Animação sutil
+    resultDiv.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+        resultDiv.style.transform = 'scale(1.05)';
+        setTimeout(() => {
+            resultDiv.style.transform = 'scale(1.0)';
+        }, 100);
+    }, 50);
+}
+
+function copyProjectName() {
+    const name = document.getElementById('projectNameResult').innerText;
+    if (name) {
+        navigator.clipboard.writeText(name).then(() => {
+            alert(`✅ Nome do projeto copiado: ${name}`);
+        }).catch(() => {
+            alert('❌ Falha ao copiar. Tente manualmente.');
+        });
+    }
+}
+
+// Gera ao carregar
+generateProjectName();
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Nomes para Startups e Projetos",
+  "description": "Ferramenta criativa para gerar nomes únicos combinando prefixos e sufixos modernos — ideal para startups, produtos, apps e repositórios.",
+  "applicationCategory": "Ferramenta de Produtividade Criativa",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+
+
+
+

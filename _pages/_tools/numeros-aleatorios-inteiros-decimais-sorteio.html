@@ -1,0 +1,307 @@
+---
+layout: manual-seo
+title_custom: "🐧 Números Aleatórios — Inteiros, Decimais, Sorteio | Piolinux"
+description_custom: "Gere números aleatórios (inteiros ou decimais) em qualquer intervalo. Evite repetições. Ideal para sorteios, testes, jogos e matemática."
+title: "🐧 Números Aleatórios — Inteiros, Decimais, Sorteio"
+permalink: /ferramentas/random-number-generator/
+tags: [aleatorio, sorteio, matematica, dev, rng, ferramenta, numerico]
+---
+
+
+{% include toc.html %}
+
+
+
+
+ <section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+  <div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Gerador de Números Aleatórios</h2>
+  
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid #333;">
+    <strong>💡 Dica de Sysadmin/Dev:</strong> Use números aleatórios para sorteios, testes estatísticos, geração de dados de teste, simulações e muito mais!
+  </div>
+
+  <div style="margin-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+    <div>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Tipo:</strong></div>
+      <select id="numberType" onchange="generateRandom()" style="background: #2a2a2a; color: #e0e0e0; padding: 10px; border: 1px solid #444; border-radius: 4px; width: 100%; font-family: monospace;">
+        <option value="integer">🔢 Inteiro</option>
+        <option value="decimal">🧮 Decimal</option>
+      </select>
+    </div>
+    
+    <div>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Mínimo:</strong></div>
+      <input type="number" id="minValue" value="1" oninput="generateRandom()" style="width: 100%; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
+    </div>
+    
+    <div>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Máximo:</strong></div>
+      <input type="number" id="maxValue" value="100" oninput="generateRandom()" style="width: 100%; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
+    </div>
+    
+    <div>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Quantidade:</strong></div>
+      <input type="number" id="countValue" value="10" min="1" max="1000" oninput="generateRandom()" style="width: 100%; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; font-family: monospace;">
+    </div>
+    
+    <div style="grid-column: span 2;">
+      <label style="color: #e0e0e0; display: flex; align-items: center; margin-top: 20px;">
+        <input type="checkbox" id="noRepeat" onchange="generateRandom()" style="margin-right: 8px; accent-color: #4caf50;" /> 
+        Sem repetição (só para inteiros)
+      </label>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+    <button onclick="loadExample('dice')" style="background: #4caf50; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9em;">🎲 Dados (1-6)</button>
+    <button onclick="loadExample('lottery')" style="background: #ff9800; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9em;">🎟️ Loteria (1-60)</button>
+    <button onclick="loadExample('temperature')" style="background: #2196F3; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9em;">🌡️ Temperatura (-10 a 40)</button>
+    <button onclick="loadExample('percentage')" style="background: #9c27b0; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.9em;">📊 Porcentagem (0-100)</button>
+  </div>
+
+  <div style="margin-bottom: 20px; display: flex; gap: 10px;">
+    <button onclick="generateRandom()" style="background: #4caf50; color: white; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1.1em; flex: 1;">
+      🎯 Gerar Números
+    </button>
+    <button onclick="copyRandomNumbers()" style="background: #2196F3; color: white; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1.1em; flex: 1;">
+      📋 Copiar Resultados
+    </button>
+  </div>
+
+  <div id="randomError" style="background: #330000; color: #ff5252; padding: 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid #ff5252; display: none;">
+    <!-- Erros aparecem aqui -->
+  </div>
+
+  <div id="randomResult" style="min-height: 100px; background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #333;">
+    <div style="color: #aaa; text-align: center; font-style: italic;">
+      Configure os parâmetros e clique em "Gerar Números"
+    </div>
+  </div>
+
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 20px; border-radius: 8px; margin-top: 30px; border: 1px solid #333;">
+    <h3 style="color: #8bc34a; margin-top: 0;">Precisa de números aleatórios pra alguma coisa? A gente te ajuda!</h3>
+    <ul style="padding-left: 20px; margin: 15px 0; line-height: 1.6;">
+      <li><strong>Sorteios:</strong> Gerando números únicos pra rifas, sorteios, essas coisas.</li>
+      <li><strong>Testes de Software:</strong> Criar dados aleatórios pra testar se seu programa aguenta o tranco.</li>
+      <li><strong>Simulações:</strong> Criar dados aleatórios pra simular situações e fazer análises.</li>
+      <li><strong>Jogos:</strong> Criar dados, cartas, ou o que mais precisar pra jogos online.</li>
+      <li><strong>Educação:</strong> Crie problemas de matemática com números aleatórios pra praticar.</li>
+    </ul>
+  </div>
+</div>
+
+  <div class="seo-content">
+    <h2>Qual a serventia de um gerador de números aleatórios?</h2>
+    <p>Útil para sorteios, simulações, testes estatísticos, jogos, e qualquer situação que exija aleatoriedade.</p>
+    <h2>Como usar esta ferramenta?</h2>
+    <p>Defina os tipos de números (inteiros ou decimais), o intervalo (mínimo e máximo), a quantidade de números desejada e se deve evitar repetições. Clique em "Gerar".
+</p>
+      </div>
+</section>
+
+<script>
+function generateRandom() {
+    // ✅ Verifica se os elementos existem
+    const typeElement = document.getElementById('numberType');
+    const minElement = document.getElementById('minValue');
+    const maxElement = document.getElementById('maxValue');
+    const countElement = document.getElementById('countValue');
+    const noRepeatCheckbox = document.getElementById('noRepeat');
+    const resultElement = document.getElementById('randomResult');
+    const errorElement = document.getElementById('randomError');
+
+    if (!typeElement || !minElement || !maxElement || !countElement || !resultElement || !errorElement) {
+        console.error('Elementos obrigatórios não encontrados!');
+        return;
+    }
+
+    // ✅ Esconde erro anterior
+    errorElement.style.display = 'none';
+
+    const type = typeElement.value;
+    const min = parseFloat(minElement.value);
+    const max = parseFloat(maxElement.value);
+    const count = parseInt(countElement.value);
+
+    // ✅ Validação
+    if (isNaN(min) || isNaN(max) || isNaN(count)) {
+        showError('Por favor, preencha todos os campos com números válidos.');
+        return;
+    }
+
+    if (min >= max) {
+        showError('O valor mínimo deve ser menor que o máximo.');
+        return;
+    }
+
+    if (count < 1 || count > 1000) {
+        showError('A quantidade deve estar entre 1 e 1000.');
+        return;
+    }
+
+    let numbers = [];
+
+    if (type === 'integer' && noRepeatCheckbox.checked) {
+        // ✅ Sem repetição (só para inteiros)
+        const rangeSize = Math.floor(max) - Math.ceil(min) + 1;
+        if (count > rangeSize) {
+            showError(`Para sem repetição, a quantidade (${count}) não pode ser maior que o intervalo (${rangeSize}).`);
+            return;
+        }
+        
+        const allNumbers = [];
+        for (let i = Math.ceil(min); i <= Math.floor(max); i++) {
+            allNumbers.push(i);
+        }
+        
+        // Embaralha e pega os primeiros 'count' números
+        for (let i = allNumbers.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [allNumbers[i], allNumbers[j]] = [allNumbers[j], allNumbers[i]];
+        }
+        
+        numbers = allNumbers.slice(0, count);
+    } else {
+        // ✅ Com repetição ou decimais
+        for (let i = 0; i < count; i++) {
+            let num;
+            if (type === 'decimal') {
+                num = (Math.random() * (max - min) + min).toFixed(2);
+            } else {
+                num = Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+            numbers.push(num);
+        }
+    }
+
+    // ✅ Mostra resultados
+    if (count === 1) {
+        resultElement.innerHTML = `<div style="color: #a6e3a1; font-size: 2em; text-align: center; font-weight: bold;">${numbers[0]}</div>`;
+    } else {
+        resultElement.innerHTML = `
+            <div style="color: #8bc34a; margin-bottom: 15px; font-weight: bold;">
+                🎲 ${count} números gerados:
+            </div>
+            <div style="color: #a6e3a1; font-family: 'Courier New', monospace; background: #1a1a1a; padding: 15px; border-radius: 6px; border: 1px solid #333;">
+                ${numbers.join(', ')}
+            </div>
+            <div style="color: #aaa; margin-top: 15px; font-size: 0.9em;">
+                Total: ${numbers.length} número${numbers.length !== 1 ? 's' : ''}
+            </div>
+        `;
+    }
+}
+
+function copyRandomNumbers() {
+    const resultElement = document.getElementById('randomResult');
+    if (!resultElement) {
+        alert('❌ Elemento de resultado não encontrado!');
+        return;
+    }
+
+    const text = resultElement.textContent;
+    if (!text || text.includes('Configure os parâmetros')) {
+        alert('⚠️ Gere números primeiro!');
+        return;
+    }
+
+    navigator.clipboard.writeText(text).then(() => {
+        alert('✅ Números copiados para a área de transferência!');
+    }).catch(() => {
+        alert('❌ Falha ao copiar. Tente manualmente.');
+    });
+}
+
+function loadExample(example) {
+    const typeElement = document.getElementById('numberType');
+    const minElement = document.getElementById('minValue');
+    const maxElement = document.getElementById('maxValue');
+    const countElement = document.getElementById('countValue');
+    const noRepeatCheckbox = document.getElementById('noRepeat');
+
+    if (!typeElement || !minElement || !maxElement || !countElement) {
+        console.error('Elementos obrigatórios não encontrados!');
+        return;
+    }
+
+    switch (example) {
+        case 'dice':
+            typeElement.value = 'integer';
+            minElement.value = '1';
+            maxElement.value = '6';
+            countElement.value = '1';
+            noRepeatCheckbox.checked = false;
+            break;
+        case 'lottery':
+            typeElement.value = 'integer';
+            minElement.value = '1';
+            maxElement.value = '60';
+            countElement.value = '6';
+            noRepeatCheckbox.checked = true;
+            break;
+        case 'temperature':
+            typeElement.value = 'decimal';
+            minElement.value = '-10';
+            maxElement.value = '40';
+            countElement.value = '1';
+            noRepeatCheckbox.checked = false;
+            break;
+        case 'percentage':
+            typeElement.value = 'integer';
+            minElement.value = '0';
+            maxElement.value = '100';
+            countElement.value = '10';
+            noRepeatCheckbox.checked = false;
+            break;
+    }
+
+    generateRandom();
+}
+
+function showError(message) {
+    const errorElement = document.getElementById('randomError');
+    if (errorElement) {
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
+    }
+}
+
+// ✅ Inicializa ao carregar
+document.addEventListener('DOMContentLoaded', function() {
+    generateRandom();
+});
+</script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Números Aleatórios Online",
+  "description": "Ferramenta online para gerar números aleatórios inteiros ou decimais dentro de um range, com opção de evitar repetições.",
+  "applicationCategory": "Ferramenta para Matemática e Sorteios",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+

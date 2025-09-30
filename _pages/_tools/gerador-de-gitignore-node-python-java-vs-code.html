@@ -1,0 +1,64 @@
+---
+layout: manual-seo
+title_custom: "🐧 Gerador de .gitignore — Node, Python, Java, VS Code | Piolinux"
+description_custom: "Crie seu .gitignore com templates para linguagens, SOs e editores. Suporte a Node.js, Python, Java, VS Code, Vim, macOS, Windows. Ideal para devs."
+title: "🐧 Gerador de .gitignore — Node, Python, Java, VS Code"
+permalink: /ferramentas/gitignore-generator/
+tags: [gitignore, git, nodejs, python, java, vscode, vim, dev, desenvolvedor]
+---
+
+
+{% include toc.html %}
+
+
+
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+ 
+  {% include tool-templates/gitignore-generator.html %}
+
+  <div class="seo-content">
+    <h2>O que é .gitignore?</h2>
+    <p>O arquivo <code>.gitignore</code> diz ao Git quais arquivos e pastas <strong>não devem ser rastreados</strong>. Isso evita commitar por acidente:</p>
+    <ul>
+      <li>Arquivos temporários:</li>
+      <li>Dependências (node_modules, __pycache__)</li>
+      <li>Configurações locais (.env)</li>
+      <li>Arquivos de sistema (.DS_Store, Thumbs.db)</li>
+    </ul>
+
+    <h2>Como usar esta ferramenta?</h2>
+    <p>Marque as opções desejadas (linguagens, SOs, editores) e clique em "Gerar .gitignore". Copie o resultado, fa&ccedil;a upload na raiz do seu projeto.</p>
+
+    
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de .gitignore Online",
+  "description": "Ferramenta para criar arquivos .gitignore personalizados com templates para Node.js, Python, Java, VS Code, Vim, macOS, Windows e mais.",
+  "applicationCategory": "Ferramenta para Desenvolvedores",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-175T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>

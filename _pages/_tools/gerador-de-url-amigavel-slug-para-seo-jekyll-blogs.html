@@ -1,0 +1,219 @@
+---
+layout: manual-seo
+title_custom: "Gerador de URL Amigável (Slug) — Para SEO, Jekyll, Blogs | Piolinux"
+description_custom: "Converta títulos em slugs otimizados: remove acentos, pontuação e espaços. Ideal para SEO, Jekyll, Hugo e blogs — rápido e sem erro."
+title: "Gerador de URL Amigável (Slug) — Para SEO, Jekyll, Blogs"
+permalink: /ferramentas/slug-generator/
+tags: [slug, url, seo, jekyll, blog, permalink, amigavel, ferramenta]
+---
+
+{% include toc.html %}
+
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+  
+  
+ 
+  <div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+    <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🌿 Gerador de Slug SEO — Dark Tech</h2>
+
+    <div style="margin-bottom: 20px;">
+      <div style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Título ou Texto:</strong></div>
+      <textarea 
+        id="slugInput" 
+        style="width: 100%; height: 100px; padding: 15px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 6px; font-family: 'Courier New', monospace; resize: vertical;"
+        placeholder="Digite seu título aqui...">Como Criar uma Galeria de Wallpapers em SVG com Jekyll</textarea>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+      <div>
+        <div style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Separador:</strong></div>
+        <select id="separator" style="background: #2a2a2a; color: #e0e0e0; padding: 10px; border: 1px solid #444; border-radius: 4px; width: 100%; font-family: monospace;">
+          <option value="-">Hífen (-)</option>
+          <option value="_">Sublinhado (_)</option>
+          <option value="+">Mais (+)</option>
+        </select>
+      </div>
+
+      <div style="display: flex; flex-direction: column; justify-content: flex-end;">
+        <label style="color: #e0e0e0; margin-bottom: 8px;">
+          <input type="checkbox" id="lowercase" checked style="accent-color: #8bc34a; margin-right: 8px;"> Converter para minúsculas
+        </label>
+        <label style="color: #e0e0e0;">
+          <input type="checkbox" id="removeStopWords" checked style="accent-color: #8bc34a; margin-right: 8px;"> Remover palavras comuns
+        </label>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+      <button onclick="generateSlug()" style="background: #2a2a2a; color: #8bc34a; border: 1px solid #444; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: monospace; transition: background 0.2s;">
+        🔄 Gerar Slug
+      </button>
+      <button onclick="copySlug()" style="background: #2a2a2a; color: #a6e3a1; border: 1px solid #444; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: monospace; transition: background 0.2s;">
+        📋 Copiar Slug
+      </button>
+      <button onclick="copyFullUrl()" style="background: #2a2a2a; color: #89b4fa; border: 1px solid #444; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: monospace; transition: background 0.2s;">
+        🌐 Copiar URL
+      </button>
+    </div>
+
+    <div style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #333; margin-bottom: 20px;">
+      <h3 style="color: #8bc34a; margin-top: 0; font-size: 1.2em;">📌 Slug Gerado</h3>
+      <div 
+        id="slugOutput" 
+        style="padding: 15px; background: #0f0f0f; color: #a6e3a1; border: 1px solid #333; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 1em; margin-bottom: 15px; word-break: break-all; min-height: 24px;">
+        ...
+      </div>
+    </div>
+
+    <div style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #333;">
+      <h3 style="color: #8bc34a; margin-top: 0; font-size: 1.2em;">🔗 URL Completa (exemplo)</h3>
+      <div 
+        id="fullUrl" 
+        style="padding: 15px; background: #0f0f0f; color: #cdd6f4; border: 1px solid #333; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 0.95em; word-break: break-all; min-height: 24px;">
+        https://seudominio.com/blog/...
+      </div>
+    </div>
+
+    <div style="margin-top: 25px; padding: 15px; background: #161616; border-left: 4px solid #8bc34a; border-radius: 0 6px 6px 0;">
+      <h4 style="color: #8bc34a; margin-top: 0;">💡 Dica Técnica</h4>
+      <p style="color: #d0d0d0; font-size: 0.95em; line-height: 1.5;">
+        Slugs são partes amigáveis de URLs usadas para SEO e usabilidade. Prefira caracteres alfanuméricos, minúsculas e evite acentos ou espaços.
+        <br><br>
+        <strong>Exemplo ideal:</strong> <code style="color: #a6e3a1;">/otimizar-seo-jekyll</code> em vez de <code style="color: #a6e3a1;">/como_você_pode_otimizar_o_seo_no_jekyll</code>
+      </p>
+    </div>
+  </div>
+
+<div class="seo-content">
+    <h2> Já se perguntou o que diabos é um "slug"?</h2>
+    <p>É a parte final de uma URL que identifica de forma amigável e legível uma página, essencial para SEO e usabilidade.</p>
+    <h2>Como usar esta ferramenta?</h2>
+    <p>Digite um título, escolha o separador e opções. Clique em "Gerar". Use o slug em seus permalinks, nomes de arquivos ou URLs.</p>
+   
+  </div>
+
+
+  
+</section>
+  
+
+
+
+
+<script>
+function removeAccents(str) {
+  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function generateSlug() {
+  let text = document.getElementById('slugInput').value.trim();
+  const separator = document.getElementById('separator').value;
+  const lowercase = document.getElementById('lowercase').checked;
+  const removeStopWords = document.getElementById('removeStopWords').checked;
+  
+  if (!text) {
+    document.getElementById('slugOutput').innerText = 'sem-titulo';
+    document.getElementById('fullUrl').innerText = 'https://seudominio.com/blog/sem-titulo';
+    return;
+  }
+
+  // Remove acentos
+  text = removeAccents(text);
+  
+  // Remove pontuação (mantém letras, números e espaços)
+  text = text.replace(/[^a-zA-Z0-9\s]/g, ' ');
+  
+  // Divide em palavras
+  let words = text.split(/\s+/);
+  
+  // Remove palavras comuns (stop words)
+  if (removeStopWords) {
+    const stopWords = ['a', 'o', 'as', 'os', 'de', 'do', 'da', 'dos', 'das', 'em', 'no', 'na', 'nos', 'nas', 'para', 'com', 'sem', 'por', 'e', 'ou', 'mas', 'se', 'que', 'um', 'uma', 'uns', 'umas', 'ao', 'aos', 'à', 'às', 'pelo', 'pela', 'pelos', 'pelas', 'the', 'of', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'with', 'without', 'by'];
+    words = words.filter(word => !stopWords.includes(word.toLowerCase()));
+  }
+  
+  // Filtra palavras vazias
+  words = words.filter(word => word.length > 0);
+  
+  // Junta com separador
+  let slug = words.join(separator);
+  
+  // Converte para minúsculas
+  if (lowercase) slug = slug.toLowerCase();
+  
+  // Remove separadores duplicados
+  const sepRegex = new RegExp(`${separator}{2,}`, 'g');
+  slug = slug.replace(sepRegex, separator);
+  
+  // Remove separador no início e fim
+  slug = slug.replace(new RegExp(`^${separator}+|${separator}+$`, 'g'), '');
+
+  // Fallback
+  if (slug === '') slug = 'sem-titulo';
+  
+  document.getElementById('slugOutput').innerText = slug;
+  document.getElementById('fullUrl').innerText = `https://seudominio.com/blog/${slug}`;
+}
+
+function copySlug() {
+  const slug = document.getElementById('slugOutput').innerText;
+  if (slug && slug !== '...') {
+    navigator.clipboard.writeText(slug).then(() => {
+      alert('✅ Slug copiado!');
+    }).catch(() => {
+      alert('❌ Falha ao copiar. Tente manualmente.');
+    });
+  }
+}
+
+function copyFullUrl() {
+  const url = document.getElementById('fullUrl').innerText;
+  if (url && !url.includes('...')) {
+    navigator.clipboard.writeText(url).then(() => {
+      alert('✅ URL copiada!');
+    }).catch(() => {
+      alert('❌ Falha ao copiar. Tente manualmente.');
+    });
+  }
+}
+
+// Gera ao carregar e ao digitar
+document.addEventListener('DOMContentLoaded', generateSlug);
+document.getElementById('slugInput').addEventListener('input', generateSlug);
+document.getElementById('separator').addEventListener('change', generateSlug);
+document.getElementById('lowercase').addEventListener('change', generateSlug);
+document.getElementById('removeStopWords').addEventListener('change', generateSlug);
+</script>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de URL Amigável (Slug)",
+  "description": "Ferramenta para converter títulos em slugs otimizados para URLs — remove acentos, pontuação e espaços. Ideal para SEO, Jekyll, Hugo e blogs.",
+  "applicationCategory": "Ferramenta para SEO e Desenvolvedores",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+

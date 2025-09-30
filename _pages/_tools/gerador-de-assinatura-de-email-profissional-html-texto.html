@@ -1,0 +1,232 @@
+---
+layout: manual-seo
+title_custom: "Gerador de Assinatura de Email Profissional — HTML + Texto | Piolinux"
+description_custom: "Crie assinaturas elegantes com nome, cargo, telefone e redes sociais. Gera código HTML pronto e versão em texto puro."
+title: "Gerador de Assinatura de Email Profissional — HTML + Texto"
+permalink: /ferramentas/email-signature-generator/
+tags: [email, assinatura, html, marketing, vendas, suporte, seo]
+---
+
+
+
+{% include toc.html %}
+
+
+
+<section class="tool-single-page">
+  <a href="/ferramentas/" class="back-link">← Voltar para todas as ferramentas</a>
+  
+  <div class="tool-container" style="background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; margin: 20px 0;">
+  <h2 class="tool-title" style="color: #8bc34a; margin-top: 0; font-size: 1.4em;">🐧 Gerador de Assinatura Profissional</h2>
+  
+  <div style="margin-bottom: 16px;">
+    <siv style="color: #e0e0e0; display: block; margin-bottom: 8px;"><strong>Estilo:</strong></div>
+    <select id="sigStyle" onchange="generateSignature()" style="background: #2a2a2a; color: #e0e0e0; padding: 8px; border: 1px solid #444; border-radius: 4px; width: 100%; max-width: 300px;">
+      <option value="tech">💻 Dark Tech (HTML)</option>
+      <option value="minimal">📝 Minimalista (Texto Puro)</option>
+    </select>
+  </div>
+
+  <div style="margin-bottom: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+    <div>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Nome:</div>
+      <input type="text" id="sigName" placeholder="Seu Nome" oninput="generateSignature()" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Cargo:</div>
+      <input type="text" id="sigTitle" placeholder="Seu Cargo" oninput="generateSignature()" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div>
+      <!-- ✅ Corrigido: "margin-bottom: 4: " → "margin-bottom: 4px;" -->
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Empresa:</div>
+      <input type="text" id="sigCompany" placeholder="Sua Empresa" oninput="generateSignature()" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Telefone:</div>
+      <input type="text" id="sigPhone" placeholder="ex: +55 11 99999-9999" oninput="generateSignature()" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Email:</div>
+      <input type="email" id="sigEmail" placeholder="ex: voce@empresa.com" oninput="generateSignature()" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Website:</div>
+      <input type="text" id="sigWebsite" placeholder="ex: empresa.com" oninput="generateSignature()" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">LinkedIn:</div>
+      <input type="text" id="sigLinkedIn" placeholder="ex: linkedin.com/in/seu-nome" oninput="generateSignature()" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">Twitter:</div>
+      <input type="text" id="sigTwitter" placeholder="ex: twitter.com/seu-user" oninput="generateSignature()" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+    <div>
+      <div style="color: #e0e0e0; display: block; margin-bottom: 4px;">GitHub:</div>
+      <input type="text" id="sigGitHub" placeholder="ex: github.com/seu-user" oninput="generateSignature()" style="width: 100%; padding: 8px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 4px;">
+    </div>
+  </div>
+
+  <h3 style="color: #8bc34a; margin: 20px 0 10px 0;">👁️ Preview da Assinatura</h3>
+  <div id="signaturePreview" style="min-height: 100px; margin-bottom: 20px; padding: 15px; background: #121212; border-radius: 6px; border: 1px solid #333;"></div>
+
+  <!-- ✅ Campos ocultos necessários para a função de cópia -->
+  <textarea id="signatureHTML" style="display: none;" readonly></textarea>
+  <textarea id="signatureText" style="display: none;" readonly></textarea>
+
+  <div style="display: flex; gap: 10px; margin-bottom: 16px;">
+    <button onclick="copySignature('HTML')" style="background: #4caf50; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; flex: 1;">
+      📋 Copiar HTML
+    </button>
+    <button onclick="copySignature('Texto')" style="background: #2196F3; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; flex: 1;">
+      📋 Copiar Texto
+    </button>
+  </div>
+</div>
+
+  <div style="background: #1a2a1a; color: #8bc34a; padding: 15px; border-radius: 6px; margin-top: 20px; border: 1px solid #333;">
+    <strong>  Dicas de Sysadmin e Design:</strong><br>
+      <strong>Não manda imagem na assinatura do email, viu? Muita gente bloqueia isso.<br>
+      <strong>Utilize fontes web-safe,</strong> como Courier New ou Arial.<br>
+      <strong>Versão texto puro</strong> é mais compatível com terminais e clientes antigos.<br>
+      <strong>Links encurtados?</strong> Evite — podem ser marcados como spam.
+  </div>
+</div>
+  
+  <div class="seo-content">
+    <h2>Por que uma Assinatura de Email Profissional?</h2>
+    <p>Adiciona credibilidade, facilita o contato e reforça sua marca pessoal ou corporativa em todas as comunicações.</p>
+    <h2>Como usar esta ferramenta?</h2>
+    <p>Preencha seus dados, adicione links de redes sociais e clique em "Gerar". Copie o código HTML para seu cliente de email, use a versão texto como alternativa.</p>
+   
+  </div>
+</section>
+
+
+
+
+<script>
+// 👇 Define as funções no escopo GLOBAL para funcionar com onclick/oninput
+function generateSignature() {
+    const name = document.getElementById('sigName')?.value?.trim() || 'Seu Nome';
+    const title = document.getElementById('sigTitle')?.value?.trim() || 'Seu Cargo';
+    const company = document.getElementById('sigCompany')?.value?.trim() || 'Sua Empresa';
+    const phone = document.getElementById('sigPhone')?.value?.trim() || '';
+    const email = document.getElementById('sigEmail')?.value?.trim() || '';
+    const website = document.getElementById('sigWebsite')?.value?.trim() || '';
+    const linkedin = document.getElementById('sigLinkedIn')?.value?.trim() || '';
+    const twitter = document.getElementById('sigTwitter')?.value?.trim() || '';
+    const github = document.getElementById('sigGitHub')?.value?.trim() || '';
+    const style = document.getElementById('sigStyle')?.value || 'tech';
+    
+    let html = '';
+    let text = '';
+
+    if (style === 'tech') {
+        html = `<div style="font-family: 'Courier New', monospace; font-size: 13px; color: #e0e0e0; line-height: 1.6; background: #121212; padding: 15px; border-left: 4px solid #4caf50; border-radius: 4px;">
+            <strong style="font-size: 15px; color: #8bc34a;">${name}</strong><br>
+            <span style="color: #aaa;">${title}</span><br>
+            <span style="color: #aaa;">${company}</span><br><br>
+        `;
+        
+        if (phone) html += `<span>📞 ${phone}</span><br>`;
+        if (email) html += `<span>✉️ <a href="mailto:${email}" style="color: #8bc34a; text-decoration: none;">${email}</a></span><br>`;
+        if (website) html += `<span>🌐 <a href="${website.startsWith('http') ? website : 'https://' + website}" style="color: #8bc34a; text-decoration: none;">${website}</a></span><br>`;
+        
+        let social = '';
+        if (linkedin) social += `<a href="${linkedin.startsWith('http') ? linkedin : 'https://' + linkedin}" style="text-decoration: none; margin-right: 10px; color: #8bc34a;">in/</a>`;
+        if (twitter) social += `<a href="${twitter.startsWith('http') ? twitter : 'https://' + twitter}" style="text-decoration: none; margin-right: 10px; color: #8bc34a;">@</a>`;
+        if (github) social += `<a href="${github.startsWith('http') ? github : 'https://' + github}" style="text-decoration: none; color: #8bc34a;">gh/</a>`;
+        
+        if (social) html += `<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #333;">${social}</div>`;
+        
+        html += `</div>`;
+        
+        text = `-- \n${name}\n${title} @ ${company}\n`;
+        if (phone) text += `📞 ${phone}\n`;
+        if (email) text += `✉️ ${email}\n`;
+        if (website) text += `🌐 ${website}\n`;
+        if (linkedin || twitter || github) {
+            text += `\n`;
+            if (linkedin) text += `LinkedIn: ${linkedin}\n`;
+            if (twitter) text += `Twitter: ${twitter}\n`;
+            if (github) text += `GitHub: ${github}\n`;
+        }
+        
+    } else {
+        text = `${name}\n${title}\n${company}\n`;
+        if (phone) text += `📞 ${phone}\n`;
+        if (email) text += `✉️ ${email}\n`;
+        if (website) text += `🌐 ${website}\n`;
+        if (linkedin) text += `🔗 LinkedIn: ${linkedin}\n`;
+        if (twitter) text += `🐦 Twitter: ${twitter}\n`;
+        if (github) text += `🐙 GitHub: ${github}\n`;
+        
+        html = `<pre style="font-family: 'Courier New', monospace; font-size: 13px; color: #e0e0e0; background: #121212; padding: 15px; border-radius: 4px; white-space: pre-wrap;">${text}</pre>`;
+    }
+
+    // ✅ Atualiza preview e campos de cópia
+    const previewElem = document.getElementById('signaturePreview');
+    const htmlElem = document.getElementById('signatureHTML');
+    const textElem = document.getElementById('signatureText');
+
+    if (previewElem) previewElem.innerHTML = html;
+    if (htmlElem) htmlElem.value = html;  // ← Agora salva o HTML aqui
+    if (textElem) textElem.value = text;  // ← Agora salva o texto aqui
+}
+
+function copySignature(type) {
+    // ✅ Aceita 'HTML' ou 'Texto' (compatível com seu botão)
+    const elemId = type === 'HTML' ? 'signatureHTML' : 'signatureText';
+    const elem = document.getElementById(elemId);
+    
+    if (!elem || !elem.value.trim()) {
+        alert('❌ Nada para copiar. Preencha os campos primeiro.');
+        return;
+    }
+
+    navigator.clipboard.writeText(elem.value).then(() => {
+        alert(`✅ Assinatura ${type} copiada com sucesso!`);
+    }).catch(() => {
+        alert(`❌ Falha ao copiar. Tente manualmente (Ctrl+C).`);
+    });
+}
+
+// ✅ Inicializa ao carregar
+document.addEventListener('DOMContentLoaded', function() {
+    generateSignature();
+});
+</script>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de Assinatura de Email Profissional Online",
+  "description": "Ferramenta online para criar assinaturas profissionais para email com nome, cargo, telefone, redes sociais e logo. Gera código HTML e versão texto.",
+  "applicationCategory": "Ferramenta para Marketing e Vendas",
+  "operatingSystem": "Web",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Equipe Piolinux"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Piolinux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://piolinux.com/logo-512.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2025-09-17T10:00:00+00:00",
+  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
+}
+</script>
+
+
+
