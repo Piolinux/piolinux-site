@@ -49,14 +49,51 @@ collections:
     permalink: /:title/
   jogos:
     output: true
-    permalink: /jogo/:title/
+    permalink: /jogos/:title/
   wallpapers:
     output: true
     permalink: /wallpaper/:title/
+  ferramentas:
+    output: true
+    permalink: /ferramentas/:title/
   comandos:
     output: true
-    permalink: /:path/
+    permalink: /comandos/:title/
+  distros:
+    output: true
+    permalink: /distros/:title/
+  linux:
+    output: true
+    permalink: /linux/:title/
+  iniciantes:
+    output: true
+    permalink: /iniciantes/:title/
+  kernel:
+    output: true
+    permalink: /kernel/:title/
+  tools:
+    output: true
+    permalink: /tools/:title/
+  piadas:
+    output: true
+    permalink: /piadas/:title/
+  termos:
+    output: true
+    permalink: /termos/:title/
 
+include:
+  - _ferramentas
+  - _jogos
+  - _comandos
+  - _distros
+  - _wallpapers
+  - _linux
+  - _iniciantes
+  - _kernel
+  - _tools
+  - _piadas
+  - _termos
+    
     
 # Para JS, use um plugin ou minifique manualmente
 
