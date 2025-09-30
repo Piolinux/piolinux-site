@@ -119,7 +119,7 @@ sudo apt clean
 echo &quot;Sistema atualizado!&quot;">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Objetivo">Backup de pastas pessoais.</td>
+      <td data-label="Objetivo">Backup de pastas pessoais</td>
       <td data-label="Script"><code>#!/bin/bash
 data=$(date +%Y-%m-%d_%H-%M-%S)
 dir_backup="$HOME/backups"
@@ -154,7 +154,7 @@ echo &quot;Backup salvo em: $dir_backup/$arquivo&quot;">📋</button></td>
   </thead>
   <tbody>
     <tr>
-      <td data-label="Objetivo">Alerta de disco cheio.</td>
+      <td data-label="Objetivo">Alerta de disco cheio</td>
       <td data-label="Script"><code>#!/bin/bash
 uso=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
 if [ $uso -gt 80 ]; then
@@ -194,7 +194,7 @@ echo &quot;Usuários criados.&quot;">📋</button></td>
   </thead>
   <tbody>
     <tr>
-      <td data-label="Objetivo">Listar portas abertas.</td>
+      <td data-label="Objetivo">Listar portas abertas</td>
       <td data-label="Script"><code>#!/bin/bash
 echo "Portas abertas:"
 ss -tuln</code></td>
@@ -203,7 +203,7 @@ echo &quot;Portas abertas:&quot;
 ss -tuln">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Objetivo">Monitorar logins SSH falhos.</td>
+      <td data-label="Objetivo">Monitorar logins SSH falhos</td>
       <td data-label="Script"><code>#!/bin/bash
 echo "Últimas tentativas falhas:"
 grep "Failed password" /var/log/auth.log | tail -5 | awk '{print $11}' | sort | uniq -c</code></td>
@@ -226,14 +226,14 @@ grep &quot;Failed password&quot; /var/log/auth.log | tail -5 | awk '{print $11}'
   </thead>
   <tbody>
     <tr>
-      <td data-label="Objetivo">Servidor HTTP local.</td>
+      <td data-label="Objetivo">Servidor HTTP local</td>
       <td data-label="Script"><code>#!/bin/bash
 python3 -m http.server 8000</code></td>
       <td data-label="Copiar"><button class="copy-btn" data-command="#!/bin/bash
 python3 -m http.server 8000">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Objetivo">Deploy com rsync.</td>
+      <td data-label="Objetivo">Deploy com rsync</td>
       <td data-label="Script"><code>#!/bin/bash
 rsync -avz --delete ./public/ user@host:/var/www/html/
 echo "Deploy concluído."</code></td>
@@ -281,6 +281,9 @@ echo &quot;scale=2; $1&quot; | bc -l">📋</button></td>
   Um segundo de cuidado evita horas de recuperação. Facim!
   </p>
 </div>
+
+
+
 
 
 
