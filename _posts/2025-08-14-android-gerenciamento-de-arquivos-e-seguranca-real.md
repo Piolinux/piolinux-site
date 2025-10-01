@@ -14,7 +14,6 @@ tags: [files_do_google, dr_prot, antivírus, limpeza, android, análise]
 
 <section>
 
-<p>Gerenciamento de arquivos e segurança no Android: alternativas open-source, mitos sobre antivírus e boas práticas reais — sem apps comerciais, alarmismo ou recomendações obsoletas.</p>
 
 <table class="evergreen-table">
   <thead>
