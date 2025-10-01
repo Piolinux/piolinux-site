@@ -17,8 +17,6 @@ permalink: /importancia-da-documentacao-linux/
 
 <section class="post-content">
 
-<p>A documentação no Linux está integrada ao sistema: man pages, <code>--help</code>, arquivos em <code>/usr/share/doc/</code> e fontes oficiais online. Não é opcional — é parte essencial da resolução de problemas.</p>
-
 
             <table class="evergreen-table">
   <thead>
