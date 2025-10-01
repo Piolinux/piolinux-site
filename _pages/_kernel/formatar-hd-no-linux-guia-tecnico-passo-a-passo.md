@@ -17,7 +17,7 @@ tags: [fdisk, mkfs, ext4, ntfs, fstab, uuid]
  <div class="intro-section" style="background: #1a1a1a; padding: 25px; border-radius: 12px; border-left: 4px solid #8bc34a; margin-bottom: 30px;">
     <h2 style="color: #8bc34a; margin: 0 0 15px 0; font-size: 1.5em;">🐧 Formatação de HD no Linux — Comandos Essenciais</h2>
     <p style="color: #d0d0d0; line-height: 1.7; margin: 0;">
-         Essa tabela tem os comandos mais usados pra formatar discos no 
+       <strong>  Essa tabela tem os comandos mais usados pra formatar discos no 
          Linux, com uns exemplos práticos, os sistemas de arquivos que funcionam e umas dicas de uso. Pra quem manja, pro administrador ou pra quem tá montando um servidor ou sistema do zero, é perfeito. Sem complicação, só o que importa.</strong>
     </p>
 </div>
