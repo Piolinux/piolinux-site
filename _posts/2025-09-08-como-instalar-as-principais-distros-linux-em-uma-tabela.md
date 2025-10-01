@@ -26,14 +26,6 @@ permalink: /distros-linux-tabela/
 
 
 
-<h2>Tabela Comparativa: Como Instalar as Principais Distros Linux</h2>
-
-
-
-<div>A instalação de Sistemas Operacionais como Ubuntu, Arch e Fedora, bem como outras distribuições Linux, pode gerar incertezas. Este documento compila dados cruciais para a instalação, configuração e utilização das principais distribuições Linux.</div>
-
-
-
 
 
 
@@ -123,5 +115,4 @@ permalink: /distros-linux-tabela/
 
 
 
-  <h3>Conclusão: Não existe uma tabela única com todas as distribuiçoes Linux </h3>  
-  <p>Existem centenas de modos de instalação, desde os mais simples até os mais avançados. Estes últimos podem comprometer o funcionamento do sistema. Recomenda-se testar no VirtualBox antes de realizar experimentos que apresentem riscos.</p>
+ 
