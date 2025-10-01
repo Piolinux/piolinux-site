@@ -9,14 +9,7 @@ tags: [software, dicas, linux, windows, terminal, ohmyzsh, iterm2, windows-termi
 
 <section>
 
-<h2>Mudar de sistema operativo pode dar um frio na barriga — como se estivesse mudando de casa e não soubesse o que levar na mala.</h2>
-<p>Mas respira: <strong>quase tudo o que você usa no Windows ou macOS já tem uma alternativa sólida, gratuita e muitas vezes superior no Linux</strong>.</p>
-<p>Em vez de listar “irmãos” ou “primos” com descrições vagas, aqui está o que realmente importa:</p>
-<ul>
-  <li>✅ <strong>O nome do software.</strong></li>
-  <li>✅ <strong>Se é livre ou não.</strong></li>
-  <li>✅ <strong>O comando exato para instalar.</strong> (basta copiar e colar)</li>
-</ul>
+
 
 <table class="evergreen-table">
   <thead>
@@ -131,17 +124,6 @@ tags: [software, dicas, linux, windows, terminal, ohmyzsh, iterm2, windows-termi
 </table>
 
 
-
-<h3>E agora?</h3>
-<ol>
-  <li><strong>Copie os comandos</strong> que precisa e cole no terminal.</li>
-  <li><strong>Reinicie</strong> se for pedido (raramente é necessário).</li>
-  <li><strong>Comece a usar</strong> — sem tutoriais, sem screenshots, sem perder tempo.</li>
-</ol>
-<p>Se algo não funcionar, <strong>não é você — é o comando errado</strong>.<br>
-E aqui, todos os comandos foram testados em <strong>Ubuntu 22.04/24.04 e Debian 12</strong>.</p>
-<p>Boas-vindas ao Linux. 🐧<br>
-Agora você tem as ferramentas — e o controle.</p>
 
 </section>
 
