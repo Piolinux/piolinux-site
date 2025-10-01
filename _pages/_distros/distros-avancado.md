@@ -24,10 +24,7 @@ permalink: /distros/avancado/
 <section>
 
 
-<div>
-  
-  <p>Use esta tabela para escolher a base ideal antes de montar sua própria distro.</p>
-</div>
+
 
 
 
@@ -81,9 +78,6 @@ permalink: /distros/avancado/
 </table>
 
 
-<p>
-  Quando você monta do zero, o sistema vira extensão da sua mente.
-</p>
 
 </section>
 
