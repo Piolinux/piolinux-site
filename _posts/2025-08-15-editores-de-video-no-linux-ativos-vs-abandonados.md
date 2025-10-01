@@ -15,7 +15,6 @@ tags: [kino, editor-de-video, linux, dv, open-source]
 
 <section class="post-content">
 
-<p>Editores de vídeo no Linux: comparação entre ferramentas ativas (Kdenlive, Shotcut, OpenShot) e software abandonado (Kino) — com comandos de instalação reais e avisos sobre formatos obsoletos.</p>
 
 
     <table class="evergreen-table">
