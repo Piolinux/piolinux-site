@@ -106,9 +106,9 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="shopt -s autocd">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>bind -x '"\\C-p": pwd'</code></td>
+      <td data-label="Comando"><code>bind -x '"\C-p":"pwd"'</code></td>
       <td data-label="Descrição">Atalho: Ctrl+P mostra caminho.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="bind -x &#39;&quot;\\C-p&quot;: pwd&#39;">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="bind -x &#39;&quot;\C-p&quot;: pwd&#39;">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>cal -3</code></td>
