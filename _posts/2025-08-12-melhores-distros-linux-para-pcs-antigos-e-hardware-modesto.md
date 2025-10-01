@@ -19,8 +19,6 @@ permalink: /distros-linux-pc-antigo/
 
 <section class="post-content">
            
-           <p>Distros leves para hardware com menos de 2 GB de RAM. Inclui apenas opções ativas, com requisitos mínimos verificados e ambientes gráficos realmente leves (LXDE, LXQt, IceWM, JWM).</p>
-           
            
             
          <table class="evergreen-table">
