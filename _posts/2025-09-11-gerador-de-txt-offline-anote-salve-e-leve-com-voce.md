@@ -33,7 +33,7 @@ permalink: /gerador-txt-offline-anotacoes-lembretes/
 </table>
 
 
- <textarea id="content" placeholder="Digite seu texto aqui..." rows="15" cols="80"></textarea>
+ <textarea id="content" placeholder="Digite seu texto aqui..." rows="15" cols="30"></textarea>
 <br>
 <button onclick="downloadTxt()">Baixar .txt</button>
 
