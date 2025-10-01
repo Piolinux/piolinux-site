@@ -17,123 +17,81 @@ permalink: /comparativo-terminais/
 <section class="post-content">
 
 
-
-
-
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Característica</th>
-      <th>Linux 🐧</th>
-      <th>macOS (Unix) 🍏</th>
-      <th>Windows 💾</th>
+      <th>Características.</th>
+      <th>Linux.</th>
+      <th>macOS.</th>
+      <th>Windows.</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td data-label="Característica"><strong>Shell padrão</strong></td>
-      <td data-label="Linux 🐧">Bash, Zsh, Fish</td>
-      <td data-label="macOS (Unix) 🍏">Zsh (padrão desde Catalina), Bash</td>
-      <td data-label="Windows 💾">PowerShell (moderno), CMD (legado)</td>
+      <td data-label="Característica">Shell padrão.</td>
+      <td data-label="Linux">Bash, Zsh, Fish.</td>
+      <td data-label="macOS">Zsh.</td>
+      <td data-label="Windows">PowerShell.</td>
     </tr>
     <tr>
-      <td data-label="Característica"><strong>Terminal padrão</strong></td>
-      <td data-label="Linux 🐧">GNOME Terminal, Konsole (varia por distro)</td>
-      <td data-label="macOS (Unix) 🍏">Terminal.app</td>
-      <td data-label="Windows 💾">CMD, PowerShell</td>
+      <td data-label="Característica">Terminal padrão.</td>
+      <td data-label="Linux">GNOME Terminal, Konsole, xterm.</td>
+      <td data-label="macOS">Terminal.app.</td>
+      <td data-label="Windows">CMD, PowerShell.</td>
     </tr>
     <tr>
-      <td data-label="Característica"><strong>Terminal moderno recomendado</strong></td>
-      <td data-label="Linux 🐧"><a href="https://ohmyz.sh">Oh My Zsh</a> — framework open source, +300 plugins, +150 temas, comunidade vibrante</td>
-      <td data-label="macOS (Unix) 🍏"><a href="https://iterm2.com">iTerm2</a> — substituto moderno do Terminal.app, com abas, splits, temas e integração avançada</td>
-      <td data-label="Windows 💾"><a href="https://aka.ms/terminal">Windows Terminal</a> — terminal moderno, GPU-acelerado, suporte a abas, perfis, WSL, Azure Cloud Shell</td>
+      <td data-label="Característica">Terminal moderno recomendado.</td>
+      <td data-label="Linux">Alacritty, Kitty, Terminator.</td>
+      <td data-label="macOS">iTerm2.</td>
+      <td data-label="Windows">Windows Terminal.</td>
     </tr>
     <tr>
-      <td data-label="Característica"><strong>Suporte a abas e splits</strong></td>
-      <td data-label="Linux 🐧">Sim (em terminais modernos como Alacritty, Kitty, Terminator)</td>
-      <td data-label="macOS (Unix) 🍏">Sim (iTerm2 tem splits verticais/horizontais avançados)</td>
-      <td data-label="Windows 💾">Sim (Windows Terminal tem abas + painéis divididos)</td>
+      <td data-label="Característica">Suporte a abas e splits.</td>
+      <td data-label="Linux">Sim</td>
+      <td data-label="macOS">Sim</td>
+      <td data-label="Windows">Sim</td>
     </tr>
     <tr>
-      <td data-label="Característica"><strong>Customização (temas, cores)</strong></td>
-      <td data-label="Linux 🐧">🔥🔥🔥 (Alta: Oh My Zsh + temas como Powerlevel10k, Spaceship)</td>
-      <td data-label="macOS (Unix) 🍏">🔥🔥🔥 (Alta: iTerm2 + temas customizáveis + Oh My Zsh)</td>
-      <td data-label="Windows 💾">🔥🔥 (Média-Alta: via JSON, suporte a temas, transparência, animações)</td>
+      <td data-label="Característica">Customização.</td>
+      <td data-label="Linux">Temas via Oh My Zsh, Powerlevel10k.</td>
+      <td data-label="macOS">Temas no iTerm2 + Oh My Zsh.</td>
+      <td data-label="Windows">Temas via JSON no Windows Terminal.</td>
     </tr>
     <tr>
-      <td data-label="Característica"><strong>Acesso nativo ao Linux</strong></td>
-      <td data-label="Linux 🐧">Sim (é o sistema)</td>
-      <td data-label="macOS (Unix) 🍏">Terminal é Unix (comandos compatíveis com Linux)</td>
-      <td data-label="Windows 💾">Sim, via <strong>WSL 2</strong> (Ubuntu, Debian, etc — integrado ao Windows Terminal)</td>
+      <td data-label="Característica">Acesso ao Linux.</td>
+      <td data-label="Linux">Nativo</td>
+      <td data-label="macOS">Nativo (Unix)</td>
+      <td data-label="Windows">Via WSL 2</td>
     </tr>
     <tr>
-      <td data-label="Característica"><strong>Comandos Unix (grep, sed, awk)</strong></td>
-      <td data-label="Linux 🐧">Sim, nativo</td>
-      <td data-label="macOS (Unix) 🍏">Sim, nativo</td>
-      <td data-label="Windows 💾">Sim, via WSL, Git Bash ou Cygwin</td>
+      <td data-label="Característica">Comandos Unix (grep, sed, awk).</td>
+      <td data-label="Linux">Nativo.</td>
+      <td data-label="macOS">Nativo.</td>
+      <td data-label="Windows">Via WSL ou Git Bash.</td>
     </tr>
     <tr>
-      <td data-label="Característica"><strong>Melhor para DevOps / Servidores</strong></td>
-      <td data-label="Linux 🐧">✅✅✅ (padrão em nuvem, Docker, Kubernetes, CI/CD)</td>
-      <td data-label="macOS (Unix) 🍏">✅✅ (usado, mas menos comum em produção)</td>
-      <td data-label="Windows 💾">✅ (com WSL — cada vez mais adotado em ambientes corporativos)</td>
+      <td data-label="Característica">Gerenciador de pacotes.</td>
+      <td data-label="Linux">apt, dnf, pacman, xbps.</td>
+      <td data-label="macOS">Homebrew</td>
+      <td data-label="Windows">winget, Chocolatey.</td>
     </tr>
     <tr>
-      <td data-label="Característica"><strong>Melhor para desenvolvimento</strong></td>
-      <td data-label="Linux 🐧">Python, C/C++, DevOps, scripts, containers</td>
-      <td data-label="macOS (Unix) 🍏">iOS, Swift, web, front-end, design, Ruby on Rails</td>
-      <td data-label="Windows 💾">.NET, C#, Azure, Unity, apps desktop, PowerShell scripting</td>
+      <td data-label="Característica">Scripting padrão.</td>
+      <td data-label="Linux">Bash/Zsh.</td>
+      <td data-label="macOS">Zsh</td>
+      <td data-label="Windows">PowerShell.</td>
     </tr>
     <tr>
-      <td data-label="Característica"><strong>Facilidade para iniciantes</strong></td>
-      <td data-label="Linux 🐧">⚠️ (varia por distro — Ubuntu + Oh My Zsh = amigável)</td>
-      <td data-label="macOS (Unix) 🍏">✅✅ (GUI + iTerm2 + Oh My Zsh = experiência suave)</td>
-      <td data-label="Windows 💾">✅✅ (Windows Terminal + WSL guiado = ótimo para aprendizado)</td>
-    </tr>
-    <tr>
-      <td data-label="Característica"><strong>Integração com IDE</strong></td>
-      <td data-label="Linux 🐧">Excelente (VS Code, Vim, Emacs, JetBrains)</td>
-      <td data-label="macOS (Unix) 🍏">Excelente (Xcode, VS Code, WebStorm, JetBrains)</td>
-      <td data-label="Windows 💾">Excelente (Visual Studio, VS Code, Rider, JetBrains)</td>
-    </tr>
-    <tr>
-      <td data-label="Característica"><strong>Animações e estilo</strong></td>
-      <td data-label="Linux 🐧"><code>neofetch</code>, <code>cmatrix</code>, <code>asciiquarium</code>, <code>sl</code></td>
-      <td data-label="macOS (Unix) 🍏"><code>neofetch</code>, <code>cmatrix</code>, <code>lolcat</code></td>
-      <td data-label="Windows 💾"><code>PowerShell + ASCII art</code>, <code>cmatrix</code> no WSL</td>
-    </tr>
-    <tr>
-      <td data-label="Característica"><strong>Ferramentas de instalação</strong></td>
-      <td data-label="Linux 🐧"><code>apt</code>, <code>dnf</code>, <code>pacman</code>, <code>zypper</code></td>
-      <td data-label="macOS (Unix) 🍏"><code>brew</code> (Homebrew), <code>port</code> (MacPorts)</td>
-      <td data-label="Windows 💾"><code>winget</code>, <code>choco</code> (Chocolatey), Microsoft Store</td>
-    </tr>
-    <tr>
-      <td data-label="Característica"><strong>Comunidade e suporte</strong></td>
-      <td data-label="Linux 🐧">Gigantesca (fóruns, Reddit, GitHub, documentação oficial)</td>
-      <td data-label="macOS (Unix) 🍏">Grande (especialmente em desenvolvimento Apple + Oh My Zsh)</td>
-      <td data-label="Windows 💾">Crescendo rápido (Microsoft apoia open source, fóruns ativos)</td>
-    </tr>
-    <tr>
-      <td data-label="Característica"><strong>Scripting / automação</strong></td>
-      <td data-label="Linux 🐧">Bash/Zsh: poderoso e amplamente usado</td>
-      <td data-label="macOS (Unix) 🍏">Shell scripts com Zsh/Bash; automação com <code>automator</code></td>
-      <td data-label="Windows 💾">PowerShell: orientado a objetos, muito poderoso, ideal para sysadmin Windows</td>
-    </tr>
-    <tr>
-      <td data-label="Característica"><strong>Segurança e permissões</strong></td>
-      <td data-label="Linux 🐧">Controle total com <code>sudo</code>, <code>chmod</code>, <code>chown</code></td>
-      <td data-label="macOS (Unix) 🍏">Modelo Unix: <code>chmod</code>, <code>chown</code>, <code>sudo</code></td>
-      <td data-label="Windows 💾">UAC (Controle de Conta de Usuário), PowerShell com permissão de administrador</td>
-    </tr>
-    <tr>
-      <td data-label="Característica"><strong>Desempenho do terminal</strong></td>
-      <td data-label="Linux 🐧">Muito rápido (especialmente Alacritty, Kitty — GPU-acelerados)</td>
-      <td data-label="macOS (Unix) 🍏">Rápido (iTerm2 é otimizado para macOS)</td>
-      <td data-label="Windows 💾">Bom (Windows Terminal é GPU-acelerado, leve e moderno)</td>
+      <td data-label="Característica">Permissões.</td>
+      <td data-label="Linux">chmod, chown, sudo.</td>
+      <td data-label="macOS">chmod, chown, sudo.</td>
+      <td data-label="Windows">UAC, políticas de execução do PowerShell.</td>
     </tr>
   </tbody>
 </table>
+
+
+</section>
 
 
 
