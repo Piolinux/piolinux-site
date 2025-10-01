@@ -15,8 +15,7 @@ tags: [dosbox, double-commander, emulação, gerenciador-de-arquivos, nostalgia]
 
 <section class="post-content">
            
-       <p>Comandos verificados para instalar e usar DOSBox (emulador MS-DOS) e Double Commander (gerenciador de arquivos em painel duplo) — sem recomendações obsoletas ou práticas inseguras como executar GUI como root.</p>
-
+      
     <table class="evergreen-table">
   <thead>
     <tr>
