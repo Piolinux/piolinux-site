@@ -116,9 +116,9 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="cal -3">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>yes "y" \| apt upgrade</code></td>
+      <td data-label="Comando"><code>sudo apt upgrade -y</code></td>
       <td data-label="Descrição">Responde "y" automaticamente.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="yes &quot;y&quot; \| apt upgrade">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="sudo apt upgrade -y">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>scp -r pasta/ user@host:/backup/</code></td>
