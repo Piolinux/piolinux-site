@@ -14,10 +14,6 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
 <section class="post-content">
 
 
-  <div>
-    <strong> Consulta rápida durante a compilação.</strong><br>
-    Siga os passos na ordem. Ideal para desktop, servidor ou aprendizado — atualizável para qualquer versão do kernel.
-  </div>
 
 
 <table class="evergreen-table">
