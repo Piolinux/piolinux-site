@@ -9,8 +9,11 @@ tags: [sysvinit, init, linux, systemd, devuan, slackware, terminal, boot]
 
 
 <section>
-<h2> 🧰 Sistemas de Inicialização Clássicos (SysVinit)</h2>
-<h3>Comandos essenciais para sistemas que usam <strong>SysVinit</strong> (Debian antigo, Devuan com sysvinit, Slackware, etc.).<br>Funciona <strong>sem systemd</strong> — ideal para simplicidade e controle total.</h3>
+
+<h2>🖥 Comandos Gerais.</h2>
+
+
+
 
 <table class="evergreen-table">
   <thead>

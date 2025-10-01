@@ -8,7 +8,10 @@ permalink: /openrc-sysvinit/
 
 <section>
 
-<h3 id="openrc">OpenRC (Devuan, Alpine, Gentoo)</h3>
+<h2>🖥 Comandos Gerais.</h2>
+
+
+
 <table class="evergreen-table">
   <thead>
     <tr>

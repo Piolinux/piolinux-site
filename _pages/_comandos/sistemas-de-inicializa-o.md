@@ -5,9 +5,11 @@ description: "Lista técnica com todos os comandos de Sistemas de Inicializaçã
 permalink: /sistemas-de-inicializacao/
 ---
 
-## 🧰 Sistemas de Inicialização
 
-Comandos essenciais para gerenciar serviços, inicialização e logs no Linux — organizados por uso real. Copie e use sem medo.
+
+<h2>🖥 Comandos Gerais.</h2>
+
+
 
 <table class="evergreen-table">
   <thead>

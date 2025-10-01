@@ -9,10 +9,7 @@ permalink: /gerenciamento-de-pacotes/
 
 
 
-<h2>🖥 🔧 Gerenciamento de Pacotes.</h2>
-
-
-<h3>🖥 📦 Debian/Ubuntu (APT). </h3>
+<h2>🖥 Comandos Gerais.</h2>
 
 
 <input type="text" oninput="filtrarLinhas(this.value)" placeholder="Filtrar comandos...">

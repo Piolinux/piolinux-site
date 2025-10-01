@@ -8,12 +8,7 @@ permalink: /sistemas-de-inicializacao/
 <section>
 
 
-
-<h2>🖥⚡ Sistemas de Inicialização.</h2>
-
-
-<h3>🖥 Comandos Gerais.</h3>
-
+<h2>🖥 Comandos Gerais.</h2>
 
 <input type="text" oninput="filtrarLinhas(this.value)" placeholder="Filtrar comandos...">
 <script>

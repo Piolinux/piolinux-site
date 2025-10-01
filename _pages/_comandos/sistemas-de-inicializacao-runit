@@ -9,17 +9,7 @@ tags: [runit, rinit, void linux, systemd, inicializacao, terminal, linux]
 
 <section>
 
-<h2> 🧰 Sistemas de Inicialização: runit no Void Linux.</h2>
-
-<h3>O Void Linux utiliza runit como sistema de inicialização — leve, rápido e sem systemd.  
-Esta tabela tem os comandos essenciais para gerenciar serviços, logs e boot.</h3>
-  
-  <p>
-  Leia a documentação oficial: 
-  <a href="https://docs.voidlinux.org/" target="_blank" class="btn-void">
-    Documentação do Void Linux
-  </a>
-</p>
+<h2>🖥 Comandos Gerais.</h2>
   
 
 

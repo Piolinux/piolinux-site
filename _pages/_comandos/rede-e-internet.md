@@ -14,11 +14,7 @@ permalink: /rede-e-internet/
 <section>
 
 
-<h2>🖥 🌐 Rede e Internet. </h2>
-
-
-<h3>🖥 Comandos Gerais. </h3>
-
+<h2>🖥 Comandos Gerais.</h2>
 
 <input type="text" oninput="filtrarLinhas(this.value)" placeholder="Filtrar comandos...">
 <script>

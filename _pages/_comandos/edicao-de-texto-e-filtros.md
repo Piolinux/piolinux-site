@@ -9,10 +9,7 @@ permalink: /edicao-de-texto-e-filtros/
 <section>
 
 
-<h2>🖥✂️ Edição de Texto e Filtros.</h2>
-
-
-<h3>🖥 Comandos Gerais.</h3>
+<h2>🖥 Comandos Gerais.</h2>
 
 
 <input type="text" oninput="filtrarLinhas(this.value)" placeholder="Filtrar comandos...">

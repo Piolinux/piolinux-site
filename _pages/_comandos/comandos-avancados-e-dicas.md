@@ -9,9 +9,7 @@ permalink: /comandos-avancados-e-dicas/
 <section>
 
 
-<h2>🖥 🚀 Comandos Avançados e Dicas.</h2>
-
-<h3>🖥 Comandos Gerais.</h3>
+<h2>🖥 Comandos Gerais.</h2>
 
 
 <input type="text" oninput="filtrarLinhas(this.value)" placeholder="Filtrar comandos...">
