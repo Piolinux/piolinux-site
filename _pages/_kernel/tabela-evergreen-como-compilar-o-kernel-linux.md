@@ -65,7 +65,7 @@ tags: [kernel, linux, compilar, compilacao, make, config, sysadmin, desenvolvedo
         Etapas">4. Compilar o kernel</td>
       <td data-label="Comandos"><code>make </code></td>
       <td data-label="Propósito">Compila o kernel e módulos usando todos os núcleos da CPU.</td>
-      <td data-label="Dicas Evergreen">O <code>-j8(nproc)</code>acelera MUITO. Sem ele, pode levar horas, caso use por sua conta e risco, editei a op&ccedil;&atilde;o seguindo a documenta&ccedil;&atilde;o do Arch Linux.</td>
+      <td data-label="Dicas Evergreen">O <code>-j4(nproc)</code>acelera MUITO. Sem ele, pode levar horas, caso use por sua conta e risco, seguindo a documenta&ccedil;&atilde;o do Arch Linux.</td>
     </tr>
     <tr>
       <td data-label="
