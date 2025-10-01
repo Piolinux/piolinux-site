@@ -17,11 +17,6 @@ permalink: /comparativo-terminais/
 <section class="post-content">
 
 
-<h2>🖥️ Comparativo Completo: Terminais por Sistema.</h2>
-
-
-<p>Comparativo dos principais terminais e comandos disponíveis de sistemas operacionais: Linux, macOS e Windows! Vamos ver as diferenças em termos de facilidade de uso, personalização e compatibilidade com os vários shells disponíveis.</p>
-
 
 
 
@@ -141,10 +136,4 @@ permalink: /comparativo-terminais/
 </table>
 
 
-<h2>
-    Quais são os terminais ideais para você?
-</h2>
 
-
-
-<p>Não existe um terminal melhor? Quem trabalha com o terminal precisa dominar as ferramentas do sistema para se tornar um sysadmin de verdade na linha de comando.</p>
