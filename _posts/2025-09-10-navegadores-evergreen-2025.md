@@ -16,11 +16,6 @@ layout: default
            
 
 
-<h2> Tabela: Navegadores Evergreen (2025)</h2>
-
-<p> Atualizados automaticamente •  Seguros  • Sempre compatíveis</p>
-
-
 
 
 
@@ -96,9 +91,4 @@ layout: default
   </tbody>
 </table>
 
-<h2>💡 Dica final</h2>
-<blockquote>
-  🚫 <strong>Não utilize navegadores mortos.</strong><br>
-   <strong>Escolha um dos navegadores da tabela – todos são <em>evergreen</em>, seguros e atualizados.</strong><br>
-  💡 <strong>Dica final: Tenha dois Navegadores instalados — um principal, outro para testes.</strong>
-</blockquote>
+
