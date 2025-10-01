@@ -1,10 +1,9 @@
 ---
 layout: manual-seo
-title_custom: "Kernel Linux: Monolítico, Híbrido, Unikernel — Guia 2025 | Piolinux"
-description_custom: "Comparação técnica evergreen: entenda diferenças entre monolítico, microkernel, híbrido, unikernel e nanokernel — sem depender de versões ou modas."
-title: "Kernel Linux: Monolítico, Híbrido, Unikernel — Guia 2025"
-permalink: /kernel/
-tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, tipos, arquitetura]
+title: "Arquiteturas de Kernel — Comparação Técnica"
+description_custom: "Tabela com monolítico, microkernel, híbrido, unikernel e nanokernel: onde rodam drivers, exemplos reais e uso prático."
+permalink: /arquiteturas-kernel/
+tags: [kernel, linux, microkernel, unikernel, arquitetura, sistema-operacional, evergreen]
 ---
 
 
@@ -13,108 +12,59 @@ tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, t
 
 
 
-
 <section>
-  <h2>Arquiteturas de Kernel: Monolítico, Híbrido e Unikernel.</h2>
-
-  <div>
-    <strong>Entenda as arquiteturas de kernel do tradicional ao experimental</strong><br>
-   Comparação técnica entre modelos de kernel: funcionamento, vantagens, desvantagens e aplicações em 2025.
-  </div>
+  
 
 
 
-<div style="overflow-x: auto;">
-  <table class="evergreen-table">
+<table class="evergreen-table">
   <thead>
     <tr>
-      <th>
-      
-        Tipo de Kernel</th>
-      <th>Licença Comum</th>
-      <th>Filosofia</th>
-      <th>Casos de Uso</th>
-      <th>Exemplos Reais</th>
+      <th>Arquiteturas.</th>
+      <th>Espaço do Kernel.</th>
+      <th>Drivers.</th>
+      <th>Exemplos Reais.</th>
+      <th>Uso Comum.</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td data-label="
-      
-        Tipo de Kernel"><strong>Monolítico</strong></td>
-      <td data-label="Licença Comum">GPL</td>
-      <td data-label="Filosofia">Tudo no espaço do kernel. Performance máxima.</td>
-      <td data-label="Casos de Uso">Servidores, Desktop Linux, Android</td>
-      <td data-label="Exemplos Reais">Linux Kernel, FreeBSD Kernel</td>
+      <td data-label="Arquitetura">Monolítico</td>
+      <td data-label="Espaço do Kernel">Tudo no kernel.</td>
+      <td data-label="Drivers">No kernel</td>
+      <td data-label="Exemplos Reais">Linux, FreeBSD</td>
+      <td data-label="Uso Comum">Servidores, desktops, Android</td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Tipo de Kernel"><strong>Microkernel</strong></td>
-      <td data-label="Licença Comum">MIT, BSD, GPL</td>
-      <td data-label="Filosofia">Kernel mínimo. Serviços no userspace.</td>
-      <td data-label="Casos de Uso">Sistemas embarcados, segurança crítica</td>
-      <td data-label="Exemplos Reais">Minix, L4, QNX, Hurd</td>
+      <td data-label="Arquitetura">Microkernel</td>
+      <td data-label="Espaço do Kernel">Só IPC, scheduler, memória.</td>
+      <td data-label="Drivers">No userspace</td>
+      <td data-label="Exemplos Reais">QNX, Minix 3, Hurd.</td>
+      <td data-label="Uso Comum">Sistemas embarcados, críticos</td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Tipo de Kernel"><strong>Híbrido</strong></td>
-      <td data-label="Licença Comum">Varia</td>
-      <td data-label="Filosofia">Mistura monolítico + microkernel</td>
-      <td data-label="Casos de Uso">Balancear performance e modularidade</td>
-      <td data-label="Exemplos Reais">macOS XNU, Windows NT</td>
+      <td data-label="Arquitetura">Híbrido</td>
+      <td data-label="Espaço do Kernel">Parte no kernel, parte no userspace.</td>
+      <td data-label="Drivers">Mistos</td>
+      <td data-label="Exemplos Reais">macOS (XNU), Windows NT.</td>
+      <td data-label="Uso Comum">Desktops comerciais</td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Tipo de Kernel"><strong>Exokernel</strong></td>
-      <td data-label="Licença Comum">MIT, BSD</td>
-      <td data-label="Filosofia">Aplicações gerenciam hardware diretamente</td>
-      <td data-label="Casos de Uso">Pesquisa, alto desempenho especializado</td>
-      <td data-label="Exemplos Reais">ExOS, XOK (MIT)</td>
+      <td data-label="Arquitetura">Unikernel</td>
+      <td data-label="Espaço do Kernel">App + kernel fundidos.</td>
+      <td data-label="Drivers">Compilados com app</td>
+      <td data-label="Exemplos Reais">MirageOS, Unikraft.</td>
+      <td data-label="Uso Comum">Cloud, serverless</td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Tipo de Kernel"><strong>Unikernel</strong></td>
-      <td data-label="Licença Comum">Apache, MIT, BSD</td>
-      <td data-label="Filosofia">App + Kernel fundidos. Imagem de Kernel única.</td>
-      <td data-label="Casos de Uso">Cloud, containers, serverless.</td>
-      <td data-label="Exemplos Reais">MirageOS, IncludeOS, Unikraft.</td>
-    </tr>
-    <tr>
-      <td data-label="
-      
-        Tipo de Kernel"><strong>Nanokernel</strong></td>
-      <td data-label="Licença Comum">Proprietária / BSD</td>
-      <td data-label="Filosofia">Menor que microkernel. Só gerencia hardware.</td>
-      <td data-label="Casos de Uso">Firmware, RTOS, dispositivos ultra-leves.</td>
-      <td data-label="Exemplos Reais">KeyKOS, EROS, seL4*</td>
+      <td data-label="Arquitetura">Nanokernel</td>
+      <td data-label="Espaço do Kernel">Só gerencia CPU/virtualização.</td>
+      <td data-label="Drivers">Em camada acima</td>
+      <td data-label="Exemplos Reais">seL4, EROS.</td>
+      <td data-label="Uso Comum">Verificação formal, RTOS</td>
     </tr>
   </tbody>
 </table>
-
-
-<h2>Conclusão</h2>
-
-<p>
-  🧠 Entender o kernel não te torna melhor que ninguém — só menos refém.
-</p>
-
-</div>
-
-
-<p><small>* seL4 é um microkernel, mas com características de nanokernel em termos de minimalismo e verificação formal.</small></p>
-
-
-
-
-<p><strong>📚 Fontes oficiais:</strong><br>
-  <a href="https://www.kernel.org/doc/html/latest/" target="_blank">Documentação do Kernel Linux</a> |
-  <a href="https://wiki.archlinux.org/title/Kernel/Traditional_compilation" target="_blank">Guia Arch Linux</a>
-</p>
-
 </section>
 
 
@@ -123,9 +73,9 @@ tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, t
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Como Compilar o Kernel Linux — Guia Evergreen Passo a Passo",
-  "description": "Aprenda a compilar qualquer versão do kernel Linux em qualquer distro. Guia universal, independente de versão, com dicas de otimização e segurança.",
-  "articleBody": "Este guia ensina como compilar o kernel Linux do zero: desde a instalação das dependências necessárias, download do código-fonte no kernel.org, configuração via 'make menuconfig' ou 'make defconfig', compilação paralela com 'make -j$(nproc)', instalação dos módulos e do kernel com 'make modules_install install', até a atualização do bootloader (GRUB ou systemd-boot). Inclui dicas de otimização para seu hardware, segurança (como desativar módulos desnecessários) e rollback em caso de falha.",
+  "headline": "Arquiteturas de Kernel: Monolítico, Microkernel, Híbrido e Unikernel",
+  "description": "Tabela comparativa técnica entre arquiteturas de kernel: monolítico (Linux), microkernel (QNX), híbrido (XNU), unikernel (MirageOS) e nanokernel (seL4).",
+  "articleBody": "Comparação técnica de arquiteturas de kernel: monolítico (tudo no kernel, ex: Linux), microkernel (serviços no userspace, ex: QNX), híbrido (mistura, ex: macOS XNU), unikernel (app + kernel fundidos, ex: MirageOS), nanokernel (mínimo absoluto, ex: seL4). Inclui localização de drivers, espaço de execução e casos de uso.",
   "inLanguage": "pt-BR",
   "url": "{{ page.url | absolute_url }}",
   "mainEntityOfPage": {
@@ -134,8 +84,8 @@ tags: [kernel, linux, monolitico, microkernel, hibrido, unikernel, nanokernel, t
   },
   "author": {
     "@type": "Person",
-    "name": "Equipe piolinux",
-    "url": "https://piolinux.com/author/equipe/"
+    "name": "Piolinux",
+    "url": "https://piolinux.com"
   },
   "publisher": {
     "@type": "Organization",
