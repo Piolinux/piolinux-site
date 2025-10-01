@@ -17,7 +17,7 @@ tags: [devuan, linux, sysvinit, guia, instalação, sem_systemd]
 <section class="post-content">
 
 
-<p>Devuan Daedalus 5.0: Desvendando a liberdade do seu sistema! Um guia completo para a instalação técnica desta distribuição Linux inspirada no Debian, mas livre do systemd e impulsionada pelo OpenRC. Prepare-se para os primeiros requisitos até a criação de um Live USB à prova de balas e a configuração final para uma experiência única.</p>
+
 
     <table class="evergreen-table">
   <thead>
