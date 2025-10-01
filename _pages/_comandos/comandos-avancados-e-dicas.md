@@ -139,6 +139,40 @@ function filtrarLinhas(termo) {
 </table>
 </div>
 
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>O que faz?</th>
+      <th>Comando</th>
+      <th>Como usar</th>
+      <th>Exemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="O que faz?">Ativa o modo <code>autocd</code> no Bash</td>
+      <td data-label="Comando"><code>shopt -s autocd</code></td>
+      <td data-label="Como usar">Abra o arquivo de configuração. <code>nano ~/.bashrc</code><br>Adicione a linha do comando no final do arquivo.<br><code>shopt -s autocd</code><br>Salve e Feche o editor.<br><code>nano: Ctrl+o, Enter, Ctrl+x</code><br>Recarregue o arquivo de configuração.<br><code>source ~/.bashrc</code></td>
+      <td data-label="Exemplo"><code>Downloads</code> → entra na pasta <code>~/Downloads</code> sem digitar <code>cd</code></td>
+    </tr>
+    <tr>
+      <td data-label="O que faz?">Desativa o modo <code>autocd</code></td>
+      <td data-label="Comando"><code>shopt -u autocd</code></td>
+      <td data-label="Como usar">Se quiser desligar temporariamente</td>
+      <td data-label="Exemplo"><code>shopt -u autocd</code> → volta ao comportamento normal</td>
+    </tr>
+    <tr>
+      <td data-label="O que faz?">Verifica se está ativo</td>
+      <td data-label="Comando"><code>shopt autocd</code></td>
+      <td data-label="Como usar">Útil para scripts ou depuração</td>
+      <td data-label="Exemplo">Saída: <code>autocd on</code> ou <code>autocd off</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
  
 <div class="dica-final">
   💡 <strong>Dica do PioLinux:</strong> O conceito de pipe é algo fascinante! Quando você utiliza o comando 'ps aux | grep firefox', consegue visualizar apenas os processos relacionados ao Firefox. 
@@ -146,7 +180,7 @@ function filtrarLinhas(termo) {
 <div class="aviso-final">
   ⚠️ <strong>Aviso:</strong> comandos avançados como <code>chattr</code> ou <code>e2label</code> podem corromper o sistema se usados errado, não se arrisque..
 
-<div>Para utilizar o shopt -s autocd  <code>nano ~/.bashrc </code>  Adicione a linha no final do arquivo  <code> shopt -s autocd </code> recarregue o arquivo <code>source ~/.bashrc</code></div>
+
 
 </div>
 
