@@ -36,7 +36,7 @@ tags: [ubuntu, linux-mint, fedora, escolha-distro, desktop-linux]
       <td data-label="
       
         Distro"><strong>Ubuntu:</strong></td>
-      <td data-label="Descrição">Um sistema operacional completo para usar no computador, baseado no Debian, que é fácil de usar, estável, compatível com quase tudo e conta com uma comunidade e suporte que oferecem muita ajuda.</td>
+      <td data-label="Descrição">Um sistema operacional completo para computador, baseado no Debian, que é fácil de usar, estável, compatível com quase tudo e conta com uma comunidade e suporte que oferecem muita ajuda.</td>
       <td data-label="Site"><a href="https://ubuntu.com" target="_blank">ubuntu.com</a></td>
     </tr>
     <tr>
@@ -50,7 +50,7 @@ tags: [ubuntu, linux-mint, fedora, escolha-distro, desktop-linux]
       <td data-label="
       
         Distro"><strong>Zorin OS:</strong></td>
-      <td data-label="Descrição">Desenvolvida para quem vem do Windows ou macOS. Muita perfumaria em sua interface gráfica, (Gnome, Xfce) intuitivo e suave</td>
+      <td data-label="Descrição">Desenvolvida para usuários que migram do Windows ou macOS, a distribuição oferece uma interface gráfica rica em recursos (Gnome, Xfce), intuitiva e agradável.</td>
       <td data-label="Site"><a href="https://zorin.com/os" target="_blank">zorin.com</a></td>
     </tr>
     <tr>
