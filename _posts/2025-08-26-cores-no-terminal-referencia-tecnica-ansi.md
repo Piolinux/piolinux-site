@@ -14,8 +14,7 @@ tags: [terminal, cores, debian, geany, prompt, ansi, conforto-visual]
 
 <section class="post-content">
 
-<p>Referência técnica para cores no terminal: códigos ANSI, 256 cores, truecolor e exemplos com <code>printf</code> — sem dependência de <code>echo -e</code>, compatível com shells POSIX.</p>
-      
+
 <table class="evergreen-table">
   <thead>
     <tr>
