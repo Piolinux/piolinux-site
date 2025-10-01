@@ -15,10 +15,7 @@ tags: [linux, editor-de-texto, geany, vim, nano, code, open-source]
 
 <section class="post-content">
          
-         
-         <p>Escolher um editor de texto texto no Linux, depende do 
-         contexto: terminal (servidores, recuperação) ou ambiente 
-         gráfico (desktop).Editores como Nano são ideais para edições rápidas em sistemas mínimos. Vim, para produtividade avançada, Gedit, Mousepad ou Leafpad no dia a dia com interface gráfica.</p>
+       
          
           
             <table class="evergreen-table">
