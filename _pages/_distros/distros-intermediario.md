@@ -19,11 +19,6 @@ permalink: /distros/intermediario/
 
 
 
-<div>
-  <strong>Para quem já domina o básico e quer mais controle.</strong><br>
- 
-
-</div>
 
 
 
