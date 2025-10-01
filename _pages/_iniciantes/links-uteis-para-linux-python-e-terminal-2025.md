@@ -22,6 +22,7 @@ permalink: /links-uteis-linux-python/
     
     <li><a href="{{ '/' | relative_url }}">🌐 Página inicial</a></li>
     <li><a href="{{ '/ferramentas/' | relative_url }}">🔧 Ferramentas Admin</a></li>
+    <li><a href="https://www.youtube.com/@SirRobLinux">🐧 Sir Rob Linux</a></li>
     <li><a href="{{ '/caixa-ferramentas-javascript/' | relative_url }}">🧰Caixa de Ferramentas</a></li> 
     <li><a href="{{ '/terminal-linux-referencia/' | relative_url }}">📌Terminal Linux Referẽncia</a></li>
     <li><a href="{{ '/comandos-essenciais-terminal-linux/' | relative_url }}">🖥️ Comandos essenciais terminal linux</a></li>
