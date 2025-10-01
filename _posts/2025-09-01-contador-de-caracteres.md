@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Conte Caracteres em Tempo Real: Redes Sociais e Blog"
-description: "Conte caracteres em tempo real: ideal para Twitter, Instagram, títulos de blog e legendas. Evite cortes inesperados com precisão!"
-categories: [ferramentas, produtividade]
-tags: [produtividade, redes-sociais, ferramenta, texto]
-date: 2025-09-01 10:00:00 -0300
-permalink: /contador-caracteres/
+title: "Limites de Caracteres por Plataforma"
+description: "Tabela com limites reais do Google, X, Instagram e meta descriptions — para escrever com clareza."
+author: "Piolinux"
+categories: [seo, redes-sociais, escrita]
+tags: [caracteres, twitter, instagram, google, seo, limite]
+permalink: /limites-caracteres-plataformas/
 ---
 
 
@@ -14,19 +14,42 @@ permalink: /contador-caracteres/
 
 
 
-
-<h2>Limites em redes sociais</h2>
-<ul>
-  <li><strong>X (Twitter)</strong>: 280 caracteres</li>
-  <li><strong>Instagram</strong>: 2.200 caracteres, mas só ~138 aparecem sem "leia mais"</li>
-  <li><strong>Títulos de blog</strong>: 50–60 caracteres para não cortar no Google</li>
-</ul>
-
-<h2>Por que isso importa</h2>
-<p>Se o título for muito longo, o Google corta. Se a legenda do Instagram for longa, o usuário não lê. Escrever com limite é treinar clareza.</p>
-
-<h2>Use esta ferramenta</h2>
-<p>Este contador em tempo real mostra exatamente quantos caracteres você usou — e onde aparecerá cortado.</p>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Plataforma.</th>
+      <th>Limite Total.</th>
+      <th>Visível Sem Clique.</th>
+      <th>Impacto.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Plataforma">Google (título de busca).</td>
+      <td data-label="Limite Total">60 caracteres</td>
+      <td data-label="Visível Sem Clique">~50–60</td>
+      <td data-label="Impacto">Títulos mais longos são cortados com "…"</td>
+    </tr>
+    <tr>
+      <td data-label="Plataforma">X (Twitter).</td>
+      <td data-label="Limite Total">280 caracteres</td>
+      <td data-label="Visível Sem Clique">280</td>
+      <td data-label="Impacto">Tudo visível, mas concisão aumenta engajamento.</td>
+    </tr>
+    <tr>
+      <td data-label="Plataforma">Instagram (legenda).</td>
+      <td data-label="Limite Total">2.200 caracteres</td>
+      <td data-label="Visível Sem Clique">~138</td>
+      <td data-label="Impacto">Texto após isso fica sob “mais” — poucos leem.</td>
+    </tr>
+    <tr>
+      <td data-label="Plataforma">Meta Description (Google.</td>
+      <td data-label="Limite Total">160 caracteres</td>
+      <td data-label="Visível Sem Clique">155–160</td>
+      <td data-label="Impacto">Descrições longas são truncadas.</td>
+    </tr>
+  </tbody>
+</table>
 
 <label for="texto"><strong>Digite seu texto:</strong></label>
 <textarea id="texto" placeholder="Seu post, título ou legenda..."></textarea>
