@@ -13,7 +13,6 @@ tags: [ubuntu, linux-mint, fedora, escolha-distro, desktop-linux]
 <section>
 
 
-<h2>🐧 Melhores Distros Linux para Quem Está Começando</h2>
 
 <div>
   <strong> Guia Rápido para Iniciantes.</strong><br>
@@ -24,52 +23,51 @@ tags: [ubuntu, linux-mint, fedora, escolha-distro, desktop-linux]
   <table class="evergreen-table">
   <thead>
     <tr>
-      <th>
-      
-        Distros</th>
-      <th>Descrições</th>
+      <th>Distros.</th>
+      <th>Bases.</th>
+      <th>Gerenciadores.</th>
+      <th>DE Padrão.</th>
       <th>Sites</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td data-label="
-      
-        Distro"><strong>Ubuntu:</strong></td>
-      <td data-label="Descrição">Um sistema operacional completo para computador, baseado no Debian, que é fácil de usar, estável, compatível com quase tudo e conta com uma comunidade e suporte que oferecem muita ajuda.</td>
-      <td data-label="Site"><a href="https://ubuntu.com" target="_blank">ubuntu.com</a></td>
+      <td data-label="Distros">Ubuntu</td>
+      <td data-label="Base">Debian</td>
+      <td data-label="Gerenciador"><code>apt</code></td>
+      <td data-label="DE Padrão">GNOME</td>
+      <td data-label="Site"><a href="https://ubuntu.com">ubuntu.com</a></td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distro"><strong>Linux Mint:</strong></td>
-      <td data-label="Descrição">Interface familiar (parecida com Windows), muito estável e amigável.</td>
-      <td data-label="Site"><a href="https://linuxmint.com" target="_blank">linuxmint.com</a></td>
+      <td data-label="Distros">Linux Mint</td>
+      <td data-label="Base">Ubuntu</td>
+      <td data-label="Gerenciador"><code>apt</code></td>
+      <td data-label="DE Padrão">Cinnamon / MATE / XFCE</td>
+      <td data-label="Site"><a href="https://linuxmint.com">linuxmint.com</a></td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distro"><strong>Zorin OS:</strong></td>
-      <td data-label="Descrição">Desenvolvida para usuários que migram do Windows ou macOS, a distribuição oferece uma interface gráfica rica em recursos (Gnome, Xfce), intuitiva e agradável.</td>
-      <td data-label="Site"><a href="https://zorin.com/os" target="_blank">zorin.com</a></td>
+      <td data-label="Distros">Zorin OS</td>
+      <td data-label="Base">Ubuntu</td>
+      <td data-label="Gerenciador"><code>apt</code></td>
+      <td data-label="DE Padrão">GNOME (modificado)</td>
+      <td data-label="Site"><a href="https://zorin.com">zorin.com</a></td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distro"><strong>elementary OS:</strong></td>
-      <td data-label="Descrição">Design elegante e minimalista, inspirado no macOS. Foco em experiência do usuário.</td>
-      <td data-label="Site"><a href="https://elementary.io" target="_blank">elementary.io</a></td>
+      <td data-label="Distros">elementary OS</td>
+      <td data-label="Base">Ubuntu</td>
+      <td data-label="Gerenciador"><code>apt</code></td>
+      <td data-label="DE Padrão">Pantheon</td>
+      <td data-label="Site"><a href="https://elementary.io">elementary.io</a></td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distro"><strong>Pop!_OS:</strong></td>
-      <td data-label="Descrição">Ótima para desenvolvedores e gamers. Feita pela System76, com ótimo suporte a NVIDIA.</td>
-      <td data-label="Site"><a href="https://pop.system76.com" target="_blank">pop.system76.com</a></td>
+      <td data-label="Distros">Pop!_OS</td>
+      <td data-label="Base">Ubuntu</td>
+      <td data-label="Gerenciador"><code>apt</code></td>
+      <td data-label="DE Padrão">COSMIC (GNOME-based)</td>
+      <td data-label="Site"><a href="https://pop.system76.com">pop.system76.com</a></td>
     </tr>
   </tbody>
 </table>
-
 
 
 <p>

@@ -17,11 +17,11 @@ permalink: /distros/intermediario/
 <section>
 
 
-<h2>Evoluindo no Linux: As Melhores Distros para o Próximo Nível</h2>
+
 
 <div>
   <strong>Para quem já domina o básico e quer mais controle.</strong><br>
- Se você busca um equilíbrio legal entre facilidade de uso e poder de personalização, essa é a escolha certa! Perfeito pra quem tá começando na área de desenvolvimento, pra sysadmins que estão dando os primeiros passos e pra galera que curte mexer nas coisas.
+ 
 
 </div>
 
@@ -30,55 +30,46 @@ permalink: /distros/intermediario/
   <table class="evergreen-table">
   <thead>
     <tr>
-      <th>
-      
-        Distros</th>
-      <th>Descrições</th>
-      <th>Sites</th>
+      <th>Distros.</th>
+      <th>Pacotes.</th>
+      <th>Base.</th>
+      <th>Sites.</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td data-label="
-      
-        Distro"><strong>Fedora:</strong></td>
-      <td data-label="Descrição">Atualizações constantes e ideal para desenvolvedores, com o patrocínio da Red Hat.</td>
-      <td data-label="Site"><a href="https://fedoraproject.org" target="_blank">fedoraproject.org</a></td>
+      <td data-label="Distros">Fedora</td>
+      <td data-label="Pacotes"><code>sudo dnf install</code></td>
+      <td data-label="Base">Própria (RPM)</td>
+      <td data-label="Site"><a href="https://fedoraproject.org">fedoraproject.org</a></td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distro"><strong>Debian:</strong></td>
-      <td data-label="Descrição">A distribuição Linux mais antiga serve de base para muitas outras. Possui uma comunidade diversificada e ativa em todo o mundo.</td>
-      <td data-label="Site"><a href="https://debian.org" target="_blank">debian.org</a></td>
+      <td data-label="Distros">Debian</td>
+      <td data-label="Pacotes"><code>sudo apt install</code></td>
+      <td data-label="Base">Própria (DEB)</td>
+      <td data-label="Site"><a href="https://debian.org">debian.org</a></td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distro"><strong>openSUSE Tumbleweed:</strong></td>
-      <td data-label="Descrição">Uma distribuição que vai sempre se atualizando, super estável, e com o YaST, uma ferramenta maneira de configurar tudo no sistema.	.</td>
-      <td data-label="Site"><a href="https://opensuse.org" target="_blank">opensuse.org</a></td>
+      <td data-label="Distros">openSUSE Tumbleweed</td>
+      <td data-label="Pacotes"><code>sudo zypper install</code></td>
+      <td data-label="Base">Própria (RPM)</td>
+      <td data-label="Site"><a href="https://opensuse.org">opensuse.org</a></td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distro"><strong>MX Linux:</strong></td>
-      <td data-label="Descrição">Baseada no Debian, além de personalizável. É excelente para hardware mais antigo e oferece diversas ferramentas de reparo.</td>
-      <td data-label="Site"><a href="https://mxlinux.org" target="_blank">mxlinux.org</a></td>
+      <td data-label="Distros">MX Linux</td>
+      <td data-label="Pacotes"><code>sudo apt install</code></td>
+      <td data-label="Base">Debian</td>
+      <td data-label="Site"><a href="https://mxlinux.org">mxlinux.org</a></td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distro"><strong>Manjaro:</strong></td>
-      <td data-label="Descrição">Sistema que utiliza o Arch Linux como base, apresenta facilidade de gerenciamento e utilização, porém com instalação simplificada, através do Calamares. O acesso ao AUR é realizado sem quaisquer obstáculos.</td>
-      <td data-label="Site"><a href="https://manjaro.org" target="_blank">manjaro.org</a></td>
+      <td data-label="Distros">Manjaro</td>
+      <td data-label="Pacotes"><code>sudo pacman -S</code> + AUR</td>
+      <td data-label="Base">Arch</td>
+      <td data-label="Site"><a href="https://manjaro.org">manjaro.org</a></td>
     </tr>
   </tbody>
 </table>
 
-
-
-<h2>Conclusão</h2>
 
 <p>
   🖥️ O intermediário não escolhe distro por modinha — escolhe por controle.

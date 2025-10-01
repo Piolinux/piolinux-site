@@ -12,147 +12,123 @@ tags: [distros, linux, underground, alpine, void, crux, guix, chimera, alternati
 
 <section class="post-content">
 
-<h2> Linux Underground: Sistemas para Rebeldes, Nerds e Puristas</h2>
+
 
   <div>
-    <strong>Bora sair da zona de conforto e dar uma olhada no lado mais irado do Linux, saca?</strong><br>
-    Distros experimentais, minimalistas, filosóficas ou com propostas radicais — ideais para quem gosta de pensar fora da caixa.
+        Distros experimentais, minimalistas, filosóficas ou com propostas radicais — ideais para quem gosta de pensar fora da caixa.
   </div>
 
 
 
-<div style="overflow-x: auto; padding: 0 20px;">
-  <table class="evergreen-table">
+<table class="evergreen-table">
   <thead>
     <tr>
-      <th>
-      
-        Distros Underground</th>
-      <th>Filosofia</th>
-      <th>Base / Init</th>
-      <th>Pacote</th>
+      <th>Distros Underground.</th>
+      <th>Filosofia.</th>
+      <th>Base / Init.</th>
+      <th>Pacote.</th>
       <th>Para Quem?</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td data-label="
-      
-        Distros Underground"><strong>Alpine Linux</strong></td>
-      <td data-label="Filosofia">Leveza extrema. Segurança. Containers.</td>
-      <td data-label="Base / Init">musl libc + OpenRC</td>
+      <td data-label="Distros Underground">Alpine Linux</td>
+      <td data-label="Filosofia">Leveza, segurança, containers.</td>
+      <td data-label="Base / Init">musl + OpenRC</td>
       <td data-label="Pacote"><code>apk</code></td>
-      <td data-label="Para Quem?">DevOps, containers, servidores minimalistas</td>
+      <td data-label="Para Quem?">DevOps, servidores, sistemas 
+      embarcados.</td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distros Underground"><strong>Void Linux</strong></td>
-      <td data-label="Filosofia">Independente. Runit. Liberdade total.</td>
-      <td data-label="Base / Init">glibc/musl + Runit</td>
+      <td data-label="Distros Underground">Void Linux</td>
+      <td data-label="Filosofia">Independente, sem systemd.</td>
+      <td data-label="Base / Init">glibc/musl + runit</td>
       <td data-label="Pacote"><code>xbps</code></td>
-      <td data-label="Para Quem?">Quem odeia systemd e ama simplicidade</td>
+      <td data-label="Para Quem?">Quem prefere runit e simplicidade.</td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distros Underground"><strong>CRUX</strong></td>
-      <td data-label="Filosofia">KISS. Feito para experts. Compila tudo.</td>
-      <td data-label="Base / Init">glibc + BSD-style init</td>
+      <td data-label="Distros Underground">CRUX</td>
+      <td data-label="Filosofia">KISS, source-based.</td>
+      <td data-label="Base / Init">glibc + BSD init</td>
       <td data-label="Pacote">Ports (compilação)</td>
-      <td data-label="Para Quem?">Gurus que querem controle total</td>
+      <td data-label="Para Quem?">Quem quer controle total via 
+      compilação.</td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distros Underground"><strong>Hyperbola GNU/Linux-libre</strong></td>
-      <td data-label="Filosofia">100% software livre. Sem blobs. Ética radical.</td>
-      <td data-label="Base / Init">Parabola (Arch) + OpenRC</td>
+      <td data-label="Distros Underground">Hyperbola GNU/Linux-libre</td>
+      <td data-label="Filosofia">100% software livre (FSF-approved).</td>
+      <td data-label="Base / Init">Parabola + OpenRC</td>
       <td data-label="Pacote"><code>pacman</code></td>
-      <td data-label="Para Quem?">Defensores da liberdade de software</td>
+      <td data-label="Para Quem?">Defensores de software livre radical.</td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distros Underground"><strong>Dragora GNU/Linux-Libre</strong></td>
-      <td data-label="Filosofia">GNU puro. Simples. Independente.</td>
+      <td data-label="Distros Underground">Dragora GNU/Linux-Libre</td>
+      <td data-label="Filosofia">GNU puro, independente.</td>
       <td data-label="Base / Init">glibc + BSD init</td>
       <td data-label="Pacote">Dragora Package Tool</td>
-      <td data-label="Para Quem?">Quem quer fugir de Debian/RedHat/Arch</td>
+      <td data-label="Para Quem?">Quem evita Debian/Red Hat/Arch.</td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distros Underground"><strong>Guix System</strong></td>
-      <td data-label="Filosofia">Funcional. Reproducível. Declarativo.</td>
-      <td data-label="Base / Init">GNU Guix (Nix-like) + Shepherd</td>
+      <td data-label="Distros Underground">Guix System</td>
+      <td data-label="Filosofia">Funcional, declarativo, reproduzível.</td>
+      <td data-label="Base / Init">GNU Guix + Shepherd</td>
       <td data-label="Pacote"><code>guix</code></td>
-      <td data-label="Para Quem?">Cientistas, programadores funcionais</td>
+      <td data-label="Para Quem?">Cientistas, devs funcionais.</td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distros Underground"><strong>Chimera Linux</strong></td>
-      <td data-label="Filosofia">Híbrido Linux/BSD. Moderno. Experimental.</td>
-      <td data-label="Base / Init">LLVM libc + dinit</td>
-      <td data-label="Pacote"><code>apko</code> (inspirado em apk)</td>
-      <td data-label="Para Quem?">Early adopters, curiosos de BSD + Linux</td>
+      <td data-label="Distros Underground">Chimera Linux</td>
+      <td data-label="Filosofia">Híbrido Linux/BSD, moderno.</td>
+      <td data-label="Base / Init">llvm-libc + dinit</td>
+      <td data-label="Pacote"><code>apko</code></td>
+      <td data-label="Para Quem?">Early adopters de init alternativos.</td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distros Underground"><strong>Adélie Linux</strong></td>
-      <td data-label="Filosofia">Velocidade em hardware antigo. PowerPC, ARM, x86.</td>
+      <td data-label="Distros Underground">Adélie Linux</td>
+      <td data-label="Filosofia">Suporte a PowerPC, ARM, x86 antigo.</td>
       <td data-label="Base / Init">musl + OpenRC</td>
       <td data-label="Pacote"><code>apk</code></td>
-      <td data-label="Para Quem?">Reviver hardware antigo com Linux moderno</td>
+      <td data-label="Para Quem?">Reviver hardware antigo.</td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distros Underground"><strong>Devuan</strong></td>
-      <td data-label="Filosofia">Debian sem systemd. Liberdade de init.</td>
-      <td data-label="Base / Init">Debian + sysvinit/OpenRC/runit</td>
+      <td data-label="Distros Underground">Devuan</td>
+      <td data-label="Filosofia">Debian sem systemd</td>
+      <td data-label="Base / Init">Debian + sysvinit/OpenRC/runit.</td>
       <td data-label="Pacote"><code>apt</code></td>
-      <td data-label="Para Quem?">Quem ama Debian, mas odeia systemd</td>
+      <td data-label="Para Quem?">Usuários de Debian que rejeitam 
+      systemd.</td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distros Underground"><strong>Artix Linux</strong></td>
-      <td data-label="Filosofia">Arch sem systemd. Escolha seu init.</td>
+      <td data-label="Distros Underground">Artix Linux</td>
+      <td data-label="Filosofia">Arch sem systemd.</td>
       <td data-label="Base / Init">Arch + OpenRC/runit/s6</td>
       <td data-label="Pacote"><code>pacman</code></td>
-      <td data-label="Para Quem?">Arch users que querem liberdade de init</td>
+      <td data-label="Para Quem?">Usuários do Arch que querem escolha 
+      de init.</td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distros Underground"><strong>Alpine + postmarketOS</strong></td>
-      <td data-label="Filosofia">Reviver celulares com Linux real.</td>
-      <td data-label="Base / Init">musl + OpenRC</td>
+      <td data-label="Distros Underground">postmarketOS</td>
+      <td data-label="Filosofia">Linux em celulares antigos.</td>
+      <td data-label="Base / Init">Alpine + OpenRC</td>
       <td data-label="Pacote"><code>apk</code></td>
-      <td data-label="Para Quem?">Hackers de hardware móvel, celulares antigos</td>
+      <td data-label="Para Quem?">Hacking de dispositivos móveis.</td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Distros Underground"><strong>Bedrock Linux</strong></td>
-      <td data-label="Filosofia">Misture Debian, Arch, Alpine... tudo junto.</td>
-      <td data-label="Base / Init">Meta-distro (strata)</td>
-      <td data-label="Pacote">Todos (apt, pacman, apk, etc)</td>
-      <td data-label="Para Quem?">Quem quer o melhor de cada mundo, junto</td>
+      <td data-label="Distros Underground">Bedrock Linux.</td>
+      <td data-label="Filosofia">Mistura múltiplas distros (Debian + Arch + Alpine)</td>
+      <td data-label="Base / Init">Próprio + init da distro base</td>
+      <td data-label="Pacote">Múltiplos (apt, pacman, apk)</td>
+      <td data-label="Para Quem?">Quem quer pacotes de várias distros 
+      no mesmo sistema.</td>
     </tr>
   </tbody>
 </table>
 
-<h2>Conclusão</h2>
 
 <p>
   🖤 Underground não é moda — é manifesto.
 </p>
 
-</div>
+
 
 
 <blockquote style="background: #1a1a1a; padding: 20px; border-left: 4px solid #ff5555; margin: 2rem; font-family: monospace; color: #e0e0e0;">

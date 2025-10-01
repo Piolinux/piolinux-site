@@ -23,13 +23,10 @@ permalink: /distros/avancado/
 
 <section>
 
-<h2>
-    🐧 Monte Sua Própria Distro Linux — Do Zero 
-</h2>
 
 <div>
-  <strong>📌 Tabela de Tipos de Distribuições Linux (referência mínima).</strong><br>
-  Use esta tabela para escolher a base ideal antes de montar sua própria distro.
+  
+  <p>Use esta tabela para escolher a base ideal antes de montar sua própria distro.</p>
 </div>
 
 
@@ -37,60 +34,51 @@ permalink: /distros/avancado/
   <table class="evergreen-table">
   <thead>
     <tr>
-      <th>
-      
-        Projetos</th>
-      <th>Descrições</th>
-      <th>Sites</th>
+      <th>Projetos.</th>
+      <th>Tipos.</th>
+      <th>Bases.</th>
+      <th>Comandos/Link Útil</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td data-label="
-      
-        Projeto"><strong>Linux From Scratch (LFS)</strong></td>
-      <td data-label="Descrição">Guia passo a passo para construir seu Linux do zero, compilando cada componente.</td>
-      <td data-label="Site"><a href="https://linuxfromscratch.org" target="_blank">linuxfromscratch.org</a></td>
+      <td data-label="Projeto">Linux From Scratch (LFS)</td>
+      <td data-label="Tipo">Construção manual.</td>
+      <td data-label="Base">Nenhuma (do zero)</td>
+      <td data-label="Comando/Link Útil"><a href="https://www.linuxfromscratch.org/lfs/downloads/stable/LFS-BOOK-12.2.pdf">PDF LFS 12.2</a></td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Projeto"><strong>Arch Linux:</strong></td>
-      <td data-label="Descrição">Instalação manual e configuração total. Sua wiki é a melhor documentação Linux do mundo.</td>
-      <td data-label="Site"><a href="https://archlinux.org" target="_blank">archlinux.org</a></td>
+      <td data-label="Projeto">Arch Linux</td>
+      <td data-label="Tipo">Rolling release.</td>
+      <td data-label="Base">Própria</td>
+      <td data-label="Comando/Link Útil"><a href="https://wiki.archlinux.org">wiki.archlinux.org</a></td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Projeto"><strong>Gentoo:</strong></td>
-      <td data-label="Descrição">Tudo é compilado do source para sua máquina. Performance e controle máximos.</td>
-      <td data-label="Site"><a href="https://gentoo.org" target="_blank">gentoo.org</a></td>
+      <td data-label="Projeto">Gentoo</td>
+      <td data-label="Tipo">Source-based.</td>
+      <td data-label="Base">Própria</td>
+      <td data-label="Comando/Link Útil"><code>emerge --sync</code> + <a href="https://gentoo.org">gentoo.org</a></td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Projeto"><strong>Slackware:</strong></td>
-      <td data-label="Descrição">Distro Linux bem antiga, com uma documentação que explica tudo direito. É simples, direta e sem firula.</td>
-      <td data-label="Site"><a href="http://www.slackware.com" target="_blank">slackware.com</a></td>
+      <td data-label="Projeto">Slackware</td>
+      <td data-label="Tipo">Estável, minimalista.</td>
+      <td data-label="Base">Própria</td>
+      <td data-label="Comando/Link Útil"><code>pkgtool</code> + <a href="http://www.slackware.com">slackware.com</a></td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Projeto"><strong>Buildroot:</strong></td>
-      <td data-label="Descrição">Uma ferramenta pra criar sistemas Linux bem compactos e totalmente do seu jeito, pra usar em dispositivos embarcados. Treinamento de 3 dias  para engenheiros que possuem conhecimento de Linux.</td>
-      <td data-label="Site"><a href="https://buildroot.org" target="_blank">buildroot.org</a></td>
+      <td data-label="Projeto">Buildroot</td>
+      <td data-label="Tipo">Sistemas embarcados.</td>
+      <td data-label="Base">Nenhuma (gera rootfs)</td>
+      <td data-label="Comando/Link Útil"><code>make menuconfig</code> + <a href="https://buildroot.org">buildroot.org</a></td>
     </tr>
     <tr>
-      <td data-label="
-      
-        Projeto"><strong>Yocto Project:</strong></td>
-      <td data-label="Descrição">Framework profissional para criar distribuições Linux customizadas.(IoT, industrial, etc)</td>
-      <td data-label="Site"><a href="https://yoctoproject.org" target="_blank">yoctoproject.org</a></td>
+      <td data-label="Projeto">Yocto Project</td>
+      <td data-label="Tipo">Distribuições customizadas.</td>
+      <td data-label="Base">Poky (referência)</td>
+      <td data-label="Comando/Link Útil"><code>bitbake core-image-minimal</code> + <a href="https://yoctoproject.org">yoctoproject.org</a></td>
     </tr>
   </tbody>
 </table>
-
-
 
 
 <p>
