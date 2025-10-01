@@ -66,9 +66,7 @@ permalink: /distros/intermediario/
 </table>
 
 
-<p>
-  🖥️ O intermediário não escolhe distro por modinha — escolhe por controle.
-</p>
+
 </section>
 
 
