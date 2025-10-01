@@ -17,7 +17,6 @@ tags: [dpms, linux, economia-de-energia, tela-preta, monitor]
 <section class="post-content">
 
 
-<p>Dpms controlador de modo de economia de energia dos monitores (standby, suspend, off). Utilize xset no X11 para ativar, desativar ou ajustar tempos. Não funciona no Wayland.</p>
 
                 
         <table class="evergreen-table">
