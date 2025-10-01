@@ -14,8 +14,7 @@ tags: [mx-linux, repositórios, atualização, apt, debian, segurança]
 
 <section class="post-content">
         
-        <p>O MX Linux, com a solidez do Debian Stable como base, entrega um universo de possibilidades com ferramentas visuais intuitivas. Gerenciar repositórios, manter o sistema sempre atualizado e criar cópias de segurança (snapshots) nunca foi tão fácil  tudo isso sem mistérios, mas com a praticidade que você precisa. Este guia é o seu mapa para dominar essas ferramentas com maestria.
-.</p>
+       
         
         
         <table class="evergreen-table">
