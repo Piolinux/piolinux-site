@@ -145,6 +145,9 @@ function filtrarLinhas(termo) {
 </div>
 <div class="aviso-final">
   ⚠️ <strong>Aviso:</strong> comandos avançados como <code>chattr</code> ou <code>e2label</code> podem corromper o sistema se usados errado, não se arrisque..
+
+<div>Para utilizar o shopt -s autocd  <code>nano ~/.bashrc </code>  Adicione a linha no final do arquivo  <code> shopt -s autocd </code> recarregue o arquivo <code>source ~/.bashrc</code></div>
+
 </div>
 
 
