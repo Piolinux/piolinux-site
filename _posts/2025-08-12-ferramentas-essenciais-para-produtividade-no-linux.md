@@ -16,8 +16,7 @@ tags: [produtividade, ferramentas, linux, terminal, geany, automação]
 
 <section class="post-content">
      
-     <p>Ferramentas essenciais para leitura de PDF, captura de tela e acesso à documentações no Linux,  com comandos verificados, alternativas ativas e alertas sobre ferramentas obsoletas ou inseguras.</p>
-     
+  
             
            <table class="evergreen-table">
   <thead>
