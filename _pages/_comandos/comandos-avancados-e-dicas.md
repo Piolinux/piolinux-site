@@ -150,7 +150,7 @@ function filtrarLinhas(termo) {
   </thead>
   <tbody>
     <tr>
-      <td data-label="O que faz?">Ativa o modo .<code>autocd</code> no Bash</td>
+      <td data-label="O que faz?">Ativa o modo<code>autocd</code> no Bash.</td>
       <td data-label="Comando"><code>shopt -s autocd</code></td>
       <td data-label="Como usar">Abra o arquivo de configuração. <code>nano ~/.bashrc</code><br>Adicione a linha do comando no final do arquivo.<br><code>shopt -s autocd</code><br>Salve e Feche o editor.<br><code>nano: Ctrl+o, Enter, Ctrl+x</code><br>Recarregue o arquivo de configuração.<br><code>source ~/.bashrc</code></td>
       <td data-label="Exemplo"><code>Downloads</code> → entra na pasta <code>~/Downloads</code> sem digitar <code>cd</code></td>
