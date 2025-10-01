@@ -14,9 +14,7 @@ tags: [distros, linux, underground, alpine, void, crux, guix, chimera, alternati
 
 
 
-  <div>
-        Distros experimentais, minimalistas, filosóficas ou com propostas radicais — ideais para quem gosta de pensar fora da caixa.
-  </div>
+ 
 
 
 
@@ -124,19 +122,11 @@ tags: [distros, linux, underground, alpine, void, crux, guix, chimera, alternati
 </table>
 
 
-<p>
-  🖤 Underground não é moda — é manifesto.
-</p>
 
 
-
-
-<blockquote style="background: #1a1a1a; padding: 20px; border-left: 4px solid #ff5555; margin: 2rem; font-family: monospace; color: #e0e0e0;">
-  <strong>🐧 UNDERGROUND NÃO É “PIOR” — É “DIFERENTE”.</strong><br>
-  Essas distros não querem ser populares. Querem ser <strong>fiéis à filosofia</strong>, mesmo que isso signifique menos usuários, menos suporte, menos conforto.<br>
-  Se você cansou do mainstream, essa é sua tribo.
-</blockquote>
 </section>
+
+
 
 
 
