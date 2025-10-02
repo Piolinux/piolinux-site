@@ -30,7 +30,7 @@ permalink: /instalar-ubuntu-guia-iniciantes/
     <tr>
       <td data-label="Etapa">Baixar ISO</td>
       <td data-label="Ação Técnica">
-        <a href="https://releases.ubuntu.com/" target="_blank">releases.ubuntu.com</a> (LTS recomendado)
+        <a href="https://releases.ubuntu.com/" target="_blank" rel="noopener noreferrer">releases.ubuntu.com</a> (LTS recomendado)
       </td>
       <td data-label="Observação">Prefira **LTS** para estabilidade (22.04 ou 24.04)</td>
     </tr>
