@@ -26,92 +26,88 @@ permalink: /distros-linux-tabela/
 
 
 
-
-
-
-
-
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th><strong>Distribuições</strong></th>
-      <th><strong>Métodos de instalação: do simples ao avançado.</strong></th>
-      <th><strong>Observações</strong></th>
+      <th>Distribuições.</th>
+      <th>Método de Instalação.</th>
+      <th>Observações Técnicas.</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td data-label="Distribuições"><strong>Ubuntu</strong></td>
-      <td data-label="Métodos de instalação">Live USB → Boot → “Install Ubuntu” → Instalador gráfico (Ubiquity)</td>
-      <td data-label="Observações">Muito amigável para iniciantes. Suporte a dual-boot automático.</td>
+      <td data-label="Distribuição">Ubuntu.</td>
+      <td data-label="Método de Instalação">Live USB → Ubiquity (GUI)</td>
+      <td data-label="Observações Técnicas">Suporte a dual-boot automático com Windows.</td>
     </tr>
     <tr>
-      <td data-label="Distribuições"><strong>Linux Mint</strong></td>
-      <td data-label="Métodos de instalação">Live USB → Menu → “Install Linux Mint” → Instalador gráfico (Ubiquity modificado)</td>
-      <td data-label="Observações">Baseado no Ubuntu. Interface intuitiva.</td>
+      <td data-label="Distribuição">Linux Mint.</td>
+      <td data-label="Método de Instalação">Live USB → Ubiquity modificado (GUI)</td>
+      <td data-label="Observações Técnicas">Baseado no Ubuntu LTS.</td>
     </tr>
     <tr>
-      <td data-label="Distribuições"><strong>Debian</strong></td>
-      <td data-label="Métodos de instalação">ISO com instalador gráfico ou textual → Seguir assistente passo a passo</td>
-      <td data-label="Observações">Versão “netinst” baixa pacotes da internet. Mais controle avançado.</td>
+      <td data-label="Distribuição">Debian.</td>
+      <td data-label="Método de Instalação">ISO netinst ou GUI → assistente textual/GUI</td>
+      <td data-label="Observações Técnicas">netinst baixa pacotes durante instalação.</td>
     </tr>
     <tr>
-      <td data-label="Distribuições"><strong>Fedora</strong></td>
-      <td data-label="Métodos de instalação">Live USB → “Install to Hard Drive” → Anaconda (instalador gráfico)</td>
-      <td data-label="Observações">Atualizações frequentes. Bom suporte a hardware novo.</td>
+      <td data-label="Distribuição">Fedora.</td>
+      <td data-label="Método de Instalação">Live USB → Anaconda (GUI)</td>
+      <td data-label="Observações Técnicas">Inclui suporte a firmware não livre por padrão.</td>
     </tr>
     <tr>
-      <td data-label="Distribuições"><strong>openSUSE</strong></td>
-      <td data-label="Métodos de instalação">Live USB ou DVD → YaST (instalador gráfico/textual poderoso) somente para Adm.</td>
-      <td data-label="Observações">YaST permite configuração avançada de sistema, rede, partições.</td>
+      <td data-label="Distribuição">openSUSE.</td>
+      <td data-label="Método de Instalação">Live/DVD → YaST (GUI ou texto).</td>
+      <td data-label="Observações Técnicas">YaST gerencia partições, rede, serviços.</td>
     </tr>
     <tr>
-      <td data-label="Distribuições"><strong>Arch Linux</strong></td>
-      <td data-label="Métodos de instalação">Através de ISO Live → Terminal → Instalação manual (particionar, montar, pacstrap, chroot, etc.)</td>
-      <td data-label="Observações">Para usuários avançados, requer um alto grau de leitura. Segue o guia oficial (Arch Wiki).</td>
+      <td data-label="Distribuição">Arch Linux.</td>
+      <td data-label="Método de Instalação">ISO Live → terminal (particionar, pacstrap, chroot).</td>
+      <td data-label="Observações Técnicas">Requer leitura do Arch Wiki</td>
     </tr>
     <tr>
-      <td data-label="Distribuições"><strong>Manjaro</strong></td>
-      <td data-label="Métodos de instalação">Live USB → Calamares (instalador gráfico) intuitivo</td>
-      <td data-label="Observações">Baseado no Arch, mas com instalador fácil.</td>
+      <td data-label="Distribuição">Manjaro.</td>
+      <td data-label="Método de Instalação">Live USB → Calamares (GUI)</td>
+      <td data-label="Observações Técnicas">Baseado no Arch, com repositórios estáveis.</td>
     </tr>
     <tr>
-      <td data-label="Distribuições"><strong>Pop!_OS</strong></td>
-      <td data-label="Métodos de instalação">Live USB → “Install Pop!_OS” → Calamares, não te deixa na mão.</td>
-      <td data-label="Observações">Focado em desenvolvedores e gamers. Suporte a NVIDIA integrado.</td>
+      <td data-label="Distribuição">Pop!_OS.</td>
+      <td data-label="Método de Instalação">Live USB → Calamares (GUI)</td>
+      <td data-label="Observações Técnicas">Inclui drivers NVIDIA por padrão.</td>
     </tr>
     <tr>
-      <td data-label="Distribuições"><strong>Zorin OS</strong></td>
-      <td data-label="Métodos de instalação">Live USB → Instalador gráfico (baseado no Ubuntu/Ubiquity) fácil demais.</td>
-      <td data-label="Observações">Interface semelhante ao Windows/macOS. Ideal para migração.</td>
+      <td data-label="Distribuição">Zorin OS.</td>
+      <td data-label="Método de Instalação">Live USB → Ubiquity (GUI)</td>
+      <td data-label="Observações Técnicas">Interface inspirada no Windows/macOS.</td>
     </tr>
     <tr>
-      <td data-label="Distribuições"><strong>Kali Linux</strong></td>
-      <td data-label="Métodos de instalação">Live USB → Instalador gráfico (semelhante ao Debian) OU modo live persistente</td>
-      <td data-label="Observações">Focado em segurança/pen-test. Pode ser usado sem instalar.</td>
+      <td data-label="Distribuição">Kali Linux</td>
+      <td data-label="Método de Instalação">Live USB → instalador Debian (GUI)</td>
+      <td data-label="Observações Técnicas">Modo live persistente disponível.</td>
     </tr>
     <tr>
-      <td data-label="Distribuições"><strong>MX Linux</strong></td>
-      <td data-label="Métodos de instalação">Live USB → MX Installer (ferramenta gráfica própria) Instalação guiada em cada tela uma explicação.</td>
-      <td data-label="Observações">Leve, baseado no Debian. Boa para hardware antigo.</td>
+      <td data-label="Distribuição">MX Linux.</td>
+      <td data-label="Método de Instalação">Live USB → MX Installer (GUI)</td>
+      <td data-label="Observações Técnicas">Baseado no Debian Stable.</td>
     </tr>
     <tr>
-      <td data-label="Distribuições"><strong>NixOS</strong></td>
-      <td data-label="Métodos de instalação">Live USB → Configurar <code>configuration.nix</code> → <code>nixos-install</code></td>
-      <td data-label="Observações">Instalação declarativa. Para usuários avançados.</td>
+      <td data-label="Distribuição">NixOS.</td>
+      <td data-label="Método de Instalação">Live USB → editar `configuration.nix` → `nixos-install`</td>
+      <td data-label="Observações Técnicas">Instalação declarativa, rollback atômico.</td>
     </tr>
     <tr>
-      <td data-label="Distribuições"><strong>Gentoo</strong></td>
-      <td data-label="Métodos de instalação">Live CD → Compilação manual de todo o sistema a partir do código-fonte, breve leitura da documentação.</td>
-      <td data-label="Observações">Extremamente personalizável. Requer muito tempo e conhecimento.</td>
+      <td data-label="Distribuição">Gentoo.</td>
+      <td data-label="Método de Instalação">Live CD → compilação manual via Portage.</td>
+      <td data-label="Observações Técnicas">Requer configuração de `make.conf` e USE flags.</td>
     </tr>
     <tr>
-      <td data-label="Distribuições"><strong>Slackware</strong></td>
-      <td data-label="Métodos de instalação">DVD/USB → Script <code>setup</code> em modo texto</td>
-      <td data-label="Observações">Um dos mais antigos. Minimalista e estável.</td>
+      <td data-label="Distribuição">Slackware.</td>
+      <td data-label="Método de Instalação">DVD/USB → script `setup` (texto).</td>
+      <td data-label="Observações Técnicas">Sem gerenciador gráfico de pacotes.</td>
     </tr>
   </tbody>
 </table>
+
 
 
 
