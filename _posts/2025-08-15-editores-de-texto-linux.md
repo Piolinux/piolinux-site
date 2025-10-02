@@ -21,10 +21,10 @@ tags: [linux, editor-de-texto, geany, vim, nano, code, open-source]
             <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Editores</th>
-      <th>Tipos</th>
-      <th>Quando utilizar</th>
-      <th>Comandos de Instalação (Debian/Ubuntu)</th>
+      <th>Editores.</th>
+      <th>Tipos.</th>
+      <th>Quando utilizar.</th>
+      <th>Comandos de Instalação (Debian/Ubuntu).</th>
     </tr>
   </thead>
   <tbody>
@@ -66,7 +66,7 @@ tags: [linux, editor-de-texto, geany, vim, nano, code, open-source]
     </tr>
     <tr>
       <td data-label="Editor">Mousepad</td>
-      <td data-label="Tipo">Gráfico (XFCE)</td>
+      <td data-label="Tipo">Gráfico (XFCE).</td>
       <td data-label="Quando usar">Editor de texto do XFCE. Rápido, minimalista, com suporte a abas.</td>
       <td data-label="Comando de Instalação">
         <code>sudo apt install mousepad</code>
@@ -74,9 +74,9 @@ tags: [linux, editor-de-texto, geany, vim, nano, code, open-source]
       </td>
     </tr>
     <tr>
-      <td data-label="Editor">Leafpad</td>
-      <td data-label="Tipo">Gráfico (LXDE)</td>
-      <td data-label="Quando usar">Editorde texto ultra-leve para sistemas com poucos recursos (ex: Raspberry Pi, PCs antigos).</td>
+      <td data-label="Editor">Leafpad.</td>
+      <td data-label="Tipo">Gráfico (LXDE).</td>
+      <td data-label="Quando usar">Editor de texto ultra-leve para sistemas com poucos recursos (ex: Raspberry Pi, PCs antigos).</td>
       <td data-label="Comando de Instalação">
         <code>sudo apt install leafpad</code>
         <button class="copy-btn" data-command="sudo apt install leafpad">📋 Copiar</button>
@@ -107,7 +107,7 @@ tags: [linux, editor-de-texto, geany, vim, nano, code, open-source]
       <td data-label="Explicação">Gedit puxa bibliotecas GTK (GNOME), Mousepad é para XFCE, Leafpad para LXDE. Evite instalar todos — escolha um por ambiente.</td>
     </tr>
     <tr>
-      <td data-label="Fato">Synaptic não é editor de texto</td>
+      <td data-label="Fato">Synaptic não é editor de texto.</td>
       <td data-label="Explicação">É um gerenciador gráfico de pacotes. Não edita arquivos — só instala/removem pacotes.</td>
     </tr>
   </tbody>
