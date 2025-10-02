@@ -89,7 +89,7 @@ permalink: /importancia-da-documentacao-linux/
   <tbody>
     <tr>
       <td data-label="Fato"><code>gman</code> é obsoleto.</td>
-      <td data-label="Explicação">Não está nos repositórios principais do Debian/Ubuntu. Prefira <code>yelp</code> (GNOME) ou leia direto no terminal.</td>
+      <td data-label="Explicação">Prefira <code>yelp</code> (GNOME) ou leia direto no terminal.</td>
     </tr>
     <tr>
       <td data-label="Fato">Seções do <code>man</code></td>
