@@ -57,13 +57,13 @@ permalink: /distros-linux-tabela/
     </tr>
     <tr>
       <td data-label="Distribuição">openSUSE.</td>
-      <td data-label="Método de Instalação">Live/DVD → YaST (GUI ou texto).</td>
+      <td data-label="Método de Instalação">Live/DVD → YaST (GUI ou texto)</td>
       <td data-label="Observações Técnicas">YaST gerencia partições, rede, serviços.</td>
     </tr>
     <tr>
       <td data-label="Distribuição">Arch Linux.</td>
       <td data-label="Método de Instalação">ISO Live → terminal (particionar, pacstrap, chroot).</td>
-      <td data-label="Observações Técnicas">Requer leitura do Arch Wiki</td>
+      <td data-label="Observações Técnicas">Requer leitura do Arch Wiki.</td>
     </tr>
     <tr>
       <td data-label="Distribuição">Manjaro.</td>
