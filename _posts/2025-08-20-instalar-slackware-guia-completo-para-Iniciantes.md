@@ -26,7 +26,7 @@ permalink: /instalar-slackware-guia-completo/
     <tr>
       <td data-label="Etapa">Baixar ISO</td>
       <td data-label="Ação Técnica">
-        <a href="https://www.slackware.com/getslack/" target="_blank">slackware.com/getslack</a>
+        <a href="https://www.slackware.com/getslack/" target="_blank" rel="noopener noreferrer">>slackware.com/getslack</a>
       </td>
       <td data-label="Observação">Slackware 15.0 (2022) é a versão estável atual. Não há “LTS” — só uma versão por década.</td>
     </tr>
