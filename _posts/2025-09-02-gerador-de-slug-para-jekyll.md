@@ -20,40 +20,18 @@ permalink: /gerador-slug-jekyll/
 
 
 
-
-
-<h3>🔤 Como funciona o Gerador de Slug</h3>
-
-
-
-
-<p>Converte o título do seu post para o formato correto de arquivos Jekyll, tornando a tarefa de postar mais fácil. Se houver vários posts, o gerenciamento se torna mais simples.</p>
-<pre><code>AAAA-MM-DD-titulo-do-post.md</code></pre>
-
-<h4>🔧 Regras aplicadas:</h4>
-<ul>
-  <li>✅ <strong>Minúsculas</strong>: "Como Usar" → "como usar"</li>
-  <li>✅ <strong>Remoção de acentos</strong>: "móvel" → "móvel" → "movel"</li>
-  <li>✅ <strong>Espaços viram hífens</strong>: "post de linux" → "post-de-linux"</li>
-  <li>✅ <strong>Caracteres especiais removidos</strong>: "como usar chmod?" → "como-usar-chmod"</li>
-  <li>✅ <strong>Data atual</strong>: usa a data de hoje no formato <code>AAAA-MM-DD</code></li>
-</ul>
-
-<h4>📌 Exemplo prático</h4>
-<p><strong>Título:</strong> Como particionar disco no Linux</p>
-<p><strong>Resultado:</strong></p>
-<pre><code>2025-05-18-como-particionar-disco-no-linux.md</code></pre>
-
-<h4>💡 Dica para Jekyll</h4>
-<p>Use esse nome no diretório <code>_posts/</code>:</p>
-<pre><code>_posts/2025-05-18-como-particionar-disco-no-linux.md</code></pre>
-<p>E o <code>permalink</code> será automaticamente:</p>
-<pre><code>/como-particionar-disco-no-linux/</code></pre>
-
-<div style="background:#008000; border-left:4px solid #2e7d32; padding:1em; margin:1.5em 0; border-radius:0 8px 8px 0; font-size:0.95em;">
-  <strong>✅ Dica pro:</strong> Combine este gerador com seu fluxo no <em>Geany</em> e <em>Debian</em>. 
-  Crie o arquivo, escreva o post, e publique com <code>bundle exec jekyll serve</code>.
-</div>
+<table class="evergreen-table">
+  <thead>
+    <tr><th>Regras.</th><th>Exemplos.</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Minúsculas</td><td><code>Como Usar.</code> → <code>como-usar</code></td></tr>
+    <tr><td>Remover acentos</td><td><code>móvel.</code> → <code>movel</code></td></tr>
+    <tr><td>Espaços → hífens</td><td><code>post de linux.</code> → <code>post-de-linux</code></td></tr>
+    <tr><td>Remover caracteres especiais</td><td><code>chmod?</code> → <code>chmod</code></td></tr>
+    <tr><td>Formato Jekyll</td><td><code>2025-05-18-titulo.md</code></td></tr>
+  </tbody>
+</table>
 
 
 
@@ -63,11 +41,7 @@ permalink: /gerador-slug-jekyll/
 
 
 
-<p>
-  Gere o <strong>nome completo do arquivo</strong> para seu post no Jekyll, no formato:
-  <br>
-  <code>AAAA-MM-DD-seu-titulo.md</code>
-</p>
+
 
 <p><strong>Título do post:</strong></p>
 <textarea id="titulo" placeholder="Como configurar o Jekyll no Windows" rows="2" style="width: 100%; padding: 8px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
