@@ -72,28 +72,28 @@ permalink: /personalizar-linux-iniciantes/
       <td data-label="Extensão">Dash to Dock</td>
       <td data-label="Função">Dock personalizável. (posição, transparência, comportamento)</td>
       <td data-label="Instalação">
-        <a href="https://extensions.gnome.org/extension/307/dash-to-dock/" target="_blank">extensions.gnome.org</a>
+        <a href="https://extensions.gnome.org/extension/307/dash-to-dock/" target="_blank" rel="noopener noreferrer">extensions.gnome.org</a>
       </td>
     </tr>
     <tr>
       <td data-label="Extensão">User Themes</td>
       <td data-label="Função">Permite aplicar temas baixados.</td>
       <td data-label="Instalação">
-        <a href="https://extensions.gnome.org/extension/19/user-themes/" target="_blank">extensions.gnome.org</a>
+        <a href="https://extensions.gnome.org/extension/19/user-themes/" target="_blank" rel="noopener noreferrer">extensions.gnome.org</a>
       </td>
     </tr>
     <tr>
       <td data-label="Extensão">Vitals</td>
       <td data-label="Função">Mostra CPU, RAM, disco e rede na barra superior.</td>
       <td data-label="Instalação">
-        <a href="https://extensions.gnome.org/extension/1460/vitals/" target="_blank">extensions.gnome.org</a>
+        <a href="https://extensions.gnome.org/extension/1460/vitals/" target="_blank" rel="noopener noreferrer">extensions.gnome.org</a>
       </td>
     </tr>
     <tr>
       <td data-label="Extensão">Blur My Shell</td>
       <td data-label="Função">Adiciona efeito de desfoque. (use com moderação)</td>
       <td data-label="Instalação">
-        <a href="https://extensions.gnome.org/extension/3193/blur-my-shell/" target="_blank">extensions.gnome.org</a>
+        <a href="https://extensions.gnome.org/extension/3193/blur-my-shell/" target="_blank" rel="noopener noreferrer">extensions.gnome.org</a>
       </td>
     </tr>
   </tbody>
@@ -141,11 +141,11 @@ permalink: /personalizar-linux-iniciantes/
   </thead>
   <tbody>
     <tr>
-      <td data-label="Site"><a href="https://unsplash.com/" target="_blank">unsplash.com</a></td>
+      <td data-label="Site"><a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">unsplash.com</a></td>
       <td data-label="Tipo">Fotos de alta resolução, livres para uso.</td>
     </tr>
     <tr>
-      <td data-label="Site"><a href="https://wallhaven.cc/" target="_blank">wallhaven.cc</a></td>
+      <td data-label="Site"><a href="https://wallhaven.cc/" target="_blank" rel="noopener noreferrer">wallhaven.cc</a></td>
       <td data-label="Tipo">Wallpapers técnicos, artísticos e minimalistas.</td>
     </tr>
   </tbody>
@@ -170,7 +170,7 @@ permalink: /personalizar-linux-iniciantes/
     <tr>
       <td data-label="Tema">Capitaine Cursors</td>
       <td data-label="Instalação">
-        Baixar em <a href="https://github.com/keeferrourke/capitaine-cursors" target="_blank">GitHub</a> e colocar em <code>~/.icons/</code>
+        Baixar em <a href="https://github.com/keeferrourke/capitaine-cursors" target="_blank" rel="noopener noreferrer">GitHub</a> e colocar em <code>~/.icons/</code>
       </td>
     </tr>
   </tbody>
