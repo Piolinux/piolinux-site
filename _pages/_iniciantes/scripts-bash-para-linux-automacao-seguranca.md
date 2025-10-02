@@ -13,12 +13,6 @@ tags: [segurança, bash, firewall, fail2ban, ssh, nmap, rootkit, monitoramento]
 
 
 
-<h2>🐧 Scripts Bash Básicos - Organizados por Categoria.</h2>
-
-<p>Scripts essenciais para automatizar, administração e produtividade.  
-<strong>Copie, cole e use</strong> — testados em Devuan, Debian e sistemas sem systemd.  
-Cada script está formatado <strong>exatamente como deve ser salvo</strong> — sem colar em uma linha só.</p>
-
 
 
 
@@ -275,10 +269,10 @@ echo &quot;scale=2; $1&quot; | bc -l">📋</button></td>
 
 
 <div class="dica-piolinux">
-  <h4>💡 Dicas do PioLinux.</h4>
+  <div>💡 Dicas do PioLinux.</div>
   <p>Não copie e cole, cegamente o script no terminal.<br>
   <strong>Salve como <code>.sh</code> → revise no Geany/Nano → <code>chmod +x</code> → execute.</strong><br>
-  Um segundo de cuidado evita horas de recuperação. Facim!
+  Um segundo de cuidado evita horas de recuperação. 
   </p>
 </div>
 
