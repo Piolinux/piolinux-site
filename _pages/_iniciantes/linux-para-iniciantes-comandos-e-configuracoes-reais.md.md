@@ -262,17 +262,17 @@ tags: [comandos, linux, terminal, bash, tutorial, iniciante]
   <tbody>
     <tr>
       <td data-label="Plataforma">Ask Ubuntu.</td>
-      <td data-label="Link"><a href="https://askubuntu.com/" target="_blank">askubuntu.com</a></td>
+      <td data-label="Link"><a href="https://askubuntu.com/" target="_blank" rel="noopener noreferrer">askubuntu.com</a></td>
       <td data-label="Foco">Ubuntu e derivados.</td>
     </tr>
     <tr>
       <td data-label="Plataforma">Reddit r/linux4noobs.</td>
-      <td data-label="Link"><a href="https://www.reddit.com/r/linux4noobs/" target="_blank">reddit.com/r/linux4noobs</a></td>
+      <td data-label="Link"><a href="https://www.reddit.com/r/linux4noobs/" target="_blank" rel="noopener noreferrer">reddit.com/r/linux4noobs</a></td>
       <td data-label="Foco">Iniciantes, perguntas reais.</td>
     </tr>
     <tr>
       <td data-label="Plataforma">Documentação oficial.</td>
-      <td data-label="Link">ex: <a href="https://linuxmint.com/documentation.php" target="_blank">linuxmint.com/docs</a></td>
+      <td data-label="Link">ex: <a href="https://linuxmint.com/documentation.php" target="_blank" rel="noopener noreferrer">linuxmint.com/docs</a></td>
       <td data-label="Foco">Guia autoritativo da distro.</td>
     </tr>
   </tbody>
