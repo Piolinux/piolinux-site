@@ -39,7 +39,7 @@ tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop-os, kali]
         <code>sudo apt update && sudo apt upgrade -y</code>
         <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>
       </td>
-      <td data-label="Link Oficial"><a href="https://ubuntu.com/download" target="_blank">ubuntu.com</a></td>
+      <td data-label="Link Oficial"><a href="https://ubuntu.com/download" target="_blank" rel="noopener noreferrer">ubuntu.com</a></td>
     </tr>
     <tr>
       <td data-label="Distribuição">Linux Mint</td>
@@ -50,7 +50,7 @@ tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop-os, kali]
         <code>sudo apt update && sudo apt upgrade -y</code>
         <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>
       </td>
-      <td data-label="Link Oficial"><a href="https://linuxmint.com/download.php" target="_blank">linuxmint.com</a></td>
+      <td data-label="Link Oficial"><a href="https://linuxmint.com/download.php" target="_blank" rel="noopener noreferrer">linuxmint.com</a></td>
     </tr>
     <tr>
       <td data-label="Distribuição">Zorin OS (Core)</td>
@@ -61,7 +61,7 @@ tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop-os, kali]
         <code>sudo apt update && sudo apt upgrade -y</code>
         <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>
       </td>
-      <td data-label="Link Oficial"><a href="https://zorin.com/os/" target="_blank">zorin.com</a></td>
+      <td data-label="Link Oficial"><a href="https://zorin.com/os/" target="_blank" rel="noopener noreferrer">zorin.com</a></td>
     </tr>
     <tr>
       <td data-label="Distribuição">Elementary OS</td>
@@ -72,7 +72,7 @@ tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop-os, kali]
         <code>sudo apt update && sudo apt upgrade -y</code>
         <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>
       </td>
-      <td data-label="Link Oficial"><a href="https://elementary.io/" target="_blank">elementary.io</a></td>
+      <td data-label="Link Oficial"><a href="https://elementary.io/" target="_blank" rel="noopener noreferrer">elementary.io</a></td>
     </tr>
     <tr>
       <td data-label="Distribuição">Pop!_OS</td>
@@ -83,7 +83,7 @@ tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop-os, kali]
         <code>sudo apt update && sudo apt upgrade -y</code>
         <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>
       </td>
-      <td data-label="Link Oficial"><a href="https://pop.system76.com/" target="_blank">pop.system76.com</a></td>
+      <td data-label="Link Oficial"><a href="https://pop.system76.com/" target="_blank" rel="noopener noreferrer">pop.system76.com</a></td>
     </tr>
     <tr>
       <td data-label="Distribuição">Lubuntu</td>
@@ -94,7 +94,7 @@ tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop-os, kali]
         <code>sudo apt update && sudo apt upgrade -y</code>
         <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>
       </td>
-      <td data-label="Link Oficial"><a href="https://lubuntu.me/" target="_blank">lubuntu.me</a></td>
+      <td data-label="Link Oficial"><a href="https://lubuntu.me/" target="_blank" rel="noopener noreferrer">lubuntu.me</a></td>
     </tr>
   </tbody>
 </table>
@@ -111,7 +111,7 @@ tags: [distros, linux, ubuntu, debian, fedora, arch, mint, pop-os, kali]
     <tr>
       <td data-label="Método">Live USB</td>
       <td data-label="Comando / Ação">
-        Use <a href="https://github.com/balena-io/etcher" target="_blank">Balena Etcher</a> ou <code>dd</code> para gravar ISO em pendrive.
+        Use <a href="https://github.com/balena-io/etcher" target="_blank" rel="noopener noreferrer">Balena Etcher</a> ou <code>dd</code> para gravar ISO em pendrive.
       </td>
     </tr>
     <tr>
