@@ -115,7 +115,6 @@ tags: [cron, linux, sysadmin, automacao, devops, servidores]
     </div>
   </div>
 </div>
-  <div class="seo-content">
   
  
 <section>
@@ -124,10 +123,10 @@ tags: [cron, linux, sysadmin, automacao, devops, servidores]
   <table style="border-collapse: collapse; width: 100%; max-width: 800px; margin: 1.5em 0; font-size: 0.95em; background: #121212; color: #e0e0e0; border: 1px solid #333;">
     <thead>
       <tr style="background-color: #2e7d32; color: #fff;">
-        <th style="padding: 12px 10px; text-align: left; border-bottom: 2px solid #4caf50;">expressão cron</th>
+        <th style="padding: 12px 10px; text-align: left; border-bottom: 2px solid #4caf50;">expressão cron.</th>
         <th style="padding: 12px 10px; text-align: left; border-bottom: 2px solid #4caf50;">quando roda?</th>
         <th style="padding: 12px 10px; text-align: left; border-bottom: 2px solid #4caf50;">problema?</th>
-        <th style="padding: 12px 10px; text-align: left; border-bottom: 2px solid #4caf50;">solução inteligente</th>
+        <th style="padding: 12px 10px; text-align: left; border-bottom: 2px solid #4caf50;">solução inteligente.</th>
       </tr>
     </thead>
     <tbody>
@@ -180,41 +179,41 @@ tags: [cron, linux, sysadmin, automacao, devops, servidores]
   <table class="evergreen-table cron-table">
     <thead>
       <tr>
-        <th>Objetivo</th>
-        <th>Expressão Cron</th>
-        <th>Explicação</th>
+        <th>Objetivos.</th>
+        <th>Expressão Crons</th>
+        <th>Explicações.</th>
         <th>Seguro?</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Backup diário às 2h</td>
+        <td>Backup diário às 2h.</td>
         <td><code>0 2 * * *</code></td>
         <td>Roda diariamente às 2h da manhã.</td>
         <td> Sim</td>
       </tr>
       <tr>
-        <td>Backup semanal (sábado às 3h)</td>
+        <td>Backup semanal (sábado às 3h).</td>
         <td><code>0 3 * * 6</code></td>
-        <td>Roda todo sábado às 3h</td>
+        <td>Roda todo sábado às 3h.</td>
         <td> Sim</td>
       </tr>
       <tr>
-        <td>Backup no 1º de cada mês</td>
+        <td>Backup no 1º de cada mês.</td>
         <td><code>0 4 1 * *</code></td>
-        <td>Roda no dia 1º, às 4h</td>
+        <td>Roda no dia 1º, às 4h.</td>
         <td>Sim</td>
       </tr>
       <tr>
-        <td>Backup no 1º que for sábado</td>
+        <td>Backup no 1º que for sábado.</td>
         <td><code>0 5 1 * * [ $(date +\%w) -eq 6 ] && /backup.sh</code></td>
-        <td>Usa verificação no script — só executa se for sábado</td>
+        <td>Usa verificação no script — só executa se for sábado.</td>
         <td>Melhor prática</td>
       </tr>
       <tr>
-        <td>Limpar /tmp a cada hora</td>
+        <td>Limpar /tmp a cada hora.</td>
         <td><code>0 * * * * rm -rf /tmp/*</code></td>
-        <td>Perigoso! Pode apagar arquivos em uso</td>
+        <td>Perigoso! Pode apagar arquivos em uso.</td>
         <td> n&atilde;o — use <code>tmpwatch</code> ou verifique antes.</td>
       </tr>
     </tbody>
