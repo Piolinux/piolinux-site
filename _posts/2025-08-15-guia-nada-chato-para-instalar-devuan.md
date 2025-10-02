@@ -42,7 +42,7 @@ tags: [devuan, linux, sysvinit, guia, instalação, sem_systemd]
     <tr>
       <td data-label="Etapa">Baixar ISO</td>
       <td data-label="Ação Técnica">
-        <a href="https://www.devuan.org/os/download" target="_blank">devuan.org/os/download</a><br>
+        <a href="https://www.devuan.org/os/download" target="_blank" rel="noopener noreferrer">>devuan.org/os/download</a><br>
         Escolha:
         <ul>
           <li><code>netinst</code>: instalação mínima (sem desktop)</li>
