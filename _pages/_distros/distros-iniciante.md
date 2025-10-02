@@ -33,35 +33,35 @@ tags: [ubuntu, linux-mint, fedora, escolha-distro, desktop-linux]
       <td data-label="Base">Debian</td>
       <td data-label="Gerenciador"><code>apt</code></td>
       <td data-label="DE Padrão">GNOME</td>
-      <td data-label="Site"><a href="https://ubuntu.com">ubuntu.com</a></td>
+      <td data-label="Site"><a href="https://ubuntu.com" target="_blank" rel="noopener noreferrer">ubuntu.com</a></td>
     </tr>
     <tr>
       <td data-label="Distros">Linux Mint</td>
       <td data-label="Base">Ubuntu</td>
       <td data-label="Gerenciador"><code>apt</code></td>
       <td data-label="DE Padrão">Cinnamon / MATE / XFCE</td>
-      <td data-label="Site"><a href="https://linuxmint.com">linuxmint.com</a></td>
+      <td data-label="Site"><a href="https://linuxmint.com" target="_blank" rel="noopener noreferrer">linuxmint.com</a></td>
     </tr>
     <tr>
       <td data-label="Distros">Zorin OS</td>
       <td data-label="Base">Ubuntu</td>
       <td data-label="Gerenciador"><code>apt</code></td>
       <td data-label="DE Padrão">GNOME (modificado)</td>
-      <td data-label="Site"><a href="https://zorin.com">zorin.com</a></td>
+      <td data-label="Site"><a href="https://zorin.com" target="_blank" rel="noopener noreferrer">zorin.com</a></td>
     </tr>
     <tr>
       <td data-label="Distros">elementary OS</td>
       <td data-label="Base">Ubuntu</td>
       <td data-label="Gerenciador"><code>apt</code></td>
       <td data-label="DE Padrão">Pantheon</td>
-      <td data-label="Site"><a href="https://elementary.io">elementary.io</a></td>
+      <td data-label="Site"><a href="https://elementary.io" target="_blank" rel="noopener noreferrer">elementary.io</a></td>
     </tr>
     <tr>
       <td data-label="Distros">Pop!_OS</td>
       <td data-label="Base">Ubuntu</td>
       <td data-label="Gerenciador"><code>apt</code></td>
       <td data-label="DE Padrão">COSMIC (GNOME-based)</td>
-      <td data-label="Site"><a href="https://pop.system76.com">pop.system76.com</a></td>
+      <td data-label="Site"><a href="https://pop.system76.com" target="_blank" rel="noopener noreferrer">pop.system76.com</a></td>
     </tr>
   </tbody>
 </table>
