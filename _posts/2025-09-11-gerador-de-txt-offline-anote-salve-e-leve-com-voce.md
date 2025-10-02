@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Gerador de Arquivos .txt Online — HTML + JS Puro
+title: Gerador de Arquivos .txt Offline — HTML + JS Puro
 description: "Crie e baixe arquivos .txt offline — sem cadastro, sem nuvem, só HTML+JS. Ideal para anotações, lembretes e configurações."
 date: 2025-09-12
 author: "PioLinux"
