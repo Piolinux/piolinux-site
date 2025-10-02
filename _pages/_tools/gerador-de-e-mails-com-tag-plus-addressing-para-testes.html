@@ -77,37 +77,43 @@ tags: [email, seo, plus-addressing, teste, qa, desenvolvedor, cadastro, privacid
       </div>
     </div>
 </div>
-<div style="background: #161616; padding: 20px; border-radius: 8px; border-left: 4px solid #8bc34a; margin: 20px 0; color: #d0d0d0; line-height: 1.6;">
-  <h3 style="color: #a6e3a1; margin-top: 0;">Como usar essa ferramenta com segurança:</h3>
 
-  <p><strong> Utilize o formato base+tag@dominio.com para rastrear a origem de e-mails.</strong> </p> 
-     <p>Dicas: <code>usuario+newsletter@seudominio.com</code></p>
-
-  <p>
-    <strong>Configure filtro anti-spam no seu cliente de e-mail para organizar automaticamente mensagens por tags.
- </p>
-
-  <p>
-    <strong> Verifique a compatibilidade do serviço — embora raro, alguns sistemas não aceitam o caractere + em endereços de e-mail.
-
-  </p>
-
-  <p>
-    <strong>Funciona com a maioria dos provedores de e-mail modernos — incluindo aqueles que respeitam padrões abertos e privacidade.
-  </p>
-
-  <h3 style="color: #a6e3a1; margin-top: 20px;">Dicas para desenvolvedores e testes:</h3>
-
-  <p>Para testes locais ou de QA, utilize e-mails fictícios ou contas secundárias criadas para esse fim. Não utilize e-mails temporários públicos em ambientes de produção, muitos sistemas os bloqueiam por segurança.
-      </p>
-
-  <h3 style="color: #a6e3a1; margin-top: 20px;">Como usar esta ferramenta?</h3>
-
-  <p>
-    Defina um nome base, um domínio e uma tag opcional. Clique em “Gerar”. Utilize o e-mail gerado em seus testes de QA, desenvolvimento ou para inscrições em serviços que você, não quer associar ao seu e-mail principal. </p>
-</div>
-
-
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Uso</th>
+      <th>Formato</th>
+      <th>Compatibilidade</th>
+      <th>Observação Técnica</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Uso">Rastreamento de origem</td>
+      <td data-label="Formato"><code>usuario+newsletter@dominio.com</code></td>
+      <td data-label="Compatibilidade">Gmail, Proton, Fastmail, Zoho, Mailfence.</td>
+      <td data-label="Observação Técnica">Funciona onde o MTA respeita o padrão RFC 5233 (subaddressing)</td>
+    </tr>
+    <tr>
+      <td data-label="Uso">Filtragem automática</td>
+      <td data-label="Formato">Regra no cliente: redirecionar <code>+loja</code> para pasta "Compras"</td>
+      <td data-label="Compatibilidade">Thunderbird, Mutt, NeoMutt, Apple Mail, Outlook (com regras).</td>
+      <td data-label="Observação Técnica">Configure filtro por "Para contém +loja"</td>
+    </tr>
+    <tr>
+      <td data-label="Uso">Testes de desenvolvimento</td>
+      <td data-label="Formato"><code>dev+feature-x@seudominio.com</code></td>
+      <td data-label="Compatibilidade">Qualquer sistema com MTA compatível (Postfix, Dovecot, etc.).</td>
+      <td data-label="Observação Técnica">Útil para isolar logs de envio por funcionalidade.</td>
+    </tr>
+    <tr>
+      <td data-label="Uso">Serviços que NÃO aceitam `+`</td>
+      <td data-label="Formato">—</td>
+      <td data-label="Compatibilidade">Microsoft 365 (alguns tenants), Outlook.com (antigo), alguns SaaS legados.</td>
+      <td data-label="Observação Técnica">Teste antes de usar em produção.</td>
+    </tr>
+  </tbody>
+</table>
   
 </section>
   
