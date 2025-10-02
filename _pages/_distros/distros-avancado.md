@@ -42,7 +42,7 @@ permalink: /distros/avancado/
       <td data-label="Projeto">Linux From Scratch (LFS)</td>
       <td data-label="Tipo">Construção manual.</td>
       <td data-label="Base">Nenhuma (do zero)</td>
-      <td data-label="Comando/Link Útil"><a href="https://www.linuxfromscratch.org/lfs/downloads/stable/LFS-BOOK-12.2.pdf">PDF LFS 12.2</a></td>
+      <td data-label="Comando/Link Útil"><a href="https://www.linuxfromscratch.org/lfs/downloads/stable/LFS-BOOK-12.4.pdf">PDF LFS 12.2</a></td>
     </tr>
     <tr>
       <td data-label="Projeto">Arch Linux</td>
