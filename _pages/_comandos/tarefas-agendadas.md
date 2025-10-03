@@ -169,7 +169,56 @@ function filtrarLinhas(termo) {
 </table>
  
 
-
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Ferramentas.</th>
+      <th>Pacotes.</th>
+      <th>Instalar (Void)</th>
+      <th>Instalar (Debian/Ubuntu)</th>
+      <th>Propósitos.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Ferramenta"><code>at</code></td>
+      <td data-label="Pacote"><code>at</code></td>
+      <td data-label="Instalar (Void)"><code>sudo xbps-install at</code></td>
+      <td data-label="Instalar (Debian/Ubuntu)"><code>sudo apt install at</code></td>
+      <td data-label="Propósito">Agendar tarefa única para execução futura.</td>
+    </tr>
+    <tr>
+      <td data-label="Ferramenta"><code>atq</code></td>
+      <td data-label="Pacote">Incluído no <code>at</code></td>
+      <td data-label="Instalar (Void)">Já instalado com <code>at</code></td>
+      <td data-label="Instalar (Debian/Ubuntu)">Já instalado com <code>at</code></td>
+      <td data-label="Propósito">Listar tarefas agendadas.</td>
+    </tr>
+    <tr>
+      <td data-label="Ferramenta"><code>atrm</code></td>
+      <td data-label="Pacote">Incluído no <code>at</code></td>
+      <td data-label="Instalar (Void)">Já instalado com <code>at</code></td>
+      <td data-label="Instalar (Debian/Ubuntu)">Já instalado com <code>at</code></td>
+      <td data-label="Propósito">Remover tarefa agendada pelo ID.</td>
+    </tr>
+    <tr>
+      <td data-label="Ferramenta"><code>batch</code></td>
+      <td data-label="Pacote">Incluído no <code>at</code></td>
+      <td data-label="Instalar (Void)">Já instalado com <code>at</code></td>
+      <td data-label="Instalar (Debian/Ubuntu)">Já instalado com <code>at</code></td>
+      <td data-label="Propósito">Executar tarefa quando a carga do sistema estiver baixa (< 1.5)</td>
+    </tr>
+    <tr>
+      <td data-label="Ferramenta">Serviço <code>atd</code></td>
+      <td data-label="Pacote"><code>at</code></td>
+      <td data-label="Instalar (Void)"><code>sudo ln -s /etc/sv/atd /var/service/</code></td>
+      <td data-label="Instalar (Debian/Ubuntu)"><code>sudo systemctl enable --now atd</code></td>
+      <td data-label="Propósito">Daemon necessário para executar tarefas agendadas.</td>
+    </tr>
+  </tbody>
+</table>
+ 
+ 
 
 
 
