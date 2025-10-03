@@ -130,9 +130,9 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="wipe /dev/sda">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>logrotate --force /etc/logrotate.d/app</code></td>
+      <td data-label="Comando"><code>cat /var/lib/logrotate/status</code></td>
       <td data-label="Descrição">Força rotação de logs.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="logrotate --force /etc/logrotate.d/app">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="cat /var/lib/logrotate/status">📋</button></td>
     </tr>
   </tbody>
 </table>
