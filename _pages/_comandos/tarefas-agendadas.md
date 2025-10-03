@@ -169,9 +169,6 @@ function filtrarLinhas(termo) {
 </table>
  
 
-<div class="dica-final">
-   <strong>Dicas do Piolinux:</strong> Use crontab -e para editar tarefas - ele valida a sintaxe antes de salvar.
-  </div>
 
 
 
