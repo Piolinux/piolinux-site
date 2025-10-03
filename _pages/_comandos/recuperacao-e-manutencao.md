@@ -142,7 +142,7 @@ function filtrarLinhas(termo) {
 
 <h2>Tabela de Comandos de ALTO RISCO (Use por sua própria conta e risco).</h2>
 <div>ATENÇÃO IMPORTANTE:</div> 
-<p>>Esses comandos podem ser bastante arriscados e podem levar à perda irreversível de informações ou até mesmo deixar o sistema operacional fora de ação. Ao utilizar esses comandos, você assume total responsabilidade e risco.</p>.
+<p>Esses comandos podem ser bastante arriscados e podem levar à perda irreversível de informações ou até mesmo deixar o sistema operacional fora de ação. Ao utilizar esses comandos, você assume total responsabilidade e risco.</p>.
 
 
 
