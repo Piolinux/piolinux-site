@@ -146,11 +146,6 @@ function filtrarLinhas(termo) {
 
 
 
-<div class="aviso-final">
-  ⚠️ <strong>Avisos:</strong> Os registros podem conter senhas ou informações sensíveis.
-
-</div>
-
 
 
 
