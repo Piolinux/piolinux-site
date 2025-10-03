@@ -140,12 +140,7 @@ function filtrarLinhas(termo) {
  
 
 
-<div class="dica-final">
-  💡 <strong>Dicas do Piolinux:</strong> É aconselhável iniciar todos os scripts com a linha de comando #!/bin/bash, a fim de evitar confusões durante a execução. .
-  </div>
-<div class="aviso-final">
-  ⚠️ <strong>Avisos:</strong> Scripts obtidos por meio da internet podem representar riscos significativos.
-</div>
+
 
 
 </section>
