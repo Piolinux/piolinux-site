@@ -35,19 +35,19 @@ function filtrarLinhas(termo) {
   </thead>
   <tbody>
     <tr>
-      <td data-label="Comando"><code>fsck -n /dev/sda1</code></td>
+      <td data-label="Comando"><code>fsck -n /dev/sdXn</code></td>
       <td data-label="Descrição">Garante um diagnóstico seguro em modo de leitura, sem tentar corrigir nada.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="fsck -n /dev/sda1">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="fsck -n /dev/sdXn">📋</button></td>
     </tr>
       <tr>
-      <td data-label="Comando"><code>e2fsck -fn /dev/sda2</code></td>
+      <td data-label="Comando"><code>e2fsck -fn /dev/sdXn</code></td>
       <td data-label="Descrição">Simular a verificação e apenas relata o problema de forma segura.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="e2fsck -fn /dev/sda2">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="e2fsck -fn /dev/sdXn">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>mount /dev/sda1 /mnt</code></td>
+      <td data-label="Comando"><code>mount /dev/sdXn/mnt</code></td>
       <td data-label="Descrição">Monta partição.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="mount /dev/sda1 /mnt">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="mount /dev/sdXn /mnt">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>umount /mnt</code></td>
@@ -55,14 +55,14 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="umount /mnt">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>dd if=/dev/sda of=backup.img</code></td>
+      <td data-label="Comando"><code>dd if=/dev/sdXn of=backup.img</code></td>
       <td data-label="Descrição">Copia disco inteiro.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="dd if=/dev/sda of=backup.img">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="dd if=/dev/sdXn of=backup.img">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>dd if=backup.img of=/dev/sdb</code></td>
+      <td data-label="Comando"><code>dd if=backup.img of=/dev/sdXn</code></td>
       <td data-label="Descrição">Restaura imagem.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="dd if=backup.img of=/dev/sdb">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="dd if=backup.img of=/dev/sdXn">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>testdisk</code></td>
@@ -75,9 +75,9 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="photorec">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>grub-install /dev/sda</code></td>
+      <td data-label="Comando"><code>grub-install /dev/sdXn</code></td>
       <td data-label="Descrição">Reinstala GRUB.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="grub-install /dev/sda">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="grub-install /dev/sdXn">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>update-grub</code></td>
@@ -95,14 +95,14 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="blkid">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>parted /dev/sda print</code></td>
+      <td data-label="Comando"><code>parted /dev/sdXn print</code></td>
       <td data-label="Descrição">Informações da tabela de partições.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="parted /dev/sda print">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="parted /dev/sdXn print">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>badblocks -v /dev/sda</code></td>
+      <td data-label="Comando"><code>badblocks -v /dev/sdXn</code></td>
       <td data-label="Descrição">Verifica setores defeituosos.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="badblocks -v /dev/sda">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="badblocks -v /dev/sdXn">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>sync</code></td>
@@ -110,7 +110,7 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="sync">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>hdparm -I /dev/sda</code></td>
+      <td data-label="Comando"><code>hdparm -I /dev/sdXn</code></td>
       <td data-label="Descrição">Informações do disco.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="hdparm -I /dev/sda">📋</button></td>
     </tr>
@@ -125,7 +125,7 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="du -s /tmp/* | sort -nr">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code> shred -vfn 3 -z /dev/sda</code></td>
+      <td data-label="Comando"><code> shred -vfn 3 -z /dev/sdXn</code></td>
       <td data-label="Descrição">Use apenas em discos que você pretende descartar ou vender.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="shred -vfn 3 -z /dev/sda">📋</button></td>
     </tr>
