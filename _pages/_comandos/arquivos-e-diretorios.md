@@ -139,12 +139,6 @@ function filtrarLinhas(termo) {
 </table>
 </div>
 
-<div class="dica-final">
-  💡 <strong>Dicas do Piolinux:</strong> Utilize <code>ls -lh</code> para ver tamanhos legíveis (em MB/GB), não em blocos misteriosos.
-</div>
-<div class="aviso-final">
-  ⚠️ <strong>Avisos:</strong> <code>rm -rf /</code> apaga tudo — até seu café da manhã. 
-</div>
 
 
 
