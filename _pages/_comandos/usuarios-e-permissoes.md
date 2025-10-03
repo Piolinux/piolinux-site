@@ -145,10 +145,6 @@ function filtrarLinhas(termo) {
 
 
 
-<div class="dica-final">
-  💡 <strong>Dicas do Piolinux:</strong>  Sempre utilize as permssões do chmod 644 para arquivos e 755 para pastas — evita riscos de segurança.
-  </div>
-
 
 
 
