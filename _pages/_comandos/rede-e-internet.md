@@ -148,13 +148,6 @@ function filtrarLinhas(termo) {
 
 
 
-<div class="dica-final">
-  💡 <strong>Dicas do Piolinux:</strong> ip a substituiu ifconfig na maioria das distros modernas — use ele para ver seu IP.
-</div>
-<div class="aviso-final">
-  ⚠️ <strong>Avisos:</strong> Comandos como <code>nc</code> ou <code>nmap</code> podem ser bloqueados por firewalls corporativos. Use com permissão.
-
-</div>
 
 
 
