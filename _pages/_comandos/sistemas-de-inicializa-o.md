@@ -124,17 +124,7 @@ permalink: /sistemas-de-inicializacao/
 </table>
 
 
-
-<div class="dica-final">
-  💡 <strong>Dica do PioLinux:</strong> Use `systemctl list-units --failed` para ver serviços que **falharam na inicialização** — salva horas de diagnóstico.
-
-  </div>
-<div class="aviso-final">
-  ⚠️ <strong>Aviso:</strong> Comandos como `systemctl mask` impedem até o root de iniciar o serviço. Use com cuidado — e anote o que você mascarou!
- ✅ **Sistemas de inicialização não são mágica — são controle.** Domine o `systemd`, e você domina o boot do seu Linux.
-
-</div>
-
+</section>
 
 
 
