@@ -96,12 +96,6 @@ tags: [runit, rinit, void linux, systemd, inicializacao, terminal, linux]
 </table>
 
 
-<div class="dica-final">
-  💡 <strong>Dicas do Piolinux:</strong> Todos os comandos utilizados para 
-  gerenciar os serviços sv e links simbólicos em /var/service/.  
-Se um serviço não inicia, verifique se o script existe, acesse as pastas em /etc/sv/ e se o link está em /var/service/.</div>
-<div class="aviso-final">
-  ⚠️ <strong>Avisos:</strong>  O Void Linux não emprega o systemd; portanto, comandos como journalctl, systemctl ou timedatectl são incompatíveis.</div>
 
 
 
