@@ -140,13 +140,7 @@ function filtrarLinhas(termo) {
 
 
 
-<div class="dica-final">
-  💡 <strong>Dicas do Piolinux:</strong> Para liberar espaço, aproveite o comando `docker system prune` para remover containers e imagens que não estão mais em uso,
-</div>
-<div class="aviso-final">
-  ⚠️ <strong>Avisos:</strong> Os containers que operam com a opção --privileged têm permissão total para interagir com o sistema host. É melhor evitar essa configuração, a menos que seja realmente necessário.
 
-</div>
 
 
 </section>
