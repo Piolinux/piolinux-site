@@ -27,7 +27,7 @@ permalink: /emojis/estilizados/
 
 <section>
 
-<h2 style="color: #8bc34a; text-align: center; margin: 0 0 30px 0; font-size: 2.2em;">🟢 50 Emojis Estilizados para projetos.</h2>
+
 <p style="color: #d0d0d0; text-align: center; font-size: 1.1em; margin: 0 0 40px 0;">
     Copie e cole em READMEs, commits, documentação ou terminal. Tudo para os seus projetos — só o que você precisa.
 </p>
