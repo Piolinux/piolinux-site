@@ -131,7 +131,7 @@ function filtrarLinhas(termo) {
     </tr>
     <tr>
       <td data-label="Comando"><code>cat /var/lib/logrotate/status</code></td>
-      <td data-label="Descrição">Força rotação de logs.</td>
+      <td data-label="Descrição">Mostra todos os logs.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="cat /var/lib/logrotate/status">📋</button></td>
     </tr>
   </tbody>
