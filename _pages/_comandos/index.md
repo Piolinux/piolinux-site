@@ -71,7 +71,8 @@ permalink: /comandos/
 </table>
 
 <h2>Ferramentas Opcionais (Recomendação de Instalação)</h2>
-<div>Nem todas as distribuições Linux vêm com comandos avançados de diagnóstico por padrão. Para aproveitar ao máximo a biblioteca, sugerimos que você instale as seguintes ferramentas.</div>
+<div>Nem todas as distribuições Linux vêm com comandos avançados de diagnóstico por padrão. Para aproveitar ao máximo a biblioteca, sugerimos que você instale as seguintes ferramentas (são apenas 
+exemplos): </div>
 
 
 
