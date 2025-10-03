@@ -137,13 +137,7 @@ function filtrarLinhas(termo) {
 </div>
 
 
-<div class="dica-final">
-  💡 <strong>Dica técnica:</strong> Use <code>systemctl list-units --state=failed</code> para diagnosticar serviços com falha.
-</div>
 
-<div class="aviso-final">
-  ⚠️ <strong>Aviso:</strong> Serviços como nginx, SSH ou Docker expostos à rede podem se tornar vetores de ataque. Restrinja acesso com firewall (UFW, nftables).
-</div>
 
 
 </section>
