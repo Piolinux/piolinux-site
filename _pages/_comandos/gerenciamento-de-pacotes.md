@@ -488,13 +488,7 @@ function filtrarLinhas(termo) {
 
 
 
-<div class="dica-final">
-  💡 <strong>Dicas do Piolinux:</strong>Não misture os comandos apt, snap e 
-flatpak para utilizar o mesmo programa, pode quebrar as dependências e atualizações.
-</div>
-<div class="aviso-final">
-  ⚠️ <strong>Avisos:</strong>Em sistemas que são essenciais para o funcionamento, pode ser necessário reiniciar o dispositivo depois de executar comandos como apt upgrade ou pacman -Syu.
-</div>
+
 
 
 
