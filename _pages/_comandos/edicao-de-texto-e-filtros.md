@@ -79,13 +79,7 @@ function filtrarLinhas(termo) {
 </div>
 
 
-<div class="dica-final">
-  💡 <strong>Dicas do Piolinux:</strong> O <code>comando grep -i</code> permite ignorar diferenças entre maiúsculas e minúsculas, o que é útil quando não se tem certeza de como uma palavra foi escrita
-</div>
-<div class="aviso-final">
-  ⚠️ <strong>Avisos:</strong> O comando <code>sed -i</code> realiza edições em arquivos de forma permanente, sem criar backup; recomenda‑se fazer cópias de segurança antes de utilizá‑lo em arquivos críticos.
 
-</div>
 
 
 </section>
