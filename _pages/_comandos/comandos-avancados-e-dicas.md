@@ -23,7 +23,7 @@ function filtrarLinhas(termo) {
 </script>
 
 
-<div class="table-container">
+
 <table class="evergreen-table">
   <thead>
     <tr>
@@ -171,16 +171,9 @@ function filtrarLinhas(termo) {
 
 
 
- 
-<div class="dica-final">
-  💡 <strong>Dica do PioLinux:</strong> O conceito de pipe é algo fascinante! Quando você utiliza o comando 'ps aux | grep firefox', consegue visualizar apenas os processos relacionados ao Firefox. 
-</div>
-<div class="aviso-final">
-  ⚠️ <strong>Aviso:</strong> comandos avançados como <code>chattr</code> ou <code>e2label</code> podem corromper o sistema se usados errado, não se arrisque..
 
 
 
-</div>
 
 
 
