@@ -135,7 +135,7 @@ function filtrarLinhas(termo) {
     </tr>
   </tbody>
 </table>
-</div>
+
 
 <table class="evergreen-table">
   <thead>
@@ -167,20 +167,6 @@ function filtrarLinhas(termo) {
     </tr>
   </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </section>
 
