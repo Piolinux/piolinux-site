@@ -138,11 +138,5 @@ function filtrarLinhas(termo) {
 </div>
 
 
-<div class="dica-final">
-  💡 <strong>Dicas do Piolinux:</strong>  use 'git log --oneline' para visualizar um histórico organizado – uma ótima maneira de fazer uma revisão rápida.
-  </div>
-<div class="aviso-final">
- ⚠️ <strong>Avisos:</strong>  Atenção: o comando 'git push --force' substitui o repositório remoto. Use com cautela, apenas se você souber exatamente o que está fazendo.
- </div>
 
 </section>
