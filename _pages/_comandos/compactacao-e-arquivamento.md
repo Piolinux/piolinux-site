@@ -81,14 +81,6 @@ function filtrarLinhas(termo) {
 </div>
 
 
-<div class="dica-final">
-  💡 <strong>Dica do Piolinux:</strong> Para economizar espaço e tornar 
-  a gestão dos seus arquivos mais prática, experimente utilizar os 
-  comandos <code> tar -czvf </code> para compactar os seus arquivos e <code>tar 
-  -xzvf</code> para descompactá-los. O detalhe que diferencia esses comandos é o parâmetro -z, que é responsável por executar a compactação no formato gzip.
-</div>
-<div class="aviso-final">
-  ⚠️ <strong>Aviso:</strong> Importante salientar que a extração de arquivos tar provenientes de fontes não confiáveis pode executar scripts maliciosos; portanto, recomenda‑se verificar a origem dos arquivos antes de proceder à descompactação.</div>
 
 
 
