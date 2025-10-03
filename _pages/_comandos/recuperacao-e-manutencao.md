@@ -196,14 +196,6 @@ function filtrarLinhas(termo) {
 
 
 
-<div class="dica-final">
-  💡 <strong>Dica do Piolinux:</strong> Experimente utilizar um Live USB equipado com o gparted para ajustar suas partições sem interferir no seu sistema atual. 
-
-</div>
-<div class="aviso-final">
-  ⚠️ <strong>Aviso:</strong> O comando no terminal <code>dd if=/dev/zero of=/dev/sda</code> irá apagar o disco sem qualquer confirmação. Verifique com cuidado o dispositivo 3 vezes!
-
-</div>
 
 
 
