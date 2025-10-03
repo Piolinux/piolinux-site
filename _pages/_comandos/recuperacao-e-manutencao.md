@@ -138,6 +138,50 @@ function filtrarLinhas(termo) {
 </table>
 </div>
 
+<table class="evergreen-table">
+  <thead>
+    <tr>
+     
+      <th>Comandos Ajustados e Seguros.</th>
+      <th>Propósito dos Comandos.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td data-label="Comando Ajustado e Seguro"><code>du -s /tmp/* | sort -nr</code></td>
+      <td data-label="Propósito do Comando">Listar uso de disco em <code>/tmp</code> de forma estável (sem falhar em nomes com espaço).</td>
+    </tr>
+    <tr>
+      <td data-label="Comando Ajustado e Seguro"><code>sudo logrotate -dv /etc/logrotate.d/app</code></td>
+      <td data-label="Propósito do Comando">Diagnóstico de Logrotate: simula rotação, mostra erros de sintaxe ou permissão (-d = debug, -v = verbose), sem alterar arquivos.</td>
+    </tr>
+    <tr>
+      <td data-label="Comando Ajustado e Seguro"><code>sudo e2fsck -fn /dev/sdXN</code>.</td>
+      <td data-label="Propósito do Comando">Diagnóstico de partição EXT: verifica erros e simula correção (-n = modo somente leitura), sem risco de perda de dados.</td>
+    </tr>
+    <tr>
+      <td data-label="Comando Ajustado e Seguro"><code>sudo fsck -n /dev/sdXN</code></td>
+      <td data-label="Propósito do Comando">Checagem genérica de sistema de arquivos: modo diagnóstico apenas (-n), sem alterações.</td>
+    </tr>
+    <tr>
+      <td data-label="Comando Ajustado e Seguro"><code>sudo shred -vfn 3 -z /dev/sdX</code></td>
+      <td data-label="Propósito do Comando">A eliminação segura de dados consiste na sobrescrição do disco três vezes com informações aleatórias, seguida de uma vez com zeros.Este procedimento torna a recuperação de dados inviável.</td>
+    </tr>
+    <tr>
+      <td data-label="Comando Ajustado e Seguro"><code>sync</code></td>
+      <td data-label="Propósito do Comando">Força escrita imediata de todos os buffers da RAM para o disco - essencial antes de desligar ou remover mídias.</td>
+    </tr>
+    <tr>
+      <td data-label="Comando Ajustado e Seguro"><code>sudo badblocks -v /dev/sdX</code></td>
+      <td data-label="Propósito do Comando">Verificação de setores defeituosos: modo somente leitura (-v = verbose), sem danificar dados.</td>
+    </tr>
+    <tr>
+      <td data-label="Comando Ajustado e Seguro">Sequência: <code>mount /dev/sdXN /mnt</code> → <code>mount --bind /dev /mnt/dev</code> → <code>chroot /mnt</code></td>
+      <td data-label="Propósito do Comando">Recuperação de sistema: entra em ambiente raiz montado (ex: para reinstalar GRUB). É imprescindível realizar a configuração prévia dos diretórios /dev, /proc e /sys.<code>/dev</code>, <code>/proc</code>, <code>/sys</code></td>
+    </tr>
+  </tbody>
+</table>
 
 
 
