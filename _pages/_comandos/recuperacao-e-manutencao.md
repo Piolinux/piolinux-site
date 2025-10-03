@@ -35,14 +35,14 @@ function filtrarLinhas(termo) {
   </thead>
   <tbody>
     <tr>
-      <td data-label="Comando"><code>fsck /dev/sda1</code></td>
-      <td data-label="Descrição">Verifica sistema de arquivos.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="fsck /dev/sda1">📋</button></td>
+      <td data-label="Comando"><code>fsck -n /dev/sda1</code></td>
+      <td data-label="Descrição">Simula a verificação.</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="fsck -n /dev/sda1">📋</button></td>
     </tr>
-    <tr>
+      <tr>
       <td data-label="Comando"><code>e2fsck -f /dev/sda2</code></td>
-      <td data-label="Descrição">Força verificação em ext4.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="e2fsck -f /dev/sda2">📋</button></td>
+      <td data-label="Descrição">Apenas simula a verificação.</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="e2fsck -fn /dev/sdXN">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>mount /dev/sda1 /mnt</code></td>
