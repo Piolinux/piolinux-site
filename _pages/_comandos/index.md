@@ -70,6 +70,37 @@ permalink: /comandos/
   </tbody>
 </table>
 
+<h2>Ferramentas Opcionais (Recomendação de Instalação)</h2>
+<div>Nem todas as distribuições Linux vêm com comandos avançados de diagnóstico por padrão. Para aproveitar ao máximo a biblioteca, sugerimos que você instale as seguintes ferramentas.</div>
+
+
+
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Ferramentas.</th>
+      <th>Descrições.</th>
+      <th>Comando de Instalação (Debian/Ubuntu)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Ferramenta">htop</td>
+      <td data-label="Descrição">Monitoramento avançado de processos (melhor que top).</td>
+      <td data-label="Comando de Instalação (Debian/Ubuntu)"><code>sudo apt install htop</code></td>
+    </tr>
+    <tr>
+      <td data-label="Ferramenta">nmap</td>
+      <td data-label="Descrição">Scanner de portas e diagnóstico de rede.</td>
+      <td data-label="Comando de Instalação (Debian/Ubuntu)"><code>sudo apt install nmap</code></td>
+    </tr>
+    <tr>
+      <td data-label="Ferramenta">tcpdump</td>
+      <td data-label="Descrição">Um analisador de tráfego de rede é uma ferramenta valiosa, frequentemente utilizada para diagnosticar problemas de conectividade e desempenho.</td>
+      <td data-label="Comando de Instalação (Debian/Ubuntu)"><code>sudo apt install tcpdump</code></td>
+    </tr>
+  </tbody>
+</table>
 
 
 
