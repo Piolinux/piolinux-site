@@ -127,46 +127,10 @@ function filtrarLinhas(termo) {
       <td data-label="Descrição">Executa quando carga do sistema está baixa.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="batch">📋</button></td>
     </tr>
-    <tr>
-      <td data-label="Comando"><code>systemctl enable mytimer.timer</code></td>
-      <td data-label="Descrição">Habilita timer do systemd.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="systemctl enable mytimer.timer">📋</button></td>
-    </tr>
-  </tbody>
+   </tbody>
 </table>
 </div>
 
-<table class="evergreen-table">
-  <thead>
-    <tr>
-      <th>Ações.</th>
-      <th>Comandos.</th>
-      <th>Observação Técnicas.</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-label="Ação">Habilitar timer (inicia no boot).</td>
-      <td data-label="Comando"><code>sudo systemctl enable nome.timer</code></td>
-      <td data-label="Observação Técnica">Esse recurso é válido apenas em sistemas que possuem systemd, como Ubuntu, Fedora e Debian.</td>
-    </tr>
-    <tr>
-      <td data-label="Ação">Iniciar timer imediatamente.</td>
-      <td data-label="Comando"><code>sudo systemctl start nome.timer</code></td>
-      <td data-label="Observação Técnica">Agora é a hora de dar conta da tarefa ligada ao timer, sem precisar esperar a agenda.</td>
-    </tr>
-    <tr>
-      <td data-label="Ação">Verifique o status.</td>
-      <td data-label="Comando"><code>sudo systemctl status nome.timer</code></td>
-      <td data-label="Observação Técnica">O sistema indica o seu status atual, incluindo informações sobre a última execução, registros de eventos e a presença de erros.</td>
-    </tr>
-    <tr>
-      <td data-label="Ação">Alternativa em sistemas sem systemd.</td>
-      <td data-label="Comando"><code>crontab -e</code> → adicione linha de agendamento.</td>
-      <td data-label="Observação Técnica">Em Void/Artix/Devuan: use <code>cron</code> ou <code>schedtool</code> + scripts. Ex: <code>0 2 * * * /backup.sh</code></td>
-    </tr>
-  </tbody>
-</table>
  
 
 <table class="evergreen-table">
