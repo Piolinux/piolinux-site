@@ -120,9 +120,9 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="lsof +L1">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>du -sh /tmp/* \| sort -hr</code></td>
+      <td data-label="Comando"><code>du -s /tmp/* | sort -nr</code></td>
       <td data-label="Descrição">Top arquivos grandes em /tmp.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="du -sh /tmp/* \| sort -hr">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="du -s /tmp/* | sort -nr">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>wipe /dev/sda</code></td>
