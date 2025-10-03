@@ -88,13 +88,6 @@ tags: [sysvinit, init, linux, systemd, devuan, slackware, terminal, boot]
   </tbody>
 </table>
 
-<div class="dica-final">
-  💡 <strong>Dica técnica:</strong> Em <strong>Slackware</strong> ou sistemas sem <code>service</code>, use sempre <code>/etc/init.d/nome start</code>. É o método de utilização universal do SysVinit.
-</div>
-<div class="aviso-final">
-  ⚠️ <strong>Aviso:</strong> SysVinit <strong>não tem <code>systemctl</code></strong>. Se você tentar usar, vai dar erro.<br>
-  ✅ <strong>SysVinit não é obsoleto * é minimalista.</strong> Domine-o, e você entende o coração do Unix.
-</div>
 </section>
 
 
