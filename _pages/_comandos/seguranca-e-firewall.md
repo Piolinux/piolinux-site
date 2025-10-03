@@ -142,12 +142,6 @@ function filtrarLinhas(termo) {
  
 
 
-<div class="dica-final">
-  💡 <strong>Dicas do Piolinux:</strong> <code>ufw enable</code> ativa o firewall em 1 segundo — ideal para iniciantes.
-  </div>
-<div class="aviso-final">
-  ⚠️ <strong>Avisos:</strong>Bloquear a porta 22 sem alternativa trava seu acesso SSH. Sempre teste regras com cuidado.
-</div>
 
 
 
