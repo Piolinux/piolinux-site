@@ -142,15 +142,6 @@ function filtrarLinhas(termo) {
 
 
 
-<div class="dica-final">
-  💡 <strong>Dicas do Piolinux:</strong><code>htop</code> é melhor que <code>top</code> — mostra cores, árvore de processos e permite matar com F9..
-</div>
-<div class="aviso-final">
-  ⚠️ <strong>Avisos:</strong>Logs podem conter senhas ou dados sensíveis. Tenha atenção ao divulgar informações sem antes limpá-las.
-
-</div>
-
-
 
 
 
