@@ -58,12 +58,7 @@ function filtrarLinhas(termo) {
       <td data-label="Descrição">Cria atalho.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="alias ll=&#39;ls -la&#39;">📋</button></td>
     </tr>
-    <tr>
-      <td data-label="Comando"><code>\\command</code></td>
-      <td data-label="Descrição">Ignora alias e executa comando original.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="\\command">📋</button></td>
-    </tr>
-    <tr>
+     <tr>
       <td data-label="Comando"><code>watch -n 1 'df -h'</code></td>
       <td data-label="Descrição">Executa comando a cada 1s.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="watch -n 1 &#39;df -h&#39;">📋</button></td>
