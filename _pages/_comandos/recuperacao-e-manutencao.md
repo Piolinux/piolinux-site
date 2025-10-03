@@ -125,9 +125,9 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="du -s /tmp/* | sort -nr">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>wipe /dev/sda</code></td>
-      <td data-label="Descrição">Apaga disco com segurança.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="wipe /dev/sda">📋</button></td>
+      <td data-label="Comando"><code> shred -vfn 3 -z /dev/sda</code></td>
+      <td data-label="Descrição">Use apenas em discos que você pretende descartar ou vender.</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="shred -vfn 3 -z /dev/sda">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>cat /var/lib/logrotate/status</code></td>
