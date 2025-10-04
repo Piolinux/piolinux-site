@@ -11,7 +11,6 @@ permalink: /comparativo-terminais/
 
 
 
-{% include toc.html %}
 
 
 <section class="post-content">
