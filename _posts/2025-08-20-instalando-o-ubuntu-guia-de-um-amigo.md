@@ -9,7 +9,7 @@ description: "Guia passo a passo para instalar o Ubuntu de forma simples e segur
 permalink: /instalar-ubuntu-guia-iniciantes/
 ---
 
-{% include toc.html %}
+
 
 
 
