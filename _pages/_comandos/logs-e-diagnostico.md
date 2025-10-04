@@ -94,14 +94,14 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="dmidecode">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>smartctl -a /dev/sdx</code></td>
+      <td data-label="Comando"><code>smartctl -a /dev/SEU_DISCO</code></td>
       <td data-label="Descrição">Diagnóstico de disco (S.M.A.R.T.)</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="smartctl -a /dev/sda">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="smartctl -a /dev/SEU_DISCO">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>badblocks -v /dev/sdX</code></td>
+      <td data-label="Comando"><code>badblocks -v /dev/SEU_DISCO</code></td>
       <td data-label="Descrição">Verifica blocos ruins.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="badblocks -v /dev/sda">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="badblocks -v /dev/SEU_DISCO">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>strace -p 1234</code></td>
