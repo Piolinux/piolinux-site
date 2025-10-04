@@ -19,7 +19,7 @@ tags:
 permalink: /distros-linux-tabela/
 ---
 
-{% include toc.html %}
+
 
 <section class="post-content">
 
