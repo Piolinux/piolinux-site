@@ -9,7 +9,6 @@ layout: default
 ---
 
 
-{% include toc.html %}
 
 
 
