@@ -25,7 +25,7 @@ tags: [disco, particionamento, mkfs, fstab, linux, sysadmin, evergreen]
     <tr>
       <td data-label="Etapa">1. Listar discos.</td>
       <td data-label="Comando"><code>lsblk</code><br><code>sudo fdisk -l</code></td>
-      <td data-label="Observação Crítica">Identifique o disco (ex: <code>/dev/sdb</code>). Nunca formate <code>/dev/sda</code> sem confirmação.</td>
+      <td data-label="Observação Crítica">Identifique o disco (ex: <code>/dev/SEU_DISCO</code>). Nunca formate <code>/dev/sda</code> sem confirmação.</td>
     </tr>
     <tr>
       <td data-label="Etapa">2. Criar partição (MBR).</td>
@@ -39,7 +39,7 @@ tags: [disco, particionamento, mkfs, fstab, linux, sysadmin, evergreen]
     </tr>
     <tr>
       <td data-label="Etapa">4. Montar temporariamente.</td>
-      <td data-label="Comando"><code>sudo mkdir -p /mnt/disco</code><br><code>sudo mount /dev/sdX1 /mnt/disco</code></td>
+      <td data-label="Comando"><code>sudo mkdir -p /mnt/disco</code><br><code>sudo mount /dev/SEU_DISCO /mnt/disco</code></td>
       <td data-label="Observação Crítica">Verifique com <code>df -h</code> ou <code>ls /mnt/disco</code></td>
     </tr>
     <tr>
