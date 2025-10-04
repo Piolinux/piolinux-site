@@ -10,7 +10,7 @@ permalink: /gerador-slug-jekyll/
 
 
 
-{% include toc.html %}
+
 
 
 <section class="post-content">
