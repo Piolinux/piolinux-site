@@ -8,7 +8,6 @@ tags: [http, https, tls, ssl, segurança, rede]
 permalink: /http-vs-https/
 ---
 
-{% include toc.html %}
 
 
 <section class="post-content">
