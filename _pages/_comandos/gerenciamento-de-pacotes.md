@@ -41,17 +41,17 @@ function filtrarLinhas(termo) {
      <tr>
   <td data-label="Comando"><code>sudo apt upgrade</code></td>
   <td data-label="Descrição">Atualiza pacotes instalados.</td>
-  <td data-label="Ação">📋</td><button class="copy-btn" data-command="sudo apt upgrade">📋</button></td>
+  <td data-label="Ação"><button class="copy-btn" data-command="sudo apt upgrade">📋</button></td>
 </tr>
     <tr>
   <td data-label="Comando"><code>sudo apt full-upgrade</code></td>
   <td data-label="Descrição">Atualiza com possíveis remoções de pacotes. ⚠️ Pode quebrar dependências.</td>
-  <td data-label="Ação">📋</td><button class="copy-btn" data-command="sudo apt full- upgrade">📋</button></td>
+  <td data-label="Ação"><button class="copy-btn" data-command="sudo apt full- upgrade">📋</button></td>
 </tr>
 <tr>
   <td data-label="Comando"><code>sudo apt autoremove</code></td>
   <td data-label="Descrição">Remove pacotes órfãos. ⚠️ Confirme se não remove algo necessário.</td>
-  <td data-label="Ação">📋</td><button class="copy-btn" data-command="sudo apt autoremove">📋</button></td>
+ <td data-label="Ação"><button class="copy-btn" data-command="sudo apt autoremove">📋</button></td>
 </tr>
     <tr>
       <td data-label="Comando"><code>sudo apt install curl</code></td>
@@ -159,11 +159,13 @@ function filtrarLinhas(termo) {
       <td data-label="Descrição">Sincroniza repositórios.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo pacman -Sy">📋</button></td>
     </tr>
-    <tr>
-      <td data-label="Comando"><code>sudo pacman -Syu</code></td>
-      <td data-label="Descrição">Atualiza sistema completo.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo pacman -Syu">📋</button></td>
-    </tr>
+  <tr>
+  <td data-label="Comando"><code>sudo pacman -Syu</code></td>
+  <td data-label="Descrição">Atualiza todo o sistema. ⚠️ Faça só em ambiente estável. Leia <code>/usr/share/libalpm/hooks/</code> após atualizar.</td>
+  <td data-label="Ação"><button class="copy-btn" data-command="sudo pacman -Syu">📋</button></td>
+   </tr>
+
+    
     <tr>
       <td data-label="Comando"><code>sudo pacman -S vim</code></td>
       <td data-label="Descrição">Instala pacote oficial.</td>
