@@ -54,10 +54,11 @@ tags: [devuan, linux, sysvinit, guia, instalação, sem_systemd]
     <tr>
       <td data-label="Etapa">Criar Live USB</td>
       <td data-label="Ação Técnica">
-        <code>sudo dd if=devuan.iso of=/dev/sdX bs=4M status=progress oflag=sync</code>
-        <button class="copy-btn" data-command="sudo dd if=devuan.iso of=/dev/sdX bs=4M status=progress oflag=sync">📋 Copiar</button>
-      </td>
-      <td data-label="Observação">Substitua <code>sdX</code> pelo dispositivo correto. Verifique com <code>lsblk</code>. <strong>Não use em sistemas com LVM sem backup.</strong></td>
+        <tr>
+  <td data-label="Comando"><code>sudo dd if=devuan.iso of=/dev/SEU_DISCO bs=4M status=progress oflag=sync</code></td>
+  <td data-label="Descrição">Grava imagem ISO em USB/SD para boot.</td>
+  <td data-label="Aviso Técnico">⚠️ Substitua <code>SEU_DISCO</code> por um dispositivo real (ex: <code>sdb</code>). Use <code>lsblk</code> para identificar. Nunca use o disco do sistema (<code>sda</code>).</td>
+</tr>
     </tr>
     <tr>
       <td data-label="Etapa">Init System</td>
