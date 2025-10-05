@@ -46,7 +46,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <code>rsync -avz -e ssh /home/user/ user@backup:/backup/</code>
         <button class="copy-btn" data-command="rsync -avz -e ssh /home/user/ user@backup:/backup/">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Conecta-se a um servidor remoto usando SSH para realizar a sincronização. 💡 Aviso: Teste com --dry-run antes em ambientes críticos.</td>
+      <td data-label="O que faz">Conecta-se a um servidor remoto usando SSH para realizar a sincronização.  Aviso: Teste com --dry-run antes em ambientes críticos.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>awk</code></td>
@@ -82,7 +82,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <code>chmod -R 755 /var/www/html</code>
         <button class="copy-btn" data-command="chmod -R 755 /var/www/html">📋 Copiar</button>
       </td>
-      <td data-label="Observação Técnica">Define permissões para site web.(755 pastas, 644 arquivos)💡 Aviso:
+      <td data-label="Observação Técnica">Define permissões para site web.(755 pastas, 644 arquivos) Aviso:
 "Use com cuidado: aplica 755 a arquivos também. Prefira find para controle fino." 
 
 </td>
