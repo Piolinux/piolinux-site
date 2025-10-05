@@ -15,32 +15,33 @@ permalink: /instalar-ubuntu-guia-iniciantes/
 
 
 
-  <section class="post-content">
+ 
 
+<section class="post-content">
 
-<table class="evergreen-table">
+  <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Etapa</th>
-      <th>Ação Técnica</th>
-      <th>Observação</th>
+      <th>Etapas.</th>
+      <th>Ações Técnica.</th>
+      <th>Observações.</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td data-label="Etapa">Baixar ISO</td>
       <td data-label="Ação Técnica">
-        <a href="https://releases.ubuntu.com/" target="_blank" rel="noopener noreferrer">releases.ubuntu.com</a> (LTS recomendado)
+        <a href="https://releases.ubuntu.com/" target="_blank" rel="noopener noreferrer">releases.ubuntu.com</a>
       </td>
-      <td data-label="Observação">Prefira **LTS** para estabilidade (22.04 ou 24.04)</td>
+      <td data-label="Observação">Prefira **LTS** (22.04 ou 24.04) para suporte de 10 anos. Interim releases duram só 9 meses.</td>
     </tr>
     <tr>
       <td data-label="Etapa">Criar Live USB</td>
       <td data-label="Ação Técnica">
         <code>sudo dd if=ubuntu-24.04.iso of=/dev/SEU_DISCO bs=4M status=progress oflag=sync</code>
-       <button class="copy-btn" data-command="sudo dd if=ubuntu-24.04.iso of=/dev/SEU_DISCO bs=4M status=progress oflag=sync">📋 Copiar</button>
-        <td data-label="Aviso Técnico">⚠️ Substitua <code>SEU_DISCO</code> por um dispositivo real (ex: <code>sdb</code>). Use <code>lsblk</code> para identificar. Nunca use o disco do sistema (<code>sda</code>).</td>
-      <td data-label="Observação">Substitua <code>sdX</code> pelo dispositivo correto (ex: <code>sdb</code>). Use <code>lsblk</code> para identificar.</td>
+        <button class="copy-btn" data-command="sudo dd if=ubuntu-24.04.iso of=/dev/SEU_DISCO bs=4M status=progress oflag=sync">📋 Copiar</button>
+      </td>
+      <td data-label="Observação">⚠️ Substitua <code>SEU_DISCO</code> por um dispositivo real (ex: <code>sdb</code>). Identifique com <code>lsblk</code>. Nunca use <code>/dev/sda</code>.</td>
     </tr>
     <tr>
       <td data-label="Etapa">Particionamento (modo avançado)</td>
@@ -48,10 +49,10 @@ permalink: /instalar-ubuntu-guia-iniciantes/
         <ul>
           <li><code>/</code>: 25–50 GB (ext4)</li>
           <li><code>/home</code>: resto do disco (opcional, ext4)</li>
-          <li><code>swap</code>: tamanho da RAM (ou 0 se ≥8 GB e hibernação não usada)</li>
+          <li><code>swap</code>: igual à RAM (ou 0 se ≥8 GB e sem hibernação)</li>
         </ul>
       </td>
-      <td data-label="Observação">Evite LVM se não souber usá-lo. Desmarque “Formatar /home” se reutilizando partição.</td>
+      <td data-label="Observação">Evite LVM se não souber gerenciá-lo. Se reutilizar <code>/home</code>, **desmarque "Formatar"** durante a instalação.</td>
     </tr>
     <tr>
       <td data-label="Etapa">Pós-instalação essencial</td>
@@ -59,19 +60,21 @@ permalink: /instalar-ubuntu-guia-iniciantes/
         <code>sudo apt update && sudo apt full-upgrade -y && sudo apt install git curl htop neofetch</code>
         <button class="copy-btn" data-command="sudo apt update && sudo apt full-upgrade -y && sudo apt install git curl htop neofetch">📋 Copiar</button>
       </td>
-      <td data-label="Observação">Remova o Snap se não for usar: <code>sudo apt purge snapd</code></td>
+      <td data-label="Observação">Para remover Snap: <code>sudo apt purge -y snapd && rm -rf ~/snap</code></td>
     </tr>
     <tr>
       <td data-label="Etapa">Kernel atual</td>
       <td data-label="Ação Técnica">
-        <code>uname -r</code> → 6.8.x (24.04 LTS)
+        <code>uname -r</code>
       </td>
-      <td data-label="Observação">Ubuntu 24.04 usa kernel 6.8 com suporte a Rust, Wi-Fi 7 e melhorias no Btrfs.</td>
+      <td data-label="Observação">Ubuntu 24.04 LTS usa kernel **6.8.x**, com suporte a Wi-Fi 7, Rust no kernel e melhorias no Btrfs.</td>
     </tr>
   </tbody>
 </table>
-
 </section>
+
+
+
 
 
 
