@@ -13,55 +13,62 @@ permalink: /aplicativos-graficos-compactacao-linux/
 
 <section>
 
+p class="notice" style="background: #008000; padding: 1rem; border-left: 4px solid #ffc107; margin: 1.5rem 0;">
+   <strong>Para garantir sua segurança em momentos críticos:</strong> os comandos manuais de compactação (como tar e gzip) foram desativados. Eles podem ser complicados, principalmente ao lidar com caminhos absolutos, e há o risco de apagar pastas importantes por acidente. Em situações de resgate, opte por usar interfaces gráficas — elas são mais seguras e ajudam a evitar erros que não podem ser desfeitos.
+</p>
+
+
+
 <div class="table-container">
   <table class="evergreen-table">
     <thead>
       <tr>
         <th>Aplicativos.</th>
-        <th>Plataformas.</th>
-        <th>Formatos Suportados.</th>
-        <th>Observações Técnica.</th>
+        <th>Métodos de Instalação.</th>
+        <th>Compatível com.</th>
+        <th>Ação.</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td data-label="Aplicativo">PeaZip</td>
-        <td data-label="Plataformas">Linux, Windows, macOS.</td>
-        <td data-label="Formatos Suportados">ZIP, 7Z, TAR, GZ, XZ, ZST, RAR (leitura).</td>
-        <td data-label="Observação Técnica">Open-source, sem anúncios, interface clara. Ideal para resgate.</td>
+        <td data-label="Aplicativo">PeaZip (recomendado)</td>
+        <td data-label="Método de Instalação">Pacote .deb oficial.</td>
+        <td data-label="Compatível com">Ubuntu, Debian, Linux Mint, Kali.</td>
+        <td data-label="Ação">
+          <button class="copy-btn" data-command="wget https://github.com/peazip/PeaZip/releases/download/10.6.1/peazip_10.6.1.LINUX.Qt6-64bit.deb && sudo dpkg -i peazip_10.6.1.LINUX.Qt6-64bit.deb && sudo apt install -f">📋</button>
+        </td>
       </tr>
       <tr>
-        <td data-label="Aplicativo">File Roller.</td>
-        <td data-label="Plataformas">Linux (GNOME/Ubuntu).</td>
-        <td data-label="Formatos Suportados">ZIP, TAR, GZ, 7Z, XZ</td>
-        <td data-label="Observação Técnica">Pré-instalado no Ubuntu. Acesso por clique direito → "Compactar".</td>
+        <td data-label="Aplicativo">PeaZip.</td>
+        <td data-label="Método de Instalação">Pacote .rpm oficial.</td>
+        <td data-label="Compatível com">Fedora, CentOS, RHEL, openSUSE.</td>
+        <td data-label="Ação">
+          <button class="copy-btn" data-command="wget https://github.com/peazip/PeaZip/releases/download/10.6.1/peazip-10.6.1.LINUX.Qt6-64bit.rpm && sudo dnf install ./peazip-10.6.1.LINUX.Qt6-64bit.rpm">📋</button>
+        </td>
       </tr>
       <tr>
-        <td data-label="Aplicativo">Ark.</td>
-        <td data-label="Plataformas">Linux (KDE).</td>
-        <td data-label="Formatos Suportados">ZIP, TAR, 7Z, RAR, GZ.</td>
-        <td data-label="Observação Técnica">Integrado ao Dolphin. Seguro e visual.</td>
+        <td data-label="Aplicativo">PeaZip.</td>
+        <td data-label="Método de Instalação">Flatpak (universal)</td>
+        <td data-label="Compatível com">Qualquer distro com Flatpak.</td>
+        <td data-label="Ação">
+          <button class="copy-btn" data-command="flatpak install flathub io.github.peazip.PeaZip">📋</button>
+        </td>
       </tr>
       <tr>
-        <td data-label="Aplicativo">7-Zip (GUI)</td>
-        <td data-label="Plataformas">Windows, Linux (via Wine ou versão nativa)</td>
-        <td data-label="Formatos Suportados">7Z, ZIP, TAR, GZ, RAR.</td>
-        <td data-label="Observação Técnica">Versão Windows é padrão. No Linux, prefira PeaZip ou File Roller.</td>
+        <td data-label="Aplicativo">File Roller</td>
+        <td data-label="Método de Instalação">Pré-instalado</td>
+        <td data-label="Compatível com">Ubuntu, GNOME</td>
+        <td data-label="Ação">Já disponível</td>
       </tr>
       <tr>
-        <td data-label="Aplicativo">Xarchiver</td>
-        <td data-label="Plataformas">Linux (XFCE, lightweight)</td>
-        <td data-label="Formatos Suportados">ZIP, TAR, 7Z, RAR, GZ.</td>
-        <td data-label="Observação Técnica">Leve, ideal para live USBs com pouca RAM (ex: AntiX, MX Linux).</td>
+        <td data-label="Aplicativo">Ark</td>
+        <td data-label="Método de Instalação">Pré-instalado</td>
+        <td data-label="Compatível com">KDE Plasma</td>
+        <td data-label="Ação">Já disponível</td>
       </tr>
     </tbody>
   </table>
 </div>
-
-
-
-
-
 
 </section>
 
