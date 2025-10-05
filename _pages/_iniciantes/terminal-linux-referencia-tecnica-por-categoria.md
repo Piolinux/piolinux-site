@@ -195,38 +195,6 @@ tags: [dicas, linux, terminal, bash, zsh, ohmyzsh, iterm2, produtividade]
   </tbody>
 </table>
 
-<h3 id="compactacao">Compactação</h3>
-<table class="evergreen-table">
-  <thead>
-    <tr>
-      <th>Tarefa</th>
-      <th>Comando</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-label="Tarefa">Compactar para .tar.gz</td>
-      <td data-label="Comando">
-        <code>tar -czvf backup.tar.gz pasta/</code>
-        <button class="copy-btn" data-command="tar -czvf backup.tar.gz pasta/">📋 Copiar</button>
-      </td>
-    </tr>
-    <tr>
-      <td data-label="Tarefa">Descompactar .tar.gz</td>
-      <td data-label="Comando">
-        <code>tar -xzvf backup.tar.gz</code>
-        <button class="copy-btn" data-command="tar -xzvf backup.tar.gz">📋 Copiar</button>
-      </td>
-    </tr>
-    <tr>
-      <td data-label="Tarefa">Compactar para .zip</td>
-      <td data-label="Comando">
-        <code>zip -r arquivo.zip pasta/</code>
-        <button class="copy-btn" data-command="zip -r arquivo.zip pasta/">📋 Copiar</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <h3 id="atalhos">Atalhos Úteis</h3>
 <table class="evergreen-table">
