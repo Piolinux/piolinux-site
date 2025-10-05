@@ -62,7 +62,54 @@ tags: [backup, sysadmin, devops, linux, tar, rsync, dd, mysqldump]
   </p>
 </div>
 
-
+<div class="table-container">
+  <table class="evergreen-table">
+    <thead>
+      <tr>
+        <th>Tipos de Backups.</th>
+        <th>Comandos Seguros.</th>
+        <th>Avisos Técnicos.</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Tipo de Backup">tar (compactação)</td>
+        <td data-label="Comando Seguro"><code>tar -czvf destino.tar.gz -C /origem .</code></td>
+        <td data-label="Aviso Técnico">Use <code>--exclude="*.log"</code> para ignorar logs. O <code>-C</code> evita caminhos absolutos no arquivo.</td>
+      </tr>
+      <tr>
+        <td data-label="Tipo de Backup">rsync (sincronização)</td>
+        <td data-label="Comando Seguro"><code>rsync -avz --progress /origem/ /destino/</code></td>
+        <td data-label="Aviso Técnico">Realize testes com<code>--dry-run</code> primeiro para evitar sobrescrita acidental.</td>
+      </tr>
+      <tr>
+        <td data-label="Tipo de Backup">dd (imagem bit-a-bit)</td>
+        <td data-label="Comando Seguro"><code>dd if=/dev/origem of=/dev/destino bs=4M status=progress oflag=sync</code></td>
+        <td data-label="Aviso Técnico"> Atenção: Um pequeno deslize na digitação pode resultar na perda definitiva de seus dados. Nunca utilize em <code>/dev/sda</code> sem backup. Verifique as fontes e os destinos usando o comando <code>lsblk</code>.</td>
+      </tr>
+      <tr>
+        <td data-label="Tipo de Backup">mysqldump (banco de dados)</td>
+        <td data-label="Comando Seguro"><code>mysqldump -u usuario -p banco > backup.sql</code></td>
+        <td data-label="Aviso Técnico">N&atilde;o utilize senhas no comando. Use <code>~/.my.cnf</code> com permissões <code>600</code> para autenticação segura.</td>
+      </tr>
+      <tr>
+  <td data-label="Tipo de Backup">mysqldump (banco de dados)</td>
+  <td data-label="Comando Seguro">
+    <code>mysqldump --single-transaction banco | gzip > banco_$(date +%Y%m%d).sql.gz</code>
+  </td>
+  <td data-label="Aviso Técnico">
+     Use <code>~/.my.cnf</code> (600) para senhas.  
+    ️ Só funciona com InnoDB.  
+     Verifique se o .gz não está vazio após o backup.
+  </td>
+</tr>
+      
+      
+      
+    </tbody>
+  </table>
+</div>
+  
 
   
 
