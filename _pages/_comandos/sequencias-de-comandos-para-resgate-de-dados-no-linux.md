@@ -11,7 +11,7 @@ permalink: /sequencias-comandos-resgate-linux/
 
 
 
-
+<section>
 
 <div class="table-container">
   <table class="evergreen-table">
@@ -87,3 +87,7 @@ permalink: /sequencias-comandos-resgate-linux/
     </tbody>
   </table>
 </div>
+
+</section>
+
+
