@@ -40,13 +40,13 @@ permalink: /sequencias-comandos-resgate-linux/
         </td>
         <td data-label="Aviso Crítico">Só confirme "Write" após verificar que as partições detectadas estão corretas.</td>
       </tr>
- 
-  <tr>
-        <td data-label="Cenário de Emergência">Arquivos deletados (fotos, docs, vídeos)</td>
-        <td data-label="Sequência de Comandos">
-          <code>photorec</code><br>
-          (selecionar disco → escolher sistema de arquivos → selecionar tipos de arquivo → salvar em outro disco)
-        </td>
+   <tr>      
+     <td data-label="Cenário de Emergência">Arquivos deletados (fotos, docs, vídeos)</td>
+     <td data-label="Sequência de Comandos">
+     <code>photorec</code><br>
+      (selecionar disco → escolher sistema de arquivos → selecionar tipos de arquivo → salvar em outro disco)
+      </td>
+        <td data-label="Aviso Crítico">Nunca salve os arquivos recuperados na mesma partição — sobrescreve dados ainda recuperáveis.</td>
    </tr>
  <tr>
   <td data-label="Cenário de Emergência">Sistema não inicializa (GRUB quebrado)</td>
