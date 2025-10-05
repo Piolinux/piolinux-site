@@ -31,7 +31,7 @@ permalink: /comandos/
   <li><a href="/sistemas-de-inicializacao-sysv/">⚡ Sistemas de Inicialização sysv</a></li>
   <li><a href="/openrc-sysvinit/">⚡ Sistemas de Inicialização Sysv e Openrc </a></li>
   <li><a href="/logs-e-diagnostico/">📋 Logs e Diagnóstico</a></li>
-  <li><a href="/scripts-bash-comandos/">📜 Scripts Bash</a></li>
+ <li><a href="/sequencias-comandos-resgate-linux/">📜 Comandos de Resgate</a></li>
   <li><a href="/recuperacao-e-manutencao/">🔧 Recuperação e Manutenção</a></li>
   <li><a href="/comandos-avancados-e-dicas/">🚀 Comandos Avançados e Dicas</a></li>
 </ul>
