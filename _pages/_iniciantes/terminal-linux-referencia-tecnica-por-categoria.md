@@ -196,6 +196,52 @@ tags: [dicas, linux, terminal, bash, zsh, ohmyzsh, iterm2, produtividade]
 </table>
 
 
+<h3 id="rede">Compactadores.</h3>
+  <table class="evergreen-table">
+    <thead>
+      <tr>
+        <th>Aplicativo</th>
+        <th>Sistema</th>
+        <th>Como Acessar</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Aplicativo">PeaZip.</td>
+        <td data-label="Sistema">Linux, Windows.</td>
+        <td data-label="Como Acessar">Instale via .deb ou Flatpak</td>
+        <td data-label="Ação">
+          <button class="copy-btn" data-command="sudo apt install peazip">📋</button>
+        </td>
+      </tr>
+      <tr>
+        <td data-label="Aplicativo">File Roller.</td>
+        <td data-label="Sistema">Ubuntu, Debian, GNOME.</td>
+        <td data-label="Como Acessar">Clique direito → "Compactar"</td>
+        <td data-label="Ação">Pré-instalado</td>
+      </tr>
+      <tr>
+        <td data-label="Aplicativo">Ark.</td>
+        <td data-label="Sistema">KDE Plasma.</td>
+        <td data-label="Como Acessar">Clique direito → "Compactar com Ark"</td>
+        <td data-label="Ação">Pré-instalado</td>
+      </tr>
+      <tr>
+        <td data-label="Aplicativo">Xarchiver.</td>
+        <td data-label="Sistema">XFCE, MX Linux, AntiX.</td>
+        <td data-label="Como Acessar">Menu → Ferramentas → Xarchiver.</td>
+        <td data-label="Ação">
+          <button class="copy-btn" data-command="sudo apt install xarchiver">📋</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
 <h3 id="atalhos">Atalhos Úteis</h3>
 <table class="evergreen-table">
   <thead>
