@@ -9,21 +9,7 @@ permalink: /aplicativos-graficos-compactacao-linux/
 ---
 
 
-<section>
 
-
-
-<h2>🖥 Comandos Gerais.</h2>
-
-<input type="text" oninput="filtrarLinhas(this.value)" placeholder="Filtrar comandos...">
-<script>
-function filtrarLinhas(termo) {
-  const linhas = document.querySelectorAll('tbody tr');
-  linhas.forEach(linha => {
-    linha.style.display = linha.textContent.toLowerCase().includes(termo.toLowerCase()) ? '' : 'none';
-  });
-}
-</script>
 
 
 
