@@ -35,28 +35,15 @@ function filtrarLinhas(termo) {
   </thead>
   <tbody>
     <tr>
-      <td data-label="Comando"><code>tar -cvf arq.tar pasta/</code></td>
-      <td data-label="Descrição">Cria .tar (use caminho relativo).</td>
-      <td data-label="Aviso Técnico">Nunca execute dentro de <code>pasta/</code>. Use <code>-C</code> para evitar recursão.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="tar -cvf arq.tar pasta/">📋</button></td>
-    </tr>
+  <td data-label="Ferramenta">PeaZip</td>
+  <td data-label="Propósito">Compactar ou extrair arquivos com interface gráfica segura.</td>
+  <td data-label="Aviso Técnico">Disponível para Linux, Windows e macOS. Evita riscos de comandos manuais com caminhos absolutos.</td>
+</tr>
     <tr>
-      <td data-label="Comando"><code>tar -xvf arq.tar</code></td>
-      <td data-label="Descrição">Extrai .tar no diretório atual.</td>
-      <td data-label="Aviso Técnico">Se o tar foi criado com caminho absoluto (<code>/pasta/</code>), extrai em <code>/pasta/</code> — cuidado com root!</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="tar -xvf arq.tar">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>tar -czvf arq.tar.gz pasta/</code></td>
-      <td data-label="Descrição">Cria .tar.gz (gzip).</td>
-      <td data-label="Aviso Técnico">Mesmo risco de caminho absoluto. Prefira: <code>tar -czvf arq.tar.gz -C /origem .</code></td>
-      <td data-label="Ação"><button class="copy-btn" data-command="tar -czvf arq.tar.gz pasta/">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>gzip arquivo.txt</code></td>
-      <td data-label="Descrição">Comprime em .gz (apaga original).</td>
-      <td data-label="Aviso Técnico">Use <code>gzip -k</code> para manter o original.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="gzip arquivo.txt">📋</button></td>
+  <td data-label="Ferramenta">Interface gráfica (PeaZip, File Roller, Ark)</td>
+  <td data-label="Propósito">Compactação segura sem risco de sobrescrita acidental.</td>
+  <td data-label="Aviso Técnico">Prefira GUIs em emergência. Comandos como <code>tar</code> exigem cuidado com caminhos absolutos.</td>
+</tr>
     </tr>
     <tr>
       <td data-label="Comando"><code>7z a arq.7z pasta/</code></td>
@@ -70,13 +57,7 @@ function filtrarLinhas(termo) {
       <td data-label="Aviso Técnico">Requer <code>sudo apt install zstd</code>.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="tar -I zstd -cvf arq.tar.zst pasta/">📋</button></td>
     </tr>
-    <tr>
-      <td data-label="Comando"><code>tar -xvf arq.tar --directory=/destino</code></td>
-      <td data-label="Descrição">Extrai em diretório específico.</td>
-      <td data-label="Aviso Técnico">Diretório <code>/destino</code> deve existir.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="tar -xvf arq.tar --directory=/destino">📋</button></td>
-    </tr>
-  </tbody>
+   </tbody>
 </table>
 </div>
 
