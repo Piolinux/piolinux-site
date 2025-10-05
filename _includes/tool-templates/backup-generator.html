@@ -10,9 +10,10 @@ function generateBackupCommand() {
     switch (type) {
         case 'tar':
             if (source && dest) {
-                command = `tar -czvf ${dest} ${source}`;
-                explanation = `# -c: criar arquivo | -z: gzip | -v: verbose | -f: nome do arquivo`;
-                warning = '💡 Dica: Adicione --exclude="*.log" para ignorar logs.';
+                // Usa caminho relativo explícito para evitar risco
+                command = `tar -czvf ${dest} -C ${source} .`;
+                explanation = `# -C: muda para diretório antes de empacotar (evita caminhos absolutos)`;
+                warning = '💡 Dica: Use --exclude="*.log" para ignorar logs.';
             } else {
                 command = '❌ Preencha origem e destino';
             }
@@ -20,35 +21,38 @@ function generateBackupCommand() {
         case 'rsync':
             if (source && dest) {
                 command = `rsync -avz --progress ${source}/ ${dest}/`;
-                explanation = `# -a: archive (preserva permissões) | -v: verbose | -z: compressão`;
-                warning = '⚠️ Teste com --dry-run primeiro!';
+                explanation = `# -a: modo archive (preserva permissões, links, etc.) | -v: verbose | -z: compressão durante transferência`;
+                warning = '⚠️ Teste com <code>--dry-run</code> primeiro para evitar sobrescrita acidental.';
             } else {
                 command = '❌ Preencha origem e destino';
             }
             break;
         case 'dd':
             if (source && dest) {
-                command = `dd if=${source} of=${dest} bs=4M status=progress`;
-                explanation = `# if: input file | of: output file | bs: block size | status: progresso`;
-                warning = '🚨 CUIDADO: dd apaga dados se usado incorretamente!';
+                // Adiciona aviso explícito no próprio comando
+                command = `# ⚠️ CONFIRME: ${source} é a fonte e ${dest} é o destino!\ndd if=${source} of=${dest} bs=4M status=progress oflag=sync`;
+                explanation = `# if: arquivo de entrada | of: arquivo de saída | bs: tamanho do bloco | oflag=sync: escrita física garantida`;
+                warning = '🚨 PERIGO: Um erro de digitação pode apagar dados permanentemente. Nunca use em discos do sistema sem backup.';
             } else {
                 command = '❌ Preencha origem e destino';
             }
             break;
         case 'mysqldump':
             if (dest) {
-                command = `mysqldump -u [usuario] -p [banco] > ${dest}`;
-                explanation = `# -u: usuário | -p: pede senha | >: redireciona saída`;
-                warning = '🔐 Nunca exponha senhas: use ~/.my.cnf para autenticação segura.';
+                command = `mysqldump -u usuario -p banco > ${dest}`;
+                explanation = `# Substitua "usuario" e "banco" pelos seus valores reais`;
+                warning = '🔐 Segurança: Nunca coloque senhas no comando. Use <code>~/.my.cnf</code> com permissões 600.';
             } else {
                 command = '❌ Preencha destino';
             }
             break;
+        default:
+            command = '❌ Selecione um tipo de backup';
     }
 
     // Atualiza interface
     document.getElementById('backupResult').innerHTML = `
-        <div style="font-family: monospace; font-size: 1.1em; color: #8bc34a; margin-bottom: 8px;">
+        <div style="font-family: monospace; font-size: 1.1em; color: #8bc34a; margin-bottom: 8px; white-space: pre-wrap;">
             ${command}
         </div>
         ${explanation ? `<div style="font-size: 0.9em; color: #aaa; margin-bottom: 8px;">${explanation}</div>` : ''}
@@ -57,13 +61,25 @@ function generateBackupCommand() {
 }
 
 function copyBackupCommand() {
-    const text = document.getElementById('backupResult').innerText;
-    if (text && !text.includes('❌')) {
-        navigator.clipboard.writeText(text.split('\n')[0]).then(() => {
+    const resultDiv = document.getElementById('backupResult');
+    const fullText = resultDiv.innerText;
+    
+    if (fullText && !fullText.includes('❌') && !fullText.includes('⚠️ CONFIRME')) {
+        // Extrai só a linha do comando real (ignora comentários de aviso)
+        const lines = fullText.split('\n');
+        let cmdLine = lines[0];
+        if (lines.length > 1 && !lines[0].startsWith('dd')) {
+            cmdLine = lines[1]; // para dd, a linha do comando é a segunda
+        }
+        navigator.clipboard.writeText(cmdLine).then(() => {
             alert('✅ Comando copiado!');
         }).catch(() => {
             alert('❌ Falha ao copiar. Tente manualmente.');
         });
+    } else if (fullText.includes('⚠️ CONFIRME')) {
+        alert('⚠️ Confirme os caminhos antes de copiar o comando dd.');
+    } else {
+        alert('❌ Nenhum comando válido para copiar.');
     }
 }
 </script>
