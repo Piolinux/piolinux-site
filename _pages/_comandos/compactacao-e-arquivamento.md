@@ -11,7 +11,7 @@ permalink: /aplicativos-graficos-compactacao-linux/
 
 
 
-
+<section>
 
 <div class="table-container">
   <table class="evergreen-table">
