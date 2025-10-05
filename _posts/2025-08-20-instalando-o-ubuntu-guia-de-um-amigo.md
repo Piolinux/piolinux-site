@@ -40,8 +40,6 @@ permalink: /instalar-ubuntu-guia-iniciantes/
         <code>sudo dd if=ubuntu-24.04.iso of=/dev/SEU_DISCO bs=4M status=progress oflag=sync</code>
        <button class="copy-btn" data-command="sudo dd if=ubuntu-24.04.iso of=/dev/SEU_DISCO bs=4M status=progress oflag=sync">📋 Copiar</button>
         <td data-label="Aviso Técnico">⚠️ Substitua <code>SEU_DISCO</code> por um dispositivo real (ex: <code>sdb</code>). Use <code>lsblk</code> para identificar. Nunca use o disco do sistema (<code>sda</code>).</td>
-</tr>
-      </td>
       <td data-label="Observação">Substitua <code>sdX</code> pelo dispositivo correto (ex: <code>sdb</code>). Use <code>lsblk</code> para identificar.</td>
     </tr>
     <tr>
