@@ -25,8 +25,8 @@ tags: [segurança, linux, firewall, senhas, permissões, sudo]
     <tr>
       <td data-label="Prática">Atualizações do sistema.</td>
       <td data-label="Comando / Ação">
-        <code>sudo apt update && sudo apt full-upgrade -y</code>
-        <button class="copy-btn" data-command="sudo apt update && sudo apt full-upgrade -y">📋 Copiar</button>
+        <code>sudo apt update && sudo apt upgrade -y</code>
+        <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>
       </td>
       <td data-label="Observação Técnica">Execute semanalmente ou use <code>unattended-upgrades</code> para atualizações automáticas.</td>
     </tr>
