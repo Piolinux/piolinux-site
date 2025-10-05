@@ -38,16 +38,21 @@ function filtrarLinhas(termo) {
       <td data-label="Descrição">Atualiza lista de pacotes.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo apt update">📋</button></td>
     </tr>
+     <tr>
+  <td data-label="Comando"><code>sudo apt upgrade</code></td>
+  <td data-label="Descrição">Atualiza pacotes instalados.</td>
+  <td data-label="Ação">📋</td><button class="copy-btn" data-command="sudo apt upgrade">📋</button></td>
+</tr>
     <tr>
-      <td data-label="Comando"><code>sudo apt upgrade</code></td>
-      <td data-label="Descrição">Atualiza pacotes instalados.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo apt upgrade">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>sudo apt full-upgrade</code></td>
-      <td data-label="Descrição">Atualiza com possíveis remoções.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo apt full-upgrade">📋</button></td>
-    </tr>
+  <td data-label="Comando"><code>sudo apt full-upgrade</code></td>
+  <td data-label="Descrição">Atualiza com possíveis remoções de pacotes. ⚠️ Pode quebrar dependências.</td>
+  <td data-label="Ação">📋</td><button class="copy-btn" data-command="sudo apt full- upgrade">📋</button></td>
+</tr>
+<tr>
+  <td data-label="Comando"><code>sudo apt autoremove</code></td>
+  <td data-label="Descrição">Remove pacotes órfãos. ⚠️ Confirme se não remove algo necessário.</td>
+  <td data-label="Ação">📋</td><button class="copy-btn" data-command="sudo apt autoremove">📋</button></td>
+</tr>
     <tr>
       <td data-label="Comando"><code>sudo apt install curl</code></td>
       <td data-label="Descrição">Instala um pacote.</td>
