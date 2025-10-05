@@ -35,7 +35,7 @@ permalink: /aplicativos-graficos-compactacao-linux/
         <td data-label="Método de Instalação">Pacote .deb oficial.</td>
         <td data-label="Compatível com">Ubuntu, Debian, Linux Mint, Kali.</td>
         <td data-label="Ação">
-          <button class="copy-btn" data-command="wget https://github.com/peazip/PeaZip/releases/download/10.6.1/peazip_10.6.1.LINUX.Qt6-64bit.deb && sudo dpkg -i peazip_10.6.1.LINUX.Qt6-64bit.deb && sudo apt install -f">📋</button>
+          <button class="copy-btn" data-command="wget https://github.com/peazip/PeaZip/releases/download/10.6.1/peazip_10.6.1.LINUX.Qt6-1_amd64.deb&& sudo dpkg -i peazip_10.6.1.LINUX.Qt6-64bit.deb && sudo apt install -f">📋</button>
         </td>
       </tr>
       <tr>
