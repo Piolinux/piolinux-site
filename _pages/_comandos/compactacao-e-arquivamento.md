@@ -44,7 +44,7 @@ function filtrarLinhas(termo) {
   <td data-label="Propósito">Compactação segura sem risco de sobrescrita acidental.</td>
   <td data-label="Aviso Técnico">Prefira GUIs em emergência. Comandos como <code>tar</code> exigem cuidado com caminhos absolutos.</td>
 </tr>
-    </tr>
+   
     <tr>
       <td data-label="Comando"><code>7z a arq.7z pasta/</code></td>
       <td data-label="Descrição">Cria .7z</td>
