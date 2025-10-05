@@ -20,7 +20,7 @@ permalink: /comandos/
   <li><a href="/rede-e-internet/">🌐 Rede e Internet</a></li>
   <li><a href="/usuarios-e-permissoes/">🔐 Usuários e Permissões</a></li>
   <li><a href="/monitoramento-e-processos/">📊 Monitoramento e Processos</a></li>
-  <li><a href="/compactacao-e-arquivamento/">📦 Compactação e Arquivamento</a></li>
+  <li><a href="/aplicativos-graficos-compactacao-linux/">📦 Compactação e Arquivamento</a></li>
   <li><a href="/edicao-de-texto-e-filtros/">✂️ Edição de Texto e Filtros</a></li>
   <li><a href="/tarefas-agendadas/">⏰ Tarefas Agendadas</a></li>
   <li><a href="/seguranca-e-firewall/">🔐 Segurança e Firewall</a></li>
