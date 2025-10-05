@@ -148,26 +148,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
 </table>
 
 
-<h3 id="script-backup">Exemplo: Script de Backup com Logs</h3>
-<pre><code>#!/bin/bash
-# backup.sh
-set -e
-LOG="/var/log/backup.log"
-echo "[$(date)] Iniciando backup..." >> "$LOG"
-rsync -av --delete "$HOME/Documents/" /backup/Documents/ >> "$LOG" 2>&1
-echo "[$(date)] Backup concluído." >> "$LOG"</code></pre>
 
-<p>Agendar com cron (diariamente às 2h):</p>
-<table class="evergreen-table">
-  <tbody>
-    <tr>
-      <td>
-        <code>crontab -e</code> → adicionar: <code>0 2 * * * /caminho/backup.sh</code>
-        <button class="copy-btn" data-command="0 2 * * * /caminho/backup.sh">📋 Copiar</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 
    </section>
