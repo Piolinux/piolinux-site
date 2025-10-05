@@ -268,14 +268,5 @@ echo &quot;scale=2; $1&quot; | bc -l">📋</button></td>
 </table>
 
 
-<div class="dica-piolinux">
-  <div>💡 Dicas do PioLinux.</div>
-  <p>Não copie e cole, cegamente o script no terminal.<br>
-  <strong>Salve como <code>.sh</code> → revise no Geany/Nano → <code>chmod +x</code> → execute.</strong><br>
-  Um segundo de cuidado evita horas de recuperação. 
-  </p>
-</div>
-
-
 
 
