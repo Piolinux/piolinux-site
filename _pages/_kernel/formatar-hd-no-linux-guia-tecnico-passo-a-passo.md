@@ -29,12 +29,12 @@ tags: [disco, particionamento, mkfs, fstab, linux, sysadmin, evergreen]
     </tr>
     <tr>
       <td data-label="Etapa">2. Criar partição (MBR).</td>
-      <td data-label="Comando"><code>sudo fdisk /dev/sdX</code><br><code>n → p → w</code></td>
+      <td data-label="Comando"><code>sudo fdisk /dev/SEU_DISCO</code><br><code>n → p → w</code></td>
       <td data-label="Observação Crítica">Use <code>gdisk</code> para GPT (discos >2TB)</td>
     </tr>
     <tr>
       <td data-label="Etapa">3. Formatar (ext4).</td>
-      <td data-label="Comando"><code>sudo mkfs.ext4 /dev/sdX1</code></td>
+      <td data-label="Comando"><code>sudo mkfs.ext4 /dev/SEU_DISCO</code></td>
       <td data-label="Observação Crítica"><code>ext4</code>: padrão Linux. Para NTFS: <code>mkfs.ntfs</code> (requer <code>ntfs-3g</code>)</td>
     </tr>
     <tr>
