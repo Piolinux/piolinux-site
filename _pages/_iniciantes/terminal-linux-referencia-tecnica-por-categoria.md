@@ -72,8 +72,8 @@ tags: [dicas, linux, terminal, bash, zsh, ohmyzsh, iterm2, produtividade]
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Tarefa</th>
-      <th>Comando</th>
+      <th>Tarefas.</th>
+      <th>Comandos.</th>
     </tr>
   </thead>
   <tbody>
@@ -112,8 +112,8 @@ tags: [dicas, linux, terminal, bash, zsh, ohmyzsh, iterm2, produtividade]
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Tarefa</th>
-      <th>Comando</th>
+      <th>Tarefas.</th>
+      <th>Comandos.</th>
     </tr>
   </thead>
   <tbody>
@@ -159,8 +159,8 @@ tags: [dicas, linux, terminal, bash, zsh, ohmyzsh, iterm2, produtividade]
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Tarefa</th>
-      <th>Comando</th>
+      <th>Tarefas.</th>
+      <th>Comandos.</th>
     </tr>
   </thead>
   <tbody>
