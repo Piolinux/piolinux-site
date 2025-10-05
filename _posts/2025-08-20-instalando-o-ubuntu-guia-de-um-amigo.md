@@ -37,7 +37,7 @@ permalink: /instalar-ubuntu-guia-iniciantes/
     <tr>
       <td data-label="Etapa">Criar Live USB</td>
       <td data-label="Ação Técnica">
-        <code>sudo dd if=ubuntu-24.04.iso of=/dev/SEU_DISCO bs=4M status=progress oflag=sync</code>
+        <code>sudo dd if=ubuntu-24.04.iso of=/dev/sdX bs=4M status=progress oflag=sync</code>
         <button class="copy-btn" data-command="sudo dd if=ubuntu-24.04.iso of=/dev/sdX bs=4M status=progress oflag=sync">📋 Copiar</button>
       </td>
       <td data-label="Observação">Substitua <code>sdX</code> pelo dispositivo correto (ex: <code>sdb</code>). Use <code>lsblk</code> para identificar.</td>
