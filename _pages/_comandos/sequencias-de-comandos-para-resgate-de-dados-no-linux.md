@@ -54,7 +54,7 @@ permalink: /sequencias-comandos-resgate-linux/
     Use <strong>MX Linux Live USB</strong>:<br>
     Menu → <strong>System → MX Boot Repair → Apply</strong>
   </td>
-  <td data-label="Aviso Crítico">Solução automática, testada e segura. Não requer internet, comandos manuais ou chroot.</td>
+  <td data-label="Aviso Crítico">Solução automática, testada e segura. Não precisa de acesso a internet, comandos manuais ou chroot.</td>
 </tr>
 
 
