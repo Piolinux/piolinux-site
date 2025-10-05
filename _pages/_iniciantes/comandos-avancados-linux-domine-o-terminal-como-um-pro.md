@@ -46,7 +46,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <code>rsync -avz -e ssh /home/user/ user@backup:/backup/</code>
         <button class="copy-btn" data-command="rsync -avz -e ssh /home/user/ user@backup:/backup/">📋 Copiar</button>
       </td>
-      <td data-label="O que faz">Sincroniza com servidor remoto via SSH. 💡 Aviso: Teste com --dry-run antes em ambientes críticos.</td>
+      <td data-label="O que faz">Conecta-se a um servidor remoto usando SSH para realizar a sincronização. 💡 Aviso: Teste com --dry-run antes em ambientes críticos.</td>
     </tr>
     <tr>
       <td data-label="Comando"><code>awk</code></td>
