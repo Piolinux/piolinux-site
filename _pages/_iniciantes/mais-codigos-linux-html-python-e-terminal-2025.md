@@ -1,59 +1,85 @@
 ---
 layout: default
-title: "Códigos Técnicos Reais – Bash, Python, Terminal"
-description: "Scripts seguros e eficientes para backup, números primos e comandos Linux — sem erros de iniciante, só referência técnica."
-permalink: /codigos-tecnicos-reais/
-categories: [codigo, script, desenvolvimento]
-tags: [codigos, linux, python, html, bash, ohmyzsh, iterm2, windows-terminal]
+title: "Programas de Backup Seguros para Linux, macOS e Windows"
+description: "Deja Dup, Timeshift, BorgBackup, RsyncOSX, Duplicati — ferramentas reais com interface, histórico e restore confiável. Zero risco de comandos manuais."
+author: "Piolinux"
+categories: [backup, linux, segurança, utilitários, resgate]
+tags: [deja-dup, timeshift, borgbackup, rsyncosx, duplicati, kup, backintime, backup-seguro, linux]
+permalink: /programas-backup-seguros/
 ---
-
-{% include toc.html %}
 
 <section>
 
-<h3>Backup com verificação de diretório.</h3>
-<pre><code>#!/bin/bash
-DATA=$(date +%Y-%m-%d)
-BACKUP_DIR="$HOME/backup"  # Usa diretório do usuário
-DEST="$BACKUP_DIR/home-$DATA.tar.gz"
-
-# Cria diretório se não existir
-mkdir -p "$BACKUP_DIR"
-
-# Verifica se o diretório home existe
-if [ ! -d "$HOME" ]; then
-  echo "Erro: \$HOME não encontrado."
-  exit 1
-fi
-
-# Cria backup
-tar -czf "$DEST" "$HOME" && echo "Backup salvo em: $DEST"</code></pre>
-
-<h3>Número primo (otimizado)</h3>
-<pre><code>import math
-
-num = int(input("Digite um número: "))
-if num > 1:
-    for i in range(2, int(math.isqrt(num)) + 1):
-        if num % i == 0:
-            print(f"{num} não é primo")
-            break
-    else:
-        print(f"{num} é primo")
-else:
-    print("Digite um número maior que 1")</code></pre>
-    
-    
-    <h3>Instalar Oh My Zsh (sem erro).</h3>
-<pre><code>sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</code></pre>
-
-<h3>Atualizar sistema (Debian/Ubuntu)</h3>
-<pre><code>sudo apt update && sudo apt full-upgrade -y</code></pre>
-    
-    
-
-
+<div class="table-container">
+  <table class="evergreen-table">
+    <thead>
+      <tr>
+        <th>Ferramentas.</th>
+        <th>Plataformas.</th>
+        <th>Propósitos.</th>
+        <th>Instalações.</th>
+        <th>Copiar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Ferramenta">Deja Dup</td>
+        <td data-label="Plataforma">Linux (Ubuntu, Debian)</td>
+        <td data-label="Propósito">Backup automático com histórico, criptografia e restore fácil.</td>
+        <td data-label="Instalação"><code>sudo apt install deja-dup</code></td>
+        <td data-label="Ação"><button class="copy-btn" data-command="sudo apt install deja-dup">📋</button></td>
+      </tr>
+      <tr>
+        <td data-label="Ferramenta">Timeshift</td>
+        <td data-label="Plataforma">Linux</td>
+        <td data-label="Propósito">Snapshot do sistema (não de dados) — ideal para atualizações</td>
+        <td data-label="Instalação"><code>sudo apt install timeshift</code></td>
+        <td data-label="Ação"><button class="copy-btn" data-command="sudo apt install timeshift">📋</button></td>
+      </tr>
+      <tr>
+        <td data-label="Ferramenta">BorgBackup</td>
+        <td data-label="Plataforma">Linux, macOS, Windows (WSL)</td>
+        <td data-label="Propósito">Backup deduplicado, compactado, com criptografia e histórico</td>
+        <td data-label="Instalação"><code>sudo apt install borgbackup</code></td>
+        <td data-label="Ação"><button class="copy-btn" data-command="sudo apt install borgbackup">📋</button></td>
+      </tr>
+      <tr>
+        <td data-label="Ferramenta">RsyncOSX</td>
+        <td data-label="Plataforma">macOS</td>
+        <td data-label="Propósito">Interface gráfica para `rsync` — backup seguro com agendamento</td>
+        <td data-label="Instalação"><a href="https://rsyncosx.github.io" target="_blank" rel="noopener">rsyncosx.github.io</a></td>
+        <td data-label="Ação">—</td>
+      </tr>
+      <tr>
+        <td data-label="Ferramenta">Duplicati</td>
+        <td data-label="Plataforma">Linux, Windows, macOS.</td>
+        <td data-label="Propósito">Backup criptografado para nuvem (Google Drive, Dropbox, etc.)</td>
+        <td data-label="Instalação"><a href="https://duplicati.com/download" target="_blank" rel="noopener">duplicati.com/download</a></td>
+        <td data-label="Ação">—</td>
+      </tr>
+      <tr>
+        <td data-label="Ferramenta">Kup</td>
+        <td data-label="Plataforma">Linux (KDE)</td>
+        <td data-label="Propósito">Backup integrado ao Dolphin com bup ou rsync.</td>
+        <td data-label="Instalação"><code>sudo apt install kup</code></td>
+        <td data-label="Ação"><button class="copy-btn" data-command="sudo apt install kup">📋</button></td>
+      </tr>
+      <tr>
+        <td data-label="Ferramenta">Back In Time</td>
+        <td data-label="Plataforma">Linux</td>
+        <td data-label="Propósito">Interface simples para snapshots com rsync + hard links.</td>
+        <td data-label="Instalação"><code>sudo apt install backintime-qt</code></td>
+        <td data-label="Ação"><button class="copy-btn" data-command="sudo apt install backintime-qt">📋</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </section>
+
+
+
+
+
 
 
 
