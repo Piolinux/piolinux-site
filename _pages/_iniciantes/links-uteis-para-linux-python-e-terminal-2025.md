@@ -29,6 +29,7 @@ permalink: /links-uteis-linux-python/
     <li><a href="{{ '/programas-backup-seguros/' | relative_url }}">💻 Programas de Backup Seguros.</a></li>
     <li><a href="{{ '/utilitarios-online/' | relative_url }}">🔧 Ferramentas úteis</a></li>
     <li><a href="{{ '/scripts-seguranca-linux/' | relative_url }}">🔐 Scripts de segurança</a></li>
+    <li><a href="{{ '/diversao/' | relative_url }}">🔐Piadas, baixe wallpapers em SVG puro, Jogos</a></li>
   </ul>
 
 
