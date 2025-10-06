@@ -25,7 +25,7 @@ permalink: /links-uteis-linux-python/
 <li><a href="{{ '/comandos-essenciais-terminal-linux/' | relative_url }}">⌨️ Comandos Essenciais</a></li>
 <li><a href="{{ '/scripts-seguranca-linux/' | relative_url }}">🛡️ Scripts de Segurança</a></li>
 <li><a href="{{ '/python-casos-uso/' | relative_url }}">🐍 Python para Sysadmin</a></li>
-<li><a href="{{ '/utilitarios-online/' | relative_url }}">🔧 Utilitár
+<li><a href="{{ '/utilitarios-online/' | relative_url }}">🔧 Utilitár</li>
 
 
      
