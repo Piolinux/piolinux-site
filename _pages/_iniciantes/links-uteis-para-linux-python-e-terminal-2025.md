@@ -27,7 +27,7 @@ permalink: /links-uteis-linux-python/
     <li><a href="{{ '/mudar-para-linux-software-essencial/' | relative_url }}">💻 Mudar para linux software essencial</a></li>
     <li><a href="{{ '/python-casos-uso/' | relative_url }}">🐍 Python Casos Uso</a></li>
     <li><a href="{{ '/menu-html-referencia/' | relative_url }}">📋 Exemplos de menus HTML</a></li>
-    <li><a href="{{ '/codigos-tecnicos-reais/' | relative_url }}">💻 Códigos úteis</a></li>
+    <li><a href="{{ '/programas-backup-seguros/' | relative_url }}">💻 Programas de Backup Seguros.</a></li>
     <li><a href="{{ '/utilitarios-online/' | relative_url }}">🔧 Ferramentas úteis</a></li>
     <li><a href="{{ '/scripts-seguranca-linux/' | relative_url }}">🔐 Scripts de segurança</a></li>
   </ul>
