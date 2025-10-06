@@ -129,6 +129,11 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="git stash">📋</button></td>
     </tr>
     <tr>
+  <td data-label="Comando"><code>git stash apply</code></td>
+  <td data-label="Descrição">Aplica o stash mais recente **sem remover** da pilha. Seguro para evitar conflitos.</td>
+  <td data-label="Ação"><button class="copy-btn" data-command="git stash apply">📋</button></td>
+</tr>
+    <tr>
       <td data-label="Comando"><code>git stash pop</code></td>
       <td data-label="Descrição">Aplica o stash mais recente. ⚠️ Se houver conflitos, falha e deixa mudanças parciais.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="git stash pop">📋</button></td>
