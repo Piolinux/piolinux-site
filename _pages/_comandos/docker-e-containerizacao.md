@@ -130,10 +130,10 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="docker run --rm alpine echo &quot;teste&quot;">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>docker tag imagem user/repo:v1</code></td>
-      <td data-label="Descrição">Renomeia para push.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="docker tag imagem user/repo:v1">📋</button></td>
-    </tr>
+  <td data-label="Comando"><code>docker tag imagem user/repo:v1</code></td>
+  <td data-label="Descrição">Prepara imagem para push (não envia).</td>
+  <td data-label="Ação"><button class="copy-btn" data-command="docker tag imagem user/repo:v1">📋</button></td>
+</tr>
   </tbody>
 </table>
 </div>
