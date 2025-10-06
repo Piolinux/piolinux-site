@@ -43,10 +43,10 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="crontab -l">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>crontab -r</code></td>
-      <td data-label="Descrição">Remove todas as tarefas.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="crontab -r">📋</button></td>
-    </tr>
+  <td data-label="Comando"><code>crontab -r</code></td>
+  <td data-label="Descrição">Remove **todas** as tarefas do usuário **sem confirmação**. ⚠️ Irreversível.</td>
+  <td data-label="Ação"><button class="copy-btn" data-command="crontab -r">📋</button></td>
+</tr>
     <tr>
       <td data-label="Comando"><code>sudo crontab -e</code></td>
       <td data-label="Descrição">Edita tarefas do root.</td>
@@ -118,10 +118,10 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="atrm 3">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>echo "/backup.sh" \| at 03:00</code></td>
-      <td data-label="Descrição">Roteiro de agenda para um período de três horas.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="echo &quot;/backup.sh&quot; \| at 03:00">📋</button></td>
-    </tr>
+  <td data-label="Comando"><code>echo "/backup.sh" | at 03:00</code></td>
+  <td data-label="Descrição">Agenda <code>/backup.sh</code> para executar às 03:00.</td>
+  <td data-label="Ação"><button class="copy-btn" data-command='echo "/backup.sh" | at 03:00'>📋</button></td>
+</tr>
     <tr>
       <td data-label="Comando"><code>batch</code></td>
       <td data-label="Descrição">Executa quando carga do sistema está baixa.</td>
