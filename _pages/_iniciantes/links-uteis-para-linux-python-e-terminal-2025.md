@@ -18,22 +18,14 @@ permalink: /links-uteis-linux-python/
   
   <ul>
     
-    <li><a href="{{ '/' | relative_url }}">🌐 Página inicial</a></li>
-    <li><a href="{{ '/ferramentas/' | relative_url }}">🔧 Ferramentas Admin</a></li>
-    <li><a href="{{ '/comandos-recuperacao-disco-linux/' | relative_url }}">🧰Comandos e Recuperação de Disco</a></li> 
-    <li><a href="{{ '/terminal-linux-referencia/' | relative_url }}">📌Terminal Linux Referẽncia</a></li>
-    <li><a href="{{ '/comandos-essenciais-terminal-linux/' | relative_url }}">🖥️ Comandos essenciais terminal linux</a></li>
-    <li><a href="{{ '/linux-essencial-tecnico/' | relative_url }}">📖 Linux essencial tecnico</a></li>
-    <li><a href="{{ '/mudar-para-linux-software-essencial/' | relative_url }}">💻 Mudar para linux software essencial</a></li>
-    <li><a href="{{ '/python-casos-uso/' | relative_url }}">🐍 Python Casos Uso</a></li>
-    <li><a href="{{ '/programas-backup-seguros/' | relative_url }}">💻 Programas de Backup Seguros.</a></li>
-    <li><a href="{{ '/utilitarios-online/' | relative_url }}">🔧 Ferramentas úteis</a></li>
-    <li><a href="{{ '/scripts-seguranca-linux/' | relative_url }}">🔐 Scripts de segurança</a></li>
-    <li><a href="{{ '/diversao/' | relative_url }}">🔐Piadas, baixe wallpapers em SVG puro, Jogos</a></li>
-    <li><a href="{{ '/scripts-bash/' | relative_url }}">🔐Script Bash</a></li>
-    <li><a href="{{ '/terminal-linux-referencia-completa/' | relative_url }}">🔐Terminal Linux Referencia Completa</a></li>
-    <li><a href="{{ '/indice-artigos-linux/' | relative_url }}">🔐Comandos Linux iniciante</a></li>
-
+    <li><a href="{{ '/' | relative_url }}">🏠 Início</a></li>
+<li><a href="{{ '/ferramentas/' | relative_url }}">🛠️ Ferramentas de Resgate</a></li>
+<li><a href="{{ '/comandos-recuperacao-disco-linux/' | relative_url }}">🧰 Recuperação de Disco</a></li>
+<li><a href="{{ '/programas-backup-seguros/' | relative_url }}">💾 Backup Seguro</a></li>
+<li><a href="{{ '/comandos-essenciais-terminal-linux/' | relative_url }}">⌨️ Comandos Essenciais</a></li>
+<li><a href="{{ '/scripts-seguranca-linux/' | relative_url }}">🛡️ Scripts de Segurança</a></li>
+<li><a href="{{ '/python-casos-uso/' | relative_url }}">🐍 Python para Sysadmin</a></li>
+<li><a href="{{ '/utilitarios-online/' | relative_url }}">🔧 Utilitár
 
 
      
