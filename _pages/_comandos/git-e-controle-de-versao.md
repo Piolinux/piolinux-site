@@ -120,17 +120,17 @@ function filtrarLinhas(termo) {
     </tr>
     <tr>
       <td data-label="Comando"><code>git reset --hard HEAD~1</code></td>
-      <td data-label="Descrição">Desfaz último commit (cuidado!)</td>
+      <td data-label="Descrição">Descarta último commit **e todas as alterações não commitadas**. ⚠️ Irreversível.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="git reset --hard HEAD~1">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>git stash</code></td>
-      <td data-label="Descrição">Aguarda as alterações não confirmadas e limpa o diretório de trabalho.</td>
+      <td data-label="Descrição">Salva alterações não commitadas e limpa o diretório de trabalho.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="git stash">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>git stash pop</code></td>
-      <td data-label="Descrição">Aplica o stash mais recente e o remove da lista.</td>
+      <td data-label="Descrição">Aplica o stash mais recente. ⚠️ Se houver conflitos, falha e deixa mudanças parciais.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="git stash pop">📋</button></td>
     </tr>
   </tbody>
