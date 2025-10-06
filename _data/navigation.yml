@@ -2,6 +2,10 @@
     link: "/"
     icon: "🏠"
 
+  - name: "Comandos"
+    link: "/comandos/"
+    icon: "📚"
+
   - name: "Ferramentas"
     link: "/ferramentas/"
     icon: "🛠️"
