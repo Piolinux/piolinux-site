@@ -14,7 +14,7 @@ permalink: /comandos/
 <h2> 📚 Categorias Disponíveis.</h2>
 
 <ul class="lista-categorias">
-   <li><a href="/links-uteis-linux-python/">🔧 Links Utéis</a></li
+   <li><a href="/links-uteis-linux-python/">ℹ️ Links Utéis</a></li>
   <li><a href="/gerenciamento-de-pacotes/">🔧 Gerenciamento de Pacotes</a></li>
   <li><a href="/gerenciamento-de-sistema/">🖥 Gerenciamento de Sistema</a></li>
   <li><a href="/arquivos-e-diretorios/">📁 Arquivos e Diretórios</a></li>
