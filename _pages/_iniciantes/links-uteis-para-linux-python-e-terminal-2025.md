@@ -23,7 +23,7 @@ permalink: /links-uteis-linux-python/
 <li><a href="{{ '/comandos-recuperacao-disco-linux/' | relative_url }}">🧰 Recuperação de Disco</a></li>
 <li><a href="{{ '/programas-backup-seguros/' | relative_url }}">💾 Backup Seguro</a></li>
 <li><a href="{{ '/comandos-essenciais-terminal-linux/' | relative_url }}">⌨️ Comandos Essenciais</a></li>
-<li><a href="{{ '/scripts-seguranca-linux/' | relative_url }}">🛡️ Scripts de Segurança</a></li>
+<li><a href="{{ '/scripts-seguranca-linux/' | relative_url }}">🛡️ Comandos de Segurança</a></li>
 <li><a href="{{ '/python-casos-uso/' | relative_url }}">🐍 Python para Sysadmin</a></li>
 <li><a href="{{ '/utilitarios-online/' | relative_url }}">🔧 Utilitário On-line</a></li>
 
