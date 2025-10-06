@@ -17,7 +17,8 @@ permalink: /utilitarios-online/
 
 
 <section>
-<h2>🔧 Utilitários Online Úteis</h2>
+<h2>Utilitários Online para Sysadmins</h2>
+<p>Ferramentas interativas para copiar comandos, gerar QR codes, calcular permissões e gerenciar tarefas — tudo sem sair do terminal.</p>
 
 
 
