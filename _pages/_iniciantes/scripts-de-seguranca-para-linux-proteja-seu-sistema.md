@@ -88,10 +88,6 @@ sudo iftop -i eth0</code></td>
   </tbody>
 </table>
 
-<!-- Dica final (opcional, mas recomendada) -->
-<div class="dica-final">
-  💡 <strong>Dicas do Piolinux:</strong>  Faça os teste dos comandos de segurança em ambientes isolados, antes de usar em produção.Um erro com <code>ufw</code> ou <code>dd</code> pode te deixar sem acesso. 
-</div>
 
 
 </section>
