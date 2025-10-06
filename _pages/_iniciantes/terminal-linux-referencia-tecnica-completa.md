@@ -126,38 +126,8 @@ tags: [dicas, linux, terminal, bash, zsh, ohmyzsh, iterm2, produtividade]
   </tbody>
 </table>
 
-<h3 id="automacao">Automação</h3>
-<table class="evergreen-table">
-  <thead>
-    <tr>
-      <th>Tarefas.</th>
-      <th>Comandos.</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-label="Tarefa">Agendar backup diário.</td>
-      <td data-label="Comando">
-        <code>crontab -e</code> → adicionar: <code>0 2 * * * rsync -av /home/user/ /backup/</code>
-        <button class="copy-btn" data-command="0 2 * * * rsync -av /home/user/ /backup/">📋 Copiar</button>
-      </td>
-    </tr>
-    <tr>
-      <td data-label="Tarefa">Sincronizar pastas.</td>
-      <td data-label="Comando">
-        <code>rsync -av /origem/ /destino/</code>
-        <button class="copy-btn" data-command="rsync -av /origem/ /destino/">📋 Copiar</button>
-      </td>
-    </tr>
-    <tr>
-      <td data-label="Tarefa">Compactar diretório.</td>
-      <td data-label="Comando">
-        <code>tar -czvf backup.tar.gz pasta/</code>
-        <button class="copy-btn" data-command="tar -czvf backup.tar.gz pasta/">📋 Copiar</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+
 
 <h3 id="sistema">Sistema e Monitoramento.</h3>
 <table class="evergreen-table">
