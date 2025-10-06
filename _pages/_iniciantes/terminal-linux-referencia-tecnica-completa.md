@@ -139,37 +139,38 @@ tags: [dicas, linux, terminal, bash, zsh, ohmyzsh, iterm2, produtividade]
     <tbody>
       <tr>
         <td data-label="Tarefa">Ver versão do kernel em execução.</td>
-        <td data-label="Comando"><code>uname -r</code></td>
+        <td data-label="Comando"><code>uname -r</code><br><button class="copy-btn" data-command="uname -r">📋 Copiar</button></td>
         <td data-label="Propósito Técnico">Mostra a versão exata do kernel (ex: <code>6.8.0-40-generic</code>).</td>
       </tr>
       <tr>
         <td data-label="Tarefa">Listar todos os kernels instalados.</td>
-        <td data-label="Comando"><code>ls /boot/vmlinuz-*</code></td>
+        <td data-label="Comando"><code>ls /boot/vmlinuz-*</code><br><button class="copy-btn" data-command="ls /boot/vmlinuz-*">📋 Copiar</button></td>
         <td data-label="Propósito Técnico">Verificar se há kernels antigos para limpeza.</td>
       </tr>
       <tr>
         <td data-label="Tarefa">Verificar integridade do kernel (Ubuntu/Debian)</td>
-        <td data-label="Comando"><code>debsums -c linux-image-$(uname -r)</code></td>
+        <td data-label="Comando"><code>debsums -c linux-image-$(uname -r)</code><br><button class="copy-btn" data-command="debsums -c linux-image-$(uname -r)">📋 Copiar</button></td>
         <td data-label="Propósito Técnico">Confirma se arquivos do kernel não foram alterados (requer <code>sudo apt install debsums</code>).</td>
       </tr>
       <tr>
         <td data-label="Tarefa">Verificar se o kernel tem suporte a módulos.</td>
-        <td data-label="Comando"><code>lsmod</code></td>
+        <td data-label="Comando"><code>lsmod</code><br><button class="copy-btn" data-command="lsmod">📋 Copiar</button></td>
         <td data-label="Propósito Técnico">Lista módulos carregados — se vazio, pode ser kernel monolítico ou sem suporte.</td>
       </tr>
       <tr>
         <td data-label="Tarefa">Verificar a existência de atualizações do núcleo do sistema.</td>
-        <td data-label="Comando"><code>apt list --upgradable | grep linux-image</code></td>
+        <td data-label="Comando"><code>dpkg -l | grep 'linux-image-'</code><br><button class="copy-btn" data-command="dpkg -l | grep 'linux-image-'">📋 Copiar</button></td>
         <td data-label="Propósito Técnico">Versão mais nova disponível nos repositórios.</td>
       </tr>
       <tr>
         <td data-label="Tarefa">Verificar assinatura do kernel (segurança)</td>
-        <td data-label="Comando"><code>sudo apt-key list | grep -A1 -B1 'Ubuntu' || echo "Chave não encontrada"</code></td>
+        <td data-label="Comando"><code>sudo apt-key list | grep -A1 -B1 'Ubuntu' || echo "Chave não encontrada"</code><br><button class="copy-btn" data-command='sudo apt-key list | grep -A1 -B1 "Ubuntu" || echo "Chave não encontrada"'>📋 Copiar</button></td>
         <td data-label="Propósito Técnico">Confirma se o kernel vem de fonte autêntica (Ubuntu/Debian/Devuan)</td>
       </tr>
     </tbody>
   </table>
 </div>
+
 
 
 
