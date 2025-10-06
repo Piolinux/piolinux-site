@@ -31,7 +31,7 @@ permalink: /links-uteis-linux-python/
      
   </ul>
 
-</section>
+
  
    
 
@@ -126,4 +126,4 @@ permalink: /links-uteis-linux-python/
   <!-- Espaço para botões de compartilhamento -->
 </div> 
 
-
+</section>
