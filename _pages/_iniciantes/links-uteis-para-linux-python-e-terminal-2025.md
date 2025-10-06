@@ -30,6 +30,13 @@ permalink: /links-uteis-linux-python/
     <li><a href="{{ '/utilitarios-online/' | relative_url }}">🔧 Ferramentas úteis</a></li>
     <li><a href="{{ '/scripts-seguranca-linux/' | relative_url }}">🔐 Scripts de segurança</a></li>
     <li><a href="{{ '/diversao/' | relative_url }}">🔐Piadas, baixe wallpapers em SVG puro, Jogos</a></li>
+    <li><a href="{{ '/scripts-bash/' | relative_url }}">🔐Script Bash</a></li>
+    <li><a href="{{ '/terminal-linux-referencia-completa/' | relative_url }}">🔐Terminal Linux Referencia Completa</a></li>
+    <li><a href="{{ '/indice-artigos-linux/' | relative_url }}">🔐Comandos Linux iniciante</a></li>
+
+
+
+     
   </ul>
 
 
