@@ -444,10 +444,10 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="sudo zypper addrepo https://download.docker.com/linux/opensuse docker">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>sudo zypper removerepo docker</code></td>
-      <td data-label="Descrição">Remove repositório.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo zypper removerepo docker">📋</button></td>
-    </tr>
+  <td data-label="Comando"><code>sudo zypper rr docker</code></td>
+  <td data-label="Descrição">Remove repositório.</td>
+  <td data-label="Ação"><button class="copy-btn" data-command="sudo zypper rr docker">📋</button></td>
+</tr>
     <tr>
       <td data-label="Comando"><code>sudo zypper modifyrepo -p 90 docker</code></td>
       <td data-label="Descrição">Define prioridade.</td>
