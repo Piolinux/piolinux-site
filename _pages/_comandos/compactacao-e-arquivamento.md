@@ -125,7 +125,48 @@ permalink: /aplicativos-graficos-compactacao-linux/
   </tbody>
 </table>
 
-
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Interface</th>
+      <th>Método</th>
+      <th>Dependências</th>
+      <th>Observações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Interface">Qt6 (padrão)</td>
+      <td data-label="Método">.deb / .rpm / AppImage</td>
+      <td data-label="Dependências">
+        Debian: <code>libqt6core6 libqt6gui6 libqt6widgets6 libqt6printsupport6</code><br>
+        Fedora: <code>qt6-qtbase-core qt6-qtbase-gui qt6-qtbase-widgets qt6-qtbase-printsupport</code>
+      </td>
+      <td data-label="Observações">Versão oficial. Requer Qt6 completo.</td>
+    </tr>
+    <tr>
+      <td data-label="Interface">GTK2 (tema alternativo)</td>
+      <td data-label="Método">Qt6 + variável de ambiente</td>
+      <td data-label="Dependências">
+        <code>libgtk-3-0</code> ou <code>libgtk2.0-0</code> + Qt6
+      </td>
+      <td data-label="Observações">
+        Execute com:<br>
+        <code>QT_QPA_PLATFORMTHEME=gtk2 ./peazip</code><br>
+        A interface usa Qt6, mas o tema é GTK2.
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Interface">GTK (Flatpak)</td>
+      <td data-label="Método">Flatpak</td>
+      <td data-label="Dependências">Nenhuma (runtime incluso)</td>
+      <td data-label="Observações">
+        Usa runtime Freedesktop (GTK). Sem Qt6 visível.<br>
+        <code>flatpak install flathub io.github.peazip.PeaZip</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 </section>
 
