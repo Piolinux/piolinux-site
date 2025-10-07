@@ -189,42 +189,6 @@ tags: [pacotes, linux, apt, dnf, pacman, zypper, instalacao]
   </tbody>
 </table>
 
-<h3 id="desinstalar">Como desinstalar.</h3>
-<table class="evergreen-table">
-  <thead>
-    <tr>
-      <th>Métodos</th>
-      <th>Comandos</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-label="Método">APT.</td>
-      <td data-label="Comando">
-        <code>sudo apt remove gimp</code>
-        <button class="copy-btn" data-command="sudo apt remove gimp">📋 Copiar</button>
-      </td>
-    </tr>
-    <tr>
-      <td data-label="Método">Flatpak.</td>
-      <td data-label="Comando">
-        <code>flatpak uninstall org.mozilla.firefox</code>
-        <button class="copy-btn" data-command="flatpak uninstall org.mozilla.firefox">📋 Copiar</button>
-      </td>
-    </tr>
-    <tr>
-      <td data-label="Método">Snap.</td>
-      <td data-label="Comando">
-        <code>sudo snap remove spotify</code>
-        <button class="copy-btn" data-command="sudo snap remove spotify">📋 Copiar</button>
-      </td>
-    </tr>
-    <tr>
-      <td data-label="Método">AppImage.</td>
-      <td data-label="Comando">Apague o arquivo</td>
-    </tr>
-  </tbody>
-</table>
 
 
 
