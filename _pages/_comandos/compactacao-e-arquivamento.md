@@ -28,12 +28,7 @@ permalink: /aplicativos-graficos-compactacao-linux/
       </tr>
     </thead>
     <tbody>
-<tr>
-  <td data-label="Aplicativo">PeaZip (Qt6)</td>
-  <td data-label="Método">AppImage / .deb</td>
-  <td data-label="Requisitos">Qt6: libqt6core6, libqt6gui6, libqt6widgets6</td>
-  <td data-label="Link"><a href="https://peazip.github.io/">peazip.github.io</a></td>
-</tr>
+
 
       
       <tr>
