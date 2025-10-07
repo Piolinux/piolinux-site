@@ -76,6 +76,57 @@ permalink: /aplicativos-graficos-compactacao-linux/
   </table>
 </div>
 
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Distribuição.</th>
+      <th>Pacotes Necessários.</th>
+      <th>Comando de Instalação das Dependências.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Distribuição">Debian, Ubuntu, Linux Mint, Kali.</td>
+      <td data-label="Pacotes Necessários">
+        <code>libqt6core6 libqt6gui6 libqt6widgets6 libqt6printsupport6</code>
+      </td>
+      <td data-label="Comando de Instalação das Dependências">
+        <code>sudo apt install libqt6core6 libqt6gui6 libqt6widgets6 libqt6printsupport6</code>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Distribuição">Fedora, RHEL 9+, CentOS Stream.</td>
+      <td data-label="Pacotes Necessários">
+        <code>qt6-qtbase-core qt6-qtbase-gui qt6-qtbase-widgets qt6-qtbase-printsupport</code>
+      </td>
+      <td data-label="Comando de Instalação das Dependências">
+        <code>sudo dnf install qt6-qtbase-core qt6-qtbase-gui qt6-qtbase-widgets qt6-qtbase-printsupport</code>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Distribuição">openSUSE Tumbleweed / Leap.</td>
+      <td data-label="Pacotes Necessários">
+        <code>libQt6Core6 libQt6Gui6 libQt6Widgets6 libQt6PrintSupport6</code>
+      </td>
+      <td data-label="Comando de Instalação das Dependências">
+        <code>sudo zypper install libQt6Core6 libQt6Gui6 libQt6Widgets6 libQt6PrintSupport6</code>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Distribuição">Qualquer distro (via Flatpak)</td>
+      <td data-label="Pacotes Necessários">
+        Runtime Freedesktop + extensão Qt6 (todas as dependências incluídas)
+      </td>
+      <td data-label="Comando de Instalação das Dependências">
+        <code>flatpak install flathub io.github.peazip.PeaZip</code><br>
+        <code>flatpak run io.github.peazip.PeaZip</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
 </section>
 
 
