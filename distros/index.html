@@ -15,7 +15,7 @@ tags: [distros, linux, resgate, servidor, desktop, devuan, ubuntu, mx-linux, sys
     <p>Distros Linux Técnicas: Resgate, Servidor, Desktop.</p>
 
     <div class="standard-list">
-      {% assign distro_pages = site.pages | where_exp: "page", "page.url contains 'distros/' and page.url != 'distros/' and page.url != 'distros/iniciante/'" %}
+      {% assign distro_pages = site.pages | where_exp: "page", "page.url contains 'distros/' and page.url != 'distros/' and page.url != 'distros/resgate/'" %}
       {% for page in distro_pages %}
         <li>
           <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
