@@ -15,7 +15,7 @@ tags: [sistema, linux, kernel, boot, init, systemd, openrc, runit, compilacao, e
 <main>
   <p>{{ page.description }}</p>
 
-  {% assign pages = site.pages | where_exp: "page", "page.url contains '/compilar-kernel/' or page.url contains '/arquiteturas-kernel/' or page.url contains '/formatar-hd-linux/'" %}
+  {% assign pages = site.pages | where_exp: "page", "page.url contains '/compilar-kernel/' or page.url contains '/arquiteturas-kernel/' or page.url contains '/formatar-hd-linux/' or page.url contains '/comandos-recuperacao-disco-linux/' or page.url contains  '/programas-backup-seguros/' " %}
 
   {% if pages.size == 0 %}
     <p>⚠️ Nenhuma página encontrada. Verifique se as páginas existem e têm front matter válido.</p>
