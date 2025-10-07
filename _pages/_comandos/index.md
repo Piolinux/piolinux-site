@@ -13,13 +13,6 @@ permalink: /comandos/
   <h2>📚 Categorias Disponíveis</h2>
 
   <ul class="lista-categorias">
-    <li><a href="{{ '/ferramentas/' | relative_url }}">🛠️ Ferramentas de On-line</a></li>
-<li><a href="{{ '/comandos-recuperacao-disco-linux/' | relative_url }}">🧰 Recuperação de Disco</a></li>
-<li><a href="{{ '/programas-backup-seguros/' | relative_url }}">💾 Backup Seguro</a></li>
-<li><a href="{{ '/comandos-essenciais-terminal-linux/' | relative_url }}">⌨️ Comandos Essenciais</a></li>
-<li><a href="{{ '/scripts-bash/' | relative_url }}">🛡️ Scripts Bash Básicos por Categoria </a></li>
-<li><a href="{{ '/python-casos-uso/' | relative_url }}">🐍 Python para Sysadmin</a></li>
-<li><a href="{{ '/utilitarios-online/' | relative_url }}">🔧 Utilitário On-line</a></li>
     <li><a href="/aplicativos-graficos-compactacao-linux/">📦 Aplicativos graficos compactacao</a></li>
     <li><a href="/arquivos-e-diretorios/">📁 Arquivos e Diretórios</a></li>
     <li><a href="/comandos-avancados-e-dicas/">🚀 Comandos Avançados e Dicas</a></li>
