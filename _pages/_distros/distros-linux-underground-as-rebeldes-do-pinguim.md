@@ -130,33 +130,4 @@ tags: [distros, linux, underground, alpine, void, crux, guix, chimera, alternati
 
 
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Table",
-  "name": "Distros Linux Underground — Alternativas Rebeldes ao Mainstream",
-  "description": "Tabela de distros Linux radicais, minimalistas e independentes — como Alpine, Void, CRUX, Guix, Chimera — fora do mainstream, para quem quer liberdade e controle.",
-  "inLanguage": "pt-BR",
-  "url": "{{ page.url | absolute_url }}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ page.url | absolute_url }}"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Equipe Piolinu"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Piolinux",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://piolinux.com/logo-512.png",
-      "width": 512,
-      "height": 512
-    }
-  },
-  "datePublished": "2025-04-05T10:00:00+00:00",
-  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
-}
-</script>
+
