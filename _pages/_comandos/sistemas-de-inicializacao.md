@@ -1,9 +1,9 @@
 ---
 layout: manual-seo
-title: "Sistemas de Inicialização Linux: systemd, OpenRC, runit, SysV — Tabela Técnica Comparativa"
-description: "Tabela validada com comandos equivalentes para systemd, OpenRC, runit e SysV init: iniciar, parar, habilitar serviços e verificar status. Copiável e testado."
+title: "Init Linux: systemd, OpenRC, runit, SysV — Tabela de Comandos"
+description: "Comandos equivalentes para gerenciar serviços em systemd, OpenRC, runit e SysV. Tabela técnica copiável e validada."
 permalink: /sistemas-de-inicializacao/
-tags: [init, systemd, openrc, runit, sysv, linux, inicializacao, servico, daemon, systemctl, rc-service, sv, update-rc.d, chkconfig]
+tags: [init, systemd, openrc, runit, sysv, linux, inicializacao, servico, systemctl, rc-service, sv]
 ---
 
 <section>
@@ -86,6 +86,6 @@ function filtrarLinhas(termo) {
 
 <!-- Botões de cópia (se ainda quiser um por célula, avise — mas recomendo copiar o código diretamente) -->
 
-<section>
+</section>
 
 
