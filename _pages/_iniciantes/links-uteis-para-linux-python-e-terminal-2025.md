@@ -19,7 +19,6 @@ permalink: /links-uteis-linux-python/
   <ul>
     
  <li><a href="{{ '/' | relative_url }}">🏠 Início</a></li>
- <li><a href="{{ '/indice-linux/' | relative_url }}">🛠️ Índice Técnico Linux: Comandos,Ferramentas</a></li>
 <li><a href="{{ '/ferramentas/' | relative_url }}">🛠️ Ferramentas de On-line</a></li>
 <li><a href="{{ '/comandos-recuperacao-disco-linux/' | relative_url }}">🧰 Recuperação de Disco</a></li>
 <li><a href="{{ '/programas-backup-seguros/' | relative_url }}">💾 Backup Seguro</a></li>
