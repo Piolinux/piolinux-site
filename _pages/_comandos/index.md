@@ -29,7 +29,6 @@ permalink: /comandos/
     <li><a href="/gerenciamento-de-pacotes/">🔧 Gerenciamento de Pacotes</a></li>
     <li><a href="/gerenciamento-de-sistema/">🖥 Gerenciamento de Sistema</a></li>
     <li><a href="/git-e-controle-de-versao/">💾 Git e Controle de Versão</a></li>
-   <li><a href="/links-uteis-linux-python/">ℹ️ Links Úteis</a></li>
     <li><a href="/logs-e-diagnostico/">📋 Logs e Diagnóstico</a></li>
     <li><a href="/monitoramento-e-processos/">📊 Monitoramento e Processos</a></li>
     <li><a href="/rede-e-internet/">🌐 Rede e Internet</a></li>
