@@ -7,10 +7,9 @@ permalink: /comandos/
 
 
 
-
-
-
 <section>
+
+  
   <h2>📚 Categorias Disponíveis</h2>
 
   <ul class="lista-categorias">
@@ -34,7 +33,7 @@ permalink: /comandos/
     <li><a href="/tarefas-agendadas/">⏰ Tarefas Agendadas</a></li>
     <li><a href="/usuarios-e-permissoes/">🔐 Usuários e Permissões</a></li>
   </ul>
-</section>
+
 
 
 <h3 id="avisos">Avisos Técnicos</h3>
