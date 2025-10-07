@@ -128,10 +128,10 @@ permalink: /aplicativos-graficos-compactacao-linux/
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Interface</th>
-      <th>Método</th>
-      <th>Dependências</th>
-      <th>Observações</th>
+      <th>Interface.</th>
+      <th>Método.</th>
+      <th>Dependências.</th>
+      <th>Observações.</th>
     </tr>
   </thead>
   <tbody>
@@ -146,7 +146,7 @@ permalink: /aplicativos-graficos-compactacao-linux/
     </tr>
     <tr>
       <td data-label="Interface">GTK2 (tema alternativo)</td>
-      <td data-label="Método">Qt6 + variável de ambiente</td>
+      <td data-label="Método">Qt6 + variável de ambiente.</td>
       <td data-label="Dependências">
         <code>libgtk-3-0</code> ou <code>libgtk2.0-0</code> + Qt6
       </td>
