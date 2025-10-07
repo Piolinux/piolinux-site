@@ -13,9 +13,7 @@ permalink: /aplicativos-graficos-compactacao-linux/
 
 <section>
 
-<p class="notice" style="background: #008000; padding: 1rem; border-left: 4px solid #ffc107; margin: 1.5rem 0;">
-   <strong>Para garantir sua segurança em momentos críticos:</strong> os comandos manuais de compactação (como tar e gzip) foram desativados. Eles podem ser complicados, principalmente ao lidar com caminhos absolutos, e há o risco de apagar pastas importantes por acidente. Em situações de resgate, opte por usar interfaces gráficas — elas são mais seguras e ajudam a evitar erros que não podem ser desfeitos.
-</p>
+
 
 
 
