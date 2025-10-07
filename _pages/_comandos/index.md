@@ -26,14 +26,11 @@ permalink: /comandos/
    <li><a href="/links-uteis-linux-python/">ℹ️ Links Úteis</a></li>
     <li><a href="/logs-e-diagnostico/">📋 Logs e Diagnóstico</a></li>
     <li><a href="/monitoramento-e-processos/">📊 Monitoramento e Processos</a></li>
-    <li><a href="/openrc-sysvinit/">⚡ Sistemas de Inicialização Sysv e Openrc </a></li>
     <li><a href="/rede-e-internet/">🌐 Rede e Internet</a></li>
     <li><a href="/recuperacao-e-manutencao/">🔧 Recuperação e Manutenção</a></li>
     <li><a href="/seguranca-e-firewall/">🔐 Segurança e Firewall</a></li>
     <li><a href="/sequencias-comandos-resgate-linux/">📜 Comandos de Resgate</a></li>
     <li><a href="/sistemas-de-inicializacao/">⚡ Sistemas de Inicialização</a></li>
-    <li><a href="/sistemas-de-inicializacao-runit/">⚡ Sistemas de Inicialização runit</a></li>
-    <li><a href="/sistemas-de-inicializacao-sysv/">⚡ Sistemas de Inicialização sysv</a></li>
     <li><a href="/tarefas-agendadas/">⏰ Tarefas Agendadas</a></li>
     <li><a href="/usuarios-e-permissoes/">🔐 Usuários e Permissões</a></li>
   </ul>
