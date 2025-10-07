@@ -25,17 +25,17 @@ function filtrarLinhas(termo) {
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Objetivo</th>
-      <th>systemd</th>
-      <th>OpenRC</th>
-      <th>runit</th>
-      <th>SysV init</th>
+      <th>Objetivo.</th>
+      <th>systemd.</th>
+      <th>OpenRC.</th>
+      <th>runit.</th>
+      <th>SysV init.</th>
     </tr>
   </thead>
   <tbody>
     <!-- Iniciar serviço -->
     <tr>
-      <td data-label="Objetivo">Iniciar serviço</td>
+      <td data-label="Objetivo">Iniciar serviço.</td>
       <td data-label="systemd"><code>sudo systemctl start nginx</code></td>
       <td data-label="OpenRC"><code>sudo rc-service nginx start</code></td>
       <td data-label="runit"><code>sudo sv up nginx</code></td>
@@ -43,7 +43,7 @@ function filtrarLinhas(termo) {
     </tr>
     <!-- Parar serviço -->
     <tr>
-      <td data-label="Objetivo">Parar serviço</td>
+      <td data-label="Objetivo">Parar serviço.</td>
       <td data-label="systemd"><code>sudo systemctl stop nginx</code></td>
       <td data-label="OpenRC"><code>sudo rc-service nginx stop</code></td>
       <td data-label="runit"><code>sudo sv down nginx</code></td>
@@ -51,7 +51,7 @@ function filtrarLinhas(termo) {
     </tr>
     <!-- Reiniciar serviço -->
     <tr>
-      <td data-label="Objetivo">Reiniciar serviço</td>
+      <td data-label="Objetivo">Reiniciar serviço.</td>
       <td data-label="systemd"><code>sudo systemctl restart nginx</code></td>
       <td data-label="OpenRC"><code>sudo rc-service nginx restart</code></td>
       <td data-label="runit"><code>sudo sv restart nginx</code></td>
@@ -59,7 +59,7 @@ function filtrarLinhas(termo) {
     </tr>
     <!-- Ver status -->
     <tr>
-      <td data-label="Objetivo">Ver status do serviço</td>
+      <td data-label="Objetivo">Ver status do serviço.</td>
       <td data-label="systemd"><code>systemctl status nginx</code></td>
       <td data-label="OpenRC"><code>rc-service nginx status</code></td>
       <td data-label="runit"><code>sv status nginx</code></td>
@@ -67,7 +67,7 @@ function filtrarLinhas(termo) {
     </tr>
     <!-- Habilitar na inicialização -->
     <tr>
-      <td data-label="Objetivo">Habilitar na inicialização</td>
+      <td data-label="Objetivo">Habilitar na inicialização.</td>
       <td data-label="systemd"><code>sudo systemctl enable nginx</code></td>
       <td data-label="OpenRC"><code>sudo rc-update add nginx</code></td>
       <td data-label="runit"><code>ln -s /etc/sv/nginx /var/service/</code></td>
@@ -75,7 +75,7 @@ function filtrarLinhas(termo) {
     </tr>
     <!-- Desabilitar na inicialização -->
     <tr>
-      <td data-label="Objetivo">Desabilitar na inicialização</td>
+      <td data-label="Objetivo">Desabilitar na inicialização.</td>
       <td data-label="systemd"><code>sudo systemctl disable nginx</code></td>
       <td data-label="OpenRC"><code>sudo rc-update del nginx</code></td>
       <td data-label="runit"><code>rm /var/service/nginx</code></td>
