@@ -17,13 +17,13 @@ permalink: /comandos/
     <li><a href="/aplicativos-graficos-compactacao-linux/">📦 Aplicativos graficos compactacao</a></li>
     <li><a href="/arquivos-e-diretorios/">📁 Arquivos e Diretórios</a></li>
     <li><a href="/comandos-avancados-e-dicas/">🚀 Comandos Avançados e Dicas</a></li>
-    <li><a href="{{ '/indice-linux/' | relative_url }}">🛠️Comandos,Ferramentas</a></li>
+   <li><a href="{{ '/indice-linux/' | relative_url }}">🛠️ Comandos e Ferramentas</a></li>
     <li><a href="/docker-e-containerizacao/">🐋 Docker e Containerização</a></li>
     <li><a href="/edicao-de-texto-e-filtros/">✂️ Edição de Texto e Filtros</a></li>
     <li><a href="/gerenciamento-de-pacotes/">🔧 Gerenciamento de Pacotes</a></li>
     <li><a href="/gerenciamento-de-sistema/">🖥 Gerenciamento de Sistema</a></li>
     <li><a href="/git-e-controle-de-versao/">💾 Git e Controle de Versão</a></li>
-    <li><a href="/links-uteis-linux-python/">ℹ️ Links Utéis</a></li>
+   <li><a href="/links-uteis-linux-python/">ℹ️ Links Úteis</a></li>
     <li><a href="/logs-e-diagnostico/">📋 Logs e Diagnóstico</a></li>
     <li><a href="/monitoramento-e-processos/">📊 Monitoramento e Processos</a></li>
     <li><a href="/openrc-sysvinit/">⚡ Sistemas de Inicialização Sysv e Openrc </a></li>
