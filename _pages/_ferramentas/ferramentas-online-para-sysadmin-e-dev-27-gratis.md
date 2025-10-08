@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ferramentas Online para SysAdmin e Dev — +27 grátis
+title: Ferramentas Online para SysAdmin e Dev — +26 grátis
 description: 'Calcule IP, gere senhas, converta chmod, crie slugs, monte comandos Docker. Tudo online, sem cadastro, 100% grátis.'
 permalink: /ferramentas/
 tags: [ferramentas, sysadmin, dev, linux, online] 
