@@ -11,7 +11,7 @@ tags: [ferramentas, sysadmin, dev, linux, online]
 <section>
 
 <main>
-  <h2>27+ Ferramentas Online — SysAdmin, Dev, Linux</h2>
+  <h2>26+ Ferramentas Online — SysAdmin, Dev, Linux</h2>
   <p>{{ page.description }}</p>
 
   <!-- Links de categoria (sem JS) -->
