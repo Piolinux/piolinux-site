@@ -4,7 +4,7 @@ title: "Compare Terminais: Linux, macOS e Windows (Tabela Completa)"
 description: "Compare os terminais do Linux (bash/zsh), macOS (Terminal/iTerm) e Windows (CMD, PowerShell, WSL). Tabela clara para sysadmins e devs multiplataforma."
 date: 2025-08-28 10:00:00 -0300
 categories: [terminal, linux, windows, macos]
-tags: [terminal, linux, windows, macos, wsl, powershell, bash, tutorial]
+tags: [terminal, linux, windows, macos, wsl, powershell, bash,]
 permalink: /comparativo-terminais/
 ---
 
