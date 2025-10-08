@@ -21,7 +21,6 @@ tags: [ferramentas, sysadmin, dev, linux, online]
     <a href="/ferramentas/dev/" class="filter-btn">[dev]</a>
     <a href="/ferramentas/data/" class="filter-btn">[data]</a>
     <a href="/ferramentas/design/" class="filter-btn">[design]</a>
-    <a href="/ferramentas/seo/" class="filter-btn">[seo]</a>
   </div>
 
 
