@@ -5,7 +5,7 @@ description: "Tabela comparativa prática: Rufus, BalenaEtcher, Ventoy, dd, UNet
 date: 2025-09-12
 author: "PioLinux"
 categories: [linux, ferramentas, usb, iso]
-tags: [usb, iso, rufus, etcher, ventoy, dd, linux, windows, macos, tutorial]
+tags: [usb, iso, rufus, etcher, ventoy, dd, linux, windows, macos, ]
 permalink: /gravador-iso-usb-comparativo/
 ---
 
