@@ -28,14 +28,12 @@ permalink: /indice-linux/
     <li><a href="{{ '/metodos-instalacao/' | relative_url }}">Instalação de Programas: APT, Flatpak, Snap, AppImage</a></li>
     <li><a href="{{ '/seguranca-linux/' | relative_url }}">Hardening Básico e Boas Práticas</a></li>
     <li><a href="{{ '/linux-essencial-tecnico/' | relative_url }}">Linux: Referência Técnica Direta</a></li>
-   
-<li><a href="{{ '/ferramentas/' | relative_url }}">🛠️ Ferramentas de On-line</a></li>
-<li><a href="{{ '/comandos-recuperacao-disco-linux/' | relative_url }}">🧰 Recuperação de Disco</a></li>
-<li><a href="{{ '/programas-backup-seguros/' | relative_url }}">💾 Backup Seguro</a></li>
-<li><a href="{{ '/comandos-essenciais-terminal-linux/' | relative_url }}">⌨️ Comandos Essenciais</a></li>
-<li><a href="{{ '/scripts-bash/' | relative_url }}">🛡️ Scripts Bash Básicos por Categoria </a></li>
-<li><a href="{{ '/python-casos-uso/' | relative_url }}">🐍 Python para Sysadmin</a></li>
-<li><a href="{{ '/utilitarios-online/' | relative_url }}">🔧 Utilitário On-line</a></li>
+    <li><a href="{{ '/ferramentas/' | relative_url }}">🛠️ Ferramentas de On-line</a></li>
+    <li><a href="{{ '/comandos-recuperacao-disco-linux/' | relative_url }}">🧰 Recuperação de Disco</a></li>
+    <li><a href="{{ '/programas-backup-seguros/' | relative_url }}">💾 Backup Seguro</a></li>
+    <li><a href="{{ '/scripts-bash/' | relative_url }}">🛡️ Scripts Bash Básicos por Categoria </a></li>
+    <li><a href="{{ '/python-casos-uso/' | relative_url }}">🐍 Python para Sysadmin</a></li>
+    <li><a href="{{ '/utilitarios-online/' | relative_url }}">🔧 Utilitário On-line</a></li>
 
 
   </ul>
