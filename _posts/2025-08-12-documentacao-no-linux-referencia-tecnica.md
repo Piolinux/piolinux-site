@@ -5,8 +5,8 @@ description: "Tabela objetiva com man pages, help rápido, documentação online
 permalink: /documentacao-linux/
 date: 2025-08-12
 author: "PioLinux"
-categories: [linux, tutoriais, dicas]
-tags: [documentação, man-pages, terminal, apt, vim, dicas]
+categories: [linux, tutoriais,]
+tags: [documentação, man-pages, terminal, apt, vim,]
 permalink: /importancia-da-documentacao-linux/
 ---
 
