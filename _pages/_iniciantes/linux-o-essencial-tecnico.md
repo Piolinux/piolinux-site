@@ -4,7 +4,7 @@ title: "Linux – O Essencial Técnico"
 description: "Tabelas objetivas sobre kernel, distros, vantagens reais, onde o Linux é usado e como começar — sem metáforas, só fatos."
 permalink: /linux-essencial-tecnico/
 categories: [linux, iniciante, conceitos]
-tags: [linux, kernel, open-source, sistema-operacional, tutorial]
+tags: [linux, kernel, open-source, sistema-operacional,]
 ---
 
 
