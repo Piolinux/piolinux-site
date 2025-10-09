@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "✂️ Edição de Texto e Filtros — Comandos Linux"
+title: "Edição de Texto e Filtros — Comandos Linux"
 description: "Guia técnico com comandos essenciais de Edição de Texto e Filtros. Copie, cole e use direto no terminal. Organizado por edição de texto e filtros."
 permalink: /edicao-de-texto-e-filtros/
 ---
