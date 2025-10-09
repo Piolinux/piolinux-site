@@ -179,7 +179,7 @@ Categories=Utility;</code></pre>
     </div>
 
     <div id="outputContainer" style="display: none; background: #121212; padding: 30px; border-radius: 12px; border: 1px solid #333;">
-        <h2 style="color: #8bc34a; margin: 0 0 25px 0; font-size: 1.5em; text-align: center;">✅ Resultado</h2>
+        <h2 style="color: #8bc34a; margin: 0 0 25px 0; font-size: 1.5em; text-align: center;"> Resultado</h2>
 
         <!-- Preview -->
         <div style="text-align: center; margin-bottom: 30px;">
@@ -201,7 +201,7 @@ Categories=Utility;</code></pre>
 
         <!-- Desktop -->
         <div>
-            <h3 style="color: #a6e3a1; margin: 0 0 15px 0; font-size: 1.2em;">2. 📄 Arquivo .desktop</h3>
+            <h3 style="color: #a6e3a1; margin: 0 0 15px 0; font-size: 1.2em;">2.  Arquivo .desktop</h3>
             <p style="color: #d0d0d0; margin-bottom: 15px;">Copie o conteúdo abaixo e salve em <code style="background: #2a2a2a; padding: 2px 6px; border-radius: 4px;">~/.local/share/applications/nome-do-app.desktop</code>.</p>
             <div style="position: relative;">
                 <textarea id="outputDesktop" readonly style="width: 100%; height: 200px; padding: 15px; background: #1a1a1a; color: #a6e3a1; border: 1px solid #333; border-radius: 8px; font-family: 'Courier New', monospace; resize: vertical;"></textarea>
@@ -354,23 +354,6 @@ StartupNotify=true`.trim();
 
 
 
-
-<script>
-document.addEventListener('click', function(e) {
-  if (e.target.matches('.copy-btn')) {
-    const cmd = e.target.dataset.command;
-    if (cmd) {
-      navigator.clipboard.writeText(cmd).then(() => {
-        const original = e.target.textContent;
-        e.target.textContent = '✓ Copiado!';
-        setTimeout(() => e.target.textContent = original, 1500);
-      }).catch(err => {
-        console.warn('Falha ao copiar:', err);
-      });
-    }
-  }
-});
-</script>
 
 
 
