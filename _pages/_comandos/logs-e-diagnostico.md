@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "📋 Logs e Diagnóstico — Comandos Linux"
+title: "Logs e Diagnóstico — Comandos Linux"
 description: "Guia técnico com comandos essenciais de Logs e Diagnóstico. Copie, cole e use direto no terminal. Organizado por logs e diagnóstico."
 permalink: /logs-e-diagnostico/
 ---
