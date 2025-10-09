@@ -10,7 +10,7 @@ permalink: /comandos/
 <section>
 
   
-  <h2>📚 Categorias Disponíveis</h2>
+  <h2>Categorias Disponíveis</h2>
 
   <ul class="lista-categorias">
     <li><a href="/aplicativos-graficos-compactacao-linux/">📦 Aplicativos graficos compactacao</a></li>
