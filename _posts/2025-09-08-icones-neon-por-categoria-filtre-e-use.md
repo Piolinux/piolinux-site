@@ -182,7 +182,7 @@ permalink: /icones-neon-tudo-em-um/
 
 <!-- ✅ INTRODUÇÃO -->
   <div class="intro-section">
-    <h2>🌟 Bem-vindo à Coleção Neon de Ícones SVG</h2>
+    <h2>Bem-vindo à Coleção Neon de Ícones SVG</h2>
     <p>
     Neste espaço, encontra-se uma seleção de aproximadamente cinquenta ícones em neon brilhantes, os quais são ideais para aplicações contemporâneas, como painéis de controle e apresentações criativas.
     </p>
@@ -191,7 +191,7 @@ permalink: /icones-neon-tudo-em-um/
 
 
   <div class="size-selector">
-    <label>📏 Tamanho:</label>
+    <label>Tamanho:</label>
     <select id="iconSize">
       <option value="48">48px</option>
       <option value="64" selected>64px</option>
