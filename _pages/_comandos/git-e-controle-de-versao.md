@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "💾 Git e Controle de Versão — Comandos Linux"
+title: "Git e Controle de Versão — Comandos Linux"
 description: "Guia técnico com comandos essenciais de Git e Controle de Versão. Copie, cole e use direto no terminal. Organizado por git e controle de versão."
 permalink: /git-e-controle-de-versao/
 ---
