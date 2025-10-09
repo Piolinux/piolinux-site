@@ -17,7 +17,7 @@ permalink: /atalhos-de-teclado/
 
 
 
-<h3>🔧 Navegação e Sistema</h3>
+<h3> Navegação e Sistema</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
@@ -73,7 +73,7 @@ permalink: /atalhos-de-teclado/
   </tbody>
 </table>
 
-<h3>💻 Terminal</h3>
+<h3> Terminal</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
@@ -116,7 +116,7 @@ permalink: /atalhos-de-teclado/
   </tbody>
 </table>
 
-<h3>📝 Edição de Texto</h3>
+<h3> Edição de Texto</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
@@ -172,7 +172,7 @@ permalink: /atalhos-de-teclado/
   </tbody>
 </table>
 
-<h3>🌐 Navegador</h3>
+<h3> Navegador</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
