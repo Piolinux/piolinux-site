@@ -23,9 +23,7 @@ tags: [ferramentas, sysadmin, linux, chmod, cron, ip, backup, ssh, unix-timestam
   </div>
 
 
-
-
-  <!-- Grid de ferramentas -->
+<!-- Grid de ferramentas -->
   <div class="tools-grid">
     {% assign tools = site.pages | where_exp: "page", "page.url contains '/ferramentas/'" | where_exp: "page", "page.url != '/ferramentas/'" %}
     {% for tool in tools %}
@@ -34,14 +32,12 @@ tags: [ferramentas, sysadmin, linux, chmod, cron, ip, backup, ssh, unix-timestam
         {% assign category = "sysadmin" %}
       {% elsif tool.tags contains "data" %}
         {% assign category = "data" %}
-      {% elsif tool.tags contains "design" %}
-        {% assign category = "design" %}
-      {% elsif tool.tags contains "seo" %}
-        {% assign category = "seo" %}
-      {% endif %}
+         {% endif %}
       {% include tool-card.html url=tool.url title=tool.title category=category %}
     {% endfor %}
   </div>
+
+  
 
 </main>
 </section>
