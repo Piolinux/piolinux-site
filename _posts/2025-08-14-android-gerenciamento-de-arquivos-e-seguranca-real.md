@@ -18,8 +18,8 @@ tags: [files_do_google, dr_prot, antivírus, limpeza, android, análise]
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Ferramentas</th>
-      <th>Propósito Reais.</th>
+      <th>Ferramentas.</th>
+      <th>Propósitos Reais.</th>
       <th>Observação Técnica.</th>
     </tr>
   </thead>
@@ -47,12 +47,12 @@ tags: [files_do_google, dr_prot, antivírus, limpeza, android, análise]
   </tbody>
 </table>
 
-<h3 id="avisos">Avisos Técnicos</h3>
+<h3 id="avisos">Avisos Técnicos.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Fato</th>
-      <th>Explicação</th>
+      <th>Fatos.</th>
+      <th>Explicações</th>
     </tr>
   </thead>
   <tbody>
