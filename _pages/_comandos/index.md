@@ -15,7 +15,7 @@ permalink: /comandos/
   <ul class="lista-categorias">
     <li><a href="/aplicativos-graficos-compactacao-linux/">Aplicativos graficos compactacao</a></li>
     <li><a href="/arquivos-e-diretorios/">Arquivos e Diretórios</a></li>
-    <li><a href="/comandos-avancados-e-dicas/">Comandos Avançados e Dicas</a></li>
+    <li><a href="/comandos-avancados-linux/">Comandos Avançados Linux</a></li>
    <li><a href="{{ '/indice-linux/' | relative_url }}">️Comandos e Ferramentas</a></li>
     <li><a href="/docker-e-containerizacao/">Docker e Containerização</a></li>
     <li><a href="/edicao-de-texto-e-filtros/"> Edição de Texto e Filtros</a></li>
