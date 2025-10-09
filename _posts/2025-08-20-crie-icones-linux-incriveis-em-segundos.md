@@ -112,7 +112,7 @@ Categories=Utility;</code></pre>
 
 <main>
    <div class="tool-container" style="background: #1a1a1a; padding: 30px; border-radius: 16px; border: 1px solid #333; max-width: 800px; margin: 0 auto;">
-    <h2 style="color: #8bc34a; margin: 0 0 20px 0; font-size: 1.8em; text-align: center;">🐧 Gerador de Ícones Linux (.desktop)</h2>
+    <h2 style="color: #8bc34a; margin: 0 0 20px 0; font-size: 1.8em; text-align: center;"> Gerador de Ícones Linux (.desktop)</h2>
     <p style="color: #d0d0d0; text-align: center; margin-bottom: 30px;">Crie e personalize atalhos .desktop em segundos — com ícones SVG personalizados.</p>
 
     <div id="messageBox" style="display: none; padding: 12px; border-radius: 8px; margin-bottom: 20px; text-align: center; font-weight: bold;"></div>
