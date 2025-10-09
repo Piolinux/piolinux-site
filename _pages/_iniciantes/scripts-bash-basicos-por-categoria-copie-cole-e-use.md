@@ -60,7 +60,7 @@ tags: [segurança, bash, firewall, fail2ban, ssh, nmap, rootkit, monitoramento]
 </style>
 
 <!-- Categoria: Fundamentos -->
-<h3>🧱 Fundamentos de Script Bash.</h3>
+<h3> Fundamentos de Script Bash.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
@@ -81,7 +81,7 @@ echo &quot;Olá, piolinux! Este é meu primeiro script Bash.&quot;">📋</button
 </table>
 
 <!-- Categoria: Automação -->
-<h3>🤖 Automação de Tarefas.</h3>
+<h3> Automação de Tarefas.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
@@ -137,7 +137,7 @@ echo &quot;Backup salvo em: $dir_backup/$arquivo&quot;">📋</button></td>
 </table>
 
 <!-- Categoria: Administração -->
-<h3>⚙️ Administração de Sistema.</h3>
+<h3> Administração de Sistema.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
@@ -177,7 +177,7 @@ echo &quot;Usuários criados.&quot;">📋</button></td>
 </table>
 
 <!-- Categoria: Segurança -->
-<h3>🔒 Segurança e Monitoramento: Pra ficar tranquilo e de olho em tudo!</h3>
+<h3> Segurança e Monitoramento: Pra ficar tranquilo e de olho em tudo!</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
@@ -209,7 +209,7 @@ grep &quot;Failed password&quot; /var/log/auth.log | tail -5 | awk '{print $11}'
 </table>
 
 <!-- Categoria: Desenvolvimento -->
-<h3>💻 Desenvolvimento Web para facilitar acesso atráves do navegador.</h3>
+<h3> Desenvolvimento Web para facilitar acesso atráves do navegador.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
@@ -239,7 +239,7 @@ echo &quot;Deploy concluído.&quot;">📋</button></td>
 </table>
 
 <!-- Categoria: Utilitários -->
-<h3>🧰 Calculadora para facilitar a vida.</h3>
+<h3> Calculadora para facilitar a vida.</h3>
 <table class="evergreen-table">
   <thead>
     <tr>
