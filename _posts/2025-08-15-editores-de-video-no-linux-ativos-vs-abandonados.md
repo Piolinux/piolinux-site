@@ -29,7 +29,7 @@ tags: [kino, editor-de-video, linux, dv, open-source]
   <tbody>
     <tr>
       <td data-label="Ferramenta">Kdenlive.</td>
-      <td data-label="Estado">✅ Ativo (2024)</td>
+      <td data-label="Estado"> Ativo (2024)</td>
       <td data-label="Instalação (Debian/Ubuntu).">
         <code>sudo apt install kdenlive.</code>
         <button class="copy-btn" data-command="sudo apt install kdenlive">📋 Copiar</button>
@@ -38,7 +38,7 @@ tags: [kino, editor-de-video, linux, dv, open-source]
     </tr>
     <tr>
       <td data-label="Ferramenta">Shotcut.</td>
-      <td data-label="Estado">✅ Ativo (2024).</td>
+      <td data-label="Estado"> Ativo (2024).</td>
       <td data-label="Instalação (Debian/Ubuntu).">
         <code>sudo apt install shotcut</code>
         <button class="copy-btn" data-command="sudo apt install shotcut">📋 Copiar</button>
@@ -47,7 +47,7 @@ tags: [kino, editor-de-video, linux, dv, open-source]
     </tr>
     <tr>
       <td data-label="Ferramenta">OpenShot.</td>
-      <td data-label="Estado">✅ Ativo (2024).</td>
+      <td data-label="Estado"> Ativo (2024).</td>
       <td data-label="Instalação (Debian/Ubuntu)">
         <code>sudo apt install openshot-qt</code>
         <button class="copy-btn" data-command="sudo apt install openshot-qt">📋 Copiar</button>
@@ -56,7 +56,7 @@ tags: [kino, editor-de-video, linux, dv, open-source]
     </tr>
     <tr>
       <td data-label="Ferramenta">Kino.</td>
-      <td data-label="Estado">❌ Abandonado. (última versão: 2009)</td>
+      <td data-label="Estado"> Abandonado. (última versão: 2009)</td>
       <td data-label="Instalação (Debian/Ubuntu).">
         Não disponível nos repositórios atuais.
       </td>
