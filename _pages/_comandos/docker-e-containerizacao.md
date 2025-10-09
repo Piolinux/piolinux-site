@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "🐋 Docker e Containerização — Comandos Linux"
+title: "Docker e Containerização — Comandos Linux"
 description: "Guia técnico com comandos essenciais de Docker e Containerização. Copie, cole e use direto no terminal. Organizado por docker e containerização."
 permalink: /docker-e-containerizacao/
 ---
