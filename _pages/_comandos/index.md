@@ -13,24 +13,24 @@ permalink: /comandos/
   <h2>Categorias Disponíveis</h2>
 
   <ul class="lista-categorias">
-    <li><a href="/aplicativos-graficos-compactacao-linux/">📦 Aplicativos graficos compactacao</a></li>
-    <li><a href="/arquivos-e-diretorios/">📁 Arquivos e Diretórios</a></li>
-    <li><a href="/comandos-avancados-e-dicas/">🚀 Comandos Avançados e Dicas</a></li>
-   <li><a href="{{ '/indice-linux/' | relative_url }}">🛠️ Comandos e Ferramentas</a></li>
-    <li><a href="/docker-e-containerizacao/">🐋 Docker e Containerização</a></li>
-    <li><a href="/edicao-de-texto-e-filtros/">✂️ Edição de Texto e Filtros</a></li>
-    <li><a href="/gerenciamento-de-pacotes/">🔧 Gerenciamento de Pacotes</a></li>
-    <li><a href="/gerenciamento-de-sistema/">🖥 Gerenciamento de Sistema</a></li>
-    <li><a href="/git-e-controle-de-versao/">💾 Git e Controle de Versão</a></li>
-    <li><a href="/logs-e-diagnostico/">📋 Logs e Diagnóstico</a></li>
-    <li><a href="/monitoramento-e-processos/">📊 Monitoramento e Processos</a></li>
-    <li><a href="/rede-e-internet/">🌐 Rede e Internet</a></li>
-    <li><a href="/recuperacao-e-manutencao/">🔧 Recuperação e Manutenção</a></li>
-    <li><a href="/seguranca-e-firewall/">🔐 Segurança e Firewall</a></li>
-    <li><a href="/sequencias-comandos-resgate-linux/">📜 Comandos de Resgate</a></li>
-    <li><a href="/sistemas-de-inicializacao/">⚡ Sistemas de Inicialização</a></li>
-    <li><a href="/tarefas-agendadas/">⏰ Tarefas Agendadas</a></li>
-    <li><a href="/usuarios-e-permissoes/">🔐 Usuários e Permissões</a></li>
+    <li><a href="/aplicativos-graficos-compactacao-linux/">Aplicativos graficos compactacao</a></li>
+    <li><a href="/arquivos-e-diretorios/">Arquivos e Diretórios</a></li>
+    <li><a href="/comandos-avancados-e-dicas/">Comandos Avançados e Dicas</a></li>
+   <li><a href="{{ '/indice-linux/' | relative_url }}">️Comandos e Ferramentas</a></li>
+    <li><a href="/docker-e-containerizacao/">Docker e Containerização</a></li>
+    <li><a href="/edicao-de-texto-e-filtros/"> Edição de Texto e Filtros</a></li>
+    <li><a href="/gerenciamento-de-pacotes/"> Gerenciamento de Pacotes</a></li>
+    <li><a href="/gerenciamento-de-sistema/"> Gerenciamento de Sistema</a></li>
+    <li><a href="/git-e-controle-de-versao/"> Git e Controle de Versão</a></li>
+    <li><a href="/logs-e-diagnostico/">Logs e Diagnóstico</a></li>
+    <li><a href="/monitoramento-e-processos/"> Monitoramento e Processos</a></li>
+    <li><a href="/rede-e-internet/">Rede e Internet</a></li>
+    <li><a href="/recuperacao-e-manutencao/"> Recuperação e Manutenção</a></li>
+    <li><a href="/seguranca-e-firewall/">Segurança e Firewall</a></li>
+    <li><a href="/sequencias-comandos-resgate-linux/">Comandos de Resgate</a></li>
+    <li><a href="/sistemas-de-inicializacao/">Sistemas de Inicialização</a></li>
+    <li><a href="/tarefas-agendadas/">Tarefas Agendadas</a></li>
+    <li><a href="/usuarios-e-permissoes/">Usuários e Permissões</a></li>
   </ul>
 
 

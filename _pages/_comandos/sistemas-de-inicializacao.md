@@ -9,7 +9,7 @@ tags: [init, systemd, openrc, runit, sysv, linux, inicializacao, servico, system
 <section>
 
 
-<h2>🖥 Comandos Gerais.</h2>
+<h2>Comandos Gerais.</h2>
 
 <input type="text" oninput="filtrarLinhas(this.value)" placeholder="Filtrar comandos...">
 <script>

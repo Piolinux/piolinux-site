@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "🔐 Segurança e Firewall — Comandos Linux"
+title: "Segurança e Firewall — Comandos Linux"
 description: "Guia técnico com comandos essenciais de Segurança e Firewall. Copie, cole e use direto no terminal. Organizado por segurança e firewall."
 permalink: /seguranca-e-firewall/
 ---
@@ -10,7 +10,7 @@ permalink: /seguranca-e-firewall/
 
 
 
-<h2>🖥 Comandos Gerais.</h2>
+<h2>Comandos Gerais.</h2>
 
 
 

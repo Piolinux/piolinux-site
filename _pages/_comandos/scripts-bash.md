@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "📜 Scripts Bash — Comandos Linux"
+title: "Scripts Bash — Comandos Linux"
 description: "Guia técnico com comandos essenciais de Scripts Bash. Copie, cole e use direto no terminal. Organizado por scripts bash."
 permalink: /scripts-bash-comandos/
 ---
@@ -9,7 +9,7 @@ permalink: /scripts-bash-comandos/
 <section>
 
 
-<h2>🖥 Comandos Gerais.</h2>
+<h2>Comandos Gerais.</h2>
 
 
 

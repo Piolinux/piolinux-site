@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "🌐 Rede e Internet — Comandos Linux"
+title: "Rede e Internet — Comandos Linux"
 description: "Guia técnico com comandos essenciais de Rede e Internet. Copie, cole e use direto no terminal. Organizado por rede e internet."
 permalink: /rede-e-internet/
 ---
@@ -14,7 +14,7 @@ permalink: /rede-e-internet/
 <section>
 
 
-<h2>🖥 Comandos Gerais.</h2>
+<h2>Comandos Gerais.</h2>
 
 <input type="text" oninput="filtrarLinhas(this.value)" placeholder="Filtrar comandos...">
 <script>
