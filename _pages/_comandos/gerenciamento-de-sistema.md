@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "🖥 Gerenciamento de Sistema — Comandos Linux"
+title: "Gerenciamento de Sistema — Comandos Linux"
 description: "Guia técnico com comandos essenciais de Gerenciamento de Sistema. Copie, cole e use direto no terminal. Organizado por gerenciamento de sistema."
 permalink: /gerenciamento-de-sistema/
 ---
