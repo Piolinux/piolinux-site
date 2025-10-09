@@ -132,19 +132,19 @@ Categories=Utility;</code></pre>
 
         <!-- Opções de Estilo -->
         <div style="background: #1a2a1a; padding: 20px; border-radius: 12px; border: 1px solid #333;">
-            <h3 style="color: #8bc34a; margin: 0 0 20px 0; font-size: 1.3em;">🎨 Personalize seu Ícone</h3>
+            <h3 style="color: #8bc34a; margin: 0 0 20px 0; font-size: 1.3em;"> Personalize seu Ícone</h3>
 
             <!-- Ícone -->
             <div style="margin-bottom: 20px;">
                 <label style="color: #a6e3a1; display: block; margin-bottom: 10px; font-weight: bold;">Escolha um Ícone</label>
                 <select id="iconSelector" style="width: 100%; padding: 10px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; border-radius: 6px; font-family: 'Courier New', monospace;">
-                    <option value="user">👤 Genérico</option>
-                    <option value="chrome">🌐 Google Chrome</option>
-                    <option value="firefox">🦊 Mozilla Firefox</option>
-                    <option value="vscode">⌨️ VS Code</option>
-                    <option value="terminal">💻 Terminal</option>
-                    <option value="folder">📁 Pasta</option>
-                    <option value="penguin">🐧 Penguin (Linux)</option>
+                    <option value="user"> Genérico</option>
+                    <option value="chrome">Google Chrome</option>
+                    <option value="firefox"> Mozilla Firefox</option>
+                    <option value="vscode"> VS Code</option>
+                    <option value="terminal"> Terminal</option>
+                    <option value="folder"> Pasta</option>
+                    <option value="penguin"> Penguin (Linux)</option>
                 </select>
             </div>
 
@@ -174,7 +174,7 @@ Categories=Utility;</code></pre>
 
     <div style="text-align: center; margin-bottom: 30px;">
         <button id="generateButton" style="background: linear-gradient(90deg, #4caf50, #8bc34a); color: white; padding: 14px 32px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 1.1em; transition: transform 0.2s, box-shadow 0.2s;">
-            🎯 Gerar Ícone e Atalho
+             Gerar Ícone e Atalho
         </button>
     </div>
 
@@ -191,7 +191,7 @@ Categories=Utility;</code></pre>
 
         <!-- SVG -->
         <div style="margin-bottom: 30px;">
-            <h3 style="color: #a6e3a1; margin: 0 0 15px 0; font-size: 1.2em;">1. 🖼️ Ícone SVG</h3>
+            <h3 style="color: #a6e3a1; margin: 0 0 15px 0; font-size: 1.2em;">1.  Ícone SVG</h3>
             <p style="color: #d0d0d0; margin-bottom: 15px;">Copie o código abaixo e salve em um arquivo chamado <code style="background: #2a2a2a; padding: 2px 6px; border-radius: 4px;">nome-do-app.svg</code>.</p>
             <div style="position: relative;">
                 <textarea id="outputSvg" readonly style="width: 100%; height: 150px; padding: 15px; background: #1a1a1a; color: #a6e3a1; border: 1px solid #333; border-radius: 8px; font-family: 'Courier New', monospace; resize: vertical;"></textarea>
@@ -351,31 +351,7 @@ StartupNotify=true`.trim();
 
 
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Gerador de Ícones Linux (.desktop)",
-  "description": "Crie e personalize atalhos .desktop com ícones SVG para seu ambiente Linux — em segundos.",
-  "applicationCategory": "Ferramenta para Desenvolvedores Linux",
-  "operatingSystem": "Linux",
-  "url": "https://www.piolinux.com/criar-%C3%ADcones-linux/",
-  "author": {
-    "@type": "Person",
-    "name": "Equipe Piolinux"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Piolinux",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://piolinux.com/logo-512.png",
-      "width": 512,
-      "height": 512
-    }
-  }
-}
-</script>
+
 
 
 
