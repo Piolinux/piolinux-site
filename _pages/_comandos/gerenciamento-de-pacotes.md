@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "🔧 Gerenciamento de Pacotes — Comandos Linux"
+title: "Gerenciamento de Pacotes — Comandos Linux"
 description: "Guia técnico com comandos essenciais de Gerenciamento de Pacotes. Copie, cole e use direto no terminal. Organizado por gerenciamento de pacotes."
 permalink: /gerenciamento-de-pacotes/
 ---
