@@ -15,7 +15,7 @@ permalink: /ferramentas-dupeguru-shutter-linux/
 
 <section class="post-content">
 
-<p>Ferramentas ativas e comandos verificados para encontrar arquivos duplicados e fazer capturas de tela com anotações — sem recomendações obsoletas ou comandos que não funcionam.</p>
+
 
 
        <table class="evergreen-table">
