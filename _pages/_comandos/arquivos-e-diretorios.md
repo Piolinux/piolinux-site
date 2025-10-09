@@ -10,7 +10,7 @@ permalink: /arquivos-e-diretorios/
 
 
 
-<h2>🖥 Comandos Gerais.</h2>
+<h2>Comandos Gerais.</h2>
 
 
 
