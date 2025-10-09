@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "📊 Monitoramento e Processos — Comandos Linux"
+title: "Monitoramento e Processos — Comandos Linux"
 description: "Guia técnico com comandos essenciais de Monitoramento e Processos. Copie, cole e use direto no terminal. Organizado por monitoramento e processos."
 permalink: /monitoramento-e-processos/
 ---
