@@ -24,10 +24,10 @@ permalink: /distros-linux-pc-antigo/
          <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Distribuição</th>
-      <th>Base</th>
-      <th>Ambiente Gráfico</th>
-      <th>Requisitos Mínimos</th>
+      <th>Distribuições</th>
+      <th>Bases.</th>
+      <th>Ambientes Gráficos.</th>
+      <th>Requisitos Mínimoss</th>
       <th>Estado</th>
     </tr>
   </thead>
@@ -89,7 +89,7 @@ permalink: /distros-linux-pc-antigo/
   <thead>
     <tr>
       <th>Cenário</th>
-      <th>Distro Recomendada</th>
+      <th>Distros Recomendadas.</th>
     </tr>
   </thead>
   <tbody>
