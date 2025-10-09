@@ -37,49 +37,49 @@ permalink: /distros-linux-pc-antigo/
       <td data-label="Base">Debian Stable</td>
       <td data-label="Ambiente Gráfico">IceWM, JWM, Fluxbox</td>
       <td data-label="Requisitos Mínimos">256 MB RAM, 3 GB disco, CPU i686</td>
-      <td data-label="Estado">✅ Ativa (2024)</td>
+      <td data-label="Estado"> Ativa (2024)</td>
     </tr>
     <tr>
       <td data-label="Distribuição">Lubuntu</td>
       <td data-label="Base">Ubuntu LTS</td>
       <td data-label="Ambiente Gráfico">LXQt</td>
       <td data-label="Requisitos Mínimos">1 GB RAM, 10 GB disco, CPU x86_64</td>
-      <td data-label="Estado">✅ Ativa (2024)</td>
+      <td data-label="Estado"> Ativa (2024)</td>
     </tr>
     <tr>
       <td data-label="Distribuição">Puppy Linux</td>
       <td data-label="Base">Ubuntu / Debian (varia por versão)</td>
       <td data-label="Ambiente Gráfico">JWM, Openbox</td>
       <td data-label="Requisitos Mínimos">512 MB RAM, roda em RAM</td>
-      <td data-label="Estado">✅ Ativa (FossaPup, BionicPup)</td>
+      <td data-label="Estado"> Ativa (FossaPup, BionicPup)</td>
     </tr>
     <tr>
       <td data-label="Distribuição">Debian + LXDE</td>
       <td data-label="Base">Debian Stable</td>
       <td data-label="Ambiente Gráfico">LXDE</td>
       <td data-label="Requisitos Mínimos">512 MB RAM, 5 GB disco</td>
-      <td data-label="Estado">✅ Ativa (instalação manual)</td>
+      <td data-label="Estado"> Ativa (instalação manual)</td>
     </tr>
     <tr>
       <td data-label="Distribuição">4MLinux</td>
       <td data-label="Base">Própria (Slackware-like)</td>
       <td data-label="Ambiente Gráfico">JWM</td>
       <td data-label="Requisitos Mínimos">256 MB RAM, 1.5 GB disco</td>
-      <td data-label="Estado">✅ Ativa (24.1 em 2024)</td>
+      <td data-label="Estado"> Ativa (24.1 em 2024)</td>
     </tr>
     <tr>
       <td data-label="Distribuição">LXLE</td>
       <td data-label="Base">Ubuntu LTS</td>
       <td data-label="Ambiente Gráfico">LXDE</td>
       <td data-label="Requisitos Mínimos">512 MB RAM</td>
-      <td data-label="Estado">❌ Descontinuada (última: 2018)</td>
+      <td data-label="Estado"> Descontinuada (última: 2018)</td>
     </tr>
     <tr>
       <td data-label="Distribuição">ArchBang</td>
       <td data-label="Base">Arch Linux</td>
       <td data-label="Ambiente Gráfico">Openbox</td>
       <td data-label="Requisitos Mínimos">512 MB RAM, conhecimento técnico exigido</td>
-      <td data-label="Estado">⚠️ Projeto inativo (última ISO: 2019)</td>
+      <td data-label="Estado"> Projeto inativo (última ISO: 2019)</td>
     </tr>
   </tbody>
 </table>
