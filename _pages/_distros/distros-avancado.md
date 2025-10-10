@@ -44,6 +44,7 @@ permalink: /distros/avancado/
       <td data-label="Base">Nenhuma (do zero)</td>
       <td data-label="Comando/Link Útil"><a href="https://www.linuxfromscratch.org/lfs/downloads/stable/LFS-BOOK-12.4.pdf" target="_blank" rel="noopener noreferrer">PDF LFS 12.2</a></td>
     </tr>
+       
     <tr>
       <td data-label="Projeto">Arch Linux</td>
       <td data-label="Tipo">Rolling release.</td>
