@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "DPMS no Linux – Controle Técnico com xset"
 description: "Tabela objetiva com comandos para ativar, desativar e configurar DPMS via terminal — sem opiniões, só referência técnica."
 permalink: /dpms-linux-xset/
