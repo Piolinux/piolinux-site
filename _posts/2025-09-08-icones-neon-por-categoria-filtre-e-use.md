@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "50 Ícones Neon SVG — Tudo em 1 Página (Download Rápido)"
 description: "50 ícones neon SVG em uma única página. Escolha o tamanho e baixe com 1 clique. Nada de arquivos externos — tudo inline, rápido e confiável."
 tags:
