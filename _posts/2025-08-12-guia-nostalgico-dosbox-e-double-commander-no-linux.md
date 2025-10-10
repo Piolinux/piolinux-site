@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "DOSBox e Double Commander – Referência Técnica"
 description: "Tabela com comandos corretos de instalação, uso real e avisos técnicos — sem nostalgia, só utilidade prática."
 permalink: /dosbox-double-commander/
