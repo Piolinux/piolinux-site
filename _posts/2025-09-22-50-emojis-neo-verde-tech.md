@@ -1,6 +1,6 @@
 ---
 layout: manual-seo
-title: "50 Emojis Estilizados — Copie e Cole para Seus Projetos"
+title: '50 Emojis Estilizados — Copie e Cole para Seus Projetos'
 description: "Coleção de 50 ícones estilizados como emojis para uso em READMEs, commits, documentação técnica e terminais. Clique e copie em 1 segundo — sem instalação."
 date: 2025-09-22
 author: "PioLinux"
