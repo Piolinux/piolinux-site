@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "MX Linux – Ferramentas Técnicas e Gerenciamento de Repositórios"
 description: "Tabela objetiva com MX Repo Manager, atualização, Snapshot e edição de repositórios — sem linguagem informal, só referência técnica."
 permalink: /mx-linux-ferramentas-tecnicas/
