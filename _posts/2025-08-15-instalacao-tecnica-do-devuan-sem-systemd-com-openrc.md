@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Instalação Técnica do Devuan – Sem systemd, com OpenRC"
 description: "Tabela objetiva com requisitos, ISO, criação de USB, init system e pós-instalação — sem linguagem informal, só referência técnica."
 permalink: /instalacao-devuan/
