@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Android: Gerenciamento de Arquivos e Segurança Real"
 description: "Tabela técnica com Files by Google, Amaze, Play Protect e alertas sobre antivírus falsos — sem recomendações comerciais ou mitos de segurança."
 permalink: /android-arquivos-seguranca/
