@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Comandos para Recuperação de Disco no Linux"
 description: "Tabela objetiva com ddrescue, TestDisk, PhotoRec, fsck, badblocks e mais — comandos reais, avisos técnicos e uso seguro com SEU_DISCO."
 author: "Piolinux"

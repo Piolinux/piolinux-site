@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Terminal Linux – Referência Técnica Completa"
 description: "Tabelas práticas com atalhos, pacotes, rede, automação e monitoramento — sem metáforas, só comandos reais e copiáveis."
 permalink: /terminal-linux-referencia-completa/

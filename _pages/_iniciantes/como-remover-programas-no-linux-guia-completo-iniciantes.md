@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Comandos Seguros para Remover Programas no Linux"
 description: "Remoção segura de pacotes com APT, Snap e Flatpak — com avisos técnicos reais e comandos testados."
 author: "Piolinux"

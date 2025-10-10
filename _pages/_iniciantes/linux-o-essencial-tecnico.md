@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Linux – O Essencial Técnico"
 description: "Tabelas objetivas sobre kernel, distros, vantagens reais, onde o Linux é usado e como começar — sem metáforas, só fatos."
 permalink: /linux-essencial-tecnico/

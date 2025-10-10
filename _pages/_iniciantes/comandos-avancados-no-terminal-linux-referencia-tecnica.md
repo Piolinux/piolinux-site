@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: Comandos Avançados no Terminal Linux – Referência Técnica
 description: 'Tabelas com find, grep, rsync, chmod, htop, lsof, scripts Bash e automação — sem linguagem informal, só comandos reais.'
 permalink: /comandos-avancados-terminal/

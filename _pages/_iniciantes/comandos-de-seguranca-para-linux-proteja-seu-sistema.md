@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Comandos de Segurança para Linux: Proteja seu Sistema"
 description: "Coleção de comandos para segurança no Linux: firewall, bloqueio de IP, detecção de rootkits, SSH seguro, fail2ban, nmap."
 date: 2025-09-07

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Índice Técnico Linux: Comandos, Ferramentas e Recuperação"
 description: "Referência direta: comandos seguros, ferramentas de resgate, ISOs oficiais (Devuan, Ubuntu) e scripts testados — zero conteúdo genérico."
 author: "Piolinux"

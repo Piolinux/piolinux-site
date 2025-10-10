@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Segurança no Linux – Práticas Técnicas Reais"
 description: "Tabela com atualizações, firewall, backups, senhas e mitos comuns — sem linguagem informal, só ações técnicas comprovadas."
 permalink: /seguranca-linux/

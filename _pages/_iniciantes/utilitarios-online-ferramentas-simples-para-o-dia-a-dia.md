@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: Ferramentas Técnicas Online — 100% no Navegador, 0% Setup                                
 description: 'Gere comandos Docker, cron, chmod, IPs, senhas e mais — tudo online, sem cadastro, 100% grátis. Ideal para terminal, automação e sysadmin.'
 author: "PioLinux"
