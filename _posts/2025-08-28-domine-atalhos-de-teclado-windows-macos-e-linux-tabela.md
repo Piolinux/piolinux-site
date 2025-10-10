@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Domine Atalhos de Teclado: Windows, macOS e Linux (Tabela)"
 description: "Domine atalhos de teclado para Windows, macOS e Linux — tabela completa para quem usa múltiplos sistemas e terminal no dia a dia!"
 date: 2025-08-28 08:00:00 -0300
