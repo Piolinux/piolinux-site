@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Limites de Caracteres por Plataforma"
 description: "Tabela com limites reais do Google, X, Instagram e meta descriptions — para escrever com clareza."
 author: "Piolinux"
