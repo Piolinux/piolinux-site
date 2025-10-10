@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Instale Ubuntu, Arch, Fedora e Mais — Tudo em Uma Tabela!"
 description: "Baixe ou copie: métodos de instalação de Ubuntu, Arch, Fedora, Mint, Manjaro, Pop!_OS e mais — tudo em uma tabela fácil de usar."
 date: 2025-09-08
