@@ -5,7 +5,7 @@ description: "Lista dos principais navegadores evergreen: Chrome, Firefox, Edge,
 tags: ["navegadores", "evergreen", "tabela", "web"]
 categories: ["Web", "Ferramentas"]
 permalink: /navegadores-evergreen-2025
-layout: default
+layout: manual-seo
 ---
 
 
