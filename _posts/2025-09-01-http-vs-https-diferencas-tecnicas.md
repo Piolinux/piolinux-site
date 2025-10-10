@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "HTTP vs HTTPS: Diferenças Técnicas"
 description: "Tabela comparativa com portas, criptografia, certificados e mais — sem enfeites."
 author: "PioLinux"
