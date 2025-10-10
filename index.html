@@ -1,61 +1,52 @@
 ---
 layout: manual-seo
-title_custom: "Ferramentas Online e Comandos de Resgate Linux"
-description_custom: "Comandos testados para recuperação de sistemas, ferramentas online úteis e links diretos para ISOs oficiais (Devuan, Ubuntu, SystemRescue)."
-title: "Ferramentas Online e Comandos de Resgate Linux"
-tags: [linux, resgate, terminal, sysadmin, comandos, ferramentas-online, iso-oficial, devuan, ubuntu, systemrescue]
+title: "Linux Técnico — Referência por Categoria"
+description: "Índice técnico com tabelas validadas: distros, comandos, init systems, ferramentas online, resgate. Zero fluff, só utilidade."
+permalink: /
+tags: [linux, sysadmin, referência, comandos, distros, técnico]
 ---
 
-<h2>Últimas postagens</h2>
-
-<section>
-  <ul class="post-list">  <!-- ✅ ADICIONE A CLASSE AQUI -->
-    {% for post in paginator.posts %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-
-  {% if paginator.total_pages > 1 %}
-  <nav class="pagination">  <!-- ✅ ADICIONE A CLASSE AQUI TAMBÉM -->
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}">←</a>
-    {% endif %}
-    <span>{{ paginator.page }}/{{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}">→</a>
-    {% endif %}
-  </nav>
-  {% endif %}
-</section>
 
 
-<style>
+
+<p>Tabelas validadas, comandos copiáveis, ISOs oficiais. Zero fluff. Só o essencial.</p>
+
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Categoria</th>
+      <th>O que você resolve aqui</th>
+      <th>Acessar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Categoria">Distros Linux</td>
+      <td data-label="O que você resolve aqui">Escolha por uso: resgate, servidor, desktop, DIY. Compare init, kernel, firmware, ISO oficial.</td>
+      <td data-label="Acessar"><a href="/distros/">Ver distros</a></td>
+    </tr>
+    <tr>
+      <td data-label="Categoria">Comandos Técnicos</td>
+      <td data-label="O que você resolve aqui">Tabelas por tarefa: compactação, rede, permissões, monitoramento, backup.</td>
+      <td data-label="Acessar"><a href="/comandos/">Ver comandos</a></td>
+    </tr>
+    <tr>
+      <td data-label="Categoria">Sistemas de Inicialização</td>
+      <td data-label="O que você resolve aqui">systemd vs OpenRC vs runit: comandos equivalentes, ISOs, como montar sua distro.</td>
+      <td data-label="Acessar"><a href="/sistemas-de-inicializacao/">Ver init</a></td>
+    </tr>
+    <tr>
+      <td data-label="Categoria">Ferramentas Online</td>
+      <td data-label="O que você resolve aqui">Conversores técnicos: chmod, IP/subnet, timestamp, cron — sem cadastro, 100% offline-capable.</td>
+      <td data-label="Acessar"><a href="/ferramentas/">Ver ferramentas</a></td>
+    </tr>
+    <tr>
+      <td data-label="Categoria">Resgate e Recuperação</td>
+      <td data-label="O que você resolve aqui">Comandos seguros para recuperação de disco, partição, GRUB, sistema de arquivos.</td>
+      <td data-label="Acessar"><a href="/recuperacao-e-manutencao/">Ver resgate</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
-/* Estilo acessível para navegação de paginação */
-.pagination a {
-  color: #000;              /* Texto preto — alto contraste sobre fundo verde */
-  background-color: #80ff00;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  display: inline-block;
-  margin: 0 0.25rem;
-}
-
-.pagination a:hover,
-.pagination a:focus {
-  background-color: #44d767;
-  outline: 2px solid #000;
-  outline-offset: 2px;
-}
-
-.pagination span {
-  color: #a6adc8;
-  font-weight: bold;
-  margin: 0 0.5rem;
-}
-
-</style>
 
