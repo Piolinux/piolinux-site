@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Documentação no Linux – Referência Técnica"
 description: "Tabela objetiva com man pages, help rápido, documentação online e pacotes — sem fluff, só fontes e comandos reais."
 permalink: /documentacao-linux/
