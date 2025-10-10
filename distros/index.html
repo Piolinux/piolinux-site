@@ -6,21 +6,47 @@ permalink: /distros/
 tags: [distros, linux, tabela-comparativa, iso, init, systemd, openrc, firmware, kernel, hardware, systemrescue, devuan, artix, mx-linux, diy]
 ---
 
-<section class="post-content">
-  <main>
-    <p>Distros Linux Técnicas: Resgate, Servidor, Desktop.</p>
 
-    <div class="standard-list">
-      {% assign distro_pages = site.pages | where_exp: "page", "page.url contains 'distros/' and page.url != 'distros/' and page.url != 'distros/resgate/'" %}
-      {% for page in distro_pages %}
-        <li>
-          <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
-          <p>{{ page.description }}</p>
-        </li>
-      {% endfor %}
-    </div>
-  </main>
+<section>
+
+
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Categoria</th>
+      <th>Distros-Chave</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Categoria">Resgate</td>
+      <td data-label="Distros-Chave">SystemRescue, GParted, Finnix</td>
+      <td data-label="Link"><a href="/distros/resgate/">Ver</a></td>
+    </tr>
+    <tr>
+      <td data-label="Categoria">Servidor</td>
+      <td data-label="Distros-Chave">Debian, Alpine, Rocky Linux</td>
+      <td data-label="Link"><a href="/distros/servidor/">Ver</a></td>
+    </tr>
+    <tr>
+      <td data-label="Categoria">Desktop</td>
+      <td data-label="Distros-Chave">Mint, Zorin, Fedora</td>
+      <td data-label="Link"><a href="/distros/desktop/">Ver</a></td>
+    </tr>
+    <tr>
+      <td data-label="Categoria">DIY / Técnico</td>
+      <td data-label="Distros-Chave">Arch, Gentoo, Slackware</td>
+      <td data-label="Link"><a href="/distros/avancado/">Ver</a></td>
+      
+      <tr>
+      <td data-label="Categoria">Distro Underground</td>
+      <td data-label="Distros-Chave">Devuan, Artix, Void</td>
+      <td data-label="Link"><a href="/distros/underground/">Ver</a></td>
+    </tr>
+      
+    </tr>
+  </tbody>
+</table>
+
 </section>
-
-
-
