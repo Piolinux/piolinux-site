@@ -1,117 +1,16 @@
 ---
 layout: manual-seo
-title_custom: "Sistema Linux — Kernel, Boot, Init | Piolinux"  
-title: "Sistema Linux — Kernel, Boot, Init"
-description_custom: "Tudo sobre o coração do Linux: tipos de kernel, compilação, reparo de boot, init systems (systemd, OpenRC, runit) — guias técnicos, atemporais e sem modas."
-permalink: /sistema/
-tags: [sistema, linux, kernel, boot, init, systemd, openrc, runit, compilacao, evergreen, sysadmin]
+title: "Recuperação, Backup e Sistema — Referência Técnica"
+description: "Tabelas com comandos reais para recuperação de disco, backup seguro, formatação, compilação de kernel e arquiteturas do Linux."
+permalink: /recuperacao/
 ---
 
+<p>Tabelas técnicas validadas, comandos copiáveis, avisos de segurança. Zero fluff. Só o essencial.</p>
 
-
-
-
-<section>
-<main>
-  <p>{{ page.description }}</p>
-
-  {% assign pages = site.pages | where_exp: "page", "page.url contains '/compilar-kernel/' or page.url contains '/arquiteturas-kernel/' or page.url contains '/formatar-hd-linux/' or page.url contains '/comandos-recuperacao-disco-linux/' or page.url contains  '/programas-backup-seguros/' " %}
-
-  {% if pages.size == 0 %}
-    <p>⚠️ Nenhuma página encontrada. Verifique se as páginas existem e têm front matter válido.</p>
-  {% else %}
-    <ul class="standard-list">
-      {% for page in pages %}
-        <li>
-          <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
-          <p>{{ page.description }}</p>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-</main>
-</section>
-
-
-
-<style>
-.page-list li {
-  background: #1a1a2e;
-  padding: 1rem;
-  margin: 0.5rem 0;
-  border-radius: 8px;
-}
-
-.page-list a {
-  font-family: 'Fira Code', monospace;
-  font-size: 1.3rem;
-  color: #50fa7b;
-  text-decoration: none;
-}
-
-.page-list p {
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 1rem;
-  color: #a6adc8;
-  margin: 0.5rem 0 0;
-}
-</style>
-
-
-
-
-
-
-
-
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "{{ page.title }}",
-  "description": "{{ page.description }}",
-  "inLanguage": "pt-BR",
-  "url": "{{ page.url | absolute_url }}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ page.url | absolute_url }}"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Equipe PiO Linux"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "PiO Linux",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://piolinux.com/logo-512.png",
-      "width": 512,
-      "height": 512
-    }
-  },
-  "datePublished": "2025-04-05T10:00:00+00:00",
-  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}",
-  "mainEntity": [
-    {
-      "@type": "Table",
-      "name": "Tipos de Kernel Linux",
-      "description": "Arquiteturas de Kernel — Comparação Técnica."
-    },
-    {
-      "@type": "Table",
-      "name": "Como Compilar o Kernel Linux",
-      "description": "Tabela de passos essenciais, flags de configuração, comandos de compilação e instalação do kernel Linux."
-    }
-  ],
-  "hasPart": [
-    {
-      "@type": "TechArticle",
-      "name": "Formatar HD no Linux",
-      "url": "https://www.piolinux.com/formatar-hd-linux/"
-    }
-  ]
-}
-</script>
+<ul>
+  <li><a href="/recuperacao/comandos-recuperacao-disco/">Comandos para Recuperação de Disco</a> — ddrescue, TestDisk, PhotoRec, fsck, badblocks</li>
+  <li><a href="/recuperacao/programas-backup-seguros/">Programas de Backup Seguros</a> — Deja Dup, Timeshift, BorgBackup, Duplicati</li>
+  <li><a href="/recuperacao/formatar-hd-linux/">Formatar HD no Linux</a> — comandos seguros com <code>fdisk</code>, <code>parted</code>, <code>mkfs</code></li>
+  <li><a href="/recuperacao/compilar-kernel-linux/">Compilar Kernel Linux</a> — etapas técnicas com <code>make menuconfig</code>, <code>make -j$(nproc)</code></li>
+  <li><a href="/recuperacao/arquiteturas-kernel/">Arquiteturas de Kernel</a> — monolítico vs. módulos, initramfs, KASLR, mitigação de falhas</li>
+</ul>
