@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Gravador de ISO/USB: Qual Ferramenta Usar em 2025?"
 description: "Tabela comparativa prática: Rufus, BalenaEtcher, Ventoy, dd, UNetbootin — escolha a melhor ferramenta para gravar ISO em USB, por sistema e nível de dificuldade."
 date: 2025-09-12
