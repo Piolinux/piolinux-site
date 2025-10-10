@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Editores de Texto no Linux – Referência Técnica"
 description: "Tabela objetiva com Nano, Vim, Gvim, Gedit, Mousepad e Leafpad: quando usar, comandos de instalação e observações técnicas reais."
 permalink: /editores-texto-linux/
