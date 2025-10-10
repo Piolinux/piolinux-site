@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Ferramentas Essenciais: PDF, Captura e Documentação no Linux"
 description: "Tabela técnica com Evince, Zathura, Flameshot e man pages — comandos reais, alternativas ativas e avisos sobre ferramentas obsoletas."
 permalink: /ferramentas-essenciais-linux/
