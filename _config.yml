@@ -25,14 +25,6 @@ url: "https://piolinux.com"  # ← sem espaços!
 lang: "pt-BR"
 locale: "pt_BR"
 
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-seo-tag
-
-paginate: 10
-paginate_path: "/page:num/"
-permalink: /:title/
 
 exclude:
   - _site/
