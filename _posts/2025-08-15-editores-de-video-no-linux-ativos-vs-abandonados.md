@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Editores de Vídeo no Linux – Ativos vs. Abandonados"
 description: "Tabela técnica com Kdenlive, Shotcut, OpenShot e Kino — estado atual, comandos de instalação e avisos sobre software obsoleto."
 permalink: /editores-video-linux/
