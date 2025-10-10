@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Gere Arquivos para Jekyll: data + slug + .md Automático"
 description: "Use esta ferramenta para gerar nomes de arquivo Jekyll (AAAA-MM-DD-slug.md) com precisão — ideal para organizar _posts/ sem erros."
 date: 2025-09-02
