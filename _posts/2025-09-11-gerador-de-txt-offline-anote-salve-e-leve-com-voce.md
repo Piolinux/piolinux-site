@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: Gerador de Arquivos .txt Offline — HTML + JS Puro
 description: "Crie e baixe arquivos .txt offline — sem cadastro, sem nuvem, só HTML+JS. Ideal para anotações, lembretes e configurações."
 date: 2025-09-12
