@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Recuperação e Manutenção — Comandos Linux"
 description: "Guia técnico com comandos essenciais de Recuperação e Manutenção. Copie, cole e use direto no terminal. Organizado por recuperação e manutenção."
 permalink: /recuperacao-e-manutencao/

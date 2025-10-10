@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Usuários e Permissões — Comandos Linux"
 description: "Guia técnico com comandos essenciais de Usuários e Permissões. Copie, cole e use direto no terminal. Organizado por usuários e permissões."
 permalink: /usuarios-e-permissoes/

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Segurança e Firewall — Comandos Linux"
 description: "Guia técnico com comandos essenciais de Segurança e Firewall. Copie, cole e use direto no terminal. Organizado por segurança e firewall."
 permalink: /seguranca-e-firewall/

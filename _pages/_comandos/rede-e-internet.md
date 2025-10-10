@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Rede e Internet — Comandos Linux"
 description: "Guia técnico com comandos essenciais de Rede e Internet. Copie, cole e use direto no terminal. Organizado por rede e internet."
 permalink: /rede-e-internet/

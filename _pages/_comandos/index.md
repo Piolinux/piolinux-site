@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Índice de Comandos Linux — 500+ comandos em 18 categorias"
 description: "Biblioteca técnica com 500+ comandos Linux validados, organizados em categorias e formatados em tabelas copiáveis com 1 clique."
 permalink: /comandos/

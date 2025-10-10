@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Aplicativos Gráficos Seguros para Compactação e Extração no Linux"
 description: "PeaZip, File Roller, Ark, Xarchiver — interfaces seguras para compactar e extrair arquivos sem risco de comandos manuais perigosos."
 author: "Piolinux"

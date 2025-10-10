@@ -1,16 +1,15 @@
 ---
 layout: manual-seo
-title: "Comandos Avançados Linux — Tabela Técnica"
-description: "Tabela com comandos avançados para sysadmin: find, awk, sed, rsync, journalctl, strace, lsof, perf. Copiável e testado."
-permalink: /comandos-avancados-linux/
-tags: [linux, comandos, sysadmin, terminal, awk, sed, find, rsync, journalctl]
+title: "🚀 Comandos Avançados e Dicas — Comandos Linux"
+description: "Guia técnico com comandos essenciais de Comandos Avançados e Dicas. Copie, cole e use direto no terminal. Organizado por comandos avançados e dicas."
+permalink: /comandos-avancados-e-dicas/
 ---
 
 
 <section>
 
 
-<h2>Comandos Gerais.</h2>
+<h2>🖥 Comandos Gerais.</h2>
 
 
 <input type="text" oninput="filtrarLinhas(this.value)" placeholder="Filtrar comandos...">

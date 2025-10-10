@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Tarefas Agendadas — Comandos Linux"
 description: "Guia técnico com comandos essenciais de Tarefas Agendadas. Copie, cole e use direto no terminal. Organizado por tarefas agendadas."
 permalink: /tarefas-agendadas/
