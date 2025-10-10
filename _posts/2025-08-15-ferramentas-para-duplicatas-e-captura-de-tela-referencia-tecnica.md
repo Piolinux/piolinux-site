@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Ferramentas para Duplicatas e Captura de Tela – Referência Técnica"
 description: "Tabela com DupeGuru, fdupes, Flameshot e GIMP: instalação correta, propósito real e alternativas ativas — sem alarmismo ou comandos falsos."
 permalink: /ferramentas-duplicatas-captura-tela/
