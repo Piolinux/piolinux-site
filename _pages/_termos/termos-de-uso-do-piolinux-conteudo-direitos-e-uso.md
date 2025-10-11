@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Termos de Uso do Piolinux: Conteúdo, Direitos e Uso"
 description: "Leia os termos de uso do Piolinux. Entenda direitos autorais, uso do conteúdo, política de privacidade e como você pode compartilhar nossos artigos."
 date: 2025-09-27
