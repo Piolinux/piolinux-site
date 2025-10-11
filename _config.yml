@@ -72,6 +72,9 @@ collections:
   termos:
     output: true
     permalink: /termos/:title/
+  referencias:
+    output: true
+    permalink: /referencias/:title/   
 
 include:
   - _ferramentas
@@ -85,7 +88,7 @@ include:
   - _tools
   - _piadas
   - _termos
-    
+  - _referencias  
     
 # Para JS, use um plugin ou minifique manualmente
 
