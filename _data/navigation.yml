@@ -9,7 +9,11 @@
   - name: "Ferramentas"
     link: "/ferramentas/"
     icon: "🛠️"
-
+  
+  - name: "Referencias"
+    link: "/referencias/"
+    icon: "🛠️"
+  
   - name: "Distros"
     link: "/distros/"
     icon: "🐧"
