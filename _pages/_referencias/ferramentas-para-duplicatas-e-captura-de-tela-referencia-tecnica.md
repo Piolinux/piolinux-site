@@ -51,7 +51,7 @@ tags: [dupeguru, shutter, ferramentas, linux, produtividade]
         <code>sudo apt install flameshot</code>
         <button class="copy-btn" data-command="sudo apt install flameshot">📋 Copiar</button>
       </td>
-      <td data-label="Observação Técnica">Shutter só em pacote Snap e repositorios de Arch Linux. Flameshot é ativo, leve e integrado com atalhos de teclado.</td>
+      <td data-label="Observação Técnica">Flameshot é ativo, leve e integrado com atalhos de teclado.</td>
     </tr>
     <tr>
       <td data-label="Ferramenta">GIMP</td>
