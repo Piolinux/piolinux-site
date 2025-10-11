@@ -82,11 +82,7 @@ tags: [dupeguru, shutter, ferramentas, linux, produtividade]
       <td data-label="Fato">Sempre faça backup antes de remover em massa</td>
       <td data-label="Explicação">Use <code>rsync</code> ou <code>tar</code> para copiar a pasta antes de usar <code>fdupes -d</code>.</td>
     </tr>
-    <tr>
-      <td data-label="Fato">Shutter não está mais nos repositórios</td>
-      <td data-label="Explicação">Última versão: 2019. Use Flameshot, Spectacle (KDE) ou GNOME Screenshot + GIMP.</td>
-    </tr>
-  </tbody>
+   </tbody>
 </table>
     </section>
 
