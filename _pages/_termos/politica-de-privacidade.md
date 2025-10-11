@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: manual-seo
 title: "Política de Privacidade"
 description: "Saiba mais sobre como o site Piolinux coleta, usa e protege seus dados. Conheça nossa política de cookies e as informações."
 keywords: "política de privacidade, privacidade de dados, cookies, LGPD, direitos do usuário, proteção de dados"
