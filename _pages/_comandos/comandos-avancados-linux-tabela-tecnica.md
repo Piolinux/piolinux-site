@@ -126,7 +126,7 @@ function filtrarLinhas(termo) {
     </tr>
     <tr>
       <td data-label="Comando"><code>man hier</code></td>
-      <td data-label="Descrição">Vamos dar uma olhada de maneira descontraída na estrutura dos diretórios do Linux.</td>
+      <td data-label="Descrição">Estrutura dos diretórios do Linux.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="man hier">📋</button></td>
     </tr>
   </tbody>
