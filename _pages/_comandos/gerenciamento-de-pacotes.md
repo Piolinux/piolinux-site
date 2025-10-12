@@ -142,7 +142,7 @@ function filtrarLinhas(termo) {
 </table>
 </div>
 
-<h3>🖥🏹 Arch Linux (Pacman + AUR)</h3>
+<h3> Arch Linux (Pacman + AUR)</h3>
 
 <div class="table-container">
 <table class="evergreen-table">
@@ -260,7 +260,7 @@ function filtrarLinhas(termo) {
 </table>
 </div>
 
-<h3>🖥 🔥 Fedora (DNF) </h3>
+<h3>Fedora (DNF) </h3>
 
 <div class="table-container">
 <table class="evergreen-table">
@@ -376,7 +376,7 @@ function filtrarLinhas(termo) {
 </table>
 </div>
 
-<h3>🖥 openSUSE (zypper) </h3>
+<h3> openSUSE (zypper) </h3>
 
 <div class="table-container">
 <table class="evergreen-table">
