@@ -84,7 +84,7 @@ tags: [mx-linux, repositórios, atualização, apt, debian, segurança]
     </tr>
     <tr>
       <td data-label="Fato">Atualizações mais recentes.</td>
-      <td data-label="Explicação">Versão atual: **MX-25** (2025),Versão Beta, baseada no **Debian 13 Trixie**. MX-23.6 foi a última da série 23 versão estável.</td>
+      <td data-label="Explicação">Versão atual: **MX-23** (2023),Versão estável, baseada no **Debian 12 Bookworm**.</td>
     </tr>
     <tr>
       <td data-label="Fato">Automatização ≠ ignorância</td>
