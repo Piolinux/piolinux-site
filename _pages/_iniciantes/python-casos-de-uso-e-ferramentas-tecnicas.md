@@ -3,7 +3,6 @@ layout: manual-seo
 title: "Python – Casos de Uso e Ferramentas Técnicas"
 description: "Tabela objetiva com frameworks e bibliotecas por domínio: web, dados, IA, automação, jogos, GUI e mobile — sem fluff, só referência técnica."
 permalink: /python-casos-uso/
-categories: [python, programação, tutoriais]
 tags: [python, automacao, web, dados, machine-learning,]
 ---
 
