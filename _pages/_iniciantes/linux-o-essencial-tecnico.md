@@ -153,22 +153,33 @@ tags: [linux, kernel, open-source, sistema-operacional,]
   </thead>
   <tbody>
     <tr>
-      <td data-label="Método">Testar sem instalar.</td>
-      <td data-label="Ação">Use um <strong>Live USB</strong> (com Rufus ou Balena Etcher)</td>
-    </tr>
-    <tr>
-  <td data-label="Método">Acesse o site do VirtualBox.</td>
+  <td data-label="Método">Testar sem instalar.</td>
   <td data-label="Ação">
-  <a href="https://www.virtualbox.org/" target="_blank" rel="noopener noreferrer">
-      🔗 Site oficial do VirtualBox para testar as Isos em ambiente virtual.
-    </a>
+    Use um <strong>Live USB</strong> criado com 
+    <a href="https://rufus.ie/" target="_blank" rel="noopener noreferrer">Rufus</a> 
+    ou 
+    <a href="https://www.balena.io/etcher/" target="_blank" rel="noopener noreferrer">Balena Etcher</a>.
   </td>
 </tr>
 
-    <tr>
-      <td data-label="Método">Primeira distro recomendada.</td>
-      <td data-label="Ação">Ubuntu ou Linux Mint (para desktop), Debian (para servidores)</td>
-    </tr>
+<tr>
+  <td data-label="Método">Testar Linux em ambiente virtual.</td>
+  <td data-label="Ação">
+    <a href="https://www.virtualbox.org/" target="_blank" rel="noopener noreferrer">
+      🔗 Acesse o site oficial do VirtualBox
+    </a>
+    e baixe a versão compatível com seu sistema operacional (Windows, macOS ou Linux).  
+   </td>
+</tr>
+
+<tr>
+  <td data-label="Método">Primeira distro recomendada.</td>
+  <td data-label="Ação">
+    <strong>Ubuntu</strong> ou <strong>Linux Mint</strong> (para desktop),  
+    <strong>Debian</strong> (para servidores).
+  </td>
+</tr>
+
   </tbody>
 </table>
    
