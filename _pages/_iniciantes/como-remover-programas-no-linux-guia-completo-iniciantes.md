@@ -2,8 +2,6 @@
 layout: manual-seo
 title: "Comandos Seguros para Remover Programas no Linux"
 description: "Remoção segura de pacotes com APT, Snap e Flatpak — com avisos técnicos reais e comandos testados."
-author: "Piolinux"
-categories: [linux, gerenciamento-de-pacotes, segurança]
 tags: [apt, snap, flatpak, remoção-segura, linux, sysadmin]
 permalink: /remover-programas-linux/
 ---
