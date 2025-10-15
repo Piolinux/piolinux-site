@@ -3,7 +3,6 @@ layout: manual-seo
 title: Scripts Bash Básicos por Categoria - Copie, Cole e Use.
 description: "Coleção de scripts Bash reais, testados e formatados corretamente: automação, backup, segurança, administração. 100% offline, sem erros de cópia."
 permalink: /scripts-bash/
-categories: [linux, segurança, scripts]
 tags: [segurança, bash, firewall, fail2ban, ssh, nmap, rootkit, monitoramento]
 ---
 
