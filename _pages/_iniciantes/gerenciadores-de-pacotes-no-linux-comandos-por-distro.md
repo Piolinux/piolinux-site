@@ -3,7 +3,6 @@ layout: manual-seo
 title: "Gerenciadores de Pacotes no Linux – Comandos por Distro"
 description: "Tabela técnica com APT, DNF, Pacman e Zypper: comandos de instalação, remoção e atualização por distribuição — sem fluff, só referência."
 permalink: /gerenciadores-pacotes-linux/
-categories: [linux, pacotes, comandos]
 tags: [pacotes, linux, apt, dnf, pacman, zypper, instalacao]
 ---
 
