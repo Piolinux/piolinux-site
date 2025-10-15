@@ -2,8 +2,6 @@
 layout: manual-seo
 title: "Programas de Backup Seguros para Linux, macOS e Windows"
 description: "Deja Dup, Timeshift, BorgBackup, RsyncOSX, Duplicati — ferramentas reais com interface, histórico e restore confiável. Zero risco de comandos manuais."
-author: "Piolinux"
-categories: [backup, linux, segurança, utilitários, resgate]
 tags: [deja-dup, timeshift, borgbackup, rsyncosx, duplicati, kup, backintime, backup-seguro, linux]
 permalink: /programas-backup-seguros/
 ---
