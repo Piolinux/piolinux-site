@@ -2,8 +2,6 @@
 layout: manual-seo
 title: "Índice Técnico Linux: Comandos, Ferramentas e Recuperação"
 description: "Referência direta: comandos seguros, ferramentas de resgate, ISOs oficiais (Devuan, Ubuntu) e scripts testados — zero conteúdo genérico."
-author: "Piolinux"
-categories: [linux, terminal, resgate, sysadmin]
 tags: [indice, linux, comandos-seguros, resgate, devuan, ubuntu, terminal, sysadmin]
 permalink: /indice-linux/
 ---
