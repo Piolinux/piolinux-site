@@ -159,9 +159,8 @@ tags: [linux, kernel, open-source, sistema-operacional,]
     <tr>
   <td data-label="Método">Acesse o site do VirtualBox.</td>
   <td data-label="Ação">
-    <code>sudo apt install virtualbox</code><br>
-    <a href="https://www.virtualbox.org/" target="_blank" rel="noopener noreferrer">
-      🔗 Site oficial do VirtualBox
+  <a href="https://www.virtualbox.org/" target="_blank" rel="noopener noreferrer">
+      🔗 Site oficial do VirtualBox para testar as Isos em ambiente virtual.
     </a>
   </td>
 </tr>
