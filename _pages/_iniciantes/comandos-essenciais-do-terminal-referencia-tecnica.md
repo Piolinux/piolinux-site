@@ -3,7 +3,6 @@ layout: manual-seo
 title: "Comandos Essenciais do Terminal – Referência Técnica"
 description: "Tabela objetiva com navegação, arquivos, ajuda e sistema — comandos reais, exemplos úteis e alternativas seguras. Sem fluff."
 permalink: /comandos-essenciais-terminal-linux/
-categories: [linux, terminal, produtividade]
 tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
 ---
 
