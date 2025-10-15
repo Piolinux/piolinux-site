@@ -3,7 +3,6 @@ layout: manual-seo
 title: "Métodos de Instalação no Linux – APT, Flatpak, Snap, AppImage"
 description: "Tabela técnica comparando repositórios, .deb, Flatpak, Snap e AppImage: comandos, vantagens, desvantagens e quando usar cada um."
 permalink: /metodos-instalacao/
-categories: [linux, pacotes, comandos]
 tags: [pacotes, linux, apt, dnf, pacman, zypper, instalacao]
 ---
 
