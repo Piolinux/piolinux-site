@@ -157,12 +157,15 @@ tags: [linux, kernel, open-source, sistema-operacional,]
       <td data-label="Ação">Use um <strong>Live USB</strong> (com Rufus ou Balena Etcher)</td>
     </tr>
     <tr>
-      <td data-label="Método">Testar em máquina virtual.</td>
-      <td data-label="Ação">
-        <code>sudo apt install virtualbox</code>
-        <button class="copy-btn" data-command="sudo apt install virtualbox">📋 Copiar</button>
-      </td>
-    </tr>
+  <td data-label="Método">Acesse o site do VirtualBox.</td>
+  <td data-label="Ação">
+    <code>sudo apt install virtualbox</code><br>
+    <a href="https://www.virtualbox.org/" target="_blank" rel="noopener noreferrer">
+      🔗 Site oficial do VirtualBox
+    </a>
+  </td>
+</tr>
+
     <tr>
       <td data-label="Método">Primeira distro recomendada.</td>
       <td data-label="Ação">Ubuntu ou Linux Mint (para desktop), Debian (para servidores)</td>
