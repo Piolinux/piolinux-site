@@ -45,7 +45,7 @@ permalink: /programas-backup-seguros/
         <td data-label="Ferramenta">RsyncOSX</td>
         <td data-label="Plataforma">macOS</td>
         <td data-label="Propósito">Interface gráfica para `rsync` — backup seguro com agendamento</td>
-        <td data-label="Instalação"><a href="https://rsyncui.netlify.app/" target="_blank" rel="noopener">rsyncosx.github.io</a></td>
+        <td data-label="Instalação"><a href="https://rsyncui.netlify.app/" target="_blank" rel="noopener">rsyncui.netlify.app</a></td>
         <td data-label="Ação">—</td>
       </tr>
       <tr>
