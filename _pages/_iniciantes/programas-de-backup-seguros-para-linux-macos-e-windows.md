@@ -59,8 +59,8 @@ permalink: /programas-backup-seguros/
         <td data-label="Ferramenta">Kup</td>
         <td data-label="Plataforma">Linux (KDE)</td>
         <td data-label="Propósito">Backup integrado ao Dolphin com bup ou rsync.</td>
-        <td data-label="Instalação"><code>sudo apt install kup</code></td>
-        <td data-label="Ação"><button class="copy-btn" data-command="sudo apt install kup">📋</button></td>
+        <td data-label="Instalação"><code>sudo apt install kup-backup</code></td>
+        <td data-label="Ação"><button class="copy-btn" data-command="sudo apt install kup-backup">📋</button></td>
       </tr>
       <tr>
         <td data-label="Ferramenta">Back In Time</td>
