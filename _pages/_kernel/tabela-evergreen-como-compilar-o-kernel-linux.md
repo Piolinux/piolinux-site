@@ -13,9 +13,6 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
 
 <section class="post-content">
 
-
-
-
 <table class="evergreen-table">
   <thead>
     <tr>
@@ -36,30 +33,32 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
       <td data-label="Observação Crítica">Acesse <a href="https://kernel.org" target="_blank">kernel.org</a> para versões mais recentes.</td>
     </tr>
     <tr>
-      <td data-label="Etapa">3. Extrair sources e copiar config atual.</td>
-      <td data-label="Comando"><code>cd /usr/src
-sudo tar -xvf linux-source-*.tar.xz
-cd linux-source-*
-cp /boot/config-$(uname -r) .config</code></td>
+      <td data-label="Etapa">2.1. Verificar diretório.</td>
+      <td data-label="Comando"><code>cd /usr/src && ls</code></td>
+      <td data-label="Observação Crítica">Confirme o nome exato da pasta <code>linux-source-*</code> antes de extrair. Evita erros de caminho inexistente.</td>
+    </tr>
+    <tr>
+      <td data-label="Etapa">3. Extrair e preparar código-fonte.</td>
+      <td data-label="Comando"><code>sudo tar -xvf linux-source-*.tar.xz && cd linux-source-* && cp /boot/config-$(uname -r) .config</code></td>
       <td data-label="Observação Crítica">Esses passos garantem que você comece com a configuração atual do kernel, evitando problemas de compatibilidade.</td>
     </tr>
     <tr>
       <td data-label="Etapa">4. Configurar o Kernel.</td>
       <td data-label="Comando"><code>make olddefconfig</code></td>
-      <td data-label="Observação Crítica">Mantém sua config atual. Utilize <code>make menuconfig</code> para ajustes manuais.</td>
+      <td data-label="Observação Crítica">Mantém sua config atual. Utilize <code>make menuconfig</code> para ajustes manuais. Evite <code>make config</code> — é muito demorado.</td>
     </tr>
     <tr>
-      <td data-label="Etapa">5. Compilação</td>
-      <td data-label="Comando"><code>make -j$(nproc)</code></td>
-      <td data-label="Observação Crítica">Sem o comando <code>-j</code>, leva horas. Evite fixar <code>-j8</code> se não souber quantos núcleos seu CPU possui.</td>
+      <td data-label="Etapa">5. Compilação.</td>
+      <td data-label="Comando"><code>make </code></td>
+      <td data-label="Observação Crítica">Sem o comando <code>-j</code>, leva horas. Use <code>$(nproc)</code> para aproveitar todos os núcleos.</td>
     </tr>
     <tr>
       <td data-label="Etapa">6. Instalação de módulos.</td>
       <td data-label="Comando"><code>sudo make modules_install</code></td>
-      <td data-label="Observação Crítica">Obrigatório — sem os drivers, dispositivos podem não funcionar.</td>
+      <td data-label="Observação Crítica">Obrigatório — sem os drivers, os dispositivos podem não funcionar corretamente.</td>
     </tr>
     <tr>
-      <td data-label="Etapa">7. Instalação de kernel.</td>
+      <td data-label="Etapa">7. Instalação do kernel.</td>
       <td data-label="Comando"><code>sudo make install</code></td>
       <td data-label="Observação Crítica">Instala o kernel, System.map e config no <code>/boot/</code>.</td>
     </tr>
@@ -76,11 +75,9 @@ cp /boot/config-$(uname -r) .config</code></td>
   </tbody>
 </table>
 
-
-
-<p>Documentação oficial: <a href="https://wiki.archlinux.org/title/Kernel/Traditional_compilation" target="_blank">Arch Wiki Kernel</a></p>
-
-
+<p>📘 Documentação oficial: <a href="https://wiki.archlinux.org/title/Kernel" target="_blank">Arch Wiki Kernel</a></p>
 
 </section>
+
+
 
