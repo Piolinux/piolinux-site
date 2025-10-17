@@ -179,8 +179,9 @@ function filtrarLinhas(termo) {
   <td data-label="Instalar (Debian/Ubuntu)"><code>sudo systemctl enable --now atd</code></td>
   <td data-label="Propósito">
     Daemon necessário para executar tarefas agendadas. 
-    <a href="https://www.redhat.com/en/blog/linux-at-command" target="_blank">Referência Red Hat com exemplos dos comandos completos.</a>
+    
   </td>
+  <a href="https://www.redhat.com/en/blog/linux-at-command" target="_blank">Referência Red Hat com exemplos dos comandos completos do at.</a>
 </tr>
   </tbody>
 </table>
