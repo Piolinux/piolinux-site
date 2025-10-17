@@ -25,8 +25,7 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
   <tbody>
     <tr>
       <td data-label="Etapa">1. Dependências (Debian).</td>
-      <td data-label="Comando"><code>sudo apt update
-sudo apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev</code></td>
+      <td data-label="Comando"><code>sudo apt update&&sudo apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev</code></td>
       <td data-label="Observação Crítica">Use <code>apt</code>, <code>dnf</code>, <code>xbps-install</code> conforme sua distro.</td>
     </tr>
     <tr>
