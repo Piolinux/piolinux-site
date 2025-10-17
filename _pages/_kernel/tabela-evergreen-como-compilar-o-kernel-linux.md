@@ -53,9 +53,9 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
       <td data-label="Observação Crítica">Para acelerar, use make -j$(nproc) e o sistema detectará automaticamente o número de núcleos da CPU.</td>
     </tr>
     <tr>
-      <td data-label="Etapa">6. Instalação de módulos.</td>
+      <td data-label="Etapa">6. Instalação de módulos</td>
       <td data-label="Comando"><code>sudo make modules_install</code></td>
-      <td data-label="Observação Crítica">Obrigatório — sem os drivers, os dispositivos podem não funcionar corretamente.</td>
+      <td data-label="Observação Crítica">Obrigatório sem os drivers, os dispositivos podem não funcionar corretamente.</td>
     </tr>
     <tr>
       <td data-label="Etapa">7. Instalação do kernel.</td>
