@@ -50,7 +50,7 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
     <tr>
       <td data-label="Etapa">5. Compilação.</td>
       <td data-label="Comando"><code>make </code></td>
-      <td data-label="Observação Crítica">Sem o comando <code>-j</code>, leva horas. Use <code>$(nproc)</code> para aproveitar todos os núcleos.</td>
+      <td data-label="Observação Crítica">Para acelerar, use make -j$(nproc) e o sistema detectará automaticamente o número de núcleos da CPU.</td>
     </tr>
     <tr>
       <td data-label="Etapa">6. Instalação de módulos.</td>
