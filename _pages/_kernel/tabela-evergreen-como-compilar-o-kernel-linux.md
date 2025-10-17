@@ -1,4 +1,4 @@
----
+e---
 layout: manual-seo
 title_custom: "Compilar Kernel Linux — Comandos e Etapas Técnicas | Piolinux"
 description_custom: "Tabela com comandos reais para compilar kernel Linux: dependências, configuração, make -j$(nproc), instalação e atualização do GRUB."
@@ -32,7 +32,7 @@ sudo apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev
     <tr>
       <td data-label="Etapa">2. Baixar kernel.</td>
       <td data-label="Comando"><code>sudo apt install linux-source*</code></td>
-      <td data-label="Observação Crítica">Sempre consulte <a href="https://kernel.org" target="_blank">kernel.org</a> para versões mais recentes.</td>
+      <td data-label="Observação Crítica">Acesse <a href="https://kernel.org" target="_blank">kernel.org</a> para versões mais recentes.</td>
     </tr>
     <tr>
       <td data-label="Etapa">3. Configurar o Kernel.</td>
@@ -47,7 +47,7 @@ sudo apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev
     <tr>
       <td data-label="Etapa">5. Instalação de módulos.</td>
       <td data-label="Comando"><code>sudo make modules_install</code></td>
-      <td data-label="Observação Crítica">Obrigatório — sem os drivers os dispositivos podem não funcionar.</td>
+      <td data-label="Observação Crítica">Obrigatório sem os drivers os dispositivos podem não funcionar.</td>
     </tr>
     <tr>
       <td data-label="Etapa">6. Instalação de kernel.</td>
