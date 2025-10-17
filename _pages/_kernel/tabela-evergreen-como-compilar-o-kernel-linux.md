@@ -41,7 +41,7 @@ sudo apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev
     </tr>
     <tr>
       <td data-label="Etapa">4. Compilação</td>
-      <td data-label="Comando"><code>make -j$(nproc)</code></td>
+      <td data-label="Comando"><code>make </code></td>
       <td data-label="Observação Crítica">Sem o comando <code>-j</code>, leva horas. Evite fixar <code>-j8</code> se não souber quantos núcleos seu CPU possui.</td>
     </tr>
     <tr>
