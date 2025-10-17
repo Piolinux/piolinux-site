@@ -115,9 +115,9 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="pwck">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>grpck</code></td>
+      <td data-label="Comando"><code>cat /etc/group</code></td>
       <td data-label="Descrição">Verifica grupos.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="grpck">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="cat /etc/group">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>id -u usuario</code></td>
