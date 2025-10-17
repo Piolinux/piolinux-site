@@ -64,10 +64,10 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
       <td data-label="Etapa">8. Verificar após reboot.</td>
       <td data-label="Comando"><code>uname -r</code></td>
       <td data-label="Observação Crítica">Confirme que a versão mudou.</td>
-      Documentação<a href="https://wiki.archlinux.org/title/Kernel" target="_blank">Arch Wiki Kernel</a>
-    </tr>
+     </tr>
   </tbody>
 </table>
-   
+    Documentação: <a href="https://wiki.archlinux.org/title/Kernel" target="_blank">Arch Wiki Kernel</a>
+    
 </section>
 
