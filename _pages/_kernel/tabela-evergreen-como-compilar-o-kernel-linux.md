@@ -67,7 +67,7 @@ sudo apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev
   </tbody>
 </table>
 
-<p>Documentação oficial: <a href="https://wiki.archlinux.org/title/Kernel" target="_blank">Arch Wiki Kernel</a></p>
+<p>Documentação oficial: <a href="https://wiki.archlinux.org/title/Kernel/Traditional_compilation" target="_blank">Arch Wiki Kernel</a></p>
 
 
 
