@@ -67,37 +67,6 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
     </tr>
   </tbody>
 </table>
+    <a href="https://wiki.archlinux.org/title/Kernel" target="_blank">Arch Wiki Kernel</a>
 </section>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "Compilar Kernel Linux — Comandos e Etapas Técnicas",
-  "description": "Tabela com comandos reais para compilar kernel Linux: dependências, configuração, make -j$(nproc), instalação e atualização do GRUB.",
-  "articleBody": "Comandos para compilar kernel Linux: instalação de dependências por distro, download do kernel.org, configuração com make olddefconfig, compilação com make -j$(nproc), instalação com make modules_install install, atualização do GRUB com update-grub ou grub2-mkconfig.",
-  "inLanguage": "pt-BR",
-  "url": "{{ page.url | absolute_url }}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ page.url | absolute_url }}"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Piolinux",
-    "url": "https://piolinux.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Piolinux",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://piolinux.com/logo-512.png",
-      "width": 512,
-      "height": 512
-    }
-  },
-  "datePublished": "{{ page.date | date_to_rfc3339 }}",
-  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
-}
-</script>
