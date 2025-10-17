@@ -8,7 +8,6 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
 
 
 
-{% include toc.html %}
 
 
 
