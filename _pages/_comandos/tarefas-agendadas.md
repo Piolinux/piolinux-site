@@ -173,12 +173,15 @@ function filtrarLinhas(termo) {
       <td data-label="Propósito">Executar tarefa quando a carga do sistema estiver baixa (< 1.5)</td>
     </tr>
     <tr>
-      <td data-label="Ferramenta">Serviço <code>atd</code></td>
-      <td data-label="Pacote"><code>at</code></td>
-      <td data-label="Instalar (Void)"><code>sudo ln -s /etc/sv/atd /var/service/</code></td>
-      <td data-label="Instalar (Debian/Ubuntu)"><code>sudo systemctl enable --now atd</code></td>
-      <td data-label="Propósito">Daemon necessário para executar tarefas agendadas.</td>
-    </tr>
+  <td data-label="Ferramenta">Serviço <code>atd</code></td>
+  <td data-label="Pacote"><code>at</code></td>
+  <td data-label="Instalar (Void)"><code>sudo ln -s /etc/sv/atd /var/service/</code></td>
+  <td data-label="Instalar (Debian/Ubuntu)"><code>sudo systemctl enable --now atd</code></td>
+  <td data-label="Propósito">
+    Daemon necessário para executar tarefas agendadas. 
+    <a href="https://www.redhat.com/en/blog/linux-at-command" target="_blank">Referência Red Hat</a>
+  </td>
+</tr>
   </tbody>
 </table>
  
