@@ -56,13 +56,13 @@ tags: [linux, kernel, open-source, sistema-operacional,]
     <tr>
       <td data-label="Distribuição">Ubuntu.</td>
       <td data-label="Base">Debian.</td>
-      <td data-label="Para quem é">Iniciantes, uso diário.</td>
+      <td data-label="Para quem é">Uso geral e diário.</td>
       <td data-label="Requisitos">2 GHz, 4 GB RAM, 25 GB disco.</td>
     </tr>
     <tr>
       <td data-label="Distribuição">Linux Mint.</td>
       <td data-label="Base">Ubuntu.</td>
-      <td data-label="Para quem é">Quem vem do Windows.</td>
+      <td data-label="Para quem é">Transição do Windows.</td>
       <td data-label="Requisitos">1 GHz, 2 GB RAM, 20 GB disco.</td>
     </tr>
     <tr>
@@ -74,7 +74,7 @@ tags: [linux, kernel, open-source, sistema-operacional,]
     <tr>
       <td data-label="Distribuição">Arch Linux.</td>
       <td data-label="Base">Própria</td>
-      <td data-label="Para quem é">Usuários avançados, rolling release.</td>
+      <td data-label="Para quem é">Configuração personalizada, rolling release.</td>
       <td data-label="Requisitos">Mínimos, mas exige conhecimento técnico.</td>
     </tr>
     <tr>
