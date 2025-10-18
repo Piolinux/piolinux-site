@@ -32,7 +32,7 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
     <tr>
       <td data-label="Etapa">1.1 (Opcional) Ativar backports para kernel 6.1 LTS.</td>
       <td data-label="Comando"><code>apt -t bookworm/daedalus-backports install libelf-dev</code></td>
-      <td data-label="Observação Crítica">Caso em erros que ocorram de pacotes quebrados.</td>
+     <td data-label="Observação Crítica"><em>Caso ocorram erros de pacotes quebrados.</em></td>
     </tr>
     <tr>
       <td data-label="Etapa">2 Baixar kernel.</td>
