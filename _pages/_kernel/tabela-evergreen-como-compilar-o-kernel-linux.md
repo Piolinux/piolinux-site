@@ -59,6 +59,13 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
       <td data-label="Comando"><code>make deb-pkg </code></td>
       <td data-label="Observação Crítica">Para acelerar, use make -j$(nproc) e o sistema detectará automaticamente o número de núcleos da CPU.</td>
     </tr>
+<tr>
+  <td data-label="Etapa">5.1 (Opcional) Limpeza pós-compilação.</td>
+  <td data-label="Comando"><code>make clean && make mrproper</code></td>
+  <td data-label="Observação Crítica">Use apenas se quiser liberar espaço após gerar os pacotes .deb.</td>
+</tr>
+
+    
      <tr>
       <td data-label="Etapa">6. Instalação do kernel.</td>
       <td data-label="Comando"><code>sudo dpkg -i *.deb</code></td>
