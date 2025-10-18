@@ -72,7 +72,7 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
     <tr>
       <td data-label="Etapa">8. Atualizar GRUB (Debian/Devuan).</td>
       <td data-label="Comando"><code>sudo update-grub</code></td>
-      <td data-label="Observação Crítica">Verifique se o novo kernel aparece no menu do GRUB.</td>
+      <td data-label="Observação Crítica">Verifique se o novo kernel aparece no menu do grub.</td>
     </tr>
     <tr>
       <td data-label="Etapa">9. Verificar após reboot.</td>
