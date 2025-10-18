@@ -62,7 +62,7 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
      <tr>
       <td data-label="Etapa">6. Instalação do kernel.</td>
       <td data-label="Comando"><code>sudo dpkg -i *.deb</code></td>
-      <td data-label="Observação Crítica">Instala o kernel e headers</code>.</td>
+      <td data-label="Observação Crítica">Instala o kernel e headers.</td>
     </tr>
     <tr>
       <td data-label="Etapa">7 Atualizar GRUB (Debian/Devuan).</td>
