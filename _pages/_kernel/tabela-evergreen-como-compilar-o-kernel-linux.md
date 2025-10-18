@@ -30,7 +30,7 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
       <td data-label="Observação Crítica">Use <code>apt</code>, <code>dnf</code>, <code>xbps-install</code> conforme sua distro.</td>
     </tr>
     <tr>
-      <td data-label="Etapa">1.1 (Opcional) Ativar backports para kernel 6.1 LTS.</td>
+      <td data-label="Etapa">1.1 (Opcional) Ativar backports para dependências.</td>
       <td data-label="Comando"><code>apt -t bookworm/daedalus-backports install libelf-dev</code></td>
      <td data-label="Observação Crítica"><em>Caso ocorram erros de pacotes quebrados.</em></td>
     </tr>
