@@ -25,7 +25,7 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
   </thead>
   <tbody>
     <tr>
-      <td data-label="Etapa">1. Dependências (Debian).</td>
+      <td data-label="Etapa">1. Dependências (Debian/Devuan).</td>
       <td data-label="Comando"><code>sudo apt update && sudo apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev</code></td>
       <td data-label="Observação Crítica">Use <code>apt</code>, <code>dnf</code>, <code>xbps-install</code> conforme sua distro.</td>
     </tr>
@@ -37,7 +37,7 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
     <tr>
       <td data-label="Etapa">2 Baixar kernel.</td>
       <td data-label="Comando"><code>sudo apt install linux-source</code></td>
-      <td data-label="Observação Crítica">Acesse <a href="https://kernel.org" target="_blank">kernel.org</a> para versões mais recentes.</td>
+      <td data-label="Observação Crítica">O pacote <code>linux-source-6.1</code> contém o código do kernel LTS. Acesse <a href="https://kernel.org" target="_blank">kernel.org</a> para versões mais recentes.</td>
     </tr>
     <tr>
       <td data-label="Etapa">2.1 Verificar diretório.</td>
