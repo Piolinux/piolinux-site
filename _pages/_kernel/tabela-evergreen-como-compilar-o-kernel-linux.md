@@ -28,10 +28,11 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
       <td data-label="Observação Crítica">Essenciais para compilar o kernel. Use o gerenciador correspondente à sua distro (<code>apt</code>, <code>dnf</code>, <code>xbps-install</code>, etc.).</td>
     </tr>
     <tr>
-      <td data-label="Etapa">1.1. (Opcional) Ativar backports para kernel 6.1 LTS.</td>
-      <td data-label="Comando"><code>apt -t bookworm/daedalus-backports install libelf-dev</code></td>
-      <td data-label="Observação Crítica">Caso em erros que ocorram de pacotes quebrados.</td>
-    </tr>
+  <td data-label="Etapa">1.1. (Opcional) Ativar backports para kernel 6.1 LTS.</td>
+  <td data-label="Comando"><code>apt -t bookworm/daedalus-backports install libelf-dev</code></td>
+  <td data-label="Observação Crítica"><em>Caso ocorram erros de pacotes quebrados.</em></td>
+</tr>
+
     <tr>
       <td data-label="Etapa">2. Baixar código-fonte do kernel.</td>
       <td data-label="Comando"><code>sudo apt install linux-source</code></td>
