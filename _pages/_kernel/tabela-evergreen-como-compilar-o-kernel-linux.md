@@ -59,30 +59,25 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
       <td data-label="Comando"><code>make deb-pkg </code></td>
       <td data-label="Observação Crítica">Para acelerar, use make -j$(nproc) e o sistema detectará automaticamente o número de núcleos da CPU.</td>
     </tr>
-    <tr>
-      <td data-label="Etapa">6. Instalação de módulos</td>
-      <td data-label="Comando"><code>sudo make modules_install</code></td>
-      <td data-label="Observação Crítica">Obrigatório sem os drivers, os dispositivos podem não funcionar corretamente.</td>
+     <tr>
+      <td data-label="Etapa">6. Instalação do kernel.</td>
+      <td data-label="Comando"><code>sudo dpkg -i *.deb</code></td>
+      <td data-label="Observação Crítica">Instala o kernel e headers</code>.</td>
     </tr>
     <tr>
-      <td data-label="Etapa">7. Instalação do kernel.</td>
-      <td data-label="Comando"><code>sudo make install</code></td>
-      <td data-label="Observação Crítica">Instala o kernel, System.map e config no <code>/boot/</code>.</td>
-    </tr>
-    <tr>
-      <td data-label="Etapa">8. Atualizar GRUB (Debian/Devuan).</td>
+      <td data-label="Etapa">7 Atualizar GRUB (Debian/Devuan).</td>
       <td data-label="Comando"><code>sudo update-grub</code></td>
       <td data-label="Observação Crítica">Verifique se o novo kernel aparece no menu do grub.</td>
     </tr>
     <tr>
-      <td data-label="Etapa">9. Verificar após reboot.</td>
+      <td data-label="Etapa">8. Verificar após reboot.</td>
       <td data-label="Comando"><code>uname -r</code></td>
       <td data-label="Observação Crítica">Confirme que a versão do kernel mudou.</td>
     </tr>
   </tbody>
 </table>
 
-<p>📘 Documentação oficial: <a href="https://wiki.archlinux.org/title/Kernel" target="_blank">Arch Wiki Kernel</a></p>
+<p>📘 Documentação oficial: <a href="https://www.debian.org/doc/manuals/debian-faq/kernel.pt.html#modules" target="_blank">Debian Kernel</a></p>
 
 </section>
 
