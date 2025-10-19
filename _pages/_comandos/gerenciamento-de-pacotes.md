@@ -330,18 +330,13 @@ function filtrarLinhas(termo) {
     </tr>
     <tr>
       <td data-label="Comando"><code>sudo dnf downgrade firefox</code></td>
-      <td data-label="Descrição">Reverte versão.</td>
+      <td data-label="Descrição">Reverte versão aviso risco de apagar o profile.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf downgrade firefox">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>sudo dnf module list</code></td>
       <td data-label="Descrição">Mostra módulos disponíveis.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf module list">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>sudo dnf swap nano vim</code></td>
-      <td data-label="Descrição">Substitui pacote.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf swap nano vim">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>sudo dnf history</code></td>
