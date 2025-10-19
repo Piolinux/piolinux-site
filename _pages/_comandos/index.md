@@ -13,7 +13,7 @@ permalink: /comandos/
   <h2>Categorias Disponíveis</h2>
 
   <ul class="lista-categorias">
-    <li><a href="/aplicativos-graficos-compactacao-linux/">Aplicativos graficos compactacao</a></li>
+    <li><a href="/aplicativos-graficos-compactacao-linux/">Aplicativos Gráficos Compactaçâo</a></li>
     <li><a href="/arquivos-e-diretorios/">Arquivos e Diretórios</a></li>
     <li><a href="/comandos-avancados-linux/">Comandos Avançados Linux</a></li>
    <li><a href="{{ '/indice-linux/' | relative_url }}">️Comandos e Ferramentas</a></li>
