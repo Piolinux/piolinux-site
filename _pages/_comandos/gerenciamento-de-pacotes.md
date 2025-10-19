@@ -252,12 +252,7 @@ function filtrarLinhas(termo) {
       <td data-label="Descrição">Limpa versões antigas do cache.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="paccache -r">📋</button></td>
     </tr>
-    <tr>
-      <td data-label="Comando"><code>sudo reflector --country Brazil -l 10 --save /etc/pacman.d/mirrorlist</code></td>
-      <td data-label="Descrição">Atualiza mirrorlist.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo reflector --country Brazil -l 10 --save /etc/pacman.d/mirrorlist">📋</button></td>
-    </tr>
-  </tbody>
+     </tbody>
 </table>
 </div>
 
