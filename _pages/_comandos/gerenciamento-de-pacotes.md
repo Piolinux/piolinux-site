@@ -330,7 +330,7 @@ function filtrarLinhas(termo) {
     </tr>
     <tr>
       <td data-label="Comando"><code>sudo dnf downgrade firefox</code></td>
-      <td data-label="Descrição">Reverte versão aviso risco de apagar o profile.</td>
+      <td data-label="Descrição">Reverte versão Aviso risco de apagar o profile.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf downgrade firefox">📋</button></td>
     </tr>
     <tr>
@@ -344,9 +344,9 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf history">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>sudo dnf history undo 5</code></td>
+      <td data-label="Comando"><code>sudo dnf history undo 5 -y</code></td>
       <td data-label="Descrição">Desfaz transação ID 5</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf history undo 5">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf history undo 5 -y">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>rpm -ivh package.rpm</code></td>
