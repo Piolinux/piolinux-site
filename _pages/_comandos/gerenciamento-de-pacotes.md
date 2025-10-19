@@ -330,7 +330,7 @@ function filtrarLinhas(termo) {
     </tr>
     <tr>
       <td data-label="Comando"><code>sudo dnf downgrade firefox</code></td>
-      <td data-label="Descrição">Reverte versão Aviso risco de apagar o profile.</td>
+      <td data-label="Descrição">Reverte versão ⚠️  Aviso risco de apagar o profile.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf downgrade firefox">📋</button></td>
     </tr>
     <tr>
