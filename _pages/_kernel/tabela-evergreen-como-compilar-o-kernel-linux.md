@@ -4,7 +4,7 @@ title_custom: "Compilar Kernel Linux — Comandos e Etapas Técnicas | Piolinux"
 description_custom: "Tabela com comandos reais para compilar kernel Linux: dependências, configuração, make -j$(nproc), instalação e atualização do GRUB."
 title: "Compilar Kernel Linux — Comandos e Etapas Técnicas"
 permalink: /compilar-kernel/
-tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
+tags: [kernel, linux, compilacao, make, grub, apt, evergreen]
 ---
 
 
@@ -27,7 +27,7 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
     <tr>
       <td data-label="Etapa">1. Dependências (Debian/Devuan).</td>
       <td data-label="Comando"><code>sudo apt update && sudo apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev</code></td>
-      <td data-label="Observação Crítica">Use <code>apt</code>, <code>dnf</code>, <code>xbps-install</code> conforme sua distro.</td>
+      <td data-label="Observação Crítica">Leia documentação official abaixo.</td>
     </tr>
     <tr>
       <td data-label="Etapa">1.1 (Opcional) Ativar backports para dependências.</td>
@@ -84,7 +84,7 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
   </tbody>
 </table>
 
-<p>📘 Documentação oficial: <a href="https://wiki.debian.org/BuildADebianKernelPackage" target="_blank">Debian Kernel</a></p>
+<p>📘 Documentação oficial: <a href="https://kernel-team.pages.debian.net/kernel-handbook/ch-common-tasks.html#s-kernel-org-package" target="_blank">Debian Kernel</a></p>
 
 </section>
 
