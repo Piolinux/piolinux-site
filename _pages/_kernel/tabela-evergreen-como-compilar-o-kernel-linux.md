@@ -56,8 +56,9 @@ tags: [kernel, linux, compilacao, make, grub, apt, evergreen]
     </tr>
     <tr>
       <td data-label="Etapa">5. Compilação.</td>
-      <td data-label="Comando"><code>make -j $(nproc) bindeb-pkg </code></td>
-      <td data-label="Observação Crítica">Para acelerar, use make -j$(nproc) e o sistema detectará automaticamente o número de núcleos da CPU.</td>
+      <td data-label="Comando">Inicie o processo de compilação e geração dos pacotes .deb.</td>
+      <td data-label="Observação Crítica"><code>make -j$(nproc) bindeb-pkg</code>
+💡 Usa todos os núcleos da CPU para acelerar o processo.</td>
     </tr>
 <tr>
   <td data-label="Etapa">5.1 (Opcional) Limpeza pós-compilação.</td>
