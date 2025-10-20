@@ -36,7 +36,7 @@ tags: [kernel, linux, compilacao, make, grub, apt, evergreen]
     </tr>
     <tr>
       <td data-label="Etapa">2 Baixar kernel.</td>
-      <td data-label="Comando"><code>sudo apt install linux-source</code></td>
+      <td data-label="Comando"><code>apt -t bookworm/daedalus-backports install linux-source</code></td>
       <td data-label="Observação Crítica">O pacote <code>linux-source-6.12</code> contém o código do kernel LTS. Acesse <a href="https://kernel.org" target="_blank">kernel.org</a> para versões mais recentes.</td>
     </tr>
     <tr>
