@@ -37,16 +37,16 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
     <tr>
       <td data-label="Etapa">2 Baixar kernel.</td>
       <td data-label="Comando"><code>sudo apt install linux-source</code></td>
-      <td data-label="Observação Crítica">O pacote <code>linux-source-6.1</code> contém o código do kernel LTS. Acesse <a href="https://kernel.org" target="_blank">kernel.org</a> para versões mais recentes.</td>
+      <td data-label="Observação Crítica">O pacote <code>linux-source-6.12</code> contém o código do kernel LTS. Acesse <a href="https://kernel.org" target="_blank">kernel.org</a> para versões mais recentes.</td>
     </tr>
     <tr>
       <td data-label="Etapa">2.1 Verificar diretório.</td>
       <td data-label="Comando"><code>cd /usr/src && ls</code></td>
-      <td data-label="Observação Crítica">Confirme o nome exato da pasta <code>linux-source-6.1 </code> antes de extrair. Evita erros de caminho inexistente.</td>
+      <td data-label="Observação Crítica">Confirme o nome exato da pasta <code>linux-source-6.12 </code> antes de extrair. Evita erros de caminho inexistente.</td>
     </tr>
     <tr>
       <td data-label="Etapa">3. Extrair e preparar código-fonte.</td>
-      <td data-label="Comando"><code>sudo tar -xvf linux-source-*.tar.xz && cd linux-source-6.1 && cp /boot/config-$(uname -r) .config</code></td>
+      <td data-label="Comando"><code>sudo tar -xvf linux-source-*.tar.xz && cd linux-source-6.12 && cp /boot/config-$(uname -r) .config</code></td>
       <td data-label="Observação Crítica">Esses passos garantem que você comece com a configuração atual do kernel, evitando problemas de compatibilidade.</td>
     </tr>
     <tr>
@@ -56,7 +56,7 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
     </tr>
     <tr>
       <td data-label="Etapa">5. Compilação.</td>
-      <td data-label="Comando"><code>make deb-pkg </code></td>
+      <td data-label="Comando"><code>make -j $(nproc) bindeb-pkg </code></td>
       <td data-label="Observação Crítica">Para acelerar, use make -j$(nproc) e o sistema detectará automaticamente o número de núcleos da CPU.</td>
     </tr>
 <tr>
