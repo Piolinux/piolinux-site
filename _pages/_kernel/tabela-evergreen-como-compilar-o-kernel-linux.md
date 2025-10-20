@@ -61,7 +61,7 @@ tags: [kernel, linux, compilacao, make, grub, apt, evergreen]
  </td>
     </tr>
 <tr>
-  <td data-label="Etapa">5.1 (Opcional) Limpeza pós-compilação.</td>
+  <td data-label="Etapa">5.1 Limpeza pós-compilação opcional.</td>
   <td data-label="Comando"><code>make clean && make mrproper</code></td>
   <td data-label="Observação Crítica">Use apenas se quiser liberar espaço após gerar os pacotes .deb.</td>
 </tr>
