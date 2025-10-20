@@ -84,7 +84,7 @@ tags: [kernel, linux, compilacao, make, grub, xbps, apt, dnf, evergreen]
   </tbody>
 </table>
 
-<p>📘 Documentação oficial: <a href="https://www.debian.org/doc/manuals/debian-faq/kernel.pt.html#modules" target="_blank">Debian Kernel</a></p>
+<p>📘 Documentação oficial: <a href="https://wiki.debian.org/BuildADebianKernelPackage" target="_blank">Debian Kernel</a></p>
 
 </section>
 
