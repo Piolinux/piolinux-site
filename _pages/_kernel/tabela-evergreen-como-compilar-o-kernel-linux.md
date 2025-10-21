@@ -53,7 +53,7 @@ tags: [kernel, linux, compilacao, make, grub, apt, evergreen]
       <td data-label="Etapa">4. Configurar o Kernel.</td>
       <td data-label="Comando"><code>make oldconfig</code><p>Leia a Tabela escolha uma opção.<a 
 href="/make-oldconfig-vs-olddefconfig/" 
-target="_blank" rel="noopener"></p>Comparativo</a></td>
+target="_blank" rel="noopener">Comparativo</a></p></td>
       <td data-label="Observação Crítica">Mantém sua config atual. Utilize <code>make menuconfig </code> para ajustes manuais. Evite <code>make config</code> — é muito demorado.</td>
     </tr>
     <tr>
