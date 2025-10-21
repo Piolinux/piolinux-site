@@ -1,12 +1,10 @@
 ---
 layout: manual-seo
-title_custom: "Compilar Kernel Linux — Comandos e Etapas Técnicas | Piolinux"
-description_custom: "Tabela com comandos reais para compilar kernel Linux: dependências, configuração, make -j$(nproc), instalação e atualização do GRUB."
-title: "Compilar Kernel Linux — Comandos e Etapas Técnicas"
-permalink: /compilar-kernel/
-tags: [kernel, linux, compilacao, make, grub, apt, evergreen]
+title: "Como Instalar Kernel Compilado com Segurança no Debian/Devuan — Sem Quebrar o Sistema"
+description: "Guia passo a passo para compilar kernel Linux e instalar via dpkg usando bindeb-pkg. Método seguro, reversível e compatível com GRUB, DKMS e atualizações."
+permalink: /instalar-kernel-compilado-debian-devuan/
+tags: [kernel, linux, debian, devuan, dpkg, compile, sysadmin, lts]
 ---
-
 
 
 
@@ -84,6 +82,25 @@ target="_blank" rel="noopener">Comparativo</a></p></td>
       <td data-label="Comando"><code>uname -r</code></td>
       <td data-label="Observação Crítica">Confirme que a versão do kernel mudou.</td>
     </tr>
+
+<tr>
+      <td data-label="Passo"9. Verificar instalação</td>
+      <td data-label="Comando"><code>ls /boot/vmlinuz-*6.12.43* && grep -A5 "6.12.43" /boot/grub/grub.cfg</code></td>
+      <td data-label="Por que é seguro">Confirma que o kernel está em <code>/boot</code> e foi adicionado ao menu de boot.</td>
+    </tr>
+    <tr>
+      <td data-label="Passo">10. (Opcional) Proteger contra atualizações</td>
+      <td data-label="Comando"><code>sudo apt-mark hold linux-image-6.12.43 linux-headers-6.12.43</code></td>
+      <td data-label="Por que é seguro">Evita que <code>apt upgrade</code> substitua seu kernel personalizado por um do repositório.</td>
+    </tr>
+    <tr>
+      <td data-label="Passo">11. Em caso de falha: remover com segurança</td>
+      <td data-label="Comando"><code>sudo dpkg -r linux-image-6.12.43 linux-headers-6.12.43</code></td>
+      <td data-label="Por que é seguro">Remove **todos os arquivos, entradas do GRUB e módulos**, sem deixar lixo — impossível com <code>make install</code>.</td>
+    </tr>
+
+
+    
   </tbody>
 </table>
 
