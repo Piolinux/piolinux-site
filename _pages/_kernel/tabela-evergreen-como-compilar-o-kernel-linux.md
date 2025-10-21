@@ -65,8 +65,7 @@ target="_blank" rel="noopener">Comparativo</a></p></td>
   <td data-label="Comando"><code>make clean && make mrproper</code></td>
   <td data-label="Observação Crítica">Use apenas se quiser liberar espaço após gerar os pacotes .deb.</td>
 </tr>
-
-    
+  
      <tr>
       <td data-label="Etapa">6. Instalação do kernel.</td>
       <td data-label="Comando"><code> cd /usr/src/ && sudo dpkg -i *.deb</code></td>
@@ -83,8 +82,8 @@ target="_blank" rel="noopener">Comparativo</a></p></td>
       <td data-label="Observação Crítica">Confirme que a versão do kernel mudou.</td>
     </tr>
 
-<tr>
-      <td data-label="Passo"9. Verificar instalação</td>
+     <tr>
+      <td data-label="Passo">9. Verificar instalação</td>
       <td data-label="Comando"><code>ls /boot/vmlinuz-*6.12.43* && grep -A5 "6.12.43" /boot/grub/grub.cfg</code></td>
       <td data-label="Por que é seguro">Confirma que o kernel está em <code>/boot</code> e foi adicionado ao menu de boot.</td>
     </tr>
