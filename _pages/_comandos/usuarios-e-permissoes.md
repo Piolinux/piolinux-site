@@ -48,11 +48,11 @@ function filtrarLinhas(termo) {
       <td>Adiciona ao grupo sudo (Debian, Ubuntu, Devuan, Mint).</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo usermod -aG sudo novo">📋</button></td>
     </tr>
-    <tr>
-      <td><code>usermod -aG wheel novo</code></td>
-      <td>Adiciona ao grupo wheel (Arch, Artix).</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="usermod -aG wheel seu_usuario">📋</button></td>
-    </tr>
+   <tr>
+  <td><code>sudo usermod -aG wheel novo</code></td>
+  <td>Adiciona ao grupo <code>wheel</code> (Arch Linux, Artix com OpenRC/runit/dinit).</td>
+  <td data-label="Ação"><button class="copy-btn" data-command="sudo usermod -aG wheel novo">📋</button></td>
+</tr>
     <tr>
       <td><code>sudo userdel -r usuario</code></td>
       <td>Remove usuário e seu diretório home.</td>
