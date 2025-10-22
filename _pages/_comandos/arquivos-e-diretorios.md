@@ -71,9 +71,9 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="mv antigo.txt novo.txt">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>rm -rf pasta/</code></td>
-      <td data-label="Descrição">Remove diretório e conteúdo.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="rm -rf pasta/">📋</button></td>
+      <td data-label="Comando"><code>trash pasta/</code></td>
+      <td data-label="Descrição">Mover para lixeira (se tiver trash-cli).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="trash pasta/">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>touch arquivo.log</code></td>
