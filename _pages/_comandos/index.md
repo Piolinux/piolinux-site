@@ -1,7 +1,7 @@
 ---
 layout: manual-seo
-title: "Índice de Comandos Linux — 500+ comandos em 18 categorias"
-description: "Biblioteca técnica com 500+ comandos Linux validados, organizados em categorias e formatados em tabelas copiáveis com 1 clique."
+title: "Índice de Comandos Linux — Referência Técnica por Categoria"
+description: "Guia técnico com comandos Linux essenciais, organizados por categoria. Todos baseados na documentação oficial. Zero risco, zero introdução."
 permalink: /comandos/
 ---
 
@@ -16,11 +16,10 @@ permalink: /comandos/
     <li><a href="/aplicativos-graficos-compactacao-linux/">Aplicativos Gráficos Compactaçâo</a></li>
     <li><a href="/arquivos-e-diretorios/">Arquivos e Diretórios</a></li>
     <li><a href="/comandos-avancados-linux/">Comandos Avançados Linux</a></li>
-   <li><a href="{{ '/indice-linux/' | relative_url }}">️Comandos e Ferramentas</a></li>
+    <li><a href="{{ '/indice-linux/' | relative_url }}">️Comandos e Ferramentas</a></li>
     <li><a href="/edicao-de-texto-e-filtros/"> Edição de Texto e Filtros</a></li>
     <li><a href="/gerenciamento-de-pacotes/"> Gerenciamento de Pacotes</a></li>
     <li><a href="/gerenciamento-de-sistema/"> Gerenciamento de Sistema</a></li>
-    <li><a href="/ferramentas-complementares-git/"> Ferramentas complementares Git</a></li>
     <li><a href="/logs-e-diagnostico/">Logs e Diagnóstico</a></li>
     <li><a href="/monitoramento-e-processos/"> Monitoramento e Processos</a></li>
     <li><a href="/rede-e-internet/">Rede e Internet</a></li>
