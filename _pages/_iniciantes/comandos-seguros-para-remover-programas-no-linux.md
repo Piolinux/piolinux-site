@@ -40,15 +40,7 @@ permalink: /remover-programas-linux/
         <button class="copy-btn" data-command="sudo apt autoremove">📋 Copiar</button>
       </td>
     </tr>
-        <td data-label="Remover + Configurações">
-        <code>sudo dnf remove firefox</code> (não há distinção clara; use <code>dnf history undo</code> para reverter)
-      </td>
-      <td data-label="Limpar Dependências Órfãs">
-        <code>sudo dnf autoremove</code>
-        <button class="copy-btn" data-command="sudo dnf autoremove">📋 Copiar</button>
-      </td>
-    </tr>
-    <tr>
+      <tr>
       <td data-label="Gerenciador">Pacman (Artix)</td>
       <td data-label="Remover (mantém config)">
         <code>sudo pacman -R firefox</code>
