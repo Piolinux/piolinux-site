@@ -15,7 +15,7 @@ permalink: /comandos/
   <ul class="lista-categorias">
     <li><a href="/aplicativos-graficos-compactacao-linux/">Aplicativos Gráficos Compactaçâo</a></li>
     <li><a href="/arquivos-e-diretorios/">Arquivos e Diretórios</a></li>
-    <li><a href="/atalhos-terminal/">Comandos Avançados Linux</a></li>
+    <li><a href="/atalhos-terminal/">Atalhos e Comandos Úteis do Terminal Linux</a></li>
     <li><a href="{{ '/indice-linux/' | relative_url }}">️Comandos e Ferramentas</a></li>
     <li><a href="/edicao-de-texto-e-filtros/"> Edição de Texto e Filtros</a></li>
     <li><a href="/gerenciamento-de-pacotes/"> Gerenciamento de Pacotes</a></li>
