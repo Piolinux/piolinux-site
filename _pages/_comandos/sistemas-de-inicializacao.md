@@ -83,7 +83,7 @@ function filtrarLinhas(termo) {
     <tr>
       <td><strong>OpenRC</strong></td>
       <td>Devuan, Gentoo, Alpine (opcional)</td>
-      <td><a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/Init" target="_blank" rel="noopener">Gentoo Handbook: OpenRC</a><br>
+      <td><a href="https://wiki.gentoo.org/wiki/OpenRC" target="_blank" rel="noopener">Gentoo Handbook: OpenRC</a><br>
           <a href="https://github.com/OpenRC/openrc/blob/master/README.md" target="_blank" rel="noopener">OpenRC no GitHub (README oficial)</a></td>
     </tr>
     <tr>
@@ -99,9 +99,8 @@ function filtrarLinhas(termo) {
     </tr>
     <tr>
       <td><strong>SysV init</strong></td>
-      <td>Debian antigo, Devuan (fallback), sistemas embarcados</td>
-      <td><a href="https://www.debian.org/doc/manuals/debian-reference/ch03.en.html#_sysv_init" target="_blank" rel="noopener">Debian Reference: SysV init</a><br>
-          <a href="https://refspecs.linuxbase.org/LSB_5.0.0/LSB-Core-generic/LSB-Core-generic/iniscrptact.html" target="_blank" rel="noopener">Especificação LSB: Scripts de init</a></td>
+      <td>Especificação LSB: Scripts de init</td>
+      <td><a href="https://refspecs.linuxbase.org/LSB_5.0.0/LSB-Core-generic/LSB-Core-generic/iniscrptact.html" target="_blank" rel="noopener"></a></td>
     </tr>
   </tbody>
 </table>
