@@ -143,7 +143,7 @@ function filtrarLinhas(termo) {
 </table>
 </div>
 
-<h3> Arch Linux (Pacman + AUR)</h3>
+<h3> Artix Linux (Pacman + AUR)</h3>
 
 <div class="table-container">
 <table class="evergreen-table">
@@ -256,116 +256,7 @@ function filtrarLinhas(termo) {
 </table>
 </div>
 
-<h3>Fedora (DNF) </h3>
 
-<div class="table-container">
-<table class="evergreen-table">
-  <thead>
-    <tr>
-      <th>Comandos.</th>
-      <th>Descrições.</th>
-      <th>Ações.</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-label="Comando"><code>sudo dnf update</code></td>
-      <td data-label="Descrição">Atualiza todos os pacotes.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf update">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>sudo dnf upgrade</code></td>
-      <td data-label="Descrição">Sinônimo de update.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf upgrade">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>sudo dnf install httpd</code></td>
-      <td data-label="Descrição">Instala pacote.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf install httpd">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>sudo dnf remove httpd</code></td>
-      <td data-label="Descrição">Remove pacote.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf remove httpd">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>dnf search nginx</code></td>
-      <td data-label="Descrição">Procura pacotes.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="dnf search nginx">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>dnf info httpd</code></td>
-      <td data-label="Descrição">Mostra informações.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="dnf info httpd">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>dnf list installed</code></td>
-      <td data-label="Descrição">Lista pacotes instalados.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="dnf list installed">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>dnf list updates</code></td>
-      <td data-label="Descrição">Lista atualizações.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="dnf list updates">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>sudo dnf autoremove</code></td>
-      <td data-label="Descrição">Remove pacotes órfãos.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf autoremove">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>sudo dnf clean all</code></td>
-      <td data-label="Descrição">Limpa cache.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf clean all">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>dnf provides /bin/cp</code></td>
-      <td data-label="Descrição">Descobre pacote de um arquivo.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="dnf provides /bin/cp">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>sudo dnf reinstall vim</code></td>
-      <td data-label="Descrição">Reinstala pacote.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf reinstall vim">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>sudo dnf downgrade firefox</code></td>
-      <td data-label="Descrição">Reverte versão ⚠️  Aviso risco de apagar o profile.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf downgrade firefox">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>sudo dnf module list</code></td>
-      <td data-label="Descrição">Mostra módulos disponíveis.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf module list">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>sudo dnf history</code></td>
-      <td data-label="Descrição">Histórico de transações.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf history">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>sudo dnf history undo 5 -y</code></td>
-      <td data-label="Descrição">Desfaz transação ID 5</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo dnf history undo 5 -y">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>rpm -ivh package.rpm</code></td>
-      <td data-label="Descrição">Instala .rpm</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="rpm -ivh package.rpm">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>rpm -e package</code></td>
-      <td data-label="Descrição">Remove .rpm</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="rpm -e package">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>rpm -qa \| grep docker</code></td>
-      <td data-label="Descrição">Procura pacotes RPM instalados.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="rpm -qa \| grep docker">📋</button></td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
 <h3> openSUSE (zypper) </h3>
 
