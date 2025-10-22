@@ -50,6 +50,3 @@ tags: [linux, desktop, distros, mint, zorin, pop-os, cinnamon, gnome, sysadmin]
 </section>
 
 
-  <p><strong>Nota técnica:</strong> Todas as distros listadas usam <code>systemd</code> por padrão.  
-  Para sistemas <strong>sem systemd</strong, considere <a href="/distros/alternativas/">Devuan, Artix ou Gentoo</a>.</p>
-</section>
