@@ -24,6 +24,11 @@ function filtrarLinhas(termo) {
 </script>
 
 
+<p>Nota: Para que o grupo wheel tenha permissão de sudo, edite com sudo visudo e descomente a linha:
+%wheel ALL=(ALL) ALL</p>
+
+
+
 <table class="evergreen-table">
   <thead>
     <tr>
