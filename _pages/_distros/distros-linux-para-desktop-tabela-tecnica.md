@@ -46,7 +46,7 @@ tags: [linux, desktop, distros, mint, zorin, pop-os, cinnamon, gnome, sysadmin]
 
 
 <p><strong>Nota técnica:</strong> Todas as distros listadas usam <code>systemd</code> por padrão.  
-  Para sistemas <strong>sem systemd</strong>, considere <a href="/distros/underground/">Devuan, Artix ou Gentoo</a>.</p>
+  Para sistemas <strong>sem systemd</strong>, considere <a href="/distros/underground/">Devuan, Artix ou Void</a>.</p>
 </section>
 
 
