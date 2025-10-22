@@ -40,13 +40,7 @@ permalink: /remover-programas-linux/
         <button class="copy-btn" data-command="sudo apt autoremove">📋 Copiar</button>
       </td>
     </tr>
-    <tr>
-      <td data-label="Gerenciador">DNF (Fedora/RHEL)</td>
-      <td data-label="Remover (mantém config)">
-        <code>sudo dnf remove firefox</code>
-        <button class="copy-btn" data-command="sudo dnf remove firefox">📋 Copiar</button>
-      </td>
-      <td data-label="Remover + Configurações">
+        <td data-label="Remover + Configurações">
         <code>sudo dnf remove firefox</code> (não há distinção clara; use <code>dnf history undo</code> para reverter)
       </td>
       <td data-label="Limpar Dependências Órfãs">
@@ -55,7 +49,7 @@ permalink: /remover-programas-linux/
       </td>
     </tr>
     <tr>
-      <td data-label="Gerenciador">Pacman (Arch/Manjaro)</td>
+      <td data-label="Gerenciador">Pacman (Artix)</td>
       <td data-label="Remover (mantém config)">
         <code>sudo pacman -R firefox</code>
         <button class="copy-btn" data-command="sudo pacman -R firefox">📋 Copiar</button>
@@ -116,14 +110,7 @@ permalink: /remover-programas-linux/
         <button class="copy-btn" data-command="apt list --installed | grep firefox">📋 Copiar</button>
       </td>
     </tr>
-    <tr>
-      <td data-label="Sistema">DNF</td>
-      <td data-label="Comando">
-        <code>dnf list installed | grep firefox</code>
-        <button class="copy-btn" data-command="dnf list installed | grep firefox">📋 Copiar</button>
-      </td>
-    </tr>
-    <tr>
+      <tr>
       <td data-label="Sistema">Pacman</td>
       <td data-label="Comando">
         <code>pacman -Q | grep firefox</code>
