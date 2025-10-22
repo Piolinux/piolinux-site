@@ -17,7 +17,6 @@ permalink: /comandos/
     <li><a href="/arquivos-e-diretorios/">Arquivos e Diretórios</a></li>
     <li><a href="/comandos-avancados-linux/">Comandos Avançados Linux</a></li>
    <li><a href="{{ '/indice-linux/' | relative_url }}">️Comandos e Ferramentas</a></li>
-    <li><a href="/docker-e-containerizacao/">Docker e Containerização</a></li>
     <li><a href="/edicao-de-texto-e-filtros/"> Edição de Texto e Filtros</a></li>
     <li><a href="/gerenciamento-de-pacotes/"> Gerenciamento de Pacotes</a></li>
     <li><a href="/gerenciamento-de-sistema/"> Gerenciamento de Sistema</a></li>
