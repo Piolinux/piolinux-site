@@ -100,7 +100,7 @@ function filtrarLinhas(termo) {
     <tr>
       <td><strong>SysV init</strong></td>
       <td>Especificação LSB: Scripts de init</td>
-      <td><a href="https://refspecs.linuxbase.org/LSB_5.0.0/LSB-Core-generic/LSB-Core-generic/iniscrptact.html" target="_blank" rel="noopener"></a></td>
+      <td><a href="https://refspecs.linuxbase.org/LSB_5.0.0/LSB-Core-generic/LSB-Core-generic/iniscrptact.html" target="_blank" rel="noopener">Scripts de init</a></td>
     </tr>
   </tbody>
 </table>
