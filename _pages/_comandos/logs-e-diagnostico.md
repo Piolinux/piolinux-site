@@ -23,119 +23,96 @@ function filtrarLinhas(termo) {
 </script>
 
 
-<div class="table-container">
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Comandos</th>
-      <th>Descrições.</th>
+      <th>Comandos.</th>
+      <th>Descrição Técnica.</th>
       <th>Ações.</th>
     </tr>
   </thead>
   <tbody>
+    <!-- LOGS (UNIVERSAL OU SEM SYSTEMD) -->
     <tr>
-      <td data-label="Comando"><code>journalctl -xe</code></td>
-      <td data-label="Descrição">Logs detalhados com contexto.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="journalctl -xe">📋</button></td>
+      <td><code>tail -f /var/log/syslog</code></td>
+      <td>Logs do sistema em tempo real (Debian, Ubuntu, Mint, Devuan).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="tail -f /var/log/syslog">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>journalctl --boot</code></td>
-      <td data-label="Descrição">Logs do boot atual.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="journalctl --boot">📋</button></td>
+      <td><code>tail -f /var/log/messages</code></td>
+      <td>Logs do sistema em distros com SysV/OpenRC (ex: Gentoo, Devuan legado).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="tail -f /var/log/messages">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>journalctl --boot=-1</code></td>
-      <td data-label="Descrição">Logs do boot anterior.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="journalctl --boot=-1">📋</button></td>
+      <td><code>dmesg -T | tail -20</code></td>
+      <td>Mensagens do kernel com timestamp legível (últimas 20 linhas).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="dmesg -T | tail -20">📋</button></td>
+    </tr>
+
+    <!-- DIAGNÓSTICO DE HARDWARE -->
+    <tr>
+      <td><code>lshw -short</code></td>
+      <td>Lista resumida de hardware (requer <code>sudo</code> para detalhes).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="lshw -short">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>tail /var/log/syslog</code></td>
-      <td data-label="Descrição">Logs do sistema (Debian/Ubuntu).</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="tail /var/log/syslog">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>tail /var/log/messages</code></td>
-      <td data-label="Descrição">Logs do sistema (Fedora/RHEL).</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="tail /var/log/messages">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>dmesg</code></td>
-      <td data-label="Descrição">Mensagens do kernel.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="dmesg">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>lshw</code></td>
-      <td data-label="Descrição">Informações detalhadas de hardware.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="lshw">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>lscpu</code></td>
-      <td data-label="Descrição">Informações da CPU.</td>
+      <td><code>lscpu</code></td>
+      <td>Informações detalhadas da CPU (arquitetura, núcleos, threads).</td>
       <td data-label="Ação"><button class="copy-btn" data-command="lscpu">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>lsblk</code></td>
-      <td data-label="Descrição">Lista blocos (discos e partições)</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="lsblk">📋</button></td>
+      <td><code>lsblk -f</code></td>
+      <td>Discos, partições e sistemas de arquivos (com UUID e tipo).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="lsblk -f">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>lspci</code></td>
-      <td data-label="Descrição">Lista dispositivos PCI.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="lspci">📋</button></td>
+      <td><code>lspci -v</code></td>
+      <td>Dispositivos PCI (placa de vídeo, rede, som).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="lspci -v">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>lsusb</code></td>
-      <td data-label="Descrição">Lista dispositivos USB.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="lsusb">📋</button></td>
+      <td><code>lsusb -v</code></td>
+      <td>Dispositivos USB conectados.</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="lsusb -v">📋</button></td>
+    </tr>
+
+    <!-- DISCO E INTEGRIDADE -->
+    <tr>
+      <td><code>sudo smartctl -a /dev/SEU_DISCO</code></td>
+      <td>Diagnóstico S.M.A.R.T. do disco (substitua <code>SEU_DISCO</code> pelo seu).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="sudo smartctl -a /dev/SEU_DISCO">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>dmidecode</code></td>
-      <td data-label="Descrição">Informações da BIOS, memória, etc.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="dmidecode">📋</button></td>
+      <td><code>sudo badblocks -v /dev/SEU_DISCO</code></td>
+      <td>Verifica blocos ruins em uma partição (use com cuidado).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="sudo badblocks -v /dev/SEU_DISCO">📋</button></td>
+    </tr>
+
+    <!-- DEPURAÇÃO AVANÇADA -->
+    <tr>
+      <td><code>strace -p $(pgrep firefox)</code></td>
+      <td>Rastreia chamadas de sistema de um processo em execução.</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="strace -p $(pgrep firefox)">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>smartctl -a /dev/SEU_DISCO</code></td>
-      <td data-label="Descrição">Diagnóstico de disco (S.M.A.R.T.)</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="smartctl -a /dev/SEU_DISCO">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>badblocks -v /dev/SEU_DISCO</code></td>
-      <td data-label="Descrição">Verifica blocos ruins.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="badblocks -v /dev/SEU_DISCO">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>strace -p 1234</code></td>
-      <td data-label="Descrição">Rastreia chamadas de sistema.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="strace -p 1234">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>ltrace programa</code></td>
-      <td data-label="Descrição">Rastreia chamadas a bibliotecas.</td>
+      <td><code>ltrace programa</code></td>
+      <td>Rastreia chamadas a bibliotecas dinâmicas (ex: <code>libc</code>).</td>
       <td data-label="Ação"><button class="copy-btn" data-command="ltrace programa">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>perf top</code></td>
-      <td data-label="Descrição">Perfil de desempenho em tempo real.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="perf top">📋</button></td>
+      <td><code>sudo tcpdump -i eth0 -nn</code></td>
+      <td>Captura tráfego de rede bruto (substitua <code>eth0</code> pela sua interface).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="sudo tcpdump -i eth0 -nn">📋</button></td>
     </tr>
+
+    <!-- ROTAÇÃO DE LOGS (UNIVERSAL) -->
     <tr>
-      <td data-label="Comando"><code>tcpdump -i eth0</code></td>
-      <td data-label="Descrição">Captura pacotes de rede</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="tcpdump -i eth0">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>journalctl -u ssh --since "1 hour ago"</code></td>
-      <td data-label="Descrição">Logs do SSH na última hora.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="journalctl -u ssh --since &quot;1 hour ago&quot;">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>logrotate -d /etc/logrotate.conf</code></td>
-      <td data-label="Descrição">Testa configuração de rotação.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="logrotate -d /etc/logrotate.conf">📋</button></td>
+      <td><code>sudo /usr/sbin/logrotate -dv /etc/logrotate.conf</code></td>
+      <td>Testa configuração de rotação de logs sem executar.</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="sudo /usr/sbin/logrotate -dv /etc/logrotate.conf">📋</button></td>
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
@@ -151,4 +128,10 @@ function filtrarLinhas(termo) {
 
 
 </section>
+
+
+
+
+
+
 
