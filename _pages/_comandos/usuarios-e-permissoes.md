@@ -24,124 +24,122 @@ function filtrarLinhas(termo) {
 </script>
 
 
-<div class="table-container">
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Comandos.</th>
-      <th>Descrições.</th>
-      <th>Ações.</th>
+      <th>Comandos</th>
+      <th>Descrições</th>
+      <th>Ações</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td data-label="Comando"><code>sudo useradd -m novo</code></td>
-      <td data-label="Descrição">Cria usuário com home.</td>
+      <td><code>sudo useradd -m novo</code></td>
+      <td>Cria usuário com diretório home.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo useradd -m novo">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>sudo passwd novo</code></td>
-      <td data-label="Descrição">Define senha.</td>
+      <td><code>sudo passwd novo</code></td>
+      <td>Define senha para o usuário.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo passwd novo">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>sudo usermod -aG sudo novo</code></td>
-      <td data-label="Descrição">Adiciona ao grupo sudo (Debian).</td>
+      <td><code>sudo usermod -aG sudo novo</code></td>
+      <td>Adiciona ao grupo sudo (Debian, Ubuntu, Devuan, Mint).</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo usermod -aG sudo novo">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>sudo usermod -aG wheel novo</code></td>
-      <td data-label="Descrição">Adiciona ao grupo wheel (Arch/Fedora).</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="sudo usermod -aG wheel novo">📋</button></td>
+      <td><code>usermod -aG wheel novo</code></td>
+      <td>Adiciona ao grupo wheel (Arch, Artix).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="usermod -aG wheel seu_usuario">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>sudo userdel -r usuario</code></td>
-      <td data-label="Descrição">Remove usuário + home.</td>
+      <td><code>sudo userdel -r usuario</code></td>
+      <td>Remove usuário e seu diretório home.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo userdel -r usuario">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>groups usuario</code></td>
-      <td data-label="Descrição">Mostra grupos do usuário.</td>
+      <td><code>groups usuario</code></td>
+      <td>Mostra grupos do usuário.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="groups usuario">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>sudo groupadd devs</code></td>
-      <td data-label="Descrição">Cria grupo</td>
+      <td><code>sudo groupadd devs</code></td>
+      <td>Cria novo grupo.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo groupadd devs">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>sudo gpasswd -a usuario devs</code></td>
-      <td data-label="Descrição">Adiciona usuário a grupo.</td>
+      <td><code>sudo gpasswd -a usuario devs</code></td>
+      <td>Adiciona usuário a um grupo existente.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo gpasswd -a usuario devs">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>su - usuario</code></td>
-      <td data-label="Descrição">Troca de usuário.</td>
+      <td><code>su - usuario</code></td>
+      <td>Troca de usuário com novo ambiente.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="su - usuario">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>sudo -u usuario comando</code></td>
-      <td data-label="Descrição">Executa como outro usuário.</td>
+      <td><code>sudo -u usuario comando</code></td>
+      <td>Executa um comando como outro usuário.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo -u usuario comando">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>visudo</code></td>
-      <td data-label="Descrição">Edita sudoers com segurança.</td>
+      <td><code>visudo</code></td>
+      <td>Edita o arquivo <code>/etc/sudoers</code> com verificação de sintaxe.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="visudo">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>sudo -l</code></td>
-      <td data-label="Descrição">Lista permissões do sudo.</td>
+      <td><code>sudo -l</code></td>
+      <td>Lista permissões de sudo do usuário atual.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo -l">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>lastb</code></td>
-      <td data-label="Descrição">Tentativas de login falhas.</td>
+      <td><code>lastb</code></td>
+      <td>Mostra tentativas de login falhas (requer permissões de root).</td>
       <td data-label="Ação"><button class="copy-btn" data-command="lastb">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>chage -l usuario</code></td>
-      <td data-label="Descrição">Mostra política de senha.</td>
+      <td><code>chage -l usuario</code></td>
+      <td>Mostra política de expiração de senha do usuário.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="chage -l usuario">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>sudo chage -M 90 usuario</code></td>
-      <td data-label="Descrição">Expira senha em 90 dias.</td>
+      <td><code>sudo chage -M 90 usuario</code></td>
+      <td>Define expiração da senha em 90 dias.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo chage -M 90 usuario">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>pwck</code></td>
-      <td data-label="Descrição">Verifica consistência de senhas.</td>
+      <td><code>pwck</code></td>
+      <td>Verifica consistência dos arquivos <code>/etc/passwd</code> e <code>/etc/shadow</code>.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="pwck">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>cat /etc/group</code></td>
-      <td data-label="Descrição">Verifica grupos.</td>
+      <td><code>cat /etc/group</code></td>
+      <td>Lista todos os grupos do sistema.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="cat /etc/group">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>id -u usuario</code></td>
-      <td data-label="Descrição">Mostra UID.</td>
+      <td><code>id -u usuario</code></td>
+      <td>Mostra o UID (User ID) do usuário.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="id -u usuario">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>newgrp docker</code></td>
-      <td data-label="Descrição">Muda grupo primário temporariamente.</td>
+      <td><code>newgrp docker</code></td>
+      <td>Muda temporariamente o grupo primário (útil após adicionar usuário ao grupo docker).</td>
       <td data-label="Ação"><button class="copy-btn" data-command="newgrp docker">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>umask</code></td>
-      <td data-label="Descrição">Mostra máscara de permissões.</td>
+      <td><code>umask</code></td>
+      <td>Mostra a máscara de permissões padrão para novos arquivos.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="umask">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>chmod 600 arquivo</code></td>
-      <td data-label="Descrição">Apenas dono lê e escreve.</td>
+      <td><code>chmod 600 arquivo</code></td>
+      <td>Permissões: apenas o dono pode ler e escrever (seguro para chaves SSH, senhas, etc.).</td>
       <td data-label="Ação"><button class="copy-btn" data-command="chmod 600 arquivo">📋</button></td>
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
@@ -149,5 +147,7 @@ function filtrarLinhas(termo) {
 
 
 </section>
+
+
 
 
