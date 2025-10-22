@@ -370,14 +370,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
       </td>
       <td data-label="O que faz">Renomeia ou move arquivo.</td>
     </tr>
-    <tr>
-      <td data-label="Categoria">Arquivos.</td>
-      <td data-label="Comando"><code>rm -i</code></td>
-      <td data-label="Exemplo Útil">
-        <code>rm -i arquivo.txt</code>
-        <button class="copy-btn" data-command="rm -i arquivo.txt">📋 Copiar</button>
-      </td>
-      <td data-label="O que faz">Remove com confirmação (seguro)</td>
+    <td data-label="O que faz">Remove com confirmação (seguro)</td>
     </tr>
     <tr>
       <td data-label="Categoria">Ajuda.</td>
@@ -859,6 +852,51 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
     </tr>
   </tbody>
 </table>
+
+ <h3 id="atalhos">Deletar Arquivos e Nover, listar, renomear.</h3>
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Comando</th>
+      <th>Descrição Técnica</th>
+      <th>Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ls -lh pasta/</code></td>
+      <td>Lista conteúdo com permissões, tamanho legível e dono.</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="ls -lh pasta/">📋</button></td>
+    </tr>
+    <tr>
+      <td><code>cp -r origem/ destino/</code></td>
+      <td>Copia diretório recursivamente (mantém estrutura).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="cp -r origem/ destino/">📋</button></td>
+    </tr>
+    <tr>
+      <td><code>mv arquivo.txt novo_nome.txt</code></td>
+      <td>Renomeia ou move arquivo (rápido, sem cópia de dados).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="mv arquivo.txt novo_nome.txt">📋</button></td>
+    </tr>
+    <tr>
+      <td><code>trash arquivo.txt</code></td>
+      <td>Move para lixeira (requer <code>trash-cli</code>).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="trash arquivo.txt">📋</button></td>
+    </tr>
+    <tr>
+      <td><code>du -sh pasta/</code></td>
+      <td>Mostra tamanho total do diretório (formato legível).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="du -sh pasta/">📋</button></td>
+    </tr>
+    <tr>
+      <td><code>find . -name "*.tmp" -delete</code></td>
+      <td>Remove arquivos <code>.tmp</code> de forma segura (evita <code>rm -rf *</code>).</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="find . -name &quot;*.tmp&quot; -delete">📋</button></td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 <h3 id="pacotes">Gerenciamento de Pacotes</h3>
 <table class="evergreen-table">
