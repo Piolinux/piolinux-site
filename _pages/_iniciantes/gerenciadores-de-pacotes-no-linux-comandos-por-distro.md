@@ -28,7 +28,7 @@ tags: [pacotes, linux, apt, dnf, pacman, zypper, instalacao]
   <tbody>
     <tr>
       <td data-label="Gerenciador">APT</td>
-      <td data-label="Distribuições">Debian, Ubuntu, Mint, Pop!_OS.</td>
+      <td data-label="Distribuições">Debian, Devuan, Mint.</td>
       <td data-label="Comando: Atualizar">
         <code>sudo apt update && sudo apt upgrade -y</code>
         <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>
@@ -43,26 +43,9 @@ tags: [pacotes, linux, apt, dnf, pacman, zypper, instalacao]
       </td>
       <td data-label="Observações">Usa pacotes <code>.deb</code>. Estável, mas versões mais antigas.</td>
     </tr>
-    <tr>
-      <td data-label="Gerenciador">DNF</td>
-      <td data-label="Distribuições">Fedora, RHEL, CentOS Stream</td>
-      <td data-label="Comando: Atualizar">
-        <code>sudo dnf upgrade --refresh</code>
-        <button class="copy-btn" data-command="sudo dnf upgrade --refresh">📋 Copiar</button>
-      </td>
-      <td data-label="Comando: Instalar">
-        <code>sudo dnf install firefox</code>
-        <button class="copy-btn" data-command="sudo dnf install firefox">📋 Copiar</button>
-      </td>
-      <td data-label="Comando: Remover">
-        <code>sudo dnf remove firefox</code>
-        <button class="copy-btn" data-command="sudo dnf remove firefox">📋 Copiar</button>
-      </td>
-      <td data-label="Observações">Sucessor do YUM. Resolve dependências com precisão.</td>
-    </tr>
-    <tr>
+      <tr>
       <td data-label="Gerenciador">Pacman</td>
-      <td data-label="Distribuições">Arch Linux, Manjaro, EndeavourOS.</td>
+      <td data-label="Distribuições">Artix.</td>
       <td data-label="Comando: Atualizar">
         <code>sudo pacman -Syu</code>
         <button class="copy-btn" data-command="sudo pacman -Syu">📋 Copiar</button>
@@ -77,23 +60,7 @@ tags: [pacotes, linux, apt, dnf, pacman, zypper, instalacao]
       </td>
       <td data-label="Observações">Sistema rolling release. Atualizações frequentes, mas exigem atenção.</td>
     </tr>
-    <tr>
-      <td data-label="Gerenciador">Zypper</td>
-      <td data-label="Distribuições">openSUSE Tumbleweed / Leap.</td>
-      <td data-label="Comando: Atualizar">
-        <code>sudo zypper update</code>
-        <button class="copy-btn" data-command="sudo zypper update">📋 Copiar</button>
-      </td>
-      <td data-label="Comando: Instalar">
-        <code>sudo zypper install firefox</code>
-        <button class="copy-btn" data-command="sudo zypper install firefox">📋 Copiar</button>
-      </td>
-      <td data-label="Comando: Remover">
-        <code>sudo zypper remove firefox</code>
-        <button class="copy-btn" data-command="sudo zypper remove firefox">📋 Copiar</button>
-      </td>
-      <td data-label="Observações">Estável (Leap) ou rolling (Tumbleweed). Excelente para servidores.</td>
-    </tr>
+    
   </tbody>
 </table>
 
