@@ -23,16 +23,16 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <td data-label="Distribuição">Linux Mint</td>
         <td data-label="Ponto Forte">Interface familiar (Cinnamon), estável, base Debian.</td>
         <td data-label="Comando de Atualização">
-          <code>sudo apt update && sudo apt full-upgrade -y</code>
-          <button class="copy-btn" data-command="sudo apt update && sudo apt full-upgrade -y">📋 Copiar</button>
+          <code>sudo apt update && sudo apt upgrade -y</code>
+          <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade -y">📋 Copiar</button>
         </td>
       </tr>
       <tr>
         <td data-label="Distribuição">Debian Stable.</td>
         <td data-label="Ponto Forte">Estabilidade extrema, opção sem systemd (Devuan).</td>
         <td data-label="Comando de Atualização">
-          <code>sudo apt update && sudo apt full-upgrade</code>
-          <button class="copy-btn" data-command="sudo apt update && sudo apt full-upgrade">📋 Copiar</button>
+          <code>sudo apt update && sudo apt upgrade</code>
+          <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade">📋 Copiar</button>
         </td>
       </tr>
       <tr>
@@ -48,8 +48,8 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
         <td data-label="Distribuição">Devuan.</td>
         <td data-label="Ponto Forte">Debian sem systemd, liberdade técnica total.</td>
         <td data-label="Comando de Atualização">
-          <code>sudo apt update && sudo apt full-upgrade</code>
-          <button class="copy-btn" data-command="sudo apt update && sudo apt full-upgrade">📋 Copiar</button>
+          <code>sudo apt update && sudo apt upgrade</code>
+          <button class="copy-btn" data-command="sudo apt update && sudo apt upgrade">📋 Copiar</button>
         </td>
       </tr>
     </tbody>
