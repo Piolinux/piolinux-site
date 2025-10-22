@@ -13,6 +13,7 @@ permalink: /recuperacao-e-manutencao/
 <h2>Comandos Gerais.</h2>
 
 
+
 <input type="text" oninput="filtrarLinhas(this.value)" placeholder="Filtrar comandos...">
 <script>
 function filtrarLinhas(termo) {
@@ -23,7 +24,7 @@ function filtrarLinhas(termo) {
 }
 </script>
 
-
+<p>Substitua SEU_DISCO por um dispositivo real (ex: sdb1) após identificá-lo com lsblk ou blkid</p>
 <div class="table-container">
   <table class="evergreen-table">
     <thead>
