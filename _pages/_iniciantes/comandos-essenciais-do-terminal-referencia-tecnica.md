@@ -418,32 +418,7 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
   </tbody>
 </table>
 
-<h3 id="avisos">Avisos Técnicos (não são "dicas")</h3>
-<p>Esses comandos causam perda de dados irreversível.
-Nunca os execute sem entender exatamente o que fazem. </p>
-<div class="table-container">
-  <table class="evergreen-table">
-    <thead>
-      <tr>
-        <th>Comandos Perigosos.</th>
-        <th>Alternativa Seguras.</th>
-        <th>Avisos Técnicos.</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="Comando Perigoso"><code>rm -rf /.</code></td>
-        <td data-label="Alternativa Segura">Nunca execute. Utilize <code>ls</code> antes de <code>rm</code>.</td>
-        <td data-label="Aviso Técnico">⚠️ Mesmo com <code>--no-preserve-root</code>, apaga todo o sistema. <strong>Não há recuperação.</strong></td>
-      </tr>
-      <tr>
-        <td data-label="Comando Perigoso"><code>rm -rf *.</code></td>
-        <td data-label="Alternativa Segura"><code>rm -ri *.</code> (confirmação interativa.)</td>
-        <td data-label="Aviso Técnico">⚠️ Sempre verifique com os comandos <code>pwd</code> e <code>ls</code> antes. O <code>*</code> não inclui arquivos ocultos (ex: <code>.bashrc</code>), mas ainda é perigoso.</td>
-      </tr>
-          </tbody>
-  </table>
-</div>    
+
     
     
     <table class="evergreen-table">
@@ -610,11 +585,11 @@ Nunca os execute sem entender exatamente o que fazem. </p>
       </td>
       <td data-label="O que faz">Remove com confirmação (seguro)</td>
     </tr>
-    <tr>
-      <td data-label="Comando"><code>rm -rf</code></td>
-      <td data-label="Exemplo">—</td>
-      <td data-label="O que faz">⚠️ Perigoso! Só use se souber exatamente o que faz.</td>
-    </tr>
+   <tr>
+  <td><code>trash pasta/</code></td>
+  <td>Mover para lixeira (requer <code>trash-cli</code>).</td>
+  <td data-label="Ação"><button class="copy-btn" data-command="trash pasta/">📋</button></td>
+</tr>
   </tbody>
 </table>
 
