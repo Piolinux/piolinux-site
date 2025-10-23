@@ -317,13 +317,13 @@ function filtrarLinhas(termo) {
     <tr>
       <td>Buscar pacote por nome.</td>
       <td><code>xbps-query -Rs firefox</code></td>
-      <td>Lista pacotes que contêm "firefox" no nome ou descrição.</td>
+      <td>Lista pacotes que contêm firefox no nome ou descrição.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="xbps-query -Rs firefox">📋</button></td>
     </tr>
     <tr>
       <td>Ver informações de um pacote.</td>
       <td><code>xbps-query -p pkgver firefox</code></td>
-      <td>Mostra a versão exata do pacote instalado ou disponível.</td>
+      <td>Versão exata do pacote instalado ou disponível.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="xbps-query -p pkgver firefox">📋</button></td>
     </tr>
     <tr>
