@@ -271,7 +271,7 @@ function filtrarLinhas(termo) {
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Tarefass</th>
+      <th>Tarefas</th>
       <th>Comandos.</th>
       <th>Descrições Técnicas.</th>
       <th>Ações.</th>
@@ -329,7 +329,7 @@ function filtrarLinhas(termo) {
     <tr>
       <td>Listar arquivos de um pacote.</td>
       <td><code>xbps-query -f firefox</code></td>
-      <td>Mostra todos os arquivos instalados pelo pacote `firefox`.</td>
+      <td>Mostra todos os arquivos instalados pelo pacote firefox.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="xbps-query -f firefox">📋</button></td>
     </tr>
     <tr>
@@ -341,7 +341,7 @@ function filtrarLinhas(termo) {
     <tr>
       <td>Instalar pacote de forma não interativa.</td>
       <td><code>sudo xbps-install -y firefox</code></td>
-      <td>Responde "sim" automaticamente a prompts (útil em scripts).</td>
+      <td>Responde sim automaticamente a prompts (útil em scripts).</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo xbps-install -y firefox">📋</button></td>
     </tr>
     <tr>
