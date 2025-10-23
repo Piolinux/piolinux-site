@@ -271,75 +271,75 @@ function filtrarLinhas(termo) {
 <table class="evergreen-table">
   <thead>
     <tr>
-      <th>Tarefa</th>
-      <th>Comando</th>
-      <th>Descrição Técnica</th>
-      <th>Ação</th>
+      <th>Tarefass</th>
+      <th>Comandos.</th>
+      <th>Descrições Técnicas.</th>
+      <th>Ações.</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Atualizar índices de pacotes</td>
+      <td>Atualizar índices de pacotes.</td>
       <td><code>sudo xbps-install -S</code></td>
       <td>Sincroniza a lista de pacotes com os repositórios oficiais.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo xbps-install -S">📋</button></td>
     </tr>
     <tr>
-      <td>Atualizar todo o sistema</td>
+      <td>Atualizar todo o sistema.</td>
       <td><code>sudo xbps-install -Su</code></td>
       <td>Atualiza todos os pacotes instalados para as versões mais recentes.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo xbps-install -Su">📋</button></td>
     </tr>
     <tr>
-      <td>Instalar um pacote</td>
+      <td>Instalar um pacote.</td>
       <td><code>sudo xbps-install firefox</code></td>
       <td>Instala o pacote `firefox` e suas dependências.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo xbps-install firefox">📋</button></td>
     </tr>
     <tr>
-      <td>Remover um pacote (mantendo dependências)</td>
+      <td>Remover um pacote. (mantendo dependências)</td>
       <td><code>sudo xbps-remove firefox</code></td>
       <td>Remove apenas o pacote especificado.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo xbps-remove firefox">📋</button></td>
     </tr>
     <tr>
-      <td>Remover pacote + dependências órfãs</td>
+      <td>Remover pacote + dependências órfãs.</td>
       <td><code>sudo xbps-remove -R firefox</code></td>
       <td>Remove o pacote e quaisquer dependências que não são mais usadas.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo xbps-remove -R firefox">📋</button></td>
     </tr>
     <tr>
-      <td>Limpar pacotes órfãos do sistema</td>
+      <td>Limpar pacotes órfãos do sistema.</td>
       <td><code>sudo xbps-remove -o</code></td>
       <td>Remove todos os pacotes que não são mais dependência de ninguém.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo xbps-remove -o">📋</button></td>
     </tr>
     <tr>
-      <td>Buscar pacote por nome</td>
+      <td>Buscar pacote por nome.</td>
       <td><code>xbps-query -Rs firefox</code></td>
       <td>Lista pacotes que contêm "firefox" no nome ou descrição.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="xbps-query -Rs firefox">📋</button></td>
     </tr>
     <tr>
-      <td>Ver informações de um pacote</td>
+      <td>Ver informações de um pacote.</td>
       <td><code>xbps-query -p pkgver firefox</code></td>
       <td>Mostra a versão exata do pacote instalado ou disponível.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="xbps-query -p pkgver firefox">📋</button></td>
     </tr>
     <tr>
-      <td>Listar arquivos de um pacote</td>
+      <td>Listar arquivos de um pacote.</td>
       <td><code>xbps-query -f firefox</code></td>
       <td>Mostra todos os arquivos instalados pelo pacote `firefox`.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="xbps-query -f firefox">📋</button></td>
     </tr>
     <tr>
-      <td>Ver quais pacotes usam um arquivo</td>
+      <td>Ver quais pacotes usam um arquivo.</td>
       <td><code>xbps-query -o /usr/bin/firefox</code></td>
       <td>Identifica o pacote que instalou o binário especificado.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="xbps-query -o /usr/bin/firefox">📋</button></td>
     </tr>
     <tr>
-      <td>Instalar pacote de forma não interativa</td>
+      <td>Instalar pacote de forma não interativa.</td>
       <td><code>sudo xbps-install -y firefox</code></td>
       <td>Responde "sim" automaticamente a prompts (útil em scripts).</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo xbps-install -y firefox">📋</button></td>
