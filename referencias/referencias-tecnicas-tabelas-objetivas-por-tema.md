@@ -12,6 +12,50 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
 
   {% assign pages = site.pages | where_exp: "page", "page.layout == 'manual-seo' and page.url != '/referencias/'" %}
 
+
+<!-- Seção: USB -->
+
+
+<div class="section">
+      {% for page in pages %}
+      {% if page.tags contains "educacao" %}
+        <div class="ref-item">
+          <h3><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h3>
+          <p>{{ page.description }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+
+
+
+<div class="section">
+      {% for page in pages %}
+      {% if page.tags contains "thunderbird" %}
+        <div class="ref-item">
+          <h3><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h3>
+          <p>{{ page.description }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+
+
+  <div class="section">
+      {% for page in pages %}
+      {% if page.tags contains "chat" %}
+        <div class="ref-item">
+          <h3><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h3>
+          <p>{{ page.description }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+
+
   <!-- Seção: USB -->
   <div class="section">
       {% for page in pages %}
@@ -65,7 +109,8 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   
     
   
-   
+  
+  
   
   <!-- Seção: Teclados -->
   <div class="section">
@@ -208,50 +253,6 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
       {% endif %}
     {% endfor %}
   </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
   
   
   
