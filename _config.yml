@@ -74,7 +74,11 @@ collections:
     permalink: /termos/:title/
   referencias:
     output: true
-    permalink: /referencias/:title/   
+    permalink: /referencias/:title/  
+  tabelas:
+    output: true
+    permalink: /tabelas/:title/   
+    
 
 include:
   - _ferramentas
@@ -89,6 +93,7 @@ include:
   - _piadas
   - _termos
   - _referencias  
+  - _tabelas
     
 # Para JS, use um plugin ou minifique manualmente
 
