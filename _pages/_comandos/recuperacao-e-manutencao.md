@@ -24,7 +24,11 @@ function filtrarLinhas(termo) {
 }
 </script>
 
-<p>Substitua SEU_DISCO por um dispositivo real (ex: sdb1) após identificá-lo com lsblk ou blkid</p>
+<h2>Tabela de Comandos de ALTO RISCO (Use por sua própria conta e risco)</h2>
+<p><strong>ATENÇÃO:</strong> Estes comandos podem causar perda irreversível de dados ou inutilizar o sistema.<br>
+Substitua <code>SEU_DISCO</code> por um dispositivo real (ex: <code>sdb1</code>) após identificá-lo com <code>lsblk</code> ou <code>blkid</code>.<br>
+<strong>Execute apenas em partição desmontada</strong> — idealmente a partir de um live CD/USB.</p>
+
 <div class="table-container">
   <table class="evergreen-table">
     <thead>
