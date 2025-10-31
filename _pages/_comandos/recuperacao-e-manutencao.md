@@ -143,10 +143,7 @@ Substitua <code>SEU_DISCO</code> por um dispositivo real (ex: <code>sdb1</code>)
   </table>
 </div>
 
-<h2>Tabela de Comandos de ALTO RISCO (Use por sua própria conta e risco).</h2>
-<div class="warning-box">
-  <strong>ATENÇÃO:</strong> Estes comandos podem causar perda irreversível de dados ou inutilizar o sistema. Substitua <code>SEU_DISCO</code> por um dispositivo real (ex: <code>sdb1</code>) após identificá-lo com <code>lsblk</code> ou <code>blkid.</code>.
-</div>
+
 
 <div class="table-container">
   <table class="evergreen-table">
