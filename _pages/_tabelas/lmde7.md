@@ -51,7 +51,7 @@ description: "Especificações oficiais do LMDE 7: base Debian, interface Cinnam
     </tr>
     <tr>
       <td data-label="Atributo">Link Oficial.</td>
-      <td data-label="Detalhe Técnico"><a href="https://linuxmint.com/lmde.php" target="_blank" rel="noopener">linuxmint.com/lmde.php</a></td>
+      <td data-label="Detalhe Técnico"><a href="https://linuxmint.com/download_lmde.php" target="_blank" rel="noopener">linuxmint.com/download_lmde.php</a></td>
       <td data-label="Observações">Documentação oficial e ISOs</td>
     </tr>
   </tbody>
