@@ -26,7 +26,15 @@ tags: [linux, chat, matrix, element, irc, hexchat, pidgin, signal, devuan, artix
       Programa"><strong>Element</strong></td>
       <td data-label="Protocolos">Matrix.</td>
       <td data-label="Por que é útil">Chat descentralizado, criptografia E2E, chamadas de vídeo, salas públicas/privadas. Alternativa ao Slack/Discord.</td>
-      <td data-label="Instalação (Debian/Devuan/Mint)"><code>sudo apt install element-desktop</code></td>
+      <td data-label="Instalação (Debian/Devuan/Mint)"><code>sudo apt install -y wget apt-transport-https
+‍
+sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg
+‍
+echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list
+
+sudo apt update
+
+sudo apt install element-desktop</code></td>
     </tr>
     <tr>
       <td data-label="
