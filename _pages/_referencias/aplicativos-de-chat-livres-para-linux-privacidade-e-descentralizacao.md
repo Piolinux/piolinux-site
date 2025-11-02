@@ -58,7 +58,15 @@ sudo apt install element-desktop</code></td>
       Programa"><strong>Signal Desktop.</strong></td>
       <td data-label="Protocolos">Signal.</td>
       <td data-label="Por que é útil">Criptografia E2E de ponta, mas **requer número de telefone**. Não é software livre, mas é o mais seguro para SMS/voz.</td>
-      <td data-label="Instalação (Debian/Devuan/Mint)"><code>curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo gpg --dearmor -o /usr/share/keyrings/signal-desktop-keyring.gpg && echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' | sudo tee /etc/apt/sources.list.d/signal-xenial.list && sudo apt update && sudo apt install signal-desktop</code></td>
+      <td data-label="Instalação (Debian/Devuan/Mint)"><code>wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg;
+cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
+
+
+wget -O signal-desktop.sources https://updates.signal.org/static/desktop/apt/signal-desktop.sources;
+cat signal-desktop.sources | sudo tee /etc/apt/sources.list.d/signal-desktop.sources > /dev/null
+
+
+sudo apt update && sudo apt install signal-desktop</code></td>
     </tr>
     <tr>
       <td data-label="
