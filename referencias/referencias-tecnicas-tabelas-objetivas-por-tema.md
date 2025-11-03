@@ -6,6 +6,15 @@ permalink: /referencias/
 tags: [referencia, tecnico, tabela, linux, sysadmin]
 ---
 
+
+
+
+
+
+
+
+
+
 <section>
   <h2>Referências Técnicas</h2>
   <p>Tabelas objetivas, sem textos longos, apenas dados verificáveis.</p>
@@ -13,7 +22,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   {% assign pages = site.pages | where_exp: "page", "page.layout == 'manual-seo' and page.url != '/referencias/'" %}
 
 
-<!-- Seção: USB -->
+
 
 
 <div class="section">
