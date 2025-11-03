@@ -21,30 +21,35 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # NOVO PASSO DE DEBUG: Confirma o diretório e a presença do Gemfile
+      # Novo passo de Debug (ajuda a confirmar o diretório de trabalho)
       - name: Debug - Listar arquivos na raiz
         run: |
+          echo "Diretório de trabalho atual:"
           pwd
+          echo "Conteúdo da raiz:"
           ls -la
           
-      - name: Cleanup Gemfile.lock (Resolves integrity issues)
+      # 1. REMOVE o Gemfile.lock (Com -f para ignorar se não existir)
+      - name: Cleanup Gemfile.lock (Force removal)
         run: rm -f Gemfile.lock
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
-          bundler-cache: true 
+          # IMPORTANTE: Desativamos o cache do Bundler para forçar uma instalação limpa
+          # e evitar restaurar um Gemfile.lock corrompido ou de outra plataforma.
+          bundler-cache: false 
 
       - name: Install dependencies and lock for Linux
         run: |
-          # O --no-deployment garante que a instalação funcione mesmo sem o Gemfile.lock (que acabamos de remover)
+          # 2. Instalação e Geração do Gemfile.lock (limpa e específica para Linux)
+          # O --no-deployment garante que ele gere um novo Gemfile.lock
           bundle install --verbose --no-deployment
-          # Adicionamos a plataforma Linux ao novo lockfile gerado
+          # Adiciona a plataforma Linux ao novo lockfile gerado
           bundle lock --add-platform x86_64-linux
 
       - name: Build with Jekyll
-        # Certifique-se de que todas as dependências estão sendo usadas com 'bundle exec'
         run: JEKYLL_ENV=production bundle exec jekyll build --trace
 
       - name: Upload artifact
@@ -63,8 +68,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-
-
-    
-     
