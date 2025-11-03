@@ -15,3 +15,5 @@ gem "jekyll-paginate"
 
 # Elimina o aviso do Faraday (mantido, mas pode não ser mais necessário com Jekyll 4.4)
 gem "faraday-retry" 
+
+[Immersive content redacted for brevity.]
