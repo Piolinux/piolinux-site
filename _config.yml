@@ -34,7 +34,7 @@ exclude:
   - README.md
   - LICENSE
 
-  collections:
+collections:
   pages:
     output: true
     permalink: /:title/
