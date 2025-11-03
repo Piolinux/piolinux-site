@@ -96,7 +96,7 @@ PLATFORMS
 
 DEPENDENCIES
   faraday-retry
-  jekyll (~> 4.3)
+  jekyll (~> 3.10)
   jekyll-feed
   jekyll-paginate
   jekyll-seo-tag
