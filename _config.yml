@@ -36,7 +36,7 @@ exclude:
   - LICENSE
 
   collections:
-     pages:
+  pages:
     output: true
     permalink: /:title/
   ferramentas:
@@ -65,11 +65,10 @@ exclude:
     permalink: /termos/:title/
   referencias:
     output: true
-    permalink: /referencias/:title/  
+    permalink: /referencias/:title/
   tabelas:
     output: true
-    permalink: /tabelas/:title/   
-    
+    permalink: /tabelas/:title/
 
 include:
   - _ferramentas
