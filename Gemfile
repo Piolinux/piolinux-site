@@ -1,5 +1,12 @@
-source 'https://rubygems.org'
+# Gemfile
+source "https://rubygems.org"
 
-gem "jekyll", "~> 3.10"
+gem "jekyll", "~> 4.3"
 
-group :jekyll_plugins do
+gem "jekyll-feed"
+gem "jekyll-sitemap"
+gem "jekyll-seo-tag"
+gem "jekyll-paginate"
+
+# Elimina o aviso do Faraday
+gem "faraday-retry"
