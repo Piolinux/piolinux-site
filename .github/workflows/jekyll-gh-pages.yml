@@ -15,56 +15,29 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Novo passo de Debug (ajuda a confirmar o diretório de trabalho)
-      - name: Debug - Listar arquivos na raiz
-        run: |
-          echo "Diretório de trabalho atual:"
-          pwd
-          echo "Conteúdo da raiz:"
-          ls -la
-          
-      # 1. REMOVE o Gemfile.lock (Com -f para ignorar se não existir)
-      - name: Cleanup Gemfile.lock (Force removal)
-        run: rm -f Gemfile.lock
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Build with GitHub Pages (built-in Jekyll)
+        uses: actions/jekyll-build-pages@v1
         with:
-          ruby-version: '3.1'
-          # IMPORTANTE: Desativamos o cache do Bundler para forçar uma instalação limpa
-          # e evitar restaurar um Gemfile.lock corrompido ou de outra plataforma.
-          bundler-cache: false 
-
-      - name: Install dependencies and lock for Linux
-        run: |
-          # 2. Instalação e Geração do Gemfile.lock (limpa e específica para Linux)
-          # O --no-deployment garante que ele gere um novo Gemfile.lock
-          bundle install --verbose --no-deployment
-          # Adiciona a plataforma Linux ao novo lockfile gerado
-          bundle lock --add-platform x86_64-linux
-
-      - name: Build with Jekyll
-        run: JEKYLL_ENV=production bundle exec jekyll build --trace
+          source: ./
+          destination: ./_site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-      
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
