@@ -1,9 +1,15 @@
 ---
 layout: manual-seo
 title: "Arquivos e Diretórios — Comandos Linux"
-description: "Guia técnico com comandos essenciais de Arquivos e Diretórios. Copie, cole e use direto no terminal. Organizado por arquivos e diretórios."
+description: 'Guia técnico com comandos essenciais de Arquivos e Diretórios. Copie, cole e use direto no terminal. Organizado por arquivos e diretórios.'
 permalink: /arquivos-e-diretorios/
 ---
+
+
+
+
+
+
 
 
 <section>
