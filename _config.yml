@@ -35,11 +35,11 @@ exclude:
   - README.md
   - LICENSE
 
-collections:
-  pages:
+  collections:
+     pages:
     output: true
     permalink: /:title/
-ferramentas:
+  ferramentas:
     output: true
     permalink: /ferramentas/:title/
   comandos:
