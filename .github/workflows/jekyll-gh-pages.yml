@@ -22,18 +22,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # 1. Remova o Gemfile.lock *antes* de configurar o Ruby
+      - name: Remove Gemfile.lock (Fail-safe)
+        run: rm -f Gemfile.lock
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
-          bundler-cache: true
+          # Mantemos o cache para o 'bundle install' recém-gerado
+          bundler-cache: true 
 
-      - name: Remove Gemfile.lock to avoid conflicts
-        run: rm -f Gemfile.lock
-
+      # 2. Adiciona a plataforma Linux ao Gemfile.lock
       - name: Set bundle platform to linux
         run: bundle lock --add-platform x86_64-linux
 
+      # 3. O 'bundle install' aqui criará o NOVO Gemfile.lock
       - name: Install dependencies
         run: bundle install --verbose
 
