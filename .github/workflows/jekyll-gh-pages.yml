@@ -26,7 +26,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2' # Use a versão do Ruby que você usa localmente ou a recomendada para o Jekyll
+          ruby-version: '3.1' # Use a versão do Ruby que você usa localmente ou a recomendada para o Jekyll
           bundler-cache: true # Esta opção é útil para cachear gems, acelerando builds futuras
 
       # 3. Instala as dependências do Jekyll (gems)
