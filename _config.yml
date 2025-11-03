@@ -27,7 +27,6 @@ locale: "pt_BR"
 
 
 exclude:
-  - _site/
   - vendor/
   - tags/
   - categorias/
