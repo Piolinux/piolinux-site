@@ -22,26 +22,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 1. REMOVE o Gemfile.lock (Com `-f` para ignorar se não existir)
-      # Isso garante que a próxima etapa de Setup Ruby comece do zero ou force a re-geração.
-      - name: Cleanup Gemfile.lock (Resolves Exit Code 5 issues)
-        run: rm -f Gemfile.lock
-
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
-          # Deixe 'bundler-cache: true'. Ele usará o Gemfile para restaurar dependências.
-          bundler-cache: true 
+          bundler-cache: true
 
-      # 2. INSTALA dependências e GERA um novo Gemfile.lock no ambiente Linux.
-      # Este passo agora tem certeza de que o Gemfile.lock foi removido antes.
-      - name: Install dependencies and lock for Linux
-        run: |
-          bundle install --verbose
-          bundle lock --add-platform x86_64-linux
+      - name: Remove Gemfile.lock to avoid conflicts
+        run: rm -f Gemfile.lock
 
-      # Os passos 3 e 4 permanecem os mesmos.
+      - name: Set bundle platform to linux
+        run: bundle lock --add-platform x86_64-linux
+
+      - name: Install dependencies
+        run: bundle install --verbose
+
       - name: Build with Jekyll
         run: JEKYLL_ENV=production bundle exec jekyll build --trace
 
@@ -49,7 +44,15 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
+url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
   deploy:
     environment:
       name: github-pages
+      
