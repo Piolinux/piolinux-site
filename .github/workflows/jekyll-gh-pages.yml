@@ -1,61 +1,60 @@
-# .github/workflows/jekyll.yml
-name: Build and Deploy Jekyll Site
+# Nome do seu workflow
+name: Jekyll Site CI
 
+# Define quando o workflow deve rodar. Neste caso, a cada push para o branch 'main'.
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main # Altere para o seu branch principal, se for diferente
+
+  # Permite rodar o workflow manualmente através da aba Actions do GitHub
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
+# Define os jobs que serão executados
 jobs:
-  build:
+  build-and-deploy:
+    # O tipo de máquina virtual onde o job vai rodar. Ubuntu é uma escolha comum.
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
 
+    # Define os passos do job
+    steps:
+      # 1. Faz checkout do código do seu repositório
+      - name: Checkout
+        uses: actions/checkout@v4 # Use a versão mais recente da action de checkout
+
+      # 2. Configura o ambiente Ruby. Especifique a versão que seu Jekyll usa.
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
-          bundler-cache: true
+          ruby-version: '3.2' # Use a versão do Ruby que você usa localmente ou a recomendada para o Jekyll
+          bundler-cache: true # Esta opção é útil para cachear gems, acelerando builds futuras
 
-      - name: Remove Gemfile.lock to avoid conflicts
-        run: rm -f Gemfile.lock
+      # 3. Instala as dependências do Jekyll (gems)
+      - name: Install Dependencies
+        run: bundle install --jobs 4 --retry 3 # Instala gems do Gemfile
 
-      - name: Set bundle platform to linux
-        run: bundle lock --add-platform x86_64-linux
+      # 4. Constrói o site Jekyll
+      - name: Build Jekyll
+        run: bundle exec jekyll build --baseurl ${{ github.event.inputs.baseurl || '' }} # Constrói o site. --baseurl é opcional dependendo da sua configuração.
+        env:
+          JEKYLL_ENV: production # Define o ambiente como produção
 
-      - name: Install dependencies
-        run: bundle install --verbose
+      # 5. Configura o GitHub Pages para deploy
+      # Esta action é usada para preparar os artefatos para deploy no GitHub Pages
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
 
-      - name: Build with Jekyll
-        run: JEKYLL_ENV=production bundle exec jekyll build --trace
-
+      # 6. Cria um artefato com os arquivos construídos do site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
-url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
+          # O diretório onde o Jekyll constrói o site é geralmente '_site'
+          path: '_site'
+
+      # 7. Faz o deploy dos artefatos para o GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-  deploy:
-    environment:
-      name: github-pages
-      
 
 
 
