@@ -52,12 +52,13 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
       
     # --- LINHA 49: 'runs-on' DEVE estar no mesmo nível que 'environment' (4 espaços)
-    runs-on: ubuntu-latest 
+   runs-on: ubuntu-latest 
     needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
 
 
