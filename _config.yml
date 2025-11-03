@@ -17,11 +17,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-
 title: "Piolinux"
 description: "200 piadas e trocadilhos de Linux, terminal e devs — + guias técnicos em tabelas práticas. Ria, aprenda e compartilhe. O lado divertido (e útil) do open source."
 baseurl: ""
-url: "https://piolinux.com"  # ← sem espaços!
+url: "https://piolinux.com"
 lang: "pt-BR"
 locale: "pt_BR"
 theme: null
@@ -35,7 +34,7 @@ exclude:
   - LICENSE
 
 collections:
-     pages:
+  pages:
     output: true
     permalink: /:title/
   ferramentas:
@@ -78,7 +77,7 @@ include:
   - _kernel
   - _tools
   - _termos
-  - _referencias  
+  - _referencias
   - _tabelas
     
 # Para JS, use um plugin ou minifique manualmente
