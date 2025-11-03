@@ -24,7 +24,7 @@ permalink: /aplicativos-graficos-compactacao-linux/
       <td data-label="Método">Pacote <code>.deb</code> oficial</td>
       <td data-label="Compatível com">Debian, Ubuntu, Linux Mint, Devuan.</td>
       <td data-label="Ação">
-        <a href="https://github.com/peazip/PeaZip/releases" target="_blank" rel="noopener">Baixar .deb</a>
+        <a href="https://peazip.github.io/peazip-linux.html" target="_blank" rel="noopener">Baixar .deb</a>
       </td>
     </tr>
     <tr>
