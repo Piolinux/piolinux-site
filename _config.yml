@@ -116,6 +116,8 @@ include:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-#   - README.md
+#   - README.md 
+#   - _sass/
+#   - assets/css/*.scss
 
 
