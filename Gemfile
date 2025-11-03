@@ -1,8 +1,8 @@
-# Gemfile
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "jekyll", "~> 3.5"
+gem "jekyll", "~> 4.2"
 
+group :jekyll_plugins do
 
 
 # Elimina o aviso do Faraday
