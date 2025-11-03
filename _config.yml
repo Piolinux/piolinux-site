@@ -39,13 +39,7 @@ collections:
   pages:
     output: true
     permalink: /:title/
-  jogos:
-    output: true
-    permalink: /jogos/:title/
-  wallpapers:
-    output: true
-    permalink: /wallpaper/:title/
-  ferramentas:
+ferramentas:
     output: true
     permalink: /ferramentas/:title/
   comandos:
@@ -66,9 +60,6 @@ collections:
   tools:
     output: true
     permalink: /tools/:title/
-  piadas:
-    output: true
-    permalink: /piadas/:title/
   termos:
     output: true
     permalink: /termos/:title/
@@ -82,15 +73,12 @@ collections:
 
 include:
   - _ferramentas
-  - _jogos
   - _comandos
   - _distros
-  - _wallpapers
   - _linux
   - _iniciantes
   - _kernel
   - _tools
-  - _piadas
   - _termos
   - _referencias  
   - _tabelas
