@@ -17,28 +17,34 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+
 title: "Piolinux"
 description: "200 piadas e trocadilhos de Linux, terminal e devs — + guias técnicos em tabelas práticas. Ria, aprenda e compartilhe. O lado divertido (e útil) do open source."
 baseurl: ""
-url: "https://piolinux.com"
+url: "https://piolinux.com"  # ← sem espaços!
 lang: "pt-BR"
 locale: "pt_BR"
-theme: null
+
 
 exclude:
+  - _site/
   - vendor/
   - tags/
   - categorias/
   - node_modules
   - README.md
   - LICENSE
- 
-  
 
 collections:
   pages:
     output: true
     permalink: /:title/
+  jogos:
+    output: true
+    permalink: /jogos/:title/
+  wallpapers:
+    output: true
+    permalink: /wallpaper/:title/
   ferramentas:
     output: true
     permalink: /ferramentas/:title/
@@ -60,26 +66,33 @@ collections:
   tools:
     output: true
     permalink: /tools/:title/
+  piadas:
+    output: true
+    permalink: /piadas/:title/
   termos:
     output: true
     permalink: /termos/:title/
   referencias:
     output: true
-    permalink: /referencias/:title/
+    permalink: /referencias/:title/  
   tabelas:
     output: true
-    permalink: /tabelas/:title/
+    permalink: /tabelas/:title/   
+    
 
 include:
   - _ferramentas
+  - _jogos
   - _comandos
   - _distros
+  - _wallpapers
   - _linux
   - _iniciantes
   - _kernel
   - _tools
+  - _piadas
   - _termos
-  - _referencias
+  - _referencias  
   - _tabelas
     
 # Para JS, use um plugin ou minifique manualmente
@@ -104,6 +117,5 @@ include:
 #   - vendor/gems/
 #   - vendor/ruby/
 #   - README.md
-#   - sitemap.xml
 
 
