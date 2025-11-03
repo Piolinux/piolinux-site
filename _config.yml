@@ -32,6 +32,8 @@ exclude:
   - node_modules
   - README.md
   - LICENSE
+ 
+  
 
 collections:
   pages:
@@ -102,5 +104,6 @@ include:
 #   - vendor/gems/
 #   - vendor/ruby/
 #   - README.md
+#   - sitemap.xml
 
 
