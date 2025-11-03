@@ -35,7 +35,7 @@ exclude:
   - LICENSE
 
 collections:
-  pages:
+     pages:
     output: true
     permalink: /:title/
   ferramentas:
