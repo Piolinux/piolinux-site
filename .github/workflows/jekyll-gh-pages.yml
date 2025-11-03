@@ -1,61 +1,68 @@
-# Nome do seu workflow
-name: Jekyll Site CI
+name: Build and Deploy Jekyll Site
 
-# Define quando o workflow deve rodar. Neste caso, a cada push para o branch 'main'.
 on:
   push:
-    branches:
-      - main # Altere para o seu branch principal, se for diferente
-
-  # Permite rodar o workflow manualmente através da aba Actions do GitHub
+    branches: [ main ]
   workflow_dispatch:
 
-# Define os jobs que serão executados
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  build-and-deploy:
-    # O tipo de máquina virtual onde o job vai rodar. Ubuntu é uma escolha comum.
+  build:
     runs-on: ubuntu-latest
-
-    # Define os passos do job
     steps:
-      # 1. Faz checkout do código do seu repositório
       - name: Checkout
-        uses: actions/checkout@v4 # Use a versão mais recente da action de checkout
+        uses: actions/checkout@v4
 
-      # 2. Configura o ambiente Ruby. Especifique a versão que seu Jekyll usa.
+      # NOVO PASSO DE DEBUG: Confirma o diretório e a presença do Gemfile
+      - name: Debug - Listar arquivos na raiz
+        run: |
+          pwd
+          ls -la
+          
+      - name: Cleanup Gemfile.lock (Resolves integrity issues)
+        run: rm -f Gemfile.lock
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3' # Use a versão do Ruby que você usa localmente ou a recomendada para o Jekyll
-          bundler-cache: true # Esta opção é útil para cachear gems, acelerando builds futuras
+          ruby-version: '3.1'
+          bundler-cache: true 
 
-      # 3. Instala as dependências do Jekyll (gems)
-      - name: Install Dependencies
-        run: bundle install --jobs 4 --retry 3 # Instala gems do Gemfile
+      - name: Install dependencies and lock for Linux
+        run: |
+          # O --no-deployment garante que a instalação funcione mesmo sem o Gemfile.lock (que acabamos de remover)
+          bundle install --verbose --no-deployment
+          # Adicionamos a plataforma Linux ao novo lockfile gerado
+          bundle lock --add-platform x86_64-linux
 
-      # 4. Constrói o site Jekyll
-      - name: Build Jekyll
-        run: bundle exec jekyll build --baseurl ${{ github.event.inputs.baseurl || '' }} # Constrói o site. --baseurl é opcional dependendo da sua configuração.
-        env:
-          JEKYLL_ENV: production # Define o ambiente como produção
+      - name: Build with Jekyll
+        # Certifique-se de que todas as dependências estão sendo usadas com 'bundle exec'
+        run: JEKYLL_ENV=production bundle exec jekyll build --trace
 
-      # 5. Configura o GitHub Pages para deploy
-      # Esta action é usada para preparar os artefatos para deploy no GitHub Pages
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v4
-
-      # 6. Cria um artefato com os arquivos construídos do site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # O diretório onde o Jekyll constrói o site é geralmente '_site'
-          path: '_site'
+          path: ./_site
 
-      # 7. Faz o deploy dos artefatos para o GitHub Pages
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
 
 
 
