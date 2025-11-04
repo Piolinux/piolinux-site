@@ -21,9 +21,9 @@ permalink: /referencias/
 
   
   {% assign pages = site.pages
-    | where_exp: "page", "page.layout == 'manual-seo'"
-    | where_exp: 'page', "page.url != '/referencias/'" %}
-
+  | where_exp: 'page', 'page.layout == "manual-seo"'
+  | where_exp: 'page', 'page.url != "/referencias/"'
+%}
 
 <div class="section">
       {% for page in pages %}
