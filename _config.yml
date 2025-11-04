@@ -25,6 +25,7 @@ url: "https://piolinux.com"  # ← sem espaços!
 lang: "pt-BR"
 locale: "pt_BR"
 markdown: kramdown
+theme: null
 
 
 exclude:
