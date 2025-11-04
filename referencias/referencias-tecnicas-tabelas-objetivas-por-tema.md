@@ -1,7 +1,7 @@
 ---
 layout: manual-seo
-title: "Referncias Tcnicas - Tabelas Objetivas por Tema"
-description: "Pginas tcnicas com tabelas comparativas: USB, teclados, backup, init systems, pacotes."
+title: "Referências Técnicas - Tabelas Objetivas por Tema"
+description: "Páginas técnicas com tabelas comparativas: USB, teclados, backup, init systems, pacotes."
 permalink: /referencias/
 tags:
   - referencia
@@ -20,8 +20,9 @@ tags:
 
 
 <section>
-  <h2>Referncias Tcnicas</h2>
-  <p>Tabelas objetivas, sem textos longos, apenas dados verificveis.</p>
+  <h2>Referências Técnicas</h2>
+  <p>Tabelas objetivas, sem textos longos, apenas dados verificáveis.</p>
+
 
  {% assign pages = site.pages 
    | where_exp: "page", "page.layout == 'manual-seo'" 
