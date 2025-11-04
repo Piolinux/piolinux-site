@@ -66,7 +66,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
 
 
 
-  <!-- Seção: USB -->
+ 
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "usb" %}
@@ -78,7 +78,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
     {% endfor %}
   </div>
 
-  <!-- Seção: Teclados -->
+ 
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "atalhos-de-teclado" %}
@@ -90,7 +90,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
     {% endfor %}
   </div>
 
-<!-- Seção: Teclados -->
+
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "dupeguru" %}
@@ -104,7 +104,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   
 
 
-<!-- Seção: Teclados -->
+
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "navegadores" %}
@@ -122,7 +122,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   
   
   
-  <!-- Seção: Teclados -->
+  
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "pc-antigo" %}
@@ -136,7 +136,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   
   
   
-  <!-- Seção: Teclados -->
+ 
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "repositórios" %}
@@ -150,7 +150,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   
   
   
-  <!-- Seção: Teclados -->
+  
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "instalação" %}
@@ -164,7 +164,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   
   
   
-  <!-- Seção: Teclados -->
+ 
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "dr_prot" %}
@@ -178,7 +178,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   
   
   
-  <!-- Seção: Teclados -->
+  
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "powershell" %}
@@ -190,7 +190,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
     {% endfor %}
   </div>
   
-  <!-- Seção: Teclados -->
+ 
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "man-pages" %}
@@ -207,7 +207,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
  
   
   
-   <!-- Seção: Teclados -->
+  
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "geany" %}
@@ -222,7 +222,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   
   
   
-   <!-- Seção: Teclados -->
+   
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "dpms" %}
@@ -236,7 +236,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   
   
   
-   <!-- Seção: Teclados -->
+   
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "editor-de-video" %}
@@ -252,7 +252,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
    
   
   
-   <!-- Seção: Teclados -->
+ 
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "https" %}
