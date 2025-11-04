@@ -1,15 +1,16 @@
 ---
 layout: manual-seo
-title: "Referencias Tecnicas - Tabelas Objetivas por Tema"
-description: "Paginas tecnicas com tabelas comparativas: USB, teclados, backup, init systems, pacotes."
-tags:
-  - referencia
-  - tecnico
-  - tabela
-  - linux
-  - sysadmin
+title: "Referências Técnicas — Tabelas Objetivas por Tema"
+description: "Páginas técnicas com tabelas comparativas: USB, teclados, backup, init systems, pacotes."
+tags: [referencia, tecnico, tabela, linux, sysadmin]
 permalink: /referencias/
 ---
+
+
+
+
+
+
 
 
 
@@ -18,10 +19,7 @@ permalink: /referencias/
   <h2>Referências Técnicas</h2>
   <p>Tabelas objetivas, sem textos longos, apenas dados verificáveis.</p>
 
-  {% assign pages = site.pages 
-   | where_exp: "page", "page.layout == 'manual-seo'" 
-   | where_exp: "page", "page.url != '/referencias/'" %}
-
+  {% assign pages = site.pages | where_exp: "page", "page.layout == 'manual-seo' and page.url != '/referencias/'" %}
 
 
 
@@ -78,7 +76,7 @@ permalink: /referencias/
     {% endfor %}
   </div>
 
- 
+  
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "atalhos-de-teclado" %}
@@ -90,7 +88,7 @@ permalink: /referencias/
     {% endfor %}
   </div>
 
-<!-- Seção: Teclados -->
+
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "dupeguru" %}
@@ -164,7 +162,7 @@ permalink: /referencias/
   
   
   
- 
+  
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "dr_prot" %}
@@ -178,7 +176,6 @@ permalink: /referencias/
   
   
   
- 
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "powershell" %}
@@ -207,7 +204,7 @@ permalink: /referencias/
  
   
   
- 
+   
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "geany" %}
@@ -222,7 +219,7 @@ permalink: /referencias/
   
   
   
-   
+  
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "dpms" %}
@@ -263,52 +260,3 @@ permalink: /referencias/
       {% endif %}
     {% endfor %}
   </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-
-
-
-
