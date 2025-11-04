@@ -15,7 +15,8 @@ permalink: /referencias/
   <h2>Referências Técnicas</h2>
   <p>Tabelas objetivas, sem textos longos, apenas dados verificáveis.</p>
 
-  {% assign pages = site.pages | where_exp: "page", "page.layout == 'manual-seo' and page.url != '/referencias/'" %}
+ {% assign pages = site.pages | where_exp: "page", "page.layout == 'manual-seo'" | where_exp: "page", "page.url != '/referencias/'" %}
+
 
 
 
