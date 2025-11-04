@@ -18,9 +18,10 @@ permalink: /referencias/
   <h2>Referências Técnicas</h2>
   <p>Tabelas objetivas, sem textos longos, apenas dados verificáveis.</p>
 
-  {% assign pages = site.pages | where_exp: "page", "page.layout == 'manual-seo'" | where_exp: "page", "page.url != '/referencias/'" %}
-
-
+{% assign project_page = site.pages 
+    | where_exp: "n", "n.layout == 'project'" 
+    | where_exp: "n", "n.title == page.project" 
+    | first %}
 
 
 
