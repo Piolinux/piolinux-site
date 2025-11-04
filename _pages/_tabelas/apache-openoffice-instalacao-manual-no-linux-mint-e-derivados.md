@@ -115,48 +115,6 @@ layout: manual-seo
   </tbody>
 </table>
 
-<h3>Pacotes de Idioma para Apache OpenOffice</h3>
-<table class="evergreen-table">
-  <thead>
-    <tr>
-      <th>Idiomas</th>
-      <th>Debian/Devuan</th>
-      <th>Download (OpenOffice.org)</th>
-      <th>Comandos (Debian/Devuan)</th>
-      <th>Observações</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-label="Idioma">Português do Brasil.</td>
-      <td data-label="Debian/Devuan">openoffice.org-l10n-pt-br</td>
-      <td data-label="Download (OpenOffice.org)"><a href="https://www.openoffice.org/pt-br/" target="_blank" rel="noopener">openoffice.org/pt-br</a></td>
-      <td data-label="Comando (Debian/Devuan)"><code>sudo apt install openoffice.org-l10n-pt-br</code></td>
-      <td data-label="Observações">Funciona apenas com versões do OpenOffice do repositório Debian antigo (não com LibreOffice).</td>
-    </tr>
-    <tr>
-      <td data-label="Idioma">Inglês.</td>
-      <td data-label="Debian/Devuan">openoffice.org-l10n-en-us</td>
-      <td data-label="Download (OpenOffice.org)"><a href="https://www.openoffice.org/" target="_blank" rel="noopener">openoffice.org</a></td>
-      <td data-label="Comando (Debian/Devuan)"><code>sudo apt install openoffice.org-l10n-en-us</code></td>
-      <td data-label="Observações">Incluído por padrão na maioria das instalações.</td>
-    </tr>
-    <tr>
-      <td data-label="Idioma">Espanho.</td>
-      <td data-label="Debian/Devuan">openoffice.org-l10n-es</td>
-      <td data-label="Download (OpenOffice.org)"><a href="https://www.openoffice.org/es/" target="_blank" rel="noopener">openoffice.org/es</a></td>
-      <td data-label="Comando (Debian/Devuan)"><code>sudo apt install openoffice.org-l10n-es</code></td>
-      <td data-label="Observações">Disponível em versões antigas do Debian (ex: Wheezy, Jessie).</td>
-    </tr>
-    <tr>
-      <td data-label="Idioma">Francês.</td>
-      <td data-label="Debian/Devuan">openoffice.org-l10n-fr</td>
-      <td data-label="Download (OpenOffice.org)"><a href="https://www.openoffice.org/fr/" target="_blank" rel="noopener">openoffice.org/fr</a></td>
-      <td data-label="Comando (Debian/Devuan)"><code>sudo apt install openoffice.org-l10n-fr</code></td>
-      <td data-label="Observações">Pacote raramente atualizado — use apenas se necessário.</td>
-    </tr>
-  </tbody>
-</table>
 
 
 
