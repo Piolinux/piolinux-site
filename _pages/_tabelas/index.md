@@ -19,6 +19,27 @@ permalink: /tabelas/
     </tr>
   </thead>
   <tbody>
+  
+  
+  
+  
+      <tr>
+  <td data-label="Tabela">LibreOffice — Idioma, Dicionário e Tesauro (MyThes)</td>
+  <td data-label="Descrição">Instalação completa de interface, correção ortográfica e sinônimos no LibreOffice para Debian, Devuan, Linux Mint e Artix.</td>
+  <td data-label="Link"><a href="/tabelas/libreoffice-idioma/">Ver tabela</a></td>
+</tr>
+
+<tr>
+  <td data-label="Tabela">LibreOffice — Instalação Modular por Necessidade</td>
+  <td data-label="Descrição">Como instalar apenas os componentes necessários do LibreOffice (Writer, Calc, Impress) em sistemas baseados em .deb. Economize até 450 MB de espaço.</td>
+  <td data-label="Link"><a href="/tabelas/libreoffice-modular/">Ver tabela</a></td>
+</tr>
+
+<tr>
+  <td data-label="Tabela">Apache OpenOffice — Instalação Manual via .deb</td>
+  <td data-label="Descrição">Guia técnico para instalar o OpenOffice (incluindo idiomas e dicionários) via arquivo .deb universal em sistemas baseados em Debian.</td>
+  <td data-label="Link"><a href="/tabelas/openoffice-instalação-manual/">Ver tabela</a></td>
+</tr> 
     <tr>
       <td data-label="Tabela">GPUs AMD: Radiance Cores, Neural Arrays</td>
       <td data-label="Descrição">Tecnologias de hardware AMD para ray tracing, IA e compressão de memória no Linux.</td>
