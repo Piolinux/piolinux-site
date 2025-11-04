@@ -1,8 +1,18 @@
 ---
-layout: manual-seo
+layout: null
 sitemap: 
 exclude: true 
 ---
+
+
+
+
+
+
+
+
+
+
 
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -68,6 +78,7 @@ exclude: true
 {% endfor %}
 
 </urlset>
+
 
 
 
