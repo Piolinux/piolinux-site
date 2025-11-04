@@ -8,20 +8,11 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
 
 
 
-
-
-
-
-
-
-
 <section>
   <h2>Referências Técnicas</h2>
   <p>Tabelas objetivas, sem textos longos, apenas dados verificáveis.</p>
 
- {% assign pages = site.pages 
-     | where_exp: "page", "page.layout == 'manual-seo'" 
-     | where_exp: "page", "page.url != '/referencias/'" %}
+  {% assign pages = site.pages | where_exp: "page", "page.layout == 'manual-seo' and page.url != '/referencias/'" %}
 
 
 
@@ -66,7 +57,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
 
 
 
- 
+  
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "usb" %}
@@ -78,7 +69,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
     {% endfor %}
   </div>
 
- 
+  
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "atalhos-de-teclado" %}
@@ -122,7 +113,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   
   
   
-  
+ 
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "pc-antigo" %}
@@ -136,7 +127,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   
   
   
- 
+  
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "repositórios" %}
@@ -164,7 +155,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   
   
   
- 
+  
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "dr_prot" %}
@@ -175,7 +166,6 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
       {% endif %}
     {% endfor %}
   </div>
-  
   
   
   
@@ -190,7 +180,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
     {% endfor %}
   </div>
   
- 
+  
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "man-pages" %}
@@ -207,7 +197,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
  
   
   
-  
+   
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "geany" %}
@@ -222,7 +212,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   
   
   
-   
+  
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "dpms" %}
@@ -236,7 +226,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   
   
   
-   
+  
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "editor-de-video" %}
@@ -252,7 +242,7 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
    
   
   
- 
+  
   <div class="section">
       {% for page in pages %}
       {% if page.tags contains "https" %}
@@ -263,10 +253,6 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
       {% endif %}
     {% endfor %}
   </div>
-  
-  
-  
-  
   
   
   
