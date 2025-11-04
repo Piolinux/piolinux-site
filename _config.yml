@@ -6,7 +6,7 @@
 # feature for the data you need to update frequently.
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
 # If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
@@ -18,14 +18,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Piolinux"
+title: 
 description: "200 piadas e trocadilhos de Linux, terminal e devs — + guias técnicos em tabelas práticas. Ria, aprenda e compartilhe. O lado divertido (e útil) do open source."
 baseurl: ""
-url: "https://piolinux.com"  # ← sem espaços!
+url: "https://piolinux.com"
 lang: "pt-BR"
 locale: "pt_BR"
-markdown: kramdown
 
+
+paginate: 10
+paginate_path: "/page:num/"
+permalink: /:title/
 
 exclude:
   - _site/
@@ -75,7 +78,7 @@ collections:
     permalink: /termos/:title/
   referencias:
     output: true
-    permalink: /referencias/:title/  
+    permalink: /referencias/:title/   
   tabelas:
     output: true
     permalink: /tabelas/:title/   
@@ -93,8 +96,10 @@ include:
   - _tools
   - _piadas
   - _termos
-  - _referencias  
+  - _referencias
   - _tabelas
+    
+future: true
     
 # Para JS, use um plugin ou minifique manualmente
 
@@ -117,8 +122,6 @@ include:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-#   - README.md 
-#   - _sass/
-#   - assets/css/*.scss
+#   - README.md
 
 
