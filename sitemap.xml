@@ -1,6 +1,5 @@
 ---
 layout: null
-# Exclui o próprio sitemap de ser listado dentro dele mesmo
 sitemap: exclude: true 
 ---
 
@@ -68,6 +67,7 @@ sitemap: exclude: true
 {% endfor %}
 
 </urlset>
+
 
 
 
