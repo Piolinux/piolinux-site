@@ -1,7 +1,7 @@
 ---
 layout: manual-seo
 title: "Referências Técnicas - Tabelas Objetivas por Tema"
-description: "Páginas técnicas com tabelas comparativas: USB, teclados, backup, init systems, pacotes."
+description: "Paginas tecnicas com tabelas comparativas: USB, teclados, backup, init systems, pacotes."
 permalink: /referencias/
 tags: 
   - referencia 
@@ -10,6 +10,8 @@ tags:
   - linux 
   - sysadmin
 ---
+
+
 <section>
   <h2>Referências Técnicas</h2>
   <p>Tabelas objetivas, sem textos longos, apenas dados verificáveis.</p>
