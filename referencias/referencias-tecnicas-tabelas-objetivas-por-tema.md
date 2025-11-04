@@ -24,10 +24,10 @@ tags:
   <p>Tabelas objetivas, sem textos longos, apenas dados verificáveis.</p>
 
 
- {% assign pages = site.pages 
-   | where_exp: "page", "page.layout == 'manual-seo'" 
-   | where_exp: "page", "page.url != '/referencias/'" %}
-
+ {% assign pages = site.pages
+  | where_exp: 'page', 'page.layout == "manual-seo"'
+  | where_exp: 'page', 'page.url != "/referencias/"' 
+%}
 
 <!-- Seo: USB -->
 
