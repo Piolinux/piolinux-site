@@ -18,17 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 
+title: "Piolinux"
 description: "200 piadas e trocadilhos de Linux, terminal e devs — + guias técnicos em tabelas práticas. Ria, aprenda e compartilhe. O lado divertido (e útil) do open source."
 baseurl: ""
-url: "https://piolinux.com"
+url: "https://piolinux.com"  # ← sem espaços!
 lang: "pt-BR"
 locale: "pt_BR"
+markdown: kramdown
 
-
-paginate: 10
-paginate_path: "/page:num/"
-permalink: /:title/
 
 exclude:
   - _site/
@@ -78,7 +75,7 @@ collections:
     permalink: /termos/:title/
   referencias:
     output: true
-    permalink: /referencias/:title/   
+    permalink: /referencias/:title/  
   tabelas:
     output: true
     permalink: /tabelas/:title/   
@@ -96,10 +93,8 @@ include:
   - _tools
   - _piadas
   - _termos
-  - _referencias
+  - _referencias  
   - _tabelas
-    
-future: true
     
 # Para JS, use um plugin ou minifique manualmente
 
@@ -122,6 +117,8 @@ future: true
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-#   - README.md
+#   - README.md 
+#   - _sass/
+#   - assets/css/*.scss
 
 
