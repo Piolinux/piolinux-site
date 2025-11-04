@@ -7,6 +7,9 @@ layout: manual-seo
 ---
 
 
+<section>
+
+
 <table class="evergreen-table">
   <thead>
     <tr>
@@ -72,6 +75,12 @@ layout: manual-seo
     </tr>
   </tbody>
 </table>
+
+
+
+</section>
+
+
 
 
 
