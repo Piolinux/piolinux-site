@@ -227,17 +227,6 @@ tags: [referencia, tecnico, tabela, linux, sysadmin]
   
   
   
-  <div class="section">
-      {% for page in pages %}
-      {% if page.tags contains "editor-de-video" %}
-        <div class="ref-item">
-          <h3><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h3>
-          <p>{{ page.description }}</p>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-  
   
    
   
