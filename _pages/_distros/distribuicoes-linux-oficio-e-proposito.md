@@ -37,8 +37,16 @@ permalink: /distros/distribuicoes-linux/
       <td data-label="Estabilidade">Rolling (estável)</td>
       <td data-label="Site Oficial"><a href="https://voidlinux.org" target="_blank">voidlinux.org</a></td>
     </tr>
-    <tr>
-      <td data-label="Distro">Devuan.</td>
+  <tr>
+  <td data-label="Distro">Calculate Linux</td>
+  <td data-label="Init">OpenRC</td>
+  <td data-label="Pacotes">Portage (Gentoo)</td>
+  <td data-label="Base">Gentoo</td>
+  <td data-label="Estabilidade">Stable (com perfis configuráveis)</td>
+  <td data-label="Site Oficial"><a href="https://calculate-linux.org" target="_blank">calculate-linux.org</a></td>
+</tr>
+ <tr>
+     <td data-label="Distro">Devuan.</td>
       <td data-label="Init">sysvinit / OpenRC</td>
       <td data-label="Pacotes">APT (Debian)</td>
       <td data-label="Base">Debian</td>
