@@ -61,15 +61,7 @@ permalink: /distros/distribuicoes-linux/
       <td data-label="Estabilidade">Stable</td>
       <td data-label="Site Oficial"><a href="https://salixos.org" target="_blank">salixos.org</a></td>
     </tr>
-    <tr>
-      <td data-label="Distro">Slackel.</td>
-      <td data-label="Init">sysvinit</td>
-      <td data-label="Pacotes">slapt-get</td>
-      <td data-label="Base">Slackware + Salix</td>
-      <td data-label="Estabilidade">Stable</td>
-      <td data-label="Site Oficial"><a href="https://slackel.gr" target="_blank">slackel.gr</a></td>
-    </tr>
-    <tr>
+     <tr>
       <td data-label="Distro">4MLinux.</td>
       <td data-label="Init">sysvinit</td>
       <td data-label="Pacotes">slapt-get</td>
