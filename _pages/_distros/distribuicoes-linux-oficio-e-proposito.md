@@ -6,6 +6,9 @@ layout: manual-seo
 permalink: /distros/distribuicoes-linux/
 ---
 
+
+<section>
+
 <table class="evergreen-table">
   <thead>
     <tr>
@@ -92,3 +95,6 @@ permalink: /distros/distribuicoes-linux/
     </tr>
   </tbody>
 </table>
+
+</section>
+
