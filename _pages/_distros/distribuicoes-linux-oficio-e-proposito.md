@@ -27,7 +27,7 @@ permalink: /distros/distribuicoes-linux/
       <td data-label="Pacotes">pacman (Arch)</td>
       <td data-label="Base">Arch Linux</td>
       <td data-label="Estabilidade">Rolling (atualizações rápidas)</td>
-      <td data-label="Site Oficial"><a href="https://artixlinux.org" target="_blank">artixlinux.org</a></td>
+      <td data-label="Site Oficial"><a href="https://artixlinux.org" target="_blank" rel="noopener noreferrer">artixlinux.org</a></td>
     </tr>
     <tr>
       <td data-label="Distro">Void Linux.</td>
@@ -35,31 +35,31 @@ permalink: /distros/distribuicoes-linux/
       <td data-label="Pacotes">xbps</td>
       <td data-label="Base">Independente</td>
       <td data-label="Estabilidade">Rolling (estável)</td>
-      <td data-label="Site Oficial"><a href="https://voidlinux.org" target="_blank">voidlinux.org</a></td>
+      <td data-label="Site Oficial"><a href="https://voidlinux.org" target="_blank" rel="noopener noreferrer">voidlinux.org</a></td>
     </tr>
-  <tr>
-  <td data-label="Distro">Calculate Linux</td>
-  <td data-label="Init">OpenRC</td>
-  <td data-label="Pacotes">Portage (Gentoo)</td>
-  <td data-label="Base">Gentoo</td>
-  <td data-label="Estabilidade">Stable (com perfis configuráveis)</td>
-  <td data-label="Site Oficial"><a href="https://calculate-linux.org" target="_blank">calculate-linux.org</a></td>
-</tr>
- <tr>
-     <td data-label="Distro">Devuan.</td>
+    <tr>
+      <td data-label="Distro">Devuan.</td>
       <td data-label="Init">sysvinit / OpenRC</td>
       <td data-label="Pacotes">APT (Debian)</td>
       <td data-label="Base">Debian</td>
       <td data-label="Estabilidade">Stable</td>
-      <td data-label="Site Oficial"><a href="https://devuan.org" target="_blank">devuan.org</a></td>
-    </tr>
+      <td data-label="Site Oficial"><a href="https://devuan.org" target="_blank" rel="noopener noreferrer">devuan.org</a></td>
+   </tr>
+    <td data-label="Distro">Calculate Linux</td>
+    <td data-label="Init">OpenRC</td>
+   <td data-label="Pacotes">Portage (Gentoo)</td>
+   <td data-label="Base">Gentoo</td>
+   <td data-label="Estabilidade">Stable (com perfis configuráveis)</td>
+   <td data-label="Site Oficial"><a href="https://calculate-linux.org" target="_blank" rel="noopener noreferrer">calculate-linux.org</a></td>
+  </tr>
+    
     <tr>
       <td data-label="Distro">antiX.</td>
       <td data-label="Init">sysvinit / runit</td>
       <td data-label="Pacotes">APT (Debian)</td>
       <td data-label="Base">Debian</td>
       <td data-label="Estabilidade">Stable</td>
-      <td data-label="Site Oficial"><a href="https://antixlinux.com" target="_blank">antixlinux.com</a></td>
+      <td data-label="Site Oficial"><a href="https://antixlinux.com" target="_blank" rel="noopener noreferrer">antixlinux.com</a></td>
     </tr>
     <tr>
       <td data-label="Distro">Salix.</td>
@@ -67,7 +67,7 @@ permalink: /distros/distribuicoes-linux/
       <td data-label="Pacotes">slapt-get / pkgtools</td>
       <td data-label="Base">Slackware</td>
       <td data-label="Estabilidade">Stable</td>
-      <td data-label="Site Oficial"><a href="https://salixos.org" target="_blank">salixos.org</a></td>
+      <td data-label="Site Oficial"><a href="https://salixos.org" target="_blank" rel="noopener noreferrer">salixos.org</a></td>
     </tr>
      <tr>
       <td data-label="Distro">4MLinux.</td>
@@ -75,7 +75,7 @@ permalink: /distros/distribuicoes-linux/
       <td data-label="Pacotes">slapt-get</td>
       <td data-label="Base">Independente</td>
       <td data-label="Estabilidade">Stable</td>
-      <td data-label="Site Oficial"><a href="https://4mlinux.com" target="_blank">4mlinux.com</a></td>
+      <td data-label="Site Oficial"><a href="https://4mlinux.com" target="_blank" rel="noopener noreferrer">4mlinux.com</a></td>
     </tr>
     <tr>
       <td data-label="Distro">MX Linux.</td>
@@ -83,7 +83,7 @@ permalink: /distros/distribuicoes-linux/
       <td data-label="Pacotes">APT (Debian)</td>
       <td data-label="Base">Debian</td>
       <td data-label="Estabilidade">Stable</td>
-      <td data-label="Site Oficial"><a href="https://mxlinux.org" target="_blank">mxlinux.org</a></td>
+      <td data-label="Site Oficial"><a href="https://mxlinux.org" target="_blank" rel="noopener noreferrer">mxlinux.org</a></td>
     </tr>
     <tr>
       <td data-label="Distro">PCLinuxOS</td>
@@ -91,7 +91,7 @@ permalink: /distros/distribuicoes-linux/
       <td data-label="Pacotes">APT (fork)</td>
       <td data-label="Base">Independente</td>
       <td data-label="Estabilidade">Semi-rolling</td>
-      <td data-label="Site Oficial"><a href="https://pclinuxos.com" target="_blank">pclinuxos.com</a></td>
+      <td data-label="Site Oficial"><a href="https://pclinuxos.com" target="_blank" rel="noopener noreferrer">pclinuxos.com</a></td>
     </tr>
   </tbody>
 </table>
