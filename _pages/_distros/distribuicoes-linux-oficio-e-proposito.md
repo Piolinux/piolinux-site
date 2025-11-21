@@ -45,6 +45,7 @@ permalink: /distros/distribuicoes-linux/
       <td data-label="Estabilidade">Stable</td>
       <td data-label="Site Oficial"><a href="https://devuan.org" target="_blank" rel="noopener noreferrer">devuan.org</a></td>
    </tr>
+    <tr>
     <td data-label="Distro">Calculate Linux</td>
     <td data-label="Init">OpenRC</td>
    <td data-label="Pacotes">Portage (Gentoo)</td>
