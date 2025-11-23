@@ -72,8 +72,8 @@ permalink: /distros/distribuicoes-linux/
     </tr>
      <tr>
       <td data-label="Distro">4MLinux.</td>
-      <td data-label="Init">sysvinit</td>
-      <td data-label="Pacotes">slapt-get</td>
+      <td data-label="Init">busybox</td>
+      <td data-label="Pacotes">zk</td>
       <td data-label="Base">Independente</td>
       <td data-label="Estabilidade">Stable</td>
       <td data-label="Site Oficial"><a href="https://4mlinux.com" target="_blank" rel="noopener noreferrer">4mlinux.com</a></td>
