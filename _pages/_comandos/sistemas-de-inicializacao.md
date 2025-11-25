@@ -27,8 +27,8 @@ function filtrarLinhas(termo) {
     <tr>
       <th>Objetivo</th>
       <th>OpenRC (Devuan, Gentoo)</th>
-      <th>runit (Artix, Void)</th>
-      <th>SysV init (Debian legado)</th>
+      <th>runit (Artix, Void, Devuan)</th>
+      <th>SysV init (Devuan, Antix, Mx-Linux)</th>
     </tr>
   </thead>
   <tbody>
@@ -88,7 +88,7 @@ function filtrarLinhas(termo) {
     </tr>
     <tr>
       <td><strong>runit</strong></td>
-      <td>Artix Linux, Void Linux</td>
+      <td>Artix Linux, Void Linux, Devuan</td>
       <td><a href="https://docs.voidlinux.org/config/services/index.html" target="_blank" rel="noopener">Void Linux: Serviços com runit</a><br>
           <a href="https://smarden.org/runit/" target="_blank" rel="noopener">runit — site oficial de Gerrit Pape</a></td>
     </tr>
