@@ -59,7 +59,7 @@ permalink: /referencias/distros-linux-pc-antigo/
     </tr>
     <tr>
       <td data-label="Distribuição">4MLinux</td>
-      <td data-label="Base">Própria (Slackware-like)</td>
+      <td data-label="Base">Própria</td>
       <td data-label="Ambiente Gráfico">JWM</td>
       <td data-label="Requisitos Mínimos">256 MB RAM, 1.5 GB disco</td>
       <td data-label="Estado"> Ativa (24.1 em 2024)</td>
