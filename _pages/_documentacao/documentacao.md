@@ -4,17 +4,28 @@ layout: manual-seo
 permalink: /documentacao/
 ---
 
+
 <section>
+
 
 <p>Todas as páginas técnicas disponíveis, organizadas por tema.</p>
 
-{% assign all_pages = site.pages | where_exp: "page", "page.url != '/404.html /termos-de-uso'" | sort: "title" %}
+{% assign excluded_paths = "/404.html /politica-de-privacidade/ /termos-de-uso/ /sobre/" | split: " " %}
+{% assign all_pages = site.pages | sort: "title" %}
+{% assign filtered_pages = "" | split: "" %}
+
+{% for page in all_pages %}
+  {% unless excluded_paths contains page.url %}
+    {% assign filtered_pages = filtered_pages | push: page %}
+  {% endunless %}
+{% endfor %}
 
 <ul class="doc-index">
-  {% for page in all_pages %}
+  {% for page in filtered_pages %}
     <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
   {% endfor %}
 </ul>
 
 
 </section>
+
