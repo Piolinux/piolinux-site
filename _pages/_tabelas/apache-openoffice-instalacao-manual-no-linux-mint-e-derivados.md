@@ -106,12 +106,7 @@ layout: manual-seo
       <td data-label="Comando / Procedimento"><code>sudo apt install -f</code></td>
       <td data-label="Observações">Resolve pacotes ausentes automaticamente.</td>
     </tr>
-    <tr>
-      <td data-label="Passo">6-</td>
-      <td data-label="Ação">Instale dicionários (opcional)</td>
-      <td data-label="Comando / Procedimento"><code>cd ../dict/ && sudo dpkg -i *.deb</code></td>
-      <td data-label="Observações">Adiciona correção ortográfica no idioma escolhido.</td>
-    </tr>
+    
   </tbody>
 </table>
 
