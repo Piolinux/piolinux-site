@@ -21,6 +21,18 @@ permalink: /distros/distribuicoes-linux/
     </tr>
   </thead>
   <tbody>
+
+<tr>
+     <td data-label="Distro">Macarroni.</td>
+      <td data-label="Init">OpenRC/SysVinit </td>
+      <td data-label="Pacotes">luet Portage</td>
+      <td data-label="Base">Funtoo</td>
+      <td data-label="Estabilidade">Rolling</td>
+      <td data-label="Site Oficial"><a href="https://www.macaronios.org/iso/" target="_blank" rel="noopener noreferrer">macarronios.org</a></td>
+    </tr>
+    
+
+    
     <tr>
       <td data-label="Distro">Artix Linux.</td>
       <td data-label="Init">OpenRC / runit / s6</td>
