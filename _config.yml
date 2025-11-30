@@ -78,7 +78,11 @@ collections:
     permalink: /referencias/:title/  
   tabelas:
     output: true
-    permalink: /tabelas/:title/   
+    permalink: /tabelas/:title/
+  documentacao:
+    output: true
+    permalink: /documentacao/:title/   
+      
     
 
 include:
@@ -95,6 +99,7 @@ include:
   - _termos
   - _referencias  
   - _tabelas
+  - _documentacao
     
 # Para JS, use um plugin ou minifique manualmente
 
