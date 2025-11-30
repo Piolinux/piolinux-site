@@ -2,7 +2,7 @@
 layout: manual-seo
 title: "Instalação de Distribuições Linux sem systemd — Tabela Técnica"
 description: "Métodos oficiais de instalação para Debian, Linux Mint, Arch (base Artix), Gentoo e Slackware. Foco em sistemas estáveis, leves e sob controle total."
-tags: [linux, instalação, distros, debian, mint, arch, gentoo, slackware, devuan, artix]
+tags: [linux, instalação, distros, debian, mint, arch, gentoo, slackware, devuan, artix, distros-linux-tabela]
 permalink: /referencias/distros-linux-tabela/
 ---
 
@@ -23,24 +23,24 @@ permalink: /referencias/distros-linux-tabela/
     </thead>
     <tbody>
       <tr>
-        <td data-label="Distribuição"><a href="https://linuxmint.com/download.php" target="_blank" rel="noopener">Linux Mint</a></td>
-        <td data-label="Método de Instalação">Live USB → Ubiquity (GUI)</td>
-        <td data-label="Observações Técnicas">Baseado no Ubuntu LTS. Use <strong><a href="https://devuan.org/">Devuan</a></strong> se quiser evitar systemd.</td>
+        <td data-label="Distribuição"><a href="https://www.macaronios.org/iso/" target="_blank" rel="noopener">Macarroni</a></td>
+        <td data-label="Método de Instalação">Live USB → Calamares (GUI)</td>
+        <td data-label="Observações Técnicas"> init OpenRC.</td>
       </tr>
       <tr>
-        <td data-label="Distribuição"><a href="https://www.debian.org/CD/" target="_blank" rel="noopener">Debian Stable</a></td>
-        <td data-label="Método de Instalação">ISO netinst ou GUI → assistente textual/GUI</td>
-        <td data-label="Observações Técnicas">netinst baixa pacotes durante instalação. Opção para <strong>sysvinit</strong> no instalador.</td>
+        <td data-label="Distribuição"><a href="https://www.devuan.org/get-devuan" target="_blank" rel="noopener">Devuan Stable</a></td>
+        <td data-label="Método de Instalação">Live ISO → assistente textual/GUI</td>
+        <td data-label="Observações Técnicas"> init OpenRC, runit, sysvit.</td>
       </tr>
       <tr>
-        <td data-label="Distribuição"><a href="https://archlinux.org/" target="_blank" rel="noopener">Arch Linux</a></td>
+        <td data-label="Distribuição"><a href="https://artixlinux.org/download.php" target="_blank" rel="noopener">Artix</a></td>
         <td data-label="Método de Instalação">ISO Live → terminal (particionar, pacstrap, chroot)</td>
-        <td data-label="Observações Técnicas">Base para <strong><a href="https://artixlinux.org/">Artix Linux</a></strong> (sem systemd). Requer leitura do Arch Wiki.</td>
+        <td data-label="Observações Técnicas"> init OpenRC, runit, Dinit, s6</td>
       </tr>
       <tr>
         <td data-label="Distribuição"><a href="https://www.gentoo.org/downloads/" target="_blank" rel="noopener">Gentoo</a></td>
         <td data-label="Método de Instalação">Live CD → compilação manual via Portage</td>
-        <td data-label="Observações Técnicas">Total controle sobre init (OpenRC padrão). Sistema source-based.</td>
+        <td data-label="Observações Técnicas"> init (OpenRC padrão). Sistema source-based.</td>
       </tr>
       <tr>
         <td data-label="Distribuição"><a href="https://www.slackware.com/getslack/" target="_blank" rel="noopener">Slackware</a></td>

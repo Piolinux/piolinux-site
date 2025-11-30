@@ -3,7 +3,7 @@ layout: manual-seo
 title: "MX Linux – Ferramentas Técnicas e Gerenciamento de Repositórios"
 description: "Tabela objetiva com MX Repo Manager, atualização, Snapshot e edição de repositórios — sem linguagem informal, só referência técnica."
 permalink: /referencias/mx-linux-ferramentas-tecnicas/
-tags: [mx-linux, repositórios, atualização, apt, debian, segurança]
+tags: [mx-linux, repositórios, atualização, apt, debian, segurança, mx-linux-ferramentas-tecnicas]
 ---
 
 {% include toc.html %}
@@ -84,7 +84,7 @@ tags: [mx-linux, repositórios, atualização, apt, debian, segurança]
     </tr>
     <tr>
       <td data-label="Fato">Atualizações mais recentes.</td>
-      <td data-label="Explicação">Versão atual: **MX-23** (2023),Versão estável, baseada no **Debian 12 Bookworm**.</td>
+      <td data-label="Explicação">Versão atual: **MX-25** (2025),Versão estável, baseada no **Debian 13 Trixie**.</td>
     </tr>
     <tr>
       <td data-label="Fato">Automatização ≠ ignorância</td>

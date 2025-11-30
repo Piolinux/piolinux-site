@@ -26,6 +26,82 @@ tags:
 <!-- Seo: USB -->
 
 
+
+
+
+
+
+<div class="section">
+      {% for page in pages %}
+      {% if page.tags contains "instalacao-devuan" %}
+        <div class="ref-item">
+          <h3><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h3>
+          <p>{{ page.description }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+
+
+
+<div class="section">
+      {% for page in pages %}
+      {% if page.tags contains "mx-linux-ferramentas-tecnicas" %}
+        <div class="ref-item">
+          <h3><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h3>
+          <p>{{ page.description }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+
+
+<div class="section">
+      {% for page in pages %}
+      {% if page.tags contains "camadas-linux" %}
+        <div class="ref-item">
+          <h3><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h3>
+          <p>{{ page.description }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+
+
+<div class="section">
+      {% for page in pages %}
+      {% if page.tags contains "find-xargs-fluxo" %}
+        <div class="ref-item">
+          <h3><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h3>
+          <p>{{ page.description }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+
+
+<div class="section">
+      {% for page in pages %}
+      {% if page.tags contains "runit-estrutura" %}
+        <div class="ref-item">
+          <h3><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h3>
+          <p>{{ page.description }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+
+
+
+
+
+
+
 <div class="section">
       {% for page in pages %}
       {% if page.tags contains "educacao" %}
