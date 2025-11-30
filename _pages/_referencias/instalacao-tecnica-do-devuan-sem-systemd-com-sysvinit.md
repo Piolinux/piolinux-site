@@ -1,7 +1,7 @@
 ---
 layout: manual-seo
 title: "Instalação Técnica do Devuan – Sem systemd, com Sysvinit"
-description: "Tabela objetiva com requisitos, ISO, criação de USB, init system e pós-instalação — sem linguagem informal, só referência técnica."
+description: "Tabela objetiva com requisitos, ISO, criação de USB, init system e pós-instalação."
 permalink: /referencias/instalacao-devuan/
 categories: [linux, devuan, guia]
 tags: [devuan, linux, sysvinit, guia, instalação, sem_systemd, instalacao-devuan]
