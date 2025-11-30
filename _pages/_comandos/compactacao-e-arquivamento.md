@@ -36,6 +36,14 @@ permalink: /aplicativos-graficos-compactacao-linux/
       </td>
     </tr>
     <tr>
+      <td data-label="Aplicativo">Lxqt-archiver.</td>
+      <td data-label="Método">Não instalado</td>
+      <td data-label="Compatível com">Debian, Ubuntu, Mint (GNOME/Cinnamon)</td>
+      <td data-label="Ação">
+      <button class="copy-btn" data-command="apt install lxqt-archiver lxqt-archiver-l10n">📋 Copiar</button>
+      </td>
+    </tr>
+    <tr>
       <td data-label="Aplicativo">File Roller.</td>
       <td data-label="Método">Pré-instalado</td>
       <td data-label="Compatível com">Debian, Ubuntu, Mint (GNOME/Cinnamon)</td>
