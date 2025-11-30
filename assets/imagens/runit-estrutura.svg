@@ -1,0 +1,28 @@
+<svg viewBox="0 0 600 220" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #0f0f0f; }
+    .path { fill: #a0f0f0; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 13px; }
+    .file { fill: #80d0ff; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 12px; }
+    .comment { fill: #80ffaa; font-size: 11px; font-style: italic; }
+    .cmd { fill: #ffff80; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 12px; }
+  </style>
+  <rect class="bg" width="100%" height="100%" />
+
+  <!-- Caminho base -->
+  <text class="path" x="20" y="30">/etc/service/ufw/</text>
+
+  <!-- Arquivos -->
+  <text class="file" x="40" y="60">├── run</text>
+  <text class="file" x="40" y="80">├── finish</text>
+  <text class="file" x="40" y="100">└── log/</text>
+  <text class="file" x="60" y="120">    └── run</text>
+
+  <!-- Comentários -->
+  <text class="comment" x="100" y="60">← script de execução (deve usar exec)</text>
+  <text class="comment" x="100" y="80">← (opcional) ao parar o serviço</text>
+  <text class="comment" x="120" y="120">← logger separado</text>
+
+  <!-- Linha adicional: comando útil -->
+  <text class="cmd" x="20" y="160">→ Listar serviços ativos: ls -1 /etc/service</text>
+  <text class="cmd" x="20" y="180">→ Ver status: sv status ufw</text>
+</svg>

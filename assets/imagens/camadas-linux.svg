@@ -1,0 +1,30 @@
+<svg viewBox="0 0 600 220" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #0f0f0f; }
+    .label { fill: #a0f0f0; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 14px; }
+    .cmd { fill: #80d0ff; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 12px; }
+    .line { stroke: #333; stroke-width: 1; }
+  </style>
+  <rect class="bg" width="100%" height="100%" />
+  
+  <!-- Linhas divisoras -->
+  <line class="line" x1="20" y1="50" x2="580" y2="50" />
+  <line class="line" x1="20" y1="100" x2="580" y2="100" />
+  <line class="line" x1="20" y1="150" x2="580" y2="150" />
+  
+  <!-- Camada: HARDWARE -->
+  <text class="label" x="30" y="30">HARDWARE (físico)</text>
+  <text class="cmd" x="30" y="45">lspci, lsusb, lscpu, dmidecode</text>
+  
+  <!-- Camada: KERNEL -->
+  <text class="label" x="30" y="80">KERNEL (núcleo)</text>
+  <text class="cmd" x="30" y="95">dmesg, sysctl, /proc, capabilities</text>
+  
+  <!-- Camada: INIT -->
+  <text class="label" x="30" y="130">INIT (serviços)</text>
+  <text class="cmd" x="30" y="145">sv (runit), service (sysvinit), rc-service (OpenRC)</text>
+  
+  <!-- Camada: USUÁRIO -->
+  <text class="label" x="30" y="180">USUÁRIO (cli)</text>
+  <text class="cmd" x="30" y="195">xargs, find, grep, awk, sed, ip, ss</text>
+</svg>

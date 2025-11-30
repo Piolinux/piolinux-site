@@ -1,0 +1,18 @@
+<svg viewBox="0 0 600 220" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #0f0f0f; }
+    .code { fill: #80d0ff; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 13px; }
+    .safe { fill: #80ffaa; font-weight: bold; }
+    .unsafe { fill: #ff8080; text-decoration: line-through; }
+  </style>
+  <rect class="bg" width="100%" height="100%" />
+
+  <!-- Forma INSEGURA (riscada) -->
+  <text class="code unsafe" x="30" y="30">find . -name "*.log" | xargs rm</text>
+
+  <!-- Forma SEGURA (com trash) -->
+  <text class="code" x="30" y="65">find . -name "*.log" -print 0 | xargs -0 trash</text>
+
+  <!-- Legenda clara -->
+  <text class="safe" x="30" y="100">✓ Use -print0 + -0 com trash para recuperação segura</text>
+</svg>
