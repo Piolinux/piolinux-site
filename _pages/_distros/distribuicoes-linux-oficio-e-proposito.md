@@ -1,6 +1,6 @@
 ---
 title: "Distribuições Linux — Ofício e Propósito"
-descricao: "Comparação técnica de distribuições focadas em estabilidade, init system, filosofia e manutenção. Para quem trata Linux como ofício, não hobby."
+description: "Comparação técnica de distribuições focadas em estabilidade, init system, filosofia e manutenção. Para quem trata Linux como ofício, não hobby."
 fonte: "Documentação oficial das distribuições"
 layout: manual-seo
 permalink: /distros/distribuicoes-linux/
