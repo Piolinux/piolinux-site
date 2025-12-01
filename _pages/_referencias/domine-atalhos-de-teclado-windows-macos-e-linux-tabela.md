@@ -60,7 +60,7 @@ permalink: /referencias/atalhos-de-teclado/
       <td data-label="Função">Tirar print da tela</td>
       <td data-label="Windows"><code>Print Screen</code></td>
       <td data-label="macOS"><code>Command + Shift + 3</code></td>
-      <td data-label="Linux">Print Screen <code>apt install scrot</code></td>
+     <td data-label="Linux"><code>Print Screen</code><code>--(apt install scrot)</code></td>
     </tr>
     <tr>
       <td data-label="Função">Tirar print de área</td>
