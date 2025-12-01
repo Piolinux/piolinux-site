@@ -77,6 +77,16 @@ permalink: /referencias/importancia-da-documentacao-linux/
       </td>
       <td data-label="Quando usar">Para ver guias, changelogs e exemplos incluídos pelo mantenedor do pacote.</td>
     </tr>
+ <tr>
+      <td data-label="Ferramenta">Documentação do Debian no Lynx.</td>
+      <td data-label="Comando / Ação">
+     
+   <code>/usr/share/doc/debian-reference-common/docs/index.html</code>
+    <button class="copy-btn" data-command="lynx /usr/share/doc/debian-reference-common/docs/index.html">📋 Copiar</button>
+      </td>
+      <td data-label="Quando usar">Documentação do Debian.</td>
+    </tr>
+              
   </tbody>
 </table>
 
