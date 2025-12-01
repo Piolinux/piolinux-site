@@ -1,7 +1,7 @@
 ---
 layout: manual-seo
 title: "Referências Técnicas - Tabelas Objetivas por Tema"
-description: "Páginas técnicas com tabelas comparativas: USB, teclados, backup, init systems, pacotes."
+description: "Páginas técnicas com tabelas comparativas: USB, teclados, backup, aplicativos, pacotes."
 permalink: /referencias/
 tags:
   - referencia
