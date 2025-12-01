@@ -1,7 +1,7 @@
 ---
 layout: manual-seo
 title: "Arquiteturas de Kernel — Comparação Técnica"
-description_custom: "Tabela com monolítico, microkernel, híbrido, unikernel e nanokernel: onde rodam drivers, exemplos reais e uso prático."
+description: "Tabela com monolítico, microkernel, híbrido, unikernel e nanokernel: onde rodam drivers, exemplos reais e uso prático."
 permalink: /arquiteturas-kernel/
 tags: [kernel, linux, microkernel, unikernel, arquitetura, sistema-operacional, evergreen]
 ---
