@@ -56,11 +56,11 @@ permalink: /referencias/atalhos-de-teclado/
       <td data-label="macOS"><code>Command + Espaço</code></td>
       <td data-label="Linux"><code>Super + S</code></td>
     </tr>
-    <tr>
+     <tr>
       <td data-label="Função">Tirar print da tela</td>
       <td data-label="Windows"><code>Print Screen</code></td>
       <td data-label="macOS"><code>Command + Shift + 3</code></td>
-      <td data-label="Linux"><code>Print</code></td>
+      <td data-label="Linux"><code>Print Screen instale apt install scrot</code></td>
     </tr>
     <tr>
       <td data-label="Função">Tirar print de área</td>
@@ -68,6 +68,13 @@ permalink: /referencias/atalhos-de-teclado/
       <td data-label="macOS"><code>Command + Shift + 4</code></td>
       <td data-label="Linux"><code>Shift + Print</code></td>
     </tr>
+     <tr>
+      <td data-label="Função">Fechar os programas, comando universal</td>
+      <td data-label="Windows"><code>Ctrl + q</code></td>
+      <td data-label="macOS"><code>Ctrl + q</code></td>
+      <td data-label="Linux"><code>Ctrl + q</code></td>
+    </tr>
+    
   </tbody>
 </table>
 
