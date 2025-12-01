@@ -64,8 +64,8 @@ permalink: /referencias/importancia-da-documentacao-linux/
       <td data-label="Quando usar">Quando não tem acesso ao terminal ou precisa de exemplos práticos (ex: configuração de rede, ZFS).</td>
     </tr>
     <tr>
-      <td data-label="Ferramenta">Como abrir com Browser Lynx, Documentação de pacotes</td>
-      <td data-label="Comando / Ação">
+     <td data-label="Ferramenta">Documentação de pacotes, utilizando Browser lynx em modo texto.</td>
+     <td data-label="Comando / Ação">
     <code>apt install lynx</code><br>
     <code>dpkg -L qpdfview | grep doc</code><br>
    <code>/usr/share/doc/qpdfview</code>
