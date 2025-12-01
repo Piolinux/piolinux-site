@@ -84,7 +84,7 @@ permalink: /referencias/importancia-da-documentacao-linux/
    <code>/usr/share/doc/debian-reference-common/docs/index.html</code>
     <button class="copy-btn" data-command="lynx /usr/share/doc/debian-reference-common/docs/index.html">📋 Copiar</button>
       </td>
-      <td data-label="Quando usar">Documentação do Debian.</td>
+      <td data-label="Quando usar">Documentação do Debian offline.</td>
     </tr>
               
   </tbody>
