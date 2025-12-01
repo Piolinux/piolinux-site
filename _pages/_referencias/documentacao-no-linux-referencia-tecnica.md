@@ -64,11 +64,16 @@ permalink: /referencias/importancia-da-documentacao-linux/
       <td data-label="Quando usar">Quando não tem acesso ao terminal ou precisa de exemplos práticos (ex: configuração de rede, ZFS).</td>
     </tr>
     <tr>
-      <td data-label="Ferramenta">Documentação de pacotes</td>
+      <td data-label="Ferramenta">Como abrir com Browser Lynx, Documentação de pacotes</td>
       <td data-label="Comando / Ação">
-        <code>dpkg -L vim | grep doc</code><br>
-        Arquivos em <code>/usr/share/doc/</code>
-        <button class="copy-btn" data-command="dpkg -L vim | grep doc">📋 Copiar</button>
+    <code>apt install lynx</code><br>
+    <code>dpkg -L qpdfview | grep doc</code><br>
+   <code>/usr/share/doc/qpdfview</code>
+   <code>/usr/share/doc/qpdfview/changelog.Debian.amd64.gz</code>
+   <code>/usr/share/doc/qpdfview/changelog.Debian.gz</code>
+   <code>/usr/share/doc/qpdfview/changelog.gz</code>
+   <code>/usr/share/doc/qpdfview/copyright</code>
+       <button class="copy-btn" data-command="lynx /usr/share/doc/qpdfview/changelog.gz">📋 Copiar</button>
       </td>
       <td data-label="Quando usar">Para ver guias, changelogs e exemplos incluídos pelo mantenedor do pacote.</td>
     </tr>
