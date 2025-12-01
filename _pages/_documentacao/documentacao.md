@@ -9,7 +9,7 @@ permalink: /documentacao/
 
 <p>Todas as páginas técnicas disponíveis, organizadas por tema.</p>
 
-{% assign excluded_paths = "/404.html /politica-de-privacidade/ /termos-de-uso/ /sobre/ /tabela/ /indice-linux/ /documentacao/ /comandos/ /tabelas/ " | split: " " %}
+{% assign excluded_paths = "/404.html /politica-de-privacidade/ /termos-de-uso/ /sobre/ /tabela/ /indice-linux/ /documentacao/ /comandos/ /tabelas/ /ferramentas/ " | split: " " %}
 {% assign all_pages = site.pages | sort: "title" %}
 {% assign filtered_pages = "" | split: "" %}
 
