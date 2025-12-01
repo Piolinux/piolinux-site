@@ -37,7 +37,7 @@ permalink: /aplicativos-graficos-compactacao-linux/
     </tr>
     <tr>
       <td data-label="Aplicativo">Lxqt-archiver.</td>
-      <td data-label="Método">Não instalado</td>
+      <td data-label="Método"><code>apt install lxqt-archiver lxqt-archiver-l10n</code></td>
       <td data-label="Compatível com">Debian, Ubuntu, Mint (GNOME/Cinnamon)</td>
       <td data-label="Ação">
       <button class="copy-btn" data-command="apt install lxqt-archiver lxqt-archiver-l10n">📋 Copiar</button>
