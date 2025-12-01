@@ -69,7 +69,7 @@ permalink: /referencias/atalhos-de-teclado/
       <td data-label="Linux"><code>Shift + Print</code></td>
     </tr>
      <tr>
-      <td data-label="Função">Fechar os programas, comando universal</td>
+      <td data-label="Função">Fechar programas</td>
       <td data-label="Windows"><code>Ctrl + q</code></td>
       <td data-label="macOS"><code>Ctrl + q</code></td>
       <td data-label="Linux"><code>Ctrl + q</code></td>
