@@ -23,11 +23,4 @@
   
   <!-- Rodapé discreto -->
   <text class="subtitle" x="60" y="540">Documentação técnica pura — sem ruído, sem tracking</text>
-  
-  
-  
-  <!-- Assinatura -->
-  <text x="1500" y="1000" fill="gray" font-family="monospace" font-size="24">PioLinux • 2025</text>
-  
-  
 </svg>
