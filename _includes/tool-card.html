@@ -1,0 +1,8 @@
+{% assign title_id = include.title | slugify %}
+
+<article class="tool-card tool-card--{{ include.category }}" role="region" aria-labelledby="tool-title-{{ title_id }}">
+  <a href="{{ include.url }}" class="tool-card__link" aria-label="Acessar ferramenta: {{ include.title }}">
+    <span class="tool-card__icon" aria-hidden="true">ᐅ</span>
+    <span id="tool-title-{{ title_id }}" class="tool-card__title">{{ include.title }}</span>
+  </a>
+</article>
