@@ -20,6 +20,11 @@ description: "Links diretos para TLDP, Oh My Zsh, Python.org, Devuan e outras re
   </thead>
   <tbody>
     <tr>
+  <td data-label="Projetos">Guia Foca</td>
+  <td data-label="Descrições">Guia didático de GNU/Linux desde 1999, com níveis para iniciantes, intermediários e avançados.</td>
+  <td data-label="Links Oficiais"><a href="https://guiafoca.org/" target="_blank" rel="noopener noreferrer">guiafoca.org</a></td>
+</tr>
+    <tr>
       <td data-label="Projetos">TLDP (The Linux Documentation Project)</td>
       <td data-label="Descrições">Guias técnicos, HOWTOs e manuais de referência.</td>
       <td data-label="Links Oficiais"><a href="https://www.tldp.org" target="_blank" rel="noopener noreferrer">tldp.org</a></td>
