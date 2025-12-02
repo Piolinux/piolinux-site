@@ -84,35 +84,4 @@ permalink: /distros/avancado/
 
 
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Table",
-  "name": "Distros Linux Avançadas / DIY — Monte do Zero",
-  "description": "Projetos para quem quer controle total: compilar tudo, entender o sistema por dentro e construir seu próprio Linux.",
-  "inLanguage": "pt-BR",
-  "url": "{{ page.url | absolute_url }}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ page.url | absolute_url }}"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Equipe Piolinux"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Piolinux",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://piolinux.com/logo-512.png",
-      "width": 512,
-      "height": 512
-    }
-  },
-  "datePublished": "2025-09-17T10:00:00+00:00",
-  "dateModified": "{{ page.last_modified_at | date_to_rfc3339 }}"
-}
-</script>
-
 
