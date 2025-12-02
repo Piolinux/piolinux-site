@@ -3,7 +3,6 @@ layout: manual-seo
 title: "DOSBox e Double Commander – Referência Técnica"
 description: "Tabela com comandos corretos de instalação, uso real e avisos técnicos — sem nostalgia, só utilidade prática."
 permalink: /referencias/dosbox-double-commander/
-categories: [linux, retro, ferramentas]
 tags: [dosbox, double-commander, emulação, gerenciador-de-arquivos, nostalgia]
 ---
 

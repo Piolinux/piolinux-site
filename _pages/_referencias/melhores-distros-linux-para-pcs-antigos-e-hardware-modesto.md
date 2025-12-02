@@ -2,7 +2,6 @@
 layout: manual-seo
 title: "Distros Leves para PCs Antigos – Requisitos e Recomendações"
 description: "Tabela técnica com AntiX, Lubuntu, Puppy Linux, Debian LXDE e 4MLinux — requisitos reais, estado do projeto e casos de uso práticos."
-categories: [linux, distros, performance]
 tags: [distros, linux, pc-antigo, leve, debian, lubuntu, mx-linux, antix]
 permalink: /referencias/distros-linux-pc-antigo/
 ---

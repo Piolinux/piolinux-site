@@ -3,7 +3,6 @@ layout: manual-seo
 title: "Cores no Terminal – Referência Técnica ANSI"
 description: "Tabela com códigos ANSI, 256 cores, truecolor, exemplos com printf e temas reais — sem fluff, só utilidade técnica."
 permalink: /referencias/cores-terminal-ansi/
-categories: [terminal, linux, debian, configuração]
 tags: [terminal, cores, debian, geany, prompt, ansi, conforto-visual]
 ---
 
