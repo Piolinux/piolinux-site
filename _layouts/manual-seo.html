@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ '/assets/imagens/og-default.svg' | absolute_url }}">
   <title>{{ page.title }}</title>
   {% if page.description %}
   <meta name="description" content="{{ page.description }}">
   {% endif %}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-  
   {% include head-manual.html %}  
-   
-
+ 
 </head>
 <body>
   {% include menu.html %}
@@ -20,15 +23,11 @@
         <a href="{{ item.url }}" style="margin-right: 1em;">{{ item.title }}</a>
       {% endfor %}
     </nav>
-  
-
   <main>
     <h1>{{ page.title }}</h1>
     {{ content }}
   </main>
-
    {% include footer.html %}
-
 </body>
 </html>
 
@@ -52,6 +51,13 @@ document.addEventListener('click', function(e) {
 });
 </script>
     
+
+
+
+
+
+
+
 
 
 
