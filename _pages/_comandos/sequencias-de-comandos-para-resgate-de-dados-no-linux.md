@@ -2,8 +2,6 @@
 layout: manual-seo
 title: "Sequências de Comandos para Resgate de Dados no Linux"
 description: "Passo a passo real para discos com falha, partições apagadas, arquivos deletados e falhas de boot — com ddrescue, TestDisk, PhotoRec e mais."
-author: "Piolinux"
-categories: [recuperação, resgate, linux, terminal, dados]
 tags: [ddrescue, testdisk, photorec, fsck, chroot, linux, recuperação-de-dados]
 permalink: /sequencias-comandos-resgate-linux/
 ---
