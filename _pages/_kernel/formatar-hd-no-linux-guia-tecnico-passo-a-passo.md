@@ -1,7 +1,7 @@
 ---
 layout: manual-seo
 title: "Formatar HD no Linux — Comandos Técnicos"
-description_custom: "Tabela com comandos reais para particionar, formatar e montar discos no Linux: fdisk, mkfs, fstab, UUID."
+description: "Tabela com comandos reais para particionar, formatar e montar discos no Linux: fdisk, mkfs, fstab, UUID."
 permalink: /formatar-hd-linux/
 tags: [disco, particionamento, mkfs, fstab, linux, sysadmin, evergreen]
 ---
