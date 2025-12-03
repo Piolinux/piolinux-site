@@ -155,19 +155,19 @@ if [ "$uso" -gt 80 ]; then
 fi</code></td>
       <td data-label="Copiar"><button class="copy-btn" data-command="#!/bin/bash
 uso=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
-if [ $uso -gt 80 ]; then
+if [ "$uso" -gt 80 ]; then
   echo &quot;⚠️ Disco acima de 80% ($uso%)&quot;
 fi">📋</button></td>
     </tr>
     <tr>
       <td data-label="Objetivo">Criar usuários em lote.</td>
       <td data-label="Script"><code>#!/bin/bash
-while read user; do
+while read -r user; do
   [ -n "$user" ] && sudo useradd -m "$user"
 done < lista_usuarios.txt
 echo "Usuários criados."</code></td>
       <td data-label="Copiar"><button class="copy-btn" data-command="#!/bin/bash
-while read user; do
+while read -r user; do
   [ -n &quot;$user&quot; ] && sudo useradd -m &quot;$user&quot;
 done < lista_usuarios.txt
 echo &quot;Usuários criados.&quot;">📋</button></td>
