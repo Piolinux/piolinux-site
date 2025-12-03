@@ -39,7 +39,7 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="ps aux">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>ps aux \| grep nginx</code></td>
+      <td data-label="Comando"><code>ps aux | grep nginx</code></td>
       <td data-label="Descrição">Filtra processos.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="ps aux \| grep nginx">📋</button></td>
     </tr>
