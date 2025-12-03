@@ -124,9 +124,9 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="sar -u 1 5">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>dmesg \| tail</code></td>
+      <td data-label="Comando"><code>dmesg | tail</code></td>
       <td data-label="Descrição">Últimas mensagens do kernel.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="dmesg \| tail">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="dmesg | tail">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>journalctl -u nginx</code></td>
