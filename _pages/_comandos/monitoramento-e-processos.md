@@ -41,7 +41,7 @@ function filtrarLinhas(termo) {
     <tr>
       <td data-label="Comando"><code>ps aux | grep nginx</code></td>
       <td data-label="Descrição">Filtra processos.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="ps aux \| grep nginx">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="ps aux | grep nginx">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>top</code></td>
@@ -105,8 +105,8 @@ function filtrarLinhas(termo) {
     </tr>
     <tr>
       <td data-label="Comando"><code>lsof -i </code></td>
-      <td data-label="Descrição">Processos usando porta 80.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="lsof -i ">📋</button></td>
+      <td data-label="Descrição">Processos usandos.</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="lsof -i">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>vmstat 1</code></td>
