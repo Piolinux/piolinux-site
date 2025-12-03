@@ -150,13 +150,14 @@ echo &quot;Backup salvo em: $dir_backup/$arquivo&quot;">📋</button></td>
       <td data-label="Objetivo">Alerta de disco cheio</td>
       <td data-label="Script"><code>#!/bin/bash
 uso=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
-if [ $uso -gt 80 ]; then
+if [ "$uso" -gt 80 ]; then
   echo "⚠️ Disco acima de 80% ($uso%)"
-fi</code></td>
+fi
+</code></td>
       <td data-label="Copiar"><button class="copy-btn" data-command="#!/bin/bash
 uso=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
-if [ $uso -gt 80 ]; then
-  echo &quot;⚠️ Disco acima de 80% ($uso%)&quot;
+if [ "$uso" -gt 80 ]; then
+  echo "⚠️ Disco acima de 80% ($uso%)"
 fi">📋</button></td>
     </tr>
     <tr>
