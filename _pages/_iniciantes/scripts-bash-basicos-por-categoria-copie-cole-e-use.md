@@ -155,7 +155,7 @@ if [ "$uso" -gt 80 ]; then
 fi</code></td>
       <td data-label="Copiar"><button class="copy-btn" data-command="#!/bin/bash
 uso=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
-if [ "$uso" -gt 80 ]; then
+if [ $uso -gt 80 ]; then
   echo &quot;⚠️ Disco acima de 80% ($uso%)&quot;
 fi">📋</button></td>
     </tr>
@@ -265,6 +265,10 @@ echo &quot;scale=2; $1&quot; | bc -l">📋</button></td>
     </tr>
   </tbody>
 </table>
+
+
+
+
 
 
 
