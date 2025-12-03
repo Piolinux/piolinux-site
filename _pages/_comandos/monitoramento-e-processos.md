@@ -104,9 +104,9 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="lsof +D /home">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>lsof -i :80</code></td>
+      <td data-label="Comando"><code>lsof -i </code></td>
       <td data-label="Descrição">Processos usando porta 80.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="lsof -i :80">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="lsof -i ">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>vmstat 1</code></td>
