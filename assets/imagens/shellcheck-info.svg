@@ -1,0 +1,21 @@
+<svg viewBox="0 0 520 180" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #0f0f0f; }
+    .label { fill: #a0f0f0; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 14px; font-weight: bold; }
+    .cmd { fill: #80d0ff; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 12px; }
+    .safe { fill: #80ffaa; font-size: 11px; font-style: italic; }
+  </style>
+  <rect class="bg" width="100%" height="100%" />
+  
+  <!-- Título -->
+  <text class="label" x="20" y="30">SHELLCHECK — ANÁLISE ESTÁTICA DE SCRIPTS</text>
+  
+  <!-- Comandos e uso -->
+  <text class="cmd" x="30" y="60">• Online: shellcheck.net</text>
+  <text class="cmd" x="30" y="85">• Terminal: shellcheck script.sh</text>
+  <text class="cmd" x="30" y="110">• Detecta: erros, más práticas, security issues</text>
+  <text class="cmd" x="30" y="135">• Suporte: Bash, Dash, Ksh, Zsh</text>
+  
+  <!-- Observação -->
+  <text class="safe" x="30" y="165">✓ Open source, sem tracking, disponível via apt</text>
+</svg>
