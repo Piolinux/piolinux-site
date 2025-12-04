@@ -75,7 +75,7 @@ permalink: /referencias/distros-linux-pc-antigo/
       <td data-label="Base">Arch Linux</td>
       <td data-label="Ambiente Gráfico">Openbox</td>
       <td data-label="Requisitos Mínimos">512 MB RAM, conhecimento técnico exigido</td>
-      <td data-label="Estado"> Projeto inativo (última ISO: 2019)</td>
+      <td data-label="Estado"> Projeto ativo (última ISO: 2025)</td>
     </tr>
   </tbody>
 </table>
