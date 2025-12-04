@@ -52,7 +52,7 @@ description: "Links diretos para TLDP, Oh My Zsh, Python.org, Devuan e outras re
     <tr>
   <td data-label="Projetos">Devuan</td>
   <td data-label="Descrições">Instalação guiada do Devuan Excalibur (sem systemd), com foco em runit e sysvinit.</td>
-  <td data-label="Links Oficiais"><a href="https://www.devuan.org/os/documentation/install-guides/excalibur/install-devuan" target="_blank" rel="noopener noreferrer">devuan.org</a></td>
+  <td data-label="Links Oficiais"><a href="https://www.devuan.org/os/documentation/install-guides/excalibur/live-gui" target="_blank" rel="noopener noreferrer">devuan.org</a></td>
 </tr>
 <tr>
   <td data-label="Projetos">Macaroni OS</td>
