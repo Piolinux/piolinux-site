@@ -65,13 +65,11 @@ tags: [pacotes, linux, apt, dnf, pacman, zypper, instalacao]
     </tr>
     <tr>
       <td data-label="Método">AppImage</td>
-      <td data-label="Comando de Instalação">
-        <code>chmod +x app.AppImage && ./app.AppImage</code>
-        <button class="copy-btn" data-command="chmod +x app.AppImage && ./app.AppImage">📋 Copiar</button>
-      </td>
+      <td data-label="Link"><a href="https://appimage.github.io/" target="_blank" rel="noopener noreferrer">Appimage em Categorias.</a></td>
       <td data-label="Vantagens">Portátil, sem instalação, funciona em qualquer lugar.</td>
       <td data-label="Desvantagens">Sem atualizações automáticas, sem integração com menu.</td>
       <td data-label="Quando usar">Para testar apps rapidamente ou usar em pendrive.</td>
+      
     </tr>
   </tbody>
 </table>
