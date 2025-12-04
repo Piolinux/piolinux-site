@@ -31,7 +31,7 @@ permalink: /aplicativos-graficos-compactacao-linux/
       <td data-label="Aplicativo">PeaZip.</td>
       <td data-label="Método">Flatpak</td>
       <td data-label="Descrição"><a href="https://flathub.org/en/setup/Debian" target="_blank" rel="noopener noreferrer">Flatpak setup Debian.</a></td>
-      <td data-label="Ação"><a href="https://flathub.org/en/apps/io.github.peazip.PeaZip" target="_blank" rel="noopener noreferrer">Instalação do Peazip.</a></td>
+      <td data-label="Ação"><a href="https://flathub.org/en/apps/io.github.peazip.PeaZip" target="_blank" rel="noopener noreferrer">Instalação.</a></td>
     </tr>
     
    <tr>
