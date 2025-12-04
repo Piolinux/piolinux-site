@@ -47,7 +47,7 @@ permalink: /referencias/distros-linux-pc-antigo/
       <td data-label="Base">Ubuntu / Debian (varia por versão)</td>
       <td data-label="Ambiente Gráfico">JWM, Openbox</td>
       <td data-label="Requisitos Mínimos">512 MB RAM, roda em RAM</td>
-      <td data-label="Estado"> Ativa (FossaPup, BionicPup)</td>
+      <td data-label="Estado"> Ativa (FossaPup,Bookworm,SlackPup)</td>
     </tr>
     <tr>
       <td data-label="Distribuição"><a href="https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/" target="_blank" rel="noopener noreferrer">Debian + LXDE</a></td>
