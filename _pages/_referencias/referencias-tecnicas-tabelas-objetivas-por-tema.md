@@ -1,7 +1,7 @@
 ---
 layout: manual-seo
 title: "Referências Técnicas - Tabelas Objetivas por Tema"
-description: "Páginas técnicas com tabelas comparativas: USB, teclados, backup, aplicativos, pacotes."
+description: "Páginas técnicas com tabelas comparativas: USB, teclados, backup, init systems, pacotes."
 permalink: /referencias/
 tags:
   - referencia
@@ -23,7 +23,24 @@ tags:
    | where_exp: "page", "page.url != '/referencias/'" %}
 
 
-<!-- Seo: USB -->
+
+
+
+
+
+
+
+
+<div class="section">
+      {% for page in pages %}
+      {% if page.tags contains "arquitetura de diretorio" %}
+        <div class="ref-item">
+          <h3><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h3>
+          <p>{{ page.description }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 
 
 
