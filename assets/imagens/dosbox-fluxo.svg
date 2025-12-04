@@ -1,0 +1,21 @@
+<svg viewBox="0 0 520 180" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #0f0f0f; }
+    .label { fill: #a0f0f0; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 14px; font-weight: bold; }
+    .cmd { fill: #80d0ff; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 12px; }
+    .safe { fill: #80ffaa; font-size: 11px; font-style: italic; }
+  </style>
+  <rect class="bg" width="100%" height="100%" />
+  
+  <!-- Título -->
+  <text class="label" x="20" y="30">DOSBOX — FLUXO BÁSICO</text>
+  
+  <!-- Passos -->
+  <text class="cmd" x="30" y="60">1. mount c ~/jogos</text>
+  <text class="cmd" x="30" y="85">2. c:</text>
+  <text class="cmd" x="30" y="110">3. cd MEU_JOGO</text>
+  <text class="cmd" x="30" y="135">4. JOGO.EXE</text>
+  
+  <!-- Observação -->
+  <text class="safe" x="30" y="165">✓ Nenhum comando complexo — só o essencial para rodar software legado</text>
+</svg>
