@@ -29,6 +29,20 @@ tags:
 
 
 
+<div class="section">
+      {% for page in pages %}
+      {% if page.tags contains "dosbox" %}
+        <div class="ref-item">
+          <h3><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h3>
+          <p>{{ page.description }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+
+
+
 
 
 <div class="section">
