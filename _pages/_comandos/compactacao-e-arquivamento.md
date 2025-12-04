@@ -14,7 +14,7 @@ permalink: /aplicativos-graficos-compactacao-linux/
     <tr>
       <th>Aplicativos.</th>
       <th>Método de Instalação.</th>
-      <th>Compatível com</th>
+      <th>Compativel/Descrição</th>
       <th>Ação</th>
     </tr>
   </thead>
@@ -22,7 +22,7 @@ permalink: /aplicativos-graficos-compactacao-linux/
     <tr>
       <td data-label="Aplicativo">PeaZip (recomendado)</td>
       <td data-label="Método">Pacote <code>.deb</code> oficial</td>
-      <td data-label="Compatível com">Debian, Ubuntu, Linux Mint, Devuan.</td>
+      <td data-label="Descrição">Debian, Ubuntu, Linux Mint, Devuan.</td>
       <td data-label="Ação">
         <a href="https://peazip.github.io/peazip-linux.html" target="_blank" rel="noopener">Baixar .deb</a>
       </td>
@@ -30,31 +30,59 @@ permalink: /aplicativos-graficos-compactacao-linux/
     <tr>
       <td data-label="Aplicativo">PeaZip.</td>
       <td data-label="Método">Flatpak (universal)</td>
-      <td data-label="Compatível com">Artix, Void, Debian, qualquer distro com Flatpak.</td>
+      <td data-label="Descrição">Artix, Void, Debian, qualquer distro com Flatpak.</td>
       <td data-label="Ação">
         <button class="copy-btn" data-command="flatpak install flathub io.github.peazip.PeaZip">📋 Copiar</button>
       </td>
     </tr>
-    <tr>
-      <td data-label="Aplicativo">Lxqt-archiver.</td>
-      <td data-label="Método"><code>apt install lxqt-archiver lxqt-archiver-l10n</code></td>
-      <td data-label="Compatível com">Debian, Ubuntu, Mint (GNOME/Cinnamon)</td>
+   <tr>
+     <td data-label="Aplicativo">Engrampa.</td>
+      <td data-label="Método"><code>apt install engrampa</code></td>
+      <td data-label="Descrição">Gerenciador de arquivos compactados do ambiente MATE. Suporta ZIP, TAR, GZ, BZ2, XZ, 7z.</td>
       <td data-label="Ação">
-      <button class="copy-btn" data-command="apt install lxqt-archiver lxqt-archiver-l10n">📋 Copiar</button>
+      <button class="copy-btn" data-command="apt install engrampa<">📋 Copiar</button>
       </td>
     </tr>
-    <tr>
-      <td data-label="Aplicativo">File Roller.</td>
-      <td data-label="Método">Pré-instalado</td>
-      <td data-label="Compatível com">Debian, Ubuntu, Mint (GNOME/Cinnamon)</td>
-      <td data-label="Ação">Já disponível</td>
+
+
+<tr>
+     <td data-label="Aplicativo">Zipper.app.</td>
+      <td data-label="Método"><code>apt install engrampa</code></td>
+      <td data-label="Descrição">Aplicativo gráfico leve (gtk) para criar/expandir arquivos ZIP. Comum em distros minimalistas (ex: antiX com XFCE).</td>
+      <td data-label="Ação">
+      <button class="copy-btn" data-command="apt install zipper.app<">📋 Copiar</button>
+      </td>
     </tr>
-    <tr>
-      <td data-label="Aplicativo">Ark.</td>
-      <td data-label="Método">Pré-instalado.</td>
-      <td data-label="Compatível com">KDE Plasma (em qualquer distro)</td>
-      <td data-label="Ação">Já disponível</td>
-    </tr>
+
+
+<tr>
+  <td data-label="Aplicativo">LXQt Archiver</td>
+  <td data-label="Método"><code>apt install lxqt-archiver lxqt-archiver-l10n</code></td>
+  <td data-label="Descrição">Gerenciador de arquivos compactados do ambiente LXQt. Suporta ZIP, TAR, GZ, BZ2, XZ, 7z.</td>
+  <td data-label="Ação">
+    <button class="copy-btn" data-command="apt install lxqt-archiver lxqt-archiver-l10n">📋 Copiar</button>
+  </td>
+</tr>
+
+<tr>
+  <td data-label="Aplicativo">File Roller</td>
+  <td data-label="Método"><code>apt install file-roller</code></td>
+  <td data-label="Descrição">Gerenciador de arquivos compactados do ambiente GNOME. Suporte nativo a formatos comuns.</td>
+  <td data-label="Ação">
+    <button class="copy-btn" data-command="apt install file-roller">📋 Copiar</button>
+  </td>
+</tr>
+
+<tr>
+  <td data-label="Aplicativo">Ark</td>
+  <td data-label="Método"><code>apt install ark</code></td>
+  <td data-label="Descrição">Gerenciador de arquivos compactados do ambiente KDE (Plasma). Integrado ao Dolphin.</td>
+  <td data-label="Ação">
+    <button class="copy-btn" data-command="apt install ark">📋 Copiar</button>
+  </td>
+</tr>
+   
+    
   </tbody>
 </table>
 
@@ -124,6 +152,9 @@ permalink: /aplicativos-graficos-compactacao-linux/
 </table>
 
 </section>
+
+
+
 
 
 
