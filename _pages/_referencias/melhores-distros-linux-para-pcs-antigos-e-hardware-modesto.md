@@ -61,14 +61,14 @@ permalink: /referencias/distros-linux-pc-antigo/
       <td data-label="Base">Própria</td>
       <td data-label="Ambiente Gráfico">JWM</td>
       <td data-label="Requisitos Mínimos">256 MB RAM, 1.5 GB disco</td>
-      <td data-label="Estado"> Ativa </td>
+      <td data-label="Estado"> Ativa disponivel no site sourceforge.</td>
     </tr>
     <tr>
       <td data-label="Distribuição">VoidPup</td>
       <td data-label="Base">Void</td>
-      <td data-label="Ambiente Gráfico">Jwmn</td>
+      <td data-label="Ambiente Gráfico">JWM</td>
       <td data-label="Requisitos Mínimos">512 MB RAM</td>
-      <td data-label="Estado"> Ativa </td>
+      <td data-label="Estado"> Ativa disponivel no site sourceforge.</td>
     </tr>
     <tr>
       <td data-label="Distribuição">ArchBang</td>
@@ -89,6 +89,7 @@ permalink: /referencias/distros-linux-pc-antigo/
     </tr>
   </thead>
   <tbody>
+             
     <tr>
       <td data-label="Cenário">PC antigo (pré-2010), sem internet rápida</td>
       <td data-label="Distro Recomendada">AntiX ou 4MLinux (tudo offline, ISO pequena)</td>
