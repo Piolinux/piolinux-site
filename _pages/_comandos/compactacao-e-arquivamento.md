@@ -27,12 +27,12 @@ permalink: /aplicativos-graficos-compactacao-linux/
         <a href="https://peazip.github.io/peazip-linux.html" target="_blank" rel="noopener">Baixar .deb</a>
       </td>
     </tr>
-    <tr>
+   <tr>
       <td data-label="Aplicativo">PeaZip.</td>
-      <td data-label="Método">Flatpak (universal)</td>
-      <td data-label="Descrição">Artix, Void, Debian, qualquer distro com Flatpak.</td>
+      <td data-label="Método">Flatpak Debian/Devuan</td>
+      <td data-label="Descrição">Guia de instalação Flatpak.</td>
       <td data-label="Ação">
-        <button class="copy-btn" data-command="flatpak install flathub io.github.peazip.PeaZip">📋 Copiar</button>
+        <button class="copy-btn" data-command="https://flathub.org/en/setup/Debian">📋 Copiar</button>
       </td>
     </tr>
    <tr>
