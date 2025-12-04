@@ -48,10 +48,7 @@ tags: [pacotes, linux, apt, dnf, pacman, zypper, instalacao]
     </tr>
     <tr>
       <td data-label="Método">Flatpak</td>
-      <td data-label="Comando de Instalação">
-        <code>flatpak install flathub org.mozilla.firefox</code>
-        <button class="copy-btn" data-command="flatpak install flathub org.mozilla.firefox">📋 Copiar</button>
-      </td>
+      <td data-label="Link"><a href="https://flathub.org/en/setup" target="_blank" rel="noopener noreferrer">Flatpak setup para qualquer Distro.</a></td>
       <td data-label="Vantagens">Versões atualizadas, isolamento, funciona em qualquer distro.</td>
       <td data-label="Desvantagens">Maior uso de disco, inicialização mais lenta.</td>
       <td data-label="Quando usar">Para apps gráficos modernos (Firefox, OBS, Spotify).</td>
