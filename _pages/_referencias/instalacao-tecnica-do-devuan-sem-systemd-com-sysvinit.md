@@ -111,7 +111,7 @@ tags: [devuan, linux, sysvinit, guia, instalação, sem_systemd, instalacao-devu
     <tr>
       <td data-label="Repositório"><code>excalibur</code></td>
       <td data-label="Componentes"><code>main</code>, <code>non-free-firmware</code></td>
-      <td data-label="Descrição">Pacotes estáveis do Devuan 5 (Excalibur)</td>
+      <td data-label="Descrição">Pacotes estáveis do Devuan 6 (Excalibur)</td>
     </tr>
     <tr>
       <td data-label="Repositório"><code>excalibur-updates</code></td>
