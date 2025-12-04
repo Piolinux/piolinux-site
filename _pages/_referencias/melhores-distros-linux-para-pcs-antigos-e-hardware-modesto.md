@@ -61,7 +61,7 @@ permalink: /referencias/distros-linux-pc-antigo/
       <td data-label="Base">Própria</td>
       <td data-label="Ambiente Gráfico">JWM</td>
       <td data-label="Requisitos Mínimos">256 MB RAM, 1.5 GB disco</td>
-      <td data-label="Estado"> Ativa (24.1 em 2024)</td>
+      <td data-label="Estado"> Ativa (50 estavel em 2025)</td>
     </tr>
     <tr>
       <td data-label="Distribuição">LXLE</td>
