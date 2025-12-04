@@ -33,14 +33,14 @@ permalink: /referencias/distros-linux-pc-antigo/
       <td data-label="Base">Debian Stable</td>
       <td data-label="Ambiente Gráfico">IceWM, JWM, Fluxbox</td>
       <td data-label="Requisitos Mínimos">256 MB RAM, 3 GB disco, CPU i686</td>
-      <td data-label="Estado"> Ativa (2024)</td>
+      <td data-label="Estado"> Ativa </td>
     </tr>
     <tr>
       <td data-label="Distribuição">Lubuntu</td>
       <td data-label="Base">Ubuntu LTS</td>
       <td data-label="Ambiente Gráfico">LXQt</td>
       <td data-label="Requisitos Mínimos">1 GB RAM, 10 GB disco, CPU x86_64</td>
-      <td data-label="Estado"> Ativa (2024)</td>
+      <td data-label="Estado"> Ativa </td>
     </tr>
     <tr>
       <td data-label="Distribuição">Puppy Linux</td>
@@ -61,21 +61,21 @@ permalink: /referencias/distros-linux-pc-antigo/
       <td data-label="Base">Própria</td>
       <td data-label="Ambiente Gráfico">JWM</td>
       <td data-label="Requisitos Mínimos">256 MB RAM, 1.5 GB disco</td>
-      <td data-label="Estado"> Ativa (Versão 50 estavel em 2025)</td>
+      <td data-label="Estado"> Ativa </td>
     </tr>
     <tr>
-      <td data-label="Distribuição">LXLE</td>
-      <td data-label="Base">Ubuntu LTS</td>
-      <td data-label="Ambiente Gráfico">LXDE</td>
+      <td data-label="Distribuição">VoidPup</td>
+      <td data-label="Base">Void</td>
+      <td data-label="Ambiente Gráfico">Jwmn</td>
       <td data-label="Requisitos Mínimos">512 MB RAM</td>
-      <td data-label="Estado"> Descontinuada (última: 2018)</td>
+      <td data-label="Estado"> Ativa </td>
     </tr>
     <tr>
       <td data-label="Distribuição">ArchBang</td>
       <td data-label="Base">Arch Linux</td>
       <td data-label="Ambiente Gráfico">Openbox</td>
       <td data-label="Requisitos Mínimos">512 MB RAM, conhecimento técnico exigido</td>
-      <td data-label="Estado"> Projeto ativo (última ISO: 2025)</td>
+      <td data-label="Estado"> Projeto ativo </td>
     </tr>
   </tbody>
 </table>
