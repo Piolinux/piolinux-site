@@ -95,7 +95,7 @@ target="_blank" rel="noopener">Comparativo</a></p></td>
     <tr>
       <td data-label="Passo">11. Em caso de falha: remover com segurança</td>
       <td data-label="Comando"><code>sudo dpkg -r linux-image-6.12.43 linux-headers-6.12.43</code></td>
-      <td data-label="Por que é seguro">Remove **todos os arquivos, entradas do GRUB e módulos**, sem deixar lixo — impossível com <code>make install</code>.</td>
+      <td data-label="Por que é seguro">Remove **todos os arquivos, entradas do GRUB e módulos**.</code>.</td>
     </tr>
 
 
