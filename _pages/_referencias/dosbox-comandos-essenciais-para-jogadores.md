@@ -2,7 +2,7 @@
 title: "DOSBox — Comandos Essenciais para Jogadores"
 description: "Tabela de comandos práticos do DOSBox para montar drives, configurar teclado em português (ABNT2) e executar jogos clássicos como Doom, Duke Nukem e Commander Keen em sistemas modernos como Devuan e antiX."
 layout: manual-seo
-permalink: /ferramentas/dosbox/
+permalink: /referencias/dosbox/
 tags: [dosbox, dos, jogos,]
 ---
 
