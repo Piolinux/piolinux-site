@@ -29,12 +29,11 @@ permalink: /aplicativos-graficos-compactacao-linux/
     </tr>
    <tr>
       <td data-label="Aplicativo">PeaZip.</td>
-      <td data-label="Método">Flatpak Debian/Devuan</td>
-      <td data-label="Descrição">Guia de instalação Flatpak.</td>
-      <td data-label="Ação">
-        <button class="copy-btn" data-command="https://flathub.org/en/setup/Debian">📋 Copiar</button>
-      </td>
+      <td data-label="Método">Flatpak</td>
+      <td data-label="Descrição"><a href="https://flathub.org/en/setup/Debian" target="_blank" rel="noopener noreferrer">Flatpak setup Debian.</a></td>
+      <td data-label="Ação"><a href="https://flathub.org/en/apps/io.github.peazip.PeaZip" target="_blank" rel="noopener noreferrer">Instalação do Peazip.</a></td>
     </tr>
+    
    <tr>
      <td data-label="Aplicativo">Engrampa.</td>
       <td data-label="Método"><code>apt install engrampa</code></td>
