@@ -6,7 +6,7 @@ permalink: /make-oldconfig-vs-olddefconfig/
 tags: [kernel, linux, sysadmin]
 ---
 
-
+<section>
 
 <table class="evergreen-table">
   <thead>
@@ -49,3 +49,8 @@ tags: [kernel, linux, sysadmin]
     </tr>
   </tbody>
 </table>
+
+
+
+</section>
+
