@@ -58,12 +58,12 @@ permalink: /referencias/fhs/
     </tr>
     <tr>
       <td data-label="Diretório"><code>/usr/bin</code></td>
-      <td data-label="Propósito">Comandos não essenciais para usuários.</td>
+      <td data-label="Propósito">Comandos essenciais para usuários.</td>
       <td data-label="Conteúdo típico">git, python3, firefox</td>
     </tr>
     <tr>
       <td data-label="Diretório"><code>/usr/sbin</code></td>
-      <td data-label="Propósito">Comandos não essenciais para administração.</td>
+      <td data-label="Propósito">Comandos essenciais para administração.</td>
       <td data-label="Conteúdo típico">useradd, apache2, sshd</td>
     </tr>
     <tr>
