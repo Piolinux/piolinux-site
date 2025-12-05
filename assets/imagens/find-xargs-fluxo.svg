@@ -1,18 +1,39 @@
-<svg viewBox="0 0 600 220" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="#00ff00" result="glow"/>
+      <feComposite in="glow" in2="blur" operator="in" result="softGlow"/>
+      <feMerge>
+        <feMergeNode in="softGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f0f;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
   <style>
-    .bg { fill: #0f0f0f; }
-    .code { fill: #80d0ff; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 13px; }
-    .safe { fill: #80ffaa; font-weight: bold; }
-    .unsafe { fill: #ff8080; text-decoration: line-through; }
+    .danger { fill: #ff8080; text-decoration: line-through; font-family: 'Fira Code', monospace; font-size: 13px; }
+    .safe { fill: #80ffaa; font-family: 'Fira Code', monospace; font-size: 13px; font-weight: bold; }
+    .note { fill: #a0f0f0; font-family: 'Fira Code', monospace; font-size: 12px; }
   </style>
-  <rect class="bg" width="100%" height="100%" />
 
-  <!-- Forma INSEGURA (riscada) -->
-  <text class="code unsafe" x="30" y="30">find . -name "*.log" | xargs rm</text>
+  <!-- Fundo arredondado com brilho -->
+  <rect x="2" y="2" width="516" height="136" rx="15" ry="15"
+        fill="url(#grad)"
+        stroke="#00ff00"
+        stroke-width="2"
+        filter="url(#glow)" />
 
-  <!-- Forma SEGURA (com trash) -->
-  <text class="code" x="30" y="65">find . -name "*.log" -print 0 | xargs -0 trash</text>
+  <!-- Comando perigoso (riscado) -->
+  <text class="danger" x="30" y="35">find . -name "*.log" | xargs rm</text>
 
-  <!-- Legenda clara -->
-  <text class="safe" x="30" y="100">✓ Use -print0 + -0 com trash para recuperação segura</text>
+  <!-- Comando seguro -->
+  <text class="safe" x="30" y="70">find . -name "*.log" -print0 | xargs -0 trash</text>
+
+  <!-- Legenda -->
+  <text class="note" x="30" y="110">✓ Use -print0 + -0 com trash para recuperação segura</text>
 </svg>
