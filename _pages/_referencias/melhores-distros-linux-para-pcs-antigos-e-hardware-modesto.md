@@ -107,10 +107,10 @@ permalink: /referencias/distros-linux-pc-antigo/
     </tr>
     <tr>
       <td data-label="Distribuição"><a href="https://www.haiku-os.org/" target="_blank" rel="noopener noreferrer">Haiku</a></td>
-      <td data-label="Base">Independente (não é Linux)</td>
+      <td data-label="Base">Independente </td>
       <td data-label="Ambiente Gráfico">Interface nativa (BeOS-like)</td>
       <td data-label="Requisitos Mínimos">512 MB RAM, 1 GHz CPU (x86)</td>
-      <td data-label="Estado"> Ativa  — mas não é Linux</td>
+      <td data-label="Estado"> Ativa </td>
     </tr>
   </tbody>
 </table>
