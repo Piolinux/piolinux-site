@@ -85,9 +85,9 @@ permalink: /referencias/distros-linux-pc-antigo/
       <td data-label="Estado">Ativa </td>
     </tr>
     <tr>
-      <td data-label="Distribuição"><a href="https://github.com/porteux/porteux/releases/tag/v2.4" target="_blank" rel="noopener noreferrer">Porteus</a></td>
+      <td data-label="Distribuição"><a href="https://github.com/porteux/porteux/releases/tag/v2.4" target="_blank" rel="noopener noreferrer">PorteuX</a></td>
       <td data-label="Base">Slackware</td>
-      <td data-label="Ambiente Gráfico">LXQt, Xfce, KDE, MATE (escolha de várias interfaces)</td>
+      <td data-label="Ambiente Gráfico">LXQt, Xfce, KDE, MATE </td>
       <td data-label="Requisitos Mínimos">256 MB RAM, 300 MHz CPU</td>
       <td data-label="Estado">Ativa </td>
     </tr>
