@@ -11,7 +11,7 @@
   <text class="label" x="20" y="30">DOSBOX — FLUXO BÁSICO</text>
   
   <!-- Passos -->
-  <text class="cmd" x="30" y="60">1. /home/seuuser/jogos/</text>
+  <text class="cmd" x="30" y="60">1. mount c  /home/seuuser/jogos/</text>
   <text class="cmd" x="30" y="85">2. c:</text>
   <text class="cmd" x="30" y="110">3. cd MEU_JOGO</text>
   <text class="cmd" x="30" y="135">4. JOGO.EXE</text>
