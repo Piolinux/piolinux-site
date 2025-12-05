@@ -77,8 +77,46 @@ permalink: /referencias/distros-linux-pc-antigo/
       <td data-label="Requisitos Mínimos">1 GB RAM, conhecimento técnico exigido</td>
       <td data-label="Estado"> Projeto ativo. </td>
     </tr>
+    <tr>
+      <td data-label="Distribuição"><a href="https://tinycorelinux.net/" target="_blank" rel="noopener noreferrer">Tiny Core Linux</a></td>
+      <td data-label="Base">Independente </td>
+      <td data-label="Ambiente Gráfico">FLWM (opcional: JWM, IceWM)</td>
+      <td data-label="Requisitos Mínimos">46 MB RAM, 100 MHz CPU</td>
+      <td data-label="Estado">Ativa </td>
+    </tr>
+    <tr>
+      <td data-label="Distribuição"><a href="https://github.com/porteux/porteux/" target="_blank" rel="noopener noreferrer">Porteus</a></td>
+      <td data-label="Base">Slackware</td>
+      <td data-label="Ambiente Gráfico">LXQt, Xfce, KDE, MATE (escolha na inicialização)</td>
+      <td data-label="Requisitos Mínimos">256 MB RAM, 300 MHz CPU</td>
+      <td data-label="Estado">Ativa </td>
+    </tr>
+    <tr>
+      <td data-label="Distribuição"><a href="https://www.planetwatt.com/" target="_blank" rel="noopener noreferrer">WattOS</a></td>
+      <td data-label="Base">Debian</td>
+      <td data-label="Ambiente Gráfico">LXDE</td>
+      <td data-label="Requisitos Mínimos">512 MB RAM, 1 GHz CPU</td>
+      <td data-label="Estado">Ativa </td>
+    </tr>
+    <tr>
+      <td data-label="Distribuição"><a href="https://www.exton.se/" target="_blank" rel="noopener noreferrer">Exton Linux</a></td>
+      <td data-label="Base">Debian, Ubuntu, Arch (varia por edição)</td>
+      <td data-label="Ambiente Gráfico">LXQt, KDE, Deepin</td>
+      <td data-label="Requisitos Mínimos">1 GB RAM, 1 GHz CPU</td>
+      <td data-label="Estado"> Ativa</td>
+    </tr>
+    <tr>
+      <td data-label="Distribuição"><a href="https://www.haiku-os.org/" target="_blank" rel="noopener noreferrer">Haiku</a></td>
+      <td data-label="Base">Independente (não é Linux)</td>
+      <td data-label="Ambiente Gráfico">Interface nativa (BeOS-like)</td>
+      <td data-label="Requisitos Mínimos">512 MB RAM, 1 GHz CPU (x86)</td>
+      <td data-label="Estado"> Ativa  — mas não é Linux</td>
+    </tr>
   </tbody>
 </table>
+
+
+
 
 <h3 id="recomendacoes">Recomendações Técnicas</h3>
 <table class="evergreen-table">
@@ -92,7 +130,7 @@ permalink: /referencias/distros-linux-pc-antigo/
              
     <tr>
       <td data-label="Cenário">PC antigo (pré-2010), sem internet rápida</td>
-      <td data-label="Distro Recomendada">AntiX ou 4MLinux (tudo offline, ISO pequena)</td>
+      <td data-label="Distro Recomendada">AntiX,4MLinux,Tiny Core Linux,Porteus.</td>
     </tr>
     <tr>
       <td data-label="Cenário">PC com 1–2 GB RAM, uso diário (navegação, escritório)</td>
@@ -104,12 +142,13 @@ permalink: /referencias/distros-linux-pc-antigo/
     </tr>
     <tr>
       <td data-label="Cenário">Hardware muito limitado (<512 MB RAM)</td>
-      <td data-label="Distro Recomendada">AntiX (modo texto) ou 4MLinux (modo básico)</td>
+      <td data-label="Distro Recomendada">AntiX (modo texto) ou 4MLinux (modo básico) -- Tiny Core Linux (modo texto)</td>
    </tr>
   </tbody>
 </table>
 
 </section>
+
 
 
 
