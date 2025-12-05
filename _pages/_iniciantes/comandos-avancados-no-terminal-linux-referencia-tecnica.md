@@ -90,9 +90,9 @@ tags: [terminal, comandos, linux, awk, sed, find, xargs, produtividade]
     </tr>
     <tr>
       <td><code>lsof.</code></td>
-      <td><code>lsof -i :80</code></td>
-      <td>Mostra qual processo está usando a porta 80.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="lsof -i :80">📋</button></td>
+      <td><code>lsof -i </code></td>
+      <td>Mostra todos os processo ativos das portas TCP/UPD.</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="lsof -i ">📋</button></td>
     </tr>
     <tr>
       <td><code>iotop.</code></td>
