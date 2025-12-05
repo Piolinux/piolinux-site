@@ -33,9 +33,10 @@
 
   <!-- Passos -->
   <text class="cmd" x="30" y="60">1. mount c /home/seuuser/jogos</text>
-  <text class="cmd" x="30" y="85">2. c:</text>
-  <text class="cmd" x="30" y="110">3. cd MEU_JOGO</text>
-  <text class="cmd" x="30" y="135">4. JOGO.EXE</text>
-
+  <text class="cmd" x="30" y="80">2. c:</text>
+  <text class="cmd" x="30" y="105">3.  dir </text>
+  <text class="cmd" x="30" y="125">4. cd MEU_JOGO</text>
+ <text class="cmd" x="30" y="145">5. JOGO.EXE</text>
+ 
   <text class="safe" x="30" y="165">✓ Nenhum comando complexo — só o essencial para rodar software legado</text>
 </svg>
