@@ -90,9 +90,9 @@ function filtrarLinhas(termo) {
 
     <!-- DEPURAÇÃO AVANÇADA -->
     <tr>
-      <td><code>strace -c ls</code></td>
+      <td><code>strace -c ls >/dev/null</code></td>
       <td>Chamadas de sistema resumida em uma tabela.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="strace -c ls">📋</button></td>
+      <td data-label="Ação"><button class="copy-btn" data-command="strace -c ls >/dev/null">📋</button></td>
     </tr>
     <tr>
       <td><code>ltrace programa</code></td>
