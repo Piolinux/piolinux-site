@@ -95,11 +95,6 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="strace -c ls >/dev/null">📋</button></td>
     </tr>
     <tr>
-      <td><code>ltrace programa</code></td>
-      <td>Rastreia chamadas a bibliotecas dinâmicas (ex: <code>libc</code>).</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="ltrace programa">📋</button></td>
-    </tr>
-    <tr>
       <td><code>sudo tcpdump -i eth0 -nn</code></td>
       <td>Captura tráfego de rede bruto (substitua <code>eth0</code> pela sua interface).</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo tcpdump -i eth0 -nn">📋</button></td>
