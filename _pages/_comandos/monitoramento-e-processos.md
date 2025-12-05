@@ -99,13 +99,13 @@ function filtrarLinhas(termo) {
       <td data-label="Ação"><button class="copy-btn" data-command="renice -5 1234">📋</button></td>
     </tr>
     <tr>
-      <td data-label="Comando"><code>lsof +D /home</code></td>
-      <td data-label="Descrição">Arquivos abertos no diretório.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="lsof +D /home">📋</button></td>
+      <td data-label="Comando"><code>lsof /home/user1</code></td>
+      <td data-label="Descrição">Uma listagem de arquivos abertos.</td>
+      <td data-label="Ação"><button class="copy-btn" data-command="lsof /home/user1">📋</button></td>
     </tr>
     <tr>
       <td data-label="Comando"><code>lsof -i </code></td>
-      <td data-label="Descrição">Processos usandos.</td>
+      <td data-label="Descrição">Processos utilizados dos programas.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="lsof -i">📋</button></td>
     </tr>
     <tr>
