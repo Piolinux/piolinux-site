@@ -91,7 +91,7 @@ function filtrarLinhas(termo) {
     <!-- DEPURAÇÃO AVANÇADA -->
     <tr>
       <td><code>strace -c ls >/dev/null</code></td>
-      <td>Chamadas de sistema resumida em uma tabela.</td>
+      <td>Chamadas de sistema resumida em tabela.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="strace -c ls >/dev/null">📋</button></td>
     </tr>
     <tr>
@@ -106,11 +106,57 @@ function filtrarLinhas(termo) {
       <td>Testa configuração de rotação de logs sem executar.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo /usr/sbin/logrotate -dv /etc/logrotate.conf">📋</button></td>
     </tr>
+    
   </tbody>
 </table>
 
 
+<table class="evergreen-table">
+  <thead>
+    <tr>
+      <th>Comandos.</th>
+      <th>Uso Típico.</th>
+      <th>Resultados.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Comando"><code>ldd /bin/ls</code></td>
+      <td data-label="Uso Típico">Listar bibliotecas compartilhadas (.so) que um binário depende</td>
+      <td data-label="Resultado">Mostra caminhos reais das libs (ex: <code>libc.so.6 → /lib/x86_64-linux-gnu/libc.so.6</code>)
+      <button class="copy-btn" data-command="ldd /bin/ls">📋</button></td>
+    </tr>
+    <tr>
+      <td data-label="Comando"><code>readelf -d /bin/ls | grep NEEDED</code></td>
+      <td data-label="Uso Típico">Ver dependências diretamente no cabeçalho ELF (mesmo se o binário estiver quebrado)</td>
+      <td data-label="Resultado">Lista apenas os nomes das bibliotecas exigidas (ex: <code>libselinux.so.1</code>)
+      <button class="copy-btn" data-command="readelf -d /bin/ls | grep NEEDED">📋</button></td>
+    </tr>
+  <tr>
+  <td data-label="Comando"><code>ltrace /bin/ls</code></td>
+  <td data-label="Uso Típico">Rastrear chamadas a funções de biblioteca em tempo real</td>
+  <td data-label="Resultado">Mostra chamadas como <code>malloc(1024)</code>, <code>getenv("PATH")</code>
+  <button class="copy-btn" data-command="ltrace /bin/ls">📋</button></td>
+ </tr>
+ <tr>
+  <td data-label="Comando"><code>ltrace -f /bin/ls</code></td>
+  <td data-label="Uso Típico">Rastrear também processos filhos (ex: scripts que chamam outros comandos)</td>
+  <td data-label="Resultado">Inclui chamadas de <code>sh</code>, <code>grep</code>, etc., se forem filhos
+  <button class="copy-btn" data-command="ltrace -f /bin/ls">📋</button></td>
+ </tr>
+    
+    <tr>
+      <td data-label="Comando"><code>ltrace -c /bin/ls</code></td>
+      <td data-label="Uso Típico">Perfilamento de desempenho: conta quantas vezes cada função foi chamada</td>
+      <td data-label="Resultado">Tabela com % do tempo, média por chamada, total de chamadas
+      <button class="copy-btn" data-command="ltrace -c /bin/ls">📋</button></td>
+    </tr>
+  </tbody>
+</table>
 
+<blockquote>
+  💡 <strong>Dica:</strong> Use <code>ldd</code> para diagnóstico rápido. Use <code>readelf</code> se o binário não rodar. Use <code>ltrace</code> só para debug dinâmico.
+</blockquote>
 
 
 
@@ -123,6 +169,14 @@ function filtrarLinhas(termo) {
 
 
 </section>
+
+
+
+
+
+
+
+
 
 
 
