@@ -78,7 +78,7 @@ permalink: /referencias/distros-linux-pc-antigo/
       <td data-label="Estado"> Projeto ativo. </td>
     </tr>
     <tr>
-      <td data-label="Distribuição"><a href="https://tinycorelinux.net/" target="_blank" rel="noopener noreferrer">Tiny Core Linux</a></td>
+      <td data-label="Distribuição"><a href="http://tinycorelinux.net/" target="_blank" rel="noopener noreferrer">Tiny Core Linux</a></td>
       <td data-label="Base">Independente </td>
       <td data-label="Ambiente Gráfico">FLWM (opcional: JWM, IceWM)</td>
       <td data-label="Requisitos Mínimos">46 MB RAM, 100 MHz CPU</td>
