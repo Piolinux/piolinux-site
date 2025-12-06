@@ -120,6 +120,26 @@ function filtrarLinhas(termo) {
     </tr>
   </thead>
   <tbody>
+  
+  
+  
+ <tr>
+  <td data-label="Comando"><code>file /bin/* | grep "shell script"</code></td>
+  <td data-label="Uso Típico">Lista todos os scripts shell em <code>/bin</code></td>
+  <td data-label="Resultado">Mostra caminhos de arquivos interpretados por <code>/bin/sh</code>, <code>/bin/bash</code>, etc.
+    <button class="copy-btn" data-command='file /bin/* | grep "shell script"'>📋</button>
+  </td>
+</tr>
+<tr>
+  <td data-label="Comando"><code>file /bin/* | grep "ELF"</code></td>
+  <td data-label="Uso Típico">Lista todos os binários executáveis em <code>/bin</code></td>
+  <td data-label="Resultado">Mostra caminhos de programas compilados (ex: <code>ls</code>, <code>cp</code>, <code>grep</code>).
+    <button class="copy-btn" data-command='file /bin/* | grep "ELF"'>📋</button>
+  </td>
+</tr>
+  
+  
+  
     <tr>
       <td data-label="Comando"><code>ldd /bin/ls</code></td>
       <td data-label="Uso Típico">Listar bibliotecas compartilhadas (.so) que um binário depende</td>
@@ -138,12 +158,12 @@ function filtrarLinhas(termo) {
   <td data-label="Resultado">Mostra chamadas como <code>malloc(1024)</code>, <code>getenv("PATH")</code>
   <button class="copy-btn" data-command="ltrace /bin/ls">📋</button></td>
  </tr>
- <tr>
-  <td data-label="Comando"><code>ltrace -f /bin/ls</code></td>
-  <td data-label="Uso Típico">Rastrear também processos filhos (ex: scripts que chamam outros comandos)</td>
-  <td data-label="Resultado">Inclui chamadas de <code>sh</code>, <code>grep</code>, etc., se forem filhos
-  <button class="copy-btn" data-command="ltrace -f /bin/ls">📋</button></td>
- </tr>
+ 
+ 
+ 
+ 
+ 
+ 
     
     <tr>
       <td data-label="Comando"><code>ltrace -c /bin/ls</code></td>
@@ -159,8 +179,13 @@ function filtrarLinhas(termo) {
 </blockquote>
 
 
+<img src="/assets/imagens/sh-vs-binario.svg" alt="Diferença entre script shell e binário executável" loading="lazy">
 
-
+<a href="/assets/imagens/sh-vs-binario.svg" 
+   download="camadas-linux.svg"
+   class="btn-download">
+  ⤓ Baixar SVG
+</a>
 
 
 
@@ -169,12 +194,6 @@ function filtrarLinhas(termo) {
 
 
 </section>
-
-
-
-
-
-
 
 
 
