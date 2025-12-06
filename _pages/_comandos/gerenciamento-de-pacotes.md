@@ -172,9 +172,7 @@ function filtrarLinhas(termo) {
   <td data-label="Descrição">Atualiza todo o sistema. ⚠️ Faça só em ambiente estável. Leia <code>/usr/share/libalpm/hooks/</code> após atualizar.</td>
   <td data-label="Ação"><button class="copy-btn" data-command="sudo pacman -Syu">📋</button></td>
    </tr>
-
-    
-    <tr>
+      <tr>
       <td data-label="Comando"><code>sudo pacman -S vim</code></td>
       <td data-label="Descrição">Instala pacote oficial.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="sudo pacman -S vim">📋</button></td>
@@ -224,27 +222,7 @@ function filtrarLinhas(termo) {
       <td data-label="Descrição">Descobre pacote que fornece arquivo.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="pacman -F /bin/ls">📋</button></td>
     </tr>
-    <tr>
-      <td data-label="Comando"><code>yay -S google-chrome</code></td>
-      <td data-label="Descrição">Instala do AUR com yay.</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="yay -S google-chrome">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>yay -Syu</code></td>
-      <td data-label="Descrição">Atualiza sistema + AUR</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="yay -Syu">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>yay -Yc</code></td>
-      <td data-label="Descrição">Limpa pacotes órfãos do AUR</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="yay -Yc">📋</button></td>
-    </tr>
-    <tr>
-      <td data-label="Comando"><code>makepkg -si</code></td>
-      <td data-label="Descrição">Compila e instala PKGBUILD</td>
-      <td data-label="Ação"><button class="copy-btn" data-command="makepkg -si">📋</button></td>
-    </tr>
-    <tr>
+     <tr>
       <td data-label="Comando"><code>expac -S "%-20n %v" \| sort</code></td>
       <td data-label="Descrição">Lista pacotes ordenados.</td>
       <td data-label="Ação"><button class="copy-btn" data-command="expac -S &quot;%-20n %v&quot; \| sort">📋</button></td>
