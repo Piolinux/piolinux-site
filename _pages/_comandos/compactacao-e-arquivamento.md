@@ -39,7 +39,7 @@ permalink: /aplicativos-graficos-compactacao-linux/
       <td data-label="Método"><code>apt install engrampa</code></td>
       <td data-label="Descrição">Gerenciador de arquivos compactados do ambiente MATE. Suporta ZIP, TAR, GZ, BZ2, XZ, 7z.</td>
       <td data-label="Ação">
-      <button class="copy-btn" data-command="apt install engrampa<">📋 Copiar</button>
+      <button class="copy-btn" data-command="apt install engrampa">📋 Copiar</button>
       </td>
     </tr>
 
@@ -49,7 +49,7 @@ permalink: /aplicativos-graficos-compactacao-linux/
       <td data-label="Método"><code>apt install engrampa</code></td>
       <td data-label="Descrição">Aplicativo gráfico leve (gtk) para criar/expandir arquivos ZIP. Comum em distros minimalistas (ex: antiX com XFCE).</td>
       <td data-label="Ação">
-      <button class="copy-btn" data-command="apt install zipper.app<">📋 Copiar</button>
+      <button class="copy-btn" data-command="apt install zipper.app">📋 Copiar</button>
       </td>
     </tr>
 
