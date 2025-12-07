@@ -74,7 +74,7 @@ permalink: /ferramentas/gerador-logotipo-tux/
 
 
   <style>
-    body { background: #0f0f0f; color: #e0e0e0; font-family: 'Fira Code', monospace; padding: 20px; }
+   
     .container { background: #1a1a1a; padding: 20px; border-radius: 10px; max-width: 900px; margin: 0 auto; }
     .main { display: flex; flex-wrap: wrap; gap: 20px; }
     .controls { flex: 1; min-width: 250px; }
