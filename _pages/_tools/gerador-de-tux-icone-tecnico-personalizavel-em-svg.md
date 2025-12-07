@@ -1,6 +1,6 @@
 ---
 layout: manual-seo
-title: "Gerador de Logótipos Tux: PNG Personalizado para Linux"
+title: "Gerador de Tux — Ícone Técnico Personalizável em SVG"
 description: "Crie seu próprio Tux minimalista em SVG. Sem JavaScript, sem servidor — só HTML puro e download direto. Útil para avatares, wallpapers ou ilustrações de documentação técnica"
 tags: [tux, linux, logotipo, gerador, png, diy, software_livre]
 permalink: /ferramentas/gerador-logotipo-tux/
