@@ -31,7 +31,7 @@
   <text class="cmd" x="30" y="60">• script.sh</text>
   <text class="cmd" x="50" y="80">#!/bin/sh</text>
   <text class="cmd" x="50" y="100">echo "Olá"</text>
-  <text class="safe" x="30" y="125">→ Não é ELF. Não funciona com <code>ldd</code>.</text>
+  <text class="safe" x="30" y="125">→ Não é ELF. Não funciona com ldd.</text>
 
   <!-- Binário -->
   <text class="cmd" x="320" y="60">• /bin/ls</text>
