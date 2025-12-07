@@ -125,6 +125,7 @@ permalink: /ferramentas/gerador-logotipo-tux/
             <option value="graduation">Formatura</option>
             <option value="headset">Headset</option>
             <option value="visor">Viseira</option>
+            <option value="santa">Papai Noel 🎅</option>
           </select>
         </label>
 
@@ -214,6 +215,12 @@ permalink: /ferramentas/gerador-logotipo-tux/
   break;case 'graduation': svg += `<path fill="${hat}" d="M30,30 L70,30 L70,25 L30,25 Z"/><path fill="${hat}" d="M20,25 Q50,35 80,25 Z"/><path fill="${hat}" d="M50,25 Q50,20 45,20 T55,20 Z"/>`; break;
           case 'headset': svg += `<path fill="${hat}" d="M35,30 Q50,20 65,30 Z"/><circle fill="${hat}" cx="33" cy="35" r="5"/><circle fill="${hat}" cx="67" cy="35" r="5"/>`; break;
           case 'visor': svg += `<path fill="${hat}" d="M25,35 L75,35 Q70,25 50,25 Q30,25 25,35 Z"/>`; break;
+          case 'santa':
+  // Chapéu vermelho: ponta em (50,10), base em y=25
+  svg += `<path fill="${hat}" d="M45,25 L55,25 L50,10 Z"/>`;
+  // Pompom branco: no topo da ponta (50,8)
+  svg += `<circle fill="white" stroke="${hat}" stroke-width="1.5" cx="50" cy="8" r="4"/>`;
+  break;
         }
       }
 
