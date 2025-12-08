@@ -9,7 +9,41 @@ tags: [find-xargs-fluxo,]
 <section>
 
 <figure>
-  <img src="/assets/imagens/find-xargs-fluxo.svg" alt="Fluxo: find -print0 → xargs -0" loading="lazy">
+  <svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="#00ff00" result="glow"/>
+      <feComposite in="glow" in2="blur" operator="in" result="softGlow"/>
+      <feMerge>
+        <feMergeNode in="softGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f0f;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .label { fill: #a0f0f0; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 14px; font-weight: bold; }
+    .cmd { fill: #80d0ff; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 12px; }
+    .safe { fill: #80ffaa; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 11px; font-style: italic; }
+  </style>
+
+  <!-- Fundo com bordas arredondadas -->
+  <rect x="2" y="2" width="516" height="156" rx="15" ry="15"
+        fill="url(#grad)" stroke="#00ff00" stroke-width="2" filter="url(#glow)" />
+
+  <text class="label" x="20" y="30">FIND — FLUXO SEGURO COM XARGS</text>
+
+  <text class="cmd" x="30" y="60">find . -name "*.tmp" -print0 | xargs -0 trash</text>
+
+  <text class="safe" x="30" y="95">✓ Evita falhas com nomes como "relatório 2025 (cópia).tmp"</text>
+  <text class="safe" x="30" y="120">✓ Funciona em Devuan, antiX, Void — sem risco de corrupção</text>
+</svg>
+
   <figcaption>Use sempre <code>find ... -print0 | xargs -0 ...</code> para evitar falhas com nomes de arquivo complexos. A forma sem <code>-0</code> quebra em arquivos com espaço.</figcaption>
 </figure>
 

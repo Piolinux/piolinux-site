@@ -92,11 +92,58 @@ tags: [dosbox, dos, jogos,]
 </table>
 
 
+<figure>
+
+<svg viewBox="0 0 520 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feFlood flood-color="#00ff00" result="glowColor"/>
+      <feComposite in="glowColor" in2="coloredBlur" operator="in" result="softGlow"/>
+      <feMerge>
+        <feMergeNode in="softGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f0f;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .label { fill: #a0f0f0; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 14px; font-weight: bold; }
+    .cmd { fill: #80d0ff; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 12px; }
+    .safe { fill: #80ffaa; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 11px; font-style: italic; }
+  </style>
+
+  <!-- Fundo com bordas arredondadas e brilho -->
+  <rect x="2" y="2" width="516" height="176" rx="15" ry="15" 
+        fill="url(#grad)" 
+        stroke="#00ff00" 
+        stroke-width="2" 
+        filter="url(#glow)" />
+
+  <!-- Título -->
+  <text class="label" x="20" y="30">DOSBOX — FLUXO BÁSICO</text>
+
+  <!-- Passos -->
+  <text class="cmd" x="30" y="60">1. mount c /home/seuuser/jogos</text>
+  <text class="cmd" x="30" y="80">2. c:</text>
+  <text class="cmd" x="30" y="105">3.  dir </text>
+  <text class="cmd" x="30" y="125">4. cd MEU_JOGO</text>
+ <text class="cmd" x="30" y="145">5. JOGO.EXE</text>
+ 
+  <text class="safe" x="30" y="165">✓ Nenhum comando complexo — só o essencial para rodar software legado</text>
+</svg>
+
+
+<figcaption>Fluxo básico do DOSBox.</figcaption>
+</figure>
 
 
 
 
-<img src="/assets/imagens/dosbox-fluxo.svg" alt="Fluxo básico do DOSBox" loading="lazy">
 <a href="/assets/imagens/dosbox-fluxo.svg" download>⤓ Baixar SVG</a>
 
 
