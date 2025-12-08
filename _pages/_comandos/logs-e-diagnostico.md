@@ -159,17 +159,11 @@ function filtrarLinhas(termo) {
   <button class="copy-btn" data-command="ltrace /bin/ls">📋</button></td>
  </tr>
  
- 
- 
- 
- 
- 
-    
-    <tr>
-      <td data-label="Comando"><code>ltrace -c /bin/ls</code></td>
-      <td data-label="Uso Típico">Perfilamento de desempenho: conta quantas vezes cada função foi chamada</td>
-      <td data-label="Resultado">Tabela com % do tempo, média por chamada, total de chamadas
-      <button class="copy-btn" data-command="ltrace -c /bin/ls">📋</button></td>
+  <tr>
+  <td data-label="Comando"><code>ltrace -c /bin/ls</code></td>
+  <td data-label="Uso Típico">Perfilamento de desempenho: conta quantas vezes cada função foi chamada</td>
+  <td data-label="Resultado">Tabela com % do tempo, média por chamada, total de chamadas
+  <button class="copy-btn" data-command="ltrace -c /bin/ls">📋</button></td>
     </tr>
   </tbody>
 </table>
@@ -179,7 +173,59 @@ function filtrarLinhas(termo) {
 </blockquote>
 
 
-<img src="/assets/imagens/sh-vs-binario.svg" alt="Diferença entre script shell e binário executável" loading="lazy">
+
+<figure>
+  <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="#00ff00" result="glow"/>
+      <feComposite in="glow" in2="blur" operator="in" result="softGlow"/>
+      <feMerge>
+        <feMergeNode in="softGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f0f;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .label { fill: #a0f0f0; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 14px; font-weight: bold; }
+    .cmd { fill: #80d0ff; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 12px; }
+    .safe { fill: #80ffaa; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 11px; font-style: italic; }
+  </style>
+
+  <!-- Fundo arredondado -->
+  <rect x="2" y="2" width="596" height="196" rx="15" ry="15"
+        fill="url(#grad)" stroke="#00ff00" stroke-width="2" filter="url(#glow)" />
+
+  <text class="label" x="20" y="30">COMO O LINUX EXECUTA PROGRAMAS</text>
+
+  <!-- Script shell -->
+  <text class="cmd" x="30" y="60">• script.sh</text>
+  <text class="cmd" x="50" y="80">#!/bin/sh</text>
+  <text class="cmd" x="50" y="100">echo "Olá"</text>
+  <text class="safe" x="30" y="125">→ Não é ELF. Não funciona com ldd.</text>
+
+  <!-- Binário -->
+  <text class="cmd" x="320" y="60">• /bin/ls</text>
+  <text class="cmd" x="320" y="80">ldd /bin/ls</text>
+  <text class="cmd" x="320" y="100">mostra libs: libc.so.6, etc.</text>
+  <text class="safe" x="320" y="125">→ É ELF. Executado pelo kernel.</text>
+
+  <!-- Linha divisória -->
+  <line x1="300" y1="50" x2="300" y2="140" stroke="#333" stroke-width="1"/>
+
+  <text class="safe" x="30" y="170">✓ Scripts: texto legível. Binários: código de máquina (ELF).</text>
+</svg>
+
+  
+</figure>
+
+
 
 <a href="/assets/imagens/sh-vs-binario.svg" 
    download="camadas-linux.svg"
@@ -189,13 +235,13 @@ function filtrarLinhas(termo) {
 
 
 
+<p>Todo script precisa de um <code>#!</code> (shebang). Binários não precisam.</p>
+
 
 
 
 
 </section>
-
-
 
 
 
