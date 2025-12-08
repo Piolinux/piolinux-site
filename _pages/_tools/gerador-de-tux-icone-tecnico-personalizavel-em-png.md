@@ -89,7 +89,8 @@ permalink: /ferramentas/gerador-logotipo-tux/
 
   <div class="container">
      <h2>🎨 Gerador de Tux — Personalize e Baixe em PNG</h2>
-    <p>Modifique cores e estilos. Funciona em qualquer sistema — sem dependências.</p>
+   <p>Crie seu Tux com chapéus divertidos, expressões engraçadas e cores personalizadas. Ideal para crianças, wallpapers, avatares e documentação técnica!</p>
+
 
     <div class="main">
       <div class="controls">
