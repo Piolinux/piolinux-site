@@ -343,7 +343,7 @@ function updateTux() {
           content = `<path d="M40,15 Q30,5 35,0 C45,0 50,5 50,10 C50,5 55,0 65,0 C70,5 60,15 60,20 Z" fill="${hairColor}"/>`;
           break;
         case 'curly':
-          content = `<path d="M40,15 Q45,5 50,15 Q55,5 60,15 Z" fill="${hairColor}"/>`;
+          content = `<path d="M40,15 Q45,5 50,25 Q55,5 60,15 Z" fill="${hairColor}"/>`;
           break;
         case 'bald-fade':
           content = `<path d="M35,20 Q40,18 45,20 Q55,20 65,20 Q70,18 75,20 Z" fill="${hairColor}" opacity="0.3"/>`;
