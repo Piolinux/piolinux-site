@@ -56,7 +56,7 @@ permalink: /ferramentas/gerador-logotipo-tux/
   <tbody>
     <tr>
       <td data-label="Fato">Renderização local</td>
-      <td data-label="Explicação">Todo o código SVG é gerado e convertido em PNG no navegador. Nenhum dado deixa seu dispositivo.</td>
+      <td data-label="Explicação">Todo o código SVG estático com IDs é gerado e convertido em PNG no navegador. Nenhum dado deixa seu dispositivo.</td>
     </tr>
     <tr>
       <td data-label="Fato">Sem dependências</td>
