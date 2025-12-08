@@ -34,7 +34,7 @@ permalink: /ferramentas/gerador-logotipo-tux/
     </tr>
     <tr>
       <td data-label="Componente">Estilo.</td>
-      <td data-label="Opções">Cabelo (espetado, moicano, afro), olhos (feliz, surpreso, cansado), pés (pontiagudos, nadadeiras)</td>
+      <td data-label="Opções">Cabelo (espetado, moicano, afro), olhos (feliz, surpreso, cansado), pés fixos.</td>
       <td data-label="Formato de saída">PNG puro renderizado</td>
     </tr>
     <tr>
