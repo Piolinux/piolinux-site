@@ -25,7 +25,7 @@ permalink: /ferramentas/gerador-logotipo-tux/
     <tr>
       <td data-label="Componente">Cores.</td>
       <td data-label="Opções">Corpo, barriga, bico/pés, boné, cachecol.</td>
-      <td data-label="Formato de saída">PNG (256x256px).</td>
+      <td data-label="Formato de saída">PNG (512x512px).</td>
     </tr>
     <tr>
       <td data-label="Componente">Acessórios.</td>
