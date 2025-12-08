@@ -340,7 +340,7 @@ function updateTux() {
           content = `<path d="M50,20 Q50,15 45,20 T55,20 Z" fill="${hairColor}"/><line x1="50" y1="20" x2="50" y2="40" stroke="${hairColor}" stroke-width="1" stroke-linecap="round"/>`;
           break;
         case 'messy':
-          content = `<path d="M40,15 Q30,5 35,0 C45,0 50,5 50,10 C50,5 55,0 65,0 C70,5 60,15 60,20 Z" fill="${hairColor}"/>`;
+          content = `<path d="M35,20 Q30,10 35,5 Q40,0 45,5 Q50,2 55,5 Q60,0 65,5 Q70,10 65,20 Z" fill="${hairColor}"/>`;
           break;
         case 'curly':
           content = `<path d="M40,15 Q45,5 50,25 Q55,5 60,15 Z" fill="${hairColor}"/>`;
