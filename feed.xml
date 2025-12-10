@@ -11,7 +11,7 @@ layout: null
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll</generator>
-    {% for post in site.pages limit:20 %}
+    {% for post in site.pages limit:50 %}
       {% if post.title and post.url != '/404.html' and post.url != '/search/' %}
         <item>
           <title>{{ post.title | xml_escape }}</title>
