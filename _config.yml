@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: "Piolinux"
-description: "200 piadas e trocadilhos de Linux, terminal e devs — + guias técnicos em tabelas práticas. Ria, aprenda e compartilhe. O lado divertido (e útil) do open source."
+description: "Índice técnico com tabelas validadas: distros, comandos, init systems, ferramentas online, resgate. Zero fluff, só utilidade."
 baseurl: ""
 url: "https://piolinux.com"  # ← sem espaços!
 lang: "pt-BR"
