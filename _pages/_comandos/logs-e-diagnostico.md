@@ -230,7 +230,7 @@ function filtrarLinhas(termo) {
 <a href="/assets/imagens/sh-vs-binario.png" 
    download="camadas-linux.png"
    class="btn-download">
-  ⤓ Baixar SVG
+  ⤓ Baixar PNG
 </a>
 
 
