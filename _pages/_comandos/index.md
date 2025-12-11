@@ -1,7 +1,7 @@
 ---
 layout: manual-seo
 title: "Índice de Comandos Linux — Referência Técnica por Categoria"
-description: "Guia técnico com comandos Linux essenciais, organizados por categoria. Todos baseados na documentação oficial. Zero risco, zero introdução."
+description: "Tabela de comandos Linux essenciais, organizados por categoria. Todos baseados na documentação oficial. Zero risco, zero introdução."
 permalink: /comandos/
 ---
 
