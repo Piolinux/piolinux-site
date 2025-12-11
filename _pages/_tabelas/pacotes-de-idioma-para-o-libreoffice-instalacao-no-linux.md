@@ -1,6 +1,6 @@
 ---
 title: "Pacotes de Idioma para o LibreOffice — Instalação no Linux"
-description: "Como instalar pacotes de idioma (ex: português do Brasil) no LibreOffice em distribuições baseadas em Debian, Devuan, Ubuntu e derivados."
+description: "Tabela de instalação de pacotes de idioma (ex: português do Brasil) no LibreOffice em distribuições baseadas em Debian, Devuan, Ubuntu e derivados."
 permalink: /tabelas/libreoffice-idioma/
 layout: manual-seo
 ---
