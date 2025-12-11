@@ -291,7 +291,7 @@ permalink: /referencias/atalhos-de-teclado/
 </svg>
 </figure>
 
-<a href="/assets/imagens/atalhos-teclado.svg" download>⤓ Baixar SVG</a>
+<a href="/assets/imagens/atalhos-teclado.png" download>⤓ Baixar PNG</a>
 
 
 </section>
