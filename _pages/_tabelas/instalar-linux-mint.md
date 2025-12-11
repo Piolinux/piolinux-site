@@ -1,9 +1,8 @@
 ---
 layout:  manual-seo
-tabela: instalar-linux-mint
-permalink: /tabelas/instalar-linux-mint/
 title: "Guia Passo a Passo para Instalar o Linux Mint"
-description: "Procedimento técnico completo para instalar o Linux Mint em qualquer hardware, com USB bootável e pós-instalação."
+description: "Tabela de procedimentos técnicos completo para instalar o Linux Mint em qualquer hardware, com USB bootável e pós-instalação."
+permalink: /tabelas/instalar-linux-mint/
 ---
 
 
