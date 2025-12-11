@@ -66,7 +66,7 @@ tags: [camadas-linux,]
 <a href="/assets/imagens/camadas-linux.png" 
    download="camadas-linux.png"
    class="btn-download">
-  ⤓ Baixar SVG
+  ⤓ Baixar PNG
 </a>
 </section>
 
