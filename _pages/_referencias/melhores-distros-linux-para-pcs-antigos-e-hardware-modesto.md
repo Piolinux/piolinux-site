@@ -126,8 +126,7 @@ permalink: /referencias/distros-linux-pc-antigo/
       <th>Distros Recomendadas.</th>
     </tr>
   </thead>
-  <tbody>
-             
+  <tbody> 
     <tr>
       <td data-label="Cenário">PC antigo (pré-2010), sem internet rápida</td>
       <td data-label="Distro Recomendada">AntiX,4MLinux,Tiny Core Linux,Porteus.</td>
@@ -146,6 +145,69 @@ permalink: /referencias/distros-linux-pc-antigo/
    </tr>
   </tbody>
 </table>
+
+<figure>
+<svg viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="#00ff00" result="glow"/>
+      <feComposite in="glow" in2="blur" operator="in" result="softGlow"/>
+      <feMerge>
+        <feMergeNode in="softGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f0f;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .label { fill: #a0f0f0; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 14px; font-weight: bold; }
+    .distro { fill: #80d0ff; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 12px; }
+    .req { fill: #ffff80; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 12px; }
+  </style>
+
+  <!-- Fundo arredondado -->
+  <rect x="2" y="2" width="596" height="216" rx="15" ry="15"
+        fill="url(#grad)" stroke="#00ff00" stroke-width="2" filter="url(#glow)" />
+
+  <text class="label" x="20" y="30">DISTROS LEVES PARA PCs ANTIGOS</text>
+
+  <!-- Linha 1: Devuan -->
+  <text class="distro" x="30" y="60">• Devuan (runit)</text>
+  <text class="req" x="220" y="60">512 MB RAM • 5 GB HD • sem systemd</text>
+
+  <!-- Linha 2: antiX -->
+  <text class="distro" x="30" y="85">• antiX (sysvinit/runit)</text>
+  <text class="req" x="220" y="85">256 MB RAM • 2 GB HD • kernel antigo</text>
+
+  <!-- Linha 3: Void Linux -->
+  <text class="distro" x="30" y="110">• Void Linux (runit)</text>
+  <text class="req" x="220" y="110">512 MB RAM • 6 GB HD • xbps, musl/glibc</text>
+
+  <!-- Linha 4: Artix -->
+  <text class="distro" x="30" y="135">• Artix (OpenRC/runit/s6)</text>
+  <text class="req" x="220" y="135">512 MB RAM • 8 GB HD • base Arch, sem systemd</text>
+
+  <!-- Linha 5: Salix OS -->
+  <text class="distro" x="30" y="160">• Salix OS (sysvinit)</text>
+  <text class="req" x="220" y="160">512 MB RAM • 6 GB HD • base Slackware</text>
+
+  <!-- Linha 6: Tiny Core -->
+  <text class="distro" x="30" y="185">• Tiny Core Linux</text>
+  <text class="req" x="220" y="185">46 MB RAM • 100 MHz CPU • modo texto</text>
+
+  <!-- Rodapé -->
+  <text class="req" x="30" y="215">Todas funcionam em hardware de 15+ anos — ideais para resgate e reaproveitamento</text>
+</svg>
+
+</figure>
+
+<a href="/assets/imagens/distros-leves-pc-antigo.svg" download>⤓ Baixar SVG</a>
+
 
 </section>
 
