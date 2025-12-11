@@ -71,7 +71,7 @@ tags: [runit, ufw, runit-estrutura]
 <a href="/assets/imagens/runit-estrutura.png" 
    download="runit-estrutura.png"
    class="btn-download">
-  ⤓ Baixar SVG
+  ⤓ Baixar PNG
 </a>
 
 
