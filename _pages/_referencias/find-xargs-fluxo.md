@@ -51,7 +51,7 @@ tags: [find-xargs-fluxo,]
 <a href="/assets/imagens/find-xargs-fluxo.png" 
    download="find-xargs-fluxo.png"
    class="btn-download">
-  ⤓ Baixar SVG
+  ⤓ Baixar PNG
 </a>
 
 </section>
