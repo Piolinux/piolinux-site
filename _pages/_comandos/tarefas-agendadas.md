@@ -78,6 +78,54 @@ function filtrarLinhas(termo) {
     </tr>
   </tbody>
 </table>
+<figure>
+<svg viewBox="0 0 520 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="#00ff00" result="glow"/>
+      <feComposite in="glow" in2="blur" operator="in" result="softGlow"/>
+      <feMerge>
+        <feMergeNode in="softGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f0f;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .label { fill: #a0f0f0; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 14px; font-weight: bold; }
+    .cmd { fill: #80d0ff; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 12px; }
+    .safe { fill: #80ffaa; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 11px; font-style: italic; }
+  </style>
+
+  <!-- Fundo arredondado -->
+  <rect x="2" y="2" width="516" height="176" rx="15" ry="15"
+        fill="url(#grad)" stroke="#00ff00" stroke-width="2" filter="url(#glow)" />
+
+  <text class="label" x="20" y="30">TAREFAS AGENDADAS — CRON NO LINUX</text>
+
+  <!-- Comandos essenciais -->
+  <text class="cmd" x="30" y="60">• crontab -e          → Editar tarefas do usuário</text>
+  <text class="cmd" x="30" y="85">• crontab -l          → Listar tarefas ativas</text>
+  <text class="cmd" x="30" y="110">• sudo crontab -e     → Tarefas do root</text>
+  <text class="cmd" x="30" y="135">• /etc/crontab        → Tarefas globais (sistemas clássicos)</text>
+
+  <!-- Formato do cron -->
+  <text class="safe" x="30" y="165">✓ Formato: min hora dia mes semana comando</text>
+</svg>
+
+
+
+
+</figure>
+
+<a href="/assets/imagens/tarefas-agendadas.svg" download>⤓ Baixar SVG</a>
+
+
 
 
 </section>
