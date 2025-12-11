@@ -154,7 +154,7 @@ layout: manual-seo
 
 </figure>
 
-<a href="/assets/imagens/openoffice-instalacao.svg" download>⤓ Baixar SVG</a>
+<a href="/assets/imagens/openoffice-instalacao.png" download>⤓ Baixar PNG<</a>
 
 
 </section>
