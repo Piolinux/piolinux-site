@@ -123,7 +123,7 @@ function filtrarLinhas(termo) {
 
 </figure>
 
-<a href="/assets/imagens/tarefas-agendadas.svg" download>⤓ Baixar SVG</a>
+<a href="/assets/imagens/tarefas-agendadas.png" download>⤓ Baixar PNG</a>
 
 
 

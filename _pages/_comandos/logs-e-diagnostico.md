@@ -227,8 +227,8 @@ function filtrarLinhas(termo) {
 
 
 
-<a href="/assets/imagens/sh-vs-binario.svg" 
-   download="camadas-linux.svg"
+<a href="/assets/imagens/sh-vs-binario.png" 
+   download="camadas-linux.png"
    class="btn-download">
   ⤓ Baixar SVG
 </a>
