@@ -1,6 +1,6 @@
 ---
 title: "Apache OpenOffice — Instalação Manual no Linux Mint e Derivados"
-description: "Guia técnico para instalar o Apache OpenOffice via arquivo .deb no Linux Mint, Debian, Devuan e outras distros baseadas em .deb. Inclui comandos, links oficiais e observações práticas."
+description: "Tabela técnica para instalar o Apache OpenOffice via arquivo .deb no Linux Mint, Debian, Devuan e outras distros baseadas em .deb. Inclui comandos, links oficiais e observações práticas."
 permalink: /tabelas/openoffice-instalação-manual/
 layout: manual-seo
 ---
