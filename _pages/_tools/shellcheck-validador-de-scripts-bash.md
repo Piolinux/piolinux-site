@@ -80,7 +80,7 @@ permalink: /ferramentas/shellcheck/
   
      
      
-<a href="/assets/imagens/shellcheck-info.svg" download>⤓ Baixar SVG</a>
+<a href="/assets/imagens/shellcheck-info.png" download>⤓ Baixar PNG</a>
 
 
 
