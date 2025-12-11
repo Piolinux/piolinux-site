@@ -48,8 +48,8 @@ tags: [find-xargs-fluxo,]
 </figure>
 
 
-<a href="/assets/imagens/find-xargs-fluxo.svg" 
-   download="find-xargs-fluxo.svg"
+<a href="/assets/imagens/find-xargs-fluxo.png" 
+   download="find-xargs-fluxo.png"
    class="btn-download">
   ⤓ Baixar SVG
 </a>

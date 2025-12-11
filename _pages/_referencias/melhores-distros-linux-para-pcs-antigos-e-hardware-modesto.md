@@ -206,7 +206,7 @@ permalink: /referencias/distros-linux-pc-antigo/
 
 </figure>
 
-<a href="/assets/imagens/distros-leves-pc-antigo.svg" download>⤓ Baixar SVG</a>
+<a href="/assets/imagens/distros-leves-pc-antigo.png" download>⤓ Baixar PNG</a>
 
 
 </section>

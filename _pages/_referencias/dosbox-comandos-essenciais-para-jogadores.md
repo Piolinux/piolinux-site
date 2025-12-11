@@ -144,7 +144,7 @@ tags: [dosbox, dos, jogos,]
 
 
 
-<a href="/assets/imagens/dosbox-fluxo.svg" download>⤓ Baixar SVG</a>
+<a href="/assets/imagens/dosbox-fluxo.png" download>⤓ Baixar PNG</a>
 
 
 

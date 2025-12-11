@@ -63,8 +63,8 @@ tags: [camadas-linux,]
 
 
 
-<a href="/assets/imagens/camadas-linux.svg" 
-   download="camadas-linux.svg"
+<a href="/assets/imagens/camadas-linux.png" 
+   download="camadas-linux.png"
    class="btn-download">
   ⤓ Baixar SVG
 </a>

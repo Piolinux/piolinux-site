@@ -178,7 +178,7 @@ tags: [terminal, cores, debian, geany, prompt, ansi, conforto-visual]
 
 </fig>
 
-<a href="/assets/imagens/cores-ansi-terminal.svg" download>⤓ Baixar SVG</a>
+<a href="/assets/imagens/cores-ansi-terminal.png" download>⤓ Baixar PNG</a>
 
 
 </section>

@@ -68,8 +68,8 @@ tags: [runit, ufw, runit-estrutura]
 </figure>
 
 
-<a href="/assets/imagens/runit-estrutura.svg" 
-   download="runit-estrutura.svg"
+<a href="/assets/imagens/runit-estrutura.png" 
+   download="runit-estrutura.png"
    class="btn-download">
   ⤓ Baixar SVG
 </a>
