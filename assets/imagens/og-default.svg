@@ -1,0 +1,26 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #0f0f0f; }
+    .border { fill: none; stroke: #40ff40; stroke-width: 4; }
+    .title { fill: #a0f0f0; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 42px; font-weight: bold; }
+    .subtitle { fill: #80d0ff; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 28px; }
+    .bullet { fill: #80ffaa; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 24px; }
+  </style>
+  
+  <!-- Fundo -->
+  <rect class="bg" x="0" y="0" width="1200" height="630" />
+  
+  <!-- Borda verde -->
+  <rect class="border" x="2" y="2" width="1196" height="626" />
+  
+  <!-- Título principal -->
+  <text class="title" x="60" y="120">Ferramentas Online – Tabelas Técnicas</text>
+  
+  <!-- Lista de recursos -->
+  <text class="bullet" x="80" y="220">• Geradores de comandos seguros</text>
+  <text class="bullet" x="80" y="280">• Tabelas CLI testadas no Devuan</text>
+  <text class="bullet" x="80" y="340">• Referência offline para sysadmins</text>
+  
+  <!-- Rodapé discreto -->
+  <text class="subtitle" x="60" y="540">Documentação técnica pura — sem ruído, sem tracking</text>
+</svg>
