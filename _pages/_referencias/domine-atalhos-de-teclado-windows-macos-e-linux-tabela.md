@@ -11,7 +11,7 @@ permalink: /referencias/atalhos-de-teclado/
 {% include toc.html %}
 
 
-<section class="post-content">
+<section>
 
 
 
@@ -230,6 +230,71 @@ permalink: /referencias/atalhos-de-teclado/
   </tbody>
 </table>
 
+<figure>
+
+<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="#00ff00" result="glow"/>
+      <feComposite in="glow" in2="blur" operator="in" result="softGlow"/>
+      <feMerge>
+        <feMergeNode in="softGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f0f;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .label { fill: #a0f0f0; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 14px; font-weight: bold; }
+    .os { fill: #80d0ff; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 12px; }
+    .cmd { fill: #ffff80; font-family: 'Fira Code', 'DejaVu Sans Mono', monospace; font-size: 12px; }
+  </style>
+
+  <!-- Fundo arredondado -->
+  <rect x="2" y="2" width="596" height="196" rx="15" ry="15"
+        fill="url(#grad)" stroke="#00ff00" stroke-width="2" filter="url(#glow)" />
+
+  <text class="label" x="20" y="30">ATALHOS DE TECLADO — WINDOWS, macOS, LINUX</text>
+
+  <!-- Cabeçalhos -->
+  <text class="os" x="30" y="60">Windows</text>
+  <text class="os" x="200" y="60">macOS</text>
+  <text class="os" x="370" y="60">Linux (bash)</text>
+
+  <!-- Linha 1: Copiar -->
+  <text class="cmd" x="30" y="85">Ctrl + C</text>
+  <text class="cmd" x="200" y="85">Cmd + C</text>
+  <text class="cmd" x="370" y="85">Ctrl + C</text>
+
+  <!-- Linha 2: Colar -->
+  <text class="cmd" x="30" y="110">Ctrl + V</text>
+  <text class="cmd" x="200" y="110">Cmd + V</text>
+  <text class="cmd" x="370" y="110">Ctrl + Shift + V</text>
+
+  <!-- Linha 3: Terminal -->
+  <text class="cmd" x="30" y="135">Win + R → cmd</text>
+  <text class="cmd" x="200" y="135">Cmd + Espaço → terminal</text>
+  <text class="cmd" x="370" y="135">Ctrl + Alt + T</text>
+
+  <!-- Linha 4: Fechar janela -->
+  <text class="cmd" x="30" y="160">Alt + F4</text>
+  <text class="cmd" x="200" y="160">Cmd + Q</text>
+  <text class="cmd" x="370" y="160">Alt + F4 / Ctrl + D</text>
+
+  <!-- Rodapé -->
+  <text class="os" x="30" y="185">✓ Linux: atalhos variam por terminal (gnome-terminal, xterm, etc.)</text>
+</svg>
+</figure>
+
+<a href="/assets/imagens/atalhos-teclado.svg" download>⤓ Baixar SVG</a>
+
+
+</section>
 
 
 
