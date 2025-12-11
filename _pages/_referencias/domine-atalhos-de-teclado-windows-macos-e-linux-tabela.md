@@ -1,7 +1,7 @@
 ---
 layout: manual-seo
 title: 'Domine Atalhos de Teclado: Windows, macOS e Linux'
-description: "Tablea de atalhos do teclado para Windows, macOS e Linux — tabela completa para quem usa múltiplos sistemas e terminal no dia a dia!"
+description: "Tabela de atalhos do teclado para Windows, macOS e Linux — tabela completa para quem usa múltiplos sistemas e terminal no dia a dia!"
 tags: [atalhos, produtividade, terminal, atalhos-de-teclado]
 permalink: /referencias/atalhos-de-teclado/
 ---
