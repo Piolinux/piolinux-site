@@ -1,6 +1,6 @@
 ---
 layout: manual-seo
-title: "Como Instalar Kernel Compilado com Segurança no Debian/Devuan — Sem Quebrar o Sistema"
+title: "Como Instalar Kernel Compilado com Segurança no Debian/Devuan"
 description: "Guia passo a passo para compilar kernel Linux e instalar via dpkg usando bindeb-pkg. Método seguro, reversível e compatível com GRUB, DKMS e atualizações."
 permalink: /compilar-kernel/
 tags: [kernel, linux, debian, devuan, dpkg, compile, sysadmin, lts]
