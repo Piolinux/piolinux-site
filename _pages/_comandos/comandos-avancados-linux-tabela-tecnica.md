@@ -192,7 +192,6 @@ function filtrarLinhas(termo) {
   <text class="label" x="20" y="30">ATALHOS E COMANDOS ÚTEIS DO TERMINAL</text>
 
   <!-- Atalhos de navegação -->
-  <text class="cmd" x="30" y="60">• Ctrl + A / E → Início / fim da linha</text>
   <text class="cmd" x="30" y="80">• Ctrl + U / K → Apagar até início / fim</text>
   <text class="cmd" x="30" y="100">• Ctrl + R → Busca reversa no histórico</text>
   <text class="cmd" x="30" y="120">• Tab → Autocompletar comando ou arquivo</text>
