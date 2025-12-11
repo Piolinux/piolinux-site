@@ -1,7 +1,7 @@
 ---
 layout: manual-seo
 title: "Tarefas Agendadas — Comandos Linux"
-description: "Guia técnico com comandos essenciais de Tarefas Agendadas. Copie, cole e use direto no terminal. Organizado por tarefas agendadas."
+description: "Tabela prática de comandos para agendar tarefas com cron, crontab e systemd timer. Inclui exemplos seguros, edição de jobs e dicas de diagnóstico. Funciona em Devuan, antiX e sistemas sem systemd."
 permalink: /tarefas-agendadas/
 ---
 
