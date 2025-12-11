@@ -160,7 +160,7 @@ target="_blank" rel="noopener">Comparativo</a></p></td>
 
 
 
-<a href="/assets/imagens/kernel-compilado-seguro.svg" download>⤓ Baixar SVG</a>
+<a href="/assets/imagens/kernel-compilado-seguro.png" download>⤓ Baixar PNG</a>
 
 
 
