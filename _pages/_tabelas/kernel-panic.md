@@ -1,9 +1,8 @@
 ---
 layout:  manual-seo
-tabela: kernel-panic
-permalink: /tabelas/kernel-panic/
 title: "Comandos para Diagnosticar e Resolver Kernel Panic no Linux"
-description: "Procedimentos técnicos para identificar, recuperar e prevenir falhas críticas no kernel do Linux."
+description: "Tabela de procedimentos técnicos para identificar, recuperar e prevenir falhas críticas no kernel do Linux."
+permalink: /tabelas/kernel-panic/
 ---
 
 
