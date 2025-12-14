@@ -53,7 +53,7 @@ permalink: /tabelas/
     <tr>
       <td data-label="Tabela">Linux Mint Debian Edition 7 (LMDE 7)</td>
       <td data-label="Descrição">Detalhes técnicos da edição independente do Linux Mint, baseada no Debian.</td>
-      <td data-label="Link"><a href="/tabelas/lmde7/">Ver tabela</a></td>
+      <td data-label="Link"><a href="/tabelas/linux-mint-lmde7/">Ver tabela</a></td>
     </tr>
     <tr>
       <td data-label="Tabela">Guia Passo a Passo para Instalar o Linux Mint</td>
@@ -78,17 +78,17 @@ permalink: /tabelas/
     <tr>
       <td data-label="Tabela">Linux Mint — Edições: Cinnamon, MATE, Xfce e LMDE</td>
       <td data-label="Descrição">Comparação entre as edições oficiais do Linux Mint, incluindo base e ciclo de lançamento.</td>
-      <td data-label="Link"><a href="/tabelas/mint-edicoes/">Ver tabela</a></td>
+      <td data-label="Link"><a href="/tabelas/linux-mint-edicoes/">Ver tabela</a></td>
     </tr>
     <tr>
       <td data-label="Tabela">Ferramentas do Linux Mint — Função Técnica e Acesso</td>
       <td data-label="Descrição">Lista das ferramentas nativas: Update Manager, Driver Manager, Timeshift, MintSources e mais.</td>
-      <td data-label="Link"><a href="/tabelas/mint-ferramentas/">Ver tabela</a></td>
+      <td data-label="Link"><a href="/tabelas/linux-mint-ferramentas/">Ver tabela</a></td>
     </tr>
     <tr>
       <td data-label="Tabela">Linux Mint — Casos de Uso Técnicos Reais</td>
       <td data-label="Descrição">Exemplos práticos: codecs, Flatpak, drivers NVIDIA, ciframento de disco, atualizações LTS.</td>
-      <td data-label="Link"><a href="/tabelas/mint-casos-uso/">Ver tabela</a></td>
+      <td data-label="Link"><a href="/tabelas/linux-mint-casos-uso/">Ver tabela</a></td>
     </tr>
   </tbody>
 </table>
