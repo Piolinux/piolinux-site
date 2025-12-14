@@ -1,14 +1,27 @@
 ---
 layout: manual-seo
-title: "Distros Linux Underground — Sem systemd, com Controle Total"
-description: "Tabela com Devuan, Artix, Void, Alpine: init systems alternativos (OpenRC, runit), filosofia técnica e links oficiais."
+title: "Linux sem systemd: Devuan, Artix, Void, Alpine – Init systems alternativos (OpenRC, runit, s6)"
+description: "Tabela técnica com distros sem systemd: Devuan (OpenRC/sysvinit), Artix (OpenRC/runit), Void (runit), Alpine (OpenRC/s6). Links oficiais, filosofia, uso prático. Zero dependência do ecossistema Google."
 permalink: /distros/underground/
-tags: [linux, underground, sem-systemd, devuan, artix, void, alpine, openrc, runit, sysadmin]
+tags:
+  - linux sem systemd
+  - devuan
+  - artix linux
+  - void linux
+  - alpine linux
+  - openrc
+  - runit
+  - s6
+  - init alternativo
+  - sysadmin
 ---
 
 
 
-<section class="post-content">
+
+<p>Estas distros removem o systemd por design. Cada uma oferece controle total, transparência e compatibilidade com sistemas antigos ou personalizados</p>
+
+<section>
 
 
 

@@ -1,11 +1,22 @@
 ---
 layout: manual-seo
-title: "Distros Linux para Servidor — Tabela Técnica"
-description: "Tabela com Debian, Alpine, Rocky Linux, Ubuntu Server e Devuan: base, init system, ISO oficial e links diretos."
+title: "Linux para Servidor: Debian, Ubuntu Server, Rocky Linux, Alpine, Devuan – Tabela com ISOs oficiais e init systems"
+description: "Comparação técnica para servidores: Debian (systemd/sysvinit), Ubuntu Server (systemd), Rocky Linux (RHEL), Alpine (OpenRC), Devuan (sem systemd). ISOs oficiais, links diretos, ciclo de vida e uso em produção."
 permalink: /distros/servidor/
-tags: [linux, servidor, distros, debian, alpine, rocky, ubuntu-server, devuan, sysadmin]
+tags:
+  - linux servidor
+  - debian servidor
+  - ubuntu server
+  - rocky linux
+  - alpine linux
+  - devuan linux
+  - distro para servidor
+  - init system
+  - sysadmin
+  - iso oficial
 ---
 
+<p>Estas distros são usadas em servidores reais: desde data centers até sistemas embarcados. Nenhuma depende de GUI ou telemetria</p>
 
 
 <section>

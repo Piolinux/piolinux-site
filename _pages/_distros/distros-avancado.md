@@ -1,20 +1,18 @@
 ---
 layout: manual-seo
-description: "Construa seu Linux do zero: LFS, Arch, Gentoo. Controle total, performance máxima e aprendizado profundo!"
-title: "Domine o Linux: Monte Sua Distro do Zero!"
+title: "LFS, Arch Linux, Gentoo – Compilar e montar sua distro do zero"
+description: "Guia técnico para LFS (Linux From Scratch), Arch e Gentoo: compilação, controle total, sem systemd. Tabelas validadas, comandos seguros, para uso real."
 tags:
   - linux
-  - avançado
-  - diy
-  - distros
-  - consulta
-  - compilacao
   - lfs
-  - arch
+  - arch linux
   - gentoo
+  - compilação
+  - distro personalizada
+  - terminal
+  - avançado
 permalink: /distros/avancado/
 ---
-
 
 
 

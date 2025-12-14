@@ -1,11 +1,13 @@
 ---
-title: "Distro Linux — Ofício e Propósito"
-description: "Comparação técnica de distribuições focadas em estabilidade, init system, filosofia e manutenção. Para quem trata Linux como ofício, não hobby."
+title: "Distros Linux por Ofício: Artix, Void, Devuan, antiX, Salix – Init, Pacotes e Estabilidade"
+description: "Tabela técnica com distros usadas em produção: Artix (OpenRC), Void (runit), Devuan (sem systemd), antiX, Salix, MX, Macaroni, 4MLinux. Base, init system, gerenciador de pacotes e links oficiaais. Para sysadmins, não hobbyists."
 fonte: "Documentação oficial das distribuições"
 layout: manual-seo
 permalink: /distros/distros-linux/
 ---
 
+
+<p>Tabela validada com distros técnicas reais, usadas em servidores, resgate, sistemas antigos e ambientes controlados. Nenhuma depende de systemd por padrão.</p>
 
 <section>
 

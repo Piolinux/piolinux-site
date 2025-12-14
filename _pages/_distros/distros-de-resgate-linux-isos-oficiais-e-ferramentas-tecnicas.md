@@ -1,11 +1,22 @@
 ---
 layout: manual-seo
-title: "Distros de Resgate Linux: ISOs Oficiais e Ferramentas Técnicas"
-description: "SystemRescue, MX Linux, Devuan Live, GParted Live, Finnix — ISOs verificadas para recuperação de disco, partição e sistema."
+title: "ISOs de Resgate Linux: SystemRescue, MX Linux, Devuan Live, GParted Live, Finnix"
+description: "Listagem validada de ISOs oficiais para recuperação de sistema: SystemRescue, MX Linux Rescue, Devuan Live, GParted Live e Finnix. Sem modificação, sem telemetria, prontas para download e uso offline."
 permalink: /distros/resgate/
-tags: [resgate, linux, systemrescue, mx-linux, devuan, gparted, finnix, iso-oficial, recuperação]
+tags:
+  - resgate linux
+  - systemrescue
+  - mx linux
+  - devuan live
+  - gparted live
+  - finnix
+  - iso resgate
+  - recuperação de disco
+  - linux sem internet
 ---
 
+
+<p>Estas ISOs são usadas em recuperação real: sem anúncios, sem contas, sem dependência de rede.</p>
 
 
 
