@@ -1,6 +1,5 @@
 ---
 layout: manual-seo
-title_custom: "Domine o Linux: Monte Sua Distro do Zero! | Piolinux"
 description: "Construa seu Linux do zero: LFS, Arch, Gentoo. Controle total, performance máxima e aprendizado profundo!"
 title: "Domine o Linux: Monte Sua Distro do Zero!"
 tags:

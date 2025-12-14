@@ -1,8 +1,7 @@
 ---
 layout: manual-seo
-title_custom: "Distros de Resgate Linux: ISOs Oficiais e Ferramentas Técnicas"
-description: "SystemRescue, MX Linux, Devuan Live, GParted Live, Finnix — ISOs verificadas para recuperação de disco, partição e sistema."
 title: "Distros de Resgate Linux: ISOs Oficiais e Ferramentas Técnicas"
+description: "SystemRescue, MX Linux, Devuan Live, GParted Live, Finnix — ISOs verificadas para recuperação de disco, partição e sistema."
 permalink: /distros/resgate/
 tags: [resgate, linux, systemrescue, mx-linux, devuan, gparted, finnix, iso-oficial, recuperação]
 ---
