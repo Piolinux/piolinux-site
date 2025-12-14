@@ -1,6 +1,5 @@
 ---
 layout:  manual-seo
-tabela: distros
 permalink: /tabelas/distros/
 title: "Distros Linux — Comparação Técnica: Init, Base e ISO"
 description: "Tabela comparativa de Ubuntu, Debian, Devuan, Artix e SystemRescue com foco em init system e filosofia técnica."

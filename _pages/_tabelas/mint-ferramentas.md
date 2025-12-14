@@ -1,7 +1,7 @@
 ---
 layout:  manual-seo
 tabela: mint-ferramentas
-permalink: /tabelas/mint-ferramentas/
+permalink: /tabelas/linux-mint-ferramentas/
 title: "Ferramentas do Linux Mint — Função Técnica e Acesso"
 description: "Lista das ferramentas nativas do Linux Mint: Update Manager, Driver Manager, Timeshift, MintSources e mais."
 ---

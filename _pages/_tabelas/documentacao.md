@@ -1,6 +1,5 @@
 ---
 layout:  manual-seo
-tabela: documentacao
 permalink: /tabelas/documentacao/
 title: "Documentação Oficial e Projetos Técnicos Essenciais"
 description: "Links diretos para TLDP, Oh My Zsh, Python.org, Devuan e outras referências técnicas confiáveis."

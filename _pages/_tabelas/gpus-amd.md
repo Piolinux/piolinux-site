@@ -1,6 +1,5 @@
 ---
 layout:  manual-seo
-tabela: gpus-amd
 permalink: /tabelas/gpus-amd/
 title: "GPUs AMD: Radiance Cores, Neural Arrays e Universal Compression"
 description: "Tabela técnica com tecnologias de hardware AMD para ray tracing, IA e compressão de memória no Linux."
