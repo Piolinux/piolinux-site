@@ -1,6 +1,6 @@
 ---
 layout: manual-seo
-title: "Linux para Servidor: Debian, Ubuntu Server, Rocky Linux, Alpine, Devuan – Tabela com ISOs oficiais e init systems"
+title: "Linux para Servidor: Debian, Rocky Linux, Alpine, Devuan"
 description: "Comparação técnica para servidores: Debian (systemd/sysvinit), Ubuntu Server (systemd), Rocky Linux (RHEL), Alpine (OpenRC), Devuan (sem systemd). ISOs oficiais, links diretos, ciclo de vida e uso em produção."
 permalink: /distros/servidor/
 tags:

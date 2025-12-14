@@ -1,6 +1,6 @@
 ---
 layout: manual-seo
-title: "Linux sem systemd: Devuan, Artix, Void, Alpine – Init systems alternativos (OpenRC, runit, s6)"
+title: "Linux sem systemd: Devuan, Artix, Void, Alpine."
 description: "Tabela técnica com distros sem systemd: Devuan (OpenRC/sysvinit), Artix (OpenRC/runit), Void (runit), Alpine (OpenRC/s6). Links oficiais, filosofia, uso prático. Zero dependência do ecossistema Google."
 permalink: /distros/underground/
 tags:

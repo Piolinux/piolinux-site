@@ -1,5 +1,5 @@
 ---
-title: "Distros Linux por Ofício: Artix, Void, Devuan, antiX, Salix – Init, Pacotes e Estabilidade"
+title: "Distros Linux por Ofício: Artix, Void, Devuan, antiX, Salix"
 description: "Tabela técnica com distros usadas em produção: Artix (OpenRC), Void (runit), Devuan (sem systemd), antiX, Salix, MX, Macaroni, 4MLinux. Base, init system, gerenciador de pacotes e links oficiaais. Para sysadmins, não hobbyists."
 fonte: "Documentação oficial das distribuições"
 layout: manual-seo
