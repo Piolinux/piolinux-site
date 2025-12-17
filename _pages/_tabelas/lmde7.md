@@ -1,7 +1,7 @@
 ---
 layout:  manual-seo
 tabela: lmde7
-permalink: /tabelas/linux-mint-lmde7/
+permalink: /tabelas/mint-lmde7/
 title: "Linux Mint Debian Edition 7 (LMDE 7) — Detalhes Técnicos"
 description: "Especificações oficiais do LMDE 7: base Debian, interface Cinnamon, propósito estratégico e instalação."
 ---
