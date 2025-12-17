@@ -1,7 +1,7 @@
 ---
 layout:  manual-seo
 tabela: mint-casos-uso
-permalink: /tabelas/linux-mint-casos-uso/
+permalink: /tabelas/mint-casos-uso/
 title: "Linux Mint — Casos de Uso Técnicos Reais"
 description: "Exemplos práticos de tarefas comuns no Linux Mint: codecs, Flatpak, drivers NVIDIA, ciframento de disco e atualizações."
 ---
