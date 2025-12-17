@@ -1,7 +1,7 @@
 ---
 layout: manual-seo
 tabela: mint-edicoes
-permalink: /tabelas/linux-mint-edicoes/
+permalink: /tabelas/mint-edicoes/
 title: "Linux Mint — Edições: Cinnamon, MATE, Xfce e LMDE"
 description: "Comparação entre as edições oficiais do Linux Mint, incluindo base, ciclo de lançamento e público-alvo."
 ---
