@@ -7,6 +7,9 @@ permalink: /aplicativos-graficos-compactacao-linux/
 ---
 
 
+{% include toc.html %}
+
+
 <section>
 
 <table class="evergreen-table">
