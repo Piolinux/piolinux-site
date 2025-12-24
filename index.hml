@@ -1,0 +1,306 @@
+
+           <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página não encontrada (404) - PioLinux</title>
+  <meta name="description" content="">
+  <link rel="canonical" href="https://piolinux.pages.dev/404.html">
+  <link rel="icon"  href="/assets/icons/favicon.ico">
+   <meta property="og:title" content="Página não encontrada (404) - PioLinux">
+  <meta property="og:description" content="Índice técnico com tabelas validadas: distros, comandos, init systems, ferramentas online, resgate. Zero fluff, só utilidade.">
+  <meta property="og:url" content="https://piolinux.pages.dev/404.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://piolinux.pages.dev/assets/imagens/og-default.png">
+  <meta name="msvalidate.01" content="2647833ECB730AF08187FE8544715A57" />
+  <meta name="p:domain_verify" content="1539154c677f4fda0d9465fcc275b917"/>
+  
+  <style>
+*{box-sizing:border-box;margin:0;padding:0}body{background:#121212;color:#ddd;font-family:monospace,sans-serif;line-height:1.5;font-size:.95em}a{color:#80ff00;text-decoration:none}a:hover{text-decoration:underline}header{align-items:center;background:#1a1a1a;display:flex;justify-content:space-between;padding:6px 12px;height:40px}.site-title img{width:32px;height:32px;margin-right:8px}.menu-toggle{background:none;border:none;color:#80ff00;cursor:pointer;display:none;font-size:20px}.dropdown-menu{display:flex;gap:8px;list-style:none;margin:0;padding:0;align-items:center}.dropdown-menu>li{position:relative}.dropdown-menu>li>a{color:#80ff00;font-weight:600;font-size:.95em;padding:4px 8px;border-radius:3px}.dropdown-menu>li:hover>a{background:#2a2a2a}.dropdown-content{background:#2a2a2a;border-radius:0 0 4px 4px;display:none;left:0;list-style:none;margin:0;min-width:140px;padding:4px 0;position:absolute;top:100%;z-index:1000}.dropdown-content a{color:#80ff00;display:block;font-weight:400;font-size:.9em;padding:6px 10px}.dropdown-content a:hover{background:#3a3a3a}.dropdown-menu>li:hover .dropdown-content{display:block}main{margin:15px auto;max-width:920px;padding:0 12px}section{background:#1a1a1a;border-radius:6px;box-shadow:0 0 6px #80ff0026;margin-bottom:16px;padding:16px}section h1,section h2,section h3{color:#80ff00;margin-bottom:10px;font-size:1.2em}section p{line-height:1.6;margin-bottom:10px;text-align:justify}.evergreen-table{border-collapse:collapse;margin:16px 0;width:100%;font-size:.92em}.evergreen-table td,.evergreen-table th{border:1px solid #333;padding:8px 10px;text-align:left}.evergreen-table th{background:#254d25;color:#fff;font-weight:600}footer{background:#1a1a1a;color:#aaa;display:flex;flex-wrap:wrap;font-size:.85em;gap:10px;justify-content:center;margin-top:30px;padding:12px;text-align:center}footer a{color:#80ff00;font-weight:600;margin:0 4px;padding:4px 8px}footer a:hover{color:#ffec8b}.copy-btn{background-color:#2d3748;color:#e2e8f0;border:1px solid #4a5568;border-radius:3px;padding:2px 6px;font-size:.85em;cursor:pointer}.copy-btn:hover:not(:disabled){background-color:#4a5568;color:#fff}@media (max-width:768px){.menu-toggle{display:block}.dropdown-menu{background:#1a1a1a;display:none;flex-direction:column;gap:4px;left:0;padding:8px;position:absolute;top:40px;width:180px;z-index:100}body.menu-open .dropdown-menu{display:flex}.evergreen-table,.evergreen-table thead,.evergreen-table tbody,.evergreen-table tr,.evergreen-table th,.evergreen-table td{display:block;width:100%}.evergreen-table thead{display:none}.evergreen-table tr{background:#1e1e1e;border:1px solid #333;border-radius:6px;margin-bottom:12px;padding:12px}.evergreen-table td{padding-left:45%!important;position:relative;text-align:right}.evergreen-table td:before{color:#80ff00;content:attr(data-label) ":";font-weight:600;left:10px;position:absolute;text-align:left;top:50%;transform:translateY(-50%);width:40%;font-size:.85em}}
+  </style>
+
+  
+ </head>
+<body>
+  <header>
+  <p class="site-title" style="margin: 0; font-size: 1.6em; font-weight: bold; color: #80ff00; display: inline-flex; align-items: center;">
+    <a href="/" style="color: inherit; text-decoration: none; display: flex; align-items: center;">
+    <img src="/assets/icons/pinguins.svg" alt="Pinguins" width="40" height="40" style="margin-right: 10px;">  
+        
+      Piolinux
+
+    </a>
+  </p>
+
+  <div class="menu-container">
+    <button type="button" aria-label="Abrir menu" class="menu-toggle" onclick="document.body.classList.toggle('menu-open')">
+      ☰
+    </button>
+    <nav class="dropdown-menu-container">
+      <ul class="dropdown-menu">
+        
+          <li>
+            <a href="https://piolinux.pages.dev"
+               >
+              Início
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://piolinux.pages.dev/comandos/"
+               >
+              Comandos
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://piolinux.pages.dev/ferramentas/"
+               >
+              Ferramentas
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://piolinux.pages.dev/referencias/"
+               >
+              Referencias
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://piolinux.pages.dev/distros/"
+               >
+              Distros
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://piolinux.pages.dev/sistema/"
+               >
+              Sistema
+            </a>
+          </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+  <main>
+    <h1>Página não encontrada (404) - PioLinux</h1>
+        <style>
+.error-container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 3rem;
+    background: #1a1a1a;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    border: 2px solid #00ff00;
+}
+
+.error-code {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #ff0000;
+    margin: 0;
+    text-shadow: 0 0 20px rgba(255,0,0,0.5);
+    background: linear-gradient(45deg, #ff0000, #ff6600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.error-title {
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin: 1rem 0;
+    text-shadow: 0 0 10px rgba(255,102,0,0.5);
+}
+
+.error-message {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin: 2rem 0;
+    line-height: 1.6;
+}
+
+.error-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.error-links li {
+    margin: 0;
+}
+
+.error-links a {
+    display: block;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, #007acc, #005a9e);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.error-links a:hover {
+    background: transparent;
+    border-color: #007acc;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,122,204,0.3);
+}
+
+.error-tips {
+    background: #2a2a2a;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 3rem 0;
+    text-align: left;
+}
+
+.error-tips h3 {
+    color: #00ff00;
+    margin-top: 0;
+    border-bottom: 2px solid #00ff00;
+    padding-bottom: 0.5rem;
+}
+
+.error-tips ul {
+    padding-left: 1.5rem;
+    color: #ddd;
+    line-height: 1.8;
+}
+
+.error-tips code {
+    background: #000;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: #00ff00;
+}
+
+.error-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #333;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .error-container {
+        margin: 1rem;
+        padding: 2rem;
+    }
+    .error-code {
+        font-size: 4rem;
+    }
+    .error-title {
+        font-size: 2rem;
+    }
+}
+</style>
+
+<div class="error-container">
+    <h1 class="error-code">404</h1>
+    <h2 class="error-title">Oops! Página não encontrada.</h2>
+    <p class="error-message">
+        O link que você clicou pode estar quebrado, ou a página foi removida ou renomeada.
+        <br>
+        Mas não se preocupe — aqui estão **links úteis** e **dicas práticas** para você continuar explorando!
+    </p>
+
+    <ul class="error-links">
+        <li><a href="/">← Voltar para a Home</a></li>
+        <li><a href="/comandos-recuperacao-disco-linux/">🎨Comandos de Recuperação Linux </a></li>
+        <li><a href="/comandos/">🐧 Comandos Linux</a></li>
+        <li><a href="/referencias/">💻 Referẽncias </a></li>
+    </ul>
+
+    <div class="error-tips">
+        <h3>💡 Dicas Rápidas para Devs & Sysadmins</h3>
+        <ul>
+            <li>Instale o <strong>Oh My Zsh</strong> para turbinar seu terminal:
+                <br><code>sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</code>
+            </li>
+            <li>No <strong>Windows Terminal</strong>, use <code>Ctrl + ,</code> para abrir configurações.</li>
+            <li>No <strong>iTerm2 (macOS)</strong>, ative <strong>Split Panes</strong> com <code>Cmd + D</code> ou <code>Cmd + Shift + D</code>.</li>
+            <li>Use <code>wget</code> se <code>curl</code> não estiver disponível.</li>
+            <li>Personalize seu <code>.zshrc</code> — é onde a mágica acontece!</li>
+        </ul>
+    </div>
+
+    <div class="error-footer">
+        
+        <br>
+        <em>“Um erro 404 é só uma oportunidade para descobrir algo novo.” — PioLinux</em>
+    </div>
+</div>
+
+  </main>
+   <footer>
+  <div style="display: flex; gap: 8px; align-items: center; justify-content: center; flex-wrap: wrap;">
+    <p>&copy; 2025 Piolinux. Todos os direitos reservados.</p>
+    <span>•</span>
+    <a href="/politica-de-privacidade/">Privacidade</a>
+    <span>•</span>
+    <a href="/termos-de-uso/">Termos</a>
+    <span>•</span>
+    <p><a href="/contato/">Contato e Informações</a></p>
+    <span>•</span>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
+<script>
+	
+document.addEventListener('click', function(e) {
+  if (e.target.matches('.copy-btn')) {
+    const cmd = e.target.dataset.command;
+    if (cmd) {
+      navigator.clipboard.writeText(cmd).then(() => {
+        const original = e.target.textContent;
+        e.target.textContent = '✓ Copiado!';
+        setTimeout(() => e.target.textContent = original, 1500);
+      }).catch(err => {
+        console.warn('Falha ao copiar:', err);
+      });
+    }
+  }
+});
+
+</script>
+
+ 
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
